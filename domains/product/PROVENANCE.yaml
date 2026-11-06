@@ -42,3 +42,10 @@ files:
     path: pi/core/skills/product-lens/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/product-management/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: product/product-manager.md
+    license: MIT
+    modification: adapted

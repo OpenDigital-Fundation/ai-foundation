@@ -149,7 +149,7 @@ judge:
 
 Load only what the task needs:
 
-- [`references/eval-harness.md`](references/eval-harness.md)
-- [`references/self-evaluation.md`](references/self-evaluation.md)
-- [`references/evaluator.md`](references/evaluator.md)
-- [`references/benchmark-loops.md`](references/benchmark-loops.md)
+- [`references/eval-harness.md`](references/eval-harness.md) — covers Eval Harness Skill; EVAL DEFINITION feature-xyz; EVAL add-authentication
+- [`references/self-evaluation.md`](references/self-evaluation.md) — covers Self-Evaluation
+- [`references/evaluator.md`](references/evaluator.md) — covers agent-evaluator
+- [`references/benchmark-loops.md`](references/benchmark-loops.md) — covers Benchmark Optimization Loop

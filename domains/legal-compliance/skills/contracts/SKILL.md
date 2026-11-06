@@ -236,5 +236,5 @@ the generator does not create or approve an e-sign envelope.
 
 Load only what the task needs:
 
-- [`references/review.md`](references/review.md)
-- [`references/intake.md`](references/intake.md)
+- [`references/review.md`](references/review.md) — covers Legal Document Review
+- [`references/intake.md`](references/intake.md) — covers Legal Client Intake

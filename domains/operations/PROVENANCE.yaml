@@ -49,6 +49,13 @@ files:
     path: specialized/recruitment-specialist.md
     license: MIT
     modification: adapted
+- path: skills/people-operations/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/hr-onboarding.md
+    license: MIT
+    modification: adapted
 - path: skills/people-operations/references/training.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -89,6 +96,13 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: project-management/project-management-studio-producer.md
+    license: MIT
+    modification: adapted
+- path: skills/project-management/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: project-management/project-manager-senior.md
     license: MIT
     modification: adapted
 - path: skills/project-management/references/shepherding.md

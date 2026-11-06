@@ -22,7 +22,8 @@ SAFE_KEYS = {"color.ui", "color.diff", "color.status", "color.branch", "color.in
              "core.quotepath", "log.showsignature", "init.defaultbranch"}
 SAFE_CONFIG = re.compile(r"(" + "|".join(re.escape(k) for k in SAFE_KEYS) + r")=", re.I)
 CONFIG_SCOPES = {"--global", "--local", "--system", "--worktree"}
-CONFIG_READ_MODES = {"--get", "--get-all", "--get-regexp", "--list", "-l", "--show-origin", "--show-scope", "--name-only", "--null", "-z"}
+CONFIG_READ_ACTIONS = {"--get": 2, "--get-all": 2, "--get-regexp": 2, "--get-urlmatch": 2, "--list": 0, "-l": 0}  # max positionals
+CONFIG_FORMAT = {"--show-origin", "--show-scope", "--name-only", "--null", "-z", "--includes", "--no-includes"}
 # Constructs the structured parser only partly understands; when present, also match the raw text.
 INDIRECTION = re.compile(r"<|\beval\b|\bxargs\b|-exec(dir)?\b|\$\(|`|<\(|\bsource\b|\balias\b|\bfunction\b|\(\)\s*\{")
 RAW_DANGER = re.compile(r"\bpush\b|reset\s+--hard|\bclean\s+-\S*f|branch\s+-D|--no-verify|\brm\s+-\S*(rf|fr)|checkout\s+\.(\s|$)|restore\s+\.(\s|$)")
@@ -75,20 +76,30 @@ def check_config(rest):
         rest = rest[1:]
     else:
         mode = None
-    positional, read_flag = [], False
+    positional, action = [], None
     for a in rest:
-        if a in CONFIG_SCOPES:
-            continue
-        if a in CONFIG_READ_MODES:
-            read_flag = True
+        if a in CONFIG_SCOPES or a in CONFIG_FORMAT:
+            continue  # neutral: scope and output formatting never make a write a read
+        if a in CONFIG_READ_ACTIONS:
+            if action and action != a:
+                block("git config with several actions cannot be inspected")
+            action = a
             continue
         if a.startswith("-"):
             block(f"git config option {a} is not allowed by the guardrail")
         positional.append(a)
     if mode == "forbidden":
         block("git config would remove, rename or edit configuration")
-    if mode == "read" or read_flag or (mode is None and len(positional) <= 1):
+    if action is not None:
+        if mode == "write" or len(positional) > CONFIG_READ_ACTIONS[action]:
+            block("git config read action with unexpected arguments")
         return
+    if mode == "read":
+        if len(positional) > 1:
+            block("git config get/list with unexpected arguments")
+        return
+    if mode is None and len(positional) <= 1:
+        return  # git config <key> reads one value
     key = positional[0].lower() if positional else ""
     if key not in SAFE_KEYS or len(positional) != 2:
         block(f"git config {positional[0] if positional else ""} may change what later git commands run; only presentation settings may be written")

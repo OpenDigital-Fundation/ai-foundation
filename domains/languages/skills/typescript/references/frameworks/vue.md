@@ -574,7 +574,7 @@ const AsyncComp = defineAsyncComponent({
 - `accessibility` — ARIA, semantic HTML, focus management
 - `languages:typescript` (`references/standards.md`) — Cross-framework frontend architecture
 - `typescript` — TypeScript best practices applied to Vue projects
-- `coding-standards` — General code quality standards
+- `principles:coding-discipline` — General code quality standards
 
 ## Vue Testing
 

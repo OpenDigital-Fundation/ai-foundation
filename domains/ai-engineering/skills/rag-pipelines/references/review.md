@@ -59,7 +59,7 @@ Use these handoffs when the finding exceeds retrieval-specific review:
 
 - `ai-engineering:ml-engineering` for dataset governance, offline/online evaluation design, model serving, or monitoring;
 - `security:security-audit` for untrusted retrieved content, authorization, sensitive data, prompt injection, or egress;
-- `performance-optimizer` for retrieval latency, index sizing, caching, or load behavior;
+- `code-quality:codebase-audit` for retrieval latency, index sizing, caching, or load behavior;
 - `research:docs-lookup` when a vector database, embedding provider, reranker, or evaluation API must be verified against current official documentation.
 
 #### Example: No reranking, no eval harness

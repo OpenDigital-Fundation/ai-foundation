@@ -476,7 +476,7 @@ const STRIPE_SECRET = 'sk_live_...'
 ### Related Skills
 
 - `languages:typescript` (`references/standards.md`) — React/Next.js (web) patterns; useful for shared React concepts, but DOM-specific.
-- `coding-standards` — TypeScript/JavaScript idioms that apply to RN code.
+- `principles:coding-discipline` — TypeScript/JavaScript idioms that apply to RN code.
 - `testing:test-driven-development`, `testing:browser-testing` — testing process (use Jest + React Native Testing Library, Maestro/Detox for RN).
 - `security:security-audit` — general security checklist that complements the RN bundle/secret guidance above.
 

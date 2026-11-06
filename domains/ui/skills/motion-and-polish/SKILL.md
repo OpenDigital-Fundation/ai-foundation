@@ -301,9 +301,9 @@ This skill does **not** cover:
 
 Load only what the task needs:
 
-- [`references/motion-patterns.md`](references/motion-patterns.md)
-- [`references/advanced-motion.md`](references/advanced-motion.md)
-- [`references/feel.md`](references/feel.md)
-- [`references/taste.md`](references/taste.md)
-- [`references/design-quality.md`](references/design-quality.md)
-- [`references/delight.md`](references/delight.md)
+- [`references/motion-patterns.md`](references/motion-patterns.md) — covers Motion Patterns
+- [`references/advanced-motion.md`](references/advanced-motion.md) — covers Motion Advanced
+- [`references/feel.md`](references/feel.md) — covers Make Interfaces Feel Better
+- [`references/taste.md`](references/taste.md) — covers Taste; Taste Application; Taste Distillation
+- [`references/design-quality.md`](references/design-quality.md) — covers Web Design Quality Standards
+- [`references/delight.md`](references/delight.md) — covers Whimsy Injector; Spectrum; Whimsy Taxonomy; Character Guidelines

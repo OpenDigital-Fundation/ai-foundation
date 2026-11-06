@@ -119,7 +119,15 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 derived.append(pv)
             (d / "references" / rel).write_text(rw("\n".join(parts).rstrip() + "\n"), encoding="utf-8")
             prov.append({"path": f"skills/{name}/references/{rel}", "derived_from": derived})
-            ref_lines.append(f"- [`references/{rel}`](references/{rel}){(' — ' + a['reference_notes'][rel]) if a.get('reference_notes', {}).get(rel) else ''}")
+            note = (a.get("reference_notes") or {}).get(rel)
+            if not note and rel == "role-guide.md":
+                note = "the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples"
+            if not note:
+                titles = [re.sub(r"\s+", " ", re.sub(r"[^\w\s&/().,'-]|\b(Agent|Personality|Specialist Agent)\b", "", m)).strip(" -")
+                          for m in re.findall(r"^## (.+)$", "\n".join(parts[1:]), re.M)]
+                titles = [x for x in dict.fromkeys(titles) if x][:4]
+                note = "covers " + "; ".join(titles) if titles else ""
+            ref_lines.append(f"- [`references/{rel}`](references/{rel})" + (f" — {note}" if note else ""))
         fm = ["---", f"name: {name}", f"description: {json.dumps(a['description'])}", "license: MIT",
               "metadata:", f"  domain: {domain}", "  status: experimental"]
         if a.get("line_budget_exception"):

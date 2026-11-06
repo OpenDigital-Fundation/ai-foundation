@@ -407,6 +407,6 @@ When this skill is used for review, return:
 
 - Skill: `data:database-design` - PostgreSQL-specific schema and query patterns
 - Skill: `data:database-migrations` - migration planning and rollout safety
-- Skill: `backend-patterns` - API and service-layer patterns
+- Skill: `architecture:system-design` - API and service-layer patterns
 - Skill: `security:security-audit` - secret handling, auth, and least privilege
 - Agent: `data:database-design` - broader database review workflow

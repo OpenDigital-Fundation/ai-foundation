@@ -110,5 +110,5 @@ intentional, re-run with `--force`.
 
 Load only what the task needs:
 
-- [`references/brand-stewardship.md`](references/brand-stewardship.md)
-- [`references/discovery-interview.md`](references/discovery-interview.md)
+- [`references/brand-stewardship.md`](references/brand-stewardship.md) — covers Brand Guardian; Brand Purpose; Brand Vision; Brand Mission
+- [`references/discovery-interview.md`](references/discovery-interview.md) — covers Brand Discovery

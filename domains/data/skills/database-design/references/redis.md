@@ -397,7 +397,7 @@ Use Pub/Sub for fire-and-forget. Switch to Streams if you need guaranteed delive
 ### Related
 
 - Skill: `data:database-design` — relational data patterns
-- Skill: `backend-patterns` — API and service layer patterns
+- Skill: `architecture:system-design` — API and service layer patterns
 - Skill: `data:database-migrations` — schema versioning
 - Skill: `languages:python` (`references/frameworks/django.md`) — Django cache framework integration
 - Agent: `data:database-design` — full database review workflow

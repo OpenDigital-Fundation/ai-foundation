@@ -109,3 +109,21 @@
 - {prompt: "tsc fails with 40 type errors after the upgrade", expect: "debugging:build-failure-resolution"}
 - {prompt: "the dashboard works but feels flat; add tasteful motion and polish", expect: "ui:motion-and-polish"}
 - {prompt: "build the settings page with shadcn/ui and Tailwind, with dark mode", expect: "ui:component-styling"}
+- {prompt: "set up a training and evaluation pipeline for our churn model with drift monitoring", expect: "ai-engineering:ml-engineering"}
+- {prompt: "make an animated GIF of a rocket launching for Slack", expect: "creative-media:animated-gifs"}
+- {prompt: "generate a flow-field artwork in p5.js with a seed I can change", expect: "creative-media:generative-art"}
+- {prompt: "design a poster PDF for our conference talk", expect: "creative-media:poster-design"}
+- {prompt: "write an image-generation prompt for a hero photo of a nurse at a rural clinic", expect: "creative-media:image-prompting"}
+- {prompt: "is this use of std::unique_ptr and move semantics correct?", expect: "languages:cpp"}
+- {prompt: "structure state management in our Flutter app with Riverpod", expect: "languages:dart"}
+- {prompt: "write xUnit tests for this ASP.NET Core controller", expect: "languages:dotnet"}
+- {prompt: "set up Spring Boot integration tests with Testcontainers", expect: "languages:jvm"}
+- {prompt: "add policies and form requests to this Laravel controller", expect: "languages:php"}
+- {prompt: "refactor this Rails model callback into a service object", expect: "languages:ruby"}
+- {prompt: "fix the lifetimes in this Rust parser so it compiles", expect: "languages:rust"}
+- {prompt: "migrate this SwiftUI view model to Swift 6 strict concurrency", expect: "languages:swift"}
+- {prompt: "do a systematic literature review on retrieval-augmented generation evaluation", expect: "research:literature-review"}
+- {prompt: "build our seed pitch deck and investor one-pager", expect: "sales:investor-relations"}
+- {prompt: "this idea is too big for one session; chart the decisions we need before building", expect: "workflow:initiative-mapping"}
+- {prompt: "turn the approved spec into GitHub issues with blocking relationships", expect: "workflow:issue-breakdown"}
+- {prompt: "triage the 20 open issues and label which ones are ready for an agent", expect: "workflow:issue-triage"}

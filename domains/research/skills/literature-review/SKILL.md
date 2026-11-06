@@ -197,4 +197,4 @@ Databases: <list>
 
 Load only what the task needs:
 
-- [`references/scholarly-evaluation.md`](references/scholarly-evaluation.md)
+- [`references/scholarly-evaluation.md`](references/scholarly-evaluation.md) — covers Scholar Evaluation; Overall Assessment; Dimension Scores; Critical Issues

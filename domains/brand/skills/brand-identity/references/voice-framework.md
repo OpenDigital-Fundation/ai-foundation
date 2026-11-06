@@ -35,14 +35,6 @@ Reserved ←――――――――――――――→ Expressive
 
 ## Voice Development Process
 
-### Step 1: Define Personality Traits
-Choose 3-5 traits that describe your brand:
-- Confident, not arrogant
-- Friendly, not unprofessional
-- Knowledgeable, not condescending
-- Innovative, not gimmicky
-- Authentic, not casual
-
 ### Step 2: Create Voice Chart
 
 | Trait | Description | Do | Don't |

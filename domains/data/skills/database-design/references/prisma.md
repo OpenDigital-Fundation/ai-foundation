@@ -397,4 +397,4 @@ await prisma.post.deleteMany({ where: { authorId: userId } });
 - `languages:typescript` (`references/frameworks/nestjs.md`) — NestJS service layer that integrates Prisma
 - `data:database-design` — PostgreSQL-level indexing and connection tuning
 - `data:database-migrations` — multi-step migration planning for production
-- `backend-patterns` — general API and service layer design
+- `architecture:system-design` — general API and service layer design

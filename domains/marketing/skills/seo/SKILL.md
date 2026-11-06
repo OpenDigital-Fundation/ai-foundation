@@ -153,13 +153,13 @@ Fix: Generate a unique title per product using the product name and primary cate
 - `marketing:seo`
 - `languages:typescript` (`references/standards.md`)
 - `brand:brand-voice`
-- `market-research`
+- `product:product-management`
 
 ## References
 
 Load only what the task needs:
 
-- [`references/technical-audit.md`](references/technical-audit.md)
-- [`references/strategy.md`](references/strategy.md)
-- [`references/answer-engines.md`](references/answer-engines.md)
-- [`references/app-stores.md`](references/app-stores.md)
+- [`references/technical-audit.md`](references/technical-audit.md) — covers seo-specialist
+- [`references/strategy.md`](references/strategy.md) — covers Marketing SEO Specialist; Crawlability & Indexation; Site Architecture & Internal Linking; Core Web Vitals (Field Data)
+- [`references/answer-engines.md`](references/answer-engines.md) — covers AEO Foundations Architect; Date YYYY-MM-DD; Key Pages; Content by Topic
+- [`references/app-stores.md`](references/app-stores.md) — covers App Store Optimizer; Keyword Research and Analysis; Metadata Optimization; App Icon Design Principles

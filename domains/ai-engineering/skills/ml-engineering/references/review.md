@@ -38,10 +38,10 @@ MLE review should compose existing SWE review surfaces instead of replacing them
 - Use `languages:python` (`references/frameworks/pytorch.md`) when tensor shape, device placement, gradient, CUDA, DataLoader, or AMP failures block training/inference.
 - Use `data:database-design` for feature tables, label stores, prediction logs, experiment metrics, and point-in-time query performance.
 - Use `security:security-audit` for secrets, PII, prompt/data leakage, artifact integrity, unsafe pickle/joblib loading, and supply-chain risk.
-- Use `performance-optimizer` for latency, memory, batching, GPU utilization, cold start, and cost per prediction.
-- Use `build-error-resolver` for CI, dependency, native extension, CUDA, and environment-specific failures outside PyTorch itself.
-- Use `pr-test-analyzer` when the change claims coverage but does not prove leakage, schema drift, serving fallback, or promotion-gate behavior.
-- Use `silent-failure-hunter` when pipelines can appear green while skipping data, labels, eval slices, alerts, or artifact publication.
+- Use `code-quality:codebase-audit` for latency, memory, batching, GPU utilization, cold start, and cost per prediction.
+- Use `debugging:build-failure-resolution` for CI, dependency, native extension, CUDA, and environment-specific failures outside PyTorch itself.
+- Use `testing:test-strategy` when the change claims coverage but does not prove leakage, schema drift, serving fallback, or promotion-gate behavior.
+- Use `debugging:build-failure-resolution` when pipelines can appear green while skipping data, labels, eval slices, alerts, or artifact publication.
 - Use `testing:browser-testing` for product flows where predictions affect user-visible or business-critical behavior.
 - Use `accessibility:wcag-accessibility` when prediction explanations, confidence states, or fallback UI need to be accessible.
 - Use `documents:technical-writing` when new model contracts, promotion gates, dashboards, or rollback runbooks need durable project documentation.

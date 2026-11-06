@@ -119,4 +119,4 @@ Before delivering:
 
 - `brand:brand-voice` for reusable source-derived voice capture
 - `marketing:content-marketing` for voice capture and source shaping
-- `x-api` for X publishing workflows
+- `marketing:content-marketing` for X publishing workflows

@@ -5,8 +5,9 @@ artifacts:
     title: System design
     description: 'Use when designing a service, system or major feature end to end: components and boundaries, data flow, APIs and contracts, consistency and failure handling, scalability and latency budgets, caching, real-time collaboration and internationalisation concerns, and the trade-offs behind
       each choice.'
-    base: msitarzewski/agency-agents:engineering/engineering-software-architect.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-software-architect.md
       backend-architecture.md:
       - msitarzewski/agency-agents:engineering/engineering-backend-architect.md
       - s:backend-patterns
@@ -26,6 +27,35 @@ artifacts:
       internationalisation.md:
       - msitarzewski/agency-agents:engineering/engineering-i18n-engineer.md
       - s:i18n-sync
+    body: '# System design
+
+
+      Choose a structure that meets the requirements with the least complexity, and record why.
+
+
+      ## 1. Requirements
+
+      Functional scope; non-functional targets with numbers (load, latency, availability, data size, consistency, compliance); constraints (team, budget, existing systems).
+
+
+      ## 2. Shape
+
+      Components and their responsibilities, data ownership and flows, synchronous versus asynchronous boundaries, and where state lives. Draw it. Prefer the simplest shape that meets the targets: a well-structured monolith beats premature services.
+
+
+      ## 3. Interfaces
+
+      APIs and events between components with their contracts (`architecture:api-design`), versioning, idempotency and error semantics.
+
+
+      ## 4. Failure and scale
+
+      What happens when each dependency is slow or down (timeouts, retries with backoff, circuit breakers, queues), how it scales (stateless tiers, partitioning, caching with invalidation), and the latency budget per hop.
+
+
+      ## 5. Decide and record
+
+      Compare two or three designs on the targets and trade-offs, pick one, and write the hard-to-reverse choices as ADRs (`architecture:decision-records`). Hand the design to `workflow:writing-plans`.'
   architecture/codebase-onboarding:
     title: Codebase onboarding
     description: 'Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry points, trace a feature end to end, write a guided code tour, recover the intent behind legacy code, or mine an implicit spec from existing behaviour.'

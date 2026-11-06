@@ -1083,7 +1083,7 @@ vendor/bin/pest --coverage --min=80
 - `languages:php` (`references/frameworks/laravel.md`) — Laravel architecture, Eloquent, routing, and API patterns
 - `languages:php` (`references/frameworks/laravel.md`) — Laravel authentication, authorization, and secure coding
 - `testing:test-driven-development` — The repo-wide RED -> GREEN -> REFACTOR loop
-- `backend-patterns` — General backend API and database patterns
+- `architecture:system-design` — General backend API and database patterns
 
 ## Laravel Security Best Practices
 
@@ -2028,7 +2028,7 @@ SecurityLogger::log('suspicious_activity', ['reason' => 'multiple_attempts_from_
 ### Related Skills
 
 - `languages:php` (`references/frameworks/laravel.md`) — Laravel architecture, routing, Eloquent, and API patterns
-- `backend-patterns` — General backend API and database patterns
+- `architecture:system-design` — General backend API and database patterns
 - `languages:php` (`references/frameworks/laravel.md`) — Laravel testing with PHPUnit and Pest
 
 ## Laravel Verification Loop

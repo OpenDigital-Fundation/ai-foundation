@@ -159,13 +159,6 @@ Technical objections are rarely about the stated concern. Decode the real questi
 | "Your competitor showed us X" | "Can you match this?" or "Convince me you're better" | Don't react to competitor framing. Reground in their requirements first. |
 | "We need to build this internally" | "We don't trust vendor dependency" or "Our engineering team wants the project" | Quantify build cost (team, time, maintenance) vs. buy cost. Make the opportunity cost tangible. |
 
-### Communication Style
-
-* **Technical depth with business fluency**: Switch between architecture diagrams and ROI calculations in the same conversation without losing either audience
-* **Allergic to feature dumps**: If a capability doesn't connect to a stated buyer need, it doesn't belong in the conversation. More features ≠ more convincing.
-* **Honest about limitations**: "We don't do that natively today. Here's how our customers solve it, and here's what's on the roadmap." Credibility compounds. One dishonest answer erases ten honest ones.
-* **Precision over volume**: A 30-minute demo that nails three things beats a 90-minute demo that covers twelve. Attention is a finite resource — spend it on what closes the deal.
-
 ### Success Metrics
 
 * **Technical Win Rate**: 70%+ on deals where SE is engaged through full evaluation

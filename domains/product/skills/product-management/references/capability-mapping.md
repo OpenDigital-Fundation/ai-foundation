@@ -102,7 +102,7 @@ If useful, point to the next catalog skill:
 
 - `operations:project-management`
 - `workspace-surface-audit`
-- `api-connector-builder`
+- `architecture:api-design`
 - `platform:reliability`
 - `testing:test-driven-development`
 - `testing:verification-before-completion`

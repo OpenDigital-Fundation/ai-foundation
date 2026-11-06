@@ -84,11 +84,6 @@ Minimum clear space = height of logo mark
 
 ## 4. Voice & Tone
 
-### Brand Personality
-{Trait 1}: {Description}
-{Trait 2}: {Description}
-{Trait 3}: {Description}
-
 ### Voice Chart
 | Trait | We Are | We Are Not |
 |-------|--------|------------|

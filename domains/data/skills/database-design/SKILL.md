@@ -142,7 +142,7 @@ SELECT pg_reload_conf();
 
 - Agent: `data:database-design` - Full database review workflow
 - Skill: `data:database-design` - ClickHouse analytics patterns
-- Skill: `backend-patterns` - API and backend patterns
+- Skill: `architecture:system-design` - API and backend patterns
 
 ---
 
@@ -152,10 +152,10 @@ SELECT pg_reload_conf();
 
 Load only what the task needs:
 
-- [`references/mysql.md`](references/mysql.md)
-- [`references/redis.md`](references/redis.md)
-- [`references/clickhouse.md`](references/clickhouse.md)
-- [`references/prisma.md`](references/prisma.md)
-- [`references/optimisation.md`](references/optimisation.md)
-- [`references/reliability.md`](references/reliability.md)
-- [`references/review.md`](references/review.md)
+- [`references/mysql.md`](references/mysql.md) — covers MySQL Patterns
+- [`references/redis.md`](references/redis.md) — covers Redis Patterns
+- [`references/clickhouse.md`](references/clickhouse.md) — covers ClickHouse Analytics Patterns
+- [`references/prisma.md`](references/prisma.md) — covers Prisma Patterns
+- [`references/optimisation.md`](references/optimisation.md) — covers Database Optimizer
+- [`references/reliability.md`](references/reliability.md) — covers Database Reliability Engineer
+- [`references/review.md`](references/review.md) — covers Database Reviewer

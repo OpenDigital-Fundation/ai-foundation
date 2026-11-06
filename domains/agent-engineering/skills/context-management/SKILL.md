@@ -137,5 +137,5 @@ reconnect loads. For current harness-reported context and usage, use the version
 
 Load only what the task needs:
 
-- [`references/compaction.md`](references/compaction.md)
-- [`references/token-budgeting.md`](references/token-budgeting.md)
+- [`references/compaction.md`](references/compaction.md) — covers Strategic Compact Skill
+- [`references/token-budgeting.md`](references/token-budgeting.md) — covers Token Budget Advisor (TBA)

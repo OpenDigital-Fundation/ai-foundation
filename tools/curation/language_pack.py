@@ -110,7 +110,18 @@ def reference_map(root: Path, mapping: dict) -> dict[str, str]:
     return refs
 
 
+PERSONA_SECTION = re.compile(
+    r"^(#{2,3}) [^\n]*(Your Identity|Identity & Memory|Communication Style|Learning & Memory|Your Personality|Personality)\b[^\n]*\n.*?(?=^#{1,3} |\Z)",
+    re.M | re.S)
+
+
+def strip_persona(text: str) -> str:
+    """Drop persona-only sections (identity, personality, communication style, memory) from agent profiles."""
+    return PERSONA_SECTION.sub("", text)
+
+
 def rewrite_refs(text: str, refs: dict[str, str], unresolved: set[str]) -> str:
+    text = strip_persona(text)
     text = re.sub(r"`?/([a-z0-9]+)-(review|test|build|verify)`?", lambda m: COMMAND_TARGET[m.group(2)], text)
     text = text.replace("ECC skills:", "Related:").replace("the ECC philosophy", "these standards")
     text = re.sub(r"ECC's (existing )?`typescript/` rules", "this pack's TypeScript standards", text)

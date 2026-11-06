@@ -259,5 +259,5 @@ Load these resources as needed during development:
 
 Load only what the task needs:
 
-- [`references/typescript-sdk-patterns.md`](references/typescript-sdk-patterns.md)
-- [`references/server-design.md`](references/server-design.md)
+- [`references/typescript-sdk-patterns.md`](references/typescript-sdk-patterns.md) — covers MCP Server Patterns
+- [`references/server-design.md`](references/server-design.md) — covers MCP Builder

@@ -38,7 +38,7 @@ Part of `languages:php`. Load when writing or refactoring code: style, idioms, p
 
 ### Reference
 
-See skill: `backend-patterns` for broader service/repository layering guidance.
+See skill: `architecture:system-design` for broader service/repository layering guidance.
 
 ## PHP Patterns
 

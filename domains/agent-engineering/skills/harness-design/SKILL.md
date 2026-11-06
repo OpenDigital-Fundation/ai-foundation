@@ -78,9 +78,9 @@ Track:
 
 Load only what the task needs:
 
-- [`references/architecture-audit.md`](references/architecture-audit.md)
-- [`references/agentic-engineering.md`](references/agentic-engineering.md)
-- [`references/multi-agent-systems.md`](references/multi-agent-systems.md)
-- [`references/identity-and-trust.md`](references/identity-and-trust.md)
-- [`references/harness-tuning.md`](references/harness-tuning.md)
-- [`references/enterprise-operations.md`](references/enterprise-operations.md)
+- [`references/architecture-audit.md`](references/architecture-audit.md) — covers Architecture Audit
+- [`references/agentic-engineering.md`](references/agentic-engineering.md) — covers Agentic Engineering; AI-First Engineering
+- [`references/multi-agent-systems.md`](references/multi-agent-systems.md) — covers Multi- Systems Architect; AgentsOrchestrator; Current Task Validation Process; Failure Management
+- [`references/identity-and-trust.md`](references/identity-and-trust.md) — covers Agentic Identity & Trust Architect
+- [`references/harness-tuning.md`](references/harness-tuning.md) — covers harness-optimizer
+- [`references/enterprise-operations.md`](references/enterprise-operations.md) — covers Enterprise Ops

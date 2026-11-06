@@ -118,7 +118,7 @@ jest --ci                           # Tests (Jest)
 
 ### Reference
 
-For detailed TypeScript and JavaScript patterns, use the `languages:typescript` (`references/standards.md`) skill, plus `coding-standards` and `languages:typescript` (`references/standards.md`) or `backend-patterns` based on the code being reviewed.
+For detailed TypeScript and JavaScript patterns, use the `languages:typescript` (`references/standards.md`) skill, plus `principles:coding-discipline` and `languages:typescript` (`references/standards.md`) or `architecture:system-design` based on the code being reviewed.
 
 ---
 

@@ -33,7 +33,7 @@ Do not use generic platform exemplars as source material.
 1. Gather 5 to 20 representative samples when available.
 2. Prefer recent material over old material unless the user says the older writing is more canonical.
 3. Separate "public launch voice" from "private working voice" if the source set clearly splits.
-4. If live X access is available, use `x-api` to pull recent original posts before drafting.
+4. If live X access is available, use `marketing:content-marketing` to pull recent original posts before drafting.
 
 ## What to Extract
 

@@ -1,0 +1,25 @@
+# Tarefas — `languages`
+
+- [x] **T1.** `languages/cpp` gerado/portado (pack), registrado com proveniência.
+- [x] **T2.** `languages/dart` gerado/portado (pack), registrado com proveniência.
+- [x] **T3.** `languages/dotnet` gerado/portado (pack), registrado com proveniência.
+- [x] **T4.** `languages/go` gerado/portado (pack), registrado com proveniência.
+- [x] **T5.** `languages/jvm` gerado/portado (pack), registrado com proveniência.
+- [x] **T6.** `languages/php` gerado/portado (pack), registrado com proveniência.
+- [x] **T7.** `languages/python` gerado/portado (pack), registrado com proveniência.
+- [x] **T8.** `languages/ruby` gerado/portado (pack), registrado com proveniência.
+- [x] **T9.** `languages/rust` gerado/portado (pack), registrado com proveniência.
+- [x] **T10.** `languages/swift` gerado/portado (pack), registrado com proveniência.
+- [x] **T11.** `languages/typescript` gerado/portado (pack), registrado com proveniência.
+- [x] **T12.** Spec do domínio e casos em `evals/routing/wave1.yaml` para cada artefato.
+- [ ] **T13.** `cpp`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T14.** `dart`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T15.** `dotnet`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T16.** `go`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T17.** `jvm`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T18.** `php`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T19.** `python`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T20.** `ruby`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T21.** `rust`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T22.** `swift`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T23.** `typescript`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.

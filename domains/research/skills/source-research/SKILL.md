@@ -36,5 +36,5 @@ A short report: answer first, then findings per sub-question with inline citatio
 
 Load only what the task needs:
 
-- [`references/deep-research.md`](references/deep-research.md)
-- [`references/synthesis.md`](references/synthesis.md)
+- [`references/deep-research.md`](references/deep-research.md) — covers Deep Research; Executive Summary; 1. First Major Theme; 2. Second Major Theme
+- [`references/synthesis.md`](references/synthesis.md) — covers Research Synthesist

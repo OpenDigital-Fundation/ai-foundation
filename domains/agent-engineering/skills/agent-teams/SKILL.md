@@ -115,6 +115,6 @@ Finish each orchestration pass with:
 
 Load only what the task needs:
 
-- [`references/team-assembly.md`](references/team-assembly.md)
-- [`references/plan-orchestration.md`](references/plan-orchestration.md)
-- [`references/parallel-execution.md`](references/parallel-execution.md)
+- [`references/team-assembly.md`](references/team-assembly.md) — covers Team Builder; Security Engineer Findings; SEO Specialist Findings; Synthesis
+- [`references/plan-orchestration.md`](references/plan-orchestration.md) — covers Plan Orchestrate; Steps overview; Step 1 title; Step 2 title (blocked)
+- [`references/parallel-execution.md`](references/parallel-execution.md) — covers Parallel Execution Optimizer

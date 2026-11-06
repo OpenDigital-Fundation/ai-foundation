@@ -103,7 +103,7 @@ with sync_playwright() as p:
 
 Load only what the task needs:
 
-- [`references/e2e-patterns.md`](references/e2e-patterns.md)
-- [`references/post-deploy-qa.md`](references/post-deploy-qa.md)
-- [`references/e2e-runner.md`](references/e2e-runner.md)
-- [`references/windows-desktop.md`](references/windows-desktop.md)
+- [`references/e2e-patterns.md`](references/e2e-patterns.md) — covers E2E Testing Patterns; Summary; Failed Tests; Artifacts
+- [`references/post-deploy-qa.md`](references/post-deploy-qa.md) — covers Browser QA Automated Visual Testing & Interaction; QA Report URL timestamp
+- [`references/e2e-runner.md`](references/e2e-runner.md) — covers E2E Test Runner
+- [`references/windows-desktop.md`](references/windows-desktop.md) — covers Windows Desktop E2E Testing

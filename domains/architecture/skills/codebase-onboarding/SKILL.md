@@ -238,8 +238,8 @@ Generate or update a project-specific CLAUDE.md based on detected conventions. I
 
 Load only what the task needs:
 
-- [`references/code-tour.md`](references/code-tour.md)
-- [`references/onboarding-engineer.md`](references/onboarding-engineer.md)
-- [`references/archaeology.md`](references/archaeology.md)
-- [`references/explorer.md`](references/explorer.md)
-- [`references/spec-mining.md`](references/spec-mining.md)
+- [`references/code-tour.md`](references/code-tour.md) — covers Code Tour
+- [`references/onboarding-engineer.md`](references/onboarding-engineer.md) — covers Codebase Onboarding Engineer; 1-Line Summary; 5-Minute Explanation; Deep Dive
+- [`references/archaeology.md`](references/archaeology.md) — covers Codebase Archaeologist; Findings; Eras; Responsibilities
+- [`references/explorer.md`](references/explorer.md) — covers Code Explorer; Exploration Feature/Area Name
+- [`references/spec-mining.md`](references/spec-mining.md) — covers Spec Miner

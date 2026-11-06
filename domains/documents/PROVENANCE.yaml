@@ -70,3 +70,10 @@ files:
     path: agents/doc-updater.md
     license: MIT
     modification: adapted
+- path: skills/technical-writing/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-technical-writer.md
+    license: MIT
+    modification: adapted

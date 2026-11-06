@@ -25,4 +25,4 @@ For a professional document generated from data or a template, see the reference
 
 Load only what the task needs:
 
-- [`references/document-generation.md`](references/document-generation.md)
+- [`references/document-generation.md`](references/document-generation.md) — covers Document Generator

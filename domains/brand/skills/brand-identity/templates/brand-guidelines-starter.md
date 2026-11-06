@@ -125,15 +125,6 @@ Minimum clear space = height of the logo icon (mark)
 
 ## 4. Voice & Tone
 
-### Brand Personality
-
-| Trait | Description |
-|-------|-------------|
-| **Professional** | Expert knowledge, authoritative yet approachable |
-| **Helpful** | Solution-focused, actionable guidance |
-| **Clear** | Direct communication, jargon-free |
-| **Confident** | Assured without being arrogant |
-
 ### Voice Chart
 
 | Trait | We Are | We Are Not |

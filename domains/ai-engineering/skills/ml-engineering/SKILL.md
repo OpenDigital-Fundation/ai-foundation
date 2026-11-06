@@ -31,7 +31,7 @@ Use only the lanes that fit the system in front of you. This skill is useful for
 
 - `languages:python` (`references/standards.md`) and `languages:python` (`references/testing.md`) for Python implementation and pytest coverage
 - `languages:python` (`references/frameworks/pytorch.md`) for deep learning models, data loaders, device handling, and training loops
-- `eval-harness` and `ai-regression-testing` for promotion gates and agent-assisted regression checks
+- `agent-engineering:agent-evaluation` and `testing:test-strategy` for promotion gates and agent-assisted regression checks
 - `data:database-migrations`, `data:database-design`, and `data:database-design` for data storage and analytics surfaces
 - `platform:deployment`, `platform:deployment`, and `security:security-audit` for serving, secrets, containers, and production hardening
 
@@ -44,25 +44,25 @@ The recommended `minimal --with capability:machine-learning` install keeps the c
 | SWE surface | MLE use |
 |-------------|---------|
 | `product:product-management` / `architecture:decision-records` | Turn model work into explicit product contracts and record irreversible data, model, and rollout choices |
-| `repo-scan` / `codebase-onboarding` / `code-tour` | Find existing training, feature, serving, eval, and monitoring paths before introducing a parallel ML stack |
+| `code-quality:codebase-audit` / `architecture:codebase-onboarding` / `architecture:codebase-onboarding` | Find existing training, feature, serving, eval, and monitoring paths before introducing a parallel ML stack |
 | `plan` / `feature-dev` | Scope model changes as product capabilities with data, eval, serving, and rollback phases |
 | `testing:test-driven-development` / `languages:python` (`references/testing.md`) | Test feature transforms, split logic, metric calculations, artifact loading, and inference schemas before implementation |
 | `code-quality:code-reviewer` / `ai-engineering:ml-engineering` | Review code quality plus ML-specific leakage, reproducibility, promotion, and monitoring risks |
-| `build-fix` / `pr-test-analyzer` | Diagnose broken CI, flaky evals, missing fixtures, and environment-specific model or dependency failures |
+| `build-fix` / `testing:test-strategy` | Diagnose broken CI, flaky evals, missing fixtures, and environment-specific model or dependency failures |
 | `quality-gate` / `test-coverage` | Require automated evidence for transforms, metrics, inference contracts, promotion gates, and rollback behavior |
-| `eval-harness` / `testing:verification-before-completion` | Turn offline metrics, slice checks, latency budgets, and rollback drills into repeatable gates |
-| `ai-regression-testing` | Preserve every production bug as a regression: missing feature, stale label, bad artifact, schema drift, or serving mismatch |
-| `architecture:api-design` / `backend-patterns` | Design prediction APIs, batch jobs, idempotent retraining endpoints, and response envelopes |
+| `agent-engineering:agent-evaluation` / `testing:verification-before-completion` | Turn offline metrics, slice checks, latency budgets, and rollback drills into repeatable gates |
+| `testing:test-strategy` | Preserve every production bug as a regression: missing feature, stale label, bad artifact, schema drift, or serving mismatch |
+| `architecture:api-design` / `architecture:system-design` | Design prediction APIs, batch jobs, idempotent retraining endpoints, and response envelopes |
 | `data:database-migrations` / `data:database-design` / `data:database-design` | Version labels, feature snapshots, prediction logs, experiment metrics, and drift analytics |
 | `platform:deployment` / `platform:deployment` | Package reproducible training and serving images with health checks, resource limits, and rollback |
 | `platform:deployment` / `platform:reliability` | Make rollout health visible with model-version, slice, drift, latency, cost, and delayed-label dashboards |
 | `security:security-audit` / `security:agent-security` | Check model artifacts, notebooks, prompts, datasets, and logs for secrets, PII, unsafe deserialization, and supply-chain risk |
 | `testing:browser-testing` / `testing:browser-testing` / `accessibility` | Test critical product flows that consume predictions, including explainability and fallback UI states |
-| `benchmark` / `performance-optimizer` | Measure throughput, p95 latency, memory, GPU utilization, and cost per prediction or retrain |
-| `cost-aware-llm-pipeline` / `token-budget-advisor` | Route LLM/embedding workloads by quality, latency, and budget instead of defaulting to the largest model |
+| `benchmark` / `code-quality:codebase-audit` | Measure throughput, p95 latency, memory, GPU utilization, and cost per prediction or retrain |
+| `ai-engineering:prompt-engineering` / `agent-engineering:context-management` | Route LLM/embedding workloads by quality, latency, and budget instead of defaulting to the largest model |
 | `research:docs-lookup` / `research:docs-lookup` | Verify current library behavior for model serving, feature stores, vector DBs, and eval tooling before coding |
-| `platform:git-workflow` / `platform:github-operations` / `opensource-pipeline` | Package MLE changes for review with crisp scope, generated artifacts excluded, and reproducible test evidence |
-| `strategic-compact` / `dmux-workflows` | Split long ML work into parallel tracks: data contract, eval harness, serving path, monitoring, and docs |
+| `platform:git-workflow` / `platform:github-operations` / `platform:github-operations` | Package MLE changes for review with crisp scope, generated artifacts excluded, and reproducible test evidence |
+| `agent-engineering:context-management` / `dmux-workflows` | Split long ML work into parallel tracks: data contract, eval harness, serving path, monitoring, and docs |
 
 ## Ten MLE Task Simulations
 
@@ -71,15 +71,15 @@ Use these simulations as coverage checks when planning or reviewing MLE work. A 
 | ID | Common MLE task | Catalog path | Required output | Pipeline lanes covered |
 |----|-----------------|----------------------|-----------------|------------------------|
 | MLE-01 | Frame an ambiguous prediction, ranking, recommender, classifier, embedding, or forecast capability | `product:product-management`, `plan`, `architecture:decision-records`, `ai-engineering:ml-engineering` | Iteration Compact naming who cares, decision owner, success metric, unacceptable mistakes, assumptions, constraints, and first experiment | product contract, stakeholder loss, risk, rollout |
-| MLE-02 | Define metric goals, labels, data sources, and the mistake budget | `repo-scan`, `data:database-design`, `data:database-migrations`, `data:database-design`, `data:database-design` | Data and metric contract with entity grain, label timing, label confidence, feature timing, point-in-time joins, split policy, and dataset snapshot | data contract, metric design, leakage, reproducibility |
+| MLE-02 | Define metric goals, labels, data sources, and the mistake budget | `code-quality:codebase-audit`, `data:database-design`, `data:database-migrations`, `data:database-design`, `data:database-design` | Data and metric contract with entity grain, label timing, label confidence, feature timing, point-in-time joins, split policy, and dataset snapshot | data contract, metric design, leakage, reproducibility |
 | MLE-03 | Build a baseline model and scoring path before adding complexity | `testing:test-driven-development`, `languages:python` (`references/testing.md`), `languages:python` (`references/standards.md`), `code-quality:code-reviewer` | Baseline scorer with confusion matrix, calibration notes, latency/cost estimate, known weaknesses, and tests for score shape and determinism | baseline, scoring, testing, serving parity |
 | MLE-04 | Generate features from hypotheses about what separates outcomes | `languages:python` (`references/standards.md`), `languages:python` (`references/frameworks/pytorch.md`), `platform:deployment`, `platform:deployment` | Feature plan and transform module covering signal source, missing values, outliers, correlations, leakage checks, and train/serve equivalence | feature pipeline, leakage, training, artifacts |
-| MLE-05 | Tune thresholds, configs, and model complexity under tradeoffs | `eval-harness`, `ai-regression-testing`, `quality-gate`, `test-coverage` | Threshold/config report comparing precision, recall, F1, AUC, calibration, group slices, latency, cost, complexity, and acceptable error classes | evaluation, threshold, promotion, regression |
-| MLE-06 | Run error analysis and turn mistakes into the next experiment | `eval-harness`, `ai-regression-testing`, `ai-engineering:ml-engineering`, `silent-failure-hunter` | Error cluster report for false positives, false negatives, ambiguous labels, stale features, missing signals, and bug traces with lessons captured | error analysis, bug trace, iteration, regression |
-| MLE-07 | Package a model artifact for batch or online inference | `architecture:api-design`, `backend-patterns`, `security:security-audit`, `security:agent-security` | Versioned artifact bundle with preprocessing, config, dependency constraints, schema validation, safe loading, and PII-safe logs | artifact, security, inference contract |
-| MLE-08 | Ship online serving or batch scoring with feedback capture | `architecture:api-design`, `backend-patterns`, `testing:browser-testing`, `testing:browser-testing`, `accessibility` | Prediction endpoint or batch job with response envelope, timeout, batching, fallback, model version, confidence, feedback logging, and product-flow tests | serving, batch inference, fallback, user workflow |
-| MLE-09 | Roll out a model with shadow traffic, canary, A/B test, or rollback | `platform:deployment`, `platform:reliability`, `testing:verification-before-completion`, `performance-optimizer` | Rollout plan naming traffic split, dashboards, p95 latency, cost, quality guardrails, rollback artifact, and rollback trigger | deployment, canary, rollback |
-| MLE-10 | Operate, debug, and refresh a production model after launch | `silent-failure-hunter`, `platform:reliability`, `ai-engineering:ml-engineering`, `documents:technical-writing`, `platform:github-operations` | Observation ledger and refresh plan with drift checks, delayed-label health, alert owners, runbook updates, retrain criteria, and PR evidence | monitoring, incident response, retraining |
+| MLE-05 | Tune thresholds, configs, and model complexity under tradeoffs | `agent-engineering:agent-evaluation`, `testing:test-strategy`, `quality-gate`, `test-coverage` | Threshold/config report comparing precision, recall, F1, AUC, calibration, group slices, latency, cost, complexity, and acceptable error classes | evaluation, threshold, promotion, regression |
+| MLE-06 | Run error analysis and turn mistakes into the next experiment | `agent-engineering:agent-evaluation`, `testing:test-strategy`, `ai-engineering:ml-engineering`, `debugging:build-failure-resolution` | Error cluster report for false positives, false negatives, ambiguous labels, stale features, missing signals, and bug traces with lessons captured | error analysis, bug trace, iteration, regression |
+| MLE-07 | Package a model artifact for batch or online inference | `architecture:api-design`, `architecture:system-design`, `security:security-audit`, `security:agent-security` | Versioned artifact bundle with preprocessing, config, dependency constraints, schema validation, safe loading, and PII-safe logs | artifact, security, inference contract |
+| MLE-08 | Ship online serving or batch scoring with feedback capture | `architecture:api-design`, `architecture:system-design`, `testing:browser-testing`, `testing:browser-testing`, `accessibility` | Prediction endpoint or batch job with response envelope, timeout, batching, fallback, model version, confidence, feedback logging, and product-flow tests | serving, batch inference, fallback, user workflow |
+| MLE-09 | Roll out a model with shadow traffic, canary, A/B test, or rollback | `platform:deployment`, `platform:reliability`, `testing:verification-before-completion`, `code-quality:codebase-audit` | Rollout plan naming traffic split, dashboards, p95 latency, cost, quality guardrails, rollback artifact, and rollback trigger | deployment, canary, rollback |
+| MLE-10 | Operate, debug, and refresh a production model after launch | `debugging:build-failure-resolution`, `platform:reliability`, `ai-engineering:ml-engineering`, `documents:technical-writing`, `platform:github-operations` | Observation ledger and refresh plan with drift checks, delayed-label health, alert owners, runbook updates, retrain criteria, and PR evidence | monitoring, incident response, retraining |
 
 ## Iteration Compact
 
@@ -351,9 +351,9 @@ When using this skill, return concrete artifacts: data contract, promotion gates
 
 Load only what the task needs:
 
-- [`references/review.md`](references/review.md)
-- [`references/adoption-playbook.md`](references/adoption-playbook.md)
-- [`references/model-qa.md`](references/model-qa.md)
-- [`references/ai-engineering.md`](references/ai-engineering.md)
-- [`references/recommendation-systems.md`](references/recommendation-systems.md)
-- [`references/post-training.md`](references/post-training.md)
+- [`references/review.md`](references/review.md) — covers MLE Reviewer
+- [`references/adoption-playbook.md`](references/adoption-playbook.md) — covers ML Adoption Playbook
+- [`references/model-qa.md`](references/model-qa.md) — covers Model QA Specialist; Executive Summary; Findings Summary; Detailed Analysis
+- [`references/ai-engineering.md`](references/ai-engineering.md) — covers AI Engineer
+- [`references/recommendation-systems.md`](references/recommendation-systems.md) — covers recsys-pipeline-architect
+- [`references/post-training.md`](references/post-training.md) — covers LLM Post-Training Engineer; Status; Observed Evidence; Failure Classification

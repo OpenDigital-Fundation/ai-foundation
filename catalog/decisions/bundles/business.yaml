@@ -4,8 +4,9 @@ artifacts:
   product/product-management:
     title: Product management
     description: 'Use when doing product management work: writing a PRD or product brief, defining outcomes and success metrics, prioritising a backlog or sprint, synthesising user feedback into themes, planning and tracking experiments, or judging whether a feature is worth building.'
-    base: msitarzewski/agency-agents:product/product-manager.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:product/product-manager.md
       prioritisation.md:
       - msitarzewski/agency-agents:product/product-sprint-prioritizer.md
       feedback-synthesis.md:
@@ -16,6 +17,38 @@ artifacts:
       - s:product-lens
       capability-mapping.md:
       - s:product-capability
+    body: '# Product management
+
+
+      Decide what to build and why, write it down so a team can build it, and check afterwards that it worked.
+
+
+      ## 1. Frame the outcome
+
+      State the user problem, who has it, the evidence (research, tickets, data) and the business outcome it moves. Write the success metric and its current baseline. No baseline means the first task is measuring it.
+
+
+      ## 2. Shape the bet
+
+      Compare two or three options, including "do nothing". For each: expected impact, confidence and effort (RICE or ICE), risks and what would prove it wrong. Recommend one.
+
+
+      ## 3. Write the PRD
+
+      Problem, goals and non-goals, users and jobs to be done, requirements as user stories with acceptance criteria, success metrics, risks, open questions, launch plan. In a repository, the PRD is the spec: hand it to `workflow:brainstorming` or `workflow:writing-plans`.
+
+
+      ## 4. Prioritise
+
+      Rank the backlog by value over effort against the current outcome goal; cut or defer the rest explicitly. Re-rank when evidence changes, not when someone asks loudest.
+
+
+      ## 5. Learn
+
+      Run experiments with a hypothesis, metric, sample size and stop rule. Synthesise feedback into themes with counts and quotes. After launch, compare the metric to the baseline and write what you learned.
+
+
+      Market, competitor and capability analyses are in the references.'
   marketing/seo:
     title: SEO
     description: 'Use for search visibility: technical SEO audits, keyword and intent research, on-page optimisation, structured data, Core Web Vitals, answer-engine and AI-citation optimisation, and app store optimisation.'
@@ -52,15 +85,46 @@ artifacts:
   marketing/email-marketing:
     title: Email marketing
     description: 'Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation, deliverability, subject lines and A/B tests, and operating email tools.'
-    base: msitarzewski/agency-agents:marketing/marketing-email-strategist.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:marketing/marketing-email-strategist.md
       operations.md:
       - s:email-ops
+    body: '# Email marketing
+
+
+      Send fewer, more relevant emails that people expect and act on.
+
+
+      ## 1. Define the programme
+
+      Goal per flow (activation, retention, conversion, win-back), audience segment, trigger or cadence, and the metric (clicks, conversions, revenue per send; opens are directional only).
+
+
+      ## 2. Build the sequence
+
+      For each email: one purpose, one call to action, subject line and preview text, timing relative to the trigger, and the exit condition (converted, unsubscribed, moved segment). Map branches for engaged versus silent recipients.
+
+
+      ## 3. Write
+
+      Lead with the reader''s benefit, keep it scannable, make the CTA a verb, and match the brand voice (`brand:brand-voice`). Write two subject-line variants for testing.
+
+
+      ## 4. Protect deliverability
+
+      Consent and easy unsubscribe, authenticated domain (SPF, DKIM, DMARC), list hygiene (suppress bounces and long-inactive contacts), and steady sending volume.
+
+
+      ## 5. Test and report
+
+      A/B test one variable at a time with enough volume to decide; report against the goal metric and roll the winner into the default.'
   marketing/paid-media:
     title: Paid media
     description: 'Use for paid acquisition: search (PPC) and paid social campaigns, programmatic and display buying, search-query mining, ad creative, conversion tracking and attribution, and auditing ad accounts.'
-    base: msitarzewski/agency-agents:paid-media/paid-media-ppc-strategist.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-ppc-strategist.md
       paid-social.md:
       - msitarzewski/agency-agents:paid-media/paid-media-paid-social-strategist.md
       programmatic.md:
@@ -73,6 +137,35 @@ artifacts:
       - msitarzewski/agency-agents:paid-media/paid-media-creative-strategist.md
       tracking.md:
       - msitarzewski/agency-agents:paid-media/paid-media-tracking-specialist.md
+    body: '# Paid media
+
+
+      Spend where the next dollar returns the most, and prove it with clean measurement.
+
+
+      ## 1. Measurement first
+
+      Confirm conversion tracking end to end (pixel or tag, server-side events where possible, deduplication, consent mode) and agree the attribution model before changing bids. Without trustworthy conversions, stop and fix tracking.
+
+
+      ## 2. Structure
+
+      Campaigns by goal and audience, ad groups by tight intent, budgets by expected return. Search: match types and negatives from real query reports. Social and display: audiences, exclusions, frequency caps.
+
+
+      ## 3. Creative
+
+      Several angles per audience, each tied to a specific pain or desire, with clear offers and CTAs. Rotate on fatigue signals.
+
+
+      ## 4. Optimise weekly
+
+      Mine search terms, add negatives, shift budget toward cost per acquisition and return targets, pause losers with enough data, and test one change at a time.
+
+
+      ## 5. Audit and report
+
+      Wasted spend, tracking gaps, structure problems and opportunities, ranked by money at stake. Report spend, conversions, CPA or ROAS against target and the next actions.'
   marketing/campaign-planning:
     title: Campaign planning
     description: 'Use when planning a marketing campaign or launch end to end: goals, audience, positioning and messaging, channel mix, calendar, growth experiments, press and communications, and success metrics.'
@@ -102,8 +195,9 @@ artifacts:
   sales/deal-strategy:
     title: Deal strategy
     description: 'Use when working an active sales opportunity: discovery calls, qualification, mapping stakeholders, technical sales and demos, proposals, handling objections, pipeline reviews and forecasting, and coaching reps.'
-    base: msitarzewski/agency-agents:sales/sales-deal-strategist.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:sales/sales-deal-strategist.md
       discovery.md:
       - msitarzewski/agency-agents:sales/sales-discovery-coach.md
       proposals.md:
@@ -116,6 +210,35 @@ artifacts:
       - msitarzewski/agency-agents:sales/sales-pipeline-analyst.md
       coaching.md:
       - msitarzewski/agency-agents:sales/sales-coach.md
+    body: '# Deal strategy
+
+
+      Move a real opportunity forward with evidence about the buyer, not hope.
+
+
+      ## 1. Qualify
+
+      Use a framework the team shares (MEDDICC or similar): metrics, economic buyer, decision criteria and process, paper process, identified pain, champion, competition. Mark each as known, assumed or unknown.
+
+
+      ## 2. Prepare each call
+
+      Goal of the call, what you need to learn, hypotheses about the pain, questions in order, and the next step you will ask for. Research the account and attendees first.
+
+
+      ## 3. Map the stakeholders
+
+      Who decides, who influences, who blocks, and what each needs to say yes. Plan how to reach the economic buyer.
+
+
+      ## 4. Advance
+
+      Tailored demo or technical validation against their criteria; a proposal that restates their problem, the outcome, the plan and the price; objections answered with evidence.
+
+
+      ## 5. Inspect the pipeline
+
+      Each deal has a dated next step and a stage backed by evidence. Forecast by stage exit criteria; flag stalled deals and what would unblock them.'
   sales/investor-relations:
     title: Investor relations
     description: 'Use when raising money: pitch decks, one-pagers, financial narratives, data rooms, and investor outreach and follow-up.'
@@ -126,25 +249,85 @@ artifacts:
   finance/financial-analysis:
     title: Financial analysis
     description: 'Use for financial modelling and planning: three-statement and unit-economics models, forecasts and budgets, scenario analysis, variance analysis, pricing models and investment memos.'
-    base: msitarzewski/agency-agents:finance/finance-financial-analyst.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:finance/finance-financial-analyst.md
       fpa.md:
       - msitarzewski/agency-agents:finance/finance-fpa-analyst.md
       pricing.md:
       - msitarzewski/agency-agents:specialized/specialized-pricing-analyst.md
       investment-research.md:
       - msitarzewski/agency-agents:finance/finance-investment-researcher.md
+    body: '# Financial analysis
+
+
+      Turn numbers into a decision, with assumptions anyone can audit.
+
+
+      ## 1. Frame the question
+
+      The decision the analysis informs, the horizon, and the output (model, forecast, memo).
+
+
+      ## 2. Gather and check inputs
+
+      Actuals from the source of truth, with dates; flag gaps and one-offs. Keep inputs separate from calculations.
+
+
+      ## 3. Build the model
+
+      Assumptions on one sheet, clearly labelled; drivers (volume, price, conversion, churn, headcount) flowing into the statements or unit economics; no hard-coded numbers inside formulas. Check that statements balance.
+
+
+      ## 4. Stress it
+
+      Base, downside and upside scenarios; sensitivity on the two or three drivers that matter most; break-even and runway.
+
+
+      ## 5. Communicate
+
+      Lead with the answer and the recommendation, then the drivers, risks and what would change the conclusion. For spreadsheet files use `documents:office-documents`. This is analysis, not investment or tax advice.'
   finance/accounting:
     title: Accounting
     description: 'Use for day-to-day accounting: bookkeeping, reconciliations, month-end close, accounts payable, expense tracking, financial statements, and tax planning questions to prepare for an accountant.'
-    base: msitarzewski/agency-agents:finance/finance-bookkeeper-controller.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:finance/finance-bookkeeper-controller.md
       tax.md:
       - msitarzewski/agency-agents:finance/finance-tax-strategist.md
       accounts-payable.md:
       - msitarzewski/agency-agents:specialized/accounts-payable-agent.md
       tracking.md:
       - msitarzewski/agency-agents:support/support-finance-tracker.md
+    body: '# Accounting
+
+
+      Keep the books accurate, closed on time and ready for an accountant or auditor.
+
+
+      ## 1. Record
+
+      Every transaction categorised to the chart of accounts with its document (invoice, receipt, contract). Separate business and personal; never guess a category, flag it.
+
+
+      ## 2. Reconcile
+
+      Bank, cards, payment processors and payables against the ledger, monthly at least. Investigate every difference; do not plug it.
+
+
+      ## 3. Close the month
+
+      Accruals and prepayments, depreciation, revenue recognition, payroll entries, intercompany if any; review against the prior month and budget; lock the period.
+
+
+      ## 4. Report
+
+      Profit and loss, balance sheet and cash flow, with variance explanations for anything material.
+
+
+      ## 5. Prepare for tax
+
+      Organise records and open questions for the accountant. Tax positions and filings need a qualified professional; say so.'
   finance/billing-operations:
     title: Billing operations
     description: 'Use when building or operating billing: subscriptions, invoicing, payment providers, refunds and disputes, dunning, revenue reporting and customer billing issues.'
@@ -157,12 +340,42 @@ artifacts:
   legal-compliance/compliance-programs:
     title: Compliance programs
     description: 'Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy programmes and data processing, control mapping, evidence collection and policy gaps. Not legal advice.'
-    base: msitarzewski/agency-agents:security/security-compliance-auditor.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:security/security-compliance-auditor.md
       privacy.md:
       - msitarzewski/agency-agents:specialized/data-privacy-officer.md
       checks.md:
       - msitarzewski/agency-agents:support/support-legal-compliance-checker.md
+    body: '# Compliance programmes
+
+
+      Get from "we need SOC 2 / ISO 27001 / GDPR" to controls that work and evidence that proves it. This is preparation support, not legal advice.
+
+
+      ## 1. Scope
+
+      The framework(s), systems, data types and locations in scope, and the deadline or customer driving it.
+
+
+      ## 2. Gap assessment
+
+      Map each required control to what exists today: policy, technical control, owner, evidence. Mark met, partial or missing. Reuse mappings between frameworks where controls overlap.
+
+
+      ## 3. Remediation plan
+
+      Missing and partial controls ranked by audit risk and effort, each with an owner and date. Technical items (access reviews, logging, encryption, backups, vulnerability management) go to the engineering backlog; see `security:security-audit`.
+
+
+      ## 4. Privacy
+
+      Data inventory and flows, lawful basis, retention, processor agreements, data subject requests and breach procedures.
+
+
+      ## 5. Evidence
+
+      Collect evidence continuously (screenshots, exports, tickets) with dates; keep policies versioned and acknowledged. Before the audit, run a mock review against the control list.'
   legal-compliance/contracts:
     title: Contracts
     description: 'Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review against a playbook, redlines, client intake and matter organisation. Drafts are for review by a qualified lawyer.'
@@ -175,8 +388,9 @@ artifacts:
   operations/project-management:
     title: Project management
     description: 'Use when running a project or programme: plans and milestones, status tracking, risks and dependencies, stakeholder updates, meeting notes and action items, and keeping a Jira or tracker workflow healthy.'
-    base: msitarzewski/agency-agents:project-management/project-manager-senior.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:project-management/project-manager-senior.md
       shepherding.md:
       - msitarzewski/agency-agents:project-management/project-management-project-shepherd.md
       production.md:
@@ -187,6 +401,35 @@ artifacts:
       - msitarzewski/agency-agents:project-management/project-management-jira-workflow-steward.md
       flow-operations.md:
       - s:project-flow-ops
+    body: '# Project management
+
+
+      Deliver the agreed scope on time by making the plan, the risks and the next steps visible to everyone.
+
+
+      ## 1. Define
+
+      Goal, scope and out of scope, success criteria, stakeholders and the decision maker, constraints and deadline. Get the definition agreed in writing.
+
+
+      ## 2. Plan
+
+      Break the work into milestones and tasks with owners and estimates; find the dependencies and the critical path; put buffers where uncertainty is highest. In a software repository, prefer `workflow:issue-breakdown` for the tasks.
+
+
+      ## 3. Manage risks
+
+      Risk log with likelihood, impact, owner and mitigation; review it every week.
+
+
+      ## 4. Run the cadence
+
+      Short status updates (done, next, blocked, decisions needed), meeting notes with decisions and action items, and a tracker that reflects reality.
+
+
+      ## 5. Close
+
+      Confirm acceptance, hand over, and write a short retrospective: what worked, what to change.'
   operations/customer-support:
     title: Customer support
     description: 'Use for customer support and success work: answering tickets, writing help-center replies and macros, escalations, onboarding and health checks for accounts, and turning support trends into product feedback.'
@@ -231,11 +474,39 @@ artifacts:
   operations/people-operations:
     title: People operations
     description: 'Use for people operations: hiring plans and job descriptions, interview loops, onboarding new staff, training programmes, and managing organisational change.'
-    base: msitarzewski/agency-agents:specialized/hr-onboarding.md
     references:
+      role-guide.md:
+      - msitarzewski/agency-agents:specialized/hr-onboarding.md
       recruiting.md:
       - msitarzewski/agency-agents:specialized/recruitment-specialist.md
       training.md:
       - msitarzewski/agency-agents:specialized/corporate-training-designer.md
       change-management.md:
       - msitarzewski/agency-agents:specialized/change-management-consultant.md
+    body: '# People operations
+
+
+      Hire, onboard and grow people with clear, fair and repeatable processes.
+
+
+      ## 1. Hiring
+
+      Role scorecard (outcomes, competencies, level) before the job description; structured interview loop where each interviewer owns specific competencies with written rubrics; debrief on evidence, not impressions.
+
+
+      ## 2. Onboarding
+
+      A 30-60-90 day plan: accounts and equipment ready on day one, a buddy, the first meaningful task in week one, explicit expectations and check-ins.
+
+
+      ## 3. Training
+
+      Learning objectives, the format that fits (docs, workshop, pairing), practice, and a check that the skill transferred.
+
+
+      ## 4. Change
+
+      For organisational change: why, what changes for whom, timeline, communication plan by audience, and how feedback is collected and answered.
+
+
+      Employment-law questions need a qualified professional in the relevant jurisdiction.'

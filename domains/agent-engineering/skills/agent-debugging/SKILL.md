@@ -158,4 +158,4 @@ Always provide:
 
 Load only what the task needs:
 
-- [`references/conversation-analysis.md`](references/conversation-analysis.md)
+- [`references/conversation-analysis.md`](references/conversation-analysis.md) — covers Conversation Analyzer

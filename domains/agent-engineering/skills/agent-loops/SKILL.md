@@ -147,7 +147,7 @@ The naive loop and the reviewed loop differ by four lines of constraint — and 
 
 Load only what the task needs:
 
-- [`references/autonomous-loops.md`](references/autonomous-loops.md)
-- [`references/approval-loops.md`](references/approval-loops.md)
-- [`references/operating-loops.md`](references/operating-loops.md)
-- [`references/autonomous-harness.md`](references/autonomous-harness.md)
+- [`references/autonomous-loops.md`](references/autonomous-loops.md) — covers Autonomous Loops Skill; Progress; Next Steps; MERGE CONFLICT RESOLVE BEFORE NEXT LANDING
+- [`references/approval-loops.md`](references/approval-loops.md) — covers Operator Approval Loop
+- [`references/operating-loops.md`](references/operating-loops.md) — covers loop-operator
+- [`references/autonomous-harness.md`](references/autonomous-harness.md) — covers Autonomous Harness; Active Tasks; Completed

@@ -471,5 +471,5 @@ If the page is server-rendered with occasional interactivity, Hotwire ships fast
 
 ### Related Skills
 
-- `backend-patterns` — service boundaries and adapter patterns (referenced by the Ruby patterns rules)
+- `architecture:system-design` — service boundaries and adapter patterns (referenced by the Ruby patterns rules)
 - Ruby patterns rules (`rules/ruby/patterns.md`, installed as `rules/ecc/ruby/patterns.md`) — the decisions and when-to-use guidance this skill implements

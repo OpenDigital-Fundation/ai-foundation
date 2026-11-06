@@ -432,10 +432,10 @@ Before any production deployment:
 
 Load only what the task needs:
 
-- [`references/docker.md`](references/docker.md)
-- [`references/kubernetes.md`](references/kubernetes.md)
-- [`references/ci-cd-automation.md`](references/ci-cd-automation.md)
-- [`references/platform-engineering.md`](references/platform-engineering.md)
-- [`references/post-deploy-checks.md`](references/post-deploy-checks.md)
-- [`references/process-managers.md`](references/process-managers.md)
-- [`references/mobile-release.md`](references/mobile-release.md)
+- [`references/docker.md`](references/docker.md) — covers Docker Patterns
+- [`references/kubernetes.md`](references/kubernetes.md) — covers Kubernetes Patterns
+- [`references/ci-cd-automation.md`](references/ci-cd-automation.md) — covers DevOps Automator; Infrastructure Architecture; CI/CD Pipeline; Monitoring and Observability
+- [`references/platform-engineering.md`](references/platform-engineering.md) — covers Platform Engineer; Why; Plan; Success metric
+- [`references/post-deploy-checks.md`](references/post-deploy-checks.md) — covers Canary Watch Post-Deploy Monitoring; Canary Report myapp.com 2026-03-23 0315 PST
+- [`references/process-managers.md`](references/process-managers.md) — covers PM2 Init; PM2 Services; PM2 Init Complete; First time (with config file)
+- [`references/mobile-release.md`](references/mobile-release.md) — covers Mobile Release Engineer; Release version (build) go/no-go

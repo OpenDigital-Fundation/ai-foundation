@@ -41,7 +41,7 @@ bundle exec rubocop -A
 
 ### Reference
 
-See skill: `backend-patterns` for broader service/repository layering guidance.
+See skill: `architecture:system-design` for broader service/repository layering guidance.
 
 ## Ruby Patterns
 
@@ -80,4 +80,4 @@ See skill: `backend-patterns` for broader service/repository layering guidance.
 
 ### Reference
 
-See skill: `backend-patterns` for service boundaries and adapter patterns.
+See skill: `architecture:system-design` for service boundaries and adapter patterns.

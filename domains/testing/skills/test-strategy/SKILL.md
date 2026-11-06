@@ -176,10 +176,10 @@ Inventory tasks modify governance documentation only by default. Do not change p
 
 Load only what the task needs:
 
-- [`references/ai-regression.md`](references/ai-regression.md)
-- [`references/automation.md`](references/automation.md)
-- [`references/api-testing.md`](references/api-testing.md)
-- [`references/results-analysis.md`](references/results-analysis.md)
-- [`references/performance.md`](references/performance.md)
-- [`references/click-path-audit.md`](references/click-path-audit.md)
-- [`references/delivery-gates.md`](references/delivery-gates.md)
+- [`references/ai-regression.md`](references/ai-regression.md) — covers AI Regression Testing; Step 1 Automated Tests (mandatory, cannot skip); Step 2 Code Review (AI review); Step 3 For each bug fixed, propose a regression test
+- [`references/automation.md`](references/automation.md) — covers Test Automation Engineer
+- [`references/api-testing.md`](references/api-testing.md) — covers API Tester; Test Coverage Analysis; Performance Test Results; Security Assessment
+- [`references/results-analysis.md`](references/results-analysis.md) — covers Test Results Analyzer; Executive Summary; Test Coverage Analysis; Quality Metrics and Trends
+- [`references/performance.md`](references/performance.md) — covers Performance Benchmarker; Performance Test Results; Core Web Vitals Analysis; Bottleneck Analysis
+- [`references/click-path-audit.md`](references/click-path-audit.md) — covers /click-path-audit Behavioural Flow Audit
+- [`references/delivery-gates.md`](references/delivery-gates.md) — covers Delivery Gate Mechanical Quality Gate for Claude Code

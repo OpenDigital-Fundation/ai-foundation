@@ -14,6 +14,13 @@ files:
     path: specialized/accounts-payable-agent.md
     license: MIT
     modification: adapted
+- path: skills/accounting/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: finance/finance-bookkeeper-controller.md
+    license: MIT
+    modification: adapted
 - path: skills/accounting/references/tax.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -75,5 +82,12 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: specialized/specialized-pricing-analyst.md
+    license: MIT
+    modification: adapted
+- path: skills/financial-analysis/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: finance/finance-financial-analyst.md
     license: MIT
     modification: adapted

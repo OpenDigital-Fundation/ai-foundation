@@ -101,4 +101,4 @@ Before delivering:
 
 Load only what the task needs:
 
-- [`references/outreach.md`](references/outreach.md)
+- [`references/outreach.md`](references/outreach.md) — covers Investor Outreach

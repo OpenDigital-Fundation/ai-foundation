@@ -111,4 +111,4 @@ The hook script is a best-effort tripwire, not a security boundary. For real pro
 
 Load only what the task needs:
 
-- [`references/safety-modes.md`](references/safety-modes.md)
+- [`references/safety-modes.md`](references/safety-modes.md) — covers Safety Guard Prevent Destructive Operations

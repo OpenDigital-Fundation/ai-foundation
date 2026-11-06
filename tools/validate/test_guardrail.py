@@ -108,3 +108,14 @@ def test_blocks_config_parser_escapes(cmd):
                                  "git config set color.ui auto", "git config --show-origin --list"])
 def test_allows_strict_config(cmd):
     assert run(cmd) == 0, cmd
+
+
+@pytest.mark.parametrize("cmd", ["git config -z alias.x push", "git config --null alias.x push", "git config --name-only core.hooksPath /tmp/h",
+                                 "git config --get alias.x push extra", "git config --list alias.x", "git config --get --unset x", "git config get alias.x push"])
+def test_blocks_format_flags_as_writes(cmd):
+    assert run(cmd) == 2, cmd
+
+
+@pytest.mark.parametrize("cmd", ["git config -z --list", "git config --get user.email", "git config --get-regexp '^color'", "git config get user.name"])
+def test_allows_real_reads(cmd):
+    assert run(cmd) == 0, cmd

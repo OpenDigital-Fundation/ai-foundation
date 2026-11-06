@@ -31,7 +31,7 @@ Plan and execute launch campaigns that convert — not just campaigns that ship.
 
 ### Phase 1: Research
 
-Use `market-research` to:
+Use `product:product-management` to:
 - profile the target audience (jobs-to-be-done, fears, language, alternatives they use)
 - map 3+ direct or adjacent competitors (positioning, gaps, messaging weaknesses)
 - identify 1–3 audience insights the campaign angle will exploit
@@ -111,12 +111,12 @@ Delete and rewrite any:
 - `brand:brand-voice` — source-derived voice capture (run before content production)
 - `marketing:content-marketing` — platform-native content production
 - `crosspost` — multi-platform distribution
-- `market-research` — audience and competitive intelligence
+- `product:product-management` — audience and competitive intelligence
 - `seo` — on-page optimisation for landing page copy
 
 ## References
 
 Load only what the task needs:
 
-- [`references/growth.md`](references/growth.md)
-- [`references/pr-communications.md`](references/pr-communications.md)
+- [`references/growth.md`](references/growth.md) — covers Marketing Growth Hacker
+- [`references/pr-communications.md`](references/pr-communications.md) — covers PR & Communications Manager

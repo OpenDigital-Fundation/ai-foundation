@@ -7,6 +7,13 @@ files:
     path: engineering/engineering-data-engineer.md
     license: MIT
     modification: adapted
+- path: skills/data-pipelines/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-data-engineer.md
+    license: MIT
+    modification: adapted
 - path: skills/data-pipelines/references/throughput.md
   derived_from:
   - source: affaan-m/ECC

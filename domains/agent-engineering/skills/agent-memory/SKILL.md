@@ -380,8 +380,8 @@ v2.1 is fully compatible with v2.0 and v1:
 
 Load only what the task needs:
 
-- [`references/learning-loop.md`](references/learning-loop.md)
-- [`references/unified-memory.md`](references/unified-memory.md)
-- [`references/context-and-decisions.md`](references/context-and-decisions.md)
-- [`references/rules-distillation.md`](references/rules-distillation.md)
-- [`references/observer.md`](references/observer.md)
+- [`references/learning-loop.md`](references/learning-loop.md) — covers Continuous Learning Skill - DEPRECATED
+- [`references/unified-memory.md`](references/unified-memory.md) — covers Unified Memory
+- [`references/context-and-decisions.md`](references/context-and-decisions.md) — covers Domain Context and Decision Handoff
+- [`references/rules-distillation.md`](references/rules-distillation.md) — covers Rules Distill; Input; Extraction Criteria; Matching & Verdict
+- [`references/observer.md`](references/observer.md) — covers Observer; Action; Evidence

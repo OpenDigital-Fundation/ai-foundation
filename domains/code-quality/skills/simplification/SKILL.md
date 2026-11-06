@@ -62,6 +62,6 @@ You simplify code while preserving functionality.
 
 Load only what the task needs:
 
-- [`references/cleanup.md`](references/cleanup.md)
-- [`references/comments.md`](references/comments.md)
-- [`references/type-design.md`](references/type-design.md)
+- [`references/cleanup.md`](references/cleanup.md) — covers Refactor & Dead Code Cleaner
+- [`references/comments.md`](references/comments.md) — covers Comment Analyzer
+- [`references/type-design.md`](references/type-design.md) — covers Type Design Analyzer

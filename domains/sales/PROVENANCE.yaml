@@ -42,6 +42,13 @@ files:
     path: sales/sales-proposal-strategist.md
     license: MIT
     modification: adapted
+- path: skills/deal-strategy/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-deal-strategist.md
+    license: MIT
+    modification: adapted
 - path: skills/deal-strategy/references/sales-engineering.md
   derived_from:
   - source: msitarzewski/agency-agents

@@ -33,6 +33,6 @@ Run formatting, type checks and fast tests before each commit with a pre-commit 
 
 Load only what the task needs:
 
-- [`references/branching-and-history.md`](references/branching-and-history.md)
-- [`references/practices.md`](references/practices.md)
-- [`references/pre-commit.md`](references/pre-commit.md)
+- [`references/branching-and-history.md`](references/branching-and-history.md) — covers Git Workflow Patterns; What; Why; How
+- [`references/practices.md`](references/practices.md) — covers Git Workflow Master
+- [`references/pre-commit.md`](references/pre-commit.md) — covers Setup Pre-Commit Hooks

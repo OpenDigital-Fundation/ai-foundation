@@ -209,3 +209,10 @@ files:
     path: engineering/engineering-realtime-collaboration-engineer.md
     license: MIT
     modification: adapted
+- path: skills/system-design/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-software-architect.md
+    license: MIT
+    modification: adapted

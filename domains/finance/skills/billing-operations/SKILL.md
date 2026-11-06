@@ -18,7 +18,7 @@ Pull these catalog skills into the workflow when relevant:
 
 - `finance:billing-operations` for customer-specific remediation and follow-up
 - `research:source-research` when competitor pricing or current market evidence matters
-- `market-research` when the answer should end in a pricing recommendation
+- `product:product-management` when the answer should end in a pricing recommendation
 - `platform:github-operations` when the billing truth depends on code, backlog, or release state in sibling repos
 - `testing:verification-before-completion` when the answer depends on proving checkout, seat handling, or entitlement behavior
 
@@ -132,5 +132,5 @@ PRODUCT GAP
 
 Load only what the task needs:
 
-- [`references/customer-billing.md`](references/customer-billing.md)
-- [`references/payments-engineering.md`](references/payments-engineering.md)
+- [`references/customer-billing.md`](references/customer-billing.md) — covers Customer Billing Ops
+- [`references/payments-engineering.md`](references/payments-engineering.md) — covers Payments & Billing Engineer

@@ -30,6 +30,6 @@ Detailed response playbooks, tone guides, customer-success health checks and onb
 
 Load only what the task needs:
 
-- [`references/responding.md`](references/responding.md)
-- [`references/service.md`](references/service.md)
-- [`references/customer-success.md`](references/customer-success.md)
+- [`references/responding.md`](references/responding.md) — covers Support Responder; Customer Information; Resolution Process; Outcome and Metrics
+- [`references/service.md`](references/service.md) — covers Customer Service
+- [`references/customer-success.md`](references/customer-success.md) — covers Customer Success Manager

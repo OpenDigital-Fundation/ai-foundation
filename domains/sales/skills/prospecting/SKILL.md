@@ -106,7 +106,7 @@ For each scored target, analyze the user's social graph to find the warmest path
 
 1. Pull user's X following list and LinkedIn connections
 2. For each high-signal target, check for shared connections
-3. Apply the `social-graph-ranker` model to score bridge value
+3. Apply the `sales:prospecting` model to score bridge value
 4. Rank mutuals by:
 
 | Factor | Weight |
@@ -140,7 +140,7 @@ Interpretation:
 
 ```
 
-If the user explicitly wants the ranking engine broken out, the math visualized, or the network scored outside the full lead workflow, run `social-graph-ranker` as a standalone pass first and feed the result back into this pipeline.
+If the user explicitly wants the ranking engine broken out, the math visualized, or the network scored outside the full lead workflow, run `sales:prospecting` as a standalone pass first and feed the result back into this pipeline.
 MUTUAL RANKING REPORT
 =====================
 
@@ -331,15 +331,15 @@ Output: Ranked list with warm paths, voice profile summary, and channel-specific
 ## Related Skills
 
 - `brand:brand-voice` for canonical voice capture
-- `connections-optimizer` for review-first network pruning and expansion before outreach
+- `sales:prospecting` for review-first network pruning and expansion before outreach
 
 ## References
 
 Load only what the task needs:
 
-- [`references/outbound.md`](references/outbound.md)
-- [`references/outreach.md`](references/outreach.md)
-- [`references/offers.md`](references/offers.md)
-- [`references/signal-scoring.md`](references/signal-scoring.md)
-- [`references/warm-paths.md`](references/warm-paths.md)
-- [`references/drafting.md`](references/drafting.md)
+- [`references/outbound.md`](references/outbound.md) — covers Outbound Strategist
+- [`references/outreach.md`](references/outreach.md) — covers Sales Outreach
+- [`references/offers.md`](references/offers.md) — covers Offer & Lead Gen Strategist; Dream Outcome; Perceived Likelihood (Proof Stack); Time Delay Compression
+- [`references/signal-scoring.md`](references/signal-scoring.md) — covers Signal Scorer
+- [`references/warm-paths.md`](references/warm-paths.md) — covers Mutual Mapper
+- [`references/drafting.md`](references/drafting.md) — covers Outreach Drafter

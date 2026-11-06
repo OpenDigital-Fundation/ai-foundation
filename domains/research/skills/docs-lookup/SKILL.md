@@ -95,5 +95,5 @@ Limit: do not call query-docs (or resolve-library-id) more than 3 times per ques
 
 Load only what the task needs:
 
-- [`references/lookup-agent.md`](references/lookup-agent.md)
-- [`references/search-before-building.md`](references/search-before-building.md)
+- [`references/lookup-agent.md`](references/lookup-agent.md) — covers docs-lookup
+- [`references/search-before-building.md`](references/search-before-building.md) — covers /search-first Research Before You Code

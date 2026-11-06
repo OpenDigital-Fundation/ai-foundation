@@ -189,4 +189,4 @@ Use these maxima unless the user explicitly asks for denser slides and readabili
 
 Load only what the task needs:
 
-- [`references/strategic-slides.md`](references/strategic-slides.md)
+- [`references/strategic-slides.md`](references/strategic-slides.md) — covers Slides

@@ -89,6 +89,13 @@ files:
     path: skills/email-ops/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/email-marketing/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-email-strategist.md
+    license: MIT
+    modification: adapted
 - path: skills/paid-media/SKILL.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -122,6 +129,13 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: paid-media/paid-media-programmatic-buyer.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-ppc-strategist.md
     license: MIT
     modification: adapted
 - path: skills/paid-media/references/search-queries.md

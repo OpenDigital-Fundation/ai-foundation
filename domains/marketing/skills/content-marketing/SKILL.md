@@ -129,15 +129,15 @@ Before delivering:
 
 - `brand:brand-voice` for source-derived voice profiles
 - `crosspost` for platform-specific distribution
-- `x-api` for sourcing recent posts and publishing approved X output
+- `marketing:content-marketing` for sourcing recent posts and publishing approved X output
 
 ## References
 
 Load only what the task needs:
 
-- [`references/long-form.md`](references/long-form.md)
-- [`references/creation.md`](references/creation.md)
-- [`references/linkedin.md`](references/linkedin.md)
-- [`references/social-strategy.md`](references/social-strategy.md)
-- [`references/cross-posting.md`](references/cross-posting.md)
-- [`references/developer-relations.md`](references/developer-relations.md)
+- [`references/long-form.md`](references/long-form.md) — covers Article Writing
+- [`references/creation.md`](references/creation.md) — covers Marketing Content Creator
+- [`references/linkedin.md`](references/linkedin.md) — covers LinkedIn Content Creator
+- [`references/social-strategy.md`](references/social-strategy.md) — covers Social Media Strategist
+- [`references/cross-posting.md`](references/cross-posting.md) — covers Crosspost
+- [`references/developer-relations.md`](references/developer-relations.md) — covers Developer Advocate; Methodology; Onboarding Flow Analysis; Top 5 DX Issues by Impact
