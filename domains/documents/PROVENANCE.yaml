@@ -1,2 +1,72 @@
 version: 1
-files: []
+files:
+- path: skills/doc-coauthoring/SKILL.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/doc-coauthoring/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/internal-comms/LICENSE.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/internal-comms/LICENSE.txt
+    license: Apache-2.0
+    modification: adapted
+- path: skills/internal-comms/SKILL.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/internal-comms/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/internal-comms/examples/3p-updates.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/internal-comms/examples/3p-updates.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/internal-comms/examples/company-newsletter.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/internal-comms/examples/company-newsletter.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/internal-comms/examples/faq-answers.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/internal-comms/examples/faq-answers.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/internal-comms/examples/general-comms.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/internal-comms/examples/general-comms.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/office-documents/references/document-generation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/specialized-document-generator.md
+    license: MIT
+    modification: adapted
+- path: skills/technical-writing/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-technical-writer.md
+    license: MIT
+    modification: adapted
+- path: skills/technical-writing/references/keeping-docs-current.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/doc-updater.md
+    license: MIT
+    modification: adapted

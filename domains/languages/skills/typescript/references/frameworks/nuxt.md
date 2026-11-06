@@ -225,7 +225,7 @@ Import from `@nuxt/test-utils/e2e`.
 
 ### Reference
 
-- Related: `languages:typescript` (`references/frameworks/nuxt.md`), `e2e-testing`, `languages:typescript` (`references/frameworks/vite.md`).
+- Related: `languages:typescript` (`references/frameworks/nuxt.md`), `testing:browser-testing`, `languages:typescript` (`references/frameworks/vite.md`).
 - [Nuxt testing docs](https://nuxt.com/docs/getting-started/testing)
 - [@nuxt/test-utils npm](https://www.npmjs.com/package/@nuxt/test-utils)
 

@@ -1,2 +1,51 @@
 version: 1
-files: []
+files:
+- path: skills/docs-lookup/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/documentation-lookup/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/docs-lookup/references/lookup-agent.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/docs-lookup.md
+    license: MIT
+    modification: adapted
+- path: skills/docs-lookup/references/search-before-building.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/search-first/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/literature-review/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/scientific-thinking-literature-review/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/literature-review/references/scholarly-evaluation.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/scientific-thinking-scholar-evaluation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/source-research/references/deep-research.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/deep-research/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/source-research/references/synthesis.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: research/research-synthesist.md
+    license: MIT
+    modification: adapted

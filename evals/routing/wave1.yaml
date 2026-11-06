@@ -64,3 +64,17 @@
 - {prompt: "define SLOs and alerts for the checkout service", expect: "platform:reliability"}
 - {prompt: "production is down, the API returns 500 for everyone", expect: "platform:incident-response"}
 - {prompt: "test the login flow of our local app in a real browser with Playwright", expect: "testing:browser-testing"}
+- {prompt: "add streaming and tool use to our Anthropic SDK integration", expect: "ai-engineering:claude-api"}
+- {prompt: "build an MCP server that exposes our Jira as tools", expect: "ai-engineering:mcp-server-development"}
+- {prompt: "our RAG answers cite the wrong documents; improve retrieval", expect: "ai-engineering:rag-pipelines"}
+- {prompt: "write and evaluate the system prompt for our support classifier", expect: "ai-engineering:prompt-engineering"}
+- {prompt: "convert this quarterly report into an Excel file with formulas", expect: "documents:office-documents"}
+- {prompt: "let's write the RFC for the new billing service together", expect: "documents:doc-coauthoring"}
+- {prompt: "update the README and API reference after this change", expect: "documents:technical-writing"}
+- {prompt: "draft the weekly leadership update from these notes", expect: "documents:internal-comms"}
+- {prompt: "research the current pricing and limits of the three main vector databases, with sources", expect: "research:source-research"}
+- {prompt: "how do I configure middleware in the latest Next.js version?", expect: "research:docs-lookup"}
+- {prompt: "define our brand identity: positioning, colours and typography", expect: "brand:brand-identity"}
+- {prompt: "write this launch post in my voice, here are five of my old posts", expect: "brand:brand-voice"}
+- {prompt: "make an HTML slide deck for the investor pitch", expect: "creative-media:presentation-slides"}
+- {prompt: "create a LinkedIn banner and an Instagram post for the launch", expect: "creative-media:banner-design"}

@@ -67,13 +67,19 @@ def build(root: Path, sources: Path, spec: dict) -> None:
     rebuild(root)
     refs = reference_map(root, packs)
 
+    current_remove: list[str] = []
+
     def rw(text: str) -> str:
         for x, y in subs:
             text = text.replace(x, y)
-        return rewrite_refs(text, refs, unresolved)
+        text = rewrite_refs(text, refs, unresolved)
+        for pattern in current_remove:
+            text = re.sub(pattern, "", text, flags=re.S | re.M)
+        return text
 
     for aid, a in spec["artifacts"].items():
         domain, name = aid.split("/")
+        current_remove[:] = a.get("remove") or []
         d = root / "domains" / domain / "skills" / name
         if d.exists():
             shutil.rmtree(d)  # generated output; regenerated from the bundle file
@@ -99,8 +105,6 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 main_prov = [{"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": lock[src]["license"], "modification": "adapted"}]
             else:
                 body = a["body"].strip()
-        for pattern in a.get("remove") or []:
-            body = re.sub(pattern, "", body, flags=re.S | re.M)
         title = a.get("title") or name.replace("-", " ").capitalize()
         ref_lines = []
         for rel, entries in (a.get("references") or {}).items():
@@ -115,7 +119,10 @@ def build(root: Path, sources: Path, spec: dict) -> None:
             prov.append({"path": f"skills/{name}/references/{rel}", "derived_from": derived})
             ref_lines.append(f"- [`references/{rel}`](references/{rel}){(' — ' + a['reference_notes'][rel]) if a.get('reference_notes', {}).get(rel) else ''}")
         fm = ["---", f"name: {name}", f"description: {json.dumps(a['description'])}", "license: MIT",
-              "metadata:", f"  domain: {domain}", "  status: experimental", "---", ""]
+              "metadata:", f"  domain: {domain}", "  status: experimental"]
+        if a.get("line_budget_exception"):
+            fm.append(f"  line_budget_exception: {json.dumps(a['line_budget_exception'])}")
+        fm += ["---", ""]
         apache = [s for s in [a.get("base_dir", ":").split(":")[0], (a.get("base") or ":").split(":")[0]] if s in lock and lock[s]["license"].startswith("Apache")]
         notice = f"<!-- Modified by OpenDigital from {apache[0]} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n\n" if apache else ""
         text = "\n".join(fm) + notice + (f"# {title}\n\n" if not body.lstrip().startswith("# ") else "") + rw(body).strip() + "\n"

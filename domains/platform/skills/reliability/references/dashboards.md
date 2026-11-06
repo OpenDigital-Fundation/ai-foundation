@@ -102,6 +102,6 @@ Every panel should answer a real question. If it does not, remove it.
 
 ### Related Skills
 
-- `research-ops`
+- `research:source-research`
 - `backend-patterns`
 - `terminal-ops`

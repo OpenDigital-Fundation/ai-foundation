@@ -445,5 +445,5 @@ import.meta.hot.data.count = 0                 // CORRECT
 ### Related Skills
 
 - `languages:typescript` (`references/standards.md`) — React component patterns
-- `docker-patterns` — containerized dev with Vite
+- `platform:deployment` — containerized dev with Vite
 - `languages:typescript` (`references/frameworks/nextjs.md`) — alternative bundler for Next.js

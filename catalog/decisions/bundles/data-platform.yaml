@@ -63,6 +63,7 @@ artifacts:
     title: Deployment
     description: "Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD pipelines, health checks, blue-green and canary rollouts, rollback, post-deploy verification, process managers, and mobile app signing and store release."
     base: "s:deployment-patterns"
+    remove: ["^#### Exercise the ECC Plugin Setup Harness\\n.*?(?=^#{2,4} )"]
     references:
       docker.md: ["s:docker-patterns"]
       kubernetes.md: ["s:kubernetes-patterns"]

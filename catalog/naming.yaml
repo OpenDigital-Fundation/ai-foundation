@@ -25,3 +25,6 @@ forbidden_tokens:
   - claude
 forbidden_substrings:
   - ui-ux        # a name that spans the ui and ux domains
+# Names allowed despite a forbidden token, because the token is the subject of the skill, not its source.
+allowed_names:
+  claude-api: "The skill is about the Claude API itself."

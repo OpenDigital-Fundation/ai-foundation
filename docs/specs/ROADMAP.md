@@ -68,4 +68,5 @@ Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística
 | `architecture`, `security` | primeira versão implementada (`experimental`); faltam evals |
 | `languages` | 11 pacotes gerados (`experimental`); faltam revisão de conteúdo e evals |
 | `ui`, `ux`, `accessibility` | primeira versão (`experimental`); faltam evals e testes dos scripts do upstream |
-| Demais domínios das Ondas 2–3 | não iniciados |
+| `data`, `platform`, `ai-engineering`, `documents`, `research`, `brand`, `creative-media` | primeira versão via `tools.curation.bundle` (`experimental`) |
+| Onda 3 (`product`, `marketing`, `sales`, `finance`, `legal-compliance`, `operations`) | não iniciada |

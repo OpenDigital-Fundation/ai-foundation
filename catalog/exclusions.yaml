@@ -82,10 +82,19 @@ excluded:
   note: Perl is not a supported language pack in v1.
 - key: "affaan-m/ECC:rule:README"
   reason: source-internal
+- key: "affaan-m/ECC:skill:codehealth-mcp"
+  reason: vendor-specific
 - key: "affaan-m/ECC:skill:defi-amm-security"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:exa-search"
+  reason: vendor-specific
+  note: "Tool-specific; research:source-research uses whatever search tools the session has."
+- key: "affaan-m/ECC:skill:fal-ai-media"
+  reason: vendor-specific
 - key: "affaan-m/ECC:skill:llm-trading-agent-security"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:nutrient-document-processing"
+  reason: vendor-specific
 - key: "affaan-m/ECC:skill:orch-fix-defect"
   reason: duplicate-of
   into:
@@ -109,6 +118,11 @@ excluded:
   into:
   - agent-engineering/skill-authoring
   note: Covered by 'check before creating' against the catalog.
+- key: "anthropics/skills:skill:academy-guide"
+  reason: vendor-specific
+- key: "anthropics/skills:skill:brand-guidelines"
+  reason: vendor-specific
+  note: Applies Anthropic's own brand; using it for other work would imitate that brand.
 - key: "anthropics/skills:skill:template-skill"
   reason: duplicate-of
   into:
@@ -135,6 +149,15 @@ excluded:
 - key: "mattpocock/skills:skill:wait-what"
   reason: low-quality
   note: Seven-line prompt with no procedure.
+- key: "mattpocock/skills:skill:writing-beats"
+  reason: low-quality
+  note: Marked in-progress upstream.
+- key: "mattpocock/skills:skill:writing-fragments"
+  reason: low-quality
+  note: Marked in-progress upstream.
+- key: "mattpocock/skills:skill:writing-shape"
+  reason: low-quality
+  note: Marked in-progress upstream.
 - key: "msitarzewski/agency-agents:agent:Blockchain Security Auditor"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Section 508 Accessibility Specialist"

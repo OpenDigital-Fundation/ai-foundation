@@ -75,7 +75,8 @@ def check_frontmatter(root: Path, arts: list[Artifact]) -> list[str]:
             errs.append(f"{rel}: metadata.domain '{meta.get('domain')}' must equal '{a.domain}'")
         if a.type in {"skill", "workflow"}:
             lines = a.path.read_text(encoding="utf-8").count("\n")
-            if lines > MAX_SKILL_LINES:
+            exception = str(meta.get("line_budget_exception") or "").strip()
+            if lines > MAX_SKILL_LINES and len(exception) < 20:
                 errs.append(f"{rel}: {lines} lines exceeds {MAX_SKILL_LINES}; move detail to references/")
         prose = re.sub(r"(?ms)^(```|~~~).*?^\1", "", a.body)
         prose = re.sub(r"`[^`\n]*`", "", prose)
@@ -130,7 +131,10 @@ def check_names(root: Path, arts: list[Artifact]) -> list[str]:
         if n > 1:
             where = ", ".join(sorted(a.id for a in arts if a.name == name))
             errs.append(f"name '{name}' is used by more than one artifact ({where}); names must be unique repo-wide")
+    allowed = set((cfg.get("allowed_names") or {}).keys())
     for a in arts:
+        if a.name in allowed:
+            continue
         bad = tokens & set(a.name.split("-")) or {s for s in subs if s in a.name}
         if bad:
             errs.append(f"{a.id}: name contains forbidden term(s) {sorted(bad)}")

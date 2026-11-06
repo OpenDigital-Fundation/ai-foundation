@@ -14,7 +14,8 @@
       "properties": {
         "domain": {"type": "string"},
         "status": {"enum": ["experimental", "stable", "deprecated"]},
-        "requires": {"type": "array", "items": {"type": "string"}}
+        "requires": {"type": "array", "items": {"type": "string"}},
+        "line_budget_exception": {"type": "string", "minLength": 20}
       }
     }
   }

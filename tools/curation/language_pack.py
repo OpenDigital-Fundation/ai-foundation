@@ -114,6 +114,10 @@ def rewrite_refs(text: str, refs: dict[str, str], unresolved: set[str]) -> str:
     text = re.sub(r"`?/([a-z0-9]+)-(review|test|build|verify)`?", lambda m: COMMAND_TARGET[m.group(2)], text)
     text = text.replace("ECC skills:", "Related:").replace("the ECC philosophy", "these standards")
     text = re.sub(r"ECC's (existing )?`typescript/` rules", "this pack's TypeScript standards", text)
+    for a, b in [("Related ECC Skills", "Related skills"), ("Most ECC SWE workflows", "Most general engineering workflows"),
+                 ("Streamlined ECC path", "Catalog path"), ("in the ECC repository", "in the upstream repository"),
+                 ("bundled with ECC", "bundled with the upstream project"), (" (ECC)", "")]:
+        text = text.replace(a, b)
 
     def sub(m: re.Match) -> str:
         name = m.group(2)

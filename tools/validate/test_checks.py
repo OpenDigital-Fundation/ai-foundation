@@ -143,3 +143,12 @@ def test_hygiene_flags_absolute_paths_and_forced_activation(repo):
     errs = errors(repo)
     assert any("absolute machine path" in e for e in errs)
     assert any("self-promoting" in e for e in errs)
+
+
+def test_line_budget_exception_needs_a_reason(repo):
+    d = add_skill(repo, "testing", "test-driven-development", TDD)
+    long_body = "line\n" * 501
+    (d / "SKILL.md").write_text(f"---\nname: test-driven-development\ndescription: {TDD}\nmetadata:\n  line_budget_exception: short\n---\n" + long_body)
+    assert any("exceeds 500" in e for e in errors(repo))
+    (d / "SKILL.md").write_text(f"---\nname: test-driven-development\ndescription: {TDD}\nmetadata:\n  line_budget_exception: Upstream official skill whose relative links break if split.\n---\n" + long_body)
+    assert not any("exceeds 500" in e for e in errors(repo))

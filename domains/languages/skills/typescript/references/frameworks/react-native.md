@@ -477,7 +477,7 @@ const STRIPE_SECRET = 'sk_live_...'
 
 - `languages:typescript` (`references/standards.md`) — React/Next.js (web) patterns; useful for shared React concepts, but DOM-specific.
 - `coding-standards` — TypeScript/JavaScript idioms that apply to RN code.
-- `testing:test-driven-development`, `e2e-testing` — testing process (use Jest + React Native Testing Library, Maestro/Detox for RN).
+- `testing:test-driven-development`, `testing:browser-testing` — testing process (use Jest + React Native Testing Library, Maestro/Detox for RN).
 - `security:security-audit` — general security checklist that complements the RN bundle/secret guidance above.
 
 ## React Native / Expo Performance

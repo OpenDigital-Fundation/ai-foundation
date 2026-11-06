@@ -9,8 +9,8 @@ Part of `languages:jvm`. Load only when the project uses mybatis.
 Use MyBatis when SQL control and explicit mappings matter. Keep SQL readable,
 make mapper contracts small, and put business transactions in the service layer.
 Pair this skill with `languages:jvm` (`references/frameworks/spring-boot.md`) for application structure,
-`database-migrations` for schema changes, `postgres-patterns` or
-`mysql-patterns` for engine-specific SQL, and `security:security-audit` for untrusted
+`data:database-migrations` for schema changes, `data:database-design` or
+`data:database-design` for engine-specific SQL, and `security:security-audit` for untrusted
 input and access-control concerns.
 
 ### When to Activate
@@ -400,8 +400,8 @@ adding indexes without a measured query plan.
 ### Related
 
 - `languages:jvm` (`references/frameworks/spring-boot.md`) - Spring application and service-layer structure
-- `database-migrations` - Safe schema changes and rollback planning
-- `postgres-patterns` / `mysql-patterns` - Engine-specific query and index behavior
+- `data:database-migrations` - Safe schema changes and rollback planning
+- `data:database-design` / `data:database-design` - Engine-specific query and index behavior
 - `security:security-audit` - Injection, authorization, and sensitive-data review
 
 Official references:

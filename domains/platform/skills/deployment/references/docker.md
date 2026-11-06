@@ -308,59 +308,6 @@ Do not claim that a Linux container validates macOS or Windows behavior.
   `plugin`, and `shell` modes.
 - Use argument arrays or `spawnSync(..., { shell: false })` for cross-platform runners. Never interpolate project paths into a shell command.
 
-#### Exercise the ECC Plugin Setup Harness
-
-Use `docker/plugin-setup/compose.yaml` as the reference implementation. It provides:
-
-- `fixture-tests` for the focused install manifest, target, and executor suite.
-- `real-cli` for the pinned Debian-based generic Linux image.
-- `real-cli-ubuntu` for the pinned Ubuntu image.
-
-Validate the Compose model before building:
-
-```bash
-docker compose -f docker/plugin-setup/compose.yaml config --quiet
-```
-
-Build both real Linux images:
-
-```bash
-docker compose -f docker/plugin-setup/compose.yaml \
-  build real-cli real-cli-ubuntu
-```
-
-Run the safe default flow in each image:
-
-```bash
-docker compose -p ecc-plugin-debian-test \
-  -f docker/plugin-setup/compose.yaml \
-  run --rm -T real-cli dry-run
-
-docker compose -p ecc-plugin-ubuntu-test \
-  -f docker/plugin-setup/compose.yaml \
-  run --rm -T real-cli-ubuntu dry-run
-```
-
-The dry run executes the current public command contract:
-
-```bash
-ecc install --profile core --target claude-project --dry-run --json
-```
-
-Before that command runs, the container creates a locally packed npm artifact
-from the read-only checkout with `npm pack --ignore-scripts`. It extracts the
-self-created tarball under `/tmp`, validates the `ecc-universal` package name,
-required install manifests, and the confined `package.json` `bin.ecc` mapping,
-then invokes the extracted `ecc` executable. The runtime stays on
-`network_mode: none`, does not execute package lifecycle scripts, and does not
-rely on host `node_modules`; its exact pinned production dependencies are
-already present in the image.
-
-The harness rejects an empty plan, a non-`claude-project` target, any operation
-outside `/workspace/project/.claude`, or any dry run that creates the target
-directory. `install` performs the isolated apply twice, checks its managed
-install state, lists the installed target, and runs `doctor`.
-
 #### Start, Open, Reconnect, and Clean Up a Named Session
 
 Start a detached container without `--rm` so leaving a terminal does not remove
