@@ -79,3 +79,17 @@ def test_blocks_dangerous_config_writes(cmd):
 
 def test_allows_harmless_config():
     assert run("git config user.email dev@example.com") == 0
+
+
+@pytest.mark.parametrize("cmd", [
+    "bash < cmds.txt", "sh <<<'git push'", "bash <<EOF\ngit push\nEOF", "sudo FOO=1 env -S 'git push'",
+    "nice env --split-string='git push'", "echo x | xargs sudo git push", "echo x | xargs env git push",
+    "git config core.askpass /tmp/x", "git config diff.external /tmp/x", "git config --global gpg.program /tmp/x",
+])
+def test_blocks_round_three(cmd):
+    assert run(cmd) == 2, cmd
+
+
+@pytest.mark.parametrize("cmd", ["git config --get user.email", "git config --list", "git config color.ui auto"])
+def test_allows_config_reads_and_presentation(cmd):
+    assert run(cmd) == 0, cmd

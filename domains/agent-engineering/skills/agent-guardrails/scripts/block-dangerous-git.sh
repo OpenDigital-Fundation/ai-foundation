@@ -20,7 +20,7 @@ BUILTINS = {"push", "reset", "clean", "branch", "checkout", "restore", "commit",
             "worktree", "submodule", "cherry-pick", "revert", "blame", "grep", "bisect", "describe", "rev-parse", "ls-files"}
 SAFE_CONFIG = re.compile(r"(color\.[a-z.]+|user\.(name|email)|core\.quotepath|log\.showsignature|init\.defaultbranch)=")
 # Constructs the structured parser only partly understands; when present, also match the raw text.
-INDIRECTION = re.compile(r"\beval\b|\bxargs\b|-exec(dir)?\b|\$\(|`|<\(|\bsource\b|\balias\b|\bfunction\b|\(\)\s*\{")
+INDIRECTION = re.compile(r"<|\beval\b|\bxargs\b|-exec(dir)?\b|\$\(|`|<\(|\bsource\b|\balias\b|\bfunction\b|\(\)\s*\{")
 RAW_DANGER = re.compile(r"\bpush\b|reset\s+--hard|\bclean\s+-\S*f|branch\s+-D|--no-verify|\brm\s+-\S*(rf|fr)|checkout\s+\.(\s|$)|restore\s+\.(\s|$)")
 
 def block(reason):
@@ -67,7 +67,8 @@ def check(seg, depth, piped=False):
     # Config injected through the environment changes what git runs: allow none of it.
     if any(re.match(r"GIT_CONFIG(_|=)|GIT_CONFIG_PARAMETERS=|GIT_EXEC_PATH=|GIT_SSH(_COMMAND)?=", a) for a in seg):
         block("git configuration injected through environment variables")
-    if any(os.path.basename(a) == "env" for a in seg[:3]) and any(a == "-S" or a.startswith(("-S", "--split-string")) for a in seg):
+    env_at = [i for i, a in enumerate(seg) if os.path.basename(a) == "env"]
+    if env_at and any(a.startswith(("-S", "--split-string")) for a in seg[env_at[0] + 1:]):
         block("env -S builds a command line the guardrail cannot inspect")
     seg = strip_prefix(seg)
     if not seg:
@@ -83,8 +84,9 @@ def check(seg, depth, piped=False):
                 if j + 1 < len(args):
                     recurse(args[j + 1])
                 return
-        scripts = [a for a in args if not a.startswith("-") and a not in {"<<<", "<<"}]
-        if piped or "<<<" in args or "<<" in args or "-s" in args or not scripts:
+        stdin = any(a.startswith("<") for a in args)
+        scripts = [a for a in args if not a.startswith(("-", "<"))]
+        if piped or stdin or "-s" in args or not scripts:
             block(f"{prog} reading commands from stdin cannot be inspected")
         return  # known limit: a script file passed to a shell is not inspected
     if prog == "eval":
@@ -94,11 +96,12 @@ def check(seg, depth, piped=False):
         j = 0
         while j < len(args) and args[j].startswith("-"):
             j += 2 if args[j] in {"-I", "-L", "-n", "-P", "-s", "-d", "-E", "-a"} else 1
-        if j < len(args):
-            inner = os.path.basename(args[j])
+        inner_args = strip_prefix(args[j:]) if j < len(args) else []
+        if inner_args:
+            inner = os.path.basename(inner_args[0])
             if inner in {"git", "bash", "sh", "zsh", "dash", "ksh", "fish", "env", "eval", "rm"}:
                 block(f"xargs {inner} builds its arguments from data the guardrail cannot see")
-            check(args[j:], depth + 1)
+            check(inner_args, depth + 1)
         return
     if prog == "find":
         for j, a in enumerate(args):
@@ -130,8 +133,11 @@ def check(seg, depth, piped=False):
         block(f"git {sub} is not a known git command (aliases are not inspected)")
     if "--no-verify" in rest or (sub == "commit" and "-n" in rest):
         block(f"git {sub} --no-verify skips the repository hooks")
-    if sub == "config" and any(a.lower().startswith(("alias.", "include", "core.hookspath", "core.fsmonitor", "core.sshcommand", "core.pager", "core.editor", "core.gitproxy", "credential.")) for a in rest):
-        block("git config would change what later git commands run")
+    if sub == "config":
+        readonly = {"--get", "--get-all", "--get-regexp", "--list", "-l", "--show-origin", "--show-scope", "--name-only", "--get-urlmatch"}
+        keys = [a for a in rest if not a.startswith("-")]
+        if not (readonly & set(rest)) and keys and not SAFE_CONFIG.match(keys[0].lower() + "="):
+            block(f"git config {keys[0]} may change what later git commands run; only presentation settings may be written")
     if sub == "push":
         block("git push publishes to a remote")
     if sub == "reset" and "--hard" in rest:
