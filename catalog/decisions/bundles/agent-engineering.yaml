@@ -1,0 +1,119 @@
+# Agent-engineering skills beyond wave 1.
+name: agent-engineering-bundle
+artifacts:
+  agent-engineering/context-management:
+    title: Context management
+    description: 'Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and how to compact, what to keep in context versus files, and estimating the token cost of a task before running it.'
+    base: s:context-budget
+    references:
+      compaction.md:
+      - s:strategic-compact
+      token-budgeting.md:
+      - s:token-budget-advisor
+  agent-engineering/harness-design:
+    title: Agent harness design
+    description: 'Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting, permissions, identity and trust, multi-agent topology, and the twelve-layer audit for wrapper regressions, memory pollution and silent repair loops.'
+    base: s:agent-harness-construction
+    references:
+      architecture-audit.md:
+      - s:agent-architecture-audit
+      agentic-engineering.md:
+      - s:agentic-engineering
+      - s:ai-first-engineering
+      multi-agent-systems.md:
+      - msitarzewski/agency-agents:engineering/engineering-multi-agent-systems-architect.md
+      - msitarzewski/agency-agents:specialized/agents-orchestrator.md
+      identity-and-trust.md:
+      - msitarzewski/agency-agents:specialized/agentic-identity-trust.md
+      harness-tuning.md:
+      - a:harness-optimizer
+      enterprise-operations.md:
+      - s:enterprise-agent-ops
+  agent-engineering/agent-loops:
+    title: Agent loops
+    description: 'Use when designing, running or reviewing an autonomous or long-running agent loop: machine-checkable goals and stop conditions, quality gates and evals inside the loop, operator approval points, recovery, and failure modes such as spinning, gaming the verifier or finishing a wrong answer.'
+    base: s:loop-design-check
+    references:
+      autonomous-loops.md:
+      - s:autonomous-loops
+      - s:continuous-agent-loop
+      approval-loops.md:
+      - s:operator-approval-loop
+      operating-loops.md:
+      - a:loop-operator
+      autonomous-harness.md:
+      - s:autonomous-agent-harness
+    supersedes:
+    - affaan-m/ECC:command:loop-start
+    - affaan-m/ECC:command:loop-status
+  agent-engineering/agent-evaluation:
+    title: Agent evaluation
+    description: 'Use when measuring agents rather than a single skill: comparing coding agents or configurations head to head on custom tasks, building an eval harness with pass rate, cost and time, self-evaluation of finished work, and benchmark-driven optimisation loops.'
+    base: s:agent-eval
+    references:
+      eval-harness.md:
+      - s:eval-harness
+      self-evaluation.md:
+      - s:agent-self-evaluation
+      evaluator.md:
+      - a:agent-evaluator
+      benchmark-loops.md:
+      - s:benchmark-optimization-loop
+  agent-engineering/agent-debugging:
+    title: Agent debugging
+    description: 'Use when an agent run failed, looped, ignored instructions or produced a bad result and you need to know why: capture the transcript, diagnose the failure, contain and recover, and write an introspection report with fixes to prompts, tools or skills.'
+    base: s:agent-introspection-debugging
+    references:
+      conversation-analysis.md:
+      - a:conversation-analyzer
+  agent-engineering/agent-guardrails:
+    title: Agent guardrails
+    description: 'Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell commands (push, reset --hard, clean, rm -rf, --no-verify) with harness hooks, careful and frozen modes, and protecting configuration files. Hooks are opt-in and installed only with
+      the user''s approval.'
+    base_dir: mattpocock/skills:skills/misc/git-guardrails-claude-code
+    references:
+      safety-modes.md:
+      - s:safety-guard
+  agent-engineering/agent-teams:
+    title: Agent teams
+    description: 'Use when coordinating several agents as a team on one effort: assigning owners and scope to work items, isolating each agent in its own branch or worktree, tracking state on a board, merge gates, and splitting a plan into frontend, backend and integration streams.'
+    base: s:team-agent-orchestration
+    references:
+      team-assembly.md:
+      - s:team-builder
+      plan-orchestration.md:
+      - s:plan-orchestrate
+      parallel-execution.md:
+      - s:parallel-execution-optimizer
+    supersedes:
+    - affaan-m/ECC:command:multi-plan
+    - affaan-m/ECC:command:multi-execute
+    - affaan-m/ECC:command:multi-workflow
+    - affaan-m/ECC:command:multi-frontend
+    - affaan-m/ECC:command:multi-backend
+    - affaan-m/ECC:skill:claude-devfleet
+    - affaan-m/ECC:skill:dev-team
+  agent-engineering/agent-memory:
+    title: Agent memory
+    description: 'Use when an agent should learn across sessions: capturing durable lessons and decisions, promoting observations into rules or skills, pruning stale memory, keeping a scoped context file, and distilling repeated corrections into instructions.'
+    base: s:continuous-learning-v2
+    references:
+      learning-loop.md:
+      - s:continuous-learning
+      unified-memory.md:
+      - s:unified-memory
+      context-and-decisions.md:
+      - s:context-and-decisions
+      rules-distillation.md:
+      - s:rules-distill
+      observer.md:
+      - a:observer
+    supersedes:
+    - affaan-m/ECC:command:learn
+    - affaan-m/ECC:command:learn-eval
+    - affaan-m/ECC:command:evolve
+    - affaan-m/ECC:command:promote
+    - affaan-m/ECC:command:prune
+    - affaan-m/ECC:command:instinct-export
+    - affaan-m/ECC:command:instinct-import
+    - affaan-m/ECC:command:instinct-status

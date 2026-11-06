@@ -94,3 +94,11 @@
 - {prompt: "build a project plan with milestones and risks for the migration", expect: "operations:project-management"}
 - {prompt: "reply to this angry customer whose export keeps failing", expect: "operations:customer-support"}
 - {prompt: "write the onboarding plan for a new backend engineer", expect: "operations:people-operations"}
+- {prompt: "this session is huge and slow; what should I compact and what can go to files?", expect: "agent-engineering:context-management"}
+- {prompt: "design the tool set and permissions for our customer-support agent", expect: "agent-engineering:harness-design"}
+- {prompt: "set up an autonomous loop that keeps fixing lint until clean, with stop conditions", expect: "agent-engineering:agent-loops"}
+- {prompt: "compare Claude Code and Codex on these ten tasks for pass rate and cost", expect: "agent-engineering:agent-evaluation"}
+- {prompt: "the agent ignored my instructions and deleted the wrong file; figure out why", expect: "agent-engineering:agent-debugging"}
+- {prompt: "block the agent from running git push --force or rm -rf", expect: "agent-engineering:agent-guardrails"}
+- {prompt: "split this plan across three agents in separate worktrees with merge gates", expect: "agent-engineering:agent-teams"}
+- {prompt: "make the agent remember the lessons from today's corrections next time", expect: "agent-engineering:agent-memory"}

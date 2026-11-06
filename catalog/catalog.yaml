@@ -11,6 +11,121 @@ artifacts:
   - "affaan-m/ECC:agent:a11y-architect"
   - "affaan-m/ECC:rule:react-native/accessibility"
   - "msitarzewski/agency-agents:agent:Accessibility Auditor"
+- id: agent-engineering/agent-debugging
+  type: skill
+  capability: "Use when an agent run failed, looped, ignored instructions or produced a bad result and you need to know why:\
+    \ capture the transcript, diagnose the failure, contain and recover, and write an "
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:conversation-analyzer"
+  - "affaan-m/ECC:skill:agent-introspection-debugging"
+- id: agent-engineering/agent-evaluation
+  type: skill
+  capability: "Use when measuring agents rather than a single skill: comparing coding agents or configurations head to head\
+    \ on custom tasks, building an eval harness with pass rate, cost and time, self-eva"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:agent-evaluator"
+  - "affaan-m/ECC:skill:agent-eval"
+  - "affaan-m/ECC:skill:agent-self-evaluation"
+  - "affaan-m/ECC:skill:benchmark-optimization-loop"
+  - "affaan-m/ECC:skill:eval-harness"
+- id: agent-engineering/agent-guardrails
+  type: skill
+  capability: "Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell commands\
+    \ (push, reset --hard, clean, rm -rf, --no-verify) with harness hooks, carefu"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:safety-guard"
+  - "mattpocock/skills:skill:git-guardrails-claude-code"
+- id: agent-engineering/agent-loops
+  type: skill
+  capability: "Use when designing, running or reviewing an autonomous or long-running agent loop: machine-checkable goals\
+    \ and stop conditions, quality gates and evals inside the loop, operator approval poi"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:loop-operator"
+  - "affaan-m/ECC:command:loop-start"
+  - "affaan-m/ECC:command:loop-status"
+  - "affaan-m/ECC:skill:autonomous-agent-harness"
+  - "affaan-m/ECC:skill:autonomous-loops"
+  - "affaan-m/ECC:skill:continuous-agent-loop"
+  - "affaan-m/ECC:skill:loop-design-check"
+  - "affaan-m/ECC:skill:operator-approval-loop"
+- id: agent-engineering/agent-memory
+  type: skill
+  capability: "Use when an agent should learn across sessions: capturing durable lessons and decisions, promoting observations\
+    \ into rules or skills, pruning stale memory, keeping a scoped context file, and"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:observer"
+  - "affaan-m/ECC:command:evolve"
+  - "affaan-m/ECC:command:instinct-export"
+  - "affaan-m/ECC:command:instinct-import"
+  - "affaan-m/ECC:command:instinct-status"
+  - "affaan-m/ECC:command:learn"
+  - "affaan-m/ECC:command:learn-eval"
+  - "affaan-m/ECC:command:promote"
+  - "affaan-m/ECC:command:prune"
+  - "affaan-m/ECC:skill:context-and-decisions"
+  - "affaan-m/ECC:skill:continuous-learning"
+  - "affaan-m/ECC:skill:continuous-learning-v2"
+  - "affaan-m/ECC:skill:rules-distill"
+  - "affaan-m/ECC:skill:unified-memory"
+- id: agent-engineering/agent-teams
+  type: skill
+  capability: "Use when coordinating several agents as a team on one effort: assigning owners and scope to work items, isolating\
+    \ each agent in its own branch or worktree, tracking state on a board, merge g"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:command:multi-backend"
+  - "affaan-m/ECC:command:multi-execute"
+  - "affaan-m/ECC:command:multi-frontend"
+  - "affaan-m/ECC:command:multi-plan"
+  - "affaan-m/ECC:command:multi-workflow"
+  - "affaan-m/ECC:skill:claude-devfleet"
+  - "affaan-m/ECC:skill:dev-team"
+  - "affaan-m/ECC:skill:parallel-execution-optimizer"
+  - "affaan-m/ECC:skill:plan-orchestrate"
+  - "affaan-m/ECC:skill:team-agent-orchestration"
+  - "affaan-m/ECC:skill:team-builder"
+- id: agent-engineering/context-management
+  type: skill
+  capability: "Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and\
+    \ how to compact, what to keep in context versus files, and estimating the token cos"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:command:token-card"
+  - "affaan-m/ECC:skill:context-budget"
+  - "affaan-m/ECC:skill:strategic-compact"
+  - "affaan-m/ECC:skill:token-budget-advisor"
+  - "affaan-m/ECC:skill:token-card"
+- id: agent-engineering/harness-design
+  type: skill
+  capability: "Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting,\
+    \ permissions, identity and trust, multi-agent topology, and the twelve-layer"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:harness-optimizer"
+  - "affaan-m/ECC:command:harness-audit"
+  - "affaan-m/ECC:command:model-route"
+  - "affaan-m/ECC:rule:common/agents"
+  - "affaan-m/ECC:skill:agent-architecture-audit"
+  - "affaan-m/ECC:skill:agent-harness-construction"
+  - "affaan-m/ECC:skill:agentic-engineering"
+  - "affaan-m/ECC:skill:ai-first-engineering"
+  - "affaan-m/ECC:skill:enterprise-agent-ops"
+  - "msitarzewski/agency-agents:agent:Agentic Identity & Trust Architect"
+  - "msitarzewski/agency-agents:agent:Agents Orchestrator"
+  - "msitarzewski/agency-agents:agent:Multi-Agent Systems Architect"
 - id: agent-engineering/parallel-agents
   type: skill
   capability: Dispatch one focused subagent per independent task and integrate their verified results.
@@ -77,7 +192,9 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:skill:cost-aware-llm-pipeline"
   - "affaan-m/ECC:skill:prompt-caching-strategy"
+  - "affaan-m/ECC:skill:prompt-optimizer"
   - "affaan-m/ECC:skill:regex-vs-llm-structured-text"
   - "msitarzewski/agency-agents:agent:Prompt Engineer"
 - id: ai-engineering/rag-pipelines
@@ -172,6 +289,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "DietrichGebert/ponytail:skill:ponytail-audit"
+  - "affaan-m/ECC:agent:performance-optimizer"
+  - "affaan-m/ECC:skill:repo-scan"
 - id: code-quality/debt-ledger
   type: skill
   capability: Collect every recorded shortcut comment into one ranked technical-debt ledger.
@@ -314,6 +433,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:agent:doc-updater"
+  - "affaan-m/ECC:command:update-codemaps"
   - "msitarzewski/agency-agents:agent:Technical Writer"
 - id: finance/accounting
   type: skill
@@ -576,20 +696,24 @@ artifacts:
   - "affaan-m/ECC:command:react-test"
   - "affaan-m/ECC:command:vue-review"
   - "affaan-m/ECC:rule:angular/coding-style"
+  - "affaan-m/ECC:rule:angular/hooks"
   - "affaan-m/ECC:rule:angular/patterns"
   - "affaan-m/ECC:rule:angular/security"
   - "affaan-m/ECC:rule:angular/testing"
   - "affaan-m/ECC:rule:nuxt/coding-style"
+  - "affaan-m/ECC:rule:nuxt/hooks"
   - "affaan-m/ECC:rule:nuxt/patterns"
   - "affaan-m/ECC:rule:nuxt/security"
   - "affaan-m/ECC:rule:nuxt/testing"
   - "affaan-m/ECC:rule:react-native/coding-style"
+  - "affaan-m/ECC:rule:react-native/hooks"
   - "affaan-m/ECC:rule:react-native/patterns"
   - "affaan-m/ECC:rule:react-native/performance"
   - "affaan-m/ECC:rule:react-native/production-readiness"
   - "affaan-m/ECC:rule:react-native/security"
   - "affaan-m/ECC:rule:react-native/testing"
   - "affaan-m/ECC:rule:react/coding-style"
+  - "affaan-m/ECC:rule:react/hooks"
   - "affaan-m/ECC:rule:react/patterns"
   - "affaan-m/ECC:rule:react/security"
   - "affaan-m/ECC:rule:react/testing"
@@ -599,6 +723,7 @@ artifacts:
   - "affaan-m/ECC:rule:typescript/security"
   - "affaan-m/ECC:rule:typescript/testing"
   - "affaan-m/ECC:rule:vue/coding-style"
+  - "affaan-m/ECC:rule:vue/hooks"
   - "affaan-m/ECC:rule:vue/patterns"
   - "affaan-m/ECC:rule:vue/security"
   - "affaan-m/ECC:rule:vue/testing"
@@ -622,6 +747,7 @@ artifacts:
   - "affaan-m/ECC:skill:ui-to-vue"
   - "affaan-m/ECC:skill:vite-patterns"
   - "affaan-m/ECC:skill:vue-patterns"
+  - "mattpocock/skills:skill:migrate-to-shoehorn"
 - id: legal-compliance/compliance-programs
   type: skill
   capability: "Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy\
@@ -798,8 +924,9 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "DietrichGebert/ponytail:skill:ponytail"
-  - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
+  - "affaan-m/ECC:skill:inherit-legacy-style"
   - "msitarzewski/agency-agents:agent:Minimal Change Engineer"
+  - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
 - id: product/product-management
   type: skill
   capability: "Use when doing product management work: writing a PRD or product brief, defining outcomes and success metrics,\
@@ -873,6 +1000,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:agent:enrichment-agent"
+  - "affaan-m/ECC:agent:marketing-agent"
   - "affaan-m/ECC:agent:mutual-mapper"
   - "affaan-m/ECC:agent:outreach-drafter"
   - "affaan-m/ECC:agent:signal-scorer"
@@ -961,10 +1090,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-ux-pro-max"
-  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:design-system"
-  - "nextlevelbuilder/ui-ux-pro-max-skill:command:design-plan"
   - "affaan-m/ECC:skill:design-system"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:command:design-plan"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:design"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:design-system"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-ux-pro-max"
 - id: ui/visual-design
   type: skill
   capability: Design and build new pages that look designed, with themes, job-first layout and browser-linted quality gates.
@@ -1037,8 +1167,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "obra/superpowers:skill:finishing-a-development-branch"
+  - "affaan-m/ECC:command:pr"
   - "affaan-m/ECC:command:prp-pr"
+  - "mattpocock/skills:skill:pr"
+  - "obra/superpowers:skill:finishing-a-development-branch"
 - id: workflow/git-worktrees
   type: skill
   capability: Create an isolated worktree or branch from the right base with a passing baseline before building.

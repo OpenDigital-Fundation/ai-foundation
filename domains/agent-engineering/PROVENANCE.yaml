@@ -1,5 +1,272 @@
 version: 1
 files:
+- path: skills/agent-debugging/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/agent-introspection-debugging/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-debugging/references/conversation-analysis.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/conversation-analyzer.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-evaluation/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/agent-eval/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-evaluation/references/benchmark-loops.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/benchmark-optimization-loop/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-evaluation/references/eval-harness.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/eval-harness/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-evaluation/references/evaluator.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/agent-evaluator.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-evaluation/references/self-evaluation.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/agent-self-evaluation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-guardrails/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/misc/git-guardrails-claude-code/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-guardrails/agents/openai.yaml
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/misc/git-guardrails-claude-code/agents/openai.yaml
+    license: MIT
+    modification: adapted
+- path: skills/agent-guardrails/references/safety-modes.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/safety-guard/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-guardrails/scripts/block-dangerous-git.sh
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/misc/git-guardrails-claude-code/scripts/block-dangerous-git.sh
+    license: MIT
+    modification: adapted
+- path: skills/agent-loops/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/loop-design-check/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-loops/references/approval-loops.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/operator-approval-loop/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-loops/references/autonomous-harness.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/autonomous-agent-harness/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-loops/references/autonomous-loops.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/autonomous-loops/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/continuous-agent-loop/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-loops/references/operating-loops.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/loop-operator.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-memory/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/continuous-learning-v2/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-memory/references/context-and-decisions.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/context-and-decisions/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-memory/references/learning-loop.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/continuous-learning/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-memory/references/observer.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/continuous-learning-v2/agents/observer.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-memory/references/rules-distillation.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/rules-distill/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-memory/references/unified-memory.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/unified-memory/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/team-agent-orchestration/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/parallel-execution.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/parallel-execution-optimizer/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/plan-orchestration.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/plan-orchestrate/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/team-assembly.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/team-builder/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/context-management/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/context-budget/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/context-management/references/compaction.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/strategic-compact/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/context-management/references/token-budgeting.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/token-budget-advisor/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/agent-harness-construction/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/agentic-engineering.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/agentic-engineering/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/ai-first-engineering/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/architecture-audit.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/agent-architecture-audit/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/enterprise-operations.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/enterprise-agent-ops/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/harness-tuning.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/harness-optimizer.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/identity-and-trust.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/agentic-identity-trust.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/multi-agent-systems.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-multi-agent-systems-architect.md
+    license: MIT
+    modification: adapted
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/agents-orchestrator.md
+    license: MIT
+    modification: adapted
 - path: skills/parallel-agents/SKILL.md
   derived_from:
   - source: obra/superpowers

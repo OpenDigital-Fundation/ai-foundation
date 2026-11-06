@@ -65,10 +65,23 @@ def rebuild(root: Path) -> None:
     """Decision files are the source of truth; catalog.yaml and exclusions.yaml are derived."""
     (root / "catalog/catalog.yaml").write_text("version: 1\nartifacts: []\n")
     (root / "catalog/exclusions.yaml").write_text("version: 1\nexcluded: []\n")
+    extends: dict[str, list[str]] = {}
     for f in sorted((root / "catalog/decisions").glob("*.yaml")):
         data = yaml.safe_load(f.read_text())
         if isinstance(data, dict) and ("artifacts" in data or "exclusions" in data):
             apply(root, {k: data[k] for k in ("artifacts", "exclusions") if k in data})
+        if isinstance(data, dict) and data.get("extend"):
+            for aid, keys in data["extend"].items():
+                extends.setdefault(aid, []).extend(keys)
+    if extends:  # applied last so it never depends on file order
+        cat_p = root / "catalog/catalog.yaml"
+        cat = yaml.safe_load(cat_p.read_text())
+        for entry in cat["artifacts"]:
+            if entry["id"] in extends:
+                entry["supersedes"] = sorted(set(entry.get("supersedes", [])) | set(extends.pop(entry["id"])))
+        if extends:
+            raise SystemExit(f"extend targets not in catalog: {sorted(extends)}")
+        _dump(cat_p, cat)
 
 
 if __name__ == "__main__":

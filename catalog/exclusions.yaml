@@ -2,6 +2,8 @@ version: 1
 excluded:
 - key: "affaan-m/ECC:agent:bengali-reviewer"
   reason: source-internal
+- key: "affaan-m/ECC:agent:chief-of-staff"
+  reason: source-internal
 - key: "affaan-m/ECC:agent:gan-evaluator"
   reason: source-internal
 - key: "affaan-m/ECC:agent:gan-generator"
@@ -20,7 +22,17 @@ excluded:
   reason: out-of-scope
 - key: "affaan-m/ECC:agent:network-troubleshooter"
   reason: out-of-scope
+- key: "affaan-m/ECC:agent:opensource-forker"
+  reason: source-internal
+- key: "affaan-m/ECC:agent:opensource-packager"
+  reason: source-internal
+- key: "affaan-m/ECC:agent:opensource-sanitizer"
+  reason: source-internal
+- key: "affaan-m/ECC:command:add-language-rules"
+  reason: source-internal
 - key: "affaan-m/ECC:command:astra-review"
+  reason: source-internal
+- key: "affaan-m/ECC:command:auto-update"
   reason: source-internal
 - key: "affaan-m/ECC:command:checkpoint"
   reason: duplicate-of
@@ -46,6 +58,14 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:command:gan-design"
   reason: source-internal
+- key: "affaan-m/ECC:command:hookify"
+  reason: source-internal
+- key: "affaan-m/ECC:command:hookify-configure"
+  reason: source-internal
+- key: "affaan-m/ECC:command:hookify-help"
+  reason: source-internal
+- key: "affaan-m/ECC:command:hookify-list"
+  reason: source-internal
 - key: "affaan-m/ECC:command:orch-fix-defect"
   reason: duplicate-of
   into:
@@ -57,20 +77,215 @@ excluded:
 - key: "affaan-m/ECC:command:project-init"
   reason: source-internal
   note: Installs the source's own bundle.
+- key: "affaan-m/ECC:command:projects"
+  reason: source-internal
 - key: "affaan-m/ECC:command:prp-commit"
   reason: duplicate-of
   into:
   - workflow/finishing-a-branch
 - key: "affaan-m/ECC:command:santa-loop"
   reason: source-internal
+- key: "affaan-m/ECC:command:sessions"
+  reason: source-internal
+- key: "affaan-m/ECC:command:setup-pm"
+  reason: source-internal
 - key: "affaan-m/ECC:command:skill-host-compat"
   reason: source-internal
+- key: "affaan-m/ECC:hook:auto-tmux-dev"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:bash-hook-dispatcher"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:block-no-verify"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:check-console-log"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:check-hook-enabled"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:codex-hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:config-protection"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:context-prompt-suggestions"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:context-routing-index"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:cost-tracker"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:cursor-session-env"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:design-quality-check"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:desktop-notify"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:doc-file-warning"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
 - key: "affaan-m/ECC:hook:ecc-context-monitor"
   reason: source-internal
 - key: "affaan-m/ECC:hook:ecc-metrics-bridge"
   reason: source-internal
 - key: "affaan-m/ECC:hook:ecc-statusline"
   reason: source-internal
+- key: "affaan-m/ECC:hook:evaluate-session"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:gateguard-fact-force"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:gateguard-heredoc"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:governance-capture"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:hook-input"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:hook-input-limits"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:hookify-frontmatter"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:hookify-runtime"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:hooks.metadata"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:insaits-security-monitor"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:insaits-security-wrapper"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:lifecycle-hook-bootstrap"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:mcp-health-check"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:observe"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:observe-runner"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:plan-canvas-pending"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:plan-canvas-sessions"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:plugin-hook-bootstrap"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-bash-build-complete"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-bash-command-log"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-bash-dispatcher"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-bash-pr-created"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-edit-accumulator"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-edit-console-warn"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-edit-format"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:post-edit-typecheck"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:posttooluse-dispatcher"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pre-bash-commit-quality"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pre-bash-dev-server-block"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pre-bash-dispatcher"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pre-bash-git-push-reminder"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pre-bash-tmux-reminder"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pre-compact"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pre-write-doc-warn"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:pretooluse-visible-output"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:qoder-hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:quality-gate"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:run-with-flags"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:run-with-flags-shell"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:session-activity-tracker"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:session-end"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:session-end-marker"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:session-start"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:session-start-bootstrap"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:shell-scan"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:skill-run-tracker"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:stop-format-typecheck"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:hook:suggest-compact"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
 - key: "affaan-m/ECC:rule:3d"
   reason: out-of-scope
   note: Remotion video-rendering rules; video tooling is out of scope in v1.
@@ -110,6 +325,8 @@ excluded:
 - key: "affaan-m/ECC:rule:common/coding-style"
   reason: low-quality
   note: Absolute rules (always immutable, many small files) contradict following the existing style.
+- key: "affaan-m/ECC:rule:common/hooks"
+  reason: source-internal
 - key: "affaan-m/ECC:rule:common/patterns"
   reason: low-quality
   note: Generic pattern catalogue without decision criteria; conflicts with reuse-what-exists.
@@ -200,6 +417,14 @@ excluded:
   note: Remotion video-rendering rules; video tooling is out of scope in v1.
 - key: "affaan-m/ECC:skill:agent-payment-x402"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:agent-runtime-gateway-smoke-test"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:agent-sort"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:agentic-os"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:automation-audit-ops"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:bengali-nlp"
   reason: source-internal
 - key: "affaan-m/ECC:skill:blender-motion-state-inspection"
@@ -208,17 +433,31 @@ excluded:
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:cisco-ios-patterns"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:ck"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:codehealth-mcp"
   reason: vendor-specific
+- key: "affaan-m/ECC:skill:config-gc"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:configure-ecc"
   reason: source-internal
+- key: "affaan-m/ECC:skill:council"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:council-multi-model"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:counterparty-channel-discipline"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:customs-trade-compliance"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:data-scraper-agent"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:deepseek-harness-setup"
   reason: source-internal
 - key: "affaan-m/ECC:skill:defi-amm-security"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:dmux-workflows"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:dynamic-workflow-mode"
   reason: source-internal
 - key: "affaan-m/ECC:skill:ecc-council"
   reason: source-internal
@@ -243,6 +482,8 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:skill:gan-style-harness"
   reason: source-internal
+- key: "affaan-m/ECC:skill:gateguard"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:healthcare-cdss-patterns"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:healthcare-emr-patterns"
@@ -265,6 +506,8 @@ excluded:
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:homelab-wireguard-vpn"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:hookify-rules"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:inventory-demand-planning"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:ito-baskets"
@@ -275,12 +518,18 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:skill:ito-training"
   reason: source-internal
+- key: "affaan-m/ECC:skill:knowledge-ops"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:llm-trading-agent-security"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:logistics-exception-management"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:manim-video"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:messages-ops"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:module-regression"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:nanoclaw-repl"
   reason: source-internal
 - key: "affaan-m/ECC:skill:nasiko-control-plane"
@@ -314,13 +563,19 @@ excluded:
   note: Perl is not a supported language pack in v1.
 - key: "affaan-m/ECC:skill:perl-testing"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:plankton-code-quality"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:prediction-market-oracle-research"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:prediction-market-risk-review"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:production-scheduling"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:quality-nonconformance"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:ralphinho-rfc-pipeline"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:recursive-decision-ledger"
   reason: source-internal
 - key: "affaan-m/ECC:skill:remotion-video-creation"
   reason: out-of-scope
@@ -342,9 +597,15 @@ excluded:
   note: Covered by 'check before creating' against the catalog.
 - key: "affaan-m/ECC:skill:tasteforge-video"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:terminal-opener"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:terminal-ops"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:tinystruct-patterns"
   reason: source-internal
 - key: "affaan-m/ECC:skill:uncloud"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:unified-notifications-ops"
   reason: source-internal
 - key: "affaan-m/ECC:skill:video-editing"
   reason: out-of-scope
@@ -352,6 +613,8 @@ excluded:
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:visa-doc-translate"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:workspace-surface-audit"
+  reason: source-internal
 - key: "anthropics/skills:skill:academy-guide"
   reason: vendor-specific
 - key: "anthropics/skills:skill:brand-guidelines"
@@ -361,6 +624,48 @@ excluded:
   reason: duplicate-of
   into:
   - agent-engineering/skill-authoring
+- key: "DietrichGebert/ponytail:hook:claude-band"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:claude-codex-hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:copilot-hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:cursor-hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-activate"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-band-import"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-config"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-instructions"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-map"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-mode-tracker"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-runtime"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-statusline"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:ponytail-subagent"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "DietrichGebert/ponytail:hook:qoder-hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
 - key: "DietrichGebert/ponytail:skill:ponytail-gain"
   reason: source-internal
   note: Displays the source's own benchmark results.
@@ -369,17 +674,28 @@ excluded:
 - key: "mattpocock/skills:skill:ask-matt"
   reason: source-internal
   note: Router over the source's own skills.
+- key: "mattpocock/skills:skill:chief-of-staff"
+  reason: source-internal
 - key: "mattpocock/skills:skill:claude-handoff"
   reason: duplicate-of
   into:
   - workflow/handoff
   note: Harness-specific variant that spawns a background agent.
+- key: "mattpocock/skills:skill:loop-me"
+  reason: low-quality
+  note: Marked in-progress upstream.
 - key: "mattpocock/skills:skill:setup-matt-pocock-skills"
   reason: split
   into:
   - workflow/issue-breakdown
   - workflow/issue-triage
   note: Tracker docs moved to domains/workflow/knowledge/issue-tracking/; setup step replaced by AGENTS.md conventions.
+- key: "mattpocock/skills:skill:software-factory"
+  reason: low-quality
+  note: Marked in-progress upstream.
+- key: "mattpocock/skills:skill:teach"
+  reason: low-quality
+  note: Workspace-specific teaching flow without a verifiable outcome.
 - key: "mattpocock/skills:skill:wait-what"
   reason: low-quality
   note: Seven-line prompt with no procedure.
@@ -421,6 +737,8 @@ excluded:
 - key: "msitarzewski/agency-agents:agent:Clinical Evidence Agent"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Cultural Intelligence Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Data Consolidation Agent"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Douyin Strategist"
   reason: out-of-scope
@@ -486,6 +804,8 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Medical Billing & Coding Specialist"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Multi-Platform Publisher"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Narrative Designer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Narratologist"
@@ -498,11 +818,15 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Real Estate Buyer & Seller"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Report Distribution Agent"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Roblox Avatar Creator"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Roblox Experience Designer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Roblox Systems Scripter"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Sales Data Extraction Agent"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Salesforce Architect"
   reason: out-of-scope
@@ -523,6 +847,9 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Spatial Data Scientist"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Strategy Duel Agent"
+  reason: low-quality
+  note: Persona without a verifiable procedure.
 - key: "msitarzewski/agency-agents:agent:Study Abroad Advisor"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Supply Chain Strategist"
@@ -583,8 +910,16 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:ZK Steward"
   reason: out-of-scope
+- key: "obra/superpowers:hook:hooks"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "obra/superpowers:hook:hooks-cursor"
+  reason: source-internal
+  note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
 - key: "obra/superpowers:skill:diagnosing-superpowers"
   reason: source-internal
 - key: "obra/superpowers:skill:using-superpowers"
   reason: low-quality
   note: Forces skill invocation before any response; conflicts with user and repository instructions taking precedence.
+- key: "SecurityStandards/agent-pentester:command:pr"
+  reason: out-of-scope
