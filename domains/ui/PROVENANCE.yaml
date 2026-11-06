@@ -1,2 +1,1850 @@
 version: 1
-files: []
+files:
+- path: skills/design-system/SKILL.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/design-system/data/app-interface.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/app-interface.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/catalog-summary.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/catalog-summary.json
+    license: MIT
+    modification: base
+- path: skills/design-system/data/charts.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/charts.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/colors.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/colors.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/data-provenance.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/data-provenance.json
+    license: MIT
+    modification: base
+- path: skills/design-system/data/google-font-licenses.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/google-font-licenses.json
+    license: MIT
+    modification: base
+- path: skills/design-system/data/google-fonts.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/google-fonts.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/icons.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/icons.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/landing.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/landing.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/motion.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/motion.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/phosphor-icons-upstream.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/phosphor-icons-upstream.json
+    license: MIT
+    modification: base
+- path: skills/design-system/data/products.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/products.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/react-performance.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/react-performance.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/angular.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/angular.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/astro.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/astro.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/avalonia.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/avalonia.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/flutter.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/flutter.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/html-tailwind.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/html-tailwind.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/javafx.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/javafx.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/jetpack-compose.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/jetpack-compose.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/laravel.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/laravel.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/nextjs.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/nextjs.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/nuxt-ui.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/nuxt-ui.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/nuxtjs.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/nuxtjs.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/react-native.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/react-native.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/react.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/react.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/shadcn.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/shadcn.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/svelte.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/svelte.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/swiftui.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/swiftui.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/threejs.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/threejs.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/uno.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/uno.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/uwp.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/uwp.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/vue.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/vue.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/winui.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/winui.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/stacks/wpf.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/stacks/wpf.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/styles.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/styles.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/typography.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/typography.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/ui-reasoning.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/ui-reasoning.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/data/ux-guidelines.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/data/ux-guidelines.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/references/extract-from-codebase.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/design-system/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/design-system/references/pro-rules.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/references/pro-rules.md
+    license: MIT
+    modification: base
+- path: skills/design-system/references/quick-reference.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/references/quick-reference.md
+    license: MIT
+    modification: base
+- path: skills/design-system/references/token-architecture.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/design-system/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/design-system/scripts/core.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/core.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/design_system.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/design_system.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/reasoning_contract.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/reasoning_contract.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/search.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/search.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/google-api.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-api.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/google-catalog.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-catalog.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/google-existing.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-existing.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/google-metadata.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-metadata.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/google-overrides.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/google-overrides.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/icons-curated.csv
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/icons-curated.csv
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/phosphor-core.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-core.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/phosphor-package.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-package.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/phosphor-react-exports.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-exports.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/catalogs/phosphor-react-package.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/catalogs/phosphor-react-package.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/relevance-baseline.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-baseline.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/relevance-cases.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-cases.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/fixtures/relevance-thresholds.json
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/fixtures/relevance-thresholds.json
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_catalog_refresh.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_catalog_refresh.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_catalog_summary_line_endings.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_catalog_summary_line_endings.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_core.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_core.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_core_data_quality.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_core_data_quality.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_data_contracts.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_data_contracts.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_design_system_mode.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_mode.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_design_system_stack.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_design_system_stack.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_native_desktop_stack_freshness.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_native_desktop_stack_freshness.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_relevance_evaluator.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_relevance_evaluator.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_rtl_support.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_rtl_support.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_skill_script_paths.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_skill_script_paths.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_style_taxonomy.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_style_taxonomy.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_text_layout_resilience.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_text_layout_resilience.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/tests/test_web_stack_freshness.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/tests/test_web_stack_freshness.py
+    license: MIT
+    modification: base
+- path: skills/design-system/scripts/validate_data.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/ui-ux-pro-max/scripts/validate_data.py
+    license: MIT
+    modification: base
+- path: skills/visual-design/LICENSE
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/LICENSE
+    license: MIT
+    modification: base
+- path: skills/visual-design/LICENSE-frontend-design.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/frontend-design/LICENSE.txt
+    license: Apache-2.0
+    modification: base
+- path: skills/visual-design/SKILL.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/aesthetic-direction.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/frontend-design/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/visual-design/references/anatomy.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/anatomy.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/brand-truth.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/brand-truth.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/comp.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/comp.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/craft.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/craft.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/dark-mode.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/dark-mode.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/data-viz.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/data-viz.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/design-md.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/design-md.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/direction.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/direction.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/export-formats.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/export-formats.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/flow.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/flow.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/fonts.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/fonts.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/gates.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/gates.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/genres/atmospheric.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/genres/atmospheric.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/genres/editorial.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/genres/editorial.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/genres/modern-minimal.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/genres/modern-minimal.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/genres/playful.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/genres/playful.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/imagery.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/imagery.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/interaction-and-states.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/interaction-and-states.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/layout.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/layout.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/macrostructures/01-bento-grid.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/01-bento-grid.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/02-long-document.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/02-long-document.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/03-marquee-hero.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/03-marquee-hero.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/04-stat-led.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/04-stat-led.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/05-workbench.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/05-workbench.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/06-conversational-faq.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/06-conversational-faq.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/07-manifesto.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/07-manifesto.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/08-photographic.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/08-photographic.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/09-quote-led.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/09-quote-led.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/10-specimen.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/10-specimen.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/11-catalogue.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/11-catalogue.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/12-letter.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/12-letter.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/13-index-first.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/13-index-first.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/14-narrative-workflow.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/14-narrative-workflow.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/15-split-studio.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/15-split-studio.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/16-feature-stack.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/16-feature-stack.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/17-type-specimen.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/17-type-specimen.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/18-portfolio-grid.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/18-portfolio-grid.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/19-map-diagram.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/19-map-diagram.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/20-ecosystem-index.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/20-ecosystem-index.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/macrostructures/21-component-playground.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/macrostructures/21-component-playground.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/microinteractions.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/microinteractions.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/patterns.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/patterns.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/redesign.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/redesign.md
+    license: MIT
+    modification: adapted
+- path: skills/visual-design/references/responsive.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/responsive.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/review-finish.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/review-finish.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/review-hero.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/review-hero.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/scroll-choreography.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/scroll-choreography.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/texture.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/texture.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/README.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/README.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/almanac.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/almanac.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/almanac.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/almanac.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/arcade.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/arcade.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/arcade.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/arcade.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/atelier.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/atelier.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/atelier.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/atelier.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/bloom.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/bloom.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/bloom.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/bloom.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/blueprint.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/blueprint.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/blueprint.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/blueprint.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/broadside.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/broadside.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/broadside.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/broadside.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/brutal.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/brutal.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/brutal.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/brutal.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/carnival.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/carnival.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/carnival.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/carnival.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/cobalt.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/cobalt.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/cobalt.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/cobalt.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/console.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/console.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/console.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/console.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/coral.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/coral.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/coral.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/coral.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/darkroom.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/darkroom.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/darkroom.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/darkroom.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/dose.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/dose.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/dose.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/dose.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/dusk.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/dusk.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/dusk.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/dusk.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/editorial.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/editorial.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/editorial.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/editorial.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/formwork.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/formwork.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/formwork.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/formwork.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/furrow.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/furrow.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/furrow.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/furrow.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/garden.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/garden.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/garden.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/garden.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/grid.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/grid.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/grid.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/grid.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/halftone.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/halftone.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/halftone.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/halftone.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/hedgerow.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/hedgerow.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/hedgerow.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/hedgerow.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/hum.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/hum.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/hum.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/hum.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/index.json
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/index.json
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/ink.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/ink.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/ink.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/ink.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/kiln.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/kiln.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/kiln.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/kiln.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/loom.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/loom.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/loom.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/loom.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/lumen.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/lumen.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/lumen.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/lumen.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/manifesto.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/manifesto.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/manifesto.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/manifesto.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/midnight.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/midnight.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/midnight.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/midnight.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/newsprint.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/newsprint.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/newsprint.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/newsprint.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/overprint.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/overprint.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/overprint.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/overprint.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/pasteup.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/pasteup.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/pasteup.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/pasteup.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/piste.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/piste.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/piste.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/piste.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/refract.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/refract.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/refract.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/refract.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/ribbon.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/ribbon.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/ribbon.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/ribbon.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/rim.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/rim.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/rim.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/rim.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/riso.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/riso.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/riso.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/riso.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/solstice.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/solstice.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/solstice.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/solstice.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/specimen.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/specimen.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/specimen.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/specimen.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/spore.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/spore.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/spore.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/spore.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/sport.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/sport.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/sport.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/sport.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/squeeze.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/squeeze.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/squeeze.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/squeeze.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/sticker.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/sticker.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/sticker.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/sticker.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/studio.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/studio.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/studio.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/studio.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/terminal.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/terminal.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/terminal.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/terminal.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/terrazzo.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/terrazzo.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/terrazzo.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/terrazzo.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/ultraviolet.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/ultraviolet.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/ultraviolet.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/ultraviolet.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/vantage.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/vantage.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/vantage.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/vantage.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/vellum.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/vellum.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/vellum.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/vellum.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/wayfind.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/wayfind.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/wayfind.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/wayfind.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/werkstatt.jpg
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/werkstatt.jpg
+    license: MIT
+    modification: base
+- path: skills/visual-design/references/themes/werkstatt.md
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/references/themes/werkstatt.md
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/capture.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/capture.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/capture.test.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/capture.test.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/exemplars/atmospheric.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/exemplars/atmospheric.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/exemplars/editorial.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/exemplars/editorial.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/exemplars/modern-minimal.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/exemplars/modern-minimal.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/exemplars/playful.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/exemplars/playful.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/eyebrow-fail/index.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/eyebrow-fail/index.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/eyebrow-pass/index.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/eyebrow-pass/index.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/imagegen/imagegen.test.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/imagegen/imagegen.test.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/kept/after.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/kept/after.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/kept/before.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/kept/before.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/slopped.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/slopped.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/tailwind-fail/Feature.vue
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/tailwind-fail/Feature.vue
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/tailwind-fail/Hero.tsx
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/tailwind-fail/Hero.tsx
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/tailwind-fail/index.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/tailwind-fail/index.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/tailwind-fail/style.css
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/tailwind-fail/style.css
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/tailwind-pass/Hero.tsx
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/tailwind-pass/Hero.tsx
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/tailwind-pass/index.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/tailwind-pass/index.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/tailwind-pass/style.css
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/tailwind-pass/style.css
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/fixtures/waiver/index.html
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/fixtures/waiver/index.html
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/imagegen.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/imagegen.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/install-hook.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/install-hook.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/install.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/install.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/lint-hook.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/lint-hook.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/photos.json
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/photos.json
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/picture.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/picture.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/refcheck.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/refcheck.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/reroll-exhaustion.test.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/reroll-exhaustion.test.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/sloplint-render.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/sloplint-render.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/sloplint-render.test.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/sloplint-render.test.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/sloplint.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/sloplint.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/theme.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/theme.mjs
+    license: MIT
+    modification: base
+- path: skills/visual-design/scripts/theme.test.mjs
+  derived_from:
+  - source: Nutlope/hallmark
+    commit: 407fa68
+    path: skills/hallmark/scripts/theme.test.mjs
+    license: MIT
+    modification: base

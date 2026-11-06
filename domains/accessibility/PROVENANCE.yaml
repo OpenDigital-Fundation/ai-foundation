@@ -1,2 +1,30 @@
 version: 1
-files: []
+files:
+- path: skills/wcag-accessibility/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/audit-method.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-accessibility-auditor.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/wcag-checklist.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/a11y-architect.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/web-react.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/frontend-a11y/SKILL.md
+    license: MIT
+    modification: adapted

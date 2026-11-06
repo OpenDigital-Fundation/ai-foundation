@@ -60,3 +60,14 @@
    files: {GUIDE.md: skills/writing-skills/SKILL.md}}
 - {dest: domains/agent-engineering/skills/skill-authoring/references/writing-for-agents.md, source: mattpocock/skills, src: skills/productivity/writing-for-agents/SKILL.md}
 - {dest: domains/agent-engineering/skills/skill-authoring/references/environments.md, source: anthropics/skills, src: skills/skill-creator/SKILL.md}
+- {dest: domains/ui/skills/visual-design, source: Nutlope/hallmark, src: skills/hallmark}
+- {dest: domains/ui/skills/visual-design/references/aesthetic-direction.md, source: anthropics/skills, src: skills/frontend-design/SKILL.md}
+- {dest: domains/ui/skills/visual-design/LICENSE-frontend-design.txt, source: anthropics/skills, src: skills/frontend-design/LICENSE.txt}
+- {dest: domains/ui/skills/design-system, source: nextlevelbuilder/ui-ux-pro-max-skill, src: .claude/skills/ui-ux-pro-max}
+- {dest: domains/ui/skills/design-system/references/token-architecture.md, source: nextlevelbuilder/ui-ux-pro-max-skill, src: .claude/skills/design-system/SKILL.md}
+- {dest: domains/ui/skills/design-system/references/extract-from-codebase.md, source: affaan-m/ECC, src: skills/design-system/SKILL.md}
+- {dest: domains/accessibility/skills/wcag-accessibility, source: affaan-m/ECC, src: skills/accessibility,
+   files: {references/web-react.md: skills/frontend-a11y/SKILL.md, references/wcag-checklist.md: agents/a11y-architect.md}}
+- {dest: domains/accessibility/skills/wcag-accessibility/references/audit-method.md, source: msitarzewski/agency-agents, src: testing/testing-accessibility-auditor.md}
+- {dest: domains/ux/skills/user-research/references/research-playbook.md, source: msitarzewski/agency-agents, src: design/design-ux-researcher.md}
+- {dest: domains/ux/skills/usability-review/references/persona-walkthrough.md, source: msitarzewski/agency-agents, src: design/design-persona-walkthrough.md}

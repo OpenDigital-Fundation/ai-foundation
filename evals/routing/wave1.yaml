@@ -50,3 +50,8 @@
 - {prompt: "set up pytest fixtures for our Django models", expect: "languages:python"}
 - {prompt: "this cargo build fails with a borrow checker error in parser.rs", expect: "debugging:systematic-debugging"}
 - {prompt: "como organizo os componentes e hooks nesse app React?", expect: "languages:typescript"}
+- {prompt: "design a landing page for our bakery that doesn't look AI-generated", expect: "ui:visual-design"}
+- {prompt: "pick a palette, fonts and visual style for a fintech dashboard", expect: "ui:design-system"}
+- {prompt: "audit our checkout form for WCAG 2.2 AA", expect: "accessibility:wcag-accessibility"}
+- {prompt: "plan five user interviews to understand why people abandon onboarding", expect: "ux:user-research"}
+- {prompt: "walk through our sign-up flow as a first-time mobile user and tell me where they'd get stuck", expect: "ux:usability-review"}

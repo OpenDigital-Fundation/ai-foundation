@@ -137,6 +137,9 @@ excluded:
   note: Seven-line prompt with no procedure.
 - key: "msitarzewski/agency-agents:agent:Blockchain Security Auditor"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Section 508 Accessibility Specialist"
+  reason: vendor-specific
+  note: "US federal procurement; covered by WCAG 2.2 AA in accessibility:wcag-accessibility."
 - key: "obra/superpowers:skill:diagnosing-superpowers"
   reason: source-internal
 - key: "obra/superpowers:skill:using-superpowers"

@@ -1,2 +1,16 @@
 version: 1
-files: []
+files:
+- path: skills/usability-review/references/persona-walkthrough.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: design/design-persona-walkthrough.md
+    license: MIT
+    modification: adapted
+- path: skills/user-research/references/research-playbook.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: design/design-ux-researcher.md
+    license: MIT
+    modification: adapted

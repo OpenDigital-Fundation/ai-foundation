@@ -1,5 +1,16 @@
 version: 1
 artifacts:
+- id: accessibility/wcag-accessibility
+  type: skill
+  capability: Design, build and audit interfaces to WCAG 2.2 AA on web, iOS and Android.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:accessibility"
+  - "affaan-m/ECC:skill:frontend-a11y"
+  - "affaan-m/ECC:agent:a11y-architect"
+  - "affaan-m/ECC:rule:react-native/accessibility"
+  - "msitarzewski/agency-agents:agent:Accessibility Auditor"
 - id: agent-engineering/parallel-agents
   type: skill
   capability: Dispatch one focused subagent per independent task and integrate their verified results.
@@ -460,6 +471,43 @@ artifacts:
   - "affaan-m/ECC:skill:verification-loop"
   - "msitarzewski/agency-agents:agent:Reality Checker"
   - "msitarzewski/agency-agents:agent:Evidence Collector"
+- id: ui/design-system
+  type: skill
+  capability: Choose or generate a design system (style, palette, type, charts, icons, tokens) from a curated database.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-ux-pro-max"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:design-system"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:command:design-plan"
+  - "affaan-m/ECC:skill:design-system"
+- id: ui/visual-design
+  type: skill
+  capability: Design and build new pages that look designed, with themes, job-first layout and browser-linted quality gates.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "Nutlope/hallmark:skill:hallmark"
+  - "anthropics/skills:skill:frontend-design"
+  - "affaan-m/ECC:skill:frontend-design-direction"
+  - "msitarzewski/agency-agents:agent:UI Designer"
+  - "msitarzewski/agency-agents:agent:UI Finish-Gate Reviewer"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:agent:design-review"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:command:design-review"
+- id: ux/usability-review
+  type: skill
+  capability: Expert walkthrough and heuristic evaluation of an interface or flow, with ranked fixes.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Persona Walkthrough Specialist"
+- id: ux/user-research
+  type: skill
+  capability: Plan, run and synthesise user research that informs a concrete product decision.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:UX Researcher"
 - id: workflow/brainstorming
   type: skill
   capability: Find out what the user wants and why, compare approaches, and get a written spec approved before building.
