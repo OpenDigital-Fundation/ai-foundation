@@ -69,4 +69,4 @@ Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística
 | `languages` | 11 pacotes gerados (`experimental`); faltam revisão de conteúdo e evals |
 | `ui`, `ux`, `accessibility` | primeira versão (`experimental`); faltam evals e testes dos scripts do upstream |
 | `data`, `platform`, `ai-engineering`, `documents`, `research`, `brand`, `creative-media` | primeira versão via `tools.curation.bundle` (`experimental`) |
-| Onda 3 (`product`, `marketing`, `sales`, `finance`, `legal-compliance`, `operations`) | não iniciada |
+| Onda 3 (`product`, `marketing`, `sales`, `finance`, `legal-compliance`, `operations`) | primeira versão via bundle (`experimental`); corpos baseados em personas precisam virar procedimentos |

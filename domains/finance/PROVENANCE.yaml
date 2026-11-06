@@ -1,2 +1,79 @@
 version: 1
-files: []
+files:
+- path: skills/accounting/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: finance/finance-bookkeeper-controller.md
+    license: MIT
+    modification: adapted
+- path: skills/accounting/references/accounts-payable.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/accounts-payable-agent.md
+    license: MIT
+    modification: adapted
+- path: skills/accounting/references/tax.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: finance/finance-tax-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/accounting/references/tracking.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: support/support-finance-tracker.md
+    license: MIT
+    modification: adapted
+- path: skills/billing-operations/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/finance-billing-ops/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/billing-operations/references/customer-billing.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/customer-billing-ops/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/billing-operations/references/payments-engineering.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-payments-billing-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/financial-analysis/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: finance/finance-financial-analyst.md
+    license: MIT
+    modification: adapted
+- path: skills/financial-analysis/references/fpa.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: finance/finance-fpa-analyst.md
+    license: MIT
+    modification: adapted
+- path: skills/financial-analysis/references/investment-research.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: finance/finance-investment-researcher.md
+    license: MIT
+    modification: adapted
+- path: skills/financial-analysis/references/pricing.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/specialized-pricing-analyst.md
+    license: MIT
+    modification: adapted

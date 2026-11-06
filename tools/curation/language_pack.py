@@ -116,8 +116,13 @@ def rewrite_refs(text: str, refs: dict[str, str], unresolved: set[str]) -> str:
     text = re.sub(r"ECC's (existing )?`typescript/` rules", "this pack's TypeScript standards", text)
     for a, b in [("Related ECC Skills", "Related skills"), ("Most ECC SWE workflows", "Most general engineering workflows"),
                  ("Streamlined ECC path", "Catalog path"), ("in the ECC repository", "in the upstream repository"),
-                 ("bundled with ECC", "bundled with the upstream project"), (" (ECC)", "")]:
+                 ("bundled with ECC", "bundled with the upstream project"), (" (ECC)", ""),
+                 ("ECC-native skills", "catalog skills"), ("ECC-native lane", "catalog skill"), ("ECC lane", "catalog skill"),
+                 ("the canonical ECC SEO workflow", "the canonical SEO workflow"), ("ECC or website", "product or website"),
+                 ("inside ECC", "inside this catalog"), (", and ECC 2.0", ""), ("ECC 2.0", "")]:
         text = text.replace(a, b)
+    text = re.sub(r"^.*\bAffaan\b.*\n", "", text, flags=re.M)  # lines about the upstream author's own voice or setup
+    text = re.sub(r"(?<!source: affaan-m/)\bECC\b(?!-)", "the upstream project", text)
 
     def sub(m: re.Match) -> str:
         name = m.group(2)

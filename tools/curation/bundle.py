@@ -72,10 +72,9 @@ def build(root: Path, sources: Path, spec: dict) -> None:
     def rw(text: str) -> str:
         for x, y in subs:
             text = text.replace(x, y)
-        text = rewrite_refs(text, refs, unresolved)
-        for pattern in current_remove:
+        for pattern in current_remove:  # cut source-internal passages before any rewording
             text = re.sub(pattern, "", text, flags=re.S | re.M)
-        return text
+        return rewrite_refs(text, refs, unresolved)
 
     for aid, a in spec["artifacts"].items():
         domain, name = aid.split("/")

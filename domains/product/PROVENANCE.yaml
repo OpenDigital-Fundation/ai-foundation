@@ -1,2 +1,44 @@
 version: 1
-files: []
+files:
+- path: skills/product-management/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: product/product-manager.md
+    license: MIT
+    modification: adapted
+- path: skills/product-management/references/capability-mapping.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/product-capability/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/product-management/references/experiments.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: project-management/project-management-experiment-tracker.md
+    license: MIT
+    modification: adapted
+- path: skills/product-management/references/feedback-synthesis.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: product/product-feedback-synthesizer.md
+    license: MIT
+    modification: adapted
+- path: skills/product-management/references/prioritisation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: product/product-sprint-prioritizer.md
+    license: MIT
+    modification: adapted
+- path: skills/product-management/references/product-lens.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/product-lens/SKILL.md
+    license: MIT
+    modification: adapted

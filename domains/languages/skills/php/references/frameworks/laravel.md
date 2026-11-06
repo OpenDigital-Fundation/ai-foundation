@@ -2431,4 +2431,4 @@ The detailed response includes:
 - `languages:php` (`references/frameworks/laravel.md`) — Laravel architecture and patterns
 - `languages:php` (`references/frameworks/laravel.md`) — Test-driven development for Laravel
 - `languages:php` (`references/frameworks/laravel.md`) — Laravel security best practices
-- `documentation-lookup` — General library documentation lookup (Context7)
+- `research:docs-lookup` — General library documentation lookup (Context7)

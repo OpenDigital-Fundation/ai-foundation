@@ -1,2 +1,100 @@
 version: 1
-files: []
+files:
+- path: skills/customer-support/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: support/support-support-responder.md
+    license: MIT
+    modification: adapted
+- path: skills/customer-support/references/customer-success.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/customer-success-manager.md
+    license: MIT
+    modification: adapted
+- path: skills/customer-support/references/responding.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: support/support-support-responder.md
+    license: MIT
+    modification: adapted
+- path: skills/customer-support/references/service.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/customer-service.md
+    license: MIT
+    modification: adapted
+- path: skills/people-operations/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/hr-onboarding.md
+    license: MIT
+    modification: adapted
+- path: skills/people-operations/references/change-management.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/change-management-consultant.md
+    license: MIT
+    modification: adapted
+- path: skills/people-operations/references/recruiting.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/recruitment-specialist.md
+    license: MIT
+    modification: adapted
+- path: skills/people-operations/references/training.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/corporate-training-designer.md
+    license: MIT
+    modification: adapted
+- path: skills/project-management/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: project-management/project-manager-senior.md
+    license: MIT
+    modification: adapted
+- path: skills/project-management/references/flow-operations.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/project-flow-ops/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/project-management/references/jira.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: project-management/project-management-jira-workflow-steward.md
+    license: MIT
+    modification: adapted
+- path: skills/project-management/references/meeting-notes.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: project-management/project-management-meeting-notes-specialist.md
+    license: MIT
+    modification: adapted
+- path: skills/project-management/references/production.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: project-management/project-management-studio-producer.md
+    license: MIT
+    modification: adapted
+- path: skills/project-management/references/shepherding.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: project-management/project-management-project-shepherd.md
+    license: MIT
+    modification: adapted

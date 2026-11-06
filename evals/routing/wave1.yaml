@@ -78,3 +78,19 @@
 - {prompt: "write this launch post in my voice, here are five of my old posts", expect: "brand:brand-voice"}
 - {prompt: "make an HTML slide deck for the investor pitch", expect: "creative-media:presentation-slides"}
 - {prompt: "create a LinkedIn banner and an Instagram post for the launch", expect: "creative-media:banner-design"}
+- {prompt: "write a PRD for team workspaces with success metrics", expect: "product:product-management"}
+- {prompt: "run a technical SEO audit of our marketing site", expect: "marketing:seo"}
+- {prompt: "plan a content calendar for our developer blog and LinkedIn", expect: "marketing:content-marketing"}
+- {prompt: "write a five-email onboarding nurture sequence", expect: "marketing:email-marketing"}
+- {prompt: "our Google Ads CPA doubled, audit the account", expect: "marketing:paid-media"}
+- {prompt: "plan the launch campaign for our new pricing tier", expect: "marketing:campaign-planning"}
+- {prompt: "build a lead list of fintech CTOs and draft outbound emails", expect: "sales:prospecting"}
+- {prompt: "prep me for the discovery call with Acme tomorrow", expect: "sales:deal-strategy"}
+- {prompt: "build a three-statement model and 18-month forecast", expect: "finance:financial-analysis"}
+- {prompt: "reconcile last month's bank statements and prepare the close", expect: "finance:accounting"}
+- {prompt: "set up dunning for failed subscription payments in Stripe", expect: "finance:billing-operations"}
+- {prompt: "what do we need for SOC 2 Type I readiness?", expect: "legal-compliance:compliance-programs"}
+- {prompt: "draft an MSA and order form for a new enterprise customer", expect: "legal-compliance:contracts"}
+- {prompt: "build a project plan with milestones and risks for the migration", expect: "operations:project-management"}
+- {prompt: "reply to this angry customer whose export keeps failing", expect: "operations:customer-support"}
+- {prompt: "write the onboarding plan for a new backend engineer", expect: "operations:people-operations"}

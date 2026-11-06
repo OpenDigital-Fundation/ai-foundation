@@ -55,7 +55,7 @@ files:
     commit: b38be6a
     path: skills/hexagonal-architecture/SKILL.md
     license: MIT
-    modification: base
+    modification: adapted
 - path: skills/decision-records/ADR-FORMAT.md
   derived_from:
   - source: mattpocock/skills

@@ -77,9 +77,9 @@ Delete and rewrite any of these:
 
 Use this skill before or inside:
 
-- `content-engine`
+- `marketing:content-marketing`
 - `crosspost`
-- `lead-intelligence`
+- `sales:prospecting`
 - article or launch writing
 - cold or warm outbound across X, LinkedIn, and email
 

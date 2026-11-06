@@ -3,7 +3,6 @@ name: api-design
 description: "Use when designing or reviewing an HTTP/REST API: resource naming, methods and status codes, response and error formats, pagination, filtering and sorting, authentication, rate limiting and versioning. Produces consistent, production-grade API contracts."
 license: MIT
 metadata:
-  origin: ECC
   domain: architecture
   status: experimental
 ---
