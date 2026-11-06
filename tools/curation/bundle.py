@@ -15,6 +15,7 @@ bundle file:
       supersedes: [extra inventory keys]  # in addition to every entry used
       remove: [regex, ...]               # passages to cut from the body (source-internal content)
   exclusions: [...]                      # copied to the decision file
+Files under catalog/overrides/<domain>/<skill>/ are copied over the generated skill afterwards.
 Entries use the language_pack syntax: s:/a:/r:/c: for affaan-m/ECC, or "<owner>/<repo>:<path>".
 """
 from __future__ import annotations
@@ -128,6 +129,14 @@ def build(root: Path, sources: Path, spec: dict) -> None:
         if ref_lines:
             text += "\n## References\n\nLoad only what the task needs:\n\n" + "\n".join(ref_lines) + "\n"
         (d / "SKILL.md").write_text(text, encoding="utf-8")
+        # Reviewed local fixes to generated files (e.g. security patches) live outside the
+        # generated tree so regeneration never drops them.
+        override = root / "catalog/overrides" / domain / name
+        if override.is_dir():
+            for f in sorted(p for p in override.rglob("*") if p.is_file()):
+                target = d / f.relative_to(override)
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(f, target)
         if main_prov:
             prov.append({"path": f"skills/{name}/SKILL.md", "derived_from": main_prov})
     apply(root, {"provenance": provenance})

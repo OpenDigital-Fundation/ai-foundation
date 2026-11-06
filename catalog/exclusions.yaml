@@ -1,6 +1,24 @@
 version: 1
 excluded:
+- key: "affaan-m/ECC:agent:bengali-reviewer"
+  reason: source-internal
+- key: "affaan-m/ECC:agent:gan-evaluator"
+  reason: source-internal
+- key: "affaan-m/ECC:agent:gan-generator"
+  reason: source-internal
+- key: "affaan-m/ECC:agent:gan-planner"
+  reason: source-internal
 - key: "affaan-m/ECC:agent:harmonyos-app-resolver"
+  reason: out-of-scope
+- key: "affaan-m/ECC:agent:healthcare-reviewer"
+  reason: out-of-scope
+- key: "affaan-m/ECC:agent:homelab-architect"
+  reason: out-of-scope
+- key: "affaan-m/ECC:agent:network-architect"
+  reason: out-of-scope
+- key: "affaan-m/ECC:agent:network-config-reviewer"
+  reason: out-of-scope
+- key: "affaan-m/ECC:agent:network-troubleshooter"
   reason: out-of-scope
 - key: "affaan-m/ECC:command:astra-review"
   reason: source-internal
@@ -9,6 +27,8 @@ excluded:
   into:
   - workflow/executing-plans
   note: The execution ledger plays this role.
+- key: "affaan-m/ECC:command:ecc-guide"
+  reason: source-internal
 - key: "affaan-m/ECC:command:epic-claim"
   reason: source-internal
   note: Coordination state specific to the source's own tooling.
@@ -23,6 +43,8 @@ excluded:
 - key: "affaan-m/ECC:command:epic-validate"
   reason: source-internal
 - key: "affaan-m/ECC:command:gan-build"
+  reason: source-internal
+- key: "affaan-m/ECC:command:gan-design"
   reason: source-internal
 - key: "affaan-m/ECC:command:orch-fix-defect"
   reason: duplicate-of
@@ -39,8 +61,22 @@ excluded:
   reason: duplicate-of
   into:
   - workflow/finishing-a-branch
+- key: "affaan-m/ECC:command:santa-loop"
+  reason: source-internal
 - key: "affaan-m/ECC:command:skill-host-compat"
   reason: source-internal
+- key: "affaan-m/ECC:hook:ecc-context-monitor"
+  reason: source-internal
+- key: "affaan-m/ECC:hook:ecc-metrics-bridge"
+  reason: source-internal
+- key: "affaan-m/ECC:hook:ecc-statusline"
+  reason: source-internal
+- key: "affaan-m/ECC:rule:3d"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:animations"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
 - key: "affaan-m/ECC:rule:arkts/coding-style"
   reason: out-of-scope
   note: ArkTS/HarmonyOS is not a supported language pack in v1.
@@ -56,6 +92,21 @@ excluded:
 - key: "affaan-m/ECC:rule:arkts/testing"
   reason: out-of-scope
   note: ArkTS/HarmonyOS is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:assets"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:audio"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:calculate-metadata"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:can-decode"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:charts"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
 - key: "affaan-m/ECC:rule:common/coding-style"
   reason: low-quality
   note: Absolute rules (always immutable, many small files) contradict following the existing style.
@@ -65,6 +116,47 @@ excluded:
 - key: "affaan-m/ECC:rule:common/performance"
   reason: low-quality
   note: Dated model-selection advice.
+- key: "affaan-m/ECC:rule:compositions"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:display-captions"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:ecc-guardrails"
+  reason: source-internal
+- key: "affaan-m/ECC:rule:extract-frames"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:fonts"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:get-audio-duration"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:get-video-dimensions"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:get-video-duration"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:gifs"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:images"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:import-srt-captions"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:lottie"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:measuring-dom-nodes"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:measuring-text"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
 - key: "affaan-m/ECC:rule:perl/coding-style"
   reason: out-of-scope
   note: Perl is not a supported language pack in v1.
@@ -82,19 +174,131 @@ excluded:
   note: Perl is not a supported language pack in v1.
 - key: "affaan-m/ECC:rule:README"
   reason: source-internal
+- key: "affaan-m/ECC:rule:sequencing"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:tailwind"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:text-animations"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:timing"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:transcribe-captions"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:transitions"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:trimming"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:rule:videos"
+  reason: out-of-scope
+  note: Remotion video-rendering rules; video tooling is out of scope in v1.
+- key: "affaan-m/ECC:skill:agent-payment-x402"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:bengali-nlp"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:blender-motion-state-inspection"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:carrier-relationship-management"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:cisco-ios-patterns"
+  reason: out-of-scope
 - key: "affaan-m/ECC:skill:codehealth-mcp"
   reason: vendor-specific
+- key: "affaan-m/ECC:skill:configure-ecc"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:customs-trade-compliance"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:deepseek-harness-setup"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:defi-amm-security"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:dmux-workflows"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:ecc-council"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:ecc-guide"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:ecc-recipes"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:ecc-tools-cost-audit"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:energy-procurement"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:esign-field-placement"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:evm-token-decimals"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:exa-search"
   reason: vendor-specific
   note: "Tool-specific; research:source-research uses whatever search tools the session has."
 - key: "affaan-m/ECC:skill:fal-ai-media"
   reason: vendor-specific
+- key: "affaan-m/ECC:skill:flox-environments"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:gan-style-harness"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:healthcare-cdss-patterns"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:healthcare-emr-patterns"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:healthcare-eval-harness"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:healthcare-phi-compliance"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:hermes-imports"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:hipaa-compliance"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:homelab-network-readiness"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:homelab-network-setup"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:homelab-pihole-dns"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:homelab-vlan-segmentation"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:homelab-wireguard-vpn"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:inventory-demand-planning"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:ito-baskets"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:ito-compute"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:ito-inference"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:ito-training"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:llm-trading-agent-security"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:logistics-exception-management"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:manim-video"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:nanoclaw-repl"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:nasiko-control-plane"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:netmiko-ssh-automation"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:network-bgp-diagnostics"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:network-config-validation"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:network-interface-health"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:nodejs-keccak256"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:nutrient-document-processing"
   reason: vendor-specific
+- key: "affaan-m/ECC:skill:openclaw-persona-forge"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:orch-fix-defect"
   reason: duplicate-of
   into:
@@ -110,6 +314,24 @@ excluded:
   note: Perl is not a supported language pack in v1.
 - key: "affaan-m/ECC:skill:perl-testing"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:prediction-market-oracle-research"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:prediction-market-risk-review"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:production-scheduling"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:ralphinho-rfc-pipeline"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:remotion-video-creation"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:returns-reverse-logistics"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:santa-method"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:scientific-db-pubmed-database"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:scientific-db-uspto-database"
+  reason: out-of-scope
 - key: "affaan-m/ECC:skill:skill-host-compat"
   reason: source-internal
   note: Lints the source's own skills; this repository's validator and adapters cover host compatibility.
@@ -118,6 +340,18 @@ excluded:
   into:
   - agent-engineering/skill-authoring
   note: Covered by 'check before creating' against the catalog.
+- key: "affaan-m/ECC:skill:tasteforge-video"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:tinystruct-patterns"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:uncloud"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:video-editing"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:videodb"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:visa-doc-translate"
+  reason: out-of-scope
 - key: "anthropics/skills:skill:academy-guide"
   reason: vendor-specific
 - key: "anthropics/skills:skill:brand-guidelines"
@@ -158,11 +392,197 @@ excluded:
 - key: "mattpocock/skills:skill:writing-shape"
   reason: low-quality
   note: Marked in-progress upstream.
+- key: "msitarzewski/agency-agents:agent:3D & Scene Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Aging Parent Care Companion"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Anthropologist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:ATS Validator Architect"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Baidu SEO Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Bilibili Content Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:BIM/GIS Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Blender Add-on Engineer"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Blockchain Security Auditor"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Cartography Designer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:China E-Commerce Operator"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:China Market Localization Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:China Network Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Clinical Evidence Agent"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Cultural Intelligence Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Douyin Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Drone/Reality Mapping Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Drupal Performance Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Drupal Shopping Cart Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Economy Designer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:FedRAMP & RMF Compliance Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Feishu Integration Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Filament Optimization Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Focus Music Architect"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:French Consulting Market Navigator"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Game Audio Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Game Designer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:GaussDB Expert Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:GeoAI/ML Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Geographer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Geoprocessing Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:GIS Analyst"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:GIS QA Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Global Podcast Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Godot Gameplay Scripter"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Godot Multiplayer Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Godot Shader Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Healthcare Customer Service"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Healthcare Innovation Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Healthcare Marketing Compliance Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Hospitality Guest Services"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Korean Business Navigator"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Kuaishou Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Level Designer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Loan Officer Assistant"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:macOS Spatial/Metal Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Medical Billing & Coding Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Narrative Designer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Narratologist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Organizational Psychologist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:OrgScript Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Psychologist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Real Estate Buyer & Seller"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Roblox Avatar Creator"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Roblox Experience Designer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Roblox Systems Scripter"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Salesforce Architect"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Section 508 Accessibility Specialist"
   reason: vendor-specific
   note: "US federal procurement; covered by WCAG 2.2 AA in accessibility:wcag-accessibility."
+- key: "msitarzewski/agency-agents:agent:ServiceNow Developer & Mentor"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Short-Video Editing Coach"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Solidity Smart Contract Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Solution Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Sovereign Health Systems Agent"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Spatial Data Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Spatial Data Scientist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Study Abroad Advisor"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Supply Chain Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Technical Artist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Technical Consultant"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Terminal Integration Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:TikTok Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unity Architect"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unity Editor Tool Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unity Multiplayer Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unity Shader Graph Artist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unreal Multiplayer Architect"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unreal Systems Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unreal Technical Artist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Unreal World Builder"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:USWDS Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Video Optimization Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Video Streaming Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:visionOS Spatial Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Web GIS Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:WeChat Mini Program Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:WeChat Official Account Manager"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Weibo Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:WordPress Performance Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:WordPress Shopping Cart Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Xiaohongshu Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:XR Cockpit Interaction Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:XR Immersive Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:XR Interface Architect"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Zhihu Strategist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:ZK Steward"
+  reason: out-of-scope
 - key: "obra/superpowers:skill:diagnosing-superpowers"
   reason: source-internal
 - key: "obra/superpowers:skill:using-superpowers"

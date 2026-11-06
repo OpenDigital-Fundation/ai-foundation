@@ -95,25 +95,34 @@ function buildValues(spec, now) {
   if (!clauses) {
     throw new Error(`unknown role "${spec.role}"; expected one of ${Object.keys(ROLE_CLAUSES).join(', ')}`);
   }
-  const cp = spec.short;
+  // Every spec-supplied string is untrusted: type-check it and entity-encode it so it cannot
+  // inject Markdown, raw HTML/TeX or pandoc attributes into the generated agreement.
+  for (const key of ['legal', 'juris', 'addr', 'signer', 'title', 'email', 'date', 'supplement']) {
+    if (spec[key] !== undefined && typeof spec[key] !== 'string') {
+      throw new Error(`spec.${key} must be a string`);
+    }
+  }
+  const safe = value => encodeScheduleCell(value);
+  const field = value => (value ? safe(value) : BLANK);
+  const cp = safe(spec.short);
   const fill = text => text.split('{cp}').join(cp);
-  const supplement = typeof spec.supplement === 'string' && spec.supplement.trim() ? `${spec.supplement.trim()}; ` : '';
+  const supplement = typeof spec.supplement === 'string' && spec.supplement.trim() ? `${safe(spec.supplement.trim())}; ` : '';
 
   return {
     FEE_TITLE: clauses.title,
     CP_SHORT: cp,
-    DATE: spec.date || defaultDate(now),
-    CP_LEGAL: spec.legal || BLANK,
-    CP_JURIS: spec.juris || BLANK,
-    CP_ADDR: spec.addr || BLANK,
+    DATE: spec.date ? safe(spec.date) : defaultDate(now),
+    CP_LEGAL: field(spec.legal),
+    CP_JURIS: field(spec.juris),
+    CP_ADDR: field(spec.addr),
     ROLE_CLAUSE: fill(clauses.role),
     FEE_CLAUSE: fill(clauses.fee),
     SCHEDULE_ROWS: renderScheduleRows(spec.schedule),
     SUPPLEMENT_CLAUSE: supplement,
-    CP_SIGBLOCK: (spec.legal || cp).toUpperCase(),
-    CP_SIGNER: spec.signer || BLANK,
-    CP_TITLE: spec.title || BLANK,
-    CP_EMAIL: spec.email || BLANK,
+    CP_SIGBLOCK: safe((spec.legal || spec.short).toUpperCase()),
+    CP_SIGNER: field(spec.signer),
+    CP_TITLE: field(spec.title),
+    CP_EMAIL: field(spec.email),
   };
 }
 
@@ -179,7 +188,7 @@ function build(templatePath, specPath, outDir, options = {}) {
     throw new Error('DOCX required: pandoc unavailable; use --markdown-only for an explicit Markdown-only draft');
   }
   try {
-    const converted = spawnSync('pandoc', [mdPath, '-o', docxPath], CONVERTER_OPTIONS);
+    const converted = spawnSync('pandoc', ['-f', 'markdown-raw_html-raw_attribute-raw_tex', '--sandbox', mdPath, '-o', docxPath], CONVERTER_OPTIONS);
     if (converted.error || converted.status !== 0) {
       throw new Error('pandoc conversion failed; DOCX unavailable');
     }
