@@ -23,3 +23,7 @@
 
 1. Um único revisor (agent) no catálogo inteiro; revisores por linguagem não existem.
 2. Formato de achado único: Must/Should/Nice, cada um com caso concreto, e veredito.
+
+## Passada final (bundle [`gaps.yaml`](../../../../catalog/decisions/bundles/gaps.yaml))
+
+Adicionados: `simplification` (base agent `code-simplifier`; `refactor-cleaner`, `comment-analyzer`, `type-design-analyzer`; absorve `refactor-clean`).

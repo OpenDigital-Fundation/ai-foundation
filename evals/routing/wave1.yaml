@@ -102,3 +102,10 @@
 - {prompt: "block the agent from running git push --force or rm -rf", expect: "agent-engineering:agent-guardrails"}
 - {prompt: "split this plan across three agents in separate worktrees with merge gates", expect: "agent-engineering:agent-teams"}
 - {prompt: "make the agent remember the lessons from today's corrections next time", expect: "agent-engineering:agent-memory"}
+- {prompt: "design the architecture for a multi-tenant notifications service", expect: "architecture:system-design"}
+- {prompt: "I just joined; give me a tour of how this codebase handles payments", expect: "architecture:codebase-onboarding"}
+- {prompt: "remove dead code and needless abstractions in src/billing without changing behaviour", expect: "code-quality:simplification"}
+- {prompt: "what should our testing strategy and coverage targets be for this service?", expect: "testing:test-strategy"}
+- {prompt: "tsc fails with 40 type errors after the upgrade", expect: "debugging:build-failure-resolution"}
+- {prompt: "the dashboard works but feels flat; add tasteful motion and polish", expect: "ui:motion-and-polish"}
+- {prompt: "build the settings page with shadcn/ui and Tailwind, with dark mode", expect: "ui:component-styling"}

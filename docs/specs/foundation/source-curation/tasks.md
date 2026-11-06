@@ -5,4 +5,4 @@
 - [x] **T3.** Escrever `THIRD_PARTY_NOTICES.md` com as fontes `merge` e o texto de licença de cada uma.
 - [x] **T4.** Escrever o schema de `PROVENANCE.yaml`. Verificar: exemplo do plano valida.
 - [x] **T5.** Criar verificação de CI que compara hashes de arquivos do repositório com os arquivos das fontes `reference` e falha se houver cópia.
-- [ ] **T6.** Triar os 27 itens `unclassified` do inventário (atribuir domínio ou `exclude`).
+- [x] **T6.** Todos os 1.118 itens do inventário têm decisão (`supersedes`, `extend` ou exclusão); o validador falha se algum ficar sem decisão.

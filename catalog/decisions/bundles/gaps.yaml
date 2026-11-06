@@ -1,0 +1,119 @@
+# Final pass: real capability gaps found in the remaining inventory.
+name: gaps
+artifacts:
+  architecture/system-design:
+    title: System design
+    description: 'Use when designing a service, system or major feature end to end: components and boundaries, data flow, APIs and contracts, consistency and failure handling, scalability and latency budgets, caching, real-time collaboration and internationalisation concerns, and the trade-offs behind
+      each choice.'
+    base: msitarzewski/agency-agents:engineering/engineering-software-architect.md
+    references:
+      backend-architecture.md:
+      - msitarzewski/agency-agents:engineering/engineering-backend-architect.md
+      - s:backend-patterns
+      architect-agent.md:
+      - a:architect
+      - a:code-architect
+      api-platforms.md:
+      - msitarzewski/agency-agents:engineering/engineering-api-platform-engineer.md
+      latency.md:
+      - s:latency-critical-systems
+      error-handling.md:
+      - s:error-handling
+      caching.md:
+      - s:content-hash-cache-pattern
+      realtime-collaboration.md:
+      - msitarzewski/agency-agents:engineering/engineering-realtime-collaboration-engineer.md
+      internationalisation.md:
+      - msitarzewski/agency-agents:engineering/engineering-i18n-engineer.md
+      - s:i18n-sync
+  architecture/codebase-onboarding:
+    title: Codebase onboarding
+    description: 'Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry points, trace a feature end to end, write a guided code tour, recover the intent behind legacy code, or mine an implicit spec from existing behaviour.'
+    base: s:codebase-onboarding
+    references:
+      code-tour.md:
+      - s:code-tour
+      onboarding-engineer.md:
+      - msitarzewski/agency-agents:engineering/engineering-codebase-onboarding-engineer.md
+      archaeology.md:
+      - msitarzewski/agency-agents:specialized/specialized-codebase-archaeologist.md
+      explorer.md:
+      - a:code-explorer
+      spec-mining.md:
+      - a:spec-miner
+  code-quality/simplification:
+    title: Simplification
+    description: 'Use when existing code should get simpler without changing behaviour: removing dead code and unused exports, collapsing needless abstraction, clarifying names and types, cleaning comments, and refactoring safely behind tests.'
+    base: a:code-simplifier
+    references:
+      cleanup.md:
+      - a:refactor-cleaner
+      comments.md:
+      - a:comment-analyzer
+      type-design.md:
+      - a:type-design-analyzer
+    supersedes:
+    - affaan-m/ECC:command:refactor-clean
+  testing/test-strategy:
+    title: Test strategy
+    description: 'Use when deciding how a project should be tested rather than writing one test: the test portfolio and coverage targets, linking requirements and risks to tests, API and contract tests, performance benchmarks, regression tests for AI-written code, analysing test results and gaps in a
+      pull request, and quality gates before delivery.'
+    base: s:test-collaboration
+    references:
+      ai-regression.md:
+      - s:ai-regression-testing
+      automation.md:
+      - msitarzewski/agency-agents:testing/testing-test-automation-engineer.md
+      api-testing.md:
+      - msitarzewski/agency-agents:testing/testing-api-tester.md
+      results-analysis.md:
+      - msitarzewski/agency-agents:testing/testing-test-results-analyzer.md
+      - a:pr-test-analyzer
+      performance.md:
+      - msitarzewski/agency-agents:testing/testing-performance-benchmarker.md
+      - s:benchmark
+      - s:benchmark-methodology
+      click-path-audit.md:
+      - s:click-path-audit
+      delivery-gates.md:
+      - s:delivery-gate
+    supersedes:
+    - affaan-m/ECC:command:test-coverage
+    - affaan-m/ECC:command:quality-gate
+  debugging/build-failure-resolution:
+    title: Build failure resolution
+    description: 'Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed silently: read the first real error, fix the smallest cause, rebuild, repeat; then hunt for empty catches and ignored failures. Loads the language pack''s build reference.'
+    base: a:build-error-resolver
+    references:
+      silent-failures.md:
+      - a:silent-failure-hunter
+    supersedes:
+    - affaan-m/ECC:command:build-fix
+  ui/motion-and-polish:
+    title: Motion and polish
+    description: 'Use when an interface works but feels flat or rough: adding purposeful motion and transitions, micro-interactions, easing and timing, reduced-motion support, and the small craft details that make an interface feel considered, with taste guidance to avoid gimmicks.'
+    base: s:motion-foundations
+    references:
+      motion-patterns.md:
+      - s:motion-patterns
+      advanced-motion.md:
+      - s:motion-advanced
+      feel.md:
+      - s:make-interfaces-feel-better
+      taste.md:
+      - s:taste
+      - s:taste-application
+      - s:taste-distillation
+      design-quality.md:
+      - r:web/design-quality.md
+      delight.md:
+      - msitarzewski/agency-agents:design/design-whimsy-injector.md
+  ui/component-styling:
+    title: Component styling
+    description: 'Use when implementing interface components and styles in code: shadcn/ui and Radix components, Tailwind utility styling, theming and dark mode, responsive layouts, CSS architecture, and applying a ready-made theme to an artifact.'
+    base_dir: nextlevelbuilder/ui-ux-pro-max-skill:.claude/skills/ui-styling
+    references:
+      frontend-engineering.md:
+      - msitarzewski/agency-agents:engineering/engineering-frontend-developer.md
+      css-architecture.md:
+      - msitarzewski/agency-agents:design/design-ux-architect.md

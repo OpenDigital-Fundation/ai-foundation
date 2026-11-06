@@ -52,3 +52,31 @@ files:
     path: skills/receiving-code-review/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/simplification/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/code-simplifier.md
+    license: MIT
+    modification: adapted
+- path: skills/simplification/references/cleanup.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/refactor-cleaner.md
+    license: MIT
+    modification: adapted
+- path: skills/simplification/references/comments.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/comment-analyzer.md
+    license: MIT
+    modification: adapted
+- path: skills/simplification/references/type-design.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/type-design-analyzer.md
+    license: MIT
+    modification: adapted

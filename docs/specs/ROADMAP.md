@@ -60,7 +60,7 @@ Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística
 | Spec | Estado |
 |---|---|
 | `foundation/catalog-governance` | implementada (falta T6: revisão humana da tabela de domínios) |
-| `foundation/source-curation` | implementada (falta T6: triar 27 itens sem domínio) |
+| `foundation/source-curation` | implementada; 100% do inventário decidido (verificado no CI) |
 | `foundation/quality-gates` | validação estática implementada; faltam calibração do limiar (T3), runner de evals (T7–T9) |
 | `foundation/distribution` | marketplace e profiles implementados; faltam adaptadores multi-harness e release (T3–T8) |
 | `principles`, `workflow`, `testing`, `debugging`, `code-quality` | primeira versão implementada (`experimental`); faltam evals |

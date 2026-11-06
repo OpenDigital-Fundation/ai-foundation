@@ -97,6 +97,13 @@ echo '{"tool_input":{"command":"git push origin main"}}' | <path-to-script>
 
 Should exit with code 2 and print a BLOCKED message to stderr.
 
+## Limits of this guardrail
+
+- The hook script is a best-effort tripwire, not a security boundary. It tokenises the command with `shlex`, follows `bash -c` and `$(...)`, skips git global options and environment prefixes, and **fails closed** (blocks) when it cannot parse the input. Determined obfuscation can still get past any pattern check: for real protection, add permission deny rules or run the agent in an OS sandbox.
+- It needs `python3` on the machine; without it every Bash call is blocked with an explanation.
+- Besides git (`push`, `reset --hard`, `clean -f`, `branch -D`, `checkout .`, `restore .`, `--no-verify`) it blocks `rm` with recursive force.
+- Installing the hook changes the user's harness settings: show the exact file and JSON first and install only after explicit approval.
+
 ## References
 
 Load only what the task needs:

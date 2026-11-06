@@ -103,6 +103,77 @@ files:
     path: skills/test-driven-development/writing-good-tests.md
     license: MIT
     modification: adapted
+- path: skills/test-strategy/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/test-collaboration/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/ai-regression.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/ai-regression-testing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/api-testing.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-api-tester.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/automation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-test-automation-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/click-path-audit.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/click-path-audit/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/delivery-gates.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/delivery-gate/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/performance.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-performance-benchmarker.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/benchmark/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/benchmark-methodology/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/results-analysis.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-test-results-analyzer.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/pr-test-analyzer.md
+    license: MIT
+    modification: adapted
 - path: skills/verification-before-completion/SKILL.md
   derived_from:
   - source: obra/superpowers

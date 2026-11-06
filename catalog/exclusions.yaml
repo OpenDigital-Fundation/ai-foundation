@@ -30,6 +30,8 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:command:add-language-rules"
   reason: source-internal
+- key: "affaan-m/ECC:command:aside"
+  reason: source-internal
 - key: "affaan-m/ECC:command:astra-review"
   reason: source-internal
 - key: "affaan-m/ECC:command:auto-update"
@@ -74,6 +76,8 @@ excluded:
   reason: duplicate-of
   into:
   - workflow/feature-delivery
+- key: "affaan-m/ECC:command:plan-canvas"
+  reason: source-internal
 - key: "affaan-m/ECC:command:project-init"
   reason: source-internal
   note: Installs the source's own bundle.
@@ -286,6 +290,11 @@ excluded:
 - key: "affaan-m/ECC:hook:suggest-compact"
   reason: source-internal
   note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
+- key: "affaan-m/ECC:mcp:.mcp"
+  reason: source-internal
+- key: "affaan-m/ECC:mcp:mcp-servers"
+  reason: source-internal
+  note: The source's own MCP server list; MCP recommendations are added per domain with pinned versions.
 - key: "affaan-m/ECC:rule:3d"
   reason: out-of-scope
   note: Remotion video-rendering rules; video tooling is out of scope in v1.
@@ -484,6 +493,8 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:skill:gateguard"
   reason: source-internal
+- key: "affaan-m/ECC:skill:google-workspace-ops"
+  reason: vendor-specific
 - key: "affaan-m/ECC:skill:healthcare-cdss-patterns"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:healthcare-emr-patterns"
@@ -524,6 +535,8 @@ excluded:
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:logistics-exception-management"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:mailtrap-email-integration"
+  reason: vendor-specific
 - key: "affaan-m/ECC:skill:manim-video"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:messages-ops"
@@ -563,6 +576,8 @@ excluded:
   note: Perl is not a supported language pack in v1.
 - key: "affaan-m/ECC:skill:perl-testing"
   reason: out-of-scope
+- key: "affaan-m/ECC:skill:plan-canvas"
+  reason: source-internal
 - key: "affaan-m/ECC:skill:plankton-code-quality"
   reason: source-internal
 - key: "affaan-m/ECC:skill:prediction-market-oracle-research"
@@ -586,6 +601,8 @@ excluded:
 - key: "affaan-m/ECC:skill:scientific-db-pubmed-database"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:scientific-db-uspto-database"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:scientific-pkg-gget"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:skill-host-compat"
   reason: source-internal
@@ -620,10 +637,21 @@ excluded:
 - key: "anthropics/skills:skill:brand-guidelines"
   reason: vendor-specific
   note: Applies Anthropic's own brand; using it for other work would imitate that brand.
+- key: "anthropics/skills:skill:discernment-nudge"
+  reason: out-of-scope
+  note: General chat-assistant behaviour (nudging the user to verify answers), outside the coding-agent principles boundary;
+    revisit with an ADR if the catalog adds a general-assistant domain.
 - key: "anthropics/skills:skill:template-skill"
   reason: duplicate-of
   into:
   - agent-engineering/skill-authoring
+- key: "anthropics/skills:skill:web-artifacts-builder"
+  reason: vendor-specific
+  note: Builds claude.ai artifacts specifically.
+- key: "DietrichGebert/ponytail:command:ponytail-gain"
+  reason: source-internal
+- key: "DietrichGebert/ponytail:command:ponytail-help"
+  reason: source-internal
 - key: "DietrichGebert/ponytail:hook:claude-band"
   reason: source-internal
   note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
@@ -684,6 +712,9 @@ excluded:
 - key: "mattpocock/skills:skill:loop-me"
   reason: low-quality
   note: Marked in-progress upstream.
+- key: "mattpocock/skills:skill:scaffold-exercises"
+  reason: out-of-scope
+  note: Course-authoring tooling specific to the author.
 - key: "mattpocock/skills:skill:setup-matt-pocock-skills"
   reason: split
   into:
@@ -734,11 +765,19 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:China Network Engineer"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Civil Engineer"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Clinical Evidence Agent"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:CMS Developer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Cross-Border E-Commerce Specialist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Cultural Intelligence Strategist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Data Consolidation Agent"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Desktop App Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Douyin Strategist"
   reason: out-of-scope
@@ -749,6 +788,14 @@ excluded:
 - key: "msitarzewski/agency-agents:agent:Drupal Shopping Cart Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Economy Designer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Electrical Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Email Intelligence Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Embedded Firmware Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:ESG & Sustainability Officer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:FedRAMP & RMF Compliance Engineer"
   reason: out-of-scope
@@ -784,6 +831,8 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Godot Shader Developer"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Government Digital Presales Consultant"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Healthcare Customer Service"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Healthcare Innovation Strategist"
@@ -792,13 +841,27 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Hospitality Guest Services"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Identity Graph Operator"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:IoT Fleet Engineer"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Korean Business Navigator"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Kuaishou Strategist"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Language Translator"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Legal Billing & Time Tracking"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Level Designer"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Livestream Commerce Coach"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Loan Officer Assistant"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:LSP/Index Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:M&A Integration Manager"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:macOS Spatial/Metal Engineer"
   reason: out-of-scope
@@ -810,15 +873,25 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Narratologist"
   reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Network Engineer"
+  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Organizational Psychologist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:OrgScript Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Personal Growth Mentor"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Private Domain Operator"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Psychologist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Real Estate Buyer & Seller"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Report Distribution Agent"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Resume Tailor"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Retail Customer Returns"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Roblox Avatar Creator"
   reason: out-of-scope
@@ -859,6 +932,10 @@ excluded:
 - key: "msitarzewski/agency-agents:agent:Technical Consultant"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Terminal Integration Specialist"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Threat Detection Engineer"
+  reason: out-of-scope
+- key: "msitarzewski/agency-agents:agent:Threat Intelligence Analyst"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:TikTok Strategist"
   reason: out-of-scope
@@ -910,6 +987,8 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:ZK Steward"
   reason: out-of-scope
+- key: "nextlevelbuilder/ui-ux-pro-max-skill:mcp:.mcp"
+  reason: source-internal
 - key: "obra/superpowers:hook:hooks"
   reason: source-internal
   note: "Bound to the source's own hook runtime or mode tracking; guardrails are set up via agent-engineering:agent-guardrails."
@@ -921,5 +1000,11 @@ excluded:
 - key: "obra/superpowers:skill:using-superpowers"
   reason: low-quality
   note: Forces skill invocation before any response; conflicts with user and repository instructions taking precedence.
+- key: "SecurityStandards/agent-pentester:command:debug"
+  reason: source-internal
+  note: Commands of the pentester product itself.
 - key: "SecurityStandards/agent-pentester:command:pr"
   reason: out-of-scope
+- key: "SecurityStandards/agent-pentester:command:review"
+  reason: source-internal
+  note: Commands of the pentester product itself.

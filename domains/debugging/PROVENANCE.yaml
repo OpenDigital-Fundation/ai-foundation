@@ -1,5 +1,19 @@
 version: 1
 files:
+- path: skills/build-failure-resolution/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/build-error-resolver.md
+    license: MIT
+    modification: adapted
+- path: skills/build-failure-resolution/references/silent-failures.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/silent-failure-hunter.md
+    license: MIT
+    modification: adapted
 - path: skills/systematic-debugging/SKILL.md
   derived_from:
   - source: obra/superpowers

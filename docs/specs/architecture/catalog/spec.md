@@ -23,3 +23,7 @@
 - `system-design`: personas *Software Architect*, *Backend Architect* (agency), agents `architect`, `code-architect` (ECC).
 - `codebase-onboarding`: ECC `codebase-onboarding`, `code-tour`; agency *Codebase Onboarding Engineer*, *Codebase Archaeologist*; agent `code-explorer` (ECC).
 - `contract-first` e `spec-miner` (ECC): avaliar contra `api-design` e `workflow:brainstorming`.
+
+## Passada final (bundle [`gaps.yaml`](../../../../catalog/decisions/bundles/gaps.yaml))
+
+Adicionados: `system-design` (base agency *Software Architect*; referências: *Backend Architect*, `backend-patterns`, agents `architect`/`code-architect`, *API Platform Engineer*, `latency-critical-systems`, `error-handling`, `content-hash-cache-pattern`, *Realtime Collaboration Engineer*, *Internationalization Engineer*, `i18n-sync`) e `codebase-onboarding` (base ECC `codebase-onboarding`; `code-tour`, *Codebase Onboarding Engineer*, *Codebase Archaeologist*, agents `code-explorer`, `spec-miner`).

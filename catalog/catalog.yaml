@@ -102,8 +102,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:command:cost-report"
   - "affaan-m/ECC:command:token-card"
   - "affaan-m/ECC:skill:context-budget"
+  - "affaan-m/ECC:skill:cost-tracking"
   - "affaan-m/ECC:skill:strategic-compact"
   - "affaan-m/ECC:skill:token-budget-advisor"
   - "affaan-m/ECC:skill:token-card"
@@ -182,9 +184,13 @@ artifacts:
   - "affaan-m/ECC:skill:ml-adoption-playbook"
   - "affaan-m/ECC:skill:mle-workflow"
   - "affaan-m/ECC:skill:recsys-pipeline-architect"
+  - "msitarzewski/agency-agents:agent:AI Data Remediation Engineer"
   - "msitarzewski/agency-agents:agent:AI Engineer"
+  - "msitarzewski/agency-agents:agent:Autonomous Optimization Architect"
+  - "msitarzewski/agency-agents:agent:Knowledge Graph Engineer"
   - "msitarzewski/agency-agents:agent:LLM Post-Training Engineer"
   - "msitarzewski/agency-agents:agent:Model QA Specialist"
+  - "msitarzewski/agency-agents:agent:Voice AI Integration Engineer"
 - id: ai-engineering/prompt-engineering
   type: skill
   capability: "Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured\
@@ -214,13 +220,17 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:skill:api-connector-builder"
   - "affaan-m/ECC:skill:api-design"
+  - "affaan-m/ECC:skill:contract-first"
 - id: architecture/architecture-review
   type: skill
   capability: Scan an existing codebase for deepening opportunities and walk the chosen one with the user.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:skill:brownfield-retrospective"
+  - "affaan-m/ECC:skill:module-governance"
   - "mattpocock/skills:skill:improve-codebase-architecture"
 - id: architecture/codebase-design
   type: skill
@@ -230,6 +240,19 @@ artifacts:
   supersedes:
   - "mattpocock/skills:skill:codebase-design"
   - "affaan-m/ECC:skill:hexagonal-architecture"
+- id: architecture/codebase-onboarding
+  type: skill
+  capability: "Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry\
+    \ points, trace a feature end to end, write a guided code tour, recover the intent b"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:code-explorer"
+  - "affaan-m/ECC:agent:spec-miner"
+  - "affaan-m/ECC:skill:code-tour"
+  - "affaan-m/ECC:skill:codebase-onboarding"
+  - "msitarzewski/agency-agents:agent:Codebase Archaeologist"
+  - "msitarzewski/agency-agents:agent:Codebase Onboarding Engineer"
 - id: architecture/decision-records
   type: skill
   capability: Record, supersede, index and read architecture decision records, one decision per file.
@@ -244,6 +267,25 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "mattpocock/skills:skill:domain-modeling"
+- id: architecture/system-design
+  type: skill
+  capability: "Use when designing a service, system or major feature end to end: components and boundaries, data flow, APIs\
+    \ and contracts, consistency and failure handling, scalability and latency budgets,"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:architect"
+  - "affaan-m/ECC:agent:code-architect"
+  - "affaan-m/ECC:skill:backend-patterns"
+  - "affaan-m/ECC:skill:content-hash-cache-pattern"
+  - "affaan-m/ECC:skill:error-handling"
+  - "affaan-m/ECC:skill:i18n-sync"
+  - "affaan-m/ECC:skill:latency-critical-systems"
+  - "msitarzewski/agency-agents:agent:API Platform Engineer"
+  - "msitarzewski/agency-agents:agent:Backend Architect"
+  - "msitarzewski/agency-agents:agent:Internationalization Engineer"
+  - "msitarzewski/agency-agents:agent:Realtime Collaboration Engineer"
+  - "msitarzewski/agency-agents:agent:Software Architect"
 - id: brand/brand-identity
   type: skill
   capability: "Use when defining or applying a brand: discovery interviews, positioning, visual identity (logo direction,\
@@ -268,12 +310,13 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "obra/superpowers:skill:requesting-code-review"
-  - "mattpocock/skills:skill:code-review"
+  - "DietrichGebert/ponytail:command:ponytail-review"
   - "DietrichGebert/ponytail:skill:ponytail-review"
   - "affaan-m/ECC:command:code-review"
   - "affaan-m/ECC:command:review-pr"
-  - "DietrichGebert/ponytail:command:ponytail-review"
+  - "affaan-m/ECC:rule:common/code-review"
+  - "mattpocock/skills:skill:code-review"
+  - "obra/superpowers:skill:requesting-code-review"
 - id: code-quality/code-reviewer
   type: agent
   capability: Read-only, fresh-context reviewer that reports evidence-backed findings by severity with a verdict.
@@ -288,8 +331,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "DietrichGebert/ponytail:command:ponytail-audit"
   - "DietrichGebert/ponytail:skill:ponytail-audit"
   - "affaan-m/ECC:agent:performance-optimizer"
+  - "affaan-m/ECC:skill:production-audit"
   - "affaan-m/ECC:skill:repo-scan"
 - id: code-quality/debt-ledger
   type: skill
@@ -297,6 +342,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "DietrichGebert/ponytail:command:ponytail-debt"
   - "DietrichGebert/ponytail:skill:ponytail-debt"
 - id: code-quality/receiving-code-review
   type: skill
@@ -305,6 +351,18 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "obra/superpowers:skill:receiving-code-review"
+- id: code-quality/simplification
+  type: skill
+  capability: "Use when existing code should get simpler without changing behaviour: removing dead code and unused exports,\
+    \ collapsing needless abstraction, clarifying names and types, cleaning comments, a"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:code-simplifier"
+  - "affaan-m/ECC:agent:comment-analyzer"
+  - "affaan-m/ECC:agent:refactor-cleaner"
+  - "affaan-m/ECC:agent:type-design-analyzer"
+  - "affaan-m/ECC:command:refactor-clean"
 - id: creative-media/animated-gifs
   type: skill
   capability: "Use when making an animated GIF, especially for Slack or chat: size and frame limits, animation concepts, generation\
@@ -354,6 +412,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:frontend-slides"
+  - "msitarzewski/agency-agents:agent:Visual Storyteller"
   - "nextlevelbuilder/ui-ux-pro-max-skill:skill:slides"
 - id: data/data-pipelines
   type: skill
@@ -388,6 +447,16 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:command:database-migration"
   - "affaan-m/ECC:skill:database-migrations"
+- id: debugging/build-failure-resolution
+  type: skill
+  capability: "Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed\
+    \ silently: read the first real error, fix the smallest cause, rebuild, repeat; the"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:build-error-resolver"
+  - "affaan-m/ECC:agent:silent-failure-hunter"
+  - "affaan-m/ECC:command:build-fix"
 - id: debugging/systematic-debugging
   type: skill
   capability: Build a tight feedback loop on the exact symptom, find the root cause from evidence, then fix with a regression
@@ -405,6 +474,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "anthropics/skills:skill:doc-coauthoring"
+  - "msitarzewski/agency-agents:agent:Book Co-Author"
+  - "msitarzewski/agency-agents:agent:Grant Writer"
 - id: documents/internal-comms
   type: skill
   capability: "Use when writing internal communications: status reports, leadership updates, incident notices, company newsletters,\
@@ -413,6 +484,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "anthropics/skills:skill:internal-comms"
+  - "msitarzewski/agency-agents:agent:Analytics Reporter"
+  - "msitarzewski/agency-agents:agent:Executive Summary Generator"
 - id: documents/office-documents
   type: skill
   capability: "Use when a task reads or produces Word, Excel, PowerPoint or PDF files (.docx, .xlsx, .pptx, .pdf): creating,\
@@ -425,6 +498,8 @@ artifacts:
   - "anthropics/skills:skill:pptx"
   - "anthropics/skills:skill:xlsx"
   - "msitarzewski/agency-agents:agent:Document Generator"
+  - "msitarzewski/agency-agents:agent:PDF Engine Architect"
+  - "msitarzewski/agency-agents:agent:Universal Document Compiler"
 - id: documents/technical-writing
   type: skill
   capability: "Use when writing or updating developer documentation: READMEs, API references, guides, tutorials, runbooks,\
@@ -434,6 +509,9 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:agent:doc-updater"
   - "affaan-m/ECC:command:update-codemaps"
+  - "affaan-m/ECC:command:update-docs"
+  - "affaan-m/ECC:skill:docs-governance"
+  - "affaan-m/ECC:skill:living-docs-governance"
   - "msitarzewski/agency-agents:agent:Technical Writer"
 - id: finance/accounting
   type: skill
@@ -463,6 +541,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "msitarzewski/agency-agents:agent:Chief Financial Officer"
   - "msitarzewski/agency-agents:agent:FP&A Analyst"
   - "msitarzewski/agency-agents:agent:Financial Analyst"
   - "msitarzewski/agency-agents:agent:Investment Researcher"
@@ -662,6 +741,7 @@ artifacts:
   - "affaan-m/ECC:skill:rust-patterns"
   - "affaan-m/ECC:skill:rust-testing"
   - "msitarzewski/agency-agents:agent:Rust Refactoring Specialist"
+  - "msitarzewski/agency-agents:agent:WebAssembly Engineer"
 - id: languages/swift
   type: skill
   capability: Swift patterns, testing, security, review and build knowledge, plus framework references.
@@ -676,6 +756,7 @@ artifacts:
   - "affaan-m/ECC:rule:swift/security"
   - "affaan-m/ECC:rule:swift/testing"
   - "affaan-m/ECC:skill:foundation-models-on-device"
+  - "affaan-m/ECC:skill:ios-icon-gen"
   - "affaan-m/ECC:skill:liquid-glass-design"
   - "affaan-m/ECC:skill:swift-actor-persistence"
   - "affaan-m/ECC:skill:swift-concurrency-6-2"
@@ -700,6 +781,7 @@ artifacts:
   - "affaan-m/ECC:rule:angular/patterns"
   - "affaan-m/ECC:rule:angular/security"
   - "affaan-m/ECC:rule:angular/testing"
+  - "affaan-m/ECC:rule:node"
   - "affaan-m/ECC:rule:nuxt/coding-style"
   - "affaan-m/ECC:rule:nuxt/hooks"
   - "affaan-m/ECC:rule:nuxt/patterns"
@@ -748,6 +830,8 @@ artifacts:
   - "affaan-m/ECC:skill:vite-patterns"
   - "affaan-m/ECC:skill:vue-patterns"
   - "mattpocock/skills:skill:migrate-to-shoehorn"
+  - "mattpocock/skills:skill:setup-ts-deep-modules"
+  - "msitarzewski/agency-agents:agent:Mobile App Builder"
 - id: legal-compliance/compliance-programs
   type: skill
   capability: "Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy\
@@ -775,6 +859,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:command:marketing-campaign"
+  - "affaan-m/ECC:skill:growth-log"
   - "affaan-m/ECC:skill:marketing-campaign"
   - "msitarzewski/agency-agents:agent:Growth Hacker"
   - "msitarzewski/agency-agents:agent:PR & Communications Manager"
@@ -788,11 +874,19 @@ artifacts:
   - "affaan-m/ECC:skill:article-writing"
   - "affaan-m/ECC:skill:content-engine"
   - "affaan-m/ECC:skill:crosspost"
+  - "affaan-m/ECC:skill:social-publisher"
+  - "affaan-m/ECC:skill:x-api"
+  - "msitarzewski/agency-agents:agent:Carousel Growth Engine"
   - "msitarzewski/agency-agents:agent:Content Creator"
   - "msitarzewski/agency-agents:agent:Developer Advocate"
   - "msitarzewski/agency-agents:agent:Developer Community Builder"
+  - "msitarzewski/agency-agents:agent:Instagram Curator"
   - "msitarzewski/agency-agents:agent:LinkedIn Content Creator"
+  - "msitarzewski/agency-agents:agent:Podcast Strategist"
+  - "msitarzewski/agency-agents:agent:Reddit Community Builder"
   - "msitarzewski/agency-agents:agent:Social Media Strategist"
+  - "msitarzewski/agency-agents:agent:Twitter Engager"
+  - "msitarzewski/agency-agents:agent:X/Twitter Intelligence Analyst"
 - id: marketing/email-marketing
   type: skill
   capability: "Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation, deliverability,\
@@ -858,12 +952,21 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:command:jira"
+  - "affaan-m/ECC:skill:jira-integration"
   - "affaan-m/ECC:skill:project-flow-ops"
+  - "msitarzewski/agency-agents:agent:Automation Governance Architect"
+  - "msitarzewski/agency-agents:agent:Chief of Staff"
+  - "msitarzewski/agency-agents:agent:IT Service Manager"
   - "msitarzewski/agency-agents:agent:Jira Workflow Steward"
   - "msitarzewski/agency-agents:agent:Meeting Notes Specialist"
+  - "msitarzewski/agency-agents:agent:Operations Manager"
   - "msitarzewski/agency-agents:agent:Project Shepherd"
   - "msitarzewski/agency-agents:agent:Senior Project Manager"
+  - "msitarzewski/agency-agents:agent:Studio Operations"
   - "msitarzewski/agency-agents:agent:Studio Producer"
+  - "msitarzewski/agency-agents:agent:Workflow Architect"
+  - "msitarzewski/agency-agents:agent:Workflow Optimizer"
 - id: platform/deployment
   type: skill
   capability: "Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD\
@@ -876,7 +979,10 @@ artifacts:
   - "affaan-m/ECC:skill:deployment-patterns"
   - "affaan-m/ECC:skill:docker-patterns"
   - "affaan-m/ECC:skill:kubernetes-patterns"
+  - "mattpocock/skills:skill:wizard"
+  - "msitarzewski/agency-agents:agent:DX Engineer"
   - "msitarzewski/agency-agents:agent:DevOps Automator"
+  - "msitarzewski/agency-agents:agent:Developer Tooling Engineer"
   - "msitarzewski/agency-agents:agent:Mobile Release Engineer"
   - "msitarzewski/agency-agents:agent:Platform Engineer"
 - id: platform/git-workflow
@@ -886,6 +992,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:agent:commit-reviewer"
+  - "affaan-m/ECC:rule:common/git-workflow"
   - "affaan-m/ECC:skill:conventional-commit-review"
   - "affaan-m/ECC:skill:git-workflow"
   - "mattpocock/skills:skill:setup-pre-commit"
@@ -898,6 +1006,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:github-ops"
+  - "affaan-m/ECC:skill:opensource-pipeline"
 - id: platform/incident-response
   type: skill
   capability: "Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess\
@@ -915,6 +1024,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:dashboard-builder"
+  - "msitarzewski/agency-agents:agent:FinOps Engineer"
   - "msitarzewski/agency-agents:agent:Infrastructure Maintainer"
   - "msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)"
 - id: principles/coding-discipline
@@ -923,9 +1033,12 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "DietrichGebert/ponytail:command:ponytail"
   - "DietrichGebert/ponytail:skill:ponytail"
+  - "affaan-m/ECC:skill:coding-standards"
   - "affaan-m/ECC:skill:inherit-legacy-style"
   - "msitarzewski/agency-agents:agent:Minimal Change Engineer"
+  - "msitarzewski/agency-agents:agent:Senior Developer"
   - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
 - id: product/product-management
   type: skill
@@ -934,12 +1047,17 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:skill:competitive-platform-analysis"
+  - "affaan-m/ECC:skill:competitive-report-structure"
+  - "affaan-m/ECC:skill:market-research"
   - "affaan-m/ECC:skill:product-capability"
   - "affaan-m/ECC:skill:product-lens"
+  - "msitarzewski/agency-agents:agent:Business Strategist"
   - "msitarzewski/agency-agents:agent:Experiment Tracker"
   - "msitarzewski/agency-agents:agent:Feedback Synthesizer"
   - "msitarzewski/agency-agents:agent:Product Manager"
   - "msitarzewski/agency-agents:agent:Sprint Prioritizer"
+  - "msitarzewski/agency-agents:agent:Trend Researcher"
 - id: research/docs-lookup
   type: skill
   capability: "Use when the user asks how to use a library, framework, SDK or API, or before writing code against one whose\
@@ -959,6 +1077,8 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:scientific-thinking-literature-review"
   - "affaan-m/ECC:skill:scientific-thinking-scholar-evaluation"
+  - "msitarzewski/agency-agents:agent:Historian"
+  - "msitarzewski/agency-agents:agent:Statistician"
 - id: research/source-research
   type: skill
   capability: "Use when a question needs current or verifiable facts from outside the codebase: research a topic, compare\
@@ -970,6 +1090,7 @@ artifacts:
   - "affaan-m/ECC:skill:research-ops"
   - "mattpocock/skills:skill:research"
   - "msitarzewski/agency-agents:agent:Research Synthesist"
+  - "msitarzewski/agency-agents:agent:Tool Evaluator"
 - id: sales/deal-strategy
   type: skill
   capability: "Use when working an active sales opportunity: discovery calls, qualification, mapping stakeholders, technical\
@@ -1005,7 +1126,9 @@ artifacts:
   - "affaan-m/ECC:agent:mutual-mapper"
   - "affaan-m/ECC:agent:outreach-drafter"
   - "affaan-m/ECC:agent:signal-scorer"
+  - "affaan-m/ECC:skill:connections-optimizer"
   - "affaan-m/ECC:skill:lead-intelligence"
+  - "affaan-m/ECC:skill:social-graph-ranker"
   - "msitarzewski/agency-agents:agent:Offer & Lead Gen Strategist"
   - "msitarzewski/agency-agents:agent:Outbound Strategist"
   - "msitarzewski/agency-agents:agent:Sales Outreach"
@@ -1038,13 +1161,18 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "SecurityStandards/skill-security-audit:skill:security-audit"
-  - "affaan-m/ECC:skill:security-review"
-  - "affaan-m/ECC:skill:security-bounty-hunter"
   - "affaan-m/ECC:agent:security-reviewer"
   - "affaan-m/ECC:rule:common/security"
-  - "msitarzewski/agency-agents:agent:Application Security Engineer"
+  - "affaan-m/ECC:skill:osint-investigation"
+  - "affaan-m/ECC:skill:security-bounty-hunter"
+  - "affaan-m/ECC:skill:security-review"
   - "msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor"
+  - "msitarzewski/agency-agents:agent:Application Security Engineer"
+  - "msitarzewski/agency-agents:agent:Cloud Security Architect"
+  - "msitarzewski/agency-agents:agent:Identity & Access Engineer"
   - "msitarzewski/agency-agents:agent:Penetration Tester"
+  - "msitarzewski/agency-agents:agent:Privacy Engineer"
+  - "msitarzewski/agency-agents:agent:Senior SecOps Engineer"
 - id: security/threat-modeling
   type: skill
   capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
@@ -1062,6 +1190,7 @@ artifacts:
   - "affaan-m/ECC:agent:e2e-runner"
   - "affaan-m/ECC:skill:browser-qa"
   - "affaan-m/ECC:skill:e2e-testing"
+  - "affaan-m/ECC:skill:ui-demo"
   - "affaan-m/ECC:skill:windows-desktop-e2e"
   - "anthropics/skills:skill:webapp-testing"
 - id: testing/test-driven-development
@@ -1070,10 +1199,31 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "obra/superpowers:skill:test-driven-development"
-  - "mattpocock/skills:skill:tdd"
-  - "affaan-m/ECC:skill:tdd-workflow"
   - "affaan-m/ECC:agent:tdd-guide"
+  - "affaan-m/ECC:rule:common/testing"
+  - "affaan-m/ECC:skill:tdd-workflow"
+  - "mattpocock/skills:skill:tdd"
+  - "obra/superpowers:skill:test-driven-development"
+- id: testing/test-strategy
+  type: skill
+  capability: "Use when deciding how a project should be tested rather than writing one test: the test portfolio and coverage\
+    \ targets, linking requirements and risks to tests, API and contract tests, perfo"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:pr-test-analyzer"
+  - "affaan-m/ECC:command:quality-gate"
+  - "affaan-m/ECC:command:test-coverage"
+  - "affaan-m/ECC:skill:ai-regression-testing"
+  - "affaan-m/ECC:skill:benchmark"
+  - "affaan-m/ECC:skill:benchmark-methodology"
+  - "affaan-m/ECC:skill:click-path-audit"
+  - "affaan-m/ECC:skill:delivery-gate"
+  - "affaan-m/ECC:skill:test-collaboration"
+  - "msitarzewski/agency-agents:agent:API Tester"
+  - "msitarzewski/agency-agents:agent:Performance Benchmarker"
+  - "msitarzewski/agency-agents:agent:Test Automation Engineer"
+  - "msitarzewski/agency-agents:agent:Test Results Analyzer"
 - id: testing/verification-before-completion
   type: skill
   capability: Run verification fresh and read the output before claiming work is complete, fixed or passing.
@@ -1084,6 +1234,17 @@ artifacts:
   - "affaan-m/ECC:skill:verification-loop"
   - "msitarzewski/agency-agents:agent:Reality Checker"
   - "msitarzewski/agency-agents:agent:Evidence Collector"
+- id: ui/component-styling
+  type: skill
+  capability: "Use when implementing interface components and styles in code: shadcn/ui and Radix components, Tailwind utility\
+    \ styling, theming and dark mode, responsive layouts, CSS architecture, and appl"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "anthropics/skills:skill:theme-factory"
+  - "msitarzewski/agency-agents:agent:Frontend Developer"
+  - "msitarzewski/agency-agents:agent:UX Architect"
+  - "nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-styling"
 - id: ui/design-system
   type: skill
   capability: Choose or generate a design system (style, palette, type, charts, icons, tokens) from a curated database.
@@ -1091,10 +1252,27 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:design-system"
+  - "msitarzewski/agency-agents:agent:Data Visualization Engineer"
   - "nextlevelbuilder/ui-ux-pro-max-skill:command:design-plan"
   - "nextlevelbuilder/ui-ux-pro-max-skill:skill:design"
   - "nextlevelbuilder/ui-ux-pro-max-skill:skill:design-system"
   - "nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-ux-pro-max"
+- id: ui/motion-and-polish
+  type: skill
+  capability: "Use when an interface works but feels flat or rough: adding purposeful motion and transitions, micro-interactions,\
+    \ easing and timing, reduced-motion support, and the small craft details that"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:rule:web/design-quality"
+  - "affaan-m/ECC:skill:make-interfaces-feel-better"
+  - "affaan-m/ECC:skill:motion-advanced"
+  - "affaan-m/ECC:skill:motion-foundations"
+  - "affaan-m/ECC:skill:motion-patterns"
+  - "affaan-m/ECC:skill:taste"
+  - "affaan-m/ECC:skill:taste-application"
+  - "affaan-m/ECC:skill:taste-distillation"
+  - "msitarzewski/agency-agents:agent:Whimsy Injector"
 - id: ui/visual-design
   type: skill
   capability: Design and build new pages that look designed, with themes, job-first layout and browser-linted quality gates.
@@ -1114,6 +1292,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "msitarzewski/agency-agents:agent:Behavioral Nudge Engine"
   - "msitarzewski/agency-agents:agent:Persona Walkthrough Specialist"
 - id: ux/user-research
   type: skill
@@ -1152,15 +1331,18 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "affaan-m/ECC:skill:orch-add-feature"
-  - "affaan-m/ECC:skill:orch-change-feature"
-  - "affaan-m/ECC:skill:orch-pipeline"
-  - "affaan-m/ECC:command:orch-add-feature"
-  - "affaan-m/ECC:command:orch-change-feature"
+  - "affaan-m/ECC:command:epic-review"
   - "affaan-m/ECC:command:feature-dev"
   - "affaan-m/ECC:command:feature-development"
+  - "affaan-m/ECC:command:orch-add-feature"
+  - "affaan-m/ECC:command:orch-build-mvp"
+  - "affaan-m/ECC:command:orch-change-feature"
   - "affaan-m/ECC:command:orch-review"
-  - "affaan-m/ECC:command:epic-review"
+  - "affaan-m/ECC:rule:common/development-workflow"
+  - "affaan-m/ECC:skill:orch-add-feature"
+  - "affaan-m/ECC:skill:orch-build-mvp"
+  - "affaan-m/ECC:skill:orch-change-feature"
+  - "affaan-m/ECC:skill:orch-pipeline"
 - id: workflow/finishing-a-branch
   type: skill
   capability: "Decide how finished work is integrated: merge, pull request, keep or discard, and clean up."
@@ -1184,9 +1366,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "mattpocock/skills:skill:grilling"
   - "mattpocock/skills:skill:grill-me"
   - "mattpocock/skills:skill:grill-with-docs"
+  - "mattpocock/skills:skill:grilling"
+  - "mattpocock/skills:skill:to-questionnaire"
 - id: workflow/handoff
   type: skill
   capability: Write or resume a handoff document so another session or person continues without re-deriving context.
@@ -1203,6 +1386,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "mattpocock/skills:skill:wayfinder"
+  - "msitarzewski/agency-agents:agent:Master Plan Architect"
 - id: workflow/issue-breakdown
   type: skill
   capability: Break approved work into tracer-bullet tickets with blocking edges and publish them to the tracker.
@@ -1232,7 +1416,9 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "obra/superpowers:skill:writing-plans"
   - "affaan-m/ECC:agent:planner"
   - "affaan-m/ECC:command:plan"
   - "affaan-m/ECC:command:prp-plan"
+  - "affaan-m/ECC:skill:blueprint"
+  - "affaan-m/ECC:skill:change-impact"
+  - "obra/superpowers:skill:writing-plans"

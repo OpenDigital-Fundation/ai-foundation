@@ -23,3 +23,7 @@ Decisões em [`catalog/decisions/engineering-core.yaml`](../../../../catalog/dec
 
 1. Nenhuma skill de `testing` com similaridade ≥ 0,60 com outra do catálogo.
 2. Evals de gatilho distinguem TDD (implementar) de debugging (falha existente) e de verificação (antes de declarar pronto).
+
+## Passada final (bundle [`gaps.yaml`](../../../../catalog/decisions/bundles/gaps.yaml))
+
+Adicionados: `test-strategy` (base ECC `test-collaboration`; `ai-regression-testing`, *Test Automation Engineer*, *API Tester*, *Test Results Analyzer*, `pr-test-analyzer`, *Performance Benchmarker*, `benchmark`, `benchmark-methodology`, `click-path-audit`, `delivery-gate`).

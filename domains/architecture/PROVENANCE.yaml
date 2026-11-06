@@ -56,6 +56,48 @@ files:
     path: skills/hexagonal-architecture/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/codebase-onboarding/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/codebase-onboarding/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/archaeology.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/specialized-codebase-archaeologist.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/code-tour.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/code-tour/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/explorer.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/code-explorer.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/onboarding-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-codebase-onboarding-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/spec-mining.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/spec-miner.md
+    license: MIT
+    modification: adapted
 - path: skills/decision-records/ADR-FORMAT.md
   derived_from:
   - source: mattpocock/skills
@@ -87,5 +129,83 @@ files:
   - source: mattpocock/skills
     commit: 4ae2317
     path: skills/engineering/domain-modeling/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-software-architect.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/api-platforms.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-api-platform-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/architect-agent.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/architect.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/code-architect.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/backend-architecture.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-backend-architect.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/backend-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/caching.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/content-hash-cache-pattern/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/error-handling.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/error-handling/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/internationalisation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-i18n-engineer.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/i18n-sync/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/latency.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/latency-critical-systems/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/realtime-collaboration.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-realtime-collaboration-engineer.md
     license: MIT
     modification: adapted

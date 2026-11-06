@@ -113,6 +113,9 @@ def check_catalog_bijection(root: Path, arts: list[Artifact]) -> list[str]:
         import csv
         known = {f"{r['source']}:{r['kind']}:{r['name']}" for r in csv.DictReader(inv.open())}
         errs += [f"upstream key '{k}' is not in inventory.csv" for k in keys if k not in known]
+        undecided = sorted(known - set(keys))
+        if undecided:
+            errs.append(f"{len(undecided)} inventory item(s) have no decision (supersedes or exclusion), e.g. {undecided[:3]}")
     for e in excluded:
         for target in e.get("into", []):
             if target not in by_id:

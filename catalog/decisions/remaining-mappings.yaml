@@ -1,38 +1,155 @@
 # Upstream items folded into existing artifacts (supersedes added by tools.catalog rebuild), and
-# reviewed exclusions of tools internal to the sources.
+# reviewed exclusions.
 extend:
   ai-engineering/prompt-engineering:
   - affaan-m/ECC:skill:prompt-optimizer
   - affaan-m/ECC:skill:cost-aware-llm-pipeline
   principles/coding-discipline:
+  - DietrichGebert/ponytail:command:ponytail
+  - affaan-m/ECC:skill:coding-standards
   - affaan-m/ECC:skill:inherit-legacy-style
+  - msitarzewski/agency-agents:agent:Senior Developer
   workflow/finishing-a-branch:
   - mattpocock/skills:skill:pr
   - affaan-m/ECC:command:pr
   documents/technical-writing:
   - affaan-m/ECC:command:update-codemaps
+  - affaan-m/ECC:command:update-docs
+  - affaan-m/ECC:skill:docs-governance
+  - affaan-m/ECC:skill:living-docs-governance
   code-quality/codebase-audit:
+  - DietrichGebert/ponytail:command:ponytail-audit
   - affaan-m/ECC:agent:performance-optimizer
+  - affaan-m/ECC:skill:production-audit
   - affaan-m/ECC:skill:repo-scan
   sales/prospecting:
   - affaan-m/ECC:agent:enrichment-agent
   - affaan-m/ECC:agent:marketing-agent
+  - affaan-m/ECC:skill:connections-optimizer
+  - affaan-m/ECC:skill:social-graph-ranker
   languages/typescript:
   - affaan-m/ECC:rule:angular/hooks
+  - affaan-m/ECC:rule:node
   - affaan-m/ECC:rule:nuxt/hooks
+  - affaan-m/ECC:rule:react-native/hooks
   - affaan-m/ECC:rule:react/hooks
   - affaan-m/ECC:rule:vue/hooks
-  - affaan-m/ECC:rule:react-native/hooks
   - mattpocock/skills:skill:migrate-to-shoehorn
+  - mattpocock/skills:skill:setup-ts-deep-modules
+  - msitarzewski/agency-agents:agent:Mobile App Builder
   ui/design-system:
+  - msitarzewski/agency-agents:agent:Data Visualization Engineer
   - nextlevelbuilder/ui-ux-pro-max-skill:skill:design
   agent-engineering/harness-design:
   - affaan-m/ECC:command:harness-audit
   - affaan-m/ECC:command:model-route
   - affaan-m/ECC:rule:common/agents
   agent-engineering/context-management:
+  - affaan-m/ECC:command:cost-report
   - affaan-m/ECC:command:token-card
+  - affaan-m/ECC:skill:cost-tracking
   - affaan-m/ECC:skill:token-card
+  code-quality/debt-ledger:
+  - DietrichGebert/ponytail:command:ponytail-debt
+  platform/git-workflow:
+  - affaan-m/ECC:agent:commit-reviewer
+  - affaan-m/ECC:rule:common/git-workflow
+  code-quality/code-review:
+  - affaan-m/ECC:rule:common/code-review
+  testing/test-driven-development:
+  - affaan-m/ECC:rule:common/testing
+  workflow/feature-delivery:
+  - affaan-m/ECC:command:orch-build-mvp
+  - affaan-m/ECC:rule:common/development-workflow
+  - affaan-m/ECC:skill:orch-build-mvp
+  workflow/writing-plans:
+  - affaan-m/ECC:skill:blueprint
+  - affaan-m/ECC:skill:change-impact
+  workflow/grilling:
+  - mattpocock/skills:skill:to-questionnaire
+  workflow/initiative-mapping:
+  - msitarzewski/agency-agents:agent:Master Plan Architect
+  operations/project-management:
+  - affaan-m/ECC:command:jira
+  - affaan-m/ECC:skill:jira-integration
+  - msitarzewski/agency-agents:agent:Automation Governance Architect
+  - msitarzewski/agency-agents:agent:Chief of Staff
+  - msitarzewski/agency-agents:agent:IT Service Manager
+  - msitarzewski/agency-agents:agent:Operations Manager
+  - msitarzewski/agency-agents:agent:Studio Operations
+  - msitarzewski/agency-agents:agent:Workflow Architect
+  - msitarzewski/agency-agents:agent:Workflow Optimizer
+  marketing/campaign-planning:
+  - affaan-m/ECC:command:marketing-campaign
+  - affaan-m/ECC:skill:growth-log
+  marketing/content-marketing:
+  - affaan-m/ECC:skill:social-publisher
+  - affaan-m/ECC:skill:x-api
+  - msitarzewski/agency-agents:agent:Carousel Growth Engine
+  - msitarzewski/agency-agents:agent:Instagram Curator
+  - msitarzewski/agency-agents:agent:Podcast Strategist
+  - msitarzewski/agency-agents:agent:Reddit Community Builder
+  - msitarzewski/agency-agents:agent:Twitter Engager
+  - msitarzewski/agency-agents:agent:X/Twitter Intelligence Analyst
+  documents/internal-comms:
+  - msitarzewski/agency-agents:agent:Analytics Reporter
+  - msitarzewski/agency-agents:agent:Executive Summary Generator
+  documents/doc-coauthoring:
+  - msitarzewski/agency-agents:agent:Book Co-Author
+  - msitarzewski/agency-agents:agent:Grant Writer
+  documents/office-documents:
+  - msitarzewski/agency-agents:agent:PDF Engine Architect
+  - msitarzewski/agency-agents:agent:Universal Document Compiler
+  architecture/api-design:
+  - affaan-m/ECC:skill:api-connector-builder
+  - affaan-m/ECC:skill:contract-first
+  architecture/architecture-review:
+  - affaan-m/ECC:skill:brownfield-retrospective
+  - affaan-m/ECC:skill:module-governance
+  platform/github-operations:
+  - affaan-m/ECC:skill:opensource-pipeline
+  platform/deployment:
+  - mattpocock/skills:skill:wizard
+  - msitarzewski/agency-agents:agent:DX Engineer
+  - msitarzewski/agency-agents:agent:Developer Tooling Engineer
+  platform/reliability:
+  - msitarzewski/agency-agents:agent:FinOps Engineer
+  security/security-audit:
+  - affaan-m/ECC:skill:osint-investigation
+  - msitarzewski/agency-agents:agent:Cloud Security Architect
+  - msitarzewski/agency-agents:agent:Identity & Access Engineer
+  - msitarzewski/agency-agents:agent:Privacy Engineer
+  - msitarzewski/agency-agents:agent:Senior SecOps Engineer
+  ai-engineering/ml-engineering:
+  - msitarzewski/agency-agents:agent:AI Data Remediation Engineer
+  - msitarzewski/agency-agents:agent:Autonomous Optimization Architect
+  - msitarzewski/agency-agents:agent:Knowledge Graph Engineer
+  - msitarzewski/agency-agents:agent:Voice AI Integration Engineer
+  research/source-research:
+  - msitarzewski/agency-agents:agent:Tool Evaluator
+  research/literature-review:
+  - msitarzewski/agency-agents:agent:Historian
+  - msitarzewski/agency-agents:agent:Statistician
+  product/product-management:
+  - affaan-m/ECC:skill:competitive-platform-analysis
+  - affaan-m/ECC:skill:competitive-report-structure
+  - affaan-m/ECC:skill:market-research
+  - msitarzewski/agency-agents:agent:Business Strategist
+  - msitarzewski/agency-agents:agent:Trend Researcher
+  finance/financial-analysis:
+  - msitarzewski/agency-agents:agent:Chief Financial Officer
+  creative-media/presentation-slides:
+  - msitarzewski/agency-agents:agent:Visual Storyteller
+  ux/usability-review:
+  - msitarzewski/agency-agents:agent:Behavioral Nudge Engine
+  ui/component-styling:
+  - anthropics/skills:skill:theme-factory
+  testing/browser-testing:
+  - affaan-m/ECC:skill:ui-demo
+  languages/rust:
+  - msitarzewski/agency-agents:agent:WebAssembly Engineer
+  languages/swift:
+  - affaan-m/ECC:skill:ios-icon-gen
 exclusions:
 - key: affaan-m/ECC:agent:chief-of-staff
   reason: source-internal
@@ -369,3 +486,87 @@ exclusions:
 - key: mattpocock/skills:skill:software-factory
   reason: low-quality
   note: Marked in-progress upstream.
+- key: DietrichGebert/ponytail:command:ponytail-gain
+  reason: source-internal
+- key: DietrichGebert/ponytail:command:ponytail-help
+  reason: source-internal
+- key: SecurityStandards/agent-pentester:command:debug
+  reason: source-internal
+  note: Commands of the pentester product itself.
+- key: SecurityStandards/agent-pentester:command:review
+  reason: source-internal
+  note: Commands of the pentester product itself.
+- key: affaan-m/ECC:command:aside
+  reason: source-internal
+- key: affaan-m/ECC:command:plan-canvas
+  reason: source-internal
+- key: affaan-m/ECC:skill:plan-canvas
+  reason: source-internal
+- key: affaan-m/ECC:mcp:.mcp
+  reason: source-internal
+- key: affaan-m/ECC:mcp:mcp-servers
+  reason: source-internal
+  note: The source's own MCP server list; MCP recommendations are added per domain with pinned versions.
+- key: nextlevelbuilder/ui-ux-pro-max-skill:mcp:.mcp
+  reason: source-internal
+- key: anthropics/skills:skill:web-artifacts-builder
+  reason: vendor-specific
+  note: Builds claude.ai artifacts specifically.
+- key: affaan-m/ECC:skill:google-workspace-ops
+  reason: vendor-specific
+- key: affaan-m/ECC:skill:mailtrap-email-integration
+  reason: vendor-specific
+- key: affaan-m/ECC:skill:scientific-pkg-gget
+  reason: out-of-scope
+- key: mattpocock/skills:skill:scaffold-exercises
+  reason: out-of-scope
+  note: Course-authoring tooling specific to the author.
+- key: msitarzewski/agency-agents:agent:Civil Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Electrical Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Embedded Firmware Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:IoT Fleet Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Government Digital Presales Consultant
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Cross-Border E-Commerce Specialist
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Livestream Commerce Coach
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Private Domain Operator
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Personal Growth Mentor
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Resume Tailor
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Legal Billing & Time Tracking
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:M&A Integration Manager
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Retail Customer Returns
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Identity Graph Operator
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:ESG & Sustainability Officer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Threat Detection Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Threat Intelligence Analyst
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Email Intelligence Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Network Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:LSP/Index Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:CMS Developer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Desktop App Engineer
+  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:Language Translator
+  reason: out-of-scope
+- key: anthropics/skills:skill:discernment-nudge
+  reason: out-of-scope
+  note: General chat-assistant behaviour (nudging the user to verify answers), outside the coding-agent principles boundary; revisit with an ADR if the catalog adds a general-assistant domain.

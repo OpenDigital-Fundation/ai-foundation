@@ -14,6 +14,7 @@ bundle file:
       references: {<file>.md: [entries...]}
       supersedes: [extra inventory keys]  # in addition to every entry used
       remove: [regex, ...]               # passages to cut from the body (source-internal content)
+      append: |                          # text added at the end of SKILL.md (local notes, safety caveats)
   exclusions: [...]                      # copied to the decision file
 Files under catalog/overrides/<domain>/<skill>/ are copied over the generated skill afterwards.
 Entries use the language_pack syntax: s:/a:/r:/c: for affaan-m/ECC, or "<owner>/<repo>:<path>".
@@ -126,6 +127,8 @@ def build(root: Path, sources: Path, spec: dict) -> None:
         apache = [s for s in [a.get("base_dir", ":").split(":")[0], (a.get("base") or ":").split(":")[0]] if s in lock and lock[s]["license"].startswith("Apache")]
         notice = f"<!-- Modified by OpenDigital from {apache[0]} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n\n" if apache else ""
         text = "\n".join(fm) + notice + (f"# {title}\n\n" if not body.lstrip().startswith("# ") else "") + rw(body).strip() + "\n"
+        if a.get("append"):
+            text += "\n" + a["append"].strip() + "\n"
         if ref_lines:
             text += "\n## References\n\nLoad only what the task needs:\n\n" + "\n".join(ref_lines) + "\n"
         (d / "SKILL.md").write_text(text, encoding="utf-8")

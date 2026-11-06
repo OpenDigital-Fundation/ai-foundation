@@ -19,3 +19,7 @@
 ## Critérios de aceite
 
 1. Um único ponto de entrada para "algo está quebrado"; variantes por linguagem só como referência.
+
+## Passada final (bundle [`gaps.yaml`](../../../../catalog/decisions/bundles/gaps.yaml))
+
+Adicionados: `build-failure-resolution` (base agent `build-error-resolver`; `silent-failure-hunter`; absorve `build-fix`).
