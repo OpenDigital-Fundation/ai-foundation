@@ -8,7 +8,7 @@ artifacts:
       - "affaan-m/ECC:skill:security-review"
       - "affaan-m/ECC:skill:security-bounty-hunter"
       - "affaan-m/ECC:agent:security-reviewer"
-      - "affaan-m/ECC:rule:security"
+      - "affaan-m/ECC:rule:common/security"
       - "msitarzewski/agency-agents:agent:Application Security Engineer"
       - "msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor"
       - "msitarzewski/agency-agents:agent:Penetration Tester"

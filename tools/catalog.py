@@ -1,6 +1,7 @@
 """Small helpers to edit catalog/catalog.yaml, catalog/exclusions.yaml and PROVENANCE.yaml.
 
 python -m tools.catalog apply <decisions.yaml>
+python -m tools.catalog rebuild     regenerate catalog.yaml and exclusions.yaml from catalog/decisions/*.yaml
 
 decisions.yaml:
   artifacts: [{id, type, capability, status?, supersedes: [...]}]
@@ -60,7 +61,21 @@ def apply(root: Path, decisions: dict) -> None:
         _dump(pp, prov)
 
 
+def rebuild(root: Path) -> None:
+    """Decision files are the source of truth; catalog.yaml and exclusions.yaml are derived."""
+    (root / "catalog/catalog.yaml").write_text("version: 1\nartifacts: []\n")
+    (root / "catalog/exclusions.yaml").write_text("version: 1\nexcluded: []\n")
+    for f in sorted((root / "catalog/decisions").glob("*.yaml")):
+        data = yaml.safe_load(f.read_text())
+        if isinstance(data, dict) and ("artifacts" in data or "exclusions" in data):
+            apply(root, {k: data[k] for k in ("artifacts", "exclusions") if k in data})
+
+
 if __name__ == "__main__":
-    if len(sys.argv) != 3 or sys.argv[1] != "apply":
+    root = Path(".").resolve()
+    if sys.argv[1:] == ["rebuild"]:
+        rebuild(root)
+    elif len(sys.argv) == 3 and sys.argv[1] == "apply":
+        apply(root, yaml.safe_load(Path(sys.argv[2]).read_text()))
+    else:
         sys.exit(__doc__)
-    apply(Path(".").resolve(), yaml.safe_load(Path(sys.argv[2]).read_text()))

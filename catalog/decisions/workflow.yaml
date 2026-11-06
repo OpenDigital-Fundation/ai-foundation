@@ -70,6 +70,8 @@ artifacts:
   capability: Move issues and external pull requests through triage roles and write agent-ready briefs.
   supersedes:
   - mattpocock/skills:skill:triage
+  - affaan-m/ECC:command:issue-review
+  - affaan-m/ECC:skill:issue-review
 - id: workflow/feature-delivery
   type: workflow
   capability: Orchestrate the stages from idea to merge-ready branch with an approval gate between each stage.
@@ -81,6 +83,8 @@ artifacts:
   - affaan-m/ECC:command:orch-change-feature
   - affaan-m/ECC:command:feature-dev
   - affaan-m/ECC:command:feature-development
+  - affaan-m/ECC:command:orch-review
+  - affaan-m/ECC:command:epic-review
 - id: agent-engineering/session-retrospective
   type: skill
   capability: Review a coding-agent session and propose ranked improvements to the agent's environment.

@@ -1,0 +1,143 @@
+# Language packs: one skill per language assembled from upstream files.
+# Build with: python -m tools.curation.language_pack <sources-dir> catalog/decisions/language-packs.yaml
+# Entries are ECC unless prefixed with "<owner>/<repo>:". "s:" skill name, "a:" agent name, "r:" rules/<path>.
+packs:
+  typescript:
+    also_supersedes: ["affaan-m/ECC:command:vue-review"]
+    title: TypeScript and JavaScript
+    description: "Use when writing, testing, reviewing or building TypeScript or JavaScript - Node, Bun, browser code, or the React, React Native, Next.js, Vue, Nuxt, Angular, NestJS and Vite ecosystems. Loads idiomatic patterns, Vitest/Jest and Testing Library usage, XSS and supply-chain pitfalls, a review checklist and fixes for tsc, bundler and build errors."
+    topics:
+      standards: ["r:typescript/coding-style.md", "r:typescript/patterns.md", "s:typescript-patterns", "s:frontend-patterns", "r:web/coding-style.md", "r:web/patterns.md", "r:web/performance.md"]
+      testing: ["r:typescript/testing.md", "r:web/testing.md"]
+      security: ["r:typescript/security.md", "r:web/security.md"]
+      review: ["a:typescript-reviewer"]
+      tooling: ["r:typescript/hooks.md", "r:web/hooks.md"]
+    frameworks:
+      react: ["r:react/coding-style.md", "r:react/patterns.md", "s:react-patterns", "s:react-performance", "r:react/testing.md", "s:react-testing", "r:react/security.md", "a:react-reviewer", "a:react-build-resolver"]
+      react-native: ["r:react-native/coding-style.md", "r:react-native/patterns.md", "s:react-native-patterns", "r:react-native/performance.md", "r:react-native/testing.md", "r:react-native/security.md", "r:react-native/production-readiness.md"]
+      nextjs: ["s:nextjs-turbopack"]
+      vue: ["r:vue/coding-style.md", "r:vue/patterns.md", "s:vue-patterns", "r:vue/testing.md", "r:vue/security.md", "a:vue-reviewer", "s:ui-to-vue"]
+      nuxt: ["r:nuxt/coding-style.md", "r:nuxt/patterns.md", "s:nuxt4-patterns", "r:nuxt/testing.md", "r:nuxt/security.md"]
+      angular: ["r:angular/coding-style.md", "r:angular/patterns.md", "s:angular-developer", "r:angular/testing.md", "r:angular/security.md"]
+      nestjs: ["s:nestjs-patterns"]
+      vite: ["s:vite-patterns"]
+      bun: ["s:bun-runtime"]
+  python:
+    also_supersedes: ["affaan-m/ECC:command:fastapi-review"]
+    title: Python
+    description: "Use when writing, testing, reviewing or building Python - scripts, packages, Django, Django REST Framework, Celery, FastAPI or PyTorch code. Loads idiomatic patterns and typing, pytest fixtures and mocking, Django and FastAPI security, a review checklist, packaging and verification loops (ruff, mypy, pip-audit, bandit)."
+    topics:
+      standards: ["r:python/coding-style.md", "r:python/patterns.md", "s:python-patterns"]
+      testing: ["r:python/testing.md", "s:python-testing"]
+      security: ["r:python/security.md"]
+      review: ["a:python-reviewer"]
+      tooling: ["r:python/hooks.md", "s:generating-python-installer"]
+    frameworks:
+      django: ["s:django-patterns", "s:django-tdd", "s:django-security", "s:django-verification", "s:django-celery", "a:django-reviewer", "a:django-build-resolver"]
+      fastapi: ["r:python/fastapi.md", "s:fastapi-patterns", "a:fastapi-reviewer"]
+      pytorch: ["s:pytorch-patterns", "a:pytorch-build-resolver"]
+  go:
+    title: Go
+    description: "Use when writing, testing, reviewing or building Go code. Loads idiomatic Go (errors, interfaces, context, concurrency with goroutines and channels), table-driven tests, subtests, fuzzing and benchmarks, Go security pitfalls, a review checklist and fixes for go build, go vet and module errors."
+    topics:
+      standards: ["r:golang/coding-style.md", "r:golang/patterns.md", "s:golang-patterns"]
+      testing: ["r:golang/testing.md", "s:golang-testing"]
+      security: ["r:golang/security.md"]
+      review: ["a:go-reviewer"]
+      build: ["a:go-build-resolver"]
+      tooling: ["r:golang/hooks.md"]
+  rust:
+    title: Rust
+    description: "Use when writing, testing, reviewing, refactoring or building Rust code. Loads ownership and borrowing patterns, error handling with Result and thiserror/anyhow, async with Tokio, unit, integration, property and async tests, unsafe and dependency review, and fixes for borrow-checker and cargo build errors."
+    topics:
+      standards: ["r:rust/coding-style.md", "r:rust/patterns.md", "s:rust-patterns", "msitarzewski/agency-agents:engineering/engineering-rust-refactoring-specialist.md"]
+      testing: ["r:rust/testing.md", "s:rust-testing"]
+      security: ["r:rust/security.md"]
+      review: ["a:rust-reviewer"]
+      build: ["a:rust-build-resolver"]
+      tooling: ["r:rust/hooks.md"]
+  jvm:
+    also_supersedes: ["affaan-m/ECC:command:gradle-build"]
+    title: Java and Kotlin
+    description: "Use when writing, testing, reviewing or building Java or Kotlin on the JVM or Android - Spring Boot, Quarkus, JPA/Hibernate, MyBatis, Exposed, Ktor, coroutines and Flow, Jetpack and Compose Multiplatform. Loads coding standards, JUnit 5, Mockito, MockK, Kotest and Testcontainers usage, Spring Security patterns, a review checklist and Maven/Gradle build fixes."
+    topics:
+      standards: ["r:java/coding-style.md", "r:java/patterns.md", "s:java-coding-standards", "r:kotlin/coding-style.md", "r:kotlin/patterns.md", "s:kotlin-patterns", "s:kotlin-coroutines-flows"]
+      testing: ["r:java/testing.md", "r:kotlin/testing.md", "s:kotlin-testing"]
+      security: ["r:java/security.md", "r:kotlin/security.md"]
+      review: ["a:java-reviewer", "a:kotlin-reviewer"]
+      build: ["a:java-build-resolver", "a:kotlin-build-resolver"]
+      tooling: ["r:java/hooks.md", "r:kotlin/hooks.md"]
+    frameworks:
+      spring-boot: ["s:springboot-patterns", "s:springboot-tdd", "s:springboot-security", "s:springboot-verification"]
+      quarkus: ["s:quarkus-patterns", "s:quarkus-tdd", "s:quarkus-security", "s:quarkus-verification"]
+      jpa: ["s:jpa-patterns"]
+      mybatis: ["s:mybatis-patterns"]
+      exposed: ["s:kotlin-exposed-patterns"]
+      ktor: ["s:kotlin-ktor-patterns"]
+      android: ["s:android-clean-architecture"]
+      compose-multiplatform: ["s:compose-multiplatform-patterns"]
+  swift:
+    title: Swift
+    description: "Use when writing, testing, reviewing or building Swift for iOS, macOS or visionOS - SwiftUI, Swift 6 strict concurrency and actors, persistence, protocol-based dependency injection, on-device Foundation Models and the Liquid Glass design language. Loads Swift Testing and XCTest usage, a review checklist and Xcode/SwiftPM build fixes."
+    topics:
+      standards: ["r:swift/coding-style.md", "r:swift/patterns.md", "s:swift-concurrency-6-2", "s:swift-actor-persistence"]
+      testing: ["r:swift/testing.md", "s:swift-protocol-di-testing"]
+      security: ["r:swift/security.md"]
+      review: ["a:swift-reviewer"]
+      build: ["a:swift-build-resolver"]
+      tooling: ["r:swift/hooks.md"]
+    frameworks:
+      swiftui: ["s:swiftui-patterns"]
+      liquid-glass: ["s:liquid-glass-design"]
+      foundation-models: ["s:foundation-models-on-device"]
+  dart:
+    title: Dart and Flutter
+    description: "Use when writing, testing, reviewing or building Dart or Flutter apps. Loads widget composition and state management (BLoC, Riverpod, Provider), Dart idioms and null safety, widget, golden and integration tests, a Flutter review checklist and fixes for flutter build and analyzer errors."
+    topics:
+      standards: ["r:dart/coding-style.md", "r:dart/patterns.md", "s:dart-flutter-patterns"]
+      testing: ["r:dart/testing.md"]
+      security: ["r:dart/security.md"]
+      review: ["s:flutter-dart-code-review", "a:flutter-reviewer"]
+      build: ["a:dart-build-resolver"]
+      tooling: ["r:dart/hooks.md"]
+  dotnet:
+    title: C# and F# on .NET
+    description: "Use when writing, testing, reviewing or building C# or F# on .NET - ASP.NET Core, Entity Framework, dependency injection, async/await. Loads .NET patterns, xUnit, FluentAssertions, FsUnit and FsCheck usage, .NET security pitfalls and a review checklist for both languages."
+    topics:
+      standards: ["r:csharp/coding-style.md", "r:csharp/patterns.md", "s:dotnet-patterns", "r:fsharp/coding-style.md", "r:fsharp/patterns.md"]
+      testing: ["r:csharp/testing.md", "s:csharp-testing", "r:fsharp/testing.md", "s:fsharp-testing"]
+      security: ["r:csharp/security.md", "r:fsharp/security.md"]
+      review: ["a:csharp-reviewer", "a:fsharp-reviewer"]
+      tooling: ["r:csharp/hooks.md", "r:fsharp/hooks.md"]
+  cpp:
+    title: C++
+    description: "Use when writing, testing, reviewing or building C++ code. Loads modern C++ standards (RAII, ownership with smart pointers, const-correctness, the Core Guidelines), GoogleTest and CTest usage with sanitizers and coverage, memory-safety pitfalls, a review checklist and fixes for CMake, compiler and linker errors."
+    topics:
+      standards: ["r:cpp/coding-style.md", "r:cpp/patterns.md", "s:cpp-coding-standards"]
+      testing: ["r:cpp/testing.md", "s:cpp-testing"]
+      security: ["r:cpp/security.md"]
+      review: ["a:cpp-reviewer"]
+      build: ["a:cpp-build-resolver"]
+      tooling: ["r:cpp/hooks.md"]
+  php:
+    title: PHP
+    description: "Use when writing, testing, reviewing or building PHP, including Laravel applications. Loads PSR standards and modern PHP patterns, Eloquent and service-container usage, PHPUnit and Pest tests with factories, Laravel security (CSRF, mass assignment, authorization) and a verification loop with static analysis."
+    topics:
+      standards: ["r:php/coding-style.md", "r:php/patterns.md"]
+      testing: ["r:php/testing.md"]
+      security: ["r:php/security.md"]
+      review: ["a:php-reviewer"]
+      tooling: ["r:php/hooks.md"]
+    frameworks:
+      laravel: ["s:laravel-patterns", "s:laravel-tdd", "s:laravel-security", "s:laravel-verification", "s:laravel-plugin-discovery"]
+  ruby:
+    title: Ruby
+    description: "Use when writing, testing, reviewing or building Ruby, including Ruby on Rails applications. Loads Ruby style and idioms, Rails conventions (ActiveRecord, service objects, background jobs), RSpec and Minitest usage, Rails security pitfalls and a review checklist."
+    topics:
+      standards: ["r:ruby/coding-style.md", "r:ruby/patterns.md"]
+      testing: ["r:ruby/testing.md"]
+      security: ["r:ruby/security.md"]
+      review: ["a:ruby-reviewer"]
+      tooling: ["r:ruby/hooks.md"]
+    frameworks:
+      rails: ["s:rails-patterns"]

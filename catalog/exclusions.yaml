@@ -1,5 +1,9 @@
 version: 1
 excluded:
+- key: "affaan-m/ECC:agent:harmonyos-app-resolver"
+  reason: out-of-scope
+- key: "affaan-m/ECC:command:astra-review"
+  reason: source-internal
 - key: "affaan-m/ECC:command:checkpoint"
   reason: duplicate-of
   into:
@@ -18,6 +22,8 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:command:epic-validate"
   reason: source-internal
+- key: "affaan-m/ECC:command:gan-build"
+  reason: source-internal
 - key: "affaan-m/ECC:command:orch-fix-defect"
   reason: duplicate-of
   into:
@@ -35,15 +41,45 @@ excluded:
   - workflow/finishing-a-branch
 - key: "affaan-m/ECC:command:skill-host-compat"
   reason: source-internal
-- key: "affaan-m/ECC:rule:coding-style"
+- key: "affaan-m/ECC:rule:arkts/coding-style"
+  reason: out-of-scope
+  note: ArkTS/HarmonyOS is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:arkts/hooks"
+  reason: out-of-scope
+  note: ArkTS/HarmonyOS is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:arkts/patterns"
+  reason: out-of-scope
+  note: ArkTS/HarmonyOS is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:arkts/security"
+  reason: out-of-scope
+  note: ArkTS/HarmonyOS is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:arkts/testing"
+  reason: out-of-scope
+  note: ArkTS/HarmonyOS is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:common/coding-style"
   reason: low-quality
   note: Absolute rules (always immutable, many small files) contradict following the existing style.
-- key: "affaan-m/ECC:rule:patterns"
+- key: "affaan-m/ECC:rule:common/patterns"
   reason: low-quality
   note: Generic pattern catalogue without decision criteria; conflicts with reuse-what-exists.
-- key: "affaan-m/ECC:rule:performance"
+- key: "affaan-m/ECC:rule:common/performance"
   reason: low-quality
   note: Dated model-selection advice.
+- key: "affaan-m/ECC:rule:perl/coding-style"
+  reason: out-of-scope
+  note: Perl is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:perl/hooks"
+  reason: out-of-scope
+  note: Perl is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:perl/patterns"
+  reason: out-of-scope
+  note: Perl is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:perl/security"
+  reason: out-of-scope
+  note: Perl is not a supported language pack in v1.
+- key: "affaan-m/ECC:rule:perl/testing"
+  reason: out-of-scope
+  note: Perl is not a supported language pack in v1.
 - key: "affaan-m/ECC:rule:README"
   reason: source-internal
 - key: "affaan-m/ECC:skill:defi-amm-security"
@@ -58,9 +94,13 @@ excluded:
   reason: duplicate-of
   into:
   - workflow/feature-delivery
+- key: "affaan-m/ECC:skill:perl-patterns"
+  reason: out-of-scope
 - key: "affaan-m/ECC:skill:perl-security"
   reason: out-of-scope
   note: Perl is not a supported language pack in v1.
+- key: "affaan-m/ECC:skill:perl-testing"
+  reason: out-of-scope
 - key: "affaan-m/ECC:skill:skill-host-compat"
   reason: source-internal
   note: Lints the source's own skills; this repository's validator and adapters cover host compatibility.

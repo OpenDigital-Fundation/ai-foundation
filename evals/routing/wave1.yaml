@@ -46,3 +46,7 @@
 - {prompt: "our agent reads emails and can run shell commands; how do we stop prompt injection?", expect: "security:agent-security"}
 - {prompt: "my skill never triggers when people ask for release notes; optimise its description", expect: "agent-engineering:skill-authoring"}
 - {prompt: "benchmark this skill against running without it on five test prompts", expect: "agent-engineering:skill-authoring"}
+- {prompt: "what's the idiomatic way to handle errors in this Go service?", expect: "languages:go"}
+- {prompt: "set up pytest fixtures for our Django models", expect: "languages:python"}
+- {prompt: "this cargo build fails with a borrow checker error in parser.rs", expect: "debugging:systematic-debugging"}
+- {prompt: "como organizo os componentes e hooks nesse app React?", expect: "languages:typescript"}

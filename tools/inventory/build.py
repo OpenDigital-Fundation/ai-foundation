@@ -77,6 +77,9 @@ def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> Non
                 kind = kind_of(s["id"], rel, f)
                 fm = frontmatter(p) if f.endswith(".md") and kind else None
                 name = (fm or {}).get("name") or (p.parent.name if f == "SKILL.md" else p.stem)
+                if kind == "rule":  # rules have no frontmatter and repeat file names across languages
+                    m = re.search(r"(?:^|/)rules/(.+)\.md$", rel)
+                    name = m.group(1) if m else p.stem
                 lic = licence_of(s, rel, name if f == "SKILL.md" else "")
                 if (restricted_source or lic.startswith("Proprietary")) and p.stat().st_size > 64 and p.suffix in {".md", ".py", ".js", ".ts", ".json", ".yaml", ".yml", ".txt", ".sh"}:
                     hashes.append(f"{hashlib.sha256(p.read_bytes()).hexdigest()} {s['id']}:{rel}")

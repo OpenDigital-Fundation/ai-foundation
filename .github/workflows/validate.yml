@@ -25,4 +25,5 @@ jobs:
       - name: Generated files are up to date
         run: |
           uv run python -m tools.build
-          git diff --exit-code -- .claude-plugin/marketplace.json
+          uv run python -m tools.catalog rebuild
+          git diff --exit-code -- .claude-plugin/marketplace.json catalog/catalog.yaml catalog/exclusions.yaml

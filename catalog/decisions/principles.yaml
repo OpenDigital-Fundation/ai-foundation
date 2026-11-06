@@ -8,9 +8,9 @@ artifacts:
       - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
       - "msitarzewski/agency-agents:agent:Minimal Change Engineer"
 exclusions:
-  - {key: "affaan-m/ECC:rule:coding-style", reason: low-quality, note: "Absolute rules (always immutable, many small files) contradict following the existing style."}
-  - {key: "affaan-m/ECC:rule:patterns", reason: low-quality, note: "Generic pattern catalogue without decision criteria; conflicts with reuse-what-exists."}
-  - {key: "affaan-m/ECC:rule:performance", reason: low-quality, note: "Dated model-selection advice."}
+  - {key: "affaan-m/ECC:rule:common/coding-style", reason: low-quality, note: "Absolute rules (always immutable, many small files) contradict following the existing style."}
+  - {key: "affaan-m/ECC:rule:common/patterns", reason: low-quality, note: "Generic pattern catalogue without decision criteria; conflicts with reuse-what-exists."}
+  - {key: "affaan-m/ECC:rule:common/performance", reason: low-quality, note: "Dated model-selection advice."}
   - {key: "affaan-m/ECC:rule:README", reason: source-internal}
   - {key: "DietrichGebert/ponytail:skill:ponytail-help", reason: source-internal}
   - {key: "DietrichGebert/ponytail:skill:ponytail-gain", reason: source-internal, note: "Displays the source's own benchmark results."}

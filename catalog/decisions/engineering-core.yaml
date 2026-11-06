@@ -1,5 +1,4 @@
 # Curation decisions for testing, debugging and code-quality (wave 1).
-# Language- and framework-specific variants are decided in docs/specs/languages/catalog.
 artifacts:
 - id: testing/test-driven-development
   type: skill
@@ -32,6 +31,7 @@ artifacts:
   - DietrichGebert/ponytail:skill:ponytail-review
   - affaan-m/ECC:command:code-review
   - affaan-m/ECC:command:review-pr
+  - DietrichGebert/ponytail:command:ponytail-review
 - id: code-quality/code-reviewer
   type: agent
   capability: Read-only, fresh-context reviewer that reports evidence-backed findings by severity with a verdict.

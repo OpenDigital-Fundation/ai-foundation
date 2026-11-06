@@ -66,4 +66,5 @@ Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística
 | `principles`, `workflow`, `testing`, `debugging`, `code-quality` | primeira versão implementada (`experimental`); faltam evals |
 | `agent-engineering` | parcial: `parallel-agents`, `writing-skills`, `session-retrospective` portados; fusão com `skill-creator` pendente |
 | `architecture`, `security` | primeira versão implementada (`experimental`); faltam evals |
-| Ondas 2–3 | não iniciadas |
+| `languages` | 11 pacotes gerados (`experimental`); faltam revisão de conteúdo e evals |
+| Demais domínios das Ondas 2–3 | não iniciados |

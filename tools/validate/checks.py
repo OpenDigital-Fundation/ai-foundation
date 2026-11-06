@@ -221,7 +221,7 @@ HYGIENE = [
     (re.compile(r"/Users/[A-Za-z0-9._-]+/|/home/[a-z0-9._-]+/|C:\\\\Users\\\\"), "absolute machine path"),
     (re.compile(r"(?i)\b(AKIA[0-9A-Z]{16}|ghp_[A-Za-z0-9]{36}|sk-[A-Za-z0-9]{32,}|xox[baprs]-[A-Za-z0-9-]{10,})"), "possible secret"),
     (re.compile(r"(?i)-----BEGIN [A-Z ]*PRIVATE KEY-----"), "private key"),
-    (re.compile(r"(?i)\b(posthog|segment\.io|mixpanel|amplitude\.com|google-analytics)\b"), "telemetry endpoint"),
+    (re.compile(r"(?i)\b(app\.posthog\.com|[a-z]{2}\.i\.posthog\.com|api\.segment\.io|api(-js)?\.mixpanel\.com|api2?\.amplitude\.com|www\.google-analytics\.com|googletagmanager\.com/gtag)\b"), "telemetry endpoint"),
     (re.compile(r"(?i)you (must|MUST) (use|invoke) this skill before any|before ANY response"), "self-promoting activation instruction"),
     (re.compile(r"(?i)\b(auto[- ]?update|self[- ]update)\b.*\b(curl|wget|npm i|npx)\b"), "auto-update instruction"),
 ]
