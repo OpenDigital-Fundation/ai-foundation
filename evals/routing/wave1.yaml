@@ -38,3 +38,9 @@
 - {prompt: "this module's interface is as big as its implementation; where should the seam go?", expect: "architecture:codebase-design"}
 - {prompt: "look at our codebase and suggest architecture improvements", expect: "architecture:architecture-review"}
 - {prompt: "design the REST endpoints for invoices, including pagination and errors", expect: "architecture:api-design"}
+- {prompt: "do a full security audit of this repository and write the report", expect: "security:security-audit"}
+- {prompt: "is this endpoint vulnerable to IDOR?", expect: "security:security-audit"}
+- {prompt: "we're designing a payments service, build a threat model first", expect: "security:threat-modeling"}
+- {prompt: "I accidentally committed our Stripe secret key last week", expect: "security:secrets-hygiene"}
+- {prompt: "review this .mcp.json before I merge it", expect: "security:agent-security"}
+- {prompt: "our agent reads emails and can run shell commands; how do we stop prompt injection?", expect: "security:agent-security"}

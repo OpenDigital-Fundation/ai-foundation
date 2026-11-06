@@ -65,4 +65,5 @@ Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística
 | `foundation/distribution` | marketplace e profiles implementados; faltam adaptadores multi-harness e release (T3–T8) |
 | `principles`, `workflow`, `testing`, `debugging`, `code-quality` | primeira versão implementada (`experimental`); faltam evals |
 | `agent-engineering` | parcial: `parallel-agents`, `writing-skills`, `session-retrospective` portados; fusão com `skill-creator` pendente |
-| `architecture`, `security` e Ondas 2–3 | não iniciadas |
+| `architecture`, `security` | primeira versão implementada (`experimental`); faltam evals |
+| Ondas 2–3 | não iniciadas |

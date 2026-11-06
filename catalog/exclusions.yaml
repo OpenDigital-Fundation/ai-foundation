@@ -44,6 +44,10 @@ excluded:
   note: Dated model-selection advice.
 - key: "affaan-m/ECC:rule:README"
   reason: source-internal
+- key: "affaan-m/ECC:skill:defi-amm-security"
+  reason: out-of-scope
+- key: "affaan-m/ECC:skill:llm-trading-agent-security"
+  reason: out-of-scope
 - key: "affaan-m/ECC:skill:orch-fix-defect"
   reason: duplicate-of
   into:
@@ -52,6 +56,9 @@ excluded:
   reason: duplicate-of
   into:
   - workflow/feature-delivery
+- key: "affaan-m/ECC:skill:perl-security"
+  reason: out-of-scope
+  note: Perl is not a supported language pack in v1.
 - key: "DietrichGebert/ponytail:skill:ponytail-gain"
   reason: source-internal
   note: Displays the source's own benchmark results.
@@ -74,3 +81,5 @@ excluded:
 - key: "mattpocock/skills:skill:wait-what"
   reason: low-quality
   note: Seven-line prompt with no procedure.
+- key: "msitarzewski/agency-agents:agent:Blockchain Security Auditor"
+  reason: out-of-scope

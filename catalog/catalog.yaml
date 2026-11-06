@@ -115,6 +115,49 @@ artifacts:
   - "DietrichGebert/ponytail:skill:ponytail"
   - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
   - "msitarzewski/agency-agents:agent:Minimal Change Engineer"
+- id: security/agent-security
+  type: skill
+  capability: Harden agents and harnesses against injection and over-permission; statically review MCP and hook configs.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:agent-security-hardening"
+  - "affaan-m/ECC:skill:mcp-dependency-review"
+  - "affaan-m/ECC:skill:security-scan"
+  - "affaan-m/ECC:command:security-scan"
+- id: security/external-references
+  type: knowledge
+  capability: Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP).
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: security/secrets-hygiene
+  type: skill
+  capability: Respond to exposed secrets rotation-first and set up scanning, brokering and rotation.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer"
+- id: security/security-audit
+  type: skill
+  capability: Source-first security guidance or full audit with sandboxed validation and schema-checked findings.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "SecurityStandards/skill-security-audit:skill:security-audit"
+  - "affaan-m/ECC:skill:security-review"
+  - "affaan-m/ECC:skill:security-bounty-hunter"
+  - "affaan-m/ECC:agent:security-reviewer"
+  - "affaan-m/ECC:rule:security"
+  - "msitarzewski/agency-agents:agent:Application Security Engineer"
+  - "msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor"
+  - "msitarzewski/agency-agents:agent:Penetration Tester"
+- id: security/threat-modeling
+  type: skill
+  capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Security Architect"
 - id: testing/test-driven-development
   type: skill
   capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.

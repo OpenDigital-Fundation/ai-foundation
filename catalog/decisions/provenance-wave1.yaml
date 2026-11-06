@@ -49,3 +49,9 @@
 - {dest: domains/architecture/skills/architecture-review, source: mattpocock/skills, src: skills/engineering/improve-codebase-architecture}
 - {dest: domains/architecture/skills/api-design, source: affaan-m/ECC, src: skills/api-design,
    files: {references/implementation-patterns.md: skills/api-design/SKILL.md}}
+- {dest: domains/security/skills/security-audit, source: SecurityStandards/skill-security-audit, src: skills/security-audit}
+- {dest: domains/security/skills/agent-security/SKILL.md, source: affaan-m/ECC, src: skills/agent-security-hardening/SKILL.md}
+- {dest: domains/security/skills/agent-security/references/mcp-config-review.md, source: affaan-m/ECC, src: skills/mcp-dependency-review/SKILL.md}
+- {dest: domains/security/skills/threat-modeling/SKILL.md, source: msitarzewski/agency-agents, src: security/security-architect.md}
+- {dest: domains/security/skills/threat-modeling/templates/threat-model.md, source: msitarzewski/agency-agents, src: security/security-architect.md}
+- {dest: domains/security/skills/secrets-hygiene/SKILL.md, source: msitarzewski/agency-agents, src: security/security-secrets-credential-engineer.md}

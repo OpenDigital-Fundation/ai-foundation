@@ -1,2 +1,177 @@
 version: 1
-files: []
+files:
+- path: skills/agent-security/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/agent-security-hardening/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-security/references/mcp-config-review.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/mcp-dependency-review/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/secrets-hygiene/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-secrets-credential-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/security-audit/AI-AND-LLM.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/AI-AND-LLM.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/ATTACK-CLASSES.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/ATTACK-CLASSES.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/CLIENT-SIDE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/CLIENT-SIDE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/CLOUD-AND-DEPLOYMENT.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/CLOUD-AND-DEPLOYMENT.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/DESKTOP-MOBILE-AND-LOCAL-IPC.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/DESKTOP-MOBILE-AND-LOCAL-IPC.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/HUNTING.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/HUNTING.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/MEMORY-SAFETY-AND-BINARY.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/MEMORY-SAFETY-AND-BINARY.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/PROTOCOLS-RPC-AND-MESSAGING.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/PROTOCOLS-RPC-AND-MESSAGING.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/RECONNAISSANCE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/RECONNAISSANCE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/RESOURCE-EXHAUSTION-AND-AVAILABILITY.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/RESOURCE-EXHAUSTION-AND-AVAILABILITY.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/SKILL.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/security-audit/SUPPLY-CHAIN-AND-RELEASE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/SUPPLY-CHAIN-AND-RELEASE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/VALIDATION-AND-REPORTING.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/VALIDATION-AND-REPORTING.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/WEB-PROTOCOL-AND-AUTH.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/WEB-PROTOCOL-AND-AUTH.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/report-schema.json
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/report-schema.json
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-coverage-ledger.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-coverage-ledger.cjs
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-coverage-ledger.test.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-coverage-ledger.test.cjs
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-findings.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-findings.cjs
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-findings.test.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-findings.test.cjs
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-architect.md
+    license: MIT
+    modification: adapted
+- path: skills/threat-modeling/templates/threat-model.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-architect.md
+    license: MIT
+    modification: adapted
