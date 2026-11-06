@@ -1,0 +1,95 @@
+name: data-platform
+artifacts:
+  data/database-design:
+    title: Database design
+    description: "Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels, or reviewing database code for PostgreSQL, MySQL/MariaDB, Redis, ClickHouse or an ORM such as Prisma. Covers data modelling, query plans, connection pooling, caching, replication and database security."
+    base: "s:postgres-patterns"
+    references:
+      mysql.md: ["s:mysql-patterns"]
+      redis.md: ["s:redis-patterns"]
+      clickhouse.md: ["s:clickhouse-io"]
+      prisma.md: ["s:prisma-patterns"]
+      optimisation.md: ["msitarzewski/agency-agents:engineering/engineering-database-optimizer.md"]
+      reliability.md: ["msitarzewski/agency-agents:engineering/engineering-database-reliability-engineer.md"]
+      review.md: ["a:database-reviewer"]
+  data/database-migrations:
+    title: Database migrations
+    description: "Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills, adding indexes or constraints without downtime, and planning rollback. Applies expand-migrate-contract, forward-only changes and safety checks before running anything against shared data."
+    base: "s:database-migrations"
+    supersedes: ["affaan-m/ECC:command:database-migration"]
+  data/data-pipelines:
+    title: Data pipelines
+    description: "Use when building or fixing data pipelines and bulk data movement: ingestion, ETL/ELT, backfills, exports, warehouse or lakehouse loading, streaming, data quality checks and throughput problems."
+    base: "msitarzewski/agency-agents:engineering/engineering-data-engineer.md"
+    references:
+      throughput.md: ["s:data-throughput-accelerator"]
+  platform/git-workflow:
+    title: Git workflow
+    description: "Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts, rebasing versus merging, or setting up pre-commit hooks with formatting, type checks and tests."
+    body: |
+      # Git workflow
+
+      Keep history readable and every change reviewable. The repository's own conventions (`AGENTS.md`, `CONTRIBUTING.md`) always win; read them first.
+
+      ## Branching
+
+      - Work on a short-lived branch from the current main; never commit directly to the main branch unless the repository says so. For parallel or isolated work use `workflow:git-worktrees`.
+      - Prefer trunk-based development with small pull requests; use release branches only when the product ships versions that need maintenance.
+
+      ## Commits
+
+      - One logical change per commit, with tests and code together. Write messages in the repository's style; without one, use Conventional Commits (`feat(scope): imperative summary`, body explaining why).
+      - Keep the author identity and signing the repository requires. Never bypass hooks or signing to make a commit pass.
+
+      ## Before merging
+
+      - Tidy local history (squash fixups, reorder) only on commits that were never shared. Rewriting shared history, force-pushing and deleting branches are destructive: present the exact refs and get explicit approval first.
+      - Rebase onto main for a linear history when the team prefers it; merge when the branch is shared. Resolve conflicts by understanding both sides, then re-run the tests.
+
+      ## Hooks
+
+      Run formatting, type checks and fast tests before each commit with a pre-commit framework; keep the slow suite in CI. Setup steps are in the pre-commit reference.
+    references:
+      branching-and-history.md: ["s:git-workflow"]
+      practices.md: ["msitarzewski/agency-agents:engineering/engineering-git-workflow-master.md"]
+      pre-commit.md: ["mattpocock/skills:skills/misc/setup-pre-commit/SKILL.md"]
+    supersedes: ["affaan-m/ECC:skill:conventional-commit-review"]
+  platform/github-operations:
+    title: GitHub operations
+    description: "Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and re-running CI, configuring Actions, branch protection and releases, or monitoring Dependabot and security alerts."
+    base: "s:github-ops"
+    remove: ["^For the ECC repository's maintainer release path.*?\\n\\n"]
+  platform/deployment:
+    title: Deployment
+    description: "Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD pipelines, health checks, blue-green and canary rollouts, rollback, post-deploy verification, process managers, and mobile app signing and store release."
+    base: "s:deployment-patterns"
+    references:
+      docker.md: ["s:docker-patterns"]
+      kubernetes.md: ["s:kubernetes-patterns"]
+      ci-cd-automation.md: ["msitarzewski/agency-agents:engineering/engineering-devops-automator.md"]
+      platform-engineering.md: ["msitarzewski/agency-agents:engineering/engineering-platform-engineer.md"]
+      post-deploy-checks.md: ["s:canary-watch"]
+      process-managers.md: ["c:pm2"]
+      mobile-release.md: ["msitarzewski/agency-agents:engineering/engineering-mobile-release-engineer.md"]
+  platform/reliability:
+    title: Reliability and observability
+    description: "Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana, SigNoz), planning capacity, running chaos experiments, or maintaining infrastructure health."
+    base: "msitarzewski/agency-agents:engineering/engineering-sre.md"
+    references:
+      dashboards.md: ["s:dashboard-builder"]
+      infrastructure-maintenance.md: ["msitarzewski/agency-agents:support/support-infrastructure-maintainer.md"]
+  platform/incident-response:
+    title: Incident response
+    description: "Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess severity, coordinate responders, communicate status, contain, recover, preserve evidence and write a blameless postmortem."
+    base: "msitarzewski/agency-agents:engineering/engineering-incident-response-commander.md"
+    references:
+      security-incidents.md: ["msitarzewski/agency-agents:security/security-incident-responder.md"]
+  testing/browser-testing:
+    title: Browser testing
+    description: "Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising end-to-end tests, Page Objects, capturing screenshots and console logs, post-deploy UI checks, or end-to-end tests for Windows desktop apps."
+    base_dir: "anthropics/skills:skills/webapp-testing"
+    references:
+      e2e-patterns.md: ["s:e2e-testing"]
+      post-deploy-qa.md: ["s:browser-qa"]
+      e2e-runner.md: ["a:e2e-runner"]
+      windows-desktop.md: ["s:windows-desktop-e2e"]

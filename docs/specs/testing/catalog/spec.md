@@ -15,7 +15,7 @@ Decisões em [`catalog/decisions/engineering-core.yaml`](../../../../catalog/dec
 
 ## Próximos artefatos (ainda não implementados)
 
-- `browser-testing`: base `anthropics/skills:webapp-testing` (Apache-2.0) + ECC `e2e-testing`, `browser-qa`, `click-path-audit`, agent `e2e-runner`.
+- [feito] `browser-testing`: base `anthropics/skills:webapp-testing` (Apache-2.0) + ECC `e2e-testing`, `browser-qa`, agent `e2e-runner`, `windows-desktop-e2e`. Falta `click-path-audit`.
 - `test-strategy`: ECC `test-collaboration`, `ai-regression-testing`; agency *Test Automation Engineer*, *API Tester*, *Performance Benchmarker*.
 - Variantes por linguagem (`*-testing`, `*-tdd`) vão para `languages/<x>/references/testing.md`.
 

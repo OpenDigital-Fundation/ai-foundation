@@ -55,3 +55,12 @@
 - {prompt: "audit our checkout form for WCAG 2.2 AA", expect: "accessibility:wcag-accessibility"}
 - {prompt: "plan five user interviews to understand why people abandon onboarding", expect: "ux:user-research"}
 - {prompt: "walk through our sign-up flow as a first-time mobile user and tell me where they'd get stuck", expect: "ux:usability-review"}
+- {prompt: "this Postgres query is slow, which index should I add?", expect: "data:database-design"}
+- {prompt: "rename the users.email column in production without downtime", expect: "data:database-migrations"}
+- {prompt: "build a nightly ETL from our app DB into the warehouse", expect: "data:data-pipelines"}
+- {prompt: "should we rebase or merge this feature branch, and how do I clean up the commits?", expect: "platform:git-workflow"}
+- {prompt: "re-run the failed CI checks on PR 42 and see why they failed", expect: "platform:github-operations"}
+- {prompt: "write a Dockerfile and a Kubernetes deployment with health checks for this API", expect: "platform:deployment"}
+- {prompt: "define SLOs and alerts for the checkout service", expect: "platform:reliability"}
+- {prompt: "production is down, the API returns 500 for everyone", expect: "platform:incident-response"}
+- {prompt: "test the login flow of our local app in a real browser with Playwright", expect: "testing:browser-testing"}

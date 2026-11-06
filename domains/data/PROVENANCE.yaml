@@ -1,2 +1,79 @@
 version: 1
-files: []
+files:
+- path: skills/data-pipelines/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-data-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/data-pipelines/references/throughput.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/data-throughput-accelerator/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/postgres-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/clickhouse.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/clickhouse-io/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/mysql.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/mysql-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/optimisation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-database-optimizer.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/prisma.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/prisma-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/redis.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/redis-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/reliability.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-database-reliability-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/review.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/database-reviewer.md
+    license: MIT
+    modification: adapted
+- path: skills/database-migrations/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/database-migrations/SKILL.md
+    license: MIT
+    modification: adapted

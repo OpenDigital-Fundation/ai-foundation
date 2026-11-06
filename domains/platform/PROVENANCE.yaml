@@ -1,2 +1,128 @@
 version: 1
-files: []
+files:
+- path: skills/deployment/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/deployment-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/ci-cd-automation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-devops-automator.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/docker.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/docker-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/kubernetes.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/kubernetes-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/mobile-release.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-mobile-release-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/platform-engineering.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-platform-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/post-deploy-checks.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/canary-watch/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/process-managers.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: commands/pm2.md
+    license: MIT
+    modification: adapted
+- path: skills/git-workflow/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/git-workflow/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/git-workflow/references/branching-and-history.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/git-workflow/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/git-workflow/references/practices.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-git-workflow-master.md
+    license: MIT
+    modification: adapted
+- path: skills/git-workflow/references/pre-commit.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/misc/setup-pre-commit/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/github-operations/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/github-ops/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-incident-response-commander.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/security-incidents.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-incident-responder.md
+    license: MIT
+    modification: adapted
+- path: skills/reliability/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-sre.md
+    license: MIT
+    modification: adapted
+- path: skills/reliability/references/dashboards.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/dashboard-builder/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/reliability/references/infrastructure-maintenance.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: support/support-infrastructure-maintainer.md
+    license: MIT
+    modification: adapted

@@ -115,6 +115,39 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "obra/superpowers:skill:receiving-code-review"
+- id: data/data-pipelines
+  type: skill
+  capability: "Use when building or fixing data pipelines and bulk data movement: ingestion, ETL/ELT, backfills, exports,\
+    \ warehouse or lakehouse loading, streaming, data quality checks and throughput probl"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:data-throughput-accelerator"
+  - "msitarzewski/agency-agents:agent:Data Engineer"
+- id: data/database-design
+  type: skill
+  capability: Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels,
+    or reviewing database code for PostgreSQL, MySQL/MariaDB, Redis, ClickHouse or
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:database-reviewer"
+  - "affaan-m/ECC:skill:clickhouse-io"
+  - "affaan-m/ECC:skill:mysql-patterns"
+  - "affaan-m/ECC:skill:postgres-patterns"
+  - "affaan-m/ECC:skill:prisma-patterns"
+  - "affaan-m/ECC:skill:redis-patterns"
+  - "msitarzewski/agency-agents:agent:Database Optimizer"
+  - "msitarzewski/agency-agents:agent:Database Reliability Engineer"
+- id: data/database-migrations
+  type: skill
+  capability: "Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills,\
+    \ adding indexes or constraints without downtime, and planning rollback. Ap"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:command:database-migration"
+  - "affaan-m/ECC:skill:database-migrations"
 - id: debugging/systematic-debugging
   type: skill
   capability: Build a tight feedback loop on the exact symptom, find the root cause from evidence, then fix with a regression
@@ -399,6 +432,59 @@ artifacts:
   - "affaan-m/ECC:skill:ui-to-vue"
   - "affaan-m/ECC:skill:vite-patterns"
   - "affaan-m/ECC:skill:vue-patterns"
+- id: platform/deployment
+  type: skill
+  capability: "Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD\
+    \ pipelines, health checks, blue-green and canary rollouts, rollback, post-deploy"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:command:pm2"
+  - "affaan-m/ECC:skill:canary-watch"
+  - "affaan-m/ECC:skill:deployment-patterns"
+  - "affaan-m/ECC:skill:docker-patterns"
+  - "affaan-m/ECC:skill:kubernetes-patterns"
+  - "msitarzewski/agency-agents:agent:DevOps Automator"
+  - "msitarzewski/agency-agents:agent:Mobile Release Engineer"
+  - "msitarzewski/agency-agents:agent:Platform Engineer"
+- id: platform/git-workflow
+  type: skill
+  capability: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts,
+    rebasing versus merging, or setting up pre-commit hooks with formatting,
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:conventional-commit-review"
+  - "affaan-m/ECC:skill:git-workflow"
+  - "mattpocock/skills:skill:setup-pre-commit"
+  - "msitarzewski/agency-agents:agent:Git Workflow Master"
+- id: platform/github-operations
+  type: skill
+  capability: "Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and re-running\
+    \ CI, configuring Actions, branch protection and releases, or monitoring Depe"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:github-ops"
+- id: platform/incident-response
+  type: skill
+  capability: "Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess\
+    \ severity, coordinate responders, communicate status, contain, recover, preserve"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Incident Responder"
+  - "msitarzewski/agency-agents:agent:Incident Response Commander"
+- id: platform/reliability
+  type: skill
+  capability: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
+    SigNoz), planning capacity, running chaos experiments, or maintaining infras
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:dashboard-builder"
+  - "msitarzewski/agency-agents:agent:Infrastructure Maintainer"
+  - "msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)"
 - id: principles/coding-discipline
   type: skill
   capability: Make the smallest complete change, surface assumptions, keep diffs surgical and define a verifiable check.
@@ -451,6 +537,18 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "msitarzewski/agency-agents:agent:Security Architect"
+- id: testing/browser-testing
+  type: skill
+  capability: "Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising\
+    \ end-to-end tests, Page Objects, capturing screenshots and console logs, post"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:e2e-runner"
+  - "affaan-m/ECC:skill:browser-qa"
+  - "affaan-m/ECC:skill:e2e-testing"
+  - "affaan-m/ECC:skill:windows-desktop-e2e"
+  - "anthropics/skills:skill:webapp-testing"
 - id: testing/test-driven-development
   type: skill
   capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.

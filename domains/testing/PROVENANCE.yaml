@@ -1,5 +1,75 @@
 version: 1
 files:
+- path: skills/browser-testing/LICENSE.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/LICENSE.txt
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/SKILL.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/examples/console_logging.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/examples/console_logging.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/examples/element_discovery.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/examples/element_discovery.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/examples/static_html_automation.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/examples/static_html_automation.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/references/e2e-patterns.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/e2e-testing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/e2e-runner.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/e2e-runner.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/post-deploy-qa.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/browser-qa/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/windows-desktop.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/windows-desktop-e2e/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/scripts/with_server.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/scripts/with_server.py
+    license: Apache-2.0
+    modification: adapted
 - path: skills/test-driven-development/SKILL.md
   derived_from:
   - source: obra/superpowers
