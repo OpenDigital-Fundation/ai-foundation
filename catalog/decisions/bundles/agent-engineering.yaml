@@ -77,12 +77,17 @@ artifacts:
     append: '## Limits of this guardrail
 
 
-      - The hook script is a best-effort tripwire, not a security boundary. It tokenises the command with `shlex`, follows `bash -c` and `$(...)`, skips git global options and environment prefixes, and **fails closed** (blocks) when it cannot parse the input. Determined obfuscation can still get past
-      any pattern check: for real protection, add permission deny rules or run the agent in an OS sandbox.
+      The hook script is a best-effort tripwire, not a security boundary. For real protection add permission deny rules or run the agent in an OS sandbox.
 
-      - It needs `python3` on the machine; without it every Bash call is blocked with an explanation.
 
-      - Besides git (`push`, `reset --hard`, `clean -f`, `branch -D`, `checkout .`, `restore .`, `--no-verify`) it blocks `rm` with recursive force.
+      - **Default deny on uncertainty:** it blocks when it cannot parse the input, when a git subcommand is not a known built-in (aliases are not inspected), when `git -c`/`--config-env` sets anything but presentation keys, when `GIT_CONFIG_*` variables are present, when `git config` would write aliases,
+      includes, hooks paths or helper commands, for `env -S`, for a shell reading commands from stdin, and for `xargs` feeding git or a shell. A crash of the checker also blocks.
+
+      - **Blocked operations:** `git push`, `reset --hard`, `clean -f`, `branch -D`, `checkout .`, `restore .`, `--no-verify`, and `rm` with recursive force, including through `bash -c`, `eval`, `$(...)`, `find -exec` and wrappers such as `sudo`/`env`.
+
+      - **Known limit:** a script file passed to a shell (`bash scripts/x.sh`) is not inspected.
+
+      - It needs `python3`; without it every Bash call is blocked with an explanation.
 
       - Installing the hook changes the user''s harness settings: show the exact file and JSON first and install only after explicit approval.'
   agent-engineering/agent-teams:

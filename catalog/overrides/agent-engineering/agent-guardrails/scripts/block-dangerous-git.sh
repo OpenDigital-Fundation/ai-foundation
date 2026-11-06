@@ -18,6 +18,7 @@ SEPARATORS = {";", "&&", "||", "|", "&", "\n", "(", ")", "|&"}
 BUILTINS = {"push", "reset", "clean", "branch", "checkout", "restore", "commit", "status", "log", "diff", "add", "fetch",
             "pull", "merge", "rebase", "switch", "stash", "tag", "show", "remote", "config", "init", "clone", "rm", "mv",
             "worktree", "submodule", "cherry-pick", "revert", "blame", "grep", "bisect", "describe", "rev-parse", "ls-files"}
+SAFE_CONFIG = re.compile(r"(color\.[a-z.]+|user\.(name|email)|core\.quotepath|log\.showsignature|init\.defaultbranch)=")
 # Constructs the structured parser only partly understands; when present, also match the raw text.
 INDIRECTION = re.compile(r"\beval\b|\bxargs\b|-exec(dir)?\b|\$\(|`|<\(|\bsource\b|\balias\b|\bfunction\b|\(\)\s*\{")
 RAW_DANGER = re.compile(r"\bpush\b|reset\s+--hard|\bclean\s+-\S*f|branch\s+-D|--no-verify|\brm\s+-\S*(rf|fr)|checkout\s+\.(\s|$)|restore\s+\.(\s|$)")
@@ -43,12 +44,12 @@ def segments(cmd, depth=0):
         tokens = list(lex)
     except ValueError:
         block("could not tokenize the command")
-    seg = []
+    seg, prev, last = [], None, None
     for t in tokens + [";"]:
         if t in SEPARATORS or t == "`":
             if seg:
-                yield seg
-            seg = []
+                yield seg, prev
+            seg, prev = [], t
         else:
             seg.append(t)
 
@@ -62,27 +63,30 @@ def strip_prefix(seg):
             i += 1
     return seg[i:]
 
-def check(seg, depth):
-    for j, a in enumerate(seg[:-1]):
-        if os.path.basename(seg[0]) == "env" and a in {"-S", "--split-string"}:
-            for inner in segments(seg[j + 1], depth + 1):
-                check(inner, depth + 1)
-            return
+def check(seg, depth, piped=False):
+    # Config injected through the environment changes what git runs: allow none of it.
+    if any(re.match(r"GIT_CONFIG(_|=)|GIT_CONFIG_PARAMETERS=|GIT_EXEC_PATH=|GIT_SSH(_COMMAND)?=", a) for a in seg):
+        block("git configuration injected through environment variables")
+    if any(os.path.basename(a) == "env" for a in seg[:3]) and any(a == "-S" or a.startswith(("-S", "--split-string")) for a in seg):
+        block("env -S builds a command line the guardrail cannot inspect")
     seg = strip_prefix(seg)
     if not seg:
         return
     prog = os.path.basename(seg[0])
     args = seg[1:]
     def recurse(text):
-        for inner in segments(text, depth + 1):
-            check(inner, depth + 1)
+        for inner, sep in segments(text, depth + 1):
+            check(inner, depth + 1, sep in {"|", "|&"})
     if prog in {"bash", "sh", "zsh", "dash", "ksh", "fish"}:
         for j, a in enumerate(args):
             if a.startswith("-") and not a.startswith("--") and "c" in a[1:]:
                 if j + 1 < len(args):
                     recurse(args[j + 1])
                 return
-        return
+        scripts = [a for a in args if not a.startswith("-") and a not in {"<<<", "<<"}]
+        if piped or "<<<" in args or "<<" in args or "-s" in args or not scripts:
+            block(f"{prog} reading commands from stdin cannot be inspected")
+        return  # known limit: a script file passed to a shell is not inspected
     if prog == "eval":
         recurse(" ".join(args))
         return
@@ -91,6 +95,9 @@ def check(seg, depth):
         while j < len(args) and args[j].startswith("-"):
             j += 2 if args[j] in {"-I", "-L", "-n", "-P", "-s", "-d", "-E", "-a"} else 1
         if j < len(args):
+            inner = os.path.basename(args[j])
+            if inner in {"git", "bash", "sh", "zsh", "dash", "ksh", "fish", "env", "eval", "rm"}:
+                block(f"xargs {inner} builds its arguments from data the guardrail cannot see")
             check(args[j:], depth + 1)
         return
     if prog == "find":
@@ -113,24 +120,18 @@ def check(seg, depth):
     while i < len(args) and args[i].startswith("-"):
         opt = args[i].split("=", 1)[0]
         value = args[i].split("=", 1)[1] if "=" in args[i] else (args[i + 1] if i + 1 < len(args) else "")
-        if opt in {"-c", "--config-env"} and value.lower().startswith(("alias.", "core.hookspath", "core.sshcommand", "core.pager", "core.editor")):
-            block(f"git {opt} {value.split("=")[0]} can redefine what git runs")
+        if opt in {"-c", "--config-env"} and not SAFE_CONFIG.match(value.lower()):
+            block(f"git {opt} {value.split("=")[0]} can change what git runs; only presentation settings are allowed")
         i += 2 if (opt in GIT_OPTS_WITH_VALUE and "=" not in args[i]) else 1
     if i >= len(args):
         return
     sub, rest = args[i], args[i + 1:]
     if sub not in BUILTINS:
-        try:
-            alias = subprocess.run(["git", "config", "--get", f"alias.{sub}"], capture_output=True, text=True, timeout=5).stdout.strip()
-        except Exception:
-            alias = ""
-        if alias:
-            recurse_text = alias[1:] if alias.startswith("!") else "git " + alias
-            for inner in segments(recurse_text + " " + " ".join(rest), depth + 1):
-                check(inner, depth + 1)
-            return
+        block(f"git {sub} is not a known git command (aliases are not inspected)")
     if "--no-verify" in rest or (sub == "commit" and "-n" in rest):
         block(f"git {sub} --no-verify skips the repository hooks")
+    if sub == "config" and any(a.lower().startswith(("alias.", "include", "core.hookspath", "core.fsmonitor", "core.sshcommand", "core.pager", "core.editor", "core.gitproxy", "credential.")) for a in rest):
+        block("git config would change what later git commands run")
     if sub == "push":
         block("git push publishes to a remote")
     if sub == "reset" and "--hard" in rest:
@@ -144,8 +145,8 @@ def check(seg, depth):
 
 if INDIRECTION.search(str(command)) and RAW_DANGER.search(str(command)):
     block("the command uses indirection the guardrail cannot fully inspect and mentions a destructive operation")
-for s in segments(str(command)):
-    check(s, 0)
+for s, sep in segments(str(command)):
+    check(s, 0, sep in {"|", "|&"})
 sys.exit(0)
 '
 status=$?
