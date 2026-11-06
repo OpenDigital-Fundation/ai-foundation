@@ -23,9 +23,9 @@ metadata:
 ## Related Skills
 
 - `testing:test-strategy`: turn important defects into executable regression tests.
-- `contract-first`: establish the shared machine-readable contract for consumers and providers.
+- `architecture:api-design`: establish the shared machine-readable contract for consumers and providers.
 - `module-regression`: run regression commands for changed modules and downstream consumers.
-- `living-docs-governance`: synchronize stage outcomes and append history.
+- `documents:technical-writing`: synchronize stage outcomes and append history.
 
 ## Trust Boundary
 

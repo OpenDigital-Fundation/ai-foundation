@@ -248,6 +248,6 @@ The tour should feel like a path, not an inventory.
 ### Related Skills
 
 - `architecture:codebase-onboarding`
-- `coding-standards`
+- `principles:coding-discipline`
 - `council`
 - official upstream format: `microsoft/codetour`

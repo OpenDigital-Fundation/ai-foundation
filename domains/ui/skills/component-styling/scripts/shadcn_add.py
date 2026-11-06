@@ -8,6 +8,7 @@ Wraps shadcn CLI for programmatic component installation.
 
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -73,7 +74,11 @@ class ShadcnInstaller:
                 for section in ("dependencies", "devDependencies"):
                     version = pkg.get(section, {}).get("shadcn")
                     if version:
-                        return version.lstrip("^~>=<").split()[0]
+                        candidate = version.strip().lstrip("^~>=<").split()[0] if version.strip() else ""
+                        # Only an exact semver may reach `npx shadcn@<version>`: anything else from an
+                        # untrusted package.json (tags, URLs, paths, extra arguments) falls back to the pin.
+                        if re.fullmatch(r"\d+\.\d+\.\d+(-[0-9A-Za-z.-]+)?", candidate):
+                            return candidate
             except (json.JSONDecodeError, KeyError):
                 pass
         return "2.3.0"  # pinned fallback; update when newer stable release is needed
@@ -93,6 +98,9 @@ class ShadcnInstaller:
         """
         if not components:
             return False, "No components specified"
+        invalid = [c for c in components if not re.fullmatch(r"[a-z0-9][a-z0-9-]*", c)]
+        if invalid:
+            return False, f"Invalid component name(s): {', '.join(invalid)} (expected lowercase letters, digits and dashes)"
 
         if not self.check_shadcn_config():
             return (

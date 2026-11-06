@@ -80,8 +80,8 @@ Use this skill when stable domain language needs one evidence-backed home, or wh
 ### Related Skills
 
 - `architecture:decision-records`: the sole ADR methodology for hard-to-reverse decisions.
-- `living-docs-governance`: lifecycle maintenance for the project map, status, and history.
-- `docs-governance`: cross-capability routing and closeout order.
+- `documents:technical-writing`: lifecycle maintenance for the project map, status, and history.
+- `documents:technical-writing`: cross-capability routing and closeout order.
 
 ### Scheduling and Task Boundary
 

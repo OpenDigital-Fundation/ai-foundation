@@ -538,7 +538,7 @@ from:
 - **Threat to [client]:** <…>
 ```
 
-Hand the completed cards plus the tension plot to `competitive-report-structure`.
+Hand the completed cards plus the tension plot to `product:product-management`.
 
 ### Anti-Patterns
 
@@ -550,5 +550,5 @@ Hand the completed cards plus the tension plot to `competitive-report-structure`
 
 ### Related Skills
 
-- `competitive-platform-analysis` — the prerequisite; produces the tiered competitor set this skill scores.
-- `competitive-report-structure` — the next step; assembles the scored profile cards into a client-deliverable report.
+- `product:product-management` — the prerequisite; produces the tiered competitor set this skill scores.
+- `product:product-management` — the next step; assembles the scored profile cards into a client-deliverable report.

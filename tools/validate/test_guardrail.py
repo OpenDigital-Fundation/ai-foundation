@@ -36,3 +36,22 @@ def test_allows(cmd):
 
 def test_invalid_input_fails_closed():
     assert run(None) == 2
+
+
+@pytest.mark.parametrize("cmd", [
+    "bash -lc 'git push'", "sh -ec \"git reset --hard\"", "eval git push", "eval 'git' 'push'",
+    "echo origin | xargs git push", "find . -name x -exec git push \;", "env -S 'git push'",
+    "git -c alias.p=push p", "git -c core.hooksPath=/tmp/x commit -m x", "git --config-env=alias.p=X p",
+    "f() { git push; }; f",
+])
+def test_blocks_indirection(cmd):
+    assert run(cmd) == 2, cmd
+
+
+def test_resolves_repository_alias(tmp_path):
+    import subprocess as sp
+    sp.run(["git", "init", "-q", str(tmp_path)], check=True)
+    sp.run(["git", "-C", str(tmp_path), "config", "alias.ship", "push --force"], check=True)
+    payload = json.dumps({"tool_input": {"command": "git ship"}})
+    r = sp.run(["bash", str(SCRIPT)], input=payload, capture_output=True, text=True, cwd=tmp_path)
+    assert r.returncode == 2
