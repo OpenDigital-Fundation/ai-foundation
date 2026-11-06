@@ -72,14 +72,14 @@ files:
     commit: ca45fc4
     path: skills/skill-creator/eval-viewer/generate_review.py
     license: Apache-2.0
-    modification: base
+    modification: adapted
 - path: skills/skill-authoring/eval-viewer/viewer.html
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/skill-creator/eval-viewer/viewer.html
     license: Apache-2.0
-    modification: base
+    modification: adapted
 - path: skills/skill-authoring/pressure-testing/GUIDE.md
   derived_from:
   - source: obra/superpowers

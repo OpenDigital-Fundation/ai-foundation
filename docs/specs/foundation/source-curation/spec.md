@@ -30,7 +30,7 @@ Precisamos tirar "o melhor" de dez fontes sem copiar duplicatas, sem violar lice
 
 ## Inventário
 
-[`inventory.csv`](inventory.csv) lista os 1.007 artefatos únicos (de 1.275 brutos; o restante eram cópias idênticas, principalmente diretórios espelhados dentro do ECC) com fonte, tipo, nome, caminho, licença, **domínio sugerido** e descrição.
+[`inventory.csv`](inventory.csv) lista os 1.118 artefatos únicos (de 1.275 brutos; o restante eram cópias idênticas, principalmente diretórios espelhados dentro do ECC; rules sem frontmatter são distinguidas pelo caminho) com fonte, tipo, nome, caminho, licença, **domínio sugerido** e descrição.
 
 O domínio sugerido vem de uma classificação por palavras-chave, **não revisada**. Distribuição: 243 fora de escopo, 163 agent-engineering, 79 code-quality, 62 workflow, 56 languages, 48 testing, 37 platform, 32 ai-engineering, 32 security, 28 debugging, 27 sem domínio, e os demais domínios com menos de 30 cada. Cada spec de domínio confirma ou corrige a classificação dos itens dela.
 

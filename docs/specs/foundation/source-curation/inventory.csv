@@ -50,10 +50,12 @@ affaan-m/ECC,command,token-card,commands/token-card.md,MIT,agent-engineering,Ren
 affaan-m/ECC,hook,auto-tmux-dev,scripts/hooks/auto-tmux-dev.js,MIT,agent-engineering,
 affaan-m/ECC,hook,bash-hook-dispatcher,scripts/hooks/bash-hook-dispatcher.js,MIT,agent-engineering,
 affaan-m/ECC,hook,block-no-verify,scripts/hooks/block-no-verify.js,MIT,agent-engineering,
+affaan-m/ECC,hook,check-console-log,scripts/hooks/check-console-log.js,MIT,agent-engineering,
 affaan-m/ECC,hook,check-hook-enabled,scripts/hooks/check-hook-enabled.js,MIT,agent-engineering,
 DietrichGebert/ponytail,hook,claude-band,hooks/claude-band.json,MIT,agent-engineering,
 DietrichGebert/ponytail,hook,claude-codex-hooks,hooks/claude-codex-hooks.json,MIT,agent-engineering,
 affaan-m/ECC,hook,codex-hooks,hooks/codex-hooks.json,MIT,agent-engineering,
+affaan-m/ECC,hook,config-protection,scripts/hooks/config-protection.js,MIT,agent-engineering,
 affaan-m/ECC,hook,context-prompt-suggestions,scripts/hooks/context-prompt-suggestions.js,MIT,agent-engineering,
 affaan-m/ECC,hook,context-routing-index,scripts/hooks/context-routing-index.js,MIT,agent-engineering,
 DietrichGebert/ponytail,hook,copilot-hooks,hooks/copilot-hooks.json,MIT,agent-engineering,
@@ -69,6 +71,7 @@ affaan-m/ECC,hook,hook-input-limits,scripts/hooks/hook-input-limits.js,MIT,agent
 affaan-m/ECC,hook,hookify-frontmatter,scripts/hooks/hookify-frontmatter.js,MIT,agent-engineering,
 affaan-m/ECC,hook,hookify-runtime,scripts/hooks/hookify-runtime.js,MIT,agent-engineering,
 affaan-m/ECC,hook,hooks,hooks/hooks.json,MIT,agent-engineering,
+affaan-m/ECC,hook,hooks,hooks/memory-persistence/hooks.json,MIT,agent-engineering,
 obra/superpowers,hook,hooks,hooks/hooks.json,MIT,agent-engineering,
 obra/superpowers,hook,hooks-cursor,hooks/hooks-cursor.json,MIT,agent-engineering,
 affaan-m/ECC,hook,hooks.metadata,hooks/hooks.metadata.json,MIT,agent-engineering,
@@ -98,6 +101,7 @@ affaan-m/ECC,hook,pretooluse-visible-output,scripts/hooks/pretooluse-visible-out
 DietrichGebert/ponytail,hook,qoder-hooks,hooks/qoder-hooks.json,MIT,agent-engineering,
 affaan-m/ECC,hook,qoder-hooks,hooks/qoder-hooks.json,MIT,agent-engineering,
 affaan-m/ECC,hook,quality-gate,scripts/hooks/quality-gate.js,MIT,agent-engineering,
+affaan-m/ECC,hook,quality-gate,skills/delivery-gate/hooks/quality-gate.py,MIT,agent-engineering,
 affaan-m/ECC,hook,run-with-flags,scripts/hooks/run-with-flags.js,MIT,agent-engineering,
 affaan-m/ECC,hook,run-with-flags-shell,scripts/hooks/run-with-flags-shell.sh,MIT,agent-engineering,
 affaan-m/ECC,hook,session-activity-tracker,scripts/hooks/session-activity-tracker.js,MIT,agent-engineering,
@@ -111,6 +115,26 @@ affaan-m/ECC,hook,stop-format-typecheck,scripts/hooks/stop-format-typecheck.js,M
 affaan-m/ECC,hook,suggest-compact,scripts/hooks/suggest-compact.js,MIT,agent-engineering,
 affaan-m/ECC,rule,agents,rules/common/agents.md,MIT,agent-engineering,
 affaan-m/ECC,rule,hooks,rules/angular/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/arkts/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/common/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/cpp/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/csharp/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/dart/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/fsharp/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/golang/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/java/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/kotlin/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/nuxt/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/php/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/python/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/react/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/react-native/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/ruby/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/rust/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/swift/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/typescript/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/vue/hooks.md,MIT,agent-engineering,
+affaan-m/ECC,rule,hooks,rules/web/hooks.md,MIT,agent-engineering,
 affaan-m/ECC,skill,agent-architecture-audit,pi/core/skills/agent-architecture-audit/SKILL.md,MIT,agent-engineering,"Full-stack diagnostic for agent and LLM applications. Audits the 12-layer agent stack for wrapper regression, memory pollution, tool discipline failures, hidden repair loops, and rendering corruption. Produces severity-ranked findings with "
 affaan-m/ECC,skill,agent-eval,pi/core/skills/agent-eval/SKILL.md,MIT,agent-engineering,"Head-to-head comparison of coding agents (Claude Code, Aider, Codex, etc.) on custom tasks with pass rate, cost, time, and consistency metrics. Use when choosing between coding agents, or when a change to an agent setup needs measured pass "
 affaan-m/ECC,skill,agent-harness-construction,pi/core/skills/agent-harness-construction/SKILL.md,MIT,agent-engineering,"Design and optimize AI agent action spaces, tool definitions, and observation formatting for higher completion rates. Use when defining or revising an agent's tool set, action space, or observation format."
@@ -405,9 +429,49 @@ msitarzewski/agency-agents,agent,Realtime Collaboration Engineer,engineering/eng
 msitarzewski/agency-agents,agent,Senior Developer,engineering/engineering-senior-developer.md,MIT,languages,"Premium implementation specialist - Masters Laravel/Livewire/FluxUI, advanced CSS, Three.js integration"
 msitarzewski/agency-agents,agent,WebAssembly Engineer,engineering/engineering-webassembly-engineer.md,MIT,languages,"Expert WebAssembly engineer — compiling Rust/C++/Go to Wasm, JS interop and the boundary marshalling cost, WASI and server-side runtimes (Wasmtime/Wasmer), the component model, and near-native performance tuning."
 affaan-m/ECC,rule,coding-style,rules/angular/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/arkts/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/cpp/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/csharp/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/dart/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/fsharp/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/golang/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/java/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/kotlin/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/nuxt/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/php/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/python/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/react/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/react-native/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/ruby/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/rust/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/swift/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/typescript/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/vue/coding-style.md,MIT,languages,
+affaan-m/ECC,rule,coding-style,rules/web/coding-style.md,MIT,languages,
 affaan-m/ECC,rule,fastapi,rules/python/fastapi.md,MIT,languages,
 affaan-m/ECC,rule,node,.claude/rules/node.md,MIT,languages,
 affaan-m/ECC,rule,patterns,rules/angular/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/arkts/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/cpp/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/csharp/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/dart/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/fsharp/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/golang/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/java/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/kotlin/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/nuxt/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/php/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/python/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/react/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/react-native/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/ruby/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/rust/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/swift/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/typescript/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/vue/patterns.md,MIT,languages,
+affaan-m/ECC,rule,patterns,rules/web/patterns.md,MIT,languages,
+affaan-m/ECC,rule,performance,rules/react-native/performance.md,MIT,languages,
+affaan-m/ECC,rule,performance,rules/web/performance.md,MIT,languages,
 affaan-m/ECC,rule,production-readiness,rules/react-native/production-readiness.md,MIT,languages,
 affaan-m/ECC,skill,angular-developer,pi/core/skills/angular-developer/SKILL.md,MIT,languages,"Generates Angular code and provides architectural guidance. Trigger when creating projects, components, or services, or for best practices on reactivity (signals, linkedSignal, resource), forms, dependency injection, routing, SSR, accessibi"
 affaan-m/ECC,skill,bun-runtime,pi/core/skills/bun-runtime/SKILL.md,MIT,languages,"Bun as runtime, package manager, bundler, and test runner. When to choose Bun vs Node, migration notes, and Vercel support."
@@ -647,6 +711,7 @@ affaan-m/ECC,rule,audio,skills/remotion-video-creation/rules/audio.md,MIT,out-of
 affaan-m/ECC,rule,calculate-metadata,skills/remotion-video-creation/rules/calculate-metadata.md,MIT,out-of-scope,"Dynamically set composition duration, dimensions, and props"
 affaan-m/ECC,rule,can-decode,skills/remotion-video-creation/rules/can-decode.md,MIT,out-of-scope,Check if a video can be decoded by the browser using Mediabunny
 affaan-m/ECC,rule,charts,skills/remotion-video-creation/rules/charts.md,MIT,out-of-scope,"Chart and data visualization patterns for Remotion. Use when creating bar charts, pie charts, histograms, progress bars, or any data-driven animations."
+affaan-m/ECC,rule,coding-style,rules/perl/coding-style.md,MIT,out-of-scope,
 affaan-m/ECC,rule,compositions,skills/remotion-video-creation/rules/compositions.md,MIT,out-of-scope,"Defining compositions, stills, folders, default props and dynamic metadata"
 affaan-m/ECC,rule,design-quality,rules/web/design-quality.md,MIT,out-of-scope,
 affaan-m/ECC,rule,display-captions,skills/remotion-video-creation/rules/display-captions.md,MIT,out-of-scope,Displaying captions in Remotion with TikTok-style pages and word highlighting
@@ -657,13 +722,17 @@ affaan-m/ECC,rule,get-audio-duration,skills/remotion-video-creation/rules/get-au
 affaan-m/ECC,rule,get-video-dimensions,skills/remotion-video-creation/rules/get-video-dimensions.md,MIT,out-of-scope,Getting the width and height of a video file with Mediabunny
 affaan-m/ECC,rule,get-video-duration,skills/remotion-video-creation/rules/get-video-duration.md,MIT,out-of-scope,Getting the duration of a video file in seconds with Mediabunny
 affaan-m/ECC,rule,gif,skills/remotion-video-creation/rules/gifs.md,MIT,out-of-scope,"Displaying GIFs, APNG, AVIF and WebP in Remotion"
+affaan-m/ECC,rule,hooks,rules/perl/hooks.md,MIT,out-of-scope,
 affaan-m/ECC,rule,images,skills/remotion-video-creation/rules/images.md,MIT,out-of-scope,Embedding images in Remotion using the <Img> component
 affaan-m/ECC,rule,import-srt-captions,skills/remotion-video-creation/rules/import-srt-captions.md,MIT,out-of-scope,Importing .srt subtitle files into Remotion using @remotion/captions
 affaan-m/ECC,rule,lottie,skills/remotion-video-creation/rules/lottie.md,MIT,out-of-scope,Embedding Lottie animations in Remotion.
 affaan-m/ECC,rule,measuring-dom-nodes,skills/remotion-video-creation/rules/measuring-dom-nodes.md,MIT,out-of-scope,Measuring DOM element dimensions in Remotion
 affaan-m/ECC,rule,measuring-text,skills/remotion-video-creation/rules/measuring-text.md,MIT,out-of-scope,"Measuring text dimensions, fitting text to containers, and checking overflow"
+affaan-m/ECC,rule,patterns,rules/perl/patterns.md,MIT,out-of-scope,
+affaan-m/ECC,rule,security,rules/perl/security.md,MIT,out-of-scope,
 affaan-m/ECC,rule,sequencing,skills/remotion-video-creation/rules/sequencing.md,MIT,out-of-scope,"Sequencing patterns for Remotion - delay, trim, limit duration of items"
 affaan-m/ECC,rule,tailwind,skills/remotion-video-creation/rules/tailwind.md,MIT,out-of-scope,Using TailwindCSS in Remotion.
+affaan-m/ECC,rule,testing,rules/perl/testing.md,MIT,out-of-scope,
 affaan-m/ECC,rule,text-animations,skills/remotion-video-creation/rules/text-animations.md,MIT,out-of-scope,Typography and text animation patterns for Remotion.
 affaan-m/ECC,rule,timing,skills/remotion-video-creation/rules/timing.md,MIT,out-of-scope,"Interpolation curves in Remotion - linear, easing, spring animations"
 affaan-m/ECC,rule,transcribe-captions,skills/remotion-video-creation/rules/transcribe-captions.md,MIT,out-of-scope,Transcribing audio to generate captions in Remotion
@@ -782,6 +851,8 @@ affaan-m/ECC,skill,social-graph-ranker,skills/social-graph-ranker/SKILL.md,MIT,p
 affaan-m/ECC,skill,social-publisher,skills/social-publisher/SKILL.md,MIT,platform,"Agent-driven scheduling and publishing of social media posts across 13 platforms via SocialClaw. Use when the user wants to publish to X, LinkedIn, Instagram, Facebook Pages, TikTok, Discord, Telegram, YouTube, Reddit, WordPress, or Pintere"
 affaan-m/ECC,skill,terminal-opener,skills/terminal-opener/SKILL.md,MIT,platform,"Open an executable and its argument array in a visible terminal window through a reusable, shell-free launch plan with dry-run, JSON, capability detection, detached fallback, and standalone recovery modes. Use when Codex needs to open an in"
 affaan-m/ECC,skill,terminal-ops,skills/terminal-ops/SKILL.md,MIT,platform,"Evidence-first repo execution workflow for ECC. Use when the user wants a command run, a repo checked, a CI failure debugged, or a narrow fix pushed with exact proof of what was executed and verified."
+affaan-m/ECC,rule,coding-style,rules/common/coding-style.md,MIT,principles,
+affaan-m/ECC,rule,patterns,rules/common/patterns.md,MIT,principles,
 affaan-m/ECC,rule,performance,rules/common/performance.md,MIT,principles,
 affaan-m/ECC,rule,README,rules/README.md,MIT,principles,
 msitarzewski/agency-agents,agent,DX Engineer,product/product-dx-engineer.md,MIT,product,"Removes every unnecessary step between a developer and their first success — SDK samples, onboarding flows, error messages, and the feedback loops that make products feel like they were built by someone who's used them."
@@ -834,6 +905,26 @@ affaan-m/ECC,hook,gateguard-heredoc,scripts/hooks/gateguard-heredoc.js,MIT,secur
 affaan-m/ECC,hook,insaits-security-monitor,scripts/hooks/insaits-security-monitor.py,MIT,security,
 affaan-m/ECC,hook,insaits-security-wrapper,scripts/hooks/insaits-security-wrapper.js,MIT,security,
 affaan-m/ECC,rule,security,rules/angular/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/arkts/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/common/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/cpp/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/csharp/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/dart/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/fsharp/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/golang/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/java/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/kotlin/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/nuxt/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/php/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/python/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/react/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/react-native/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/ruby/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/rust/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/swift/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/typescript/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/vue/security.md,MIT,security,
+affaan-m/ECC,rule,security,rules/web/security.md,MIT,security,
 affaan-m/ECC,skill,agent-security-hardening,pi/core/skills/agent-security-hardening/SKILL.md,MIT,security,"Security hardening guidance for AI agent frameworks that process untrusted content, invoke tools, write workspace files, manage runtime identifiers, or handle credentials. Use when building or reviewing an agent runtime, autonomous worker, "
 affaan-m/ECC,skill,django-security,pi/core/skills/django-security/SKILL.md,MIT,security,"Django security best practices, authentication, authorization, CSRF protection, SQL injection prevention, XSS prevention, and secure deployment configurations. Use when reviewing Django authentication, authorization, input handling, or depl"
 affaan-m/ECC,skill,gateguard,skills/gateguard/SKILL.md,MIT,security,"PreToolUse fact-forcing gate that denies the first Edit/Write/Bash (including MultiEdit and NotebookEdit) attempt until the agent presents concrete facts (importers, data schemas, verbatim user instruction), then allows retry; A/B-tested at"
@@ -865,6 +956,26 @@ affaan-m/ECC,command,quality-gate,commands/quality-gate.md,MIT,testing,Run the E
 affaan-m/ECC,command,react-test,commands/react-test.md,MIT,testing,"Enforce TDD workflow for React. Write React Testing Library tests first (behavior-focused, accessibility-first), then implement components. Detects Vitest or Jest and verifies coverage targets."
 affaan-m/ECC,command,rust-test,commands/rust-test.md,MIT,testing,"Enforce TDD workflow for Rust. Write tests first, then implement. Verify 80%+ coverage with cargo-llvm-cov."
 affaan-m/ECC,rule,testing,rules/angular/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/arkts/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/common/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/cpp/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/csharp/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/dart/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/fsharp/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/golang/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/java/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/kotlin/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/nuxt/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/php/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/python/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/react/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/react-native/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/ruby/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/rust/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/swift/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/typescript/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/vue/testing.md,MIT,testing,
+affaan-m/ECC,rule,testing,rules/web/testing.md,MIT,testing,
 affaan-m/ECC,skill,ai-regression-testing,skills/ai-regression-testing/SKILL.md,MIT,testing,"Regression testing strategies for AI-assisted development. Sandbox-mode API testing without database dependencies, automated bug-check workflows, and patterns to catch AI blind spots where the same model writes and reviews code. Use when ad"
 affaan-m/ECC,skill,benchmark,pi/core/skills/benchmark/SKILL.md,MIT,testing,"Measure performance baselines and detect regressions across browser Core Web Vitals (LCP, INP, CLS, page weight), API endpoint latency percentiles, and build/test feedback times, with before/after comparison stored in git-tracked .ecc/bench"
 affaan-m/ECC,skill,benchmark-methodology,skills/benchmark-methodology/SKILL.md,MIT,testing,"Score a scoped competitor set into comparable profile cards: nine weighted dimensions (positioning, voice, visual craft, offer packaging, evidence, enterprise-readiness, thought leadership, pricing, client tension) with 1-5 evidence-anchore"

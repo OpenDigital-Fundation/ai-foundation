@@ -83,7 +83,7 @@ def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> Non
                 if not kind or (kind in {"skill", "agent"} and not fm):
                     continue
                 desc = (fm or {}).get("description", "")
-                key = (s["id"], kind, name, desc[:80])
+                key = (s["id"], kind, name, desc[:80] or rel)
                 if key in seen:
                     continue
                 seen.add(key)
