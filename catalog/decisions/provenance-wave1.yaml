@@ -40,3 +40,12 @@
 - {dest: domains/code-quality/skills/debt-ledger, source: DietrichGebert/ponytail, src: skills/ponytail-debt}
 - {dest: domains/agent-engineering/skills/parallel-agents, source: obra/superpowers, src: skills/dispatching-parallel-agents}
 - {dest: domains/agent-engineering/skills/writing-skills, source: obra/superpowers, src: skills/writing-skills}
+- {dest: domains/architecture/skills/domain-modeling, source: mattpocock/skills, src: skills/engineering/domain-modeling}
+- {dest: domains/architecture/skills/decision-records/ADR-FORMAT.md, source: mattpocock/skills, src: skills/engineering/domain-modeling/ADR-FORMAT.md}
+- {dest: domains/architecture/skills/decision-records/SKILL.md, source: affaan-m/ECC, src: skills/architecture-decision-records/SKILL.md,
+   extra: [{source: mattpocock/skills, path: skills/engineering/domain-modeling/ADR-FORMAT.md}]}
+- {dest: domains/architecture/skills/codebase-design, source: mattpocock/skills, src: skills/engineering/codebase-design}
+- {dest: domains/architecture/skills/codebase-design/references/ports-and-adapters.md, source: affaan-m/ECC, src: skills/hexagonal-architecture/SKILL.md}
+- {dest: domains/architecture/skills/architecture-review, source: mattpocock/skills, src: skills/engineering/improve-codebase-architecture}
+- {dest: domains/architecture/skills/api-design, source: affaan-m/ECC, src: skills/api-design,
+   files: {references/implementation-patterns.md: skills/api-design/SKILL.md}}

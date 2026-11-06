@@ -1,2 +1,91 @@
 version: 1
-files: []
+files:
+- path: skills/api-design/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/api-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/api-design/references/implementation-patterns.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/api-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/HTML-REPORT.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/improve-codebase-architecture/HTML-REPORT.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/improve-codebase-architecture/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-design/DEEPENING.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/codebase-design/DEEPENING.md
+    license: MIT
+    modification: base
+- path: skills/codebase-design/DESIGN-IT-TWICE.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/codebase-design/DESIGN-IT-TWICE.md
+    license: MIT
+    modification: base
+- path: skills/codebase-design/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/codebase-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-design/references/ports-and-adapters.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/hexagonal-architecture/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/decision-records/ADR-FORMAT.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/ADR-FORMAT.md
+    license: MIT
+    modification: adapted
+- path: skills/decision-records/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/architecture-decision-records/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/ADR-FORMAT.md
+    license: MIT
+    modification: merged-section
+- path: skills/domain-modeling/GLOSSARY-FORMAT.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/GLOSSARY-FORMAT.md
+    license: MIT
+    modification: base
+- path: skills/domain-modeling/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/SKILL.md
+    license: MIT
+    modification: adapted

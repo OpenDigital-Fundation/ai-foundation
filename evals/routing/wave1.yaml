@@ -33,3 +33,8 @@
 - {prompt: "do a retrospective on this agent session: what slowed it down and what should change in our setup", expect: "agent-engineering:session-retrospective"}
 - {prompt: "what's the capital of Portugal?", expect: none}
 - {prompt: "translate 'good morning' to Spanish", expect: none}
+- {prompt: "we keep saying 'account' for both customers and users, help me pin down the terms", expect: "architecture:domain-modeling"}
+- {prompt: "write an ADR: we chose Postgres advisory locks over Redis for job claiming", expect: "architecture:decision-records"}
+- {prompt: "this module's interface is as big as its implementation; where should the seam go?", expect: "architecture:codebase-design"}
+- {prompt: "look at our codebase and suggest architecture improvements", expect: "architecture:architecture-review"}
+- {prompt: "design the REST endpoints for invoices, including pagination and errors", expect: "architecture:api-design"}

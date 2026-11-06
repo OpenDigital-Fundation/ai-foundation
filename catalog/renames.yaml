@@ -35,3 +35,8 @@ text:
   Call the Skill tool with "research": Use `research:source-research`
   Call the Skill tool with "prototype": Use the spike section of `workflow:brainstorming`
   Call the Skill tool with `writing-for-agents`: Use `agent-engineering:writing-for-agents`
+  Call the Skill tool with "codebase-design": Use `architecture:codebase-design`
+  call the Skill tool with "codebase-design": use `architecture:codebase-design`
+  call the Skill tool with "grilling": use `workflow:grilling`
+  call the Skill tool with "domain-modeling": use `architecture:domain-modeling`
+  the `/codebase-design` vocabulary: the `architecture:codebase-design` vocabulary

@@ -31,9 +31,14 @@ jobs:
       - name: Trigger and routing evals
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SKILL: ${{ github.event.inputs.skill }}
         run: |
-          if [ -n "${{ github.event.inputs.skill }}" ]; then
-            uv run python -m tools.evals.triggers --skill "${{ github.event.inputs.skill }}"
+          if [ -n "$SKILL" ]; then
+            if ! printf '%s' "$SKILL" | grep -Eq '^[a-z0-9-]+/[a-z0-9-]+$'; then
+              echo "invalid skill id: expected <domain>/<name>" >&2
+              exit 1
+            fi
+            uv run python -m tools.evals.triggers --skill "$SKILL"
           else
             uv run python -m tools.evals.triggers --routing
           fi

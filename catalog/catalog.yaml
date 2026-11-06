@@ -21,6 +21,42 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "obra/superpowers:skill:writing-skills"
+- id: architecture/api-design
+  type: skill
+  capability: "Design or review HTTP APIs: resources, status codes, errors, pagination, auth, rate limits, versioning."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:api-design"
+- id: architecture/architecture-review
+  type: skill
+  capability: Scan an existing codebase for deepening opportunities and walk the chosen one with the user.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:improve-codebase-architecture"
+- id: architecture/codebase-design
+  type: skill
+  capability: Design deep modules at clean seams, including ports and adapters, with a shared vocabulary.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:codebase-design"
+  - "affaan-m/ECC:skill:hexagonal-architecture"
+- id: architecture/decision-records
+  type: skill
+  capability: Record, supersede, index and read architecture decision records, one decision per file.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:architecture-decision-records"
+- id: architecture/domain-modeling
+  type: skill
+  capability: Sharpen the domain language with scenarios, keep GLOSSARY.md current, and flag decisions worth an ADR.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:domain-modeling"
 - id: code-quality/code-review
   type: skill
   capability: Pin a change, gather spec and standards, dispatch a fresh reviewer and act on numbered findings.
