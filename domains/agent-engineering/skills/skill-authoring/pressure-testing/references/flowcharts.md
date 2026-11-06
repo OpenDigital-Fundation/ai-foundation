@@ -1,6 +1,6 @@
 # Flowcharts in Skills
 
-Part of agent-engineering:writing-skills.
+Part of agent-engineering:skill-authoring.
 
 ## Flowchart Usage
 
@@ -30,7 +30,7 @@ digraph when_flowchart {
 
 See `graphviz-conventions.dot` in this directory for graphviz style rules.
 
-**Visualizing for the user:** Use `render-graphs.js` in the writing-skills directory to render a skill's flowcharts to SVG, run from there:
+**Visualizing for the user:** Use `render-graphs.js` in the `pressure-testing` directory to render a skill's flowcharts to SVG, run from there:
 ```bash
 node ./render-graphs.js ../some-skill           # Each diagram separately
 node ./render-graphs.js ../some-skill --combine # All diagrams in one SVG

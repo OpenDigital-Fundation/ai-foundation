@@ -39,7 +39,6 @@
 - {dest: domains/code-quality/skills/codebase-audit, source: DietrichGebert/ponytail, src: skills/ponytail-audit}
 - {dest: domains/code-quality/skills/debt-ledger, source: DietrichGebert/ponytail, src: skills/ponytail-debt}
 - {dest: domains/agent-engineering/skills/parallel-agents, source: obra/superpowers, src: skills/dispatching-parallel-agents}
-- {dest: domains/agent-engineering/skills/writing-skills, source: obra/superpowers, src: skills/writing-skills}
 - {dest: domains/architecture/skills/domain-modeling, source: mattpocock/skills, src: skills/engineering/domain-modeling}
 - {dest: domains/architecture/skills/decision-records/ADR-FORMAT.md, source: mattpocock/skills, src: skills/engineering/domain-modeling/ADR-FORMAT.md}
 - {dest: domains/architecture/skills/decision-records/SKILL.md, source: affaan-m/ECC, src: skills/architecture-decision-records/SKILL.md,
@@ -55,3 +54,9 @@
 - {dest: domains/security/skills/threat-modeling/SKILL.md, source: msitarzewski/agency-agents, src: security/security-architect.md}
 - {dest: domains/security/skills/threat-modeling/templates/threat-model.md, source: msitarzewski/agency-agents, src: security/security-architect.md}
 - {dest: domains/security/skills/secrets-hygiene/SKILL.md, source: msitarzewski/agency-agents, src: security/security-secrets-credential-engineer.md}
+- {dest: domains/agent-engineering/skills/skill-authoring, source: anthropics/skills, src: skills/skill-creator,
+   extra: [{source: obra/superpowers, path: skills/writing-skills/SKILL.md}, {source: mattpocock/skills, path: skills/productivity/writing-for-agents/SKILL.md}]}
+- {dest: domains/agent-engineering/skills/skill-authoring/pressure-testing, source: obra/superpowers, src: skills/writing-skills,
+   files: {GUIDE.md: skills/writing-skills/SKILL.md}}
+- {dest: domains/agent-engineering/skills/skill-authoring/references/writing-for-agents.md, source: mattpocock/skills, src: skills/productivity/writing-for-agents/SKILL.md}
+- {dest: domains/agent-engineering/skills/skill-authoring/references/environments.md, source: anthropics/skills, src: skills/skill-creator/SKILL.md}

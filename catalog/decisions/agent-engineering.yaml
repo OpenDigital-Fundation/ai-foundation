@@ -1,0 +1,20 @@
+# Curation decisions for the agent-engineering domain (wave 1). See docs/specs/agent-engineering/catalog/spec.md
+artifacts:
+  - id: agent-engineering/skill-authoring
+    type: skill
+    capability: "Create, test, benchmark and tune skills, with eval loops, pressure tests and catalog placement rules."
+    supersedes:
+      - "anthropics/skills:skill:skill-creator"
+      - "obra/superpowers:skill:writing-skills"
+      - "mattpocock/skills:skill:writing-for-agents"
+      - "affaan-m/ECC:command:skill-create"
+      - "affaan-m/ECC:skill:skill-stocktake"
+      - "affaan-m/ECC:skill:skill-comply"
+      - "affaan-m/ECC:command:skill-health"
+exclusions:
+  - {key: "anthropics/skills:skill:template-skill", reason: duplicate-of, into: [agent-engineering/skill-authoring]}
+  - {key: "affaan-m/ECC:skill:skill-scout", reason: duplicate-of, into: [agent-engineering/skill-authoring], note: "Covered by 'check before creating' against the catalog."}
+  - {key: "affaan-m/ECC:skill:skill-host-compat", reason: source-internal, note: "Lints the source's own skills; this repository's validator and adapters cover host compatibility."}
+  - {key: "affaan-m/ECC:command:skill-host-compat", reason: source-internal}
+  - {key: "obra/superpowers:skill:using-superpowers", reason: low-quality, note: "Forces skill invocation before any response; conflicts with user and repository instructions taking precedence."}
+  - {key: "obra/superpowers:skill:diagnosing-superpowers", reason: source-internal}

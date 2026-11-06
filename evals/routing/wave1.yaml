@@ -29,7 +29,7 @@
 - {prompt: "audit this whole repository: bugs, security holes, what can be deleted", expect: "code-quality:codebase-audit"}
 - {prompt: "list every shortcut we deferred in this codebase", expect: "code-quality:debt-ledger"}
 - {prompt: "these four test failures are in unrelated modules, investigate them in parallel", expect: "agent-engineering:parallel-agents"}
-- {prompt: "write a new skill that teaches the agent our release checklist", expect: "agent-engineering:writing-skills"}
+- {prompt: "write a new skill that teaches the agent our release checklist", expect: "agent-engineering:skill-authoring"}
 - {prompt: "do a retrospective on this agent session: what slowed it down and what should change in our setup", expect: "agent-engineering:session-retrospective"}
 - {prompt: "what's the capital of Portugal?", expect: none}
 - {prompt: "translate 'good morning' to Spanish", expect: none}
@@ -44,3 +44,5 @@
 - {prompt: "I accidentally committed our Stripe secret key last week", expect: "security:secrets-hygiene"}
 - {prompt: "review this .mcp.json before I merge it", expect: "security:agent-security"}
 - {prompt: "our agent reads emails and can run shell commands; how do we stop prompt injection?", expect: "security:agent-security"}
+- {prompt: "my skill never triggers when people ask for release notes; optimise its description", expect: "agent-engineering:skill-authoring"}
+- {prompt: "benchmark this skill against running without it on five test prompts", expect: "agent-engineering:skill-authoring"}

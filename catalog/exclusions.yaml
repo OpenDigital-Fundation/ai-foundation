@@ -33,6 +33,8 @@ excluded:
   reason: duplicate-of
   into:
   - workflow/finishing-a-branch
+- key: "affaan-m/ECC:command:skill-host-compat"
+  reason: source-internal
 - key: "affaan-m/ECC:rule:coding-style"
   reason: low-quality
   note: Absolute rules (always immutable, many small files) contradict following the existing style.
@@ -59,6 +61,18 @@ excluded:
 - key: "affaan-m/ECC:skill:perl-security"
   reason: out-of-scope
   note: Perl is not a supported language pack in v1.
+- key: "affaan-m/ECC:skill:skill-host-compat"
+  reason: source-internal
+  note: Lints the source's own skills; this repository's validator and adapters cover host compatibility.
+- key: "affaan-m/ECC:skill:skill-scout"
+  reason: duplicate-of
+  into:
+  - agent-engineering/skill-authoring
+  note: Covered by 'check before creating' against the catalog.
+- key: "anthropics/skills:skill:template-skill"
+  reason: duplicate-of
+  into:
+  - agent-engineering/skill-authoring
 - key: "DietrichGebert/ponytail:skill:ponytail-gain"
   reason: source-internal
   note: Displays the source's own benchmark results.
@@ -83,3 +97,8 @@ excluded:
   note: Seven-line prompt with no procedure.
 - key: "msitarzewski/agency-agents:agent:Blockchain Security Auditor"
   reason: out-of-scope
+- key: "obra/superpowers:skill:diagnosing-superpowers"
+  reason: source-internal
+- key: "obra/superpowers:skill:using-superpowers"
+  reason: low-quality
+  note: Forces skill invocation before any response; conflicts with user and repository instructions taking precedence.

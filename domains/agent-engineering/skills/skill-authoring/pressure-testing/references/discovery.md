@@ -1,6 +1,6 @@
 # Writing SKILL.md for Discovery
 
-Part of agent-engineering:writing-skills: the SKILL.md template and how to name,
+Part of agent-engineering:skill-authoring: the SKILL.md template and how to name,
 describe and size a skill so agents find it and read it.
 
 ## SKILL.md Structure

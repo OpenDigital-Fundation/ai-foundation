@@ -14,13 +14,19 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "mattpocock/skills:skill:retro"
-- id: agent-engineering/writing-skills
+- id: agent-engineering/skill-authoring
   type: skill
-  capability: "Author or edit a skill test-first: watch an agent fail without it, write it, and close loopholes."
+  capability: Create, test, benchmark and tune skills, with eval loops, pressure tests and catalog placement rules.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "anthropics/skills:skill:skill-creator"
   - "obra/superpowers:skill:writing-skills"
+  - "mattpocock/skills:skill:writing-for-agents"
+  - "affaan-m/ECC:command:skill-create"
+  - "affaan-m/ECC:skill:skill-stocktake"
+  - "affaan-m/ECC:skill:skill-comply"
+  - "affaan-m/ECC:command:skill-health"
 - id: architecture/api-design
   type: skill
   capability: "Design or review HTTP APIs: resources, status codes, errors, pagination, auth, rate limits, versioning."

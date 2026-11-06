@@ -1,11 +1,5 @@
----
-name: writing-skills
-description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
-license: MIT
-metadata:
-  domain: agent-engineering
-  status: experimental
----
+Part of agent-engineering:skill-authoring: the test-first discipline for skills that must hold under pressure.
+
 # Writing Skills
 
 ## Overview

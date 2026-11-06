@@ -12,7 +12,7 @@ references:
   superpowers:systematic-debugging: debugging:systematic-debugging
   superpowers:requesting-code-review: code-quality:code-review
   superpowers:receiving-code-review: code-quality:receiving-code-review
-  superpowers:writing-skills: agent-engineering:writing-skills
+  superpowers:writing-skills: agent-engineering:skill-authoring
   superpowers:using-superpowers: agent-engineering:using-skills
 text:
   your human partner's: the user's
@@ -34,7 +34,7 @@ text:
   Call the Skill tool with "domain-modeling": Use `architecture:domain-modeling`
   Call the Skill tool with "research": Use `research:source-research`
   Call the Skill tool with "prototype": Use the spike section of `workflow:brainstorming`
-  Call the Skill tool with `writing-for-agents`: Use `agent-engineering:writing-for-agents`
+  Call the Skill tool with `writing-for-agents`: Use `agent-engineering:skill-authoring` (its writing guide)
   Call the Skill tool with "codebase-design": Use `architecture:codebase-design`
   call the Skill tool with "codebase-design": use `architecture:codebase-design`
   call the Skill tool with "grilling": use `workflow:grilling`

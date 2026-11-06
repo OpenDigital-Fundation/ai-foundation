@@ -14,73 +14,223 @@ files:
     path: skills/engineering/retro/SKILL.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/SKILL.md
+- path: skills/skill-authoring/LICENSE.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/LICENSE.txt
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/SKILL.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/SKILL.md
+    license: MIT
+    modification: merged-section
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/productivity/writing-for-agents/SKILL.md
+    license: MIT
+    modification: merged-section
+- path: skills/skill-authoring/agents/analyzer.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/agents/analyzer.md
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/agents/comparator.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/agents/comparator.md
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/agents/grader.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/agents/grader.md
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/assets/eval_review.html
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/assets/eval_review.html
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/eval-viewer/generate_review.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/eval-viewer/generate_review.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/eval-viewer/viewer.html
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/eval-viewer/viewer.html
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/pressure-testing/GUIDE.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/SKILL.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/references/CLAUDE_MD_TESTING.md
+- path: skills/skill-authoring/pressure-testing/references/CLAUDE_MD_TESTING.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/CLAUDE_MD_TESTING.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/references/anthropic-best-practices.md
+- path: skills/skill-authoring/pressure-testing/references/anthropic-best-practices.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/anthropic-best-practices.md
     license: MIT
     modification: base
-- path: skills/writing-skills/references/bulletproofing.md
+- path: skills/skill-authoring/pressure-testing/references/bulletproofing.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/bulletproofing.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/references/discovery.md
+- path: skills/skill-authoring/pressure-testing/references/discovery.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/discovery.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/references/flowcharts.md
+- path: skills/skill-authoring/pressure-testing/references/flowcharts.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/flowcharts.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/references/graphviz-conventions.dot
+- path: skills/skill-authoring/pressure-testing/references/graphviz-conventions.dot
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/graphviz-conventions.dot
     license: MIT
     modification: base
-- path: skills/writing-skills/references/persuasion-principles.md
+- path: skills/skill-authoring/pressure-testing/references/persuasion-principles.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/persuasion-principles.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/references/testing-skills-with-subagents.md
+- path: skills/skill-authoring/pressure-testing/references/testing-skills-with-subagents.md
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/references/testing-skills-with-subagents.md
     license: MIT
     modification: adapted
-- path: skills/writing-skills/render-graphs.js
+- path: skills/skill-authoring/pressure-testing/render-graphs.js
   derived_from:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-skills/render-graphs.js
     license: MIT
     modification: adapted
+- path: skills/skill-authoring/references/environments.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/skill-authoring/references/schemas.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/references/schemas.md
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/references/writing-for-agents.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/productivity/writing-for-agents/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/skill-authoring/scripts/__init__.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/__init__.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/aggregate_benchmark.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/aggregate_benchmark.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/generate_report.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/generate_report.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/improve_description.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/improve_description.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/package_skill.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/package_skill.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/quick_validate.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/quick_validate.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/run_eval.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/run_eval.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/run_loop.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/run_loop.py
+    license: Apache-2.0
+    modification: base
+- path: skills/skill-authoring/scripts/utils.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/skill-creator/scripts/utils.py
+    license: Apache-2.0
+    modification: base
