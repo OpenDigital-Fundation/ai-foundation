@@ -1,0 +1,10 @@
+{
+  "name": "ai-engineering",
+  "version": "0.0.0",
+  "description": "Building products with LLMs - model APIs, MCP servers, RAG, prompts, product evals, cost.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

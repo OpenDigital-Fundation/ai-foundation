@@ -1,0 +1,76 @@
+version: 1
+excluded:
+- key: "affaan-m/ECC:command:checkpoint"
+  reason: duplicate-of
+  into:
+  - workflow/executing-plans
+  note: The execution ledger plays this role.
+- key: "affaan-m/ECC:command:epic-claim"
+  reason: source-internal
+  note: Coordination state specific to the source's own tooling.
+- key: "affaan-m/ECC:command:epic-publish"
+  reason: duplicate-of
+  into:
+  - workflow/issue-breakdown
+- key: "affaan-m/ECC:command:epic-sync"
+  reason: source-internal
+- key: "affaan-m/ECC:command:epic-unblock"
+  reason: source-internal
+- key: "affaan-m/ECC:command:epic-validate"
+  reason: source-internal
+- key: "affaan-m/ECC:command:orch-fix-defect"
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: "affaan-m/ECC:command:orch-refine-code"
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: "affaan-m/ECC:command:project-init"
+  reason: source-internal
+  note: Installs the source's own bundle.
+- key: "affaan-m/ECC:command:prp-commit"
+  reason: duplicate-of
+  into:
+  - workflow/finishing-a-branch
+- key: "affaan-m/ECC:rule:coding-style"
+  reason: low-quality
+  note: Absolute rules (always immutable, many small files) contradict following the existing style.
+- key: "affaan-m/ECC:rule:patterns"
+  reason: low-quality
+  note: Generic pattern catalogue without decision criteria; conflicts with reuse-what-exists.
+- key: "affaan-m/ECC:rule:performance"
+  reason: low-quality
+  note: Dated model-selection advice.
+- key: "affaan-m/ECC:rule:README"
+  reason: source-internal
+- key: "affaan-m/ECC:skill:orch-fix-defect"
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: "affaan-m/ECC:skill:orch-refine-code"
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: "DietrichGebert/ponytail:skill:ponytail-gain"
+  reason: source-internal
+  note: Displays the source's own benchmark results.
+- key: "DietrichGebert/ponytail:skill:ponytail-help"
+  reason: source-internal
+- key: "mattpocock/skills:skill:ask-matt"
+  reason: source-internal
+  note: Router over the source's own skills.
+- key: "mattpocock/skills:skill:claude-handoff"
+  reason: duplicate-of
+  into:
+  - workflow/handoff
+  note: Harness-specific variant that spawns a background agent.
+- key: "mattpocock/skills:skill:setup-matt-pocock-skills"
+  reason: split
+  into:
+  - workflow/issue-breakdown
+  - workflow/issue-triage
+  note: Tracker docs moved to domains/workflow/knowledge/issue-tracking/; setup step replaced by AGENTS.md conventions.
+- key: "mattpocock/skills:skill:wait-what"
+  reason: low-quality
+  note: Seven-line prompt with no procedure.

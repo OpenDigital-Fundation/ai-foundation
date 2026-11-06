@@ -1,0 +1,86 @@
+version: 1
+files:
+- path: skills/parallel-agents/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/dispatching-parallel-agents/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/session-retrospective/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/retro/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/references/CLAUDE_MD_TESTING.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/CLAUDE_MD_TESTING.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/references/anthropic-best-practices.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/anthropic-best-practices.md
+    license: MIT
+    modification: base
+- path: skills/writing-skills/references/bulletproofing.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/bulletproofing.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/references/discovery.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/discovery.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/references/flowcharts.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/flowcharts.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/references/graphviz-conventions.dot
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/graphviz-conventions.dot
+    license: MIT
+    modification: base
+- path: skills/writing-skills/references/persuasion-principles.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/persuasion-principles.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/references/testing-skills-with-subagents.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/references/testing-skills-with-subagents.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-skills/render-graphs.js
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-skills/render-graphs.js
+    license: MIT
+    modification: adapted

@@ -1,0 +1,42 @@
+version: 1
+files:
+- path: skills/test-driven-development/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/test-driven-development/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/tdd/SKILL.md
+    license: MIT
+    modification: merged-section
+- path: skills/test-driven-development/references/mocking.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/tdd/mocking.md
+    license: MIT
+    modification: base
+- path: skills/test-driven-development/references/test-examples.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/tdd/tests.md
+    license: MIT
+    modification: base
+- path: skills/test-driven-development/writing-good-tests.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/test-driven-development/writing-good-tests.md
+    license: MIT
+    modification: adapted
+- path: skills/verification-before-completion/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/verification-before-completion/SKILL.md
+    license: MIT
+    modification: adapted

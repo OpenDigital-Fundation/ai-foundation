@@ -1,0 +1,17 @@
+version: 1
+sources:
+  - {id: obra/superpowers, url: https://github.com/obra/superpowers, commit: 22f0b463e7a5e579904dd6211a520321035526f7, license: MIT, policy: merge}
+  - {id: mattpocock/skills, url: https://github.com/mattpocock/skills, commit: 4ae2317ddb22b046e26455e4f9c9b3aaaf62212d, license: MIT, policy: merge}
+  - {id: affaan-m/ECC, url: https://github.com/affaan-m/ECC, commit: b38be6a7f6350964d59328b52f0624e1d1d552d1, license: MIT, policy: merge}
+  - {id: multica-ai/andrej-karpathy-skills, url: https://github.com/multica-ai/andrej-karpathy-skills, commit: 2c606141936f1eeef17fa3043a72095b4765b9c2, license: MIT, policy: merge, note: "MIT declared in README only; no LICENSE file"}
+  - {id: msitarzewski/agency-agents, url: https://github.com/msitarzewski/agency-agents, commit: b859c515d813efcfc4755d3471dd9e7686c7706d, license: MIT, policy: merge}
+  - {id: anthropics/skills, url: https://github.com/anthropics/skills, commit: ca45fc496a3436251f191354091d557da31c15b5, license: Apache-2.0, policy: merge, note: "Per-skill licences. docx, pdf, pptx, xlsx are proprietary and must only be referenced."}
+  - {id: nextlevelbuilder/ui-ux-pro-max-skill, url: https://github.com/nextlevelbuilder/ui-ux-pro-max-skill, commit: b7d5353e0130feb8c5574ef1251f8a1db1873ccb, license: MIT, policy: merge}
+  - {id: Nutlope/hallmark, url: https://github.com/Nutlope/hallmark, commit: 407fa689f4a276f2fd389208d271d0fef08f5058, license: MIT, policy: merge}
+  - {id: DietrichGebert/ponytail, url: https://github.com/DietrichGebert/ponytail, commit: 96608e078b2d5ea607c5c3b8b5a54d1c1fba6846, license: MIT, policy: merge}
+  - {id: SecurityStandards/skill-security-audit, url: https://github.com/SecurityStandards/skill-security-audit, commit: c1c8a8c1471069fb0e188eeaff69b8e8db6564a8, license: MIT, policy: merge}
+  - {id: SecurityStandards/agent-reverse-engineer, url: https://github.com/SecurityStandards/agent-reverse-engineer, commit: f254f5ac2b804b353a711264bb178f43fdf07867, license: MIT, policy: reference, note: "Product/MCP server, not a skill collection"}
+  - {id: SecurityStandards/agent-pentester, url: https://github.com/SecurityStandards/agent-pentester, commit: 2468b67d9e40d70d0b189462c5041c24e1dc886c, license: AGPL-3.0, policy: reference}
+  - {id: SecurityStandards/security-standards, url: https://github.com/SecurityStandards/security-standards, commit: 3bd356a95bbc4273ccca92a65ecce564d281bb57, license: NOASSERTION, policy: reference, note: "No licence declared"}
+  - {id: SecurityStandards/CTOSecurityChecklist, url: https://github.com/SecurityStandards/CTOSecurityChecklist, commit: aeea8c369bd066d1234167c0a791e11710225259, license: CC-BY-NC-SA-4.0, policy: reference}
+  - {id: SecurityStandards/DevOpsSecurityChecklist, url: https://github.com/SecurityStandards/DevOpsSecurityChecklist, commit: 568f21fb6b0b35e7df0721097ae2fd378f78053d, license: CC-BY-NC-SA-4.0, policy: reference}

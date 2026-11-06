@@ -1,0 +1,10 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "description": "Visual interface - aesthetic direction, typography, colour, layout, tokens, design systems, components, finish.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

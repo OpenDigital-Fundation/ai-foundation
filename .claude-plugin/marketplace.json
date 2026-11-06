@@ -1,0 +1,186 @@
+{
+  "name": "opendigital-ai-foundation",
+  "owner": {
+    "name": "OpenDigital"
+  },
+  "metadata": {
+    "description": "Curated, deduplicated skills, agents, workflows and rules for AI agents, one plugin per domain."
+  },
+  "plugins": [
+    {
+      "name": "principles",
+      "source": "./domains/principles",
+      "description": "Always-on coding behaviour for agents - simplicity, surgical changes, explicit assumptions, verifiable success criteria.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "workflow",
+      "source": "./domains/workflow",
+      "description": "Delivery lifecycle - ideation, specs, plans, execution, worktrees, branch completion, handoff, retrospectives, tickets.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "architecture",
+      "source": "./domains/architecture",
+      "description": "System and code design - modules, domain models, ADRs, APIs, boundaries.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "code-quality",
+      "source": "./domains/code-quality",
+      "description": "Evaluating and improving existing code - giving and receiving review, simplification, refactoring, debt, repository audits.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "testing",
+      "source": "./domains/testing",
+      "description": "Proving behaviour - TDD, test strategy, end-to-end and browser testing, verification before completion.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "debugging",
+      "source": "./domains/debugging",
+      "description": "Finding the cause of failures - diagnosis, build errors, silent failures.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "security",
+      "source": "./domains/security",
+      "description": "Application and agent security - audits, threat modelling, secrets, supply chain, hardening.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "languages",
+      "source": "./domains/languages",
+      "description": "Idiomatic knowledge per programming language and framework, one pack per language.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "data",
+      "source": "./domains/data",
+      "description": "Databases, migrations, data modelling and data engineering.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "ui",
+      "source": "./domains/ui",
+      "description": "Visual interface - aesthetic direction, typography, colour, layout, tokens, design systems, components, finish.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "ux",
+      "source": "./domains/ux",
+      "description": "User experience - user research, flows, information architecture, usability heuristics, microcopy.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "accessibility",
+      "source": "./domains/accessibility",
+      "description": "Accessibility conformance and audits - WCAG, ARIA, assistive technology.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "brand",
+      "source": "./domains/brand",
+      "description": "Brand identity, voice and style guides.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "creative-media",
+      "source": "./domains/creative-media",
+      "description": "Visual pieces and media - banners, slides, generative art, GIFs, images.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "ai-engineering",
+      "source": "./domains/ai-engineering",
+      "description": "Building products with LLMs - model APIs, MCP servers, RAG, prompts, product evals, cost.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "agent-engineering",
+      "source": "./domains/agent-engineering",
+      "description": "Configuring and operating coding agents - skill authoring, harnesses, orchestration, subagents, loops, memory, context.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "platform",
+      "source": "./domains/platform",
+      "description": "Git and GitHub, CI/CD, containers, deployment, observability, SRE, incidents.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "documents",
+      "source": "./domains/documents",
+      "description": "Office documents and technical or corporate writing.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "research",
+      "source": "./domains/research",
+      "description": "Source-backed research with citations, literature reviews.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "product",
+      "source": "./domains/product",
+      "description": "Product management - PRDs, prioritisation, feedback synthesis, experiments.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "marketing",
+      "source": "./domains/marketing",
+      "description": "SEO and answer-engine optimisation, content, social, email, paid media.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "sales",
+      "source": "./domains/sales",
+      "description": "Prospecting, qualification, proposals, pipeline.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "finance",
+      "source": "./domains/finance",
+      "description": "Bookkeeping, FP&A, pricing, tax.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "legal-compliance",
+      "source": "./domains/legal-compliance",
+      "description": "Contracts, regulatory compliance, legal privacy.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "operations",
+      "source": "./domains/operations",
+      "description": "Project management, people operations, customer support, processes.",
+      "version": "0.0.0",
+      "license": "MIT"
+    }
+  ]
+}

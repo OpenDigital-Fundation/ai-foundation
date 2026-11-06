@@ -1,0 +1,150 @@
+# Curation decisions for the workflow domain. See docs/specs/workflow/catalog/spec.md
+artifacts:
+- id: workflow/brainstorming
+  type: skill
+  capability: Find out what the user wants and why, compare approaches, and get a written spec approved before building.
+  supersedes:
+  - obra/superpowers:skill:brainstorming
+  - mattpocock/skills:skill:to-spec
+  - mattpocock/skills:skill:prototype
+  - msitarzewski/agency-agents:agent:Rapid Prototyper
+  - affaan-m/ECC:command:plan-prd
+  - affaan-m/ECC:command:prp-prd
+  - affaan-m/ECC:skill:intent-driven-development
+- id: workflow/grilling
+  type: skill
+  capability: Stress-test an existing plan or decision through rounds of questions over a design tree.
+  supersedes:
+  - mattpocock/skills:skill:grilling
+  - mattpocock/skills:skill:grill-me
+  - mattpocock/skills:skill:grill-with-docs
+- id: workflow/writing-plans
+  type: skill
+  capability: Turn an approved spec into plan.md and tasks.md with exact files, interfaces, tests and commands.
+  supersedes:
+  - obra/superpowers:skill:writing-plans
+  - affaan-m/ECC:agent:planner
+  - affaan-m/ECC:command:plan
+  - affaan-m/ECC:command:prp-plan
+- id: workflow/executing-plans
+  type: skill
+  capability: Build an approved plan task by task, via subagents or inline, with TDD, a ledger and a final branch review.
+  supersedes:
+  - obra/superpowers:skill:executing-plans
+  - obra/superpowers:skill:subagent-driven-development
+  - mattpocock/skills:skill:implement
+  - mattpocock/skills:skill:implement-spec
+  - affaan-m/ECC:command:prp-implement
+- id: workflow/git-worktrees
+  type: skill
+  capability: Create an isolated worktree or branch from the right base with a passing baseline before building.
+  supersedes:
+  - obra/superpowers:skill:using-git-worktrees
+- id: workflow/finishing-a-branch
+  type: skill
+  capability: 'Decide how finished work is integrated: merge, pull request, keep or discard, and clean up.'
+  supersedes:
+  - obra/superpowers:skill:finishing-a-development-branch
+  - affaan-m/ECC:command:prp-pr
+- id: workflow/handoff
+  type: skill
+  capability: Write or resume a handoff document so another session or person continues without re-deriving context.
+  supersedes:
+  - mattpocock/skills:skill:handoff
+  - affaan-m/ECC:command:save-session
+  - affaan-m/ECC:command:resume-session
+- id: workflow/issue-breakdown
+  type: skill
+  capability: Break approved work into tracer-bullet tickets with blocking edges and publish them to the tracker.
+  supersedes:
+  - mattpocock/skills:skill:to-tickets
+  - affaan-m/ECC:command:epic-decompose
+  - affaan-m/ECC:skill:story-lifecycle
+- id: workflow/initiative-mapping
+  type: skill
+  capability: Chart an initiative too big for one session as a map of decision tickets resolved one at a time.
+  supersedes:
+  - mattpocock/skills:skill:wayfinder
+- id: workflow/issue-triage
+  type: skill
+  capability: Move issues and external pull requests through triage roles and write agent-ready briefs.
+  supersedes:
+  - mattpocock/skills:skill:triage
+- id: workflow/feature-delivery
+  type: workflow
+  capability: Orchestrate the stages from idea to merge-ready branch with an approval gate between each stage.
+  supersedes:
+  - affaan-m/ECC:skill:orch-add-feature
+  - affaan-m/ECC:skill:orch-change-feature
+  - affaan-m/ECC:skill:orch-pipeline
+  - affaan-m/ECC:command:orch-add-feature
+  - affaan-m/ECC:command:orch-change-feature
+  - affaan-m/ECC:command:feature-dev
+  - affaan-m/ECC:command:feature-development
+- id: agent-engineering/session-retrospective
+  type: skill
+  capability: Review a coding-agent session and propose ranked improvements to the agent's environment.
+  supersedes:
+  - mattpocock/skills:skill:retro
+- id: workflow/issue-tracking
+  type: knowledge
+  capability: How to create, link, label and query issues on GitHub, GitLab or local markdown trackers.
+exclusions:
+- key: affaan-m/ECC:command:epic-claim
+  reason: source-internal
+  note: Coordination state specific to the source's own tooling.
+- key: affaan-m/ECC:command:epic-publish
+  reason: duplicate-of
+  into:
+  - workflow/issue-breakdown
+- key: affaan-m/ECC:command:epic-sync
+  reason: source-internal
+- key: affaan-m/ECC:command:epic-unblock
+  reason: source-internal
+- key: affaan-m/ECC:command:epic-validate
+  reason: source-internal
+- key: affaan-m/ECC:command:prp-commit
+  reason: duplicate-of
+  into:
+  - workflow/finishing-a-branch
+- key: affaan-m/ECC:command:project-init
+  reason: source-internal
+  note: Installs the source's own bundle.
+- key: affaan-m/ECC:command:checkpoint
+  reason: duplicate-of
+  into:
+  - workflow/executing-plans
+  note: The execution ledger plays this role.
+- key: affaan-m/ECC:command:orch-fix-defect
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: affaan-m/ECC:command:orch-refine-code
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: affaan-m/ECC:skill:orch-fix-defect
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: affaan-m/ECC:skill:orch-refine-code
+  reason: duplicate-of
+  into:
+  - workflow/feature-delivery
+- key: mattpocock/skills:skill:claude-handoff
+  reason: duplicate-of
+  into:
+  - workflow/handoff
+  note: Harness-specific variant that spawns a background agent.
+- key: mattpocock/skills:skill:wait-what
+  reason: low-quality
+  note: Seven-line prompt with no procedure.
+- key: mattpocock/skills:skill:setup-matt-pocock-skills
+  reason: split
+  into:
+  - workflow/issue-breakdown
+  - workflow/issue-triage
+  note: Tracker docs moved to domains/workflow/knowledge/issue-tracking/; setup step replaced by AGENTS.md conventions.
+- key: mattpocock/skills:skill:ask-matt
+  reason: source-internal
+  note: Router over the source's own skills.

@@ -1,0 +1,13 @@
+name: fullstack-web
+description: Daily engineering loop for a TypeScript web product.
+include:
+- principles/*
+- workflow/*
+- testing/*
+- debugging/*
+- code-quality/*
+- architecture/*
+- languages/typescript
+- ui/*
+- ux/*
+- accessibility/*

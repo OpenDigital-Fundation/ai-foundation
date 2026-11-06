@@ -1,0 +1,209 @@
+version: 1
+artifacts:
+- id: agent-engineering/parallel-agents
+  type: skill
+  capability: Dispatch one focused subagent per independent task and integrate their verified results.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:dispatching-parallel-agents"
+- id: agent-engineering/session-retrospective
+  type: skill
+  capability: Review a coding-agent session and propose ranked improvements to the agent's environment.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:retro"
+- id: agent-engineering/writing-skills
+  type: skill
+  capability: "Author or edit a skill test-first: watch an agent fail without it, write it, and close loopholes."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:writing-skills"
+- id: code-quality/code-review
+  type: skill
+  capability: Pin a change, gather spec and standards, dispatch a fresh reviewer and act on numbered findings.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:requesting-code-review"
+  - "mattpocock/skills:skill:code-review"
+  - "DietrichGebert/ponytail:skill:ponytail-review"
+  - "affaan-m/ECC:command:code-review"
+  - "affaan-m/ECC:command:review-pr"
+- id: code-quality/code-reviewer
+  type: agent
+  capability: Read-only, fresh-context reviewer that reports evidence-backed findings by severity with a verdict.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:code-reviewer"
+  - "msitarzewski/agency-agents:agent:Code Reviewer"
+- id: code-quality/codebase-audit
+  type: skill
+  capability: Audit a whole repository for bugs, risk, scale, missing tests, slowness and bloat in a ranked report.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "DietrichGebert/ponytail:skill:ponytail-audit"
+- id: code-quality/debt-ledger
+  type: skill
+  capability: Collect every recorded shortcut comment into one ranked technical-debt ledger.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "DietrichGebert/ponytail:skill:ponytail-debt"
+- id: code-quality/receiving-code-review
+  type: skill
+  capability: Verify review findings before acting, push back with evidence, and fix in severity order.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:receiving-code-review"
+- id: debugging/systematic-debugging
+  type: skill
+  capability: Build a tight feedback loop on the exact symptom, find the root cause from evidence, then fix with a regression
+    test.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:systematic-debugging"
+  - "mattpocock/skills:skill:diagnosing-bugs"
+- id: principles/coding-discipline
+  type: skill
+  capability: Make the smallest complete change, surface assumptions, keep diffs surgical and define a verifiable check.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "DietrichGebert/ponytail:skill:ponytail"
+  - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
+  - "msitarzewski/agency-agents:agent:Minimal Change Engineer"
+- id: testing/test-driven-development
+  type: skill
+  capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:test-driven-development"
+  - "mattpocock/skills:skill:tdd"
+  - "affaan-m/ECC:skill:tdd-workflow"
+  - "affaan-m/ECC:agent:tdd-guide"
+- id: testing/verification-before-completion
+  type: skill
+  capability: Run verification fresh and read the output before claiming work is complete, fixed or passing.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:verification-before-completion"
+  - "affaan-m/ECC:skill:verification-loop"
+  - "msitarzewski/agency-agents:agent:Reality Checker"
+  - "msitarzewski/agency-agents:agent:Evidence Collector"
+- id: workflow/brainstorming
+  type: skill
+  capability: Find out what the user wants and why, compare approaches, and get a written spec approved before building.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:brainstorming"
+  - "mattpocock/skills:skill:to-spec"
+  - "mattpocock/skills:skill:prototype"
+  - "msitarzewski/agency-agents:agent:Rapid Prototyper"
+  - "affaan-m/ECC:command:plan-prd"
+  - "affaan-m/ECC:command:prp-prd"
+  - "affaan-m/ECC:skill:intent-driven-development"
+- id: workflow/executing-plans
+  type: skill
+  capability: Build an approved plan task by task, via subagents or inline, with TDD, a ledger and a final branch review.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:executing-plans"
+  - "obra/superpowers:skill:subagent-driven-development"
+  - "mattpocock/skills:skill:implement"
+  - "mattpocock/skills:skill:implement-spec"
+  - "affaan-m/ECC:command:prp-implement"
+- id: workflow/feature-delivery
+  type: workflow
+  capability: Orchestrate the stages from idea to merge-ready branch with an approval gate between each stage.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:orch-add-feature"
+  - "affaan-m/ECC:skill:orch-change-feature"
+  - "affaan-m/ECC:skill:orch-pipeline"
+  - "affaan-m/ECC:command:orch-add-feature"
+  - "affaan-m/ECC:command:orch-change-feature"
+  - "affaan-m/ECC:command:feature-dev"
+  - "affaan-m/ECC:command:feature-development"
+- id: workflow/finishing-a-branch
+  type: skill
+  capability: "Decide how finished work is integrated: merge, pull request, keep or discard, and clean up."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:finishing-a-development-branch"
+  - "affaan-m/ECC:command:prp-pr"
+- id: workflow/git-worktrees
+  type: skill
+  capability: Create an isolated worktree or branch from the right base with a passing baseline before building.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:using-git-worktrees"
+- id: workflow/grilling
+  type: skill
+  capability: Stress-test an existing plan or decision through rounds of questions over a design tree.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:grilling"
+  - "mattpocock/skills:skill:grill-me"
+  - "mattpocock/skills:skill:grill-with-docs"
+- id: workflow/handoff
+  type: skill
+  capability: Write or resume a handoff document so another session or person continues without re-deriving context.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:handoff"
+  - "affaan-m/ECC:command:save-session"
+  - "affaan-m/ECC:command:resume-session"
+- id: workflow/initiative-mapping
+  type: skill
+  capability: Chart an initiative too big for one session as a map of decision tickets resolved one at a time.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:wayfinder"
+- id: workflow/issue-breakdown
+  type: skill
+  capability: Break approved work into tracer-bullet tickets with blocking edges and publish them to the tracker.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:to-tickets"
+  - "affaan-m/ECC:command:epic-decompose"
+  - "affaan-m/ECC:skill:story-lifecycle"
+- id: workflow/issue-tracking
+  type: knowledge
+  capability: How to create, link, label and query issues on GitHub, GitLab or local markdown trackers.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: workflow/issue-triage
+  type: skill
+  capability: Move issues and external pull requests through triage roles and write agent-ready briefs.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "mattpocock/skills:skill:triage"
+- id: workflow/writing-plans
+  type: skill
+  capability: Turn an approved spec into plan.md and tasks.md with exact files, interfaces, tests and commands.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "obra/superpowers:skill:writing-plans"
+  - "affaan-m/ECC:agent:planner"
+  - "affaan-m/ECC:command:plan"
+  - "affaan-m/ECC:command:prp-plan"

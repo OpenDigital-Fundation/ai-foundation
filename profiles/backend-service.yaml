@@ -1,0 +1,12 @@
+name: backend-service
+description: Daily engineering loop for an API or backend service.
+include:
+- principles/*
+- workflow/*
+- testing/*
+- debugging/*
+- code-quality/*
+- architecture/*
+- data/*
+- platform/*
+- security/*

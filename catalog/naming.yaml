@@ -1,0 +1,27 @@
+# Terms that must not appear as a dash-separated token in any published artifact name.
+# See docs/adr/foundation/unbranded-naming.md
+version: 1
+forbidden_tokens:
+  # superlatives and version markers
+  - pro
+  - max
+  - ultra
+  - ultimate
+  - mega
+  - super
+  - v2
+  - v3
+  # source brands and authors
+  - superpowers
+  - ponytail
+  - ecc
+  - matt
+  - pocock
+  - karpathy
+  - hallmark
+  - agency
+  - shannon
+  - anthropic
+  - claude
+forbidden_substrings:
+  - ui-ux        # a name that spans the ui and ux domains

@@ -1,0 +1,10 @@
+{
+  "name": "data",
+  "version": "0.0.0",
+  "description": "Databases, migrations, data modelling and data engineering.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

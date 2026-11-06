@@ -1,0 +1,29 @@
+# Domain taxonomy. Each domain owns the capabilities described by its boundary.
+# See docs/specs/foundation/catalog-governance/spec.md (R1). New domains require an ADR.
+version: 1
+domains:
+  principles: Always-on coding behaviour for agents - simplicity, surgical changes, explicit assumptions, verifiable success criteria.
+  workflow: Delivery lifecycle - ideation, specs, plans, execution, worktrees, branch completion, handoff, retrospectives, tickets.
+  architecture: System and code design - modules, domain models, ADRs, APIs, boundaries.
+  code-quality: Evaluating and improving existing code - giving and receiving review, simplification, refactoring, debt, repository audits.
+  testing: Proving behaviour - TDD, test strategy, end-to-end and browser testing, verification before completion.
+  debugging: Finding the cause of failures - diagnosis, build errors, silent failures.
+  security: Application and agent security - audits, threat modelling, secrets, supply chain, hardening.
+  languages: Idiomatic knowledge per programming language and framework, one pack per language.
+  data: Databases, migrations, data modelling and data engineering.
+  ui: Visual interface - aesthetic direction, typography, colour, layout, tokens, design systems, components, finish.
+  ux: User experience - user research, flows, information architecture, usability heuristics, microcopy.
+  accessibility: Accessibility conformance and audits - WCAG, ARIA, assistive technology.
+  brand: Brand identity, voice and style guides.
+  creative-media: Visual pieces and media - banners, slides, generative art, GIFs, images.
+  ai-engineering: Building products with LLMs - model APIs, MCP servers, RAG, prompts, product evals, cost.
+  agent-engineering: Configuring and operating coding agents - skill authoring, harnesses, orchestration, subagents, loops, memory, context.
+  platform: Git and GitHub, CI/CD, containers, deployment, observability, SRE, incidents.
+  documents: Office documents and technical or corporate writing.
+  research: Source-backed research with citations, literature reviews.
+  product: Product management - PRDs, prioritisation, feedback synthesis, experiments.
+  marketing: SEO and answer-engine optimisation, content, social, email, paid media.
+  sales: Prospecting, qualification, proposals, pipeline.
+  finance: Bookkeeping, FP&A, pricing, tax.
+  legal-compliance: Contracts, regulatory compliance, legal privacy.
+  operations: Project management, people operations, customer support, processes.

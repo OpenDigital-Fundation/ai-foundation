@@ -1,0 +1,23 @@
+# Curation decisions for the principles domain. See docs/specs/principles/catalog/spec.md
+artifacts:
+  - id: principles/coding-discipline
+    type: skill
+    capability: "Make the smallest complete change, surface assumptions, keep diffs surgical and define a verifiable check."
+    supersedes:
+      - "DietrichGebert/ponytail:skill:ponytail"
+      - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
+      - "msitarzewski/agency-agents:agent:Minimal Change Engineer"
+exclusions:
+  - {key: "affaan-m/ECC:rule:coding-style", reason: low-quality, note: "Absolute rules (always immutable, many small files) contradict following the existing style."}
+  - {key: "affaan-m/ECC:rule:patterns", reason: low-quality, note: "Generic pattern catalogue without decision criteria; conflicts with reuse-what-exists."}
+  - {key: "affaan-m/ECC:rule:performance", reason: low-quality, note: "Dated model-selection advice."}
+  - {key: "affaan-m/ECC:rule:README", reason: source-internal}
+  - {key: "DietrichGebert/ponytail:skill:ponytail-help", reason: source-internal}
+  - {key: "DietrichGebert/ponytail:skill:ponytail-gain", reason: source-internal, note: "Displays the source's own benchmark results."}
+provenance:
+  principles:
+    - path: skills/coding-discipline/SKILL.md
+      derived_from:
+        - {source: DietrichGebert/ponytail, commit: 96608e0, path: skills/ponytail/SKILL.md, license: MIT, modification: base}
+        - {source: multica-ai/andrej-karpathy-skills, commit: 2c60614, path: CLAUDE.md, license: MIT, modification: merged-section}
+        - {source: msitarzewski/agency-agents, commit: b859c51, path: engineering/engineering-minimal-change-engineer.md, license: MIT, modification: merged-section}

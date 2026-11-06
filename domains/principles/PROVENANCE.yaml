@@ -1,0 +1,19 @@
+version: 1
+files:
+- path: skills/coding-discipline/SKILL.md
+  derived_from:
+  - source: DietrichGebert/ponytail
+    commit: 96608e0
+    path: skills/ponytail/SKILL.md
+    license: MIT
+    modification: base
+  - source: multica-ai/andrej-karpathy-skills
+    commit: 2c60614
+    path: CLAUDE.md
+    license: MIT
+    modification: merged-section
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-minimal-change-engineer.md
+    license: MIT
+    modification: merged-section

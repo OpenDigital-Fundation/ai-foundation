@@ -1,0 +1,14 @@
+{
+  "name": "workflow",
+  "version": "0.0.0",
+  "description": "Delivery lifecycle - ideation, specs, plans, execution, worktrees, branch completion, handoff, retrospectives, tickets.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation",
+  "skills": [
+    "./skills/",
+    "./workflows/"
+  ]
+}

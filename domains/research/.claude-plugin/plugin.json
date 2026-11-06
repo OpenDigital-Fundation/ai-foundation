@@ -1,0 +1,10 @@
+{
+  "name": "research",
+  "version": "0.0.0",
+  "description": "Source-backed research with citations, literature reviews.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

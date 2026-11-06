@@ -1,0 +1,8 @@
+name: design-team
+description: Interface, experience, accessibility and brand work.
+include:
+- ui/*
+- ux/*
+- accessibility/*
+- brand/*
+- creative-media/*

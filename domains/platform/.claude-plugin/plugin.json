@@ -1,0 +1,10 @@
+{
+  "name": "platform",
+  "version": "0.0.0",
+  "description": "Git and GitHub, CI/CD, containers, deployment, observability, SRE, incidents.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

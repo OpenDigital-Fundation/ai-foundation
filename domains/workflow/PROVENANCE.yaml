@@ -1,0 +1,274 @@
+version: 1
+files:
+- path: knowledge/issue-tracking/github.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md
+    license: MIT
+    modification: adapted
+- path: knowledge/issue-tracking/gitlab.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md
+    license: MIT
+    modification: adapted
+- path: knowledge/issue-tracking/local.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md
+    license: MIT
+    modification: adapted
+- path: knowledge/issue-tracking/triage-labels.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/setup-matt-pocock-skills/triage-labels.md
+    license: MIT
+    modification: adapted
+- path: skills/brainstorming/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/brainstorming/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/to-spec/SKILL.md
+    license: MIT
+    modification: merged-section
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/prototype/SKILL.md
+    license: MIT
+    modification: merged-section
+- path: skills/brainstorming/builder-check-prompt.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/brainstorming/builder-check-prompt.md
+    license: MIT
+    modification: base
+- path: skills/brainstorming/templates/spec.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/to-spec/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/executing-plans/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/modes/inline.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/executing-plans/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/modes/subagent.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/prompts/implementer-prompt.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/implementer-prompt.md
+    license: MIT
+    modification: base
+- path: skills/executing-plans/prompts/re-review-prompt.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/re-review-prompt.md
+    license: MIT
+    modification: base
+- path: skills/executing-plans/prompts/task-reviewer-prompt.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/task-reviewer-prompt.md
+    license: MIT
+    modification: base
+- path: skills/executing-plans/references/batching.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/references/batching.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/references/cannot-verify.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/references/cannot-verify.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/references/final-review.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/references/final-review.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/references/fix-loop.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/references/fix-loop.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/references/handling-reports.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/references/handling-reports.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/references/preflight.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/references/preflight.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/references/resuming.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/references/resuming.md
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/scripts/review-package
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/scripts/review-package
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/scripts/sdd-repo
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/scripts/sdd-repo
+    license: MIT
+    modification: base
+- path: skills/executing-plans/scripts/sdd-workspace
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/scripts/sdd-workspace
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/scripts/task-brief
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/subagent-driven-development/scripts/task-brief
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/scripts/task-done
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/executing-plans/scripts/task-done
+    license: MIT
+    modification: adapted
+- path: skills/executing-plans/scripts/task-start
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/executing-plans/scripts/task-start
+    license: MIT
+    modification: adapted
+- path: skills/finishing-a-branch/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/finishing-a-development-branch/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/git-worktrees/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/using-git-worktrees/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/grilling/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/productivity/grilling/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/handoff/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/productivity/handoff/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: commands/save-session.md
+    license: MIT
+    modification: merged-section
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: commands/resume-session.md
+    license: MIT
+    modification: merged-section
+- path: skills/initiative-mapping/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/wayfinder/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/issue-breakdown/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/to-tickets/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/issue-triage/AGENT-BRIEF.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/triage/AGENT-BRIEF.md
+    license: MIT
+    modification: base
+- path: skills/issue-triage/OUT-OF-SCOPE.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/triage/OUT-OF-SCOPE.md
+    license: MIT
+    modification: base
+- path: skills/issue-triage/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/triage/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-plans/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/writing-plans/SKILL.md
+    license: MIT
+    modification: adapted

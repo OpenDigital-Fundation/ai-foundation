@@ -1,0 +1,63 @@
+version: 1
+files:
+- path: skills/systematic-debugging/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/systematic-debugging/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/diagnosing-bugs/SKILL.md
+    license: MIT
+    modification: merged-section
+- path: skills/systematic-debugging/condition-based-waiting-example.ts
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/systematic-debugging/condition-based-waiting-example.ts
+    license: MIT
+    modification: base
+- path: skills/systematic-debugging/condition-based-waiting.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/systematic-debugging/condition-based-waiting.md
+    license: MIT
+    modification: base
+- path: skills/systematic-debugging/defense-in-depth.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/systematic-debugging/defense-in-depth.md
+    license: MIT
+    modification: base
+- path: skills/systematic-debugging/find-polluter.sh
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/systematic-debugging/find-polluter.sh
+    license: MIT
+    modification: base
+- path: skills/systematic-debugging/references/feedback-loop.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/diagnosing-bugs/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/systematic-debugging/root-cause-tracing.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/systematic-debugging/root-cause-tracing.md
+    license: MIT
+    modification: base
+- path: skills/systematic-debugging/scripts/hitl-loop.template.sh
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh
+    license: MIT
+    modification: base

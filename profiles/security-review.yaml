@@ -1,0 +1,7 @@
+name: security-review
+description: Security audits of code, dependencies and agent configuration.
+include:
+- principles/*
+- security/*
+- code-quality/*
+- languages/*
