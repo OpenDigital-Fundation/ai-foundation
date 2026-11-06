@@ -6,6 +6,6 @@
 - [x] **T4.** `license.py` usando hashes gerados pelo `fetch.sh`. Verificar: critério 3.
 - [x] **T5.** `hygiene.py` (gitleaks, padrões de telemetria/autopromoção, MCP com versão fixa).
 - [x] **T6.** Workflow `validate.yml`. Verificar: critério 5 (tempo).
-- [ ] **T7.** `run_triggers.py` e `run_tasks.py` com uma skill-piloto (`testing/test-driven-development`).
-- [ ] **T8.** `evals/routing/` com 50 prompts cobrindo os domínios da Onda 1.
-- [ ] **T9.** Workflow `evals.yml` (label, promoção, semanal).
+- [x] **T7.** Runner de gatilhos (`tools/evals/triggers.py`) com harness isolado; `run_tasks` (rubricas) pendente.
+- [x] **T8.** `evals/routing/wave1.yaml` (33 casos; ampliar para 50) com prompts cobrindo os domínios da Onda 1.
+- [x] **T9.** Workflow `evals.yml` (label `run-evals` e disparo manual; sem agenda semanal para não gerar custo recorrente sem decisão).

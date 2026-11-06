@@ -274,10 +274,21 @@ def check_stable_has_evals(root: Path, arts: list[Artifact]) -> list[str]:
     return errs
 
 
+def check_routing_evals(root: Path) -> list[str]:
+    ids = {a["id"].replace("/", ":") for a in load_yaml(root / "catalog/catalog.yaml").get("artifacts") or []}
+    errs = []
+    for f in sorted((root / "evals/routing").glob("*.yaml")) if (root / "evals/routing").is_dir() else []:
+        for i, c in enumerate(load_yaml(f) or []):
+            exp = c.get("expect")
+            if exp not in (None, "none") and exp not in ids:
+                errs.append(f"{f.relative_to(root)}[{i}]: expected skill '{exp}' is not in the catalog")
+    return errs
+
+
 def run_all(root: Path) -> tuple[list[str], list[str]]:
     arts = discover(root)
     errs = check_registry_files(root) + check_domains(root)
     errs += check_frontmatter(root, arts) + check_catalog_bijection(root, arts) + check_names(root, arts)
     sim_errs, warns = check_similarity(root, arts)
-    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts)
+    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root)
     return errs, warns

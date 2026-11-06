@@ -1,0 +1,35 @@
+# Routing evals for wave 1: the whole catalog is installed; the expected skill must fire first.
+# expect: <plugin>:<skill>, or none when no catalog skill should fire.
+- {prompt: "I want to add a loyalty points system to our checkout, let's figure out what it should do", expect: "workflow:brainstorming"}
+- {prompt: "quero criar um app pra agendar aulas de yoga, me ajuda a pensar no que precisa", expect: "workflow:brainstorming"}
+- {prompt: "we already agreed on everything above, turn this conversation into a spec", expect: "workflow:brainstorming"}
+- {prompt: "here is my migration plan for moving auth to OIDC, grill me on it", expect: "workflow:grilling"}
+- {prompt: "stress-test this decision: we're replacing Redis with Postgres advisory locks", expect: "workflow:grilling"}
+- {prompt: "the spec in docs/specs/billing/invoices/spec.md is approved, write the implementation plan", expect: "workflow:writing-plans"}
+- {prompt: "o plano em docs/specs/auth/login/tasks.md foi aprovado, pode executar", expect: "workflow:executing-plans"}
+- {prompt: "execute the approved plan task by task with a fresh subagent per task", expect: "workflow:executing-plans"}
+- {prompt: "set up an isolated worktree for this feature before we start", expect: "workflow:git-worktrees"}
+- {prompt: "all tasks are done and tests pass, let's wrap up this branch", expect: "workflow:finishing-a-branch"}
+- {prompt: "I'm out of context soon, write a handoff so another session can continue", expect: "workflow:handoff"}
+- {prompt: "faz um handoff, vou pausar aqui", expect: "workflow:handoff"}
+- {prompt: "resume from docs/handoffs/2026-11-05-1730-billing-sync.md", expect: "workflow:handoff"}
+- {prompt: "take this feature end to end: from idea to a merge-ready PR, with approvals", expect: "workflow:feature-delivery"}
+- {prompt: "add a retry with backoff to fetchUser in api/client.ts", expect: "principles:coding-discipline"}
+- {prompt: "this PR is way over-engineered, give me the simplest version that works", expect: "principles:coding-discipline"}
+- {prompt: "implement slugify() in src/text.ts test-first", expect: "testing:test-driven-development"}
+- {prompt: "fix the bug where discounts apply twice; write the failing test first", expect: "testing:test-driven-development"}
+- {prompt: "I think it's done, let me just tell the client it's fixed", expect: "testing:verification-before-completion"}
+- {prompt: "before you open the PR, prove the build and tests actually pass", expect: "testing:verification-before-completion"}
+- {prompt: "the checkout test fails only on CI and I don't know why", expect: "debugging:systematic-debugging"}
+- {prompt: "o endpoint /orders ficou 10x mais lento depois do deploy de ontem", expect: "debugging:systematic-debugging"}
+- {prompt: "TypeError: cannot read properties of undefined (reading 'id') in cart.ts:42", expect: "debugging:systematic-debugging"}
+- {prompt: "review my last commit", expect: "code-quality:code-review"}
+- {prompt: "revisa o PR 128 antes do merge", expect: "code-quality:code-review"}
+- {prompt: "the reviewer says my caching is racy, I'm not sure they're right; how should I respond?", expect: "code-quality:receiving-code-review"}
+- {prompt: "audit this whole repository: bugs, security holes, what can be deleted", expect: "code-quality:codebase-audit"}
+- {prompt: "list every shortcut we deferred in this codebase", expect: "code-quality:debt-ledger"}
+- {prompt: "these four test failures are in unrelated modules, investigate them in parallel", expect: "agent-engineering:parallel-agents"}
+- {prompt: "write a new skill that teaches the agent our release checklist", expect: "agent-engineering:writing-skills"}
+- {prompt: "do a retrospective on this agent session: what slowed it down and what should change in our setup", expect: "agent-engineering:session-retrospective"}
+- {prompt: "what's the capital of Portugal?", expect: none}
+- {prompt: "translate 'good morning' to Spanish", expect: none}

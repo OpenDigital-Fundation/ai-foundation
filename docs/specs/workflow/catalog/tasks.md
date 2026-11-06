@@ -7,4 +7,4 @@
 - [x] **T5.** Mover os docs de tracker para `knowledge/issue-tracking/`.
 - [x] **T6.** Registrar decisões e proveniência.
 - [ ] **T7.** Evals de gatilho e tarefa por skill.
-- [ ] **T8.** Verificar carregamento de `workflows/` numa sessão real.
+- [x] **T8.** Verificado: `workflow:feature-delivery` aparece no `init` de uma sessão com `--plugin-dir domains/workflow`.

@@ -1,0 +1,44 @@
+name: evals
+
+# Model-backed evals are billed: they run only on demand, never on every push.
+on:
+  workflow_dispatch:
+    inputs:
+      skill:
+        description: "domain/name to evaluate (empty = all with evals, plus routing)"
+        required: false
+  pull_request:
+    types: [labeled]
+
+permissions:
+  contents: read
+
+jobs:
+  triggers:
+    if: github.event_name == 'workflow_dispatch' || github.event.label.name == 'run-evals'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: npm install -g @anthropic-ai/claude-code@2.1.318
+      - run: uv sync --frozen
+      - name: Trigger and routing evals
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -n "${{ github.event.inputs.skill }}" ]; then
+            uv run python -m tools.evals.triggers --skill "${{ github.event.inputs.skill }}"
+          else
+            uv run python -m tools.evals.triggers --routing
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: evals/results/
