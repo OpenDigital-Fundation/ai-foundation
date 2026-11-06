@@ -31,7 +31,7 @@ This is an active modeling workflow, not a requirement to rewrite the glossary w
 - **Check claims against evidence.** Inspect relevant code, tests, contracts, and existing records. If the implementation cancels only whole orders, surface the mismatch with the proposed partial-cancellation rule. Code demonstrates current behavior, not the business owner's desired behavior; do not decide which is correct by yourself.
 - **Capture confirmed terms as they settle.** Within an authorized documentation edit, update the existing glossary at that point instead of deferring all definitions until closeout. Keep definitions to one or two sentences, with a source and context-specific avoided synonyms where useful. Do not rewrite code, contracts, or accepted decisions merely to match a proposed term. In discussion-only or read-only work, present the proposed wording without writing files.
 
-Use the project's existing glossary format. For a new document, the [context template](templates/context.example.md) provides a compact starting point; omit sections without real content. Include business-specific concepts, not generic programming vocabulary such as timeouts or utility functions.
+Use the project's existing glossary format. For a new document, the context template provides a compact starting point; omit sections without real content. Include business-specific concepts, not generic programming vocabulary such as timeouts or utility functions.
 
 ### ADR Handoff: Reuse the Existing Capability
 
@@ -89,4 +89,4 @@ Keep tasks, status, blockers, and schedules in the project's existing tracker, s
 
 ### Attribution
 
-The active terminology-refinement workflow adapts Matt Pocock's MIT-licensed `domain-modeling` skill. See [source and adaptation boundaries](references/source.md). the upstream project's existing ADR workflow remains the sole decision-record owner.
+The active terminology-refinement workflow adapts Matt Pocock's MIT-licensed `domain-modeling` skill. See source and adaptation boundaries. the upstream project's existing ADR workflow remains the sole decision-record owner.

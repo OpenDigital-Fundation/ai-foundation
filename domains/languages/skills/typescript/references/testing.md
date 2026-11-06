@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load when writing or fixing tests: runner, fixtu
 
 <!-- source: affaan-m/ECC rules/typescript/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with TypeScript/JavaScript specific content.
+> This file extends common/testing.md with TypeScript/JavaScript specific content.
 
 ### E2E Testing
 
@@ -20,7 +20,7 @@ Use **Playwright** as the E2E testing framework for critical user flows.
 
 <!-- source: affaan-m/ECC rules/web/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with web-specific testing content.
+> This file extends common/testing.md with web-specific testing content.
 
 
 
@@ -43,7 +43,7 @@ Use **Playwright** as the E2E testing framework for critical user flows.
 #### 3. Performance
 
 - Run Lighthouse or equivalent against meaningful pages
-- Keep CWV targets from [performance.md](performance.md)
+- Keep CWV targets from performance.md
 
 #### 4. Cross-Browser
 

@@ -6,7 +6,7 @@ Part of `languages:go`. Load when code that handles untrusted input, auth, secre
 
 <!-- source: affaan-m/ECC rules/golang/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Go specific content.
+> This file extends common/security.md with Go specific content.
 
 ### Secret Management
 

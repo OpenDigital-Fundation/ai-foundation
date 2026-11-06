@@ -6,7 +6,7 @@ Part of `languages:jvm`. Load when writing or refactoring code: style, idioms, p
 
 <!-- source: affaan-m/ECC rules/java/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Java-specific content.
+> This file extends common/coding-style.md with Java-specific content.
 
 ### Formatting
 
@@ -119,7 +119,7 @@ See skill: `languages:jvm` (`references/frameworks/jpa.md`) for JPA/Hibernate en
 
 <!-- source: affaan-m/ECC rules/java/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Java-specific content.
+> This file extends common/patterns.md with Java-specific content.
 
 ### Repository Pattern
 
@@ -645,7 +645,7 @@ class MarketServiceTest {
 
 <!-- source: affaan-m/ECC rules/kotlin/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Kotlin-specific content.
+> This file extends common/coding-style.md with Kotlin-specific content.
 
 ### Formatting
 
@@ -729,7 +729,7 @@ val user: User? = repository.findUser(id)
 
 <!-- source: affaan-m/ECC rules/kotlin/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Kotlin and Android/KMP-specific content.
+> This file extends common/patterns.md with Kotlin and Android/KMP-specific content.
 
 ### Dependency Injection
 

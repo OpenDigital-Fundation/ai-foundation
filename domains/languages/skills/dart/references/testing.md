@@ -6,7 +6,7 @@ Part of `languages:dart`. Load when writing or fixing tests: runner, fixtures, m
 
 <!-- source: affaan-m/ECC rules/dart/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Dart and Flutter-specific content.
+> This file extends common/testing.md with Dart and Flutter-specific content.
 
 ### Test Framework
 

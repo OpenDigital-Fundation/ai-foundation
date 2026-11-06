@@ -28,6 +28,20 @@ def _validate(data, schema, label: str) -> list[str]:
 
 # R1 / R2 ------------------------------------------------------------------
 
+def check_all_links(root: Path) -> list[str]:
+    """Relative links in every Markdown file under domains/ must resolve (not only SKILL.md)."""
+    errs = []
+    for p in sorted((root / "domains").rglob("*.md")):
+        if p.name == "SKILL.md" and p.parent.parent.name in {"skills", "workflows"}:
+            continue  # covered with more detail by check_frontmatter
+        text = re.sub(r"(?ms)^(```|~~~).*?^\1", "", p.read_text(encoding="utf-8", errors="ignore"))
+        text = re.sub(r"`[^`\n]*`", "", text)
+        for link in re.findall(r"\]\((?!https?://|#|mailto:)([^)\s]+)\)", text):
+            if link.split("#")[0] and not (p.parent / link.split("#")[0]).resolve().exists():
+                errs.append(f"{p.relative_to(root)}: broken relative link '{link}'")
+    return errs
+
+
 def check_registry_files(root: Path) -> list[str]:
     errs: list[str] = []
     for fname, schema in [("catalog.yaml", "catalog"), ("exclusions.yaml", "exclusions"), ("sources.lock.yaml", "sources")]:
@@ -297,5 +311,5 @@ def run_all(root: Path) -> tuple[list[str], list[str]]:
     errs = check_registry_files(root) + check_domains(root)
     errs += check_frontmatter(root, arts) + check_catalog_bijection(root, arts) + check_names(root, arts)
     sim_errs, warns = check_similarity(root, arts)
-    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root)
+    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root)
     return errs, warns

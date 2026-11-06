@@ -6,7 +6,7 @@ Part of `languages:jvm`. Load when code that handles untrusted input, auth, secr
 
 <!-- source: affaan-m/ECC rules/java/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Java-specific content.
+> This file extends common/security.md with Java-specific content.
 
 ### Secrets Management
 
@@ -106,7 +106,7 @@ See skill: `security:security-audit` for general security checklists.
 
 <!-- source: affaan-m/ECC rules/kotlin/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Kotlin and Android/KMP-specific content.
+> This file extends common/security.md with Kotlin and Android/KMP-specific content.
 
 ### Secrets Management
 

@@ -6,7 +6,7 @@ Part of `languages:ruby`. Load when writing or fixing tests: runner, fixtures, m
 
 <!-- source: affaan-m/ECC rules/ruby/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Ruby and Rails specific content.
+> This file extends common/testing.md with Ruby and Rails specific content.
 
 ### Framework
 

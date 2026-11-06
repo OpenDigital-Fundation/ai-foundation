@@ -6,7 +6,7 @@ Part of `languages:python`. Load when formatters, linters, type checkers and edi
 
 <!-- source: affaan-m/ECC rules/python/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Python specific content.
+> This file extends common/hooks.md with Python specific content.
 
 ### PostToolUse Hooks
 

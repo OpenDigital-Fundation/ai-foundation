@@ -6,7 +6,7 @@ Part of `languages:cpp`. Load when formatters, linters, type checkers and editor
 
 <!-- source: affaan-m/ECC rules/cpp/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with C++ specific content.
+> This file extends common/hooks.md with C++ specific content.
 
 ### Build Hooks
 

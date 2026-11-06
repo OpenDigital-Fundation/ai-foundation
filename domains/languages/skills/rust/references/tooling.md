@@ -6,7 +6,7 @@ Part of `languages:rust`. Load when formatters, linters, type checkers and edito
 
 <!-- source: affaan-m/ECC rules/rust/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Rust-specific content.
+> This file extends common/hooks.md with Rust-specific content.
 
 ### PostToolUse Hooks
 

@@ -6,7 +6,7 @@ Part of `ui:motion-and-polish`.
 
 <!-- source: affaan-m/ECC rules/web/design-quality.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with web-specific design-quality guidance.
+> This file extends common/patterns.md with web-specific design-quality guidance.
 
 
 

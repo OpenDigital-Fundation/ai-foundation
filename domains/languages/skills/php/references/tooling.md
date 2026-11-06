@@ -6,7 +6,7 @@ Part of `languages:php`. Load when formatters, linters, type checkers and editor
 
 <!-- source: affaan-m/ECC rules/php/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with PHP specific content.
+> This file extends common/hooks.md with PHP specific content.
 
 ### PostToolUse Hooks
 

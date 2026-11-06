@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load when writing or refactoring code: style, id
 
 <!-- source: affaan-m/ECC rules/typescript/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with TypeScript/JavaScript specific content.
+> This file extends common/coding-style.md with TypeScript/JavaScript specific content.
 
 ### Types and Interfaces
 
@@ -201,7 +201,7 @@ const validated: UserInput = userSchema.parse(input)
 
 <!-- source: affaan-m/ECC rules/typescript/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with TypeScript/JavaScript specific content.
+> This file extends common/patterns.md with TypeScript/JavaScript specific content.
 
 ### API Response Format
 
@@ -1490,7 +1490,7 @@ export function Modal({ isOpen, onClose, children }: ModalProps) {
 
 <!-- source: affaan-m/ECC rules/web/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with web-specific frontend content.
+> This file extends common/coding-style.md with web-specific frontend content.
 
 
 
@@ -1591,7 +1591,7 @@ Do not reach for generic wrapper `div` stacks when a semantic element exists.
 
 <!-- source: affaan-m/ECC rules/web/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with web-specific patterns.
+> This file extends common/patterns.md with web-specific patterns.
 
 
 
@@ -1675,7 +1675,7 @@ Persist shareable state in the URL:
 
 <!-- source: affaan-m/ECC rules/web/performance.md -->
 
-> This file extends [common/performance.md](../common/performance.md) with web-specific performance content.
+> This file extends common/performance.md with web-specific performance content.
 
 
 

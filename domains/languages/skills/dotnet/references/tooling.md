@@ -6,7 +6,7 @@ Part of `languages:dotnet`. Load when formatters, linters, type checkers and edi
 
 <!-- source: affaan-m/ECC rules/csharp/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with C#-specific content.
+> This file extends common/hooks.md with C#-specific content.
 
 ### PostToolUse Hooks
 
@@ -25,7 +25,7 @@ Configure in `~/.claude/settings.json`:
 
 <!-- source: affaan-m/ECC rules/fsharp/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with F#-specific content.
+> This file extends common/hooks.md with F#-specific content.
 
 ### PostToolUse Hooks
 

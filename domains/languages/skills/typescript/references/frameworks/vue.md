@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load only when the project uses vue.
 
 <!-- source: affaan-m/ECC rules/vue/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Vue specific content.
+> This file extends common/coding-style.md with Vue specific content.
 
 ### SFC Structure
 
@@ -58,7 +58,7 @@ const open = defineModel<boolean>('open', { default: false })
 
 <!-- source: affaan-m/ECC rules/vue/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Vue specific content.
+> This file extends common/patterns.md with Vue specific content.
 
 ### Composables
 
@@ -580,7 +580,7 @@ const AsyncComp = defineAsyncComponent({
 
 <!-- source: affaan-m/ECC rules/vue/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Vue specific content.
+> This file extends common/testing.md with Vue specific content.
 
 ### Stack
 
@@ -631,7 +631,7 @@ expect(wrapper.emitted('bid')).toBeTruthy()
 
 <!-- source: affaan-m/ECC rules/vue/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Vue specific content.
+> This file extends common/security.md with Vue specific content.
 
 ### What Vue Escapes Automatically
 

@@ -93,3 +93,18 @@ def test_blocks_round_three(cmd):
 @pytest.mark.parametrize("cmd", ["git config --get user.email", "git config --list", "git config color.ui auto"])
 def test_allows_config_reads_and_presentation(cmd):
     assert run(cmd) == 0, cmd
+
+
+@pytest.mark.parametrize("cmd", [
+    "git config color.ui.x.alias.y push", "git config --file .git/config alias.x push", "git config --comment x alias.x push",
+    "git config --rename-section alias foo", "git config --remove-section core", "git config --edit", "git config unset user.name",
+    "git config set alias.x push", "git config user.name a b", "git -c color.ui.hooksPath=x status", "git config --blob HEAD:x core.pager",
+])
+def test_blocks_config_parser_escapes(cmd):
+    assert run(cmd) == 2, cmd
+
+
+@pytest.mark.parametrize("cmd", ["git config user.name", "git config --global user.email a@b.c", "git config get user.email",
+                                 "git config set color.ui auto", "git config --show-origin --list"])
+def test_allows_strict_config(cmd):
+    assert run(cmd) == 0, cmd

@@ -6,7 +6,7 @@ Part of `languages:rust`. Load when writing or fixing tests: runner, fixtures, m
 
 <!-- source: affaan-m/ECC rules/rust/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Rust-specific content.
+> This file extends common/testing.md with Rust-specific content.
 
 ### Test Framework
 

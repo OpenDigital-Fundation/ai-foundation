@@ -6,7 +6,7 @@ Part of `languages:dotnet`. Load when writing or refactoring code: style, idioms
 
 <!-- source: affaan-m/ECC rules/csharp/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with C#-specific content.
+> This file extends common/coding-style.md with C#-specific content.
 
 ### Standards
 
@@ -76,7 +76,7 @@ public async Task<Order> LoadOrderAsync(
 
 <!-- source: affaan-m/ECC rules/csharp/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with C#-specific content.
+> This file extends common/patterns.md with C#-specific content.
 
 ### API Response Pattern
 
@@ -442,7 +442,7 @@ public async Task<ProcessResult> ProcessPaymentAsync(
 
 <!-- source: affaan-m/ECC rules/fsharp/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with F#-specific content.
+> This file extends common/coding-style.md with F#-specific content.
 
 ### Standards
 
@@ -552,7 +552,7 @@ open MyApp.Infrastructure
 
 <!-- source: affaan-m/ECC rules/fsharp/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with F#-specific content.
+> This file extends common/patterns.md with F#-specific content.
 
 ### Result Type for Error Handling
 

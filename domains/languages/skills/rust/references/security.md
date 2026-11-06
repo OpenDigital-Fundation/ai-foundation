@@ -6,7 +6,7 @@ Part of `languages:rust`. Load when code that handles untrusted input, auth, sec
 
 <!-- source: affaan-m/ECC rules/rust/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Rust-specific content.
+> This file extends common/security.md with Rust-specific content.
 
 ### Secrets Management
 

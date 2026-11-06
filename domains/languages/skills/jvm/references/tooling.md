@@ -6,7 +6,7 @@ Part of `languages:jvm`. Load when formatters, linters, type checkers and editor
 
 <!-- source: affaan-m/ECC rules/java/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Java-specific content.
+> This file extends common/hooks.md with Java-specific content.
 
 ### PostToolUse Hooks
 
@@ -20,7 +20,7 @@ Configure in `~/.claude/settings.json`:
 
 <!-- source: affaan-m/ECC rules/kotlin/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Kotlin-specific content.
+> This file extends common/hooks.md with Kotlin-specific content.
 
 ### PostToolUse Hooks
 

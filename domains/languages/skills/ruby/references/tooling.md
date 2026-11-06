@@ -6,7 +6,7 @@ Part of `languages:ruby`. Load when formatters, linters, type checkers and edito
 
 <!-- source: affaan-m/ECC rules/ruby/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Ruby and Rails specific content.
+> This file extends common/hooks.md with Ruby and Rails specific content.
 
 ### PostToolUse Hooks
 

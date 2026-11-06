@@ -6,7 +6,7 @@ Part of `languages:ruby`. Load when code that handles untrusted input, auth, sec
 
 <!-- source: affaan-m/ECC rules/ruby/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Ruby and Rails specific content.
+> This file extends common/security.md with Ruby and Rails specific content.
 
 ### Rails Defaults
 

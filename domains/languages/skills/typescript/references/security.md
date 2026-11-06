@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load when code that handles untrusted input, aut
 
 <!-- source: affaan-m/ECC rules/typescript/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with TypeScript/JavaScript specific content.
+> This file extends common/security.md with TypeScript/JavaScript specific content.
 
 ### Secret Management
 
@@ -30,7 +30,7 @@ if (!apiKey) {
 
 <!-- source: affaan-m/ECC rules/web/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with web-specific security content.
+> This file extends common/security.md with web-specific security content.
 
 
 

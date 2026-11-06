@@ -6,7 +6,7 @@ Part of `languages:jvm`. Load when writing or fixing tests: runner, fixtures, mo
 
 <!-- source: affaan-m/ECC rules/java/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Java-specific content.
+> This file extends common/testing.md with Java-specific content.
 
 ### Test Framework
 
@@ -138,7 +138,7 @@ See skill: `languages:jvm` (`references/standards.md`) for testing expectations.
 
 <!-- source: affaan-m/ECC rules/kotlin/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Kotlin and Android/KMP-specific content.
+> This file extends common/testing.md with Kotlin and Android/KMP-specific content.
 
 ### Test Framework
 

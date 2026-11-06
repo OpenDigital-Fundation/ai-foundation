@@ -6,7 +6,7 @@ Part of `languages:dart`. Load when code that handles untrusted input, auth, sec
 
 <!-- source: affaan-m/ECC rules/dart/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Dart, Flutter, and mobile-specific content.
+> This file extends common/security.md with Dart, Flutter, and mobile-specific content.
 
 ### Secrets Management
 

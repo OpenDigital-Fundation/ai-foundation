@@ -6,7 +6,7 @@ Part of `languages:dart`. Load when formatters, linters, type checkers and edito
 
 <!-- source: affaan-m/ECC rules/dart/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Dart and Flutter-specific content.
+> This file extends common/hooks.md with Dart and Flutter-specific content.
 
 ### PostToolUse Hooks
 

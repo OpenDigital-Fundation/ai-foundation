@@ -6,7 +6,7 @@ Part of `languages:php`. Load when code that handles untrusted input, auth, secr
 
 <!-- source: affaan-m/ECC rules/php/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with PHP specific content.
+> This file extends common/security.md with PHP specific content.
 
 ### Input and Output
 

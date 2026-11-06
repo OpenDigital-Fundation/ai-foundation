@@ -6,7 +6,7 @@ Part of `languages:python`. Load when code that handles untrusted input, auth, s
 
 <!-- source: affaan-m/ECC rules/python/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Python specific content.
+> This file extends common/security.md with Python specific content.
 
 ### Secret Management
 

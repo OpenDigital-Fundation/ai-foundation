@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load when formatters, linters, type checkers and
 
 <!-- source: affaan-m/ECC rules/typescript/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with TypeScript/JavaScript specific content.
+> This file extends common/hooks.md with TypeScript/JavaScript specific content.
 
 ### PostToolUse Hooks
 
@@ -24,7 +24,7 @@ Configure in `~/.claude/settings.json`:
 
 <!-- source: affaan-m/ECC rules/web/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with web-specific hook recommendations.
+> This file extends common/hooks.md with web-specific hook recommendations.
 
 
 

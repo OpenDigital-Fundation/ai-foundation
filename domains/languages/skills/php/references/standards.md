@@ -6,7 +6,7 @@ Part of `languages:php`. Load when writing or refactoring code: style, idioms, p
 
 <!-- source: affaan-m/ECC rules/php/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with PHP specific content.
+> This file extends common/coding-style.md with PHP specific content.
 
 ### Standards
 
@@ -44,7 +44,7 @@ See skill: `backend-patterns` for broader service/repository layering guidance.
 
 <!-- source: affaan-m/ECC rules/php/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with PHP specific content.
+> This file extends common/patterns.md with PHP specific content.
 
 ### Thin Controllers, Explicit Services
 

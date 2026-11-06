@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load only when the project uses react-native.
 
 <!-- source: affaan-m/ECC rules/react-native/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with React Native / Expo specific content.
+> This file extends common/coding-style.md with React Native / Expo specific content.
 
 ### Components
 
@@ -75,7 +75,7 @@ All TypeScript rules from `rules/typescript/` apply (explicit types on public AP
 
 <!-- source: affaan-m/ECC rules/react-native/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with React Native / Expo specific patterns.
+> This file extends common/patterns.md with React Native / Expo specific patterns.
 > Note: Do NOT install the `web/` ruleset in a React Native project — those patterns assume the DOM (e.g. URL-as-state) and do not apply here.
 
 ### Navigation (Expo Router)
@@ -484,7 +484,7 @@ const STRIPE_SECRET = 'sk_live_...'
 
 <!-- source: affaan-m/ECC rules/react-native/performance.md -->
 
-> This file extends [common/performance.md](../common/performance.md) with React Native / Expo specific content.
+> This file extends common/performance.md with React Native / Expo specific content.
 
 ### Rendering
 
@@ -527,7 +527,7 @@ const STRIPE_SECRET = 'sk_live_...'
 
 <!-- source: affaan-m/ECC rules/react-native/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with React Native / Expo specific content.
+> This file extends common/testing.md with React Native / Expo specific content.
 > Coverage target and TDD workflow are inherited from common/testing.md (80% minimum, RED-GREEN-REFACTOR).
 
 ### Tooling
@@ -577,7 +577,7 @@ Use the `testing:test-driven-development` agent proactively for new features: wr
 
 <!-- source: affaan-m/ECC rules/react-native/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with React Native / Expo specific content.
+> This file extends common/security.md with React Native / Expo specific content.
 > The mandatory pre-commit checklist and Security Response Protocol from common/security.md still apply.
 
 ### The Bundle Is Public

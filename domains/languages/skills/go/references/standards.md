@@ -6,7 +6,7 @@ Part of `languages:go`. Load when writing or refactoring code: style, idioms, pa
 
 <!-- source: affaan-m/ECC rules/golang/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Go specific content.
+> This file extends common/coding-style.md with Go specific content.
 
 ### Formatting
 
@@ -35,7 +35,7 @@ See skill: `languages:go` (`references/standards.md`) for comprehensive Go idiom
 
 <!-- source: affaan-m/ECC rules/golang/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Go specific content.
+> This file extends common/patterns.md with Go specific content.
 
 ### Functional Options
 

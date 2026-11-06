@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load only when the project uses react.
 
 <!-- source: affaan-m/ECC rules/react/coding-style.md -->
 
-> This file extends [typescript/coding-style.md](../typescript/coding-style.md) and [common/coding-style.md](../common/coding-style.md) with React specific content.
+> This file extends typescript/coding-style.md and common/coding-style.md with React specific content.
 
 ### File Extensions
 
@@ -76,7 +76,7 @@ return <h1>{user.isAdmin ? "Welcome, admin" : `Hello ${user.name}`}</h1>;
 
 ### Hooks Discipline
 
-See [hooks.md](./hooks.md) for the full ruleset. Style highlights:
+See hooks.md for the full ruleset. Style highlights:
 
 - Custom hooks must start with `use` — enforced by `eslint-plugin-react-hooks`
 - Group all hook calls at the top of the component, before any conditional logic
@@ -109,7 +109,7 @@ Inline single-file components are fine for trivial presentational pieces.
 
 <!-- source: affaan-m/ECC rules/react/patterns.md -->
 
-> This file extends [typescript/patterns.md](../typescript/patterns.md) and [common/patterns.md](../common/patterns.md) with React specific content. For hook-specific rules see [hooks.md](./hooks.md).
+> This file extends typescript/patterns.md and common/patterns.md with React specific content. For hook-specific rules see hooks.md.
 
 ### Container / Presentational Split
 
@@ -343,7 +343,7 @@ React has no inheritance model for components. Compose with `children`, render p
 
 ### Hooks Discipline
 
-See [rules/react/hooks.md](../../rules/react/hooks.md) for the full ruleset. Highlights:
+See rules/react/hooks.md for the full ruleset. Highlights:
 
 - Top-level only, never conditional
 - Cleanup every subscription, interval, listener
@@ -540,8 +540,8 @@ Wrap a component in `React.memo` only when:
 - Every interactive element must be reachable by keyboard
 - Form inputs need labels — `<label htmlFor>` or `aria-label` if visually labeled by an icon
 - Manage focus on route changes and modal open/close
-- Run `axe` in component tests (see [skills`testing:test-driven-development`ing](..`testing:test-driven-development`ing/SKILL.md))
-- Cross-link: [skills/accessibility/SKILL.md](../accessibility/SKILL.md) covers WCAG criteria and pattern libraries
+- Run `axe` in component tests (see skills`testing:test-driven-development`ing)
+- Cross-link: skills/accessibility/SKILL.md covers WCAG criteria and pattern libraries
 
 ### Routing
 
@@ -555,8 +555,8 @@ This skill is router-agnostic. The patterns above work with React Router, TanSta
 
 ### Related
 
-- Rules: [rules/react/](../../rules/react/) — coding-style, hooks, patterns, security, testing
-- Skills: [react-performance](../react-performance/SKILL.md) for the Vercel-derived performance ruleset, [frontend-patterns](../frontend-patterns/SKILL.md) for cross-framework UI concerns, [accessibility](../accessibility/SKILL.md), [angular-developer](../angular-developer/SKILL.md) for framework comparison
+- Rules: rules/react/ — coding-style, hooks, patterns, security, testing
+- Skills: react-performance for the Vercel-derived performance ruleset, frontend-patterns for cross-framework UI concerns, accessibility, angular-developer for framework comparison
 - Agents: `languages:typescript` (`references/frameworks/react.md`) for code review, `languages:typescript` (`references/frameworks/react.md`) for build/bundler errors
 - Commands: `code-quality:code-review`, `debugging:systematic-debugging` with this pack's build reference, `testing:test-driven-development`
 
@@ -1191,8 +1191,8 @@ When the project ships React Compiler, demote `rerender-*` manual memoization ru
 
 ### Related
 
-- Skills: [react-patterns](../react-patterns/SKILL.md), [react-testing](..`testing:test-driven-development`ing/SKILL.md), [frontend-patterns](../frontend-patterns/SKILL.md), [accessibility](../accessibility/SKILL.md), [nextjs-turbopack](../nextjs-turbopack/SKILL.md)
-- Rules: [rules/react/](../../rules/react/)
+- Skills: react-patterns, react-testing, frontend-patterns, accessibility, nextjs-turbopack
+- Rules: rules/react/
 - Agents: `languages:typescript` (`references/frameworks/react.md`) enforces these rules in code review; `languages:typescript` (`references/frameworks/react.md`) handles related build failures
 - Commands: `code-quality:code-review`, `debugging:systematic-debugging` with this pack's build reference, `testing:test-driven-development`
 
@@ -1206,7 +1206,7 @@ This skill restructures and adapts the original 70-rule catalog into a single na
 
 <!-- source: affaan-m/ECC rules/react/testing.md -->
 
-> This file extends [typescript/testing.md](../typescript/testing.md) and [common/testing.md](../common/testing.md) with React specific content.
+> This file extends typescript/testing.md and common/testing.md with React specific content.
 
 ### Library Choice
 
@@ -1380,7 +1380,7 @@ Component test with RTL + JSDOM cannot:
 - Test browser-native animation, CSS transitions
 - Test cross-frame interactions (iframes, popups)
 
-For those, use Playwright Component Testing or end-to-end Playwright/Cypress runs. See [e2e-testing skill](../../skills`testing:test-driven-development`ing/SKILL.md).
+For those, use Playwright Component Testing or end-to-end Playwright/Cypress runs. See e2e-testing skill.
 
 ### Coverage Targets
 
@@ -1645,7 +1645,7 @@ Run axe in component tests for every interactive component. Catches:
 - Missing alt text on images
 - Heading order violations
 
-Cross-link: [skills/accessibility/SKILL.md](../accessibility/SKILL.md) for the broader a11y testing playbook.
+Cross-link: skills/accessibility/SKILL.md for the broader a11y testing playbook.
 
 ### When NOT to Use Snapshot Tests
 
@@ -1672,7 +1672,7 @@ JSDOM (used by Vitest/Jest) cannot:
 - Handle iframes, popups, downloads, cross-origin flows
 - Run real network in a controlled environment with full DevTools support
 
-For any of those, use Playwright Component Testing (component test in real browser) or full E2E. See [e2e-testing skill](..`testing:test-driven-development`ing/SKILL.md).
+For any of those, use Playwright Component Testing (component test in real browser) or full E2E. See e2e-testing skill.
 
 Decision boundary:
 
@@ -1756,8 +1756,8 @@ CI=true vitest run --coverage
 
 ### Related
 
-- Rules: [rules/react/testing.md](../../rules/react/testing.md)
-- Skills: [react-patterns](../react-patterns/SKILL.md), [accessibility](../accessibility/SKILL.md), [e2e-testing](..`testing:test-driven-development`ing/SKILL.md), [tdd-workflow](../tdd-workflow/SKILL.md)
+- Rules: rules/react/testing.md
+- Skills: react-patterns, accessibility, e2e-testing, tdd-workflow
 - Agents: `languages:typescript` (`references/frameworks/react.md`) (reviews test quality during code review), `testing:test-driven-development` (enforces TDD process)
 - Commands: `testing:test-driven-development`, `code-quality:code-review`
 
@@ -1828,7 +1828,7 @@ test("shows loading then content", async () => {
 
 <!-- source: affaan-m/ECC rules/react/security.md -->
 
-> This file extends [typescript/security.md](../typescript/security.md) and [common/security.md](../common/security.md) with React specific content.
+> This file extends typescript/security.md and common/security.md with React specific content.
 
 ### XSS via `dangerouslySetInnerHTML`
 

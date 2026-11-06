@@ -6,7 +6,7 @@ Part of `languages:ruby`. Load when writing or refactoring code: style, idioms, 
 
 <!-- source: affaan-m/ECC rules/ruby/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Ruby and Rails specific content.
+> This file extends common/coding-style.md with Ruby and Rails specific content.
 
 ### Standards
 
@@ -47,7 +47,7 @@ See skill: `backend-patterns` for broader service/repository layering guidance.
 
 <!-- source: affaan-m/ECC rules/ruby/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Ruby and Rails specific content.
+> This file extends common/patterns.md with Ruby and Rails specific content.
 
 ### Rails Way First
 

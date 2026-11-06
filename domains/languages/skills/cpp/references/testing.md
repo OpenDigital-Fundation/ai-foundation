@@ -6,7 +6,7 @@ Part of `languages:cpp`. Load when writing or fixing tests: runner, fixtures, mo
 
 <!-- source: affaan-m/ECC rules/cpp/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with C++ specific content.
+> This file extends common/testing.md with C++ specific content.
 
 ### Framework
 

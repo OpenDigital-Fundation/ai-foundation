@@ -6,7 +6,7 @@ Part of `languages:cpp`. Load when writing or refactoring code: style, idioms, p
 
 <!-- source: affaan-m/ECC rules/cpp/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with C++ specific content.
+> This file extends common/coding-style.md with C++ specific content.
 
 ### Modern C++ (C++17/20/23)
 
@@ -43,7 +43,7 @@ See skill: `languages:cpp` (`references/standards.md`) for comprehensive C++ cod
 
 <!-- source: affaan-m/ECC rules/cpp/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with C++ specific content.
+> This file extends common/patterns.md with C++ specific content.
 
 ### RAII (Resource Acquisition Is Initialization)
 

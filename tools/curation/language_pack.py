@@ -160,7 +160,8 @@ def build(root: Path, sources_dir: Path, mapping: dict) -> None:
                 derived.append(prov)
                 if key:
                     supersedes.append(key)
-            (d / rel).write_text(rewrite_refs("\n".join(parts).rstrip() + "\n", refs, unresolved), encoding="utf-8")
+            from tools.curation.links import unlink_missing
+            (d / rel).write_text(unlink_missing(rewrite_refs("\n".join(parts).rstrip() + "\n", refs, unresolved), d / rel), encoding="utf-8")
             provenance.append({"path": f"skills/{lang}/{rel}", "derived_from": derived})
 
         for topic, entries in pack["topics"].items():

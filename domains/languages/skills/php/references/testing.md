@@ -6,7 +6,7 @@ Part of `languages:php`. Load when writing or fixing tests: runner, fixtures, mo
 
 <!-- source: affaan-m/ECC rules/php/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with PHP specific content.
+> This file extends common/testing.md with PHP specific content.
 
 ### Framework
 

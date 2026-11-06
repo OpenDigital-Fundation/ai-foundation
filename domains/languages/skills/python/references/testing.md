@@ -6,7 +6,7 @@ Part of `languages:python`. Load when writing or fixing tests: runner, fixtures,
 
 <!-- source: affaan-m/ECC rules/python/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Python specific content.
+> This file extends common/testing.md with Python specific content.
 
 ### Framework
 

@@ -6,7 +6,7 @@ Part of `languages:swift`. Load when writing or fixing tests: runner, fixtures, 
 
 <!-- source: affaan-m/ECC rules/swift/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Swift specific content.
+> This file extends common/testing.md with Swift specific content.
 
 ### Framework
 

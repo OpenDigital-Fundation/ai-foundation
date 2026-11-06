@@ -220,7 +220,7 @@ by its absolute path, from the working tree you're executing in (MERGE_BASE = th
 **With a subagent tool:** dispatch the reviewer on the most capable
 available model — the whole-branch review is a judgment task — using
 code-quality:code-review's
-[code-reviewer.md](../requesting-code-review/code-reviewer.md), with the
+[code-reviewer.md](../../../../code-quality/agents/code-reviewer.md), with the
 package path, the plan and spec paths, the plan's Review Focus section
 verbatim if it has one (the input classes and failure modes the plan's
 tests do not exercise — the reviewer checks each deliberately), and a

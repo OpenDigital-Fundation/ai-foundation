@@ -6,7 +6,7 @@ Part of `languages:python`. Load when writing or refactoring code: style, idioms
 
 <!-- source: affaan-m/ECC rules/python/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Python specific content.
+> This file extends common/coding-style.md with Python specific content.
 
 ### Standards
 
@@ -46,7 +46,7 @@ See skill: `languages:python` (`references/standards.md`) for comprehensive Pyth
 
 <!-- source: affaan-m/ECC rules/python/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Python specific content.
+> This file extends common/patterns.md with Python specific content.
 
 ### Protocol (Duck Typing)
 

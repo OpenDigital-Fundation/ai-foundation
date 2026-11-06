@@ -6,7 +6,7 @@ Part of `languages:go`. Load when formatters, linters, type checkers and editor 
 
 <!-- source: affaan-m/ECC rules/golang/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Go specific content.
+> This file extends common/hooks.md with Go specific content.
 
 ### PostToolUse Hooks
 

@@ -34,7 +34,7 @@ decides on the exact text, and a delivery ledger proves what went out.
 | Claim | Durable reservation with a random token and state; at most one active claim per obligation. |
 | Delivery | Ledger row proving one send or notice for one (obligation, decision) pair. |
 
-The reference schema is in [references/approval-ledger.sql](references/approval-ledger.sql).
+The reference schema is in references/approval-ledger.sql.
 
 #### Filing a draft
 
@@ -100,7 +100,7 @@ approval; never backfill permission from the current mutable draft.
 
 #### Delivering
 
-The SQLite reference is [references/approval_claims.py](references/approval_claims.py).
+The SQLite reference is references/approval_claims.py.
 It grants dispatch permission but never calls transport. Use an existing local
 reference database initialized from the SQL fixture; the module does not apply
 schema or production migrations. Only a trusted decision writer may populate

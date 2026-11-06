@@ -6,7 +6,7 @@ Part of `languages:rust`. Load when writing or refactoring code: style, idioms, 
 
 <!-- source: affaan-m/ECC rules/rust/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Rust-specific content.
+> This file extends common/coding-style.md with Rust-specific content.
 
 ### Formatting
 
@@ -156,7 +156,7 @@ See skill: `languages:rust` (`references/standards.md`) for comprehensive Rust i
 
 <!-- source: affaan-m/ECC rules/rust/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Rust-specific content.
+> This file extends common/patterns.md with Rust-specific content.
 
 ### Repository Pattern with Traits
 

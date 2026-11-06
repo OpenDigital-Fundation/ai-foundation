@@ -6,7 +6,7 @@ Part of `languages:dotnet`. Load when writing or fixing tests: runner, fixtures,
 
 <!-- source: affaan-m/ECC rules/csharp/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with C#-specific content.
+> This file extends common/testing.md with C#-specific content.
 
 ### Test Framework
 
@@ -367,7 +367,7 @@ dotnet watch test --project tests/MyApp.UnitTests/
 
 <!-- source: affaan-m/ECC rules/fsharp/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with F#-specific content.
+> This file extends common/testing.md with F#-specific content.
 
 ### Test Framework
 

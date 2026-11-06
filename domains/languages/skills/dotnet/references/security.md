@@ -6,7 +6,7 @@ Part of `languages:dotnet`. Load when code that handles untrusted input, auth, s
 
 <!-- source: affaan-m/ECC rules/csharp/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with C#-specific content.
+> This file extends common/security.md with C#-specific content.
 
 ### Secret Management
 
@@ -60,7 +60,7 @@ See skill: `security:security-audit` for broader application security review che
 
 <!-- source: affaan-m/ECC rules/fsharp/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with F#-specific content.
+> This file extends common/security.md with F#-specific content.
 
 ### Secret Management
 

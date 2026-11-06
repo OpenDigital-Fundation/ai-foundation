@@ -6,7 +6,7 @@ Part of `languages:swift`. Load when formatters, linters, type checkers and edit
 
 <!-- source: affaan-m/ECC rules/swift/hooks.md -->
 
-> This file extends [common/hooks.md](../common/hooks.md) with Swift specific content.
+> This file extends common/hooks.md with Swift specific content.
 
 ### PostToolUse Hooks
 

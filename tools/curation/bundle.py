@@ -31,6 +31,7 @@ import yaml
 
 from tools.catalog import apply
 from tools.curation.language_pack import (ECC, body_of, load_index, reference_map, resolve, rewrite_refs, section)
+from tools.curation.links import unlink_missing
 from tools.curation.port import substitutions
 
 
@@ -140,6 +141,8 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 target = d / f.relative_to(override)
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(f, target)
+        for f in d.rglob("*.md"):  # links into upstream files that were not copied become plain text
+            f.write_text(unlink_missing(f.read_text(encoding="utf-8"), f), encoding="utf-8")
         if main_prov:
             prov.append({"path": f"skills/{name}/SKILL.md", "derived_from": main_prov})
     apply(root, {"provenance": provenance})

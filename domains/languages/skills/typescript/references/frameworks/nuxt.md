@@ -6,7 +6,7 @@ Part of `languages:typescript`. Load only when the project uses nuxt.
 
 <!-- source: affaan-m/ECC rules/nuxt/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Nuxt specific content.
+> This file extends common/coding-style.md with Nuxt specific content.
 
 ### Directory layout
 
@@ -46,7 +46,7 @@ Three distinct files, do not conflate.
 
 <!-- source: affaan-m/ECC rules/nuxt/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Nuxt specific content.
+> This file extends common/patterns.md with Nuxt specific content.
 
 ### Data-fetch selection
 
@@ -190,7 +190,7 @@ Pick route rules per route group, not globally. Marketing pages, catalogs, dashb
 
 <!-- source: affaan-m/ECC rules/nuxt/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Nuxt specific content.
+> This file extends common/testing.md with Nuxt specific content.
 
 Package: `@nuxt/test-utils`. Vitest-first for unit and component tests, with built-in Playwright browser E2E support. nuxt-vitest and vitest-environment-nuxt are superseded and folded into it.
 
@@ -233,7 +233,7 @@ Import from `@nuxt/test-utils/e2e`.
 
 <!-- source: affaan-m/ECC rules/nuxt/security.md -->
 
-> This file extends [common/security.md](../common/security.md) with Nuxt specific content.
+> This file extends common/security.md with Nuxt specific content.
 
 ### runtimeConfig public vs private
 

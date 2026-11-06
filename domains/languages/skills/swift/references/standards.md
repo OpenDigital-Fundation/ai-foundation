@@ -6,7 +6,7 @@ Part of `languages:swift`. Load when writing or refactoring code: style, idioms,
 
 <!-- source: affaan-m/ECC rules/swift/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Swift specific content.
+> This file extends common/coding-style.md with Swift specific content.
 
 ### Formatting
 
@@ -51,7 +51,7 @@ Enable Swift 6 strict concurrency checking. Prefer:
 
 <!-- source: affaan-m/ECC rules/swift/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Swift specific content.
+> This file extends common/patterns.md with Swift specific content.
 
 ### Protocol-Oriented Design
 

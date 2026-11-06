@@ -6,7 +6,7 @@ Part of `languages:go`. Load when writing or fixing tests: runner, fixtures, moc
 
 <!-- source: affaan-m/ECC rules/golang/testing.md -->
 
-> This file extends [common/testing.md](../common/testing.md) with Go specific content.
+> This file extends common/testing.md with Go specific content.
 
 ### Framework
 

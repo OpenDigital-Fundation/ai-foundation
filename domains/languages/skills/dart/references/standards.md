@@ -6,7 +6,7 @@ Part of `languages:dart`. Load when writing or refactoring code: style, idioms, 
 
 <!-- source: affaan-m/ECC rules/dart/coding-style.md -->
 
-> This file extends [common/coding-style.md](../common/coding-style.md) with Dart and Flutter-specific content.
+> This file extends common/coding-style.md with Dart and Flutter-specific content.
 
 ### Formatting
 
@@ -162,7 +162,7 @@ await fetchData();      // or properly awaited
 
 <!-- source: affaan-m/ECC rules/dart/patterns.md -->
 
-> This file extends [common/patterns.md](../common/patterns.md) with Dart, Flutter, and common ecosystem-specific content.
+> This file extends common/patterns.md with Dart, Flutter, and common ecosystem-specific content.
 
 ### Repository Pattern
 

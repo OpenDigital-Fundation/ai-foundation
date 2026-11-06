@@ -18,7 +18,11 @@ SEPARATORS = {";", "&&", "||", "|", "&", "\n", "(", ")", "|&"}
 BUILTINS = {"push", "reset", "clean", "branch", "checkout", "restore", "commit", "status", "log", "diff", "add", "fetch",
             "pull", "merge", "rebase", "switch", "stash", "tag", "show", "remote", "config", "init", "clone", "rm", "mv",
             "worktree", "submodule", "cherry-pick", "revert", "blame", "grep", "bisect", "describe", "rev-parse", "ls-files"}
-SAFE_CONFIG = re.compile(r"(color\.[a-z.]+|user\.(name|email)|core\.quotepath|log\.showsignature|init\.defaultbranch)=")
+SAFE_KEYS = {"color.ui", "color.diff", "color.status", "color.branch", "color.interactive", "user.name", "user.email",
+             "core.quotepath", "log.showsignature", "init.defaultbranch"}
+SAFE_CONFIG = re.compile(r"(" + "|".join(re.escape(k) for k in SAFE_KEYS) + r")=", re.I)
+CONFIG_SCOPES = {"--global", "--local", "--system", "--worktree"}
+CONFIG_READ_MODES = {"--get", "--get-all", "--get-regexp", "--list", "-l", "--show-origin", "--show-scope", "--name-only", "--null", "-z"}
 # Constructs the structured parser only partly understands; when present, also match the raw text.
 INDIRECTION = re.compile(r"<|\beval\b|\bxargs\b|-exec(dir)?\b|\$\(|`|<\(|\bsource\b|\balias\b|\bfunction\b|\(\)\s*\{")
 RAW_DANGER = re.compile(r"\bpush\b|reset\s+--hard|\bclean\s+-\S*f|branch\s+-D|--no-verify|\brm\s+-\S*(rf|fr)|checkout\s+\.(\s|$)|restore\s+\.(\s|$)")
@@ -62,6 +66,33 @@ def strip_prefix(seg):
         while i < len(seg) and (seg[i].startswith("-") or ("=" in seg[i] and seg[i].split("=", 1)[0].isidentifier())):
             i += 1
     return seg[i:]
+
+def check_config(rest):
+    """Allow only reads, or a write of exactly one allow-listed key; anything unrecognised blocks."""
+    verbs = {"get": "read", "list": "read", "set": "write"}
+    if rest and rest[0] in verbs or (rest and rest[0] in {"unset", "rename-section", "remove-section", "edit"}):
+        mode = verbs.get(rest[0], "forbidden")
+        rest = rest[1:]
+    else:
+        mode = None
+    positional, read_flag = [], False
+    for a in rest:
+        if a in CONFIG_SCOPES:
+            continue
+        if a in CONFIG_READ_MODES:
+            read_flag = True
+            continue
+        if a.startswith("-"):
+            block(f"git config option {a} is not allowed by the guardrail")
+        positional.append(a)
+    if mode == "forbidden":
+        block("git config would remove, rename or edit configuration")
+    if mode == "read" or read_flag or (mode is None and len(positional) <= 1):
+        return
+    key = positional[0].lower() if positional else ""
+    if key not in SAFE_KEYS or len(positional) != 2:
+        block(f"git config {positional[0] if positional else ""} may change what later git commands run; only presentation settings may be written")
+
 
 def check(seg, depth, piped=False):
     # Config injected through the environment changes what git runs: allow none of it.
@@ -123,7 +154,7 @@ def check(seg, depth, piped=False):
     while i < len(args) and args[i].startswith("-"):
         opt = args[i].split("=", 1)[0]
         value = args[i].split("=", 1)[1] if "=" in args[i] else (args[i + 1] if i + 1 < len(args) else "")
-        if opt in {"-c", "--config-env"} and not SAFE_CONFIG.match(value.lower()):
+        if opt in {"-c", "--config-env"} and not (("=" in value) and value.split("=", 1)[0].lower() in SAFE_KEYS):
             block(f"git {opt} {value.split("=")[0]} can change what git runs; only presentation settings are allowed")
         i += 2 if (opt in GIT_OPTS_WITH_VALUE and "=" not in args[i]) else 1
     if i >= len(args):
@@ -134,10 +165,7 @@ def check(seg, depth, piped=False):
     if "--no-verify" in rest or (sub == "commit" and "-n" in rest):
         block(f"git {sub} --no-verify skips the repository hooks")
     if sub == "config":
-        readonly = {"--get", "--get-all", "--get-regexp", "--list", "-l", "--show-origin", "--show-scope", "--name-only", "--get-urlmatch"}
-        keys = [a for a in rest if not a.startswith("-")]
-        if not (readonly & set(rest)) and keys and not SAFE_CONFIG.match(keys[0].lower() + "="):
-            block(f"git config {keys[0]} may change what later git commands run; only presentation settings may be written")
+        check_config(rest)
     if sub == "push":
         block("git push publishes to a remote")
     if sub == "reset" and "--hard" in rest:
