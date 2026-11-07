@@ -13,10 +13,10 @@ Source-backed research with citations, literature reviews.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`docs-lookup`](skills/docs-lookup/SKILL.md) | skill | experimental | Use when the user asks how to use a library, framework, SDK or API, or before writing code against one whose current behaviour matters. Fetches up-to-date documentation (for example through a Context7 MCP server) instea… | affaan-m/ECC |
-| [`literature-review`](skills/literature-review/SKILL.md) | skill | experimental | Use for a systematic literature review or for evaluating scholarly work: search planning across academic databases, screening criteria, extraction, synthesis, citation checks, and structured critique of papers, proposal… | affaan-m/ECC, msitarzewski/agency-agents |
-| [`source-research`](skills/source-research/SKILL.md) | skill | experimental | Use when a question needs current or verifiable facts from outside the codebase: research a topic, compare options, check what a library or service does today, or produce a cited report. Plans sub-questions, prefers pri… | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`docs-lookup`](skills/docs-lookup/SKILL.md) | skill | experimental | Use when the user asks how to use a library, framework, SDK or API, or before writing code against one whose current behaviour matters. Fetches up-to-date documentation (for example through a Context7 MCP server) instea… | Search, Synthesise, Cite, Compare sources | affaan-m/ECC |
+| [`literature-review`](skills/literature-review/SKILL.md) | skill | experimental | Use for a systematic literature review or for evaluating scholarly work: search planning across academic databases, screening criteria, extraction, synthesis, citation checks, and structured critique of papers, proposal… | Search, Synthesise, Cite, Compare sources, Evaluate | affaan-m/ECC, msitarzewski/agency-agents |
+| [`source-research`](skills/source-research/SKILL.md) | skill | experimental | Use when a question needs current or verifiable facts from outside the codebase: research a topic, compare options, check what a library or service does today, or produce a cited report. Plans sub-questions, prefers pri… | Search, Synthesise, Cite, Compare sources | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/research/catalog/spec.md`](../../docs/specs/research/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

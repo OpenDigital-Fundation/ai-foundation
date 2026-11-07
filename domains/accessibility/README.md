@@ -13,8 +13,8 @@ Accessibility conformance and audits - WCAG, ARIA, assistive technology.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`wcag-accessibility`](skills/wcag-accessibility/SKILL.md) | skill | experimental | Use when designing, building, reviewing or auditing interfaces for accessibility on web, iOS or Android: WCAG 2.2 AA, semantic roles and labels, keyboard and focus management, contrast, target size, motion, forms, and s… | affaan-m/ECC, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`wcag-accessibility`](skills/wcag-accessibility/SKILL.md) | skill | experimental | Use when designing, building, reviewing or auditing interfaces for accessibility on web, iOS or Android: WCAG 2.2 AA, semantic roles and labels, keyboard and focus management, contrast, target size, motion, forms, and s… | Audit, Validate | affaan-m/ECC, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/accessibility/catalog/spec.md`](../../docs/specs/accessibility/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

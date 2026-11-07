@@ -1,0 +1,184 @@
+# Vocabulary for faceted classification. IDs are stable contracts (changing one needs an ADR); names may change.
+# origin: landscape-v1 = from the "OpenDigital AI & Knowledge Landscape v1.0" taxonomy; proposed = added to complete a truncated list, pending review.
+version: 1
+terms:
+- id: brand-strategy
+  name:
+    pt: Brand Strategy
+    en: Brand Strategy
+  origin: landscape-v1
+  description: Marketing, design, psicologia, comunicação, estratégia
+- id: growth-hacking
+  name:
+    pt: Growth Hacking
+    en: Growth Hacking
+  origin: landscape-v1
+  description: Marketing, programação, estatística, psicologia
+- id: product-management
+  name:
+    pt: Product Management
+    en: Product Management
+  origin: landscape-v1
+  description: Negócios, engenharia, UX, dados, marketing
+- id: design-systems
+  name:
+    pt: Design Systems
+    en: Design Systems
+  origin: landscape-v1
+  description: Design, frontend, acessibilidade, governança
+- id: devsecops
+  name:
+    pt: DevSecOps
+    en: DevSecOps
+  origin: landscape-v1
+  description: Desenvolvimento, segurança, infraestrutura, operações
+- id: mlops-llmops
+  name:
+    pt: MLOps / LLMOps
+    en: MLOps / LLMOps
+  origin: landscape-v1
+  description: IA, engenharia de software, dados, infraestrutura
+- id: govtech
+  name:
+    pt: GovTech
+    en: GovTech
+  origin: landscape-v1
+  description: Governo, direito, engenharia, UX, políticas públicas
+- id: civictech
+  name:
+    pt: CivicTech
+    en: CivicTech
+  origin: landscape-v1
+  description: Participação social, governo, dados, design
+- id: legaltech
+  name:
+    pt: LegalTech
+    en: LegalTech
+  origin: landscape-v1
+  description: Direito, NLP, engenharia, privacidade
+- id: healthtech
+  name:
+    pt: HealthTech
+    en: HealthTech
+  origin: landscape-v1
+  description: Medicina, engenharia, IA, regulação
+- id: fintech
+  name:
+    pt: FinTech
+    en: FinTech
+  origin: landscape-v1
+  description: Finanças, engenharia, segurança, direito
+- id: edtech
+  name:
+    pt: EdTech
+    en: EdTech
+  origin: landscape-v1
+  description: Educação, psicologia, software, design
+- id: bioinformatics
+  name:
+    pt: Bioinformatics
+    en: Bioinformatics
+  origin: landscape-v1
+  description: Biologia, estatística, computação
+- id: robotics
+  name:
+    pt: Robotics
+    en: Robotics
+  origin: landscape-v1
+  description: Mecânica, eletrônica, IA, controle
+- id: climatetech
+  name:
+    pt: ClimateTech
+    en: ClimateTech
+  origin: landscape-v1
+  description: Ciências ambientais, energia, engenharia, economia
+- id: energytech
+  name:
+    pt: EnergyTech
+    en: EnergyTech
+  origin: landscape-v1
+  description: Energia, IoT, engenharia, otimização
+- id: agritech
+  name:
+    pt: AgriTech
+    en: AgriTech
+  origin: landscape-v1
+  description: Agronomia, sensores, IA, logística
+- id: smart-cities
+  name:
+    pt: Smart Cities
+    en: Smart Cities
+  origin: landscape-v1
+  description: Urbanismo, governo, IoT, dados, mobilidade
+- id: digital-humanities
+  name:
+    pt: Digital Humanities
+    en: Digital Humanities
+  origin: landscape-v1
+  description: Humanidades, linguística, computação
+- id: game-development
+  name:
+    pt: Game Development
+    en: Game Development
+  origin: landscape-v1
+  description: Programação, arte, áudio, narrativa, matemática
+- id: computational-social-science
+  name:
+    pt: Computational Social Science
+    en: Computational Social Science
+  origin: landscape-v1
+  description: Sociologia, estatística, IA, ciência política
+- id: behavioral-design
+  name:
+    pt: Behavioral Design
+    en: Behavioral Design
+  origin: landscape-v1
+  description: Psicologia, UX, comunicação, experimentação
+- id: digital-twins
+  name:
+    pt: Digital Twins
+    en: Digital Twins
+  origin: landscape-v1
+  description: Engenharia, simulação, IoT, dados
+- id: cyber-physical-systems
+  name:
+    pt: Cyber-Physical Systems
+    en: Cyber-Physical Systems
+  origin: landscape-v1
+  description: Software, hardware, controle, segurança
+- id: computational-finance
+  name:
+    pt: Computational Finance
+    en: Computational Finance
+  origin: landscape-v1
+  description: Economia, matemática, programação, estatística
+- id: scientific-computing
+  name:
+    pt: Scientific Computing
+    en: Scientific Computing
+  origin: landscape-v1
+  description: Matemática, simulação, computação, ciência
+- id: human-ai-interaction
+  name:
+    pt: Human-AI Interaction
+    en: Human-AI Interaction
+  origin: landscape-v1
+  description: HCI, IA, psicologia, design
+- id: ai-governance
+  name:
+    pt: AI Governance
+    en: AI Governance
+  origin: landscape-v1
+  description: Direito, ética, segurança, políticas públicas
+- id: computational-creativity
+  name:
+    pt: Computational Creativity
+    en: Computational Creativity
+  origin: landscape-v1
+  description: IA, design, artes, linguística
+- id: research-automation
+  name:
+    pt: Research Automation
+    en: Research Automation
+  origin: landscape-v1
+  description: Pesquisa científica, agentes, RAG, análise de dados

@@ -1,0 +1,530 @@
+# Vocabulary for faceted classification. IDs are stable contracts (changing one needs an ADR); names may change.
+# origin: landscape-v1 = from the "OpenDigital AI & Knowledge Landscape v1.0" taxonomy; proposed = added to complete a truncated list, pending review.
+version: 1
+terms:
+- id: research
+  name:
+    pt: Pesquisa
+    en: Research
+  origin: landscape-v1
+- id: search
+  name:
+    pt: Buscar
+    en: Search
+  origin: landscape-v1
+  parent: research
+- id: browse
+  name:
+    pt: Navegar
+    en: Browse
+  origin: landscape-v1
+  parent: research
+- id: retrieve
+  name:
+    pt: Recuperar
+    en: Retrieve
+  origin: landscape-v1
+  parent: research
+- id: synthesise
+  name:
+    pt: Sintetizar
+    en: Synthesise
+  origin: landscape-v1
+  parent: research
+- id: cite
+  name:
+    pt: Citar
+    en: Cite
+  origin: landscape-v1
+  parent: research
+- id: compare-sources
+  name:
+    pt: Comparar fontes
+    en: Compare sources
+  origin: landscape-v1
+  parent: research
+- id: reasoning
+  name:
+    pt: Raciocínio
+    en: Reasoning
+  origin: landscape-v1
+- id: plan
+  name:
+    pt: Planejar
+    en: Plan
+  origin: landscape-v1
+  parent: reasoning
+- id: decompose
+  name:
+    pt: Decompor
+    en: Decompose
+  origin: landscape-v1
+  parent: reasoning
+- id: deduce
+  name:
+    pt: Deduzir
+    en: Deduce
+  origin: landscape-v1
+  parent: reasoning
+- id: estimate
+  name:
+    pt: Estimar
+    en: Estimate
+  origin: landscape-v1
+  parent: reasoning
+- id: decide
+  name:
+    pt: Decidir
+    en: Decide
+  origin: landscape-v1
+  parent: reasoning
+- id: verify
+  name:
+    pt: Verificar
+    en: Verify
+  origin: landscape-v1
+  parent: reasoning
+- id: programming
+  name:
+    pt: Programação
+    en: Programming
+  origin: landscape-v1
+- id: code
+  name:
+    pt: Codificar
+    en: Code
+  origin: landscape-v1
+  parent: programming
+- id: refactor
+  name:
+    pt: Refatorar
+    en: Refactor
+  origin: landscape-v1
+  parent: programming
+- id: debug
+  name:
+    pt: Depurar
+    en: Debug
+  origin: landscape-v1
+  parent: programming
+- id: test
+  name:
+    pt: Testar
+    en: Test
+  origin: landscape-v1
+  parent: programming
+- id: review
+  name:
+    pt: Revisar
+    en: Review
+  origin: landscape-v1
+  parent: programming
+- id: migrate
+  name:
+    pt: Migrar
+    en: Migrate
+  origin: landscape-v1
+  parent: programming
+- id: data
+  name:
+    pt: Dados
+    en: Data
+  origin: landscape-v1
+- id: extract
+  name:
+    pt: Extrair
+    en: Extract
+  origin: landscape-v1
+  parent: data
+- id: clean
+  name:
+    pt: Limpar
+    en: Clean
+  origin: landscape-v1
+  parent: data
+- id: transform
+  name:
+    pt: Transformar
+    en: Transform
+  origin: landscape-v1
+  parent: data
+- id: query
+  name:
+    pt: Consultar
+    en: Query
+  origin: landscape-v1
+  parent: data
+- id: analyse
+  name:
+    pt: Analisar
+    en: Analyse
+  origin: landscape-v1
+  parent: data
+- id: visualise
+  name:
+    pt: Visualizar
+    en: Visualise
+  origin: landscape-v1
+  parent: data
+- id: content
+  name:
+    pt: Conteúdo
+    en: Content
+  origin: landscape-v1
+- id: write
+  name:
+    pt: Redigir
+    en: Write
+  origin: landscape-v1
+  parent: content
+- id: edit
+  name:
+    pt: Revisar texto
+    en: Edit
+  origin: landscape-v1
+  parent: content
+- id: translate
+  name:
+    pt: Traduzir
+    en: Translate
+  origin: landscape-v1
+  parent: content
+- id: summarise
+  name:
+    pt: Resumir
+    en: Summarise
+  origin: landscape-v1
+  parent: content
+- id: adapt
+  name:
+    pt: Adaptar
+    en: Adapt
+  origin: landscape-v1
+  parent: content
+- id: publish
+  name:
+    pt: Publicar
+    en: Publish
+  origin: landscape-v1
+  parent: content
+- id: creation
+  name:
+    pt: Criação
+    en: Creation
+  origin: landscape-v1
+- id: draw
+  name:
+    pt: Desenhar
+    en: Draw
+  origin: landscape-v1
+  parent: creation
+- id: prototype
+  name:
+    pt: Prototipar
+    en: Prototype
+  origin: landscape-v1
+  parent: creation
+- id: generate-images
+  name:
+    pt: Gerar imagens
+    en: Generate images
+  origin: landscape-v1
+  parent: creation
+- id: generate-audio
+  name:
+    pt: Gerar áudio
+    en: Generate audio
+  origin: landscape-v1
+  parent: creation
+- id: generate-video
+  name:
+    pt: Gerar vídeo
+    en: Generate video
+  origin: landscape-v1
+  parent: creation
+- id: generate-interfaces
+  name:
+    pt: Gerar interfaces
+    en: Generate interfaces
+  origin: landscape-v1
+  parent: creation
+- id: business
+  name:
+    pt: Negócios
+    en: Business
+  origin: landscape-v1
+- id: prospect
+  name:
+    pt: Prospectar
+    en: Prospect
+  origin: landscape-v1
+  parent: business
+- id: price
+  name:
+    pt: Precificar
+    en: Price
+  origin: landscape-v1
+  parent: business
+- id: negotiate
+  name:
+    pt: Negociar
+    en: Negotiate
+  origin: landscape-v1
+  parent: business
+- id: forecast
+  name:
+    pt: Prever
+    en: Forecast
+  origin: landscape-v1
+  parent: business
+- id: plan-business
+  name:
+    pt: Planejar negócios
+    en: Plan business
+  origin: landscape-v1
+  parent: business
+- id: operations
+  name:
+    pt: Operações
+    en: Operations
+  origin: landscape-v1
+- id: automate
+  name:
+    pt: Automatizar
+    en: Automate
+  origin: landscape-v1
+  parent: operations
+- id: integrate
+  name:
+    pt: Integrar
+    en: Integrate
+  origin: landscape-v1
+  parent: operations
+- id: monitor
+  name:
+    pt: Monitorar
+    en: Monitor
+  origin: landscape-v1
+  parent: operations
+- id: schedule
+  name:
+    pt: Agendar
+    en: Schedule
+  origin: landscape-v1
+  parent: operations
+- id: execute
+  name:
+    pt: Executar
+    en: Execute
+  origin: landscape-v1
+  parent: operations
+- id: knowledge
+  name:
+    pt: Conhecimento
+    en: Knowledge
+  origin: landscape-v1
+- id: index
+  name:
+    pt: Indexar
+    en: Index
+  origin: landscape-v1
+  parent: knowledge
+- id: classify
+  name:
+    pt: Classificar
+    en: Classify
+  origin: landscape-v1
+  parent: knowledge
+- id: memorise
+  name:
+    pt: Memorizar
+    en: Memorise
+  origin: landscape-v1
+  parent: knowledge
+- id: relate
+  name:
+    pt: Relacionar
+    en: Relate
+  origin: landscape-v1
+  parent: knowledge
+- id: recall
+  name:
+    pt: Recuperar memória
+    en: Recall
+  origin: landscape-v1
+  parent: knowledge
+- id: quality
+  name:
+    pt: Qualidade
+    en: Quality
+  origin: landscape-v1
+- id: validate
+  name:
+    pt: Validar
+    en: Validate
+  origin: landscape-v1
+  parent: quality
+- id: evaluate
+  name:
+    pt: Avaliar
+    en: Evaluate
+  origin: landscape-v1
+  parent: quality
+- id: audit
+  name:
+    pt: Auditar
+    en: Audit
+  origin: landscape-v1
+  parent: quality
+- id: benchmark
+  name:
+    pt: Comparar desempenho
+    en: Benchmark
+  origin: landscape-v1
+  parent: quality
+- id: test-quality
+  name:
+    pt: Testar qualidade
+    en: Test quality
+  origin: landscape-v1
+  parent: quality
+- id: security
+  name:
+    pt: Segurança
+    en: Security
+  origin: landscape-v1
+- id: detect
+  name:
+    pt: Detectar
+    en: Detect
+  origin: landscape-v1
+  parent: security
+- id: prevent
+  name:
+    pt: Prevenir
+    en: Prevent
+  origin: landscape-v1
+  parent: security
+- id: authorise
+  name:
+    pt: Autorizar
+    en: Authorise
+  origin: landscape-v1
+  parent: security
+- id: isolate
+  name:
+    pt: Isolar
+    en: Isolate
+  origin: landscape-v1
+  parent: security
+- id: log
+  name:
+    pt: Registrar
+    en: Log
+  origin: landscape-v1
+  parent: security
+- id: coordination
+  name:
+    pt: Coordenação
+    en: Coordination
+  origin: landscape-v1
+- id: delegate
+  name:
+    pt: Delegar
+    en: Delegate
+  origin: landscape-v1
+  parent: coordination
+- id: supervise
+  name:
+    pt: Supervisionar
+    en: Supervise
+  origin: landscape-v1
+  parent: coordination
+- id: distribute
+  name:
+    pt: Distribuir
+    en: Distribute
+  origin: landscape-v1
+  parent: coordination
+- id: synchronise
+  name:
+    pt: Sincronizar
+    en: Synchronise
+  origin: landscape-v1
+  parent: coordination
+- id: approve
+  name:
+    pt: Aprovar
+    en: Approve
+  origin: landscape-v1
+  parent: coordination
+- id: teaching
+  name:
+    pt: Ensino
+    en: Teaching
+  origin: landscape-v1
+- id: explain
+  name:
+    pt: Explicar
+    en: Explain
+  origin: landscape-v1
+  parent: teaching
+- id: tutor
+  name:
+    pt: Tutorar
+    en: Tutor
+  origin: landscape-v1
+  parent: teaching
+- id: exercise
+  name:
+    pt: Exercitar
+    en: Exercise
+  origin: landscape-v1
+  parent: teaching
+- id: assess
+  name:
+    pt: Avaliar aprendizado
+    en: Assess
+  origin: landscape-v1
+  parent: teaching
+- id: personalise
+  name:
+    pt: Personalizar
+    en: Personalise
+  origin: landscape-v1
+  parent: teaching
+- id: communication
+  name:
+    pt: Comunicação
+    en: Communication
+  origin: landscape-v1
+- id: converse
+  name:
+    pt: Conversar
+    en: Converse
+  origin: landscape-v1
+  parent: communication
+- id: present
+  name:
+    pt: Apresentar
+    en: Present
+  origin: landscape-v1
+  parent: communication
+- id: persuade
+  name:
+    pt: Persuadir
+    en: Persuade
+  origin: landscape-v1
+  parent: communication
+- id: support
+  name:
+    pt: Atender
+    en: Support
+  origin: landscape-v1
+  parent: communication
+- id: facilitate
+  name:
+    pt: Facilitar
+    en: Facilitate
+  origin: landscape-v1
+  parent: communication

@@ -13,12 +13,12 @@ Application and agent security - audits, threat modelling, secrets, supply chain
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`agent-security`](skills/agent-security/SKILL.md) | skill | experimental | Use when building, reviewing or configuring an AI agent or agent harness that reads untrusted content, calls tools, writes files, holds credentials, or loads MCP servers, hooks and plugins. Covers prompt-injection bound… | affaan-m/ECC |
-| [`external-references`](knowledge/external-references.md) | knowledge | experimental | Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP). | original |
-| [`secrets-hygiene`](skills/secrets-hygiene/SKILL.md) | skill | experimental | Use when a secret, token, key or password may have leaked (committed, logged, shipped in a bundle or image), when setting up secret scanning, or when deciding how an application should store, broker and rotate credentia… | msitarzewski/agency-agents |
-| [`security-audit`](skills/security-audit/SKILL.md) | skill | experimental | Use for security questions, focused vulnerability reviews, vulnerability research, security audits or authorised pen tests of codebases, APIs, services, CLI tools, libraries and daemons. Runs the complete six-phase audi… | SecurityStandards/skill-security-audit, affaan-m/ECC, msitarzewski/agency-agents |
-| [`threat-modeling`](skills/threat-modeling/SKILL.md) | skill | experimental | Use when designing a new system or feature that handles sensitive data, money, identity or untrusted input, before a security review, or when the user asks for a threat model. Maps data flows and trust boundaries, runs… | msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`agent-security`](skills/agent-security/SKILL.md) | skill | experimental | Use when building, reviewing or configuring an AI agent or agent harness that reads untrusted content, calls tools, writes files, holds credentials, or loads MCP servers, hooks and plugins. Covers prompt-injection bound… | Detect, Prevent, Audit | affaan-m/ECC |
+| [`external-references`](knowledge/external-references.md) | knowledge | experimental | Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP). | Detect, Prevent, Audit, Retrieve | original |
+| [`secrets-hygiene`](skills/secrets-hygiene/SKILL.md) | skill | experimental | Use when a secret, token, key or password may have leaked (committed, logged, shipped in a bundle or image), when setting up secret scanning, or when deciding how an application should store, broker and rotate credentia… | Detect, Prevent, Audit, Isolate | msitarzewski/agency-agents |
+| [`security-audit`](skills/security-audit/SKILL.md) | skill | experimental | Use for security questions, focused vulnerability reviews, vulnerability research, security audits or authorised pen tests of codebases, APIs, services, CLI tools, libraries and daemons. Runs the complete six-phase audi… | Detect, Prevent, Audit | SecurityStandards/skill-security-audit, affaan-m/ECC, msitarzewski/agency-agents |
+| [`threat-modeling`](skills/threat-modeling/SKILL.md) | skill | experimental | Use when designing a new system or feature that handles sensitive data, money, identity or untrusted input, before a security review, or when the user asks for a threat model. Maps data flows and trust boundaries, runs… | Detect, Prevent, Audit, Plan | msitarzewski/agency-agents |
 
 Spec: [`docs/specs/security/catalog/spec.md`](../../docs/specs/security/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

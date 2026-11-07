@@ -13,8 +13,8 @@ Product management - PRDs, prioritisation, feedback synthesis, experiments.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`product-management`](skills/product-management/SKILL.md) | skill | experimental | Use when doing product management work: writing a PRD or product brief, defining outcomes and success metrics, prioritising a backlog or sprint, synthesising user feedback into themes, planning and tracking experiments,… | affaan-m/ECC, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`product-management`](skills/product-management/SKILL.md) | skill | experimental | Use when doing product management work: writing a PRD or product brief, defining outcomes and success metrics, prioritising a backlog or sprint, synthesising user feedback into themes, planning and tracking experiments,… | Plan, Decide, Synthesise | affaan-m/ECC, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/product/catalog/spec.md`](../../docs/specs/product/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

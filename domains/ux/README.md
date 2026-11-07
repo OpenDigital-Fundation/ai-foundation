@@ -13,9 +13,9 @@ User experience - user research, flows, information architecture, usability heur
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`usability-review`](skills/usability-review/SKILL.md) | skill | experimental | Use when evaluating whether an existing interface, flow or prototype is easy to use without running a study - a heuristic evaluation, a cognitive or persona walkthrough of a task, a review of a sign-up, checkout or onbo… | msitarzewski/agency-agents |
-| [`user-research`](skills/user-research/SKILL.md) | skill | experimental | Use when the team needs evidence about users before or after building - planning interviews, usability tests or surveys, recruiting participants, writing a study protocol, synthesising findings into personas, journeys a… | msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`usability-review`](skills/usability-review/SKILL.md) | skill | experimental | Use when evaluating whether an existing interface, flow or prototype is easy to use without running a study - a heuristic evaluation, a cognitive or persona walkthrough of a task, a review of a sign-up, checkout or onbo… | Analyse, Evaluate, Synthesise | msitarzewski/agency-agents |
+| [`user-research`](skills/user-research/SKILL.md) | skill | experimental | Use when the team needs evidence about users before or after building - planning interviews, usability tests or surveys, recruiting participants, writing a study protocol, synthesising findings into personas, journeys a… | Analyse, Evaluate, Synthesise, Search | msitarzewski/agency-agents |
 
 Spec: [`docs/specs/ux/catalog/spec.md`](../../docs/specs/ux/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

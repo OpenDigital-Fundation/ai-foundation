@@ -1,0 +1,100 @@
+# Vocabulary for faceted classification. IDs are stable contracts (changing one needs an ADR); names may change.
+# origin: landscape-v1 = from the "OpenDigital AI & Knowledge Landscape v1.0" taxonomy; proposed = added to complete a truncated list, pending review.
+version: 1
+terms:
+- id: models-inference
+  name:
+    pt: Modelos e inferência
+    en: Models and inference
+  origin: landscape-v1
+  description: LLM, SLM, VLM, multimodality, serving, quantisation, fine-tuning
+- id: model-routing-gateways
+  name:
+    pt: Roteamento de modelos e gateways
+    en: Model routing and gateways
+  origin: landscape-v1
+  description: Routing, fallback, load balancing, caching, rate limits, cost
+- id: prompts-context-engineering
+  name:
+    pt: Prompts e engenharia de contexto
+    en: Prompts and context engineering
+  origin: landscape-v1
+  description: System prompts, templates, compaction, context pruning, structured outputs
+- id: skills-reusable-capabilities
+  name:
+    pt: Skills e capacidades reutilizáveis
+    en: Skills and reusable capabilities
+  origin: landscape-v1
+  description: Agent Skills, procedures, skill discovery, reusable instructions
+- id: agent-frameworks
+  name:
+    pt: Frameworks de agentes
+    en: Agent frameworks
+  origin: landscape-v1
+  description: Agent SDKs, loops, tool calling, reasoning, planning
+- id: harnesses-runtimes
+  name:
+    pt: Harnesses e runtimes
+    en: Harnesses and runtimes
+  origin: landscape-v1
+  description: Execution loops, sandbox, lifecycle, retries, checkpoints
+- id: tools-mcp-integrations
+  name:
+    pt: Ferramentas, MCP e integrações
+    en: Tools, MCP and integrations
+  origin: proposed
+  description: Tool calling, MCP servers, connectors, plugins, APIs
+- id: rag-retrieval
+  name:
+    pt: RAG e recuperação
+    en: RAG and retrieval
+  origin: proposed
+  description: Embeddings, search, reranking, knowledge bases, knowledge graphs
+- id: memory
+  name:
+    pt: Memória
+    en: Memory
+  origin: proposed
+  description: Short and long-term memory, context files, learning across sessions
+- id: multi-agent-orchestration
+  name:
+    pt: Orquestração multiagente
+    en: Multi-agent orchestration
+  origin: proposed
+  description: Orchestrators, supervisors, subagents, handoff, delegation, A2A
+- id: workflows-automation
+  name:
+    pt: Workflows e automação
+    en: Workflows and automation
+  origin: proposed
+  description: Workflows, hooks, schedulers, queues, pipelines
+- id: evals-benchmarks
+  name:
+    pt: Evals e benchmarks
+    en: Evals and benchmarks
+  origin: proposed
+  description: Evals, benchmarks, LLM-as-judge, red teaming, regression tests
+- id: guardrails-security
+  name:
+    pt: Guardrails e segurança de IA
+    en: Guardrails and AI security
+  origin: proposed
+  description: Guardrails, sandboxing, human-in-the-loop, IAM, secrets, prompt-injection defence
+- id: observability-operations
+  name:
+    pt: Observabilidade e operação
+    en: Observability and operations
+  origin: proposed
+  description: Tracing, logging, telemetry, cost tracking, checkpoints
+- id: browser-computer-use
+  name:
+    pt: Navegador e uso de computador
+    en: Browser and computer use
+  origin: proposed
+  description: Browser automation, computer use, UI agents
+- id: distribution-registries
+  name:
+    pt: Distribuição e registros
+    en: Distribution and registries
+  origin: proposed
+  description: Registries, marketplaces, packages, templates, SDKs

@@ -13,12 +13,12 @@ SEO and answer-engine optimisation, content, social, email, paid media.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`campaign-planning`](skills/campaign-planning/SKILL.md) | skill | experimental | Use when planning a marketing campaign or launch end to end: goals, audience, positioning and messaging, channel mix, calendar, growth experiments, press and communications, and success metrics. | affaan-m/ECC, msitarzewski/agency-agents |
-| [`content-marketing`](skills/content-marketing/SKILL.md) | skill | experimental | Use when planning or producing marketing content: content strategy and calendars, articles and newsletters, LinkedIn and social posts, cross-posting across platforms, developer relations content and community building. | affaan-m/ECC, msitarzewski/agency-agents |
-| [`email-marketing`](skills/email-marketing/SKILL.md) | skill | experimental | Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation, deliverability, subject lines and A/B tests, and operating email tools. | affaan-m/ECC, msitarzewski/agency-agents |
-| [`paid-media`](skills/paid-media/SKILL.md) | skill | experimental | Use for paid acquisition: search (PPC) and paid social campaigns, programmatic and display buying, search-query mining, ad creative, conversion tracking and attribution, and auditing ad accounts. | msitarzewski/agency-agents |
-| [`seo`](skills/seo/SKILL.md) | skill | experimental | Use for search visibility: technical SEO audits, keyword and intent research, on-page optimisation, structured data, Core Web Vitals, answer-engine and AI-citation optimisation, and app store optimisation. | affaan-m/ECC, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`campaign-planning`](skills/campaign-planning/SKILL.md) | skill | experimental | Use when planning a marketing campaign or launch end to end: goals, audience, positioning and messaging, channel mix, calendar, growth experiments, press and communications, and success metrics. | Write, Publish, Analyse | affaan-m/ECC, msitarzewski/agency-agents |
+| [`content-marketing`](skills/content-marketing/SKILL.md) | skill | experimental | Use when planning or producing marketing content: content strategy and calendars, articles and newsletters, LinkedIn and social posts, cross-posting across platforms, developer relations content and community building. | Write, Publish, Analyse | affaan-m/ECC, msitarzewski/agency-agents |
+| [`email-marketing`](skills/email-marketing/SKILL.md) | skill | experimental | Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation, deliverability, subject lines and A/B tests, and operating email tools. | Write, Publish, Analyse | affaan-m/ECC, msitarzewski/agency-agents |
+| [`paid-media`](skills/paid-media/SKILL.md) | skill | experimental | Use for paid acquisition: search (PPC) and paid social campaigns, programmatic and display buying, search-query mining, ad creative, conversion tracking and attribution, and auditing ad accounts. | Write, Publish, Analyse | msitarzewski/agency-agents |
+| [`seo`](skills/seo/SKILL.md) | skill | experimental | Use for search visibility: technical SEO audits, keyword and intent research, on-page optimisation, structured data, Core Web Vitals, answer-engine and AI-citation optimisation, and app store optimisation. | Write, Publish, Analyse | affaan-m/ECC, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/marketing/catalog/spec.md`](../../docs/specs/marketing/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

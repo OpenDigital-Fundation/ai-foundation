@@ -13,10 +13,10 @@ Databases, migrations, data modelling and data engineering.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`data-pipelines`](skills/data-pipelines/SKILL.md) | skill | experimental | Use when building or fixing data pipelines and bulk data movement: ingestion, ETL/ELT, backfills, exports, warehouse or lakehouse loading, streaming, data quality checks and throughput problems. | affaan-m/ECC, msitarzewski/agency-agents |
-| [`database-design`](skills/database-design/SKILL.md) | skill | experimental | Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels, or reviewing database code for PostgreSQL, MySQL/MariaDB, Redis, ClickHouse or an ORM such as Prisma. Cover… | affaan-m/ECC, msitarzewski/agency-agents |
-| [`database-migrations`](skills/database-migrations/SKILL.md) | skill | experimental | Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills, adding indexes or constraints without downtime, and planning rollback. Applies expand-migrate-contract… | affaan-m/ECC |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`data-pipelines`](skills/data-pipelines/SKILL.md) | skill | experimental | Use when building or fixing data pipelines and bulk data movement: ingestion, ETL/ELT, backfills, exports, warehouse or lakehouse loading, streaming, data quality checks and throughput problems. | Query, Transform, Analyse, Extract, Clean | affaan-m/ECC, msitarzewski/agency-agents |
+| [`database-design`](skills/database-design/SKILL.md) | skill | experimental | Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels, or reviewing database code for PostgreSQL, MySQL/MariaDB, Redis, ClickHouse or an ORM such as Prisma. Cover… | Query, Transform, Analyse | affaan-m/ECC, msitarzewski/agency-agents |
+| [`database-migrations`](skills/database-migrations/SKILL.md) | skill | experimental | Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills, adding indexes or constraints without downtime, and planning rollback. Applies expand-migrate-contract… | Query, Transform, Analyse | affaan-m/ECC |
 
 Spec: [`docs/specs/data/catalog/spec.md`](../../docs/specs/data/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

@@ -13,10 +13,10 @@ Project management, people operations, customer support, processes.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`customer-support`](skills/customer-support/SKILL.md) | skill | experimental | Use for customer support and success work: answering tickets, writing help-center replies and macros, escalations, onboarding and health checks for accounts, and turning support trends into product feedback. | msitarzewski/agency-agents |
-| [`people-operations`](skills/people-operations/SKILL.md) | skill | experimental | Use for people operations: hiring plans and job descriptions, interview loops, onboarding new staff, training programmes, and managing organisational change. | msitarzewski/agency-agents |
-| [`project-management`](skills/project-management/SKILL.md) | skill | experimental | Use when running a project or programme: plans and milestones, status tracking, risks and dependencies, stakeholder updates, meeting notes and action items, and keeping a Jira or tracker workflow healthy. | affaan-m/ECC, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`customer-support`](skills/customer-support/SKILL.md) | skill | experimental | Use for customer support and success work: answering tickets, writing help-center replies and macros, escalations, onboarding and health checks for accounts, and turning support trends into product feedback. | Plan, Supervise, Support, Converse | msitarzewski/agency-agents |
+| [`people-operations`](skills/people-operations/SKILL.md) | skill | experimental | Use for people operations: hiring plans and job descriptions, interview loops, onboarding new staff, training programmes, and managing organisational change. | Plan, Supervise, Support, Tutor | msitarzewski/agency-agents |
+| [`project-management`](skills/project-management/SKILL.md) | skill | experimental | Use when running a project or programme: plans and milestones, status tracking, risks and dependencies, stakeholder updates, meeting notes and action items, and keeping a Jira or tracker workflow healthy. | Plan, Supervise, Support | affaan-m/ECC, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/operations/catalog/spec.md`](../../docs/specs/operations/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

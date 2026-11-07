@@ -13,9 +13,9 @@ Contracts, regulatory compliance, legal privacy.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`compliance-programs`](skills/compliance-programs/SKILL.md) | skill | experimental | Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy programmes and data processing, control mapping, evidence collection and policy gaps. Not legal advice. | msitarzewski/agency-agents |
-| [`contracts`](skills/contracts/SKILL.md) | skill | experimental | Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review against a playbook, redlines, client intake and matter organisation. Drafts are for review by a qualified la… | affaan-m/ECC, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`compliance-programs`](skills/compliance-programs/SKILL.md) | skill | experimental | Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy programmes and data processing, control mapping, evidence collection and policy gaps. Not legal advice. | Audit, Validate, Write | msitarzewski/agency-agents |
+| [`contracts`](skills/contracts/SKILL.md) | skill | experimental | Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review against a playbook, redlines, client intake and matter organisation. Drafts are for review by a qualified la… | Audit, Validate, Write | affaan-m/ECC, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/legal-compliance/catalog/spec.md`](../../docs/specs/legal-compliance/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

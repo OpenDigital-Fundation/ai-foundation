@@ -13,9 +13,9 @@ Finding the cause of failures - diagnosis, build errors, silent failures.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`build-failure-resolution`](skills/build-failure-resolution/SKILL.md) | skill | experimental | Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed silently: read the first real error, fix the smallest cause, rebuild, repeat; then hunt for empty catches and… | affaan-m/ECC |
-| [`systematic-debugging`](skills/systematic-debugging/SKILL.md) | skill | experimental | Use when encountering any bug, test failure, crash, performance regression or unexpected behaviour, before proposing a fix. First builds a tight, deterministic feedback loop that goes red on the exact symptom, then trac… | mattpocock/skills, obra/superpowers |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`build-failure-resolution`](skills/build-failure-resolution/SKILL.md) | skill | experimental | Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed silently: read the first real error, fix the smallest cause, rebuild, repeat; then hunt for empty catches and… | Debug, Verify | affaan-m/ECC |
+| [`systematic-debugging`](skills/systematic-debugging/SKILL.md) | skill | experimental | Use when encountering any bug, test failure, crash, performance regression or unexpected behaviour, before proposing a fix. First builds a tight, deterministic feedback loop that goes red on the exact symptom, then trac… | Debug, Verify | mattpocock/skills, obra/superpowers |
 
 Spec: [`docs/specs/debugging/catalog/spec.md`](../../docs/specs/debugging/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

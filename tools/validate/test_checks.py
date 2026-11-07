@@ -152,3 +152,17 @@ def test_line_budget_exception_needs_a_reason(repo):
     assert any("exceeds 500" in e for e in errors(repo))
     (d / "SKILL.md").write_text(f"---\nname: test-driven-development\ndescription: {TDD}\nmetadata:\n  line_budget_exception: Upstream official skill whose relative links break if split.\n---\n" + long_body)
     assert not any("exceeds 500" in e for e in errors(repo))
+
+
+def test_facets_must_exist_and_cover_catalog(repo):
+    for d in ("taxonomy",):
+        shutil.copytree(REPO / "catalog" / d, repo / "catalog" / d)
+    add_skill(repo, "testing", "test-driven-development", TDD)
+    (repo / "catalog/facets.yaml").write_text("version: 1\nartifacts: {}\n")
+    assert any("has no facets" in e for e in errors(repo))
+    (repo / "catalog/facets.yaml").write_text(
+        "version: 1\nartifacts:\n  testing/test-driven-development: {knowledge: [software-engineering], capabilities: [test, teleport]}\n")
+    assert any("'teleport' is not in" in e for e in errors(repo))
+    (repo / "catalog/facets.yaml").write_text(
+        "version: 1\nartifacts:\n  testing/test-driven-development: {knowledge: [software-engineering], capabilities: [test]}\n")
+    assert errors(repo) == []

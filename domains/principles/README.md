@@ -13,8 +13,8 @@ Always-on coding behaviour for agents - simplicity, surgical changes, explicit a
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`coding-discipline`](skills/coding-discipline/SKILL.md) | skill | experimental | Use on any task that writes, fixes or refactors code. Makes the smallest change that fully solves the task, surfaces assumptions before coding, keeps diffs surgical, and defines a verifiable success check. Also use when… | DietrichGebert/ponytail, affaan-m/ECC, msitarzewski/agency-agents, multica-ai/andrej-karpathy-skills |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`coding-discipline`](skills/coding-discipline/SKILL.md) | skill | experimental | Use on any task that writes, fixes or refactors code. Makes the smallest change that fully solves the task, surfaces assumptions before coding, keeps diffs surgical, and defines a verifiable success check. Also use when… | Code, Verify | DietrichGebert/ponytail, affaan-m/ECC, msitarzewski/agency-agents, multica-ai/andrej-karpathy-skills |
 
 Spec: [`docs/specs/principles/catalog/spec.md`](../../docs/specs/principles/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

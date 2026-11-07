@@ -1,0 +1,178 @@
+# Vocabulary for faceted classification. IDs are stable contracts (changing one needs an ADR); names may change.
+# origin: landscape-v1 = from the "OpenDigital AI & Knowledge Landscape v1.0" taxonomy; proposed = added to complete a truncated list, pending review.
+version: 1
+terms:
+- id: group-a
+  name:
+    pt: Ciências exatas, naturais e engenharia
+    en: Natural sciences and engineering
+  origin: landscape-v1
+- id: mathematics-statistics
+  name:
+    pt: Matemática e estatística
+    en: Mathematics and statistics
+  origin: proposed
+  parent: group-a
+- id: physics-astronomy
+  name:
+    pt: Física e astronomia
+    en: Physics and astronomy
+  origin: proposed
+  parent: group-a
+- id: chemistry-materials
+  name:
+    pt: Química e materiais
+    en: Chemistry and materials
+  origin: proposed
+  parent: group-a
+- id: life-sciences
+  name:
+    pt: Ciências da vida
+    en: Life sciences
+  origin: proposed
+  parent: group-a
+- id: earth-environmental-sciences
+  name:
+    pt: Ciências da Terra e ambientais
+    en: Earth and environmental sciences
+  origin: proposed
+  parent: group-a
+- id: engineering
+  name:
+    pt: Engenharias
+    en: Engineering
+  origin: proposed
+  parent: group-a
+- id: group-b
+  name:
+    pt: Computação, dados e tecnologias digitais
+    en: Computing, data and digital technology
+  origin: landscape-v1
+- id: computer-science
+  name:
+    pt: Ciência da Computação
+    en: Computer science
+  origin: landscape-v1
+  parent: group-b
+- id: software-engineering
+  name:
+    pt: Engenharia de Software
+    en: Software engineering
+  origin: landscape-v1
+  parent: group-b
+- id: ai-data
+  name:
+    pt: Inteligência Artificial e Dados
+    en: AI and data
+  origin: landscape-v1
+  parent: group-b
+- id: cybersecurity-privacy
+  name:
+    pt: Cibersegurança e Privacidade
+    en: Cybersecurity and privacy
+  origin: landscape-v1
+  parent: group-b
+- id: group-c
+  name:
+    pt: Negócios, gestão e economia
+    en: Business, management and economics
+  origin: landscape-v1
+- id: management-strategy
+  name:
+    pt: Gestão e estratégia
+    en: Management and strategy
+  origin: proposed
+  parent: group-c
+- id: finance-accounting
+  name:
+    pt: Finanças e contabilidade
+    en: Finance and accounting
+  origin: proposed
+  parent: group-c
+- id: marketing-communication
+  name:
+    pt: Marketing, marca e comunicação
+    en: Marketing, brand and communication
+  origin: proposed
+  parent: group-c
+- id: sales-commerce
+  name:
+    pt: Vendas e comércio
+    en: Sales and commerce
+  origin: proposed
+  parent: group-c
+- id: group-d
+  name:
+    pt: Humanidades, sociedade e instituições
+    en: Humanities, society and institutions
+  origin: landscape-v1
+- id: law
+  name:
+    pt: Direito
+    en: Law
+  origin: proposed
+  parent: group-d
+- id: government-public-policy
+  name:
+    pt: Governo e políticas públicas
+    en: Government and public policy
+  origin: proposed
+  parent: group-d
+- id: social-sciences
+  name:
+    pt: Ciências sociais
+    en: Social sciences
+  origin: proposed
+  parent: group-d
+- id: humanities-languages
+  name:
+    pt: Humanidades, linguística e idiomas
+    en: Humanities, linguistics and languages
+  origin: proposed
+  parent: group-d
+- id: group-e
+  name:
+    pt: Saúde, educação e desenvolvimento humano
+    en: Health, education and human development
+  origin: landscape-v1
+- id: health-medicine
+  name:
+    pt: Saúde e medicina
+    en: Health and medicine
+  origin: proposed
+  parent: group-e
+- id: education
+  name:
+    pt: Educação
+    en: Education
+  origin: proposed
+  parent: group-e
+- id: psychology-human-development
+  name:
+    pt: Psicologia e desenvolvimento humano
+    en: Psychology and human development
+  origin: proposed
+  parent: group-e
+- id: group-f
+  name:
+    pt: Artes, design e indústrias criativas
+    en: Arts, design and creative industries
+  origin: landscape-v1
+- id: design
+  name:
+    pt: Design
+    en: Design
+  origin: proposed
+  parent: group-f
+- id: arts-media
+  name:
+    pt: Artes e mídia
+    en: Arts and media
+  origin: proposed
+  parent: group-f
+- id: writing-publishing
+  name:
+    pt: Escrita e publicação
+    en: Writing and publishing
+  origin: proposed
+  parent: group-f

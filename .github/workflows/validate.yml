@@ -27,4 +27,4 @@ jobs:
           uv run python -m tools.build
           uv run python -m tools.catalog rebuild
           uv run python -m tools.build docs
-          git diff --exit-code -- .claude-plugin/marketplace.json catalog/catalog.yaml catalog/exclusions.yaml docs/CATALOG.md docs/SOURCES.md domains/*/README.md
+          git diff --exit-code -- .claude-plugin/marketplace.json catalog/catalog.yaml catalog/exclusions.yaml docs/CATALOG.md docs/SOURCES.md docs/FACETS.md domains/*/README.md

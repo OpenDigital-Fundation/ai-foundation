@@ -13,10 +13,10 @@ Prospecting, qualification, proposals, pipeline.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`deal-strategy`](skills/deal-strategy/SKILL.md) | skill | experimental | Use when working an active sales opportunity: discovery calls, qualification, mapping stakeholders, technical sales and demos, proposals, handling objections, pipeline reviews and forecasting, and coaching reps. | msitarzewski/agency-agents |
-| [`investor-relations`](skills/investor-relations/SKILL.md) | skill | experimental | Use when raising money: pitch decks, one-pagers, financial narratives, data rooms, and investor outreach and follow-up. | affaan-m/ECC |
-| [`prospecting`](skills/prospecting/SKILL.md) | skill | experimental | Use when finding and reaching new customers: defining the ideal customer profile, building and scoring lead lists, finding warm paths, and writing personalised outbound sequences. | affaan-m/ECC, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`deal-strategy`](skills/deal-strategy/SKILL.md) | skill | experimental | Use when working an active sales opportunity: discovery calls, qualification, mapping stakeholders, technical sales and demos, proposals, handling objections, pipeline reviews and forecasting, and coaching reps. | Prospect, Negotiate, Forecast | msitarzewski/agency-agents |
+| [`investor-relations`](skills/investor-relations/SKILL.md) | skill | experimental | Use when raising money: pitch decks, one-pagers, financial narratives, data rooms, and investor outreach and follow-up. | Prospect, Negotiate, Forecast, Present, Persuade | affaan-m/ECC |
+| [`prospecting`](skills/prospecting/SKILL.md) | skill | experimental | Use when finding and reaching new customers: defining the ideal customer profile, building and scoring lead lists, finding warm paths, and writing personalised outbound sequences. | Prospect, Negotiate, Forecast | affaan-m/ECC, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/sales/catalog/spec.md`](../../docs/specs/sales/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

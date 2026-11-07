@@ -56,20 +56,22 @@ def _description(arts, aid: str, fallback: str) -> str:
     return fallback
 
 
-def domain_readme(root, d, boundary, cat, arts, prov) -> str:
+def domain_readme(root, d, boundary, cat, arts, prov, facets=None, vocab=None) -> str:
     items = [a for a in cat if a["id"].startswith(d + "/")]
     lines = [f"# `{d}`", "", HEADER.strip(), "", boundary, "", "## Install", "", "```",
              f"/plugin marketplace add OpenDigital-Fundation/ai-foundation", f"/plugin install {d}@{MARKETPLACE}", "```", ""]
     if not items:
         lines += ["No artifacts yet."]
     else:
-        lines += ["## Contents", "", "| Artifact | Type | Status | Use it when | Derived from |", "|---|---|---|---|---|"]
+        lines += ["## Contents", "", "| Artifact | Type | Status | Use it when | Capabilities | Derived from |", "|---|---|---|---|---|---|"]
         for a in items:
             name = a["id"].split("/")[1]
             art = arts.get(a["id"])
             link = f"[`{name}`]({art.path.relative_to(root / 'domains' / d).as_posix()})" if art else f"`{name}`"
+            caps = ", ".join((vocab or {}).get("capabilities", {}).get(c, {}).get("name", {}).get("en", c)
+                             for c in ((facets or {}).get(a["id"], {}).get("capabilities", [])))
             lines.append(f"| {link} | {a['type']} | {a['status']} | {_cell(_description(arts, a['id'], a['capability']))} | "
-                         f"{', '.join(sorted(prov.get(a['id'], []))) or 'original'} |")
+                         f"{caps or '—'} | {', '.join(sorted(prov.get(a['id'], []))) or 'original'} |")
     lines += ["", f"Spec: [`docs/specs/{d}/catalog/spec.md`](../../docs/specs/{d}/catalog/spec.md) · "
               f"Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)", ""]
     return "\n".join(lines)
@@ -136,14 +138,55 @@ def sources_md(root, cat, exc, lock, inv, prov) -> str:
     return "\n".join(lines)
 
 
+def _vocab(root: Path) -> dict[str, dict[str, dict]]:
+    out = {}
+    for f in ("technology", "knowledge", "capabilities", "industries", "multidisciplinary"):
+        p = root / "catalog/taxonomy" / f"{f}.yaml"
+        out[f] = {t["id"]: t for t in yaml.safe_load(p.read_text())["terms"]} if p.is_file() else {}
+    return out
+
+
+def facets_md(root: Path, cat, vocab, facets) -> str:
+    labels = {"capabilities": "Capability", "knowledge": "Knowledge domain", "technology": "Technology",
+              "industries": "Industry", "multidisciplinary": "Multidisciplinary area"}
+    lines = ["# Browse by facet", "", HEADER.strip(), "",
+             "Each artifact belongs to one domain (its plugin) and carries facets across five independent dimensions "
+             "(see [`docs/adr/foundation/faceted-classification.md`](adr/foundation/faceted-classification.md)). "
+             "Vocabularies: [`catalog/taxonomy/`](../catalog/taxonomy/). Terms marked *(proposed)* await review.", ""]
+    for facet, label in labels.items():
+        index = defaultdict(list)
+        for aid, f in facets.items():
+            for v in f.get(facet, []):
+                index[v].append(aid)
+        if not index:
+            continue
+        lines += [f"## By {label.lower()}", ""]
+        for term_id in sorted(index, key=lambda i: (vocab[facet].get(i, {}).get("parent", i), i)):
+            term = vocab[facet].get(term_id, {})
+            name = term.get("name", {})
+            parent = term.get("parent")
+            prefix = f"{vocab[facet][parent]['name']['en']} › " if parent and parent in vocab[facet] else ""
+            mark = " *(proposed)*" if term.get("origin") == "proposed" else ""
+            lines.append(f"- **{prefix}{name.get('en', term_id)}** / {name.get('pt', '')}{mark}: "
+                         + ", ".join(f"`{a.replace('/', ':')}`" for a in sorted(index[term_id])))
+        lines.append("")
+    return "\n".join(lines)
+
+
 def write_all(root: Path) -> list[Path]:
     cat, exc, domains, lock, inv, arts, prov = _load(root)
+    vocab = _vocab(root)
+    facets_p = root / "catalog/facets.yaml"
+    facets = (yaml.safe_load(facets_p.read_text()).get("artifacts") or {}) if facets_p.is_file() else {}
     written = []
     for d, boundary in domains.items():
         p = root / "domains" / d / "README.md"
-        p.write_text(domain_readme(root, d, boundary, cat, arts, prov))
+        p.write_text(domain_readme(root, d, boundary, cat, arts, prov, facets, vocab))
         written.append(p)
-    for name, text in (("CATALOG.md", catalog_md(root, cat, domains, arts)), ("SOURCES.md", sources_md(root, cat, exc, lock, inv, prov))):
+    outputs = [("CATALOG.md", catalog_md(root, cat, domains, arts)), ("SOURCES.md", sources_md(root, cat, exc, lock, inv, prov))]
+    if facets:
+        outputs.append(("FACETS.md", facets_md(root, cat, vocab, facets)))
+    for name, text in outputs:
         p = root / "docs" / name
         p.write_text(text)
         written.append(p)

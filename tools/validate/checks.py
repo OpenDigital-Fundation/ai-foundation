@@ -61,6 +61,43 @@ def check_no_orphans(root: Path) -> list[str]:
     return errs
 
 
+FACETS = {"technology": "technology", "knowledge": "knowledge", "capabilities": "capabilities",
+          "industries": "industries", "multidisciplinary": "multidisciplinary"}
+
+
+def check_facets(root: Path) -> list[str]:
+    """Vocabularies are valid and unique; every catalog artifact has facets that exist (see faceted-classification ADR)."""
+    tax_dir, facets_file = root / "catalog/taxonomy", root / "catalog/facets.yaml"
+    if not tax_dir.is_dir() or not facets_file.is_file():
+        return []
+    errs, vocab = [], {}
+    schema = _schema(root, "taxonomy")
+    for facet, fname in FACETS.items():
+        data = load_yaml(tax_dir / f"{fname}.yaml")
+        errs += _validate(data, schema, f"catalog/taxonomy/{fname}.yaml")
+        ids = [term["id"] for term in data.get("terms", [])]
+        errs += [f"catalog/taxonomy/{fname}.yaml: duplicate id '{i}'" for i, n in Counter(ids).items() if n > 1]
+        vocab[facet] = set(ids)
+        for term in data.get("terms", []):
+            if term.get("parent") and term["parent"] not in vocab[facet]:
+                errs.append(f"catalog/taxonomy/{fname}.yaml: '{term['id']}' has unknown parent '{term['parent']}'")
+    assigned = load_yaml(facets_file).get("artifacts") or {}
+    catalog_ids = {a["id"] for a in load_yaml(root / "catalog/catalog.yaml").get("artifacts") or []}
+    errs += [f"catalog/facets.yaml: artifact '{i}' has no facets" for i in sorted(catalog_ids - set(assigned))]
+    errs += [f"catalog/facets.yaml: '{i}' is not in the catalog" for i in sorted(set(assigned) - catalog_ids)]
+    for aid, facets in assigned.items():
+        for required in ("knowledge", "capabilities"):
+            if not facets.get(required):
+                errs.append(f"catalog/facets.yaml: '{aid}' needs at least one {required} facet")
+        for facet, values in facets.items():
+            if facet not in vocab:
+                errs.append(f"catalog/facets.yaml: '{aid}' uses unknown facet '{facet}'")
+                continue
+            errs += [f"catalog/facets.yaml: '{aid}' {facet} '{v}' is not in catalog/taxonomy/{FACETS[facet]}.yaml"
+                     for v in values if v not in vocab[facet]]
+    return errs
+
+
 def check_registry_files(root: Path) -> list[str]:
     errs: list[str] = []
     for fname, schema in [("catalog.yaml", "catalog"), ("exclusions.yaml", "exclusions"), ("sources.lock.yaml", "sources")]:
@@ -330,5 +367,5 @@ def run_all(root: Path) -> tuple[list[str], list[str]]:
     errs = check_registry_files(root) + check_domains(root)
     errs += check_frontmatter(root, arts) + check_catalog_bijection(root, arts) + check_names(root, arts)
     sim_errs, warns = check_similarity(root, arts)
-    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root) + check_no_orphans(root)
+    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root) + check_no_orphans(root) + check_facets(root)
     return errs, warns

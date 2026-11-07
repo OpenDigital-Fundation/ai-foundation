@@ -10,6 +10,7 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`foundation/source-curation`](foundation/source-curation/spec.md) | catalog-governance | Inventário das fontes, `sources.lock.yaml`, matriz manter/fundir/descartar, proveniência |
 | [`foundation/quality-gates`](foundation/quality-gates/spec.md) | catalog-governance | Validadores de CI, detecção de duplicata, evals |
 | [`foundation/distribution`](foundation/distribution/spec.md) | catalog-governance, quality-gates | Marketplace de plugins por domínio e adaptadores multi-harness |
+| [`foundation/faceted-classification`](foundation/faceted-classification/spec.md) | catalog-governance | Facetas N:N (tecnologia, conhecimento, capacidade, setor, áreas multidisciplinares) sobre a posse por domínio |
 
 ## Onda 1 — Núcleo de engenharia (uso diário)
 
@@ -70,3 +71,7 @@ Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística
 | `ui`, `ux`, `accessibility` | primeira versão (`experimental`); faltam evals e testes dos scripts do upstream |
 | `data`, `platform`, `ai-engineering`, `documents`, `research`, `brand`, `creative-media` | primeira versão via `tools.curation.bundle` (`experimental`) |
 | Onda 3 (`product`, `marketing`, `sales`, `finance`, `legal-compliance`, `operations`) | primeira versão via bundle (`experimental`); corpos baseados em personas precisam virar procedimentos |
+
+## Fora deste repositório
+
+- **`opendigital-ai-landscape`** — registro de recursos externos (repositórios, modelos, datasets, MCPs, frameworks) classificados pelas mesmas facetas. Produto e repositório próprios; consome `catalog/taxonomy/` como contrato ([ADR faceted-classification](../adr/foundation/faceted-classification.md)).

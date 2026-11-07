@@ -13,10 +13,10 @@ Bookkeeping, FP&A, pricing, tax.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`accounting`](skills/accounting/SKILL.md) | skill | experimental | Use for day-to-day accounting: bookkeeping, reconciliations, month-end close, accounts payable, expense tracking, financial statements, and tax planning questions to prepare for an accountant. | msitarzewski/agency-agents |
-| [`billing-operations`](skills/billing-operations/SKILL.md) | skill | experimental | Use when building or operating billing: subscriptions, invoicing, payment providers, refunds and disputes, dunning, revenue reporting and customer billing issues. | affaan-m/ECC, msitarzewski/agency-agents |
-| [`financial-analysis`](skills/financial-analysis/SKILL.md) | skill | experimental | Use for financial modelling and planning: three-statement and unit-economics models, forecasts and budgets, scenario analysis, variance analysis, pricing models and investment memos. | msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`accounting`](skills/accounting/SKILL.md) | skill | experimental | Use for day-to-day accounting: bookkeeping, reconciliations, month-end close, accounts payable, expense tracking, financial statements, and tax planning questions to prepare for an accountant. | Analyse, Forecast, Price | msitarzewski/agency-agents |
+| [`billing-operations`](skills/billing-operations/SKILL.md) | skill | experimental | Use when building or operating billing: subscriptions, invoicing, payment providers, refunds and disputes, dunning, revenue reporting and customer billing issues. | Analyse, Forecast, Price | affaan-m/ECC, msitarzewski/agency-agents |
+| [`financial-analysis`](skills/financial-analysis/SKILL.md) | skill | experimental | Use for financial modelling and planning: three-statement and unit-economics models, forecasts and budgets, scenario analysis, variance analysis, pricing models and investment memos. | Analyse, Forecast, Price | msitarzewski/agency-agents |
 
 Spec: [`docs/specs/finance/catalog/spec.md`](../../docs/specs/finance/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

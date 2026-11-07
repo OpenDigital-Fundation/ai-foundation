@@ -13,12 +13,12 @@ Git and GitHub, CI/CD, containers, deployment, observability, SRE, incidents.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`deployment`](skills/deployment/SKILL.md) | skill | experimental | Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD pipelines, health checks, blue-green and canary rollouts, rollback, post-deploy verification, process manage… | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
-| [`git-workflow`](skills/git-workflow/SKILL.md) | skill | experimental | Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts, rebasing versus merging, or setting up pre-commit hooks with formatting, type checks and tests. | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
-| [`github-operations`](skills/github-operations/SKILL.md) | skill | experimental | Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and re-running CI, configuring Actions, branch protection and releases, or monitoring Dependabot and security alerts. | affaan-m/ECC |
-| [`incident-response`](skills/incident-response/SKILL.md) | skill | experimental | Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess severity, coordinate responders, communicate status, contain, recover, preserve evidence and write a blamele… | msitarzewski/agency-agents |
-| [`reliability`](skills/reliability/SKILL.md) | skill | experimental | Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana, SigNoz), planning capacity, running chaos experiments, or maintaining infrastructure health. | affaan-m/ECC, msitarzewski/agency-agents |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`deployment`](skills/deployment/SKILL.md) | skill | experimental | Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD pipelines, health checks, blue-green and canary rollouts, rollback, post-deploy verification, process manage… | Automate, Monitor, Integrate | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
+| [`git-workflow`](skills/git-workflow/SKILL.md) | skill | experimental | Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts, rebasing versus merging, or setting up pre-commit hooks with formatting, type checks and tests. | Automate, Monitor, Integrate | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
+| [`github-operations`](skills/github-operations/SKILL.md) | skill | experimental | Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and re-running CI, configuring Actions, branch protection and releases, or monitoring Dependabot and security alerts. | Automate, Monitor, Integrate | affaan-m/ECC |
+| [`incident-response`](skills/incident-response/SKILL.md) | skill | experimental | Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess severity, coordinate responders, communicate status, contain, recover, preserve evidence and write a blamele… | Automate, Monitor, Integrate, Detect, Facilitate | msitarzewski/agency-agents |
+| [`reliability`](skills/reliability/SKILL.md) | skill | experimental | Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana, SigNoz), planning capacity, running chaos experiments, or maintaining infrastructure health. | Automate, Monitor, Integrate | affaan-m/ECC, msitarzewski/agency-agents |
 
 Spec: [`docs/specs/platform/catalog/spec.md`](../../docs/specs/platform/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)

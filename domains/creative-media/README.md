@@ -13,13 +13,13 @@ Visual pieces and media - banners, slides, generative art, GIFs, images.
 
 ## Contents
 
-| Artifact | Type | Status | Use it when | Derived from |
-|---|---|---|---|---|
-| [`animated-gifs`](skills/animated-gifs/SKILL.md) | skill | experimental | Use when making an animated GIF, especially for Slack or chat: size and frame limits, animation concepts, generation with Python and validation of the result. | anthropics/skills |
-| [`banner-design`](skills/banner-design/SKILL.md) | skill | experimental | Use when designing banners and promotional graphics: social media posts and covers, display ads, website heroes and print, with several art directions to choose from and platform-correct sizes. | nextlevelbuilder/ui-ux-pro-max-skill |
-| [`generative-art`](skills/generative-art/SKILL.md) | skill | experimental | Use when the user asks for art made with code: generative or algorithmic art in p5.js with seeded randomness, flow fields, particle systems and interactive parameters. | anthropics/skills |
-| [`image-prompting`](skills/image-prompting/SKILL.md) | skill | experimental | Use when writing prompts for image-generation models: photographic direction (lens, light, composition), style control, and representation that avoids stereotyped or culturally inaccurate depictions of people. | msitarzewski/agency-agents |
-| [`poster-design`](skills/poster-design/SKILL.md) | skill | experimental | Use when creating a static visual piece as a PNG or PDF: a poster, cover, print piece or art board composed from a written design philosophy, with bundled typefaces. | anthropics/skills |
-| [`presentation-slides`](skills/presentation-slides/SKILL.md) | skill | experimental | Use when creating an HTML slide deck or presentation from scratch or from an outline: narrative structure, slide layouts, animation, charts with Chart.js and design tokens, or converting an existing deck to HTML. For .p… | affaan-m/ECC, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |
+| Artifact | Type | Status | Use it when | Capabilities | Derived from |
+|---|---|---|---|---|---|
+| [`animated-gifs`](skills/animated-gifs/SKILL.md) | skill | experimental | Use when making an animated GIF, especially for Slack or chat: size and frame limits, animation concepts, generation with Python and validation of the result. | Draw, Generate images, Present, Generate video | anthropics/skills |
+| [`banner-design`](skills/banner-design/SKILL.md) | skill | experimental | Use when designing banners and promotional graphics: social media posts and covers, display ads, website heroes and print, with several art directions to choose from and platform-correct sizes. | Draw, Generate images, Present | nextlevelbuilder/ui-ux-pro-max-skill |
+| [`generative-art`](skills/generative-art/SKILL.md) | skill | experimental | Use when the user asks for art made with code: generative or algorithmic art in p5.js with seeded randomness, flow fields, particle systems and interactive parameters. | Draw, Generate images, Present | anthropics/skills |
+| [`image-prompting`](skills/image-prompting/SKILL.md) | skill | experimental | Use when writing prompts for image-generation models: photographic direction (lens, light, composition), style control, and representation that avoids stereotyped or culturally inaccurate depictions of people. | Draw, Generate images, Present | msitarzewski/agency-agents |
+| [`poster-design`](skills/poster-design/SKILL.md) | skill | experimental | Use when creating a static visual piece as a PNG or PDF: a poster, cover, print piece or art board composed from a written design philosophy, with bundled typefaces. | Draw, Generate images, Present | anthropics/skills |
+| [`presentation-slides`](skills/presentation-slides/SKILL.md) | skill | experimental | Use when creating an HTML slide deck or presentation from scratch or from an outline: narrative structure, slide layouts, animation, charts with Chart.js and design tokens, or converting an existing deck to HTML. For .p… | Draw, Generate images, Present, Visualise | affaan-m/ECC, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |
 
 Spec: [`docs/specs/creative-media/catalog/spec.md`](../../docs/specs/creative-media/catalog/spec.md) · Provenance: [`PROVENANCE.yaml`](PROVENANCE.yaml)
