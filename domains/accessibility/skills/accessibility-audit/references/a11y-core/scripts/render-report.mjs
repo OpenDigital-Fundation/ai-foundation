@@ -50,10 +50,21 @@ const VERDICT = {
  * words. Escape the angle bracket so the words are read as written.
  */
 function prose(text) {
+  // Untrusted text (scanner output, page content, file names): neutralise HTML and every
+  // Markdown construct instead of guessing where code spans are.
   return String(text ?? '')
-    .split(/(`[^`]*`)/)
-    .map((part, i) => (i % 2 ? part : part.replace(/</g, '\\<')))
-    .join('');
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/([\\`*_[\]()!#~|])/g, '\\$1');
+}
+
+/** Render an untrusted value as an inline code span whose fence is longer than any backtick run inside it. */
+function code(text) {
+  const value = String(text ?? '').replace(/\r?\n/g, ' ');
+  const longest = Math.max(0, ...(value.match(/`+/g) || []).map((run) => run.length));
+  const fence = '`'.repeat(longest + 1);
+  return `${fence} ${value} ${fence}`;
 }
 
 function esc(text) {
@@ -155,7 +166,7 @@ function prioritiesSection(merged) {
       '|---|---:|---|---|',
     );
     for (const c of merged.components) {
-      out.push(`| ${esc(c.component)} | ${c.count} | ${c.worst} | ${c.rules.map((r) => '`' + r + '`').join(', ')} |`);
+      out.push(`| ${esc(c.component)} | ${c.count} | ${c.worst} | ${c.rules.map((r) => code(r)).join(', ')} |`);
     }
     out.push('');
   }
@@ -170,7 +181,7 @@ function prioritiesSection(merged) {
       : blocking.length === 1 ? 'The 1 blocking finding' : `The ${noun}`;
     out.push(blocking.length === 1 ? `${lead}:` : `${lead}, in this order:`, '');
     blocking.slice(0, 20).forEach((f, i) => {
-      out.push(`${i + 1}. \`${f.rule}\` at ${prose(f.location)}. ${prose(f.fix)}`);
+      out.push(`${i + 1}. ${code(f.rule)} at ${prose(f.location)}. ${prose(f.fix)}`);
     });
     if (blocking.length > 20) {
       const more = blocking.length - 20;
@@ -206,7 +217,7 @@ function deltaSection(d) {
   if (d.regressed.length) {
     lines.push('', 'Regressions, which are findings that got worse rather than better:', '');
     for (const f of d.regressed) {
-      lines.push(`- \`${f.rule}\` at ${f.location}: ${f.was} became ${f.severity}.`);
+      lines.push(`- ${code(f.rule)} at ${prose(f.location)}: ${esc(f.was)} became ${esc(f.severity)}.`);
     }
   }
   return lines.join('\n');
@@ -231,14 +242,14 @@ export function renderReport({ merged, template, scope, previous, toolVersions, 
   out.push('| Field | Value |', '|---|---|');
   out.push(`| Date | ${now} |`);
   out.push(`| Scope | ${scope.length} ${scope.length === 1 ? 'item' : 'items'} |`);
-  out.push(`| Skills run | ${merged.skills.join(', ') || 'none'} |`);
-  out.push(`| Tooling | ${toolVersions} |`);
-  out.push(`| Scan configuration | ${configs.length ? configs.join(', ') : 'defaults, no config file found'} |`);
+  out.push(`| Skills run | ${merged.skills.map(esc).join(', ') || 'none'} |`);
+  out.push(`| Tooling | ${esc(toolVersions)} |`);
+  out.push(`| Scan configuration | ${configs.length ? configs.map(esc).join(', ') : 'defaults, no config file found'} |`);
   out.push(`| Checks counted | ${merged.checks} |`);
   out.push('');
   if (scope.length) {
     out.push('Audited:', '');
-    for (const s of scope.slice(0, 50)) out.push(`- \`${s}\``);
+    for (const s of scope.slice(0, 50)) out.push(`- ${code(s)}`);
     if (scope.length > 50) out.push(`- and ${scope.length - 50} more`);
     out.push('');
   }
@@ -271,14 +282,14 @@ export function renderReport({ merged, template, scope, previous, toolVersions, 
   if (merged.passed.length) {
     out.push(heading(2, 'What passed'), '');
     out.push(`${count(merged.passed.length, 'check')} ran and found nothing.`, '');
-    for (const p of merged.passed) out.push(`- ${p}`);
+    for (const p of merged.passed) out.push(`- ${esc(p)}`);
     out.push('');
   }
 
   if (merged.notes.length) {
     out.push(heading(2, 'Needs a human'), '');
     out.push('Items a skill could not decide, or could not check automatically.', '');
-    for (const n of merged.notes) out.push(`- **${n.skill}**: ${n.note}`);
+    for (const n of merged.notes) out.push(`- **${esc(n.skill)}**: ${esc(n.note)}`);
     out.push('');
   }
 
