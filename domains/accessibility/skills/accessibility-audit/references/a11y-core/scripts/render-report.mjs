@@ -61,14 +61,21 @@ function prose(text) {
 
 /** Render an untrusted value as an inline code span whose fence is longer than any backtick run inside it. */
 function code(text) {
-  const value = String(text ?? '').replace(/\r?\n/g, ' ');
+  // Every line terminator (CR, LF, U+2028, U+2029) would end the span or the table row; HTML
+  // metacharacters and pipes are neutralised as a second layer when the span lands in a table.
+  const value = String(text ?? '')
+    .replace(/[\r\n\u2028\u2029]+/g, ' ')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/\|/g, '&#124;');
   const longest = Math.max(0, ...(value.match(/`+/g) || []).map((run) => run.length));
   const fence = '`'.repeat(longest + 1);
   return `${fence} ${value} ${fence}`;
 }
 
 function esc(text) {
-  return prose(text).replace(/\|/g, '\\|').replace(/\r?\n/g, ' ');
+  return prose(text).replace(/[\r\n\u2028\u2029]+/g, ' ');
 }
 
 /** "1 finding", "2 findings": a report is read aloud, so the noun follows the count. */
@@ -145,7 +152,7 @@ function findingsSection(merged) {
         (group.length === 1
           ? 'This one is low confidence and needs a human to confirm: '
           : `${lowConfidence.length} of these ${lowConfidence.length === 1 ? 'is' : 'are'} low confidence and need${lowConfidence.length === 1 ? 's' : ''} a human to confirm: `) +
-          lowConfidence.map((f) => '`' + f.rule + '` at ' + f.location).join(', ') +
+          lowConfidence.map((f) => code(f.rule) + ' at ' + prose(f.location)).join(', ') +
           '.',
         '',
       );
