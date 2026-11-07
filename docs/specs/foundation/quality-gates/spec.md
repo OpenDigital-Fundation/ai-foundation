@@ -28,6 +28,10 @@ As regras de unicidade e de formato só valem se forem verificadas por máquina 
 - **R10. Comparação na fusão.** Ao fundir, a skill resultante é avaliada contra a melhor fonte original nos mesmos casos; não pode perder taxa de acerto.
 - **R11. Roteamento global.** `evals/routing/` contém prompts realistas com a skill esperada; roda com o catálogo inteiro instalado para detectar colisão de gatilhos entre domínios.
 
+## Limite conhecido do R4
+
+Calibração (tarefa T3): a similaridade lexical entre descrições tem precisão alta e recall quase nulo para sobreposição semântica. Ela impede cópias e paráfrases próximas; a garantia de "uma capacidade, um artefato" vem da curadoria registrada em `catalog/decisions/` e é medida pelos evals de roteamento (R11), não pelo R4.
+
 ## Critérios de aceite
 
 1. Um PR que adiciona uma skill `ui-ux-pro-max` falha em R3.
