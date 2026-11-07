@@ -42,6 +42,25 @@ def check_all_links(root: Path) -> list[str]:
     return errs
 
 
+def check_no_orphans(root: Path) -> list[str]:
+    """Every Markdown file inside a skill or workflow must be reachable: mentioned by path, file name or
+    folder somewhere else in the same artifact. Unreferenced files are dead weight agents never load."""
+    errs = []
+    for art in sorted(list((root / "domains").glob("*/skills/*")) + list((root / "domains").glob("*/workflows/*"))):
+        files = list(art.rglob("*.md"))
+        texts = {f: f.read_text(encoding="utf-8", errors="ignore") for f in files}
+        for f in files:
+            if f.name == "SKILL.md":
+                continue
+            rel = f.relative_to(art).as_posix()
+            parent = f.parent.relative_to(art).as_posix()
+            others = "\n".join(t for g, t in texts.items() if g != f)
+            if rel in others or f.name in others or (parent != "." and (parent + "/" in others or ("{lang}" in others and parent.split("/")[-1] in others))):
+                continue
+            errs.append(f"{f.relative_to(root)}: not referenced from anywhere in its skill")
+    return errs
+
+
 def check_registry_files(root: Path) -> list[str]:
     errs: list[str] = []
     for fname, schema in [("catalog.yaml", "catalog"), ("exclusions.yaml", "exclusions"), ("sources.lock.yaml", "sources")]:
@@ -311,5 +330,5 @@ def run_all(root: Path) -> tuple[list[str], list[str]]:
     errs = check_registry_files(root) + check_domains(root)
     errs += check_frontmatter(root, arts) + check_catalog_bijection(root, arts) + check_names(root, arts)
     sim_errs, warns = check_similarity(root, arts)
-    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root)
+    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root) + check_no_orphans(root)
     return errs, warns
