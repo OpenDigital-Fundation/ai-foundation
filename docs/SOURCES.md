@@ -30,7 +30,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) @ `1a2c79d` | MIT | merge | 129 | 1 | 3 vendor-specific, 2 license |
 | [currents-dev/playwright-best-practices-skill](https://github.com/currents-dev/playwright-best-practices-skill) @ `283d5cb` | MIT | merge | 1 | 1 | — |
 | [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) @ `f736c87` | MIT | merge | 123 | 6 | 18 duplicate-of, 9 source-internal, 6 out-of-scope |
-| [millionco/react-doctor](https://github.com/millionco/react-doctor) @ `9791c32` | Modified-MIT (no AI training/evaluation use, no resale without permission) | reference | 6 | 0 | 6 license |
+| [millionco/react-doctor](https://github.com/millionco/react-doctor) @ `9791c32` | Modified-MIT (no AI training/evaluation use, no resale without permission) | merge | 6 | 1 | 2 license, 1 out-of-scope |
 | [danicat/godoctor](https://github.com/danicat/godoctor) @ `ad2eacc` | Apache-2.0 | reference | 1 | 0 | 1 vendor-specific |
 | [ankitchiplunkar/frontend-design](https://github.com/ankitchiplunkar/frontend-design) @ `34bbe42` | MIT | merge | 0 | 0 | — |
 
@@ -177,10 +177,10 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 
 ## millionco/react-doctor
 
-- URL: <https://github.com/millionco/react-doctor> · commit `9791c32f61fb1477a4f8dd596ff80184ad26b2e3` · licence Modified-MIT (no AI training/evaluation use, no resale without permission) · policy `reference`
-- Note: Licence forbids use as AI evaluation data without written permission; referenced only
-- Referenced (not copied) from: [`domains/languages/knowledge/external-tools.md`](../domains/languages/knowledge/external-tools.md)
-- Excluded items by reason: license: 6
+- URL: <https://github.com/millionco/react-doctor> · commit `9791c32f61fb1477a4f8dd596ff80184ad26b2e3` · licence Modified-MIT (no AI training/evaluation use, no resale without permission) · policy `merge`
+- Note: Vendored with its licence at the maintainer request (2026-11-07); excluded from evals until Million Software grants written permission
+- Used in: `languages:react-diagnostics`
+- Excluded items by reason: license: 2, out-of-scope: 1
 
 ## danicat/godoctor
 

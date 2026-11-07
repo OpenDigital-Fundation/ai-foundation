@@ -827,6 +827,18 @@ artifacts:
     - computer-science
     technology:
     - skills-reusable-capabilities
+  languages/react-diagnostics:
+    knowledge:
+    - software-engineering
+    capabilities:
+    - debug
+    - review
+    - audit
+    technology:
+    - skills-reusable-capabilities
+    - tools-mcp-integrations
+    industries:
+    - technology
   languages/ruby:
     capabilities:
     - code

@@ -21,6 +21,9 @@ copyright line replaced.
 | [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) | Copyright (c) 2026 DietrichGebert |
 | [SecurityStandards/skill-security-audit](https://github.com/SecurityStandards/skill-security-audit) | Copyright (c) 2025-2026 Cloudflare, Inc. |
 | [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) | MIT, as declared in the project README (no LICENSE file upstream) |
+| [currents-dev/playwright-best-practices-skill](https://github.com/currents-dev/playwright-best-practices-skill) | Copyright © 2026 Currents Software Inc. |
+| [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) | Copyright (c) 2026 Taylor Arndt |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | MIT as declared per skill (react-best-practices, composition-patterns, react-view-transitions, react-native-skills); skills without a declared licence are not copied |
 
 ## Apache-2.0-licensed sources
 
@@ -28,6 +31,10 @@ copyright line replaced.
 and `xlsx` are licensed under the Apache License, Version 2.0
 (<https://www.apache.org/licenses/LICENSE-2.0>). Files derived from them carry a notice stating that
 they were modified, and `PROVENANCE.yaml` records the modification.
+
+## Modified MIT (restricted)
+
+[millionco/react-doctor](https://github.com/millionco/react-doctor) — Copyright (c) 2026 Million Software, Inc. MIT with one modification: using the software or derivatives as AI training, fine-tuning or evaluation data, or reselling it as a hosted service, requires prior written permission. Vendored only in `domains/languages/skills/react-diagnostics/` with its licence text, and excluded from this catalog's evals (`metadata.eval_excluded`) until permission is granted.
 
 ## Referenced only (not copied)
 

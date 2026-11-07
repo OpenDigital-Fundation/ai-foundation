@@ -125,13 +125,23 @@ def run_case(cmd: list[str], case: Case) -> Result:
     return Result(case, fired, passed, round(time.monotonic() - start, 1))
 
 
+def excluded_from_evals(root: Path) -> set[str]:
+    """Skills whose licence forbids use as AI evaluation data (metadata.eval_excluded)."""
+    from tools.validate.repo import discover
+    return {a.id.replace("/", ":") for a in discover(root)
+            if a.frontmatter and (a.frontmatter.get("metadata") or {}).get("eval_excluded")}
+
+
 def collect(root: Path, skills: list[str] | None, routing: bool) -> list[Case]:
     cases: list[Case] = []
+    skip = excluded_from_evals(root)
     for f in sorted((root / "domains").glob("*/skills/*/evals/triggers.yaml")) + sorted((root / "domains").glob("*/workflows/*/evals/triggers.yaml")):
         domain, name = f.parts[-5], f.parts[-3]
         if skills and f"{domain}/{name}" not in skills:
             continue
         target = f"{domain}:{name}"
+        if target in skip:
+            continue
         data = yaml.safe_load(f.read_text()) or {}
         cases += [Case(p, target, target, "should_trigger") for p in data.get("should_trigger") or []]
         cases += [Case(p, None, target, "should_not_trigger") for p in data.get("should_not_trigger") or []]
@@ -139,6 +149,8 @@ def collect(root: Path, skills: list[str] | None, routing: bool) -> list[Case]:
         for f in sorted((root / "evals/routing").glob("*.yaml")):
             for c in yaml.safe_load(f.read_text()) or []:
                 exp = None if c["expect"] in (None, "none") else c["expect"]
+                if exp in skip:
+                    continue
                 cases.append(Case(c["prompt"], exp, "routing", "routing"))
     return cases
 

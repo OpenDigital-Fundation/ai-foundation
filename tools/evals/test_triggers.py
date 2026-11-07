@@ -49,3 +49,12 @@ def test_api_error_is_reported_not_scored(tmp_path):
     script.write_text("import json\nprint(json.dumps({'type': 'result', 'terminal_reason': 'api_error'}, separators=(',', ':')))\n")
     r = run_case([sys.executable, str(script)], Case("x", None, "t:x", "should_not_trigger"))
     assert not r.passed and r.error
+
+
+def test_licence_restricted_skills_are_not_evaluated():
+    from pathlib import Path as _P
+    from tools.evals.triggers import collect, excluded_from_evals
+    root = _P(__file__).resolve().parents[2]
+    skip = excluded_from_evals(root)
+    assert "languages:react-diagnostics" in skip
+    assert all(c.expect not in skip and c.target not in skip for c in collect(root, None, True))

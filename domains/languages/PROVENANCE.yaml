@@ -632,6 +632,48 @@ files:
     path: skills/generating-python-installer/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/react-diagnostics/SKILL.md
+  derived_from:
+  - source: millionco/react-doctor
+    commit: 9791c32
+    path: skills/react-doctor/SKILL.md
+    license: Modified-MIT (no AI training/evaluation use, no resale without permission)
+    modification: adapted
+- path: skills/react-diagnostics/references/explain.md
+  derived_from:
+  - source: millionco/react-doctor
+    commit: 9791c32
+    path: skills/react-doctor/references/explain.md
+    license: Modified-MIT (no AI training/evaluation use, no resale without permission)
+    modification: adapted
+- path: skills/react-diagnostics/references/improve-react/AUDIT.md
+  derived_from:
+  - source: millionco/react-doctor
+    commit: 9791c32
+    path: skills/improve-react/AUDIT.md
+    license: Modified-MIT (no AI training/evaluation use, no resale without permission)
+    modification: adapted
+- path: skills/react-diagnostics/references/improve-react/PLAN-TEMPLATE.md
+  derived_from:
+  - source: millionco/react-doctor
+    commit: 9791c32
+    path: skills/improve-react/PLAN-TEMPLATE.md
+    license: Modified-MIT (no AI training/evaluation use, no resale without permission)
+    modification: adapted
+- path: skills/react-diagnostics/references/improve-react/SKILL.md
+  derived_from:
+  - source: millionco/react-doctor
+    commit: 9791c32
+    path: skills/improve-react/SKILL.md
+    license: Modified-MIT (no AI training/evaluation use, no resale without permission)
+    modification: adapted
+- path: skills/react-diagnostics/references/performance/SKILL.md
+  derived_from:
+  - source: millionco/react-doctor
+    commit: 9791c32
+    path: skills/performance/SKILL.md
+    license: Modified-MIT (no AI training/evaluation use, no resale without permission)
+    modification: adapted
 - path: skills/ruby/references/frameworks/rails.md
   derived_from:
   - source: affaan-m/ECC

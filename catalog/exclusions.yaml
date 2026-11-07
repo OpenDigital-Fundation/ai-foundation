@@ -859,18 +859,9 @@ excluded:
 - key: "millionco/react-doctor:rule:state-and-effects/effect/SOURCE"
   reason: license
   note: Referenced as an external tool in languages/external-tools.
-- key: "millionco/react-doctor:skill:improve-react"
-  reason: license
-  note: Referenced as an external tool in languages/external-tools.
 - key: "millionco/react-doctor:skill:improve-threejs"
-  reason: license
-  note: Referenced as an external tool in languages/external-tools.
-- key: "millionco/react-doctor:skill:performance"
-  reason: license
-  note: Referenced as an external tool in languages/external-tools.
-- key: "millionco/react-doctor:skill:react-doctor"
-  reason: license
-  note: Referenced as an external tool in languages/external-tools.
+  reason: out-of-scope
+  note: Three.js work is out of scope in v1.
 - key: "msitarzewski/agency-agents:agent:3D & Scene Developer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Aging Parent Care Companion"

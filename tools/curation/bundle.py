@@ -149,6 +149,8 @@ def build(root: Path, sources: Path, spec: dict) -> None:
               "metadata:", f"  domain: {domain}", "  status: experimental"]
         if a.get("line_budget_exception"):
             fm.append(f"  line_budget_exception: {json.dumps(a['line_budget_exception'])}")
+        for mk, mv in (a.get("metadata") or {}).items():
+            fm.append(f"  {mk}: {json.dumps(mv)}")
         fm += ["---", ""]
         apache = [s for s in [a.get("base_dir", ":").split(":")[0], (a.get("base") or ":").split(":")[0]] if s in lock and lock[s]["license"].startswith("Apache")]
         notice = f"<!-- Modified by OpenDigital from {apache[0]} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n\n" if apache else ""

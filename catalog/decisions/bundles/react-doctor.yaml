@@ -1,0 +1,21 @@
+# React Doctor, vendored with its licence; excluded from evals (see metadata.eval_excluded).
+name: react-doctor
+artifacts:
+  languages/react-diagnostics:
+    title: React diagnostics
+    description: Use when finishing a feature, fixing a bug or before committing React code, or when the user types /doctor or asks to scan, triage or clean up React diagnostics. Runs React Doctor across lint, accessibility, performance and correctness, explains each diagnostic, plans fixes, and improves
+      React and rendering performance.
+    base_dir: millionco/react-doctor:skills/react-doctor
+    reference_dirs:
+      improve-react: millionco/react-doctor:skills/improve-react
+      performance: millionco/react-doctor:skills/performance
+    reference_notes:
+      improve-react: audit and improvement plan for a React codebase
+      performance: rendering and runtime performance work
+    metadata:
+      eval_excluded: React Doctor licence (Modified MIT) forbids use as AI evaluation data without written permission from Million Software (founders@million.dev).
+    append: '## Licence of this skill
+
+
+      This skill is derived from [millionco/react-doctor](https://github.com/millionco/react-doctor) under its Modified MIT licence (`LICENSE-react-doctor.txt` in this folder). Using it, or anything derived from it, as training, fine-tuning or **evaluation** data for an AI system, or reselling it as a
+      hosted service, needs prior written permission from Million Software. It is therefore excluded from this catalog''s evals until that permission is recorded.'

@@ -15,7 +15,8 @@
         "domain": {"type": "string"},
         "status": {"enum": ["experimental", "stable", "deprecated"]},
         "requires": {"type": "array", "items": {"type": "string"}},
-        "line_budget_exception": {"type": "string", "minLength": 20}
+        "line_budget_exception": {"type": "string", "minLength": 20},
+        "eval_excluded": {"type": "string", "minLength": 20}
       }
     }
   }

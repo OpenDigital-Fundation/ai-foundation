@@ -824,6 +824,16 @@ artifacts:
   - "affaan-m/ECC:skill:python-patterns"
   - "affaan-m/ECC:skill:python-testing"
   - "affaan-m/ECC:skill:pytorch-patterns"
+- id: languages/react-diagnostics
+  type: skill
+  capability: Use when finishing a feature, fixing a bug or before committing React code, or when the user types /doctor or
+    asks to scan, triage or clean up React diagnostics. Runs React Doctor across lin
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "millionco/react-doctor:skill:improve-react"
+  - "millionco/react-doctor:skill:performance"
+  - "millionco/react-doctor:skill:react-doctor"
 - id: languages/ruby
   type: skill
   capability: Ruby patterns, testing, security, review and build knowledge, plus framework references.
