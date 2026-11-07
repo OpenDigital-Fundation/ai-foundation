@@ -18,7 +18,7 @@
 
 O ECC concentra ~160 itens neste domínio (loops, harness, memória, custo, orquestração de equipes de agents, hooks). Antes de portar, cada um precisa passar pelo critério "existe gatilho distinto?". Candidatos: `context-budget`/`strategic-compact`, `agent-harness-construction`, `loop-design-check`, `agent-introspection-debugging`, `prompt-caching-strategy` (→ `ai-engineering`), hooks de guardrail (mattpocock `git-guardrails-claude-code`, ECC `safety-guard`, `gateguard`).
 
-## Segunda passada (bundle [`agent-engineering.yaml`](../../../../catalog/decisions/bundles/agent-engineering.yaml))
+## Segunda passada (bundle [manifesto editorial](../../../../catalog/curation/domains/agent-engineering.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|
@@ -31,4 +31,4 @@ O ECC concentra ~160 itens neste domínio (loops, harness, memória, custo, orqu
 | `agent-teams` | ECC `team-agent-orchestration` | `team-builder`, `plan-orchestrate`, `parallel-execution-optimizer`; absorve `multi-*`, `claude-devfleet`, `dev-team` |
 | `agent-memory` | ECC `continuous-learning-v2` | `continuous-learning`, `unified-memory`, `context-and-decisions`, `rules-distill`, agent `observer`; absorve `learn*`, `instinct-*`, `evolve`, `promote`, `prune` |
 
-Os ~86 hooks das fontes (runtime de hooks do ECC, rastreamento de modo do ponytail, injeção de sessão do superpowers) foram excluídos como `source-internal`; guardrails entram por `agent-guardrails`, opt-in. Mapeamentos de itens soltos para artefatos existentes estão em [`remaining-mappings.yaml`](../../../../catalog/decisions/remaining-mappings.yaml) (seção `extend`).
+Os ~86 hooks das fontes (runtime de hooks do ECC, rastreamento de modo do ponytail, injeção de sessão do superpowers) foram excluídos como `source-internal`; guardrails entram por `agent-guardrails`, opt-in. Mapeamentos de itens soltos para artefatos existentes estão em [manifesto editorial](../../../../catalog/curation/domains/agent-engineering.yaml) (seção `extend`).

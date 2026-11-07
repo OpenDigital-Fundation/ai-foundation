@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 2)
 - **Fronteira:** bancos de dados, migrações, modelagem e engenharia de dados.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/data-platform.yaml`](../../../../catalog/decisions/bundles/data-platform.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/data.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

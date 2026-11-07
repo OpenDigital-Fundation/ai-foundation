@@ -4,11 +4,11 @@
 
 Gerados (não editar à mão em `domains/`; editar a fonte e regenerar):
 
-- [`catalog/decisions/language-packs.yaml`](../../../../catalog/decisions/language-packs.yaml) → `python -m tools.curation.language_pack <sources> catalog/decisions/language-packs.yaml`
+- [manifesto editorial](../../../../catalog/curation/domains/languages.yaml) → `python -m tools.curation <sources> --domain languages`
 
 ## Contratos
 
-- Registro: `catalog/catalog.yaml` (derivado de `catalog/decisions/*.yaml` por `python -m tools.catalog rebuild`).
+- Registro: `catalog/catalog.yaml` (derivado de `catalog/curation/domains/*.yaml` por `python -m tools.catalog rebuild`).
 - Proveniência: `domains/languages/PROVENANCE.yaml`.
 - Correções locais em arquivos gerados: `catalog/overrides/<domínio>/<skill>/`, aplicadas após cada regeneração.
 

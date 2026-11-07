@@ -23,6 +23,6 @@
 - Rodar os testes do Hallmark (`capture.test.mjs`, `theme.test.mjs`) e do motor de busca do ui-ux-pro-max (`scripts/tests`): é código do upstream, precisa de aprovação para executar.
 - Decidir ECC `motion-foundations`/`motion-patterns`/`motion-advanced`, `make-interfaces-feel-better`, `taste*` e ui-ux-pro-max `ui-styling` (shadcn/Tailwind).
 
-## Passada final (bundle [`gaps.yaml`](../../../../catalog/decisions/bundles/gaps.yaml))
+## Passada final (bundle [manifesto editorial](../../../../catalog/curation/domains/ui.yaml))
 
 Adicionados: `motion-and-polish` (base ECC `motion-foundations`; `motion-patterns`, `motion-advanced`, `make-interfaces-feel-better`, `taste*`, rule `web/design-quality`, *Whimsy Injector*) e `component-styling` (base ui-ux-pro-max `ui-styling`; *Frontend Developer*, CSS de *UX Architect*).

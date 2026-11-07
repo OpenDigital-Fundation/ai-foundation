@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 2)
 - **Fronteira:** peças visuais e mídia — slides, banners, arte generativa, GIFs, imagens.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/knowledge-work.yaml`](../../../../catalog/decisions/bundles/knowledge-work.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/creative-media.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

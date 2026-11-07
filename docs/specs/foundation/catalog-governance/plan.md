@@ -4,8 +4,10 @@
 
 ```
 domains/<domínio>/.claude-plugin/plugin.json
-catalog/catalog.yaml        # fonte de verdade do que existe
-catalog/exclusions.yaml     # fonte de verdade do que não entra
+catalog/curation/domains/   # fonte editorial dos registros e receitas
+catalog/catalog.yaml        # projeção gerada do que existe
+catalog/curation/exclusions.yaml  # fonte editorial do que não entra
+catalog/exclusions.yaml     # projeção gerada das exclusões
 catalog/schema/*.json       # JSON Schema dos três arquivos de catálogo e do frontmatter
 catalog/naming.yaml         # termos proibidos em nomes (marcas, superlativos)
 ```

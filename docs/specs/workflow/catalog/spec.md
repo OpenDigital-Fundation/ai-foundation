@@ -26,7 +26,7 @@ Três fontes cobrem o ciclo de entrega com ~60 artefatos sobrepostos: superpower
 | `feature-delivery` | workflow | novo | famílias `orch-*` e `feature-dev` do ECC |
 | `knowledge/issue-tracking/` | knowledge | mattpocock `setup-matt-pocock-skills` | — |
 
-`retro` do mattpocock foi para `agent-engineering/session-retrospective` (melhora o ambiente do agente, não a entrega). As decisões completas, inclusive exclusões, estão em [`catalog/decisions/workflow.yaml`](../../../../catalog/decisions/workflow.yaml).
+`retro` do mattpocock foi para `agent-engineering/session-retrospective` (melhora o ambiente do agente, não a entrega). As decisões completas, inclusive exclusões, estão em [manifesto editorial](../../../../catalog/curation/domains/workflow.yaml).
 
 ## Requisitos
 

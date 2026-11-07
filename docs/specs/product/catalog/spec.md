@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 3)
 - **Fronteira:** gestão de produto — PRD, priorização, síntese de feedback, experimentos.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/business.yaml`](../../../../catalog/decisions/bundles/business.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/product.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

@@ -30,7 +30,7 @@ As regras de unicidade e de formato só valem se forem verificadas por máquina 
 
 ## Limite conhecido do R4
 
-Calibração (tarefa T3): a similaridade lexical entre descrições tem precisão alta e recall quase nulo para sobreposição semântica. Ela impede cópias e paráfrases próximas; a garantia de "uma capacidade, um artefato" vem da curadoria registrada em `catalog/decisions/` e é medida pelos evals de roteamento (R11), não pelo R4.
+Calibração (tarefa T3): a similaridade lexical entre descrições tem precisão alta e recall quase nulo para sobreposição semântica. Ela impede cópias e paráfrases próximas; a garantia de "uma capacidade, um artefato" vem da curadoria registrada em `catalog/curation/domains/` e é medida pelos evals de roteamento (R11), não pelo R4.
 
 ## Critérios de aceite
 

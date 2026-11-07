@@ -35,6 +35,8 @@ def build(root: Path, sources: Path, mapping: list[dict]) -> dict:
             rel = f.relative_to(dest).as_posix() if dest.is_dir() else ""
             override = (m.get("files") or {}).get(rel or f.name)
             src_rel = override or (f"{m['src']}/{rel}" if rel else m["src"])
+            from tools.curation.layout import upstream_path
+            src_rel = upstream_path(clone, src_rel)
             src = clone / src_rel
             if not src.is_file():
                 print(f"original (no upstream match): {f.relative_to(root)}")
@@ -51,7 +53,8 @@ def build(root: Path, sources: Path, mapping: list[dict]) -> dict:
 
 if __name__ == "__main__":
     root = Path(".").resolve()
-    prov = build(root, Path(sys.argv[1]), yaml.safe_load(Path(sys.argv[2]).read_text()))
+    mapping = yaml.safe_load(Path(sys.argv[2]).read_text())
+    prov = build(root, Path(sys.argv[1]), mapping.get("imports", []) if isinstance(mapping, dict) else mapping)
     apply(root, {"provenance": prov})
     for d, fs in prov.items():
         print(f"{d}: {len(fs)} file(s)")

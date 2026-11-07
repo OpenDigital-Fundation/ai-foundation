@@ -4,11 +4,11 @@
 
 Gerados (não editar à mão em `domains/`; editar a fonte e regenerar):
 
-- [`catalog/decisions/bundles/knowledge-work.yaml`](../../../../catalog/decisions/bundles/knowledge-work.yaml) → `python -m tools.curation.bundle <sources> catalog/decisions/bundles/knowledge-work.yaml`
+- [manifesto editorial](../../../../catalog/curation/domains/research.yaml) → `python -m tools.curation <sources> --domain research`
 
 ## Contratos
 
-- Registro: `catalog/catalog.yaml` (derivado de `catalog/decisions/*.yaml` por `python -m tools.catalog rebuild`).
+- Registro: `catalog/catalog.yaml` (derivado de `catalog/curation/domains/*.yaml` por `python -m tools.catalog rebuild`).
 - Proveniência: `domains/research/PROVENANCE.yaml`.
 - Correções locais em arquivos gerados: `catalog/overrides/<domínio>/<skill>/`, aplicadas após cada regeneração.
 

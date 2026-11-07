@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 3)
 - **Fronteira:** prospecção, qualificação, propostas, pipeline.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/business.yaml`](../../../../catalog/decisions/bundles/business.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/sales.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

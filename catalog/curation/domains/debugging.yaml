@@ -1,0 +1,47 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: debugging
+artifacts:
+- id: debugging/build-failure-resolution
+  type: skill
+  capability: 'Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed
+    silently: read the first real error, fix the smallest cause, rebuild, repeat; the'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:build-error-resolver
+  - affaan-m/ECC:agent:silent-failure-hunter
+  - affaan-m/ECC:command:build-fix
+  recipe:
+    title: Build failure resolution
+    description: 'Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed
+      silently: read the first real error, fix the smallest cause, rebuild, repeat; then hunt for empty catches and ignored
+      failures. Loads the language pack''s build reference.'
+    base: a:build-error-resolver
+    references:
+      silent-failures.md:
+      - a:silent-failure-hunter
+    supersedes:
+    - affaan-m/ECC:command:build-fix
+- id: debugging/systematic-debugging
+  type: skill
+  capability: Build a tight feedback loop on the exact symptom, find the root cause from evidence, then fix with a regression
+    test.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - obra/superpowers:skill:systematic-debugging
+  - mattpocock/skills:skill:diagnosing-bugs
+imports:
+- dest: domains/debugging/skills/systematic-debugging
+  source: obra/superpowers
+  src: skills/systematic-debugging
+  extra:
+  - source: mattpocock/skills
+    path: skills/engineering/diagnosing-bugs/SKILL.md
+- dest: domains/debugging/skills/systematic-debugging/references/feedback-loop.md
+  source: mattpocock/skills
+  src: skills/engineering/diagnosing-bugs/SKILL.md
+- dest: domains/debugging/skills/systematic-debugging/scripts/hitl-loop.template.sh
+  source: mattpocock/skills
+  src: skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh

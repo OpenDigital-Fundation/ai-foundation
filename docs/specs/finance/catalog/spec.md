@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 3)
 - **Fronteira:** contabilidade, FP&A, precificação, impostos, cobrança.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/business.yaml`](../../../../catalog/decisions/bundles/business.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/finance.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

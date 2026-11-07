@@ -1,0 +1,181 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: architecture
+artifacts:
+- id: architecture/api-design
+  type: skill
+  capability: 'Design or review HTTP APIs: resources, status codes, errors, pagination, auth, rate limits, versioning.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:api-connector-builder
+  - affaan-m/ECC:skill:api-design
+  - affaan-m/ECC:skill:contract-first
+- id: architecture/architecture-review
+  type: skill
+  capability: Scan an existing codebase for deepening opportunities and walk the chosen one with the user.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:brownfield-retrospective
+  - affaan-m/ECC:skill:module-governance
+  - mattpocock/skills:skill:improve-codebase-architecture
+- id: architecture/codebase-design
+  type: skill
+  capability: Design deep modules at clean seams, including ports and adapters, with a shared vocabulary.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - mattpocock/skills:skill:codebase-design
+  - affaan-m/ECC:skill:hexagonal-architecture
+- id: architecture/codebase-onboarding
+  type: skill
+  capability: 'Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry
+    points, trace a feature end to end, write a guided code tour, recover the intent b'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:code-explorer
+  - affaan-m/ECC:agent:spec-miner
+  - affaan-m/ECC:skill:code-tour
+  - affaan-m/ECC:skill:codebase-onboarding
+  - msitarzewski/agency-agents:agent:Codebase Archaeologist
+  - msitarzewski/agency-agents:agent:Codebase Onboarding Engineer
+  recipe:
+    title: Codebase onboarding
+    description: 'Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry
+      points, trace a feature end to end, write a guided code tour, recover the intent behind legacy code, or mine an implicit
+      spec from existing behaviour.'
+    base: s:codebase-onboarding
+    references:
+      code-tour.md:
+      - s:code-tour
+      onboarding-engineer.md:
+      - msitarzewski/agency-agents:engineering/engineering-codebase-onboarding-engineer.md
+      archaeology.md:
+      - msitarzewski/agency-agents:specialized/specialized-codebase-archaeologist.md
+      explorer.md:
+      - a:code-explorer
+      spec-mining.md:
+      - a:spec-miner
+- id: architecture/decision-records
+  type: skill
+  capability: Record, supersede, index and read architecture decision records, one decision per file.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:architecture-decision-records
+- id: architecture/domain-modeling
+  type: skill
+  capability: Sharpen the domain language with scenarios, keep GLOSSARY.md current, and flag decisions worth an ADR.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - mattpocock/skills:skill:domain-modeling
+- id: architecture/system-design
+  type: skill
+  capability: 'Use when designing a service, system or major feature end to end: components and boundaries, data flow, APIs
+    and contracts, consistency and failure handling, scalability and latency budgets,'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:architect
+  - affaan-m/ECC:agent:code-architect
+  - affaan-m/ECC:skill:backend-patterns
+  - affaan-m/ECC:skill:content-hash-cache-pattern
+  - affaan-m/ECC:skill:error-handling
+  - affaan-m/ECC:skill:i18n-sync
+  - affaan-m/ECC:skill:latency-critical-systems
+  - msitarzewski/agency-agents:agent:API Platform Engineer
+  - msitarzewski/agency-agents:agent:Backend Architect
+  - msitarzewski/agency-agents:agent:Internationalization Engineer
+  - msitarzewski/agency-agents:agent:Realtime Collaboration Engineer
+  - msitarzewski/agency-agents:agent:Software Architect
+  recipe:
+    title: System design
+    description: 'Use when designing a service, system or major feature end to end: components and boundaries, data flow,
+      APIs and contracts, consistency and failure handling, scalability and latency budgets, caching, real-time collaboration
+      and internationalisation concerns, and the trade-offs behind each choice.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-software-architect.md
+      backend-architecture.md:
+      - msitarzewski/agency-agents:engineering/engineering-backend-architect.md
+      - s:backend-patterns
+      architect-agent.md:
+      - a:architect
+      - a:code-architect
+      api-platforms.md:
+      - msitarzewski/agency-agents:engineering/engineering-api-platform-engineer.md
+      latency.md:
+      - s:latency-critical-systems
+      error-handling.md:
+      - s:error-handling
+      caching.md:
+      - s:content-hash-cache-pattern
+      realtime-collaboration.md:
+      - msitarzewski/agency-agents:engineering/engineering-realtime-collaboration-engineer.md
+      internationalisation.md:
+      - msitarzewski/agency-agents:engineering/engineering-i18n-engineer.md
+      - s:i18n-sync
+    body: '# System design
+
+
+      Choose a structure that meets the requirements with the least complexity, and record why.
+
+
+      ## 1. Requirements
+
+      Functional scope; non-functional targets with numbers (load, latency, availability, data size, consistency, compliance);
+      constraints (team, budget, existing systems).
+
+
+      ## 2. Shape
+
+      Components and their responsibilities, data ownership and flows, synchronous versus asynchronous boundaries, and where
+      state lives. Draw it. Prefer the simplest shape that meets the targets: a well-structured monolith beats premature services.
+
+
+      ## 3. Interfaces
+
+      APIs and events between components with their contracts (`architecture:api-design`), versioning, idempotency and error
+      semantics.
+
+
+      ## 4. Failure and scale
+
+      What happens when each dependency is slow or down (timeouts, retries with backoff, circuit breakers, queues), how it
+      scales (stateless tiers, partitioning, caching with invalidation), and the latency budget per hop.
+
+
+      ## 5. Decide and record
+
+      Compare two or three designs on the targets and trade-offs, pick one, and write the hard-to-reverse choices as ADRs
+      (`architecture:decision-records`). Hand the design to `workflow:writing-plans`.'
+imports:
+- dest: domains/architecture/skills/domain-modeling
+  source: mattpocock/skills
+  src: skills/engineering/domain-modeling
+- dest: domains/architecture/skills/decision-records/ADR-FORMAT.md
+  source: mattpocock/skills
+  src: skills/engineering/domain-modeling/ADR-FORMAT.md
+- dest: domains/architecture/skills/decision-records/SKILL.md
+  source: affaan-m/ECC
+  src: skills/architecture-decision-records/SKILL.md
+  extra:
+  - source: mattpocock/skills
+    path: skills/engineering/domain-modeling/ADR-FORMAT.md
+- dest: domains/architecture/skills/codebase-design
+  source: mattpocock/skills
+  src: skills/engineering/codebase-design
+- dest: domains/architecture/skills/codebase-design/references/ports-and-adapters.md
+  source: affaan-m/ECC
+  src: skills/hexagonal-architecture/SKILL.md
+- dest: domains/architecture/skills/architecture-review
+  source: mattpocock/skills
+  src: skills/engineering/improve-codebase-architecture
+- dest: domains/architecture/skills/api-design
+  source: affaan-m/ECC
+  src: skills/api-design
+  files:
+    references/implementation-patterns.md: skills/api-design/SKILL.md

@@ -660,14 +660,14 @@ files:
     path: skills/improve-react/PLAN-TEMPLATE.md
     license: Modified-MIT (no AI training/evaluation use, no resale without permission)
     modification: adapted
-- path: skills/react-diagnostics/references/improve-react/SKILL.md
+- path: skills/react-diagnostics/references/improve-react/README.md
   derived_from:
   - source: millionco/react-doctor
     commit: 9791c32
     path: skills/improve-react/SKILL.md
     license: Modified-MIT (no AI training/evaluation use, no resale without permission)
     modification: adapted
-- path: skills/react-diagnostics/references/performance/SKILL.md
+- path: skills/react-diagnostics/references/performance/README.md
   derived_from:
   - source: millionco/react-doctor
     commit: 9791c32

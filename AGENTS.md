@@ -25,10 +25,16 @@ domains/<domínio>/                 # cada domínio é um plugin instalável
 profiles/<perfil>.yaml             # bundles entre domínios (ex.: fullstack-web)
 evals/routing/                     # evals de roteamento: o prompt certo dispara a skill certa
 catalog/
-  catalog.yaml                     # registro único: domínio × capacidade → artefato
+  curation/domains/<domínio>.yaml   # fonte editorial: registros, receitas e importações
+  curation/exclusions.yaml         # decisões editoriais de exclusão
+  inventory/                       # levantamento upstream e hashes de conteúdo restrito
+  overrides/                       # ajustes locais reaplicados na geração
+  catalog.yaml                     # projeção gerada: domínio × capacidade → artefato
   sources.lock.yaml                # fontes upstream com commit fixado
-  exclusions.yaml                  # o que foi descartado e por quê
+  exclusions.yaml                  # projeção gerada das exclusões
 docs/
+  architecture/                    # contrato de manutenção atual
+  reviews/                         # revisões com baseline e evidências
   specs/ROADMAP.md                 # ordem e dependências das specs
   specs/<domínio>/<feature>/       # spec.md, plan.md, tasks.md
   adr/<domínio>/<decisão>.md       # um ADR por decisão (Nygard)
@@ -41,6 +47,8 @@ tools/                             # validadores e geradores (CI)
 - **Uma spec = um domínio ou uma feature**, com exatamente um `plan.md` e um `tasks.md`.
 - **Governança em pt-BR; artefatos em inglês** (ver `docs/adr/foundation/english-artifacts-portuguese-governance.md`).
 - **Nomes sem marca**: nada de `pro-max`, `superpowers`, `ponytail`, `ecc` nos nomes publicados. A origem vai para `PROVENANCE.yaml`.
+- **Fonte editorial:** metadados e receitas em `catalog/curation/domains/<domínio>.yaml`; registro e exclusões públicos são gerados. Não editar projeções diretamente.
+- **Referências:** `SKILL.md` somente na entrada pública de skills/workflows; guias em `references/` usam `README.md`, fontes tipográficas em `assets/fonts/`. Agentes privados de uma skill não são agentes públicos do domínio.
 - **Antes de criar um artefato**, consultar `catalog/catalog.yaml`. Se a capacidade já existe, melhorar o existente; nunca criar um paralelo.
 
 ## Regras de contribuição
@@ -53,4 +61,14 @@ tools/                             # validadores e geradores (CI)
 
 ## Comandos
 
-Ainda não há tooling; ele é definido em `docs/specs/foundation/quality-gates/`.
+```sh
+uv run pytest -q
+uv run python -m tools.validate
+uv run python -m tools.catalog rebuild
+uv run python -m tools.build
+uv run python -m tools.build docs
+```
+
+Curadoria por domínio: `uv run python -m tools.curation <sources-dir> --domain <domínio>`. Recria conteúdo gerado: conferir mudanças locais antes de executar. Adaptadores: `uv run python -m tools.build adapters` (saída local em `dist/`). Avaliações com modelo são separadas e podem gerar custo.
+
+Contrato de edição e reconstrução: [docs/architecture/repository-layout.md](docs/architecture/repository-layout.md). Não publicar nem remover worktrees sem a aprovação aplicável.

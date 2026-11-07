@@ -12,7 +12,8 @@ from tools.curation.language_pack import reference_map, rewrite_refs
 
 if __name__ == "__main__":
     root = Path(".").resolve()
-    refs = reference_map(root, yaml.safe_load((root / "catalog/decisions/language-packs.yaml").read_text()))
+    from tools.curation.manifests import language_packs
+    refs = reference_map(root, language_packs(root))
     unresolved: set[str] = set()
     for d in sys.argv[1:]:
         for f in Path(d).rglob("*.md"):

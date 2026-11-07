@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 3)
 - **Fronteira:** contratos, conformidade regulatória, privacidade jurídica.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/business.yaml`](../../../../catalog/decisions/bundles/business.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/legal-compliance.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

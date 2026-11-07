@@ -12,6 +12,14 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`foundation/distribution`](foundation/distribution/spec.md) | catalog-governance, quality-gates | Marketplace de plugins por domínio e adaptadores multi-harness |
 | [`foundation/faceted-classification`](foundation/faceted-classification/spec.md) | catalog-governance | Facetas N:N (tecnologia, conhecimento, capacidade, setor, áreas multidisciplinares) sobre a posse por domínio |
 
+## Revisão da organização do repositório
+
+| Spec | Depende de |
+|---|---|
+| [`foundation/curation-layout`](foundation/curation-layout/spec.md) | catalog-governance, source-curation |
+| [`foundation/artifact-support-layout`](foundation/artifact-support-layout/spec.md) | curation-layout |
+| [`foundation/repository-guide`](foundation/repository-guide/spec.md) | curation-layout, artifact-support-layout |
+
 ## Onda 1 — Núcleo de engenharia (uso diário)
 
 | Spec | Depende de |
@@ -55,22 +63,6 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 ## Fora de escopo nesta versão
 
 Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística, plataformas chinesas, CMSs específicos) e ferramentas internas das próprias fontes (`ecc-*`, `ponytail-gain`, `ask-matt`...). Registrados em `catalog/exclusions.yaml`; reabrir exige uma spec nova de domínio.
-
-## Estado das specs
-
-| Spec | Estado |
-|---|---|
-| `foundation/catalog-governance` | implementada (falta T6: revisão humana da tabela de domínios) |
-| `foundation/source-curation` | implementada; 100% do inventário decidido (verificado no CI) |
-| `foundation/quality-gates` | validação estática implementada; faltam calibração do limiar (T3), runner de evals (T7–T9) |
-| `foundation/distribution` | marketplace, profiles, adaptadores (Agent Skills, Cursor, Gemini, OpenCode) e release implementados; sync upstream implementado; falta verificação em harness real (T9) |
-| `principles`, `workflow`, `testing`, `debugging`, `code-quality` | primeira versão implementada (`experimental`); faltam evals |
-| `agent-engineering` | parcial: `parallel-agents`, `writing-skills`, `session-retrospective` portados; fusão com `skill-creator` pendente |
-| `architecture`, `security` | primeira versão implementada (`experimental`); faltam evals |
-| `languages` | 11 pacotes gerados (`experimental`); faltam revisão de conteúdo e evals |
-| `ui`, `ux`, `accessibility` | primeira versão (`experimental`); faltam evals e testes dos scripts do upstream |
-| `data`, `platform`, `ai-engineering`, `documents`, `research`, `brand`, `creative-media` | primeira versão via `tools.curation.bundle` (`experimental`) |
-| Onda 3 (`product`, `marketing`, `sales`, `finance`, `legal-compliance`, `operations`) | primeira versão via bundle (`experimental`); corpos baseados em personas precisam virar procedimentos |
 
 ## Fora deste repositório
 

@@ -17,7 +17,7 @@ TDD_PARAPHRASE = ("Use when implementing a feature or a bugfix, before writing a
 @pytest.fixture
 def repo(tmp_path: Path) -> Path:
     """A minimal repository: the real catalog contracts and domain manifests, but no content."""
-    shutil.copytree(REPO / "catalog", tmp_path / "catalog", ignore=shutil.ignore_patterns("decisions", "taxonomy", "facets.yaml", "contributions.yaml", "overrides"))
+    shutil.copytree(REPO / "catalog", tmp_path / "catalog", ignore=shutil.ignore_patterns("curation", "inventory", "taxonomy", "facets.yaml", "contributions.yaml", "overrides"))
     (tmp_path / "catalog/catalog.yaml").write_text("version: 1\nartifacts: []\n")
     (tmp_path / "catalog/exclusions.yaml").write_text("version: 1\nexcluded: []\n")
     for manifest in (REPO / "domains").glob("*/.claude-plugin/plugin.json"):
@@ -25,7 +25,12 @@ def repo(tmp_path: Path) -> Path:
         (d / ".claude-plugin").mkdir(parents=True)
         shutil.copy(manifest, d / ".claude-plugin/plugin.json")
         (d / "PROVENANCE.yaml").write_text("version: 1\nfiles: []\n")
-    (tmp_path / "tools/inventory").mkdir(parents=True)
+    (tmp_path / "catalog/inventory").mkdir(parents=True)
+    (tmp_path / "catalog/curation/domains").mkdir(parents=True)
+    (tmp_path / "catalog/curation/exclusions.yaml").write_text("version: 1\nexcluded: []\n")
+    for domain in yaml.safe_load((tmp_path / "catalog/domains.yaml").read_text())["domains"]:
+        (tmp_path / "catalog/curation/domains" / f"{domain}.yaml").write_text(
+            yaml.safe_dump({"version": 1, "domain": domain, "artifacts": []}))
     return tmp_path
 
 
@@ -39,6 +44,10 @@ def add_skill(root: Path, domain: str, name: str, description: str, status: str 
         cat["artifacts"].append({"id": f"{domain}/{name}", "type": "skill", "capability": description[:150],
                                  "status": status, "owner": "@opendigital/ai-foundation"})
         (root / "catalog/catalog.yaml").write_text(yaml.safe_dump(cat, sort_keys=False))
+        source = root / "catalog/curation/domains" / f"{domain}.yaml"
+        manifest = yaml.safe_load(source.read_text())
+        manifest["artifacts"].append(cat["artifacts"][-1])
+        source.write_text(yaml.safe_dump(manifest, sort_keys=False))
     return d
 
 
@@ -99,7 +108,7 @@ def test_copy_of_restricted_file_is_rejected(repo):
     restricted.write_text("© 2025 Anthropic, PBC. All rights reserved. " * 5)
     import hashlib
     h = hashlib.sha256(restricted.read_bytes()).hexdigest()
-    (repo / "tools/inventory/reference-hashes.txt").write_text(f"{h} anthropics/skills:skills/docx/SKILL.md\n")
+    (repo / "catalog/inventory/restricted-hashes.txt").write_text(f"{h} anthropics/skills:skills/docx/SKILL.md\n")
     assert any("restricted-licence" in e for e in errors(repo))
 
 

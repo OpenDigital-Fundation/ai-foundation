@@ -25,7 +25,7 @@ Onze pacotes (`typescript`, `python`, `go`, `rust`, `jvm`, `swift`, `dart`, `dot
 
 ## Como é gerado
 
-`python -m tools.curation.language_pack <sources> catalog/decisions/language-packs.yaml` monta os pacotes a partir do mapa declarativo, gera a proveniência de cada arquivo (várias fontes por arquivo) e o `catalog/decisions/languages.yaml`. O conteúdo de `domains/languages/skills/` é **saída gerada**: para mudar, edite o mapa e regenere. O montador reescreve referências internas do upstream (`python-patterns`, `/go-review`) para os artefatos deste catálogo.
+`python -m tools.curation <sources> --domain languages` monta os pacotes a partir dos campos `language_pack` do manifesto editorial e gera a proveniência de cada arquivo (várias fontes por arquivo). Os metadados públicos vêm do manifesto; não há decisões intermediárias geradas. Os pacotes com `language_pack` são **saída gerada**: para mudar, edite o manifesto e regenere. Outros artefatos do domínio seguem a estratégia indicada em seu próprio registro. O montador reescreve referências internas do upstream (`python-patterns`, `/go-review`) para os artefatos deste catálogo.
 
 ## Pendências
 

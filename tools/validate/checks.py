@@ -9,6 +9,7 @@ from collections import Counter
 from pathlib import Path
 
 import jsonschema
+import yaml
 
 from tools.validate.repo import Artifact, discover, load_yaml
 
@@ -24,6 +25,30 @@ def _schema(root: Path, name: str) -> dict:
 def _validate(data, schema, label: str) -> list[str]:
     v = jsonschema.Draft202012Validator(schema)
     return [f"{label}: {'/'.join(map(str, e.absolute_path)) or '<root>'}: {e.message}" for e in v.iter_errors(data)]
+
+
+def check_curation(root: Path) -> list[str]:
+    from tools.curation.manifests import projections
+    try:
+        projections(root)
+    except (ValueError, OSError) as error:
+        return [str(error)]
+    except yaml.YAMLError as error:
+        return [f"catalog/curation: invalid YAML: {error}"]
+    return []
+
+
+def check_support_layout(root: Path) -> list[str]:
+    errors = []
+    for name in ("skills", "workflows"):
+        for art in sorted((root / "domains").glob(f"*/{name}/*")):
+            if not art.is_dir():
+                continue
+            errors += [f"{p.relative_to(root)}: references use README.md, not nested SKILL.md"
+                       for p in sorted((art / "references").rglob("SKILL.md"))]
+            if any(p.is_file() for p in (art / "canvas-fonts").rglob("*")):
+                errors.append(f"{art.relative_to(root)}: font assets belong in assets/fonts/")
+    return errors
 
 
 # R1 / R2 ------------------------------------------------------------------
@@ -178,7 +203,7 @@ def check_catalog_bijection(root: Path, arts: list[Artifact]) -> list[str]:
     excluded = load_yaml(root / "catalog/exclusions.yaml").get("excluded") or []
     keys = [k for e in catalog for k in e.get("supersedes", [])] + [e["key"] for e in excluded]
     errs += [f"upstream key '{k}' is decided more than once" for k, n in Counter(keys).items() if n > 1]
-    inv = root / "docs/specs/foundation/source-curation/inventory.csv"
+    inv = root / "catalog/inventory/artifacts.csv"
     if inv.is_file():
         import csv
         known = {f"{r['source']}:{r['kind']}:{r['name']}" for r in csv.DictReader(inv.open())}
@@ -267,7 +292,7 @@ def _sha(path: Path) -> str:
 
 def check_licences(root: Path) -> list[str]:
     errs: list[str] = []
-    hashes_file = root / "tools/inventory/reference-hashes.txt"
+    hashes_file = root / "catalog/inventory/restricted-hashes.txt"
     if hashes_file.is_file():
         forbidden = {}
         for line in hashes_file.read_text().splitlines():
@@ -368,7 +393,7 @@ def check_routing_evals(root: Path) -> list[str]:
 
 def run_all(root: Path) -> tuple[list[str], list[str]]:
     arts = discover(root)
-    errs = check_registry_files(root) + check_domains(root)
+    errs = check_registry_files(root) + check_domains(root) + check_curation(root) + check_support_layout(root)
     errs += check_frontmatter(root, arts) + check_catalog_bijection(root, arts) + check_names(root, arts)
     sim_errs, warns = check_similarity(root, arts)
     errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root) + check_no_orphans(root) + check_facets(root)

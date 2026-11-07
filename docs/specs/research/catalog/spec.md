@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 2)
 - **Fronteira:** pesquisa com fontes e citações, revisão de literatura.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/knowledge-work.yaml`](../../../../catalog/decisions/bundles/knowledge-work.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/research.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

@@ -20,7 +20,7 @@ Hoje só se encontra um artefato pelo domínio dono. Não dá para perguntar "o 
 
 ## Critérios de aceite
 
-1. Todos os 111 artefatos com facetas válidas; `python -m tools.validate` sem erros.
+1. Todos os artefatos registrados no catálogo com facetas válidas; `python -m tools.validate` sem erros.
 2. `docs/FACETS.md` responde "o que serve a GovTech" e "o que faz code review" em uma busca na página.
 3. Os vocabulários validam no schema `catalog/schema/taxonomy.schema.json`.
 

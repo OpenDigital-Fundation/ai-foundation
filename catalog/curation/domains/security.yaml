@@ -1,0 +1,71 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: security
+artifacts:
+- id: security/agent-security
+  type: skill
+  capability: Harden agents and harnesses against injection and over-permission; statically review MCP and hook configs.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:agent-security-hardening
+  - affaan-m/ECC:skill:mcp-dependency-review
+  - affaan-m/ECC:skill:security-scan
+  - affaan-m/ECC:command:security-scan
+- id: security/external-references
+  type: knowledge
+  capability: Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP).
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: security/secrets-hygiene
+  type: skill
+  capability: Respond to exposed secrets rotation-first and set up scanning, brokering and rotation.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer
+- id: security/security-audit
+  type: skill
+  capability: Source-first security guidance or full audit with sandboxed validation and schema-checked findings.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - SecurityStandards/skill-security-audit:skill:security-audit
+  - affaan-m/ECC:agent:security-reviewer
+  - affaan-m/ECC:rule:common/security
+  - affaan-m/ECC:skill:osint-investigation
+  - affaan-m/ECC:skill:security-bounty-hunter
+  - affaan-m/ECC:skill:security-review
+  - msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor
+  - msitarzewski/agency-agents:agent:Application Security Engineer
+  - msitarzewski/agency-agents:agent:Cloud Security Architect
+  - msitarzewski/agency-agents:agent:Identity & Access Engineer
+  - msitarzewski/agency-agents:agent:Penetration Tester
+  - msitarzewski/agency-agents:agent:Privacy Engineer
+  - msitarzewski/agency-agents:agent:Senior SecOps Engineer
+- id: security/threat-modeling
+  type: skill
+  capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Security Architect
+imports:
+- dest: domains/security/skills/security-audit
+  source: SecurityStandards/skill-security-audit
+  src: skills/security-audit
+- dest: domains/security/skills/agent-security/SKILL.md
+  source: affaan-m/ECC
+  src: skills/agent-security-hardening/SKILL.md
+- dest: domains/security/skills/agent-security/references/mcp-config-review.md
+  source: affaan-m/ECC
+  src: skills/mcp-dependency-review/SKILL.md
+- dest: domains/security/skills/threat-modeling/SKILL.md
+  source: msitarzewski/agency-agents
+  src: security/security-architect.md
+- dest: domains/security/skills/threat-modeling/templates/threat-model.md
+  source: msitarzewski/agency-agents
+  src: security/security-architect.md
+- dest: domains/security/skills/secrets-hygiene/SKILL.md
+  source: msitarzewski/agency-agents
+  src: security/security-secrets-credential-engineer.md

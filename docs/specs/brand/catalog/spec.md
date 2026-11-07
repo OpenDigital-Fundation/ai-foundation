@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 2)
 - **Fronteira:** identidade e voz de marca, guias de estilo.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/knowledge-work.yaml`](../../../../catalog/decisions/bundles/knowledge-work.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/brand.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

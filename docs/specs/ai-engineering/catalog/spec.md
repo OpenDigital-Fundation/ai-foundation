@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 2)
 - **Fronteira:** construir produtos com LLM — APIs de modelo, MCP servers, RAG, prompts, evals de produto, custo.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/knowledge-work.yaml`](../../../../catalog/decisions/bundles/knowledge-work.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/ai-engineering.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 3)
 - **Fronteira:** SEO/AEO, conteúdo, social, e-mail, mídia paga.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/business.yaml`](../../../../catalog/decisions/bundles/business.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/marketing.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

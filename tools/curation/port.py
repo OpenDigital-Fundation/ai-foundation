@@ -40,7 +40,9 @@ def port(root: Path, src: Path, domain: str, name: str) -> list[Path]:
                 t = _frontmatter(t, name, domain)
             p.write_text(t, encoding="utf-8")
         written.append(p)
-    return written
+    from tools.curation.layout import normalize
+    moves = normalize(dest)
+    return [dest / moves.get(p.relative_to(dest).as_posix(), p.relative_to(dest).as_posix()) for p in written]
 
 
 def _frontmatter(text: str, name: str, domain: str) -> str:

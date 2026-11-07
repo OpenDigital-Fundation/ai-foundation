@@ -1,0 +1,78 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: product
+artifacts:
+- id: product/product-management
+  type: skill
+  capability: 'Use when doing product management work: writing a PRD or product brief, defining outcomes and success metrics,
+    prioritising a backlog or sprint, synthesising user feedback into themes, plann'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:competitive-platform-analysis
+  - affaan-m/ECC:skill:competitive-report-structure
+  - affaan-m/ECC:skill:market-research
+  - affaan-m/ECC:skill:product-capability
+  - affaan-m/ECC:skill:product-lens
+  - msitarzewski/agency-agents:agent:Business Strategist
+  - msitarzewski/agency-agents:agent:Experiment Tracker
+  - msitarzewski/agency-agents:agent:Feedback Synthesizer
+  - msitarzewski/agency-agents:agent:Product Manager
+  - msitarzewski/agency-agents:agent:Sprint Prioritizer
+  - msitarzewski/agency-agents:agent:Trend Researcher
+  recipe:
+    title: Product management
+    description: 'Use when doing product management work: writing a PRD or product brief, defining outcomes and success metrics,
+      prioritising a backlog or sprint, synthesising user feedback into themes, planning and tracking experiments, or judging
+      whether a feature is worth building.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:product/product-manager.md
+      prioritisation.md:
+      - msitarzewski/agency-agents:product/product-sprint-prioritizer.md
+      feedback-synthesis.md:
+      - msitarzewski/agency-agents:product/product-feedback-synthesizer.md
+      experiments.md:
+      - msitarzewski/agency-agents:project-management/project-management-experiment-tracker.md
+      product-lens.md:
+      - s:product-lens
+      capability-mapping.md:
+      - s:product-capability
+    body: '# Product management
+
+
+      Decide what to build and why, write it down so a team can build it, and check afterwards that it worked.
+
+
+      ## 1. Frame the outcome
+
+      State the user problem, who has it, the evidence (research, tickets, data) and the business outcome it moves. Write
+      the success metric and its current baseline. No baseline means the first task is measuring it.
+
+
+      ## 2. Shape the bet
+
+      Compare two or three options, including "do nothing". For each: expected impact, confidence and effort (RICE or ICE),
+      risks and what would prove it wrong. Recommend one.
+
+
+      ## 3. Write the PRD
+
+      Problem, goals and non-goals, users and jobs to be done, requirements as user stories with acceptance criteria, success
+      metrics, risks, open questions, launch plan. In a repository, the PRD is the spec: hand it to `workflow:brainstorming`
+      or `workflow:writing-plans`.
+
+
+      ## 4. Prioritise
+
+      Rank the backlog by value over effort against the current outcome goal; cut or defer the rest explicitly. Re-rank when
+      evidence changes, not when someone asks loudest.
+
+
+      ## 5. Learn
+
+      Run experiments with a hypothesis, metric, sample size and stop rule. Synthesise feedback into themes with counts and
+      quotes. After launch, compare the metric to the baseline and write what you learned.
+
+
+      Market, competitor and capability analyses are in the references.'

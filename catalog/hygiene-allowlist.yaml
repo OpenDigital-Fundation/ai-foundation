@@ -1,6 +1,6 @@
-# Hygiene findings accepted on purpose. Each entry needs a reason.
 version: 1
 entries:
-  - path: domains/security/skills/agent-security/references/mcp-config-review.md
-    rule: unpinned package execution (@latest)
-    reason: The review guide quotes @latest as the dangerous pattern it teaches agents to flag.
+- path: domains/security/skills/agent-security/references/mcp-config-review.md
+  rule: unpinned package execution (@latest)
+  reason: The review guide quotes @latest as the dangerous pattern it teaches agents
+    to flag.

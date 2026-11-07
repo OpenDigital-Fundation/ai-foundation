@@ -2,7 +2,7 @@
 
 ## Como os artefatos são produzidos
 
-Portados com `tools.curation.port` e editados à mão (diff revisável contra o upstream; proveniência em `catalog/decisions/provenance-wave1.yaml`):
+Portados com `tools.curation.port` e editados à mão (diff revisável contra o upstream; proveniência em `catalog/curation/domains/security.yaml`):
 
 - `security/agent-security`
 - `security/external-references`
@@ -12,7 +12,7 @@ Portados com `tools.curation.port` e editados à mão (diff revisável contra o 
 
 ## Contratos
 
-- Registro: `catalog/catalog.yaml` (derivado de `catalog/decisions/*.yaml` por `python -m tools.catalog rebuild`).
+- Registro: `catalog/catalog.yaml` (derivado de `catalog/curation/domains/*.yaml` por `python -m tools.catalog rebuild`).
 - Proveniência: `domains/security/PROVENANCE.yaml`.
 - Correções locais em arquivos gerados: `catalog/overrides/<domínio>/<skill>/`, aplicadas após cada regeneração.
 

@@ -4,17 +4,16 @@
 
 Gerados (não editar à mão em `domains/`; editar a fonte e regenerar):
 
-- [`catalog/decisions/bundles/data-platform.yaml`](../../../../catalog/decisions/bundles/data-platform.yaml) → `python -m tools.curation.bundle <sources> catalog/decisions/bundles/data-platform.yaml`
-- [`catalog/decisions/bundles/gaps.yaml`](../../../../catalog/decisions/bundles/gaps.yaml) → `python -m tools.curation.bundle <sources> catalog/decisions/bundles/gaps.yaml`
+- [manifesto editorial](../../../../catalog/curation/domains/testing.yaml) → `python -m tools.curation <sources> --domain testing`
 
-Portados com `tools.curation.port` e editados à mão (diff revisável contra o upstream; proveniência em `catalog/decisions/provenance-wave1.yaml`):
+Portados com `tools.curation.port` e editados à mão (diff revisável contra o upstream; proveniência em `catalog/curation/domains/testing.yaml`):
 
 - `testing/test-driven-development`
 - `testing/verification-before-completion`
 
 ## Contratos
 
-- Registro: `catalog/catalog.yaml` (derivado de `catalog/decisions/*.yaml` por `python -m tools.catalog rebuild`).
+- Registro: `catalog/catalog.yaml` (derivado de `catalog/curation/domains/*.yaml` por `python -m tools.catalog rebuild`).
 - Proveniência: `domains/testing/PROVENANCE.yaml`.
 - Correções locais em arquivos gerados: `catalog/overrides/<domínio>/<skill>/`, aplicadas após cada regeneração.
 

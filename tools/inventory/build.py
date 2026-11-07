@@ -3,8 +3,8 @@
 Usage: python -m tools.inventory.build <sources-dir>
 
 Writes:
-  docs/specs/foundation/source-curation/inventory.csv  (one row per unique upstream artifact)
-  tools/inventory/reference-hashes.txt                 (sha256 of files that must never be copied)
+  catalog/inventory/artifacts.csv  (one row per unique upstream artifact)
+  catalog/inventory/restricted-hashes.txt                 (sha256 of files that must never be copied)
 """
 from __future__ import annotations
 
@@ -105,4 +105,4 @@ def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> Non
 
 if __name__ == "__main__":
     build(Path(sys.argv[1]), Path("catalog/sources.lock.yaml"),
-          Path("docs/specs/foundation/source-curation/inventory.csv"), Path("tools/inventory/reference-hashes.txt"))
+          Path("catalog/inventory/artifacts.csv"), Path("catalog/inventory/restricted-hashes.txt"))

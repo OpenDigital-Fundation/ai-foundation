@@ -11,7 +11,7 @@
 | `test-driven-development` | superpowers | mattpocock `tdd` (seams combinadas, fatias verticais, anti-padrão tautológico, `tests.md`, `mocking.md`), ECC `tdd-workflow`, `tdd-guide` |
 | `verification-before-completion` | superpowers | ECC `verification-loop`, agency *Reality Checker*, *Evidence Collector* |
 
-Decisões em [`catalog/decisions/engineering-core.yaml`](../../../../catalog/decisions/engineering-core.yaml).
+Decisões em [manifesto editorial](../../../../catalog/curation/domains/testing.yaml).
 
 ## Próximos artefatos (ainda não implementados)
 
@@ -24,6 +24,6 @@ Decisões em [`catalog/decisions/engineering-core.yaml`](../../../../catalog/dec
 1. Nenhuma skill de `testing` com similaridade ≥ 0,60 com outra do catálogo.
 2. Evals de gatilho distinguem TDD (implementar) de debugging (falha existente) e de verificação (antes de declarar pronto).
 
-## Passada final (bundle [`gaps.yaml`](../../../../catalog/decisions/bundles/gaps.yaml))
+## Passada final (bundle [manifesto editorial](../../../../catalog/curation/domains/testing.yaml))
 
 Adicionados: `test-strategy` (base ECC `test-collaboration`; `ai-regression-testing`, *Test Automation Engineer*, *API Tester*, *Test Results Analyzer*, `pr-test-analyzer`, *Performance Benchmarker*, `benchmark`, `benchmark-methodology`, `click-path-audit`, `delivery-gate`).

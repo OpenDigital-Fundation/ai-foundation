@@ -1,0 +1,125 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: creative-media
+artifacts:
+- id: creative-media/animated-gifs
+  type: skill
+  capability: 'Use when making an animated GIF, especially for Slack or chat: size and frame limits, animation concepts, generation
+    with Python and validation of the result.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:slack-gif-creator
+  recipe:
+    title: Animated GIFs
+    description: 'Use when making an animated GIF, especially for Slack or chat: size and frame limits, animation concepts,
+      generation with Python and validation of the result.'
+    base_dir: anthropics/skills:skills/slack-gif-creator
+- id: creative-media/banner-design
+  type: skill
+  capability: 'Use when designing banners and promotional graphics: social media posts and covers, display ads, website heroes
+    and print, with several art directions to choose from and platform-correct siz'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - nextlevelbuilder/ui-ux-pro-max-skill:skill:banner-design
+  recipe:
+    title: Banner design
+    description: 'Use when designing banners and promotional graphics: social media posts and covers, display ads, website
+      heroes and print, with several art directions to choose from and platform-correct sizes.'
+    base_dir: nextlevelbuilder/ui-ux-pro-max-skill:.claude/skills/banner-design
+- id: creative-media/generative-art
+  type: skill
+  capability: 'Use when the user asks for art made with code: generative or algorithmic art in p5.js with seeded randomness,
+    flow fields, particle systems and interactive parameters.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:algorithmic-art
+  recipe:
+    title: Generative art
+    description: 'Use when the user asks for art made with code: generative or algorithmic art in p5.js with seeded randomness,
+      flow fields, particle systems and interactive parameters.'
+    base_dir: anthropics/skills:skills/algorithmic-art
+- id: creative-media/image-prompting
+  type: skill
+  capability: 'Use when writing prompts for image-generation models: photographic direction (lens, light, composition), style
+    control, and representation that avoids stereotyped or culturally inaccurate de'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Image Prompt Engineer
+  - msitarzewski/agency-agents:agent:Inclusive Visuals Specialist
+  recipe:
+    title: Image prompting
+    description: 'Use when writing prompts for image-generation models: photographic direction (lens, light, composition),
+      style control, and representation that avoids stereotyped or culturally inaccurate depictions of people.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:design/design-image-prompt-engineer.md
+      inclusive-visuals.md:
+      - msitarzewski/agency-agents:design/design-inclusive-visuals-specialist.md
+    body: '# Image prompting
+
+
+      Describe the image a photographer or illustrator would need to make it, and check the result for accuracy and bias.
+
+
+      ## 1. Brief
+
+      Purpose and placement (hero, social, product), aspect ratio and resolution, brand constraints, and what must not appear.
+
+
+      ## 2. Compose the prompt
+
+      Subject and action; setting and time; composition and camera (shot size, angle, lens, depth of field); light (quality,
+      direction, colour temperature); style and medium; mood. Concrete nouns beat adjectives.
+
+
+      ## 3. Represent people accurately
+
+      Specify people only as the brief requires; avoid defaulting to stereotypes of gender, age, ethnicity, disability or
+      culture; get cultural dress, settings and symbols right. See the inclusive-visuals reference.
+
+
+      ## 4. Iterate
+
+      Change one attribute per round, keep the seed when comparing, and record the prompt that worked.
+
+
+      ## 5. Review
+
+      Check hands, text, logos and anatomy; confirm usage rights for the model and any reference images; never depict real,
+      identifiable people without consent.'
+- id: creative-media/poster-design
+  type: skill
+  capability: 'Use when creating a static visual piece as a PNG or PDF: a poster, cover, print piece or art board composed
+    from a written design philosophy, with bundled typefaces.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:canvas-design
+  recipe:
+    title: Poster design
+    description: 'Use when creating a static visual piece as a PNG or PDF: a poster, cover, print piece or art board composed
+      from a written design philosophy, with bundled typefaces.'
+    base_dir: anthropics/skills:skills/canvas-design
+- id: creative-media/presentation-slides
+  type: skill
+  capability: 'Use when creating an HTML slide deck or presentation from scratch or from an outline: narrative structure,
+    slide layouts, animation, charts with Chart.js and design tokens, or converting an '
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:frontend-slides
+  - msitarzewski/agency-agents:agent:Visual Storyteller
+  - nextlevelbuilder/ui-ux-pro-max-skill:skill:slides
+  recipe:
+    title: Presentation slides
+    description: 'Use when creating an HTML slide deck or presentation from scratch or from an outline: narrative structure,
+      slide layouts, animation, charts with Chart.js and design tokens, or converting an existing deck to HTML. For .pptx
+      files use documents:office-documents.'
+    base: s:frontend-slides
+    references:
+      strategic-slides.md:
+      - nextlevelbuilder/ui-ux-pro-max-skill:.claude/skills/slides/SKILL.md

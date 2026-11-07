@@ -53,7 +53,7 @@ files:
 ## Decisões
 
 - Inventário reproduzível a partir do lock; o CSV versionado é o snapshot revisável.
-- A decisão por item (R2) fica no catálogo/exclusões, não no CSV, para existir uma única fonte de verdade.
+- A decisão por item (R2) fica nos manifestos e exclusões de `catalog/curation/`; catálogo e exclusões públicos são projeções. O inventário em `catalog/inventory/` registra observações, não decisões.
 - O classificador é deliberadamente simples; o trabalho de julgamento acontece na spec de cada domínio.
 
 ## Riscos

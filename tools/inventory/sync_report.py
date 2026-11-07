@@ -63,7 +63,7 @@ def main(argv: list[str] | None = None) -> int:
         fetch(head_lock, work / "sources")
         head_csv = work / "inventory.head.csv"
         build(work / "sources", head_lock, head_csv, work / "reference-hashes.head.txt")
-        old, new = rows(root / "docs/specs/foundation/source-curation/inventory.csv"), rows(head_csv)
+        old, new = rows(root / "catalog/inventory/artifacts.csv"), rows(head_csv)
         moved_ids = {m[0] for m in moved}
         lines += ["| Source | Pinned | HEAD |", "|---|---|---|"] + [f"| {safe(i)} | `{a[:7]}` | `{b[:7]}` |" for i, a, b in moved] + [""]
         added = sorted(k for k in new if k not in old)

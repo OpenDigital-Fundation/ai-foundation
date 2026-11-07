@@ -126,567 +126,567 @@ files:
     path: skills/canvas-design/SKILL.md
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/ArsenalSC-OFL.txt
+- path: skills/poster-design/assets/fonts/ArsenalSC-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/ArsenalSC-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/ArsenalSC-Regular.ttf
+- path: skills/poster-design/assets/fonts/ArsenalSC-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/ArsenalSC-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/BigShoulders-Bold.ttf
+- path: skills/poster-design/assets/fonts/BigShoulders-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/BigShoulders-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/BigShoulders-OFL.txt
+- path: skills/poster-design/assets/fonts/BigShoulders-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/BigShoulders-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/BigShoulders-Regular.ttf
+- path: skills/poster-design/assets/fonts/BigShoulders-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/BigShoulders-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Boldonse-OFL.txt
+- path: skills/poster-design/assets/fonts/Boldonse-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Boldonse-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Boldonse-Regular.ttf
+- path: skills/poster-design/assets/fonts/Boldonse-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Boldonse-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/BricolageGrotesque-Bold.ttf
+- path: skills/poster-design/assets/fonts/BricolageGrotesque-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/BricolageGrotesque-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/BricolageGrotesque-OFL.txt
+- path: skills/poster-design/assets/fonts/BricolageGrotesque-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/BricolageGrotesque-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/BricolageGrotesque-Regular.ttf
+- path: skills/poster-design/assets/fonts/BricolageGrotesque-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/BricolageGrotesque-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/CrimsonPro-Bold.ttf
+- path: skills/poster-design/assets/fonts/CrimsonPro-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/CrimsonPro-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/CrimsonPro-Italic.ttf
+- path: skills/poster-design/assets/fonts/CrimsonPro-Italic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/CrimsonPro-Italic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/CrimsonPro-OFL.txt
+- path: skills/poster-design/assets/fonts/CrimsonPro-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/CrimsonPro-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/CrimsonPro-Regular.ttf
+- path: skills/poster-design/assets/fonts/CrimsonPro-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/CrimsonPro-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/DMMono-OFL.txt
+- path: skills/poster-design/assets/fonts/DMMono-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/DMMono-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/DMMono-Regular.ttf
+- path: skills/poster-design/assets/fonts/DMMono-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/DMMono-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/EricaOne-OFL.txt
+- path: skills/poster-design/assets/fonts/EricaOne-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/EricaOne-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/EricaOne-Regular.ttf
+- path: skills/poster-design/assets/fonts/EricaOne-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/EricaOne-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/GeistMono-Bold.ttf
+- path: skills/poster-design/assets/fonts/GeistMono-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/GeistMono-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/GeistMono-OFL.txt
+- path: skills/poster-design/assets/fonts/GeistMono-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/GeistMono-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/GeistMono-Regular.ttf
+- path: skills/poster-design/assets/fonts/GeistMono-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/GeistMono-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Gloock-OFL.txt
+- path: skills/poster-design/assets/fonts/Gloock-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Gloock-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Gloock-Regular.ttf
+- path: skills/poster-design/assets/fonts/Gloock-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Gloock-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/IBMPlexMono-Bold.ttf
+- path: skills/poster-design/assets/fonts/IBMPlexMono-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/IBMPlexMono-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/IBMPlexMono-OFL.txt
+- path: skills/poster-design/assets/fonts/IBMPlexMono-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/IBMPlexMono-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/IBMPlexMono-Regular.ttf
+- path: skills/poster-design/assets/fonts/IBMPlexMono-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/IBMPlexMono-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/IBMPlexSerif-Bold.ttf
+- path: skills/poster-design/assets/fonts/IBMPlexSerif-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/IBMPlexSerif-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf
+- path: skills/poster-design/assets/fonts/IBMPlexSerif-BoldItalic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/IBMPlexSerif-Italic.ttf
+- path: skills/poster-design/assets/fonts/IBMPlexSerif-Italic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/IBMPlexSerif-Italic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/IBMPlexSerif-Regular.ttf
+- path: skills/poster-design/assets/fonts/IBMPlexSerif-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/IBMPlexSerif-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/InstrumentSans-Bold.ttf
+- path: skills/poster-design/assets/fonts/InstrumentSans-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/InstrumentSans-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/InstrumentSans-BoldItalic.ttf
+- path: skills/poster-design/assets/fonts/InstrumentSans-BoldItalic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/InstrumentSans-BoldItalic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/InstrumentSans-Italic.ttf
+- path: skills/poster-design/assets/fonts/InstrumentSans-Italic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/InstrumentSans-Italic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/InstrumentSans-OFL.txt
+- path: skills/poster-design/assets/fonts/InstrumentSans-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/InstrumentSans-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/InstrumentSans-Regular.ttf
+- path: skills/poster-design/assets/fonts/InstrumentSans-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/InstrumentSerif-Italic.ttf
+- path: skills/poster-design/assets/fonts/InstrumentSerif-Italic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/InstrumentSerif-Italic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/InstrumentSerif-Regular.ttf
+- path: skills/poster-design/assets/fonts/InstrumentSerif-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/InstrumentSerif-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Italiana-OFL.txt
+- path: skills/poster-design/assets/fonts/Italiana-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Italiana-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Italiana-Regular.ttf
+- path: skills/poster-design/assets/fonts/Italiana-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Italiana-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/JetBrainsMono-Bold.ttf
+- path: skills/poster-design/assets/fonts/JetBrainsMono-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/JetBrainsMono-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/JetBrainsMono-OFL.txt
+- path: skills/poster-design/assets/fonts/JetBrainsMono-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/JetBrainsMono-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/JetBrainsMono-Regular.ttf
+- path: skills/poster-design/assets/fonts/JetBrainsMono-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/JetBrainsMono-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Jura-Light.ttf
+- path: skills/poster-design/assets/fonts/Jura-Light.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Jura-Light.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Jura-Medium.ttf
+- path: skills/poster-design/assets/fonts/Jura-Medium.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Jura-Medium.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Jura-OFL.txt
+- path: skills/poster-design/assets/fonts/Jura-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Jura-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/LibreBaskerville-OFL.txt
+- path: skills/poster-design/assets/fonts/LibreBaskerville-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/LibreBaskerville-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/LibreBaskerville-Regular.ttf
+- path: skills/poster-design/assets/fonts/LibreBaskerville-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/LibreBaskerville-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Lora-Bold.ttf
+- path: skills/poster-design/assets/fonts/Lora-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Lora-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Lora-BoldItalic.ttf
+- path: skills/poster-design/assets/fonts/Lora-BoldItalic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Lora-BoldItalic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Lora-Italic.ttf
+- path: skills/poster-design/assets/fonts/Lora-Italic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Lora-Italic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Lora-OFL.txt
+- path: skills/poster-design/assets/fonts/Lora-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Lora-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Lora-Regular.ttf
+- path: skills/poster-design/assets/fonts/Lora-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Lora-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/NationalPark-Bold.ttf
+- path: skills/poster-design/assets/fonts/NationalPark-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/NationalPark-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/NationalPark-OFL.txt
+- path: skills/poster-design/assets/fonts/NationalPark-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/NationalPark-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/NationalPark-Regular.ttf
+- path: skills/poster-design/assets/fonts/NationalPark-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/NationalPark-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/NothingYouCouldDo-OFL.txt
+- path: skills/poster-design/assets/fonts/NothingYouCouldDo-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/NothingYouCouldDo-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/NothingYouCouldDo-Regular.ttf
+- path: skills/poster-design/assets/fonts/NothingYouCouldDo-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/NothingYouCouldDo-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Outfit-Bold.ttf
+- path: skills/poster-design/assets/fonts/Outfit-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Outfit-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Outfit-OFL.txt
+- path: skills/poster-design/assets/fonts/Outfit-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Outfit-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Outfit-Regular.ttf
+- path: skills/poster-design/assets/fonts/Outfit-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Outfit-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/PixelifySans-Medium.ttf
+- path: skills/poster-design/assets/fonts/PixelifySans-Medium.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/PixelifySans-Medium.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/PixelifySans-OFL.txt
+- path: skills/poster-design/assets/fonts/PixelifySans-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/PixelifySans-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/PoiretOne-OFL.txt
+- path: skills/poster-design/assets/fonts/PoiretOne-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/PoiretOne-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/PoiretOne-Regular.ttf
+- path: skills/poster-design/assets/fonts/PoiretOne-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/PoiretOne-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/RedHatMono-Bold.ttf
+- path: skills/poster-design/assets/fonts/RedHatMono-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/RedHatMono-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/RedHatMono-OFL.txt
+- path: skills/poster-design/assets/fonts/RedHatMono-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/RedHatMono-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/RedHatMono-Regular.ttf
+- path: skills/poster-design/assets/fonts/RedHatMono-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/RedHatMono-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Silkscreen-OFL.txt
+- path: skills/poster-design/assets/fonts/Silkscreen-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Silkscreen-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Silkscreen-Regular.ttf
+- path: skills/poster-design/assets/fonts/Silkscreen-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Silkscreen-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/SmoochSans-Medium.ttf
+- path: skills/poster-design/assets/fonts/SmoochSans-Medium.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/SmoochSans-Medium.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/SmoochSans-OFL.txt
+- path: skills/poster-design/assets/fonts/SmoochSans-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/SmoochSans-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Tektur-Medium.ttf
+- path: skills/poster-design/assets/fonts/Tektur-Medium.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Tektur-Medium.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Tektur-OFL.txt
+- path: skills/poster-design/assets/fonts/Tektur-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Tektur-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/Tektur-Regular.ttf
+- path: skills/poster-design/assets/fonts/Tektur-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/Tektur-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/WorkSans-Bold.ttf
+- path: skills/poster-design/assets/fonts/WorkSans-Bold.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/WorkSans-Bold.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/WorkSans-BoldItalic.ttf
+- path: skills/poster-design/assets/fonts/WorkSans-BoldItalic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/WorkSans-BoldItalic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/WorkSans-Italic.ttf
+- path: skills/poster-design/assets/fonts/WorkSans-Italic.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/WorkSans-Italic.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/WorkSans-OFL.txt
+- path: skills/poster-design/assets/fonts/WorkSans-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/WorkSans-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/WorkSans-Regular.ttf
+- path: skills/poster-design/assets/fonts/WorkSans-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/WorkSans-Regular.ttf
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/YoungSerif-OFL.txt
+- path: skills/poster-design/assets/fonts/YoungSerif-OFL.txt
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4
     path: skills/canvas-design/canvas-fonts/YoungSerif-OFL.txt
     license: Apache-2.0
     modification: adapted
-- path: skills/poster-design/canvas-fonts/YoungSerif-Regular.ttf
+- path: skills/poster-design/assets/fonts/YoungSerif-Regular.ttf
   derived_from:
   - source: anthropics/skills
     commit: ca45fc4

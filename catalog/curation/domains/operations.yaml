@@ -1,0 +1,186 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: operations
+artifacts:
+- id: operations/customer-support
+  type: skill
+  capability: 'Use for customer support and success work: answering tickets, writing help-center replies and macros, escalations,
+    onboarding and health checks for accounts, and turning support trends into '
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Customer Service
+  - msitarzewski/agency-agents:agent:Customer Success Manager
+  - msitarzewski/agency-agents:agent:Support Responder
+  recipe:
+    title: Customer support
+    description: 'Use for customer support and success work: answering tickets, writing help-center replies and macros, escalations,
+      onboarding and health checks for accounts, and turning support trends into product feedback.'
+    references:
+      responding.md:
+      - msitarzewski/agency-agents:support/support-support-responder.md
+      service.md:
+      - msitarzewski/agency-agents:specialized/customer-service.md
+      customer-success.md:
+      - msitarzewski/agency-agents:specialized/customer-success-manager.md
+    body: '# Customer support
+
+
+      Resolve the customer''s problem on the first reply when you can, and leave a trail the next person can follow.
+
+
+      ## Each ticket
+
+
+      1. **Understand:** restate the problem in one line; find the account, plan, history and any open incident before replying.
+      Ask only for what you cannot look up.
+
+      2. **Classify:** question, bug, billing, access, feature request or complaint; and urgency (blocked, degraded, inconvenienced).
+
+      3. **Resolve or route:** answer with exact steps and links; if it is a bug, reproduce it and file it with steps, expected
+      and actual behaviour (`workflow:issue-triage`); billing goes to `finance:billing-operations`; security reports go to
+      `security:security-audit` and are never discussed publicly.
+
+      4. **Reply:** plain language, the answer first, one action per step, honest about what you do not know and when they
+      will hear back. Never promise dates or refunds you cannot authorise.
+
+      5. **Close the loop:** confirm resolution, tag the ticket, and update the help-center article or macro if the answer
+      was missing.
+
+
+      ## Patterns
+
+
+      - Repeated questions become help-center articles or macros.
+
+      - Trends (top contact reasons, rising bugs) go to product weekly with counts and example tickets.
+
+      - Accounts at risk (repeated issues, usage drop, negative replies) go to customer success with a short history.
+
+
+      Detailed response playbooks, tone guides, customer-success health checks and onboarding are in the references.'
+- id: operations/people-operations
+  type: skill
+  capability: 'Use for people operations: hiring plans and job descriptions, interview loops, onboarding new staff, training
+    programmes, and managing organisational change.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Change Management Consultant
+  - msitarzewski/agency-agents:agent:Corporate Training Designer
+  - msitarzewski/agency-agents:agent:HR Onboarding
+  - msitarzewski/agency-agents:agent:Recruitment Specialist
+  recipe:
+    title: People operations
+    description: 'Use for people operations: hiring plans and job descriptions, interview loops, onboarding new staff, training
+      programmes, and managing organisational change.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:specialized/hr-onboarding.md
+      recruiting.md:
+      - msitarzewski/agency-agents:specialized/recruitment-specialist.md
+      training.md:
+      - msitarzewski/agency-agents:specialized/corporate-training-designer.md
+      change-management.md:
+      - msitarzewski/agency-agents:specialized/change-management-consultant.md
+    body: '# People operations
+
+
+      Hire, onboard and grow people with clear, fair and repeatable processes.
+
+
+      ## 1. Hiring
+
+      Role scorecard (outcomes, competencies, level) before the job description; structured interview loop where each interviewer
+      owns specific competencies with written rubrics; debrief on evidence, not impressions.
+
+
+      ## 2. Onboarding
+
+      A 30-60-90 day plan: accounts and equipment ready on day one, a buddy, the first meaningful task in week one, explicit
+      expectations and check-ins.
+
+
+      ## 3. Training
+
+      Learning objectives, the format that fits (docs, workshop, pairing), practice, and a check that the skill transferred.
+
+
+      ## 4. Change
+
+      For organisational change: why, what changes for whom, timeline, communication plan by audience, and how feedback is
+      collected and answered.
+
+
+      Employment-law questions need a qualified professional in the relevant jurisdiction.'
+- id: operations/project-management
+  type: skill
+  capability: 'Use when running a project or programme: plans and milestones, status tracking, risks and dependencies, stakeholder
+    updates, meeting notes and action items, and keeping a Jira or tracker wor'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:jira
+  - affaan-m/ECC:skill:jira-integration
+  - affaan-m/ECC:skill:project-flow-ops
+  - msitarzewski/agency-agents:agent:Automation Governance Architect
+  - msitarzewski/agency-agents:agent:Chief of Staff
+  - msitarzewski/agency-agents:agent:IT Service Manager
+  - msitarzewski/agency-agents:agent:Jira Workflow Steward
+  - msitarzewski/agency-agents:agent:Meeting Notes Specialist
+  - msitarzewski/agency-agents:agent:Operations Manager
+  - msitarzewski/agency-agents:agent:Project Shepherd
+  - msitarzewski/agency-agents:agent:Senior Project Manager
+  - msitarzewski/agency-agents:agent:Studio Operations
+  - msitarzewski/agency-agents:agent:Studio Producer
+  - msitarzewski/agency-agents:agent:Workflow Architect
+  - msitarzewski/agency-agents:agent:Workflow Optimizer
+  recipe:
+    title: Project management
+    description: 'Use when running a project or programme: plans and milestones, status tracking, risks and dependencies,
+      stakeholder updates, meeting notes and action items, and keeping a Jira or tracker workflow healthy.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:project-management/project-manager-senior.md
+      shepherding.md:
+      - msitarzewski/agency-agents:project-management/project-management-project-shepherd.md
+      production.md:
+      - msitarzewski/agency-agents:project-management/project-management-studio-producer.md
+      meeting-notes.md:
+      - msitarzewski/agency-agents:project-management/project-management-meeting-notes-specialist.md
+      jira.md:
+      - msitarzewski/agency-agents:project-management/project-management-jira-workflow-steward.md
+      flow-operations.md:
+      - s:project-flow-ops
+    body: '# Project management
+
+
+      Deliver the agreed scope on time by making the plan, the risks and the next steps visible to everyone.
+
+
+      ## 1. Define
+
+      Goal, scope and out of scope, success criteria, stakeholders and the decision maker, constraints and deadline. Get the
+      definition agreed in writing.
+
+
+      ## 2. Plan
+
+      Break the work into milestones and tasks with owners and estimates; find the dependencies and the critical path; put
+      buffers where uncertainty is highest. In a software repository, prefer `workflow:issue-breakdown` for the tasks.
+
+
+      ## 3. Manage risks
+
+      Risk log with likelihood, impact, owner and mitigation; review it every week.
+
+
+      ## 4. Run the cadence
+
+      Short status updates (done, next, blocked, decisions needed), meeting notes with decisions and action items, and a tracker
+      that reflects reality.
+
+
+      ## 5. Close
+
+      Confirm acceptance, hand over, and write a short retrospective: what worked, what to change.'

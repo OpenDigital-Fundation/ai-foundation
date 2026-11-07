@@ -4,7 +4,7 @@
 - **Status:** em implementação (Onda 2)
 - **Fronteira:** Git/GitHub, CI/CD, containers, deploy, observabilidade, SRE, incidentes.
 
-## Resultado (gerado por `tools.curation.bundle` a partir de [`bundles/data-platform.yaml`](../../../../catalog/decisions/bundles/data-platform.yaml))
+## Resultado (gerado por `tools.curation.bundle` a partir de [manifesto editorial](../../../../catalog/curation/domains/platform.yaml))
 
 | Artefato | Base | Referências |
 |---|---|---|

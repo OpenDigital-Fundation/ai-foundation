@@ -1,0 +1,123 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: sales
+artifacts:
+- id: sales/deal-strategy
+  type: skill
+  capability: 'Use when working an active sales opportunity: discovery calls, qualification, mapping stakeholders, technical
+    sales and demos, proposals, handling objections, pipeline reviews and forecastin'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Account Strategist
+  - msitarzewski/agency-agents:agent:Deal Strategist
+  - msitarzewski/agency-agents:agent:Discovery Coach
+  - msitarzewski/agency-agents:agent:Pipeline Analyst
+  - msitarzewski/agency-agents:agent:Proposal Strategist
+  - msitarzewski/agency-agents:agent:Sales Coach
+  - msitarzewski/agency-agents:agent:Sales Engineer
+  recipe:
+    title: Deal strategy
+    description: 'Use when working an active sales opportunity: discovery calls, qualification, mapping stakeholders, technical
+      sales and demos, proposals, handling objections, pipeline reviews and forecasting, and coaching reps.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:sales/sales-deal-strategist.md
+      discovery.md:
+      - msitarzewski/agency-agents:sales/sales-discovery-coach.md
+      proposals.md:
+      - msitarzewski/agency-agents:sales/sales-proposal-strategist.md
+      sales-engineering.md:
+      - msitarzewski/agency-agents:sales/sales-engineer.md
+      accounts.md:
+      - msitarzewski/agency-agents:sales/sales-account-strategist.md
+      pipeline.md:
+      - msitarzewski/agency-agents:sales/sales-pipeline-analyst.md
+      coaching.md:
+      - msitarzewski/agency-agents:sales/sales-coach.md
+    body: '# Deal strategy
+
+
+      Move a real opportunity forward with evidence about the buyer, not hope.
+
+
+      ## 1. Qualify
+
+      Use a framework the team shares (MEDDICC or similar): metrics, economic buyer, decision criteria and process, paper
+      process, identified pain, champion, competition. Mark each as known, assumed or unknown.
+
+
+      ## 2. Prepare each call
+
+      Goal of the call, what you need to learn, hypotheses about the pain, questions in order, and the next step you will
+      ask for. Research the account and attendees first.
+
+
+      ## 3. Map the stakeholders
+
+      Who decides, who influences, who blocks, and what each needs to say yes. Plan how to reach the economic buyer.
+
+
+      ## 4. Advance
+
+      Tailored demo or technical validation against their criteria; a proposal that restates their problem, the outcome, the
+      plan and the price; objections answered with evidence.
+
+
+      ## 5. Inspect the pipeline
+
+      Each deal has a dated next step and a stage backed by evidence. Forecast by stage exit criteria; flag stalled deals
+      and what would unblock them.'
+- id: sales/investor-relations
+  type: skill
+  capability: 'Use when raising money: pitch decks, one-pagers, financial narratives, data rooms, and investor outreach and
+    follow-up.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:investor-materials
+  - affaan-m/ECC:skill:investor-outreach
+  recipe:
+    title: Investor relations
+    description: 'Use when raising money: pitch decks, one-pagers, financial narratives, data rooms, and investor outreach
+      and follow-up.'
+    base: s:investor-materials
+    references:
+      outreach.md:
+      - s:investor-outreach
+- id: sales/prospecting
+  type: skill
+  capability: 'Use when finding and reaching new customers: defining the ideal customer profile, building and scoring lead
+    lists, finding warm paths, and writing personalised outbound sequences.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:enrichment-agent
+  - affaan-m/ECC:agent:marketing-agent
+  - affaan-m/ECC:agent:mutual-mapper
+  - affaan-m/ECC:agent:outreach-drafter
+  - affaan-m/ECC:agent:signal-scorer
+  - affaan-m/ECC:skill:connections-optimizer
+  - affaan-m/ECC:skill:lead-intelligence
+  - affaan-m/ECC:skill:social-graph-ranker
+  - msitarzewski/agency-agents:agent:Offer & Lead Gen Strategist
+  - msitarzewski/agency-agents:agent:Outbound Strategist
+  - msitarzewski/agency-agents:agent:Sales Outreach
+  recipe:
+    title: Prospecting
+    description: 'Use when finding and reaching new customers: defining the ideal customer profile, building and scoring lead
+      lists, finding warm paths, and writing personalised outbound sequences.'
+    base: s:lead-intelligence
+    references:
+      outbound.md:
+      - msitarzewski/agency-agents:sales/sales-outbound-strategist.md
+      outreach.md:
+      - msitarzewski/agency-agents:specialized/sales-outreach.md
+      offers.md:
+      - msitarzewski/agency-agents:sales/sales-offer-lead-gen-strategist.md
+      signal-scoring.md:
+      - a:signal-scorer
+      warm-paths.md:
+      - a:mutual-mapper
+      drafting.md:
+      - a:outreach-drafter

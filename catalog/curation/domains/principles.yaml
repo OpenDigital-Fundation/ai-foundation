@@ -1,0 +1,35 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: principles
+artifacts:
+- id: principles/coding-discipline
+  type: skill
+  capability: Make the smallest complete change, surface assumptions, keep diffs surgical and define a verifiable check.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - DietrichGebert/ponytail:command:ponytail
+  - DietrichGebert/ponytail:skill:ponytail
+  - affaan-m/ECC:skill:coding-standards
+  - affaan-m/ECC:skill:inherit-legacy-style
+  - msitarzewski/agency-agents:agent:Minimal Change Engineer
+  - msitarzewski/agency-agents:agent:Senior Developer
+  - multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines
+provenance:
+- path: skills/coding-discipline/SKILL.md
+  derived_from:
+  - source: DietrichGebert/ponytail
+    commit: 96608e0
+    path: skills/ponytail/SKILL.md
+    license: MIT
+    modification: base
+  - source: multica-ai/andrej-karpathy-skills
+    commit: 2c60614
+    path: CLAUDE.md
+    license: MIT
+    modification: merged-section
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-minimal-change-engineer.md
+    license: MIT
+    modification: merged-section
