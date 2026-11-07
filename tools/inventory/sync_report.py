@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -17,6 +19,17 @@ import yaml
 
 from tools.inventory.build import build
 from tools.inventory.fetch import fetch
+
+
+SAFE = re.compile(r"[A-Za-z0-9 ._/&()+:-]{1,200}")
+
+
+def safe(value: str) -> str:
+    """Upstream names end up in a GitHub issue: keep a strict charset, neutralise @mentions, else show a hash."""
+    value = value.replace("@", "(at)")
+    if SAFE.fullmatch(value):
+        return f"`{value}`"
+    return f"`sha256:{hashlib.sha256(value.encode()).hexdigest()[:16]}` (name withheld: unexpected characters)"
 
 
 def remote_head(url: str) -> str:
@@ -52,13 +65,13 @@ def main(argv: list[str] | None = None) -> int:
         build(work / "sources", head_lock, head_csv, work / "reference-hashes.head.txt")
         old, new = rows(root / "docs/specs/foundation/source-curation/inventory.csv"), rows(head_csv)
         moved_ids = {m[0] for m in moved}
-        lines += ["| Source | Pinned | HEAD |", "|---|---|---|"] + [f"| {i} | `{a[:7]}` | `{b[:7]}` |" for i, a, b in moved] + [""]
+        lines += ["| Source | Pinned | HEAD |", "|---|---|---|"] + [f"| {safe(i)} | `{a[:7]}` | `{b[:7]}` |" for i, a, b in moved] + [""]
         added = sorted(k for k in new if k not in old)
         removed = sorted(k for k in old if k not in new and k.split(":")[0] in moved_ids)
         changed = sorted(k for k in new if k in old and new[k]["description"] != old[k]["description"])
         for title, keys in (("New upstream artifacts (need a decision)", added), ("Removed upstream", removed),
                             ("Changed description", changed)):
-            lines += [f"## {title} ({len(keys)})", ""] + [f"- `{k}`" for k in keys[:200]] + [""]
+            lines += [f"## {title} ({len(keys)})", ""] + [f"- {safe(k)}" for k in keys[:200]] + [""]
         # Upstream files this catalog derives from (PROVENANCE.yaml) that changed between pinned and HEAD.
         pinned = {i: a for i, a, _ in moved}
         derived: dict[str, set[str]] = {}
@@ -74,7 +87,7 @@ def main(argv: list[str] | None = None) -> int:
             names = subprocess.run(["git", "-C", str(repo), "diff", "--name-only", old_commit, "HEAD"],
                                    capture_output=True, text=True, check=True).stdout.split()
             touched += sorted(f"{sid}:{n}" for n in names if n in derived.get(sid, set()))
-        lines += [f"## Upstream files we derive from that changed ({len(touched)})", ""] + [f"- `{k}`" for k in touched] + [""]
+        lines += [f"## Upstream files we derive from that changed ({len(touched)})", ""] + [f"- {safe(k)}" for k in touched] + [""]
         lines += ["Next: review, bump `catalog/sources.lock.yaml`, regenerate the inventory and decide every new key; "
                   "for changed derived files, compare upstream with ours and port what improves them."]
     text = "\n".join(lines) + "\n"
