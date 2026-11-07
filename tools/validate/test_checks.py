@@ -17,7 +17,7 @@ TDD_PARAPHRASE = ("Use when implementing a feature or a bugfix, before writing a
 @pytest.fixture
 def repo(tmp_path: Path) -> Path:
     """A minimal repository: the real catalog contracts and domain manifests, but no content."""
-    shutil.copytree(REPO / "catalog", tmp_path / "catalog", ignore=shutil.ignore_patterns("decisions"))
+    shutil.copytree(REPO / "catalog", tmp_path / "catalog", ignore=shutil.ignore_patterns("decisions", "taxonomy", "facets.yaml", "contributions.yaml", "overrides"))
     (tmp_path / "catalog/catalog.yaml").write_text("version: 1\nartifacts: []\n")
     (tmp_path / "catalog/exclusions.yaml").write_text("version: 1\nexcluded: []\n")
     for manifest in (REPO / "domains").glob("*/.claude-plugin/plugin.json"):

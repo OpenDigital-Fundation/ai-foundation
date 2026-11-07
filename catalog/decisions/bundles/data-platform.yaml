@@ -102,6 +102,12 @@ artifacts:
 
       Run formatting, type checks and fast tests before each commit with a pre-commit framework; keep the slow suite in CI. Setup steps are in the pre-commit reference.
 
+
+      ## Stacked pull requests
+
+
+      For large changes split into a chain of small, dependent PRs, see `references/stacked-pull-requests.md`.
+
       '
     references:
       branching-and-history.md:
@@ -228,3 +234,14 @@ artifacts:
       - a:e2e-runner
       windows-desktop.md:
       - s:windows-desktop-e2e
+      playwright-overview.md:
+      - currents-dev/playwright-best-practices-skill:playwright-best-practices/SKILL.md
+    reference_dirs:
+      playwright-advanced: currents-dev/playwright-best-practices-skill:playwright-best-practices/advanced
+      playwright-architecture: currents-dev/playwright-best-practices-skill:playwright-best-practices/architecture
+      playwright-browser-apis: currents-dev/playwright-best-practices-skill:playwright-best-practices/browser-apis
+      playwright-core: currents-dev/playwright-best-practices-skill:playwright-best-practices/core
+      playwright-debugging: currents-dev/playwright-best-practices-skill:playwright-best-practices/debugging
+      playwright-frameworks: currents-dev/playwright-best-practices-skill:playwright-best-practices/frameworks
+      playwright-infrastructure-ci-cd: currents-dev/playwright-best-practices-skill:playwright-best-practices/infrastructure-ci-cd
+      playwright-testing-patterns: currents-dev/playwright-best-practices-skill:playwright-best-practices/testing-patterns

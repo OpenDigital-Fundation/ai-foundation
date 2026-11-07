@@ -36,7 +36,7 @@
 - {dest: domains/code-quality/skills/code-review/references/smell-baseline.md, source: mattpocock/skills, src: skills/engineering/code-review/SKILL.md}
 - {dest: domains/code-quality/agents/code-reviewer.md, source: obra/superpowers, src: skills/requesting-code-review/code-reviewer.md}
 - {dest: domains/code-quality/skills/receiving-code-review, source: obra/superpowers, src: skills/receiving-code-review}
-- {dest: domains/code-quality/skills/codebase-audit, source: DietrichGebert/ponytail, src: skills/ponytail-audit}
+- {dest: domains/code-quality/skills/codebase-audit/references/quick-audit.md, source: DietrichGebert/ponytail, src: skills/ponytail-audit/SKILL.md}
 - {dest: domains/code-quality/skills/debt-ledger, source: DietrichGebert/ponytail, src: skills/ponytail-debt}
 - {dest: domains/agent-engineering/skills/parallel-agents, source: obra/superpowers, src: skills/dispatching-parallel-agents}
 - {dest: domains/architecture/skills/domain-modeling, source: mattpocock/skills, src: skills/engineering/domain-modeling}
@@ -66,8 +66,5 @@
 - {dest: domains/ui/skills/design-system, source: nextlevelbuilder/ui-ux-pro-max-skill, src: .claude/skills/ui-ux-pro-max}
 - {dest: domains/ui/skills/design-system/references/token-architecture.md, source: nextlevelbuilder/ui-ux-pro-max-skill, src: .claude/skills/design-system/SKILL.md}
 - {dest: domains/ui/skills/design-system/references/extract-from-codebase.md, source: affaan-m/ECC, src: skills/design-system/SKILL.md}
-- {dest: domains/accessibility/skills/wcag-accessibility, source: affaan-m/ECC, src: skills/accessibility,
-   files: {references/web-react.md: skills/frontend-a11y/SKILL.md, references/wcag-checklist.md: agents/a11y-architect.md}}
-- {dest: domains/accessibility/skills/wcag-accessibility/references/audit-method.md, source: msitarzewski/agency-agents, src: testing/testing-accessibility-auditor.md}
 - {dest: domains/ux/skills/user-research/references/research-playbook.md, source: msitarzewski/agency-agents, src: design/design-ux-researcher.md}
 - {dest: domains/ux/skills/usability-review/references/persona-walkthrough.md, source: msitarzewski/agency-agents, src: design/design-persona-walkthrough.md}

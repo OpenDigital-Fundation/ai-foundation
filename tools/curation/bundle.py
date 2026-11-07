@@ -12,6 +12,7 @@ bundle file:
       body: |                            # write the body inline (original procedure)
         ...
       references: {<file>.md: [entries...]}
+      reference_dirs: {<name>: "<owner>/<repo>:<dir>"}  # copy a whole upstream folder to references/<name>/
       supersedes: [extra inventory keys]  # in addition to every entry used
       remove: [regex, ...]               # passages to cut from the body (source-internal content)
       append: |                          # text added at the end of SKILL.md (local notes, safety caveats)
@@ -59,6 +60,9 @@ def build(root: Path, sources: Path, spec: dict) -> None:
         if a.get("base_dir"):
             src, path = a["base_dir"].split(":", 1)
             keys += [k for (s, kind, n), p in idx.items() if s == src and p == f"{path}/SKILL.md" for k in [f"{s}:{kind}:{n}"]]
+        for spec_dir in (a.get("reference_dirs") or {}).values():
+            src, path = spec_dir.split(":", 1)
+            keys += [f"{s}:{kind}:{n}" for (s, kind, n), p in idx.items() if s == src and (p == path or p.startswith(path.rstrip("/") + "/"))]
         keys += a.get("supersedes", [])
         artifacts.append({"id": aid, "type": a.get("type", "skill"), "capability": a.get("capability") or a["description"][:190],
                           "supersedes": sorted({k for k in keys if k})})
@@ -128,6 +132,19 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 titles = [x for x in dict.fromkeys(titles) if x][:4]
                 note = "covers " + "; ".join(titles) if titles else ""
             ref_lines.append(f"- [`references/{rel}`](references/{rel})" + (f" — {note}" if note else ""))
+        for dname, spec_dir in (a.get("reference_dirs") or {}).items():
+            src, path = spec_dir.split(":", 1)
+            srcdir = sources / src.replace("/", "_") / path
+            dest = d / "references" / dname
+            shutil.copytree(srcdir, dest, ignore=shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests"))
+            for f in sorted(x for x in dest.rglob("*") if x.is_file()):
+                if f.suffix in {".md", ".txt"}:
+                    f.write_text(rw(f.read_text(encoding="utf-8", errors="ignore")), encoding="utf-8")
+                prov.append({"path": f"skills/{name}/references/{dname}/{f.relative_to(dest).as_posix()}",
+                             "derived_from": [{"source": src, "commit": lock[src]["commit"][:7], "path": f"{path}/{f.relative_to(dest).as_posix()}",
+                                               "license": lock[src]["license"], "modification": "adapted"}]})
+            note = (a.get("reference_notes") or {}).get(dname, "")
+            ref_lines.append(f"- `references/{dname}/`" + (f" — {note}" if note else "") )
         fm = ["---", f"name: {name}", f"description: {json.dumps(a['description'])}", "license: MIT",
               "metadata:", f"  domain: {domain}", "  status: experimental"]
         if a.get("line_budget_exception"):

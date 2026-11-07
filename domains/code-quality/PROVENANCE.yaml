@@ -31,7 +31,7 @@ files:
     path: skills/engineering/code-review/SKILL.md
     license: MIT
     modification: adapted
-- path: skills/codebase-audit/SKILL.md
+- path: skills/codebase-audit/references/quick-audit.md
   derived_from:
   - source: DietrichGebert/ponytail
     commit: 96608e0

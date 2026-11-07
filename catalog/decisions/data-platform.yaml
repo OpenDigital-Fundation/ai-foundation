@@ -73,3 +73,4 @@ artifacts:
   - affaan-m/ECC:skill:e2e-testing
   - affaan-m/ECC:skill:windows-desktop-e2e
   - anthropics/skills:skill:webapp-testing
+  - currents-dev/playwright-best-practices-skill:skill:playwright-best-practices

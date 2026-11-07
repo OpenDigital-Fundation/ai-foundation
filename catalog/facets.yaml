@@ -1,9 +1,56 @@
 # Facets per artifact (see docs/adr/foundation/faceted-classification.md). IDs come from catalog/taxonomy/*.yaml.
 version: 1
 artifacts:
+  accessibility/accessibility-audit:
+    knowledge:
+    - design
+    - software-engineering
+    - law
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - technology
+    - government
+    capabilities:
+    - audit
+    - evaluate
+    - validate
+    multidisciplinary:
+    - design-systems
+    - govtech
+  accessibility/assistive-technology-testing:
+    knowledge:
+    - software-engineering
+    - design
+    capabilities:
+    - test
+    - evaluate
+    technology:
+    - skills-reusable-capabilities
+    - browser-computer-use
+    industries:
+    - technology
+    - government
+  accessibility/document-accessibility:
+    knowledge:
+    - design
+    - writing-publishing
+    - law
+    capabilities:
+    - audit
+    - transform
+    - validate
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - government
+    - education
+    - services
   accessibility/wcag-accessibility:
     capabilities:
     - audit
+    - code
+    - review
     - validate
     industries:
     - technology
@@ -719,6 +766,15 @@ artifacts:
     - computer-science
     technology:
     - skills-reusable-capabilities
+  languages/external-tools:
+    knowledge:
+    - software-engineering
+    capabilities:
+    - retrieve
+    technology:
+    - tools-mcp-integrations
+    industries:
+    - technology
   languages/go:
     capabilities:
     - code

@@ -648,6 +648,120 @@ excluded:
 - key: "anthropics/skills:skill:web-artifacts-builder"
   reason: vendor-specific
   note: Builds claude.ai artifacts specifically.
+- key: "Community-Access/accessibility-agents:hook:antigravity.hooks"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:hook:claude.hooks"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:hook:codex.hooks"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:hook:copilot.hooks"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:hook:gemini.hooks"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:hook:hooks"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:mcp:mcp"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:mcp:package"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:mcp:package-lock"
+  reason: source-internal
+  note: Bound to the source's own runtime and MCP server.
+- key: "Community-Access/accessibility-agents:skill:a11y-tool-builder"
+  reason: out-of-scope
+- key: "Community-Access/accessibility-agents:skill:actions-manager"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:analytics"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:contributions-hub"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:daily-briefing"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:developer-hub"
+  reason: out-of-scope
+- key: "Community-Access/accessibility-agents:skill:github-hub"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:insiders-a11y-tracker"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:kb-github-analytics-scoring"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:kb-github-scanning"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:kb-github-shared-instructions"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:kb-github-workflow-standards"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:kb-python-development"
+  reason: out-of-scope
+- key: "Community-Access/accessibility-agents:skill:notifications-manager"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:nvda-addon-specialist"
+  reason: out-of-scope
+- key: "Community-Access/accessibility-agents:skill:python-specialist"
+  reason: out-of-scope
+- key: "Community-Access/accessibility-agents:skill:release-manager"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:repo-admin"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:repo-manager"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:security-dashboard"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:team-manager"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:template-builder"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:wiki-manager"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "Community-Access/accessibility-agents:skill:wxpython-specialist"
+  reason: out-of-scope
+- key: "danicat/godoctor:skill:godoctor"
+  reason: vendor-specific
+  note: Referenced as an external tool in languages/external-tools.
 - key: "DietrichGebert/ponytail:command:ponytail-gain"
   reason: source-internal
 - key: "DietrichGebert/ponytail:command:ponytail-help"
@@ -739,6 +853,24 @@ excluded:
 - key: "mattpocock/skills:skill:writing-shape"
   reason: low-quality
   note: Marked in-progress upstream.
+- key: "millionco/react-doctor:rule:react-builtins/__upstream-fixtures__/README"
+  reason: license
+  note: Referenced as an external tool in languages/external-tools.
+- key: "millionco/react-doctor:rule:state-and-effects/effect/SOURCE"
+  reason: license
+  note: Referenced as an external tool in languages/external-tools.
+- key: "millionco/react-doctor:skill:improve-react"
+  reason: license
+  note: Referenced as an external tool in languages/external-tools.
+- key: "millionco/react-doctor:skill:improve-threejs"
+  reason: license
+  note: Referenced as an external tool in languages/external-tools.
+- key: "millionco/react-doctor:skill:performance"
+  reason: license
+  note: Referenced as an external tool in languages/external-tools.
+- key: "millionco/react-doctor:skill:react-doctor"
+  reason: license
+  note: Referenced as an external tool in languages/external-tools.
 - key: "msitarzewski/agency-agents:agent:3D & Scene Developer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Aging Parent Care Companion"
@@ -1008,3 +1140,15 @@ excluded:
 - key: "SecurityStandards/agent-pentester:command:review"
   reason: source-internal
   note: Commands of the pentester product itself.
+- key: "vercel-labs/agent-skills:skill:deploy-to-vercel"
+  reason: vendor-specific
+- key: "vercel-labs/agent-skills:skill:vercel-cli-with-tokens"
+  reason: vendor-specific
+- key: "vercel-labs/agent-skills:skill:vercel-optimize"
+  reason: vendor-specific
+- key: "vercel-labs/agent-skills:skill:web-design-guidelines"
+  reason: license
+  note: No licence declared; linked from languages/external-tools.
+- key: "vercel-labs/agent-skills:skill:writing-guidelines"
+  reason: license
+  note: No licence declared.

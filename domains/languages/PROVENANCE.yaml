@@ -901,6 +901,11 @@ files:
     modification: adapted
 - path: skills/typescript/references/frameworks/react-native.md
   derived_from:
+  - source: vercel-labs/agent-skills
+    commit: 1a2c79d
+    path: skills/react-native-skills/SKILL.md
+    license: MIT
+    modification: adapted
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/react-native/coding-style.md
@@ -938,6 +943,21 @@ files:
     modification: adapted
 - path: skills/typescript/references/frameworks/react.md
   derived_from:
+  - source: vercel-labs/agent-skills
+    commit: 1a2c79d
+    path: skills/react-best-practices/AGENTS.md
+    license: MIT
+    modification: adapted
+  - source: vercel-labs/agent-skills
+    commit: 1a2c79d
+    path: skills/composition-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: vercel-labs/agent-skills
+    commit: 1a2c79d
+    path: skills/react-view-transitions/SKILL.md
+    license: MIT
+    modification: adapted
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/react/coding-style.md

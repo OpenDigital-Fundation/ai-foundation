@@ -1,0 +1,44 @@
+# Original OpenDigital contributions (not from an upstream repository). Rendered in docs/SOURCES.md.
+version: 1
+contributions:
+- id: revisor-de-codigo
+  title: Multi-agent code review (revisor de código)
+  authors:
+  - Matheus Breguêz
+  - Danilo Ribeiro
+  language: pt-BR
+  artifacts:
+  - code-quality/codebase-audit
+  how: Translated to English and generalised; became the orchestrator, specialists, finding format and report template of codebase-audit.
+- id: issue-routing-triage
+  title: Heuristic issue triage and multi-board routing
+  authors:
+  - Matheus Breguêz
+  language: pt-BR
+  artifacts:
+  - workflow/issue-triage
+  how: 'Generalised: client organisation, project IDs and repositories replaced by placeholders; scripts not copied.'
+- id: stacked-pull-requests
+  title: Stacked pull requests
+  authors:
+  - Matheus Breguêz
+  language: pt-BR
+  artifacts:
+  - platform/git-workflow
+  how: Generalised and translated; organisation-specific policy removed.
+- id: superpower
+  title: Specification and decision-question workflow (Codex)
+  authors:
+  - Matheus Breguêz
+  language: en
+  artifacts:
+  - workflow/brainstorming
+  how: Question rules, spec standards and issue shape added as a reference.
+- id: handoff
+  title: Handoff document
+  authors:
+  - Matheus Breguêz
+  language: pt-BR
+  artifacts:
+  - workflow/handoff
+  how: Base of workflow:handoff, translated and generalised.

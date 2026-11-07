@@ -1,17 +1,1655 @@
 version: 1
 files:
-- path: skills/wcag-accessibility/SKILL.md
+- path: skills/accessibility-audit/SKILL.md
   derived_from:
-  - source: affaan-m/ECC
-    commit: b38be6a
-    path: skills/accessibility/SKILL.md
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/SKILL.md
     license: MIT
     modification: adapted
-- path: skills/wcag-accessibility/references/audit-method.md
+- path: skills/accessibility-audit/agents/openai.yaml
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/agents/openai.yaml
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/references/sources.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/references/sources.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/schemas/findings.schema.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/schemas/findings.schema.json
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/schemas/wcag22-criteria.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/schemas/wcag22-criteria.json
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/scripts/measure-context.mjs
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/scripts/measure-context.mjs
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/scripts/merge-findings.mjs
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/scripts/merge-findings.mjs
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/scripts/render-report.mjs
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/scripts/render-report.mjs
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/a11y-core/scripts/test-findings-contract.mjs
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/a11y-core/scripts/test-findings-contract.mjs
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/accessibility-regression-detector/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/accessibility-regression-detector/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/accessibility-statement/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/accessibility-statement/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/audit-method.md
   derived_from:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: testing/testing-accessibility-auditor.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/ci-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/ci-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/compliance-mapping/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/compliance-mapping/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/cross-page-analyzer/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/cross-page-analyzer/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/delegation-and-scan-context.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/delegation-and-scan-context.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/dispatch-matrix.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/dispatch-matrix.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-ci-integration/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-ci-integration/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-github-a11y-scanner/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-github-a11y-scanner/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-help-url-reference/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-help-url-reference/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-legal-compliance-mapping/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-legal-compliance-mapping/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-lighthouse-scanner/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-lighthouse-scanner/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-open-source-accessibility-framework/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-open-source-accessibility-framework/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-report-generation/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-report-generation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-severity-mapping/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-severity-mapping/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-web-scanning/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-web-scanning/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/kb-web-severity-scoring/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-web-severity-scoring/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/lighthouse-bridge/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/lighthouse-bridge/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/examples/sample-output.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/examples/sample-output.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/references/action-01.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/references/action-01.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/references/action-02.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/references/action-02.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/references/action-03.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/references/action-03.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/references/action-04.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/references/action-04.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/references/action-05.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/references/action-05.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/references/action-06.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/references/action-06.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-community/references/principles.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-community/references/principles.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-foundational/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-foundational/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-foundational/examples/sample-output.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-foundational/examples/sample-output.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-foundational/references/action-01.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-foundational/references/action-01.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-foundational/references/action-02.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-foundational/references/action-02.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/examples/sample-output.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/examples/sample-output.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/references/action-01.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/references/action-01.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/references/action-02.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/references/action-02.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/references/action-03.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/references/action-03.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/references/action-04.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/references/action-04.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/references/action-05.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/references/action-05.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-testing/references/action-06.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-testing/references/action-06.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/examples/sample-output.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/examples/sample-output.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-01.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-01.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-02.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-02.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-03.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-03.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-04.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-04.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-05.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-05.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-06.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-06.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-07.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-07.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-08.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-08.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-09.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-09.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/osaf-workflow/references/action-10.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/osaf-workflow/references/action-10.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/phase-0-discovery.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/phase-0-discovery.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/phase-11-handoffs.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/phase-11-handoffs.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/phase-11-report-template.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/phase-11-report-template.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/phase-12-ci-and-config.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/phase-12-ci-and-config.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/phases-1-8-domain-checks.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/phases-1-8-domain-checks.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/phases-9-10-testing.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/phases-9-10-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/playwright-scanner/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/playwright-scanner/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/playwright-verifier/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/playwright-verifier/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/scanner-bridge/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/scanner-bridge/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/scanner-bridge/references/capabilities.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/scanner-bridge/references/capabilities.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/screenshots-and-scope.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-accessibility-wizard/references/screenshots-and-scope.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/web-csv-reporter/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-csv-reporter/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/web-csv-reporter/references/csv-output-files.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-csv-reporter/references/csv-output-files.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/web-issue-fixer/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-issue-fixer/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/accessibility-audit/references/web-issue-fixer/references/multi-agent-reliability.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-issue-fixer/references/multi-agent-reliability.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/testing-coach/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/agents/openai.yaml
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/testing-coach/agents/openai.yaml
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/automated-testing.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/testing-coach/references/automated-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/desktop-a11y-testing-coach/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/desktop-a11y-testing-coach/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/kb-playwright-testing/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-playwright-testing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/kb-testing-strategy/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-testing-strategy/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/screen-reader-lab/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/screen-reader-lab/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/screen-reader-testing.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/testing-coach/references/screen-reader-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/agents/openai.yaml
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/agents/openai.yaml
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/behavioural-rules.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/references/behavioural-rules.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/cross-document-analyzer/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/cross-document-analyzer/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/dispatch-matrix.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/references/dispatch-matrix.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/document-csv-reporter/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-csv-reporter/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/document-csv-reporter/references/csv-output-files.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-csv-reporter/references/csv-output-files.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/document-csv-reporter/references/microsoft-office-help-url-patterns.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-csv-reporter/references/microsoft-office-help-url-patterns.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/document-inventory/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-inventory/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/epub-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/epub-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/epub-accessibility/references/epub-accessibility-rule-set.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/epub-accessibility/references/epub-accessibility-rule-set.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/epub-scan-config/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/epub-scan-config/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/excel-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/excel-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/excel-accessibility/references/complete-rule-set.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/excel-accessibility/references/complete-rule-set.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/excel-accessibility/references/structured-output-for-sub-agent-use.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/excel-accessibility/references/structured-output-for-sub-agent-use.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/kb-document-scanning/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-document-scanning/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/kb-markdown-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-markdown-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/kb-office-remediation/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-office-remediation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-a11y-assistant/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-a11y-assistant/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-a11y-assistant/references/dispatch-matrix.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-a11y-assistant/references/dispatch-matrix.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-a11y-assistant/references/excellence-guidelines.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-a11y-assistant/references/excellence-guidelines.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-a11y-assistant/references/phase-0-discovery.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-a11y-assistant/references/phase-0-discovery.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-a11y-assistant/references/phase-3-review-gate.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-a11y-assistant/references/phase-3-review-gate.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-a11y-assistant/references/phases-1-3-scanning.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-a11y-assistant/references/phases-1-3-scanning.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-csv-reporter/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-csv-reporter/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-csv-reporter/references/csv-output-files.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-csv-reporter/references/csv-output-files.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-fixer/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-fixer/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-fixer/references/fix-rules.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-fixer/references/fix-rules.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-scanner/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-scanner/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-scanner/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-scanner/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-scanner/references/domain-4-table-accessibility-wcag-1-3-1.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-scanner/references/domain-4-table-accessibility-wcag-1-3-1.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-scanner/references/domain-8-anchor-link-validation-wcag-2-4-4.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-scanner/references/domain-8-anchor-link-validation-wcag-2-4-4.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-scanner/references/input.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-scanner/references/input.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown-scanner/references/multi-agent-reliability.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/markdown-scanner/references/multi-agent-reliability.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/multi-agent-reliability.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/references/multi-agent-reliability.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/office-remediator/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/office-remediator/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/office-scan-config/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/office-scan-config/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/office-scan-config/references/complete-rule-reference.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/office-scan-config/references/complete-rule-reference.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/output-and-behaviour.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/references/output-and-behaviour.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-accessibility/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-accessibility/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-accessibility/references/remediation-guidance.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-accessibility/references/remediation-guidance.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-accessibility/references/rule-layers.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-accessibility/references/rule-layers.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-accessibility/references/structured-output-for-sub-agent-use.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-accessibility/references/structured-output-for-sub-agent-use.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-remediator/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-remediator/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-scan-config/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-scan-config/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/pdf-scan-config/references/complete-rule-reference.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/pdf-scan-config/references/complete-rule-reference.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/phase-4-report-and-export.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/references/phase-4-report-and-export.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/phases-1-3-scanning.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/references/phases-1-3-scanning.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/powerpoint-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/powerpoint-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/powerpoint-accessibility/references/complete-rule-set.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/powerpoint-accessibility/references/complete-rule-set.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/powerpoint-accessibility/references/structured-output-for-sub-agent-use.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/powerpoint-accessibility/references/structured-output-for-sub-agent-use.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/remediation-writing-standard.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/document-accessibility-wizard/references/remediation-writing-standard.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/word-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/word-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/word-accessibility/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/word-accessibility/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/word-accessibility/references/complete-rule-set.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/word-accessibility/references/complete-rule-set.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/word-accessibility/references/structured-output-for-sub-agent-use.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/word-accessibility/references/structured-output-for-sub-agent-use.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/accessibility-lead/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/accessibility-lead/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/accessibility-lead/references/decision-matrix.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/accessibility-lead/references/decision-matrix.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/accessibility-lead/references/dispatch-matrix.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/accessibility-lead/references/dispatch-matrix.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/accessibility-lead/references/reliability.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/accessibility-lead/references/reliability.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/accessibility-lead/references/team-and-coordination.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/accessibility-lead/references/team-and-coordination.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/alt-text-headings/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/alt-text-headings/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/alt-text-headings/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/alt-text-headings/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/alt-text-headings/references/alternative-text-the-rules.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/alt-text-headings/references/alternative-text-the-rules.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/alt-text-headings/references/image-analysis-workflow.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/alt-text-headings/references/image-analysis-workflow.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/alt-text-headings/references/logo-alt-text.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/alt-text-headings/references/logo-alt-text.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/alt-text-headings/references/validation-checklist.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/alt-text-headings/references/validation-checklist.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/alt-text-headings/references/video-and-audio.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/alt-text-headings/references/video-and-audio.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/aria-specialist/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/aria-specialist/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/aria-specialist/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/aria-specialist/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/aria-specialist/references/aria-you-must-use-correctly.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/aria-specialist/references/aria-you-must-use-correctly.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/aria-specialist/references/flex-and-grid-text-runs.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/aria-specialist/references/flex-and-grid-text-runs.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/aria-specialist/references/landmark-and-region-overuse.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/aria-specialist/references/landmark-and-region-overuse.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/cognitive-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/cognitive-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/cognitive-accessibility/references/phase-2-wcag-2-2-success-criteria-assessment.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/cognitive-accessibility/references/phase-2-wcag-2-2-success-criteria-assessment.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/contrast-master/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/contrast-master/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/contrast-master/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/contrast-master/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/contrast-master/references/color-independence.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/contrast-master/references/color-independence.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/contrast-master/references/user-preference-media-queries-prefers.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/contrast-master/references/user-preference-media-queries-prefers.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/contrast-master/references/validation-checklist.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/contrast-master/references/validation-checklist.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/data-visualization-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/data-visualization-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/design-system-auditor/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/design-system-auditor/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/design-system-auditor/references/phase-1-color-token-analysis.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/design-system-auditor/references/phase-1-color-token-analysis.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/desktop-a11y-specialist/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/desktop-a11y-specialist/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/desktop-a11y-specialist/references/accessibility-audit-mode.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/desktop-a11y-specialist/references/accessibility-audit-mode.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/desktop-a11y-specialist/references/qt-accessibility.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/desktop-a11y-specialist/references/qt-accessibility.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/email-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/email-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/references/combobox-autocomplete-pattern.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/references/combobox-autocomplete-pattern.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/references/custom-controls.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/references/custom-controls.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/references/labels-the-foundation.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/references/labels-the-foundation.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/references/multi-step-forms-wizards.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/references/multi-step-forms-wizards.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/references/password-fields.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/references/password-fields.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/references/required-fields.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/references/required-fields.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/forms-specialist/references/validation-checklist.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/forms-specialist/references/validation-checklist.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/i18n-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/i18n-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-accessibility-rules/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-accessibility-rules/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-cognitive-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-cognitive-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-data-visualization-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-data-visualization-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-design-system/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-design-system/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-design-system/references/framework-token-paths.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-design-system/references/framework-token-paths.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-email-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-email-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-framework-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-framework-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-media-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-media-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-mobile-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-mobile-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/agent-terminology.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/agent-terminology.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/aria-patterns.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/aria-patterns.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/css-accessibility.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/css-accessibility.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/document-generation.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/document-generation.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/markdown-accessibility.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/markdown-accessibility.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/multi-agent-reliability.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/multi-agent-reliability.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/powershell-terminal-ops.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/powershell-terminal-ops.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/semantic-html.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/semantic-html.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/testing-accessibility.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/testing-accessibility.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/kb-path-instructions/references/web-accessibility-baseline.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/kb-path-instructions/references/web-accessibility-baseline.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/keyboard-navigator/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/keyboard-navigator/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/keyboard-navigator/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/keyboard-navigator/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/keyboard-navigator/references/arrow-key-patterns.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/keyboard-navigator/references/arrow-key-patterns.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/keyboard-navigator/references/keyboard-shortcut-conflicts.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/keyboard-navigator/references/keyboard-shortcut-conflicts.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/keyboard-navigator/references/structured-output-for-sub-agent-use.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/keyboard-navigator/references/structured-output-for-sub-agent-use.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/keyboard-navigator/references/tab-order.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/keyboard-navigator/references/tab-order.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/link-checker/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/link-checker/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/link-checker/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/link-checker/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/link-checker/references/ambiguous-link-patterns.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/link-checker/references/ambiguous-link-patterns.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/link-checker/references/structured-output-for-sub-agent-use.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/link-checker/references/structured-output-for-sub-agent-use.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/link-checker/references/validation-checklist.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/link-checker/references/validation-checklist.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/live-region-controller/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/live-region-controller/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/live-region-controller/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/live-region-controller/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/live-region-controller/references/politeness-levels.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/live-region-controller/references/politeness-levels.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/media-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/media-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/mobile-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/mobile-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/mobile-accessibility/references/phase-1-react-native-and-expo-auditing.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/mobile-accessibility/references/phase-1-react-native-and-expo-auditing.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/modal-specialist/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/modal-specialist/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/modal-specialist/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/modal-specialist/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/modal-specialist/references/filter-modal-pattern.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/modal-specialist/references/filter-modal-pattern.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/modal-specialist/references/non-negotiable-rules.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/modal-specialist/references/non-negotiable-rules.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/modal-specialist/references/structured-output-for-sub-agent-use.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/modal-specialist/references/structured-output-for-sub-agent-use.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/performance-accessibility/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/performance-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/tables-data-specialist/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/tables-data-specialist/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/tables-data-specialist/examples/findings.json
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/tables-data-specialist/examples/findings.json
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/tables-data-specialist/references/responsive-tables.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/tables-data-specialist/references/responsive-tables.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/tables-data-specialist/references/simple-data-tables.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/tables-data-specialist/references/simple-data-tables.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/tables-data-specialist/references/visual-data-grids-without-semantic-markup.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/tables-data-specialist/references/visual-data-grids-without-semantic-markup.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/text-quality-reviewer/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/text-quality-reviewer/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/text-quality-reviewer/references/detection-rules.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/text-quality-reviewer/references/detection-rules.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/text-quality-reviewer/references/validation-checklist.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/text-quality-reviewer/references/validation-checklist.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/wcag-aaa/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/wcag-aaa/SKILL.md
     license: MIT
     modification: adapted
 - path: skills/wcag-accessibility/references/wcag-checklist.md
@@ -21,10 +1659,45 @@ files:
     path: agents/a11y-architect.md
     license: MIT
     modification: adapted
+- path: skills/wcag-accessibility/references/wcag-guide/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/wcag-guide/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/wcag-guide/references/common-wcag-misconceptions.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/wcag-guide/references/common-wcag-misconceptions.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/wcag-guide/references/complete-wcag-2-2-aa-success-criteria-reference.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/wcag-guide/references/complete-wcag-2-2-aa-success-criteria-reference.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/wcag3-preview/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/wcag3-preview/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/web-component-specialist/SKILL.md
+  derived_from:
+  - source: Community-Access/accessibility-agents
+    commit: f736c87
+    path: skills/web-component-specialist/SKILL.md
+    license: MIT
+    modification: adapted
 - path: skills/wcag-accessibility/references/web-react.md
   derived_from:
   - source: affaan-m/ECC
     commit: b38be6a
-    path: skills/frontend-a11y/SKILL.md
+    path: pi/core/skills/frontend-a11y/SKILL.md
     license: MIT
     modification: adapted

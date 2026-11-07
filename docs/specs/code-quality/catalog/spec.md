@@ -11,7 +11,7 @@
 | `code-review` | skill | superpowers `requesting-code-review` | mattpocock `code-review` (dois eixos, baseline de smells), ponytail `ponytail-review` (formato de achados), ECC `code-review`/`review-pr` |
 | `code-reviewer` | agent | superpowers `code-reviewer.md` | ponytail (prioridades e "caso concreto"), ECC `code-reviewer`, agency *Code Reviewer*; substitui os ~20 revisores por linguagem do ECC, que carregam `languages/<x>/references/review.md` |
 | `receiving-code-review` | skill | superpowers | — |
-| `codebase-audit` | skill | ponytail `ponytail-audit` | — |
+| `codebase-audit` | skill | `revisor-de-codigo` (contribuição OpenDigital de Matheus Breguêz e Danilo Ribeiro, traduzida e generalizada): orquestrador, mapeador, 9 especialistas e verificador cético | ponytail `ponytail-audit` como modo rápido (`references/quick-audit.md`) |
 | `debt-ledger` | skill | ponytail `ponytail-debt` | — |
 
 ## Próximos artefatos (ainda não implementados)

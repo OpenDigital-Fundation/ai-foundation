@@ -297,3 +297,7 @@ workflow:writing-plans and no other skill.
 | "I should explain the process first" | Ask your question. The process shows itself. |
 | "They said 'sounds good' to the idea" | Approval covers what you showed them. A design doc you haven't written isn't approved. |
 | "The spike works, I'll keep building on it" | Keeping it is a new request. Back through the gate. |
+
+## Decision questions
+
+Which questions are worth asking, spec standards and the issue shape: [references/decision-questions.md](references/decision-questions.md).

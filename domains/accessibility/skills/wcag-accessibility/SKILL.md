@@ -1,6 +1,6 @@
 ---
 name: wcag-accessibility
-description: "Use when designing, building, reviewing or auditing interfaces for accessibility on web, iOS or Android: WCAG 2.2 AA, semantic roles and labels, keyboard and focus management, contrast, target size, motion, forms, and screen-reader support. Also use for an accessibility audit or conformance report."
+description: "Use when designing, building or reviewing interfaces for accessibility on web, mobile or desktop: WCAG 2.2 AA (and AAA or WCAG 3 when asked), semantic roles and ARIA, keyboard and focus, forms and errors, dialogs, contrast and colour, live regions, data tables, alt text and headings, cognitive accessibility, internationalisation, charts, email, media and loading states."
 license: MIT
 metadata:
   domain: accessibility
@@ -146,8 +146,42 @@ Switch(
 - `languages:swift` (`references/frameworks/liquid-glass.md`)
 - `languages:swift` (`references/frameworks/swiftui.md`)
 
-## Going deeper
+## References
 
-- React and Next.js patterns (forms, modals, menus, tabs): [references/web-react.md](references/web-react.md)
-- Full WCAG 2.2 checklist and an accessibility decision record template: [references/wcag-checklist.md](references/wcag-checklist.md)
-- Running an audit with assistive technology, and the report format: [references/audit-method.md](references/audit-method.md)
+Load only what the task needs:
+
+- [`references/web-react.md`](references/web-react.md) — covers Frontend Accessibility Patterns
+- [`references/wcag-checklist.md`](references/wcag-checklist.md) — covers ADR-ACC-000 Title of the Accessibility Decision; Status; Context; Decision
+- `references/accessibility-lead/` — orchestrates the specialists below for a UI change
+- `references/aria-specialist/`
+- `references/keyboard-navigator/`
+- `references/forms-specialist/`
+- `references/modal-specialist/`
+- `references/contrast-master/`
+- `references/live-region-controller/`
+- `references/tables-data-specialist/`
+- `references/alt-text-headings/`
+- `references/text-quality-reviewer/`
+- `references/link-checker/`
+- `references/cognitive-accessibility/`
+- `references/mobile-accessibility/`
+- `references/web-component-specialist/`
+- `references/i18n-accessibility/`
+- `references/data-visualization-accessibility/`
+- `references/email-accessibility/`
+- `references/media-accessibility/`
+- `references/performance-accessibility/`
+- `references/desktop-a11y-specialist/`
+- `references/design-system-auditor/`
+- `references/wcag-guide/`
+- `references/wcag-aaa/`
+- `references/wcag3-preview/`
+- `references/kb-path-instructions/` — per-file-type rules (HTML, JSX, Vue, CSS...)
+- `references/kb-framework-accessibility/`
+- `references/kb-accessibility-rules/`
+- `references/kb-mobile-accessibility/`
+- `references/kb-cognitive-accessibility/`
+- `references/kb-design-system/`
+- `references/kb-data-visualization-accessibility/`
+- `references/kb-email-accessibility/`
+- `references/kb-media-accessibility/`

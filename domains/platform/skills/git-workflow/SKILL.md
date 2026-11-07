@@ -29,6 +29,10 @@ Keep history readable and every change reviewable. The repository's own conventi
 
 Run formatting, type checks and fast tests before each commit with a pre-commit framework; keep the slow suite in CI. Setup steps are in the pre-commit reference.
 
+## Stacked pull requests
+
+For large changes split into a chain of small, dependent PRs, see `references/stacked-pull-requests.md`.
+
 ## References
 
 Load only what the task needs:

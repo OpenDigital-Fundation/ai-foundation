@@ -1,10 +1,14 @@
-Part of accessibility:wcag-accessibility: React and Next.js specifics.
+# WCAG accessibility — web react
 
-# Frontend Accessibility Patterns
+Part of `accessibility:wcag-accessibility`.
+
+## Frontend Accessibility Patterns
+
+<!-- source: affaan-m/ECC pi/core/skills/frontend-a11y/SKILL.md -->
 
 Practical accessibility patterns for React and Next.js. Covers the issues most commonly flagged in code review: missing form labels, incorrect ARIA usage, non-semantic interactive elements, and broken keyboard navigation.
 
-## When to Activate
+### When to Activate
 
 - Building or reviewing form components (`<input>`, `<select>`, `<textarea>`)
 - Creating interactive elements (modals, dropdowns, tooltips, tabs)
@@ -14,11 +18,11 @@ Practical accessibility patterns for React and Next.js. Covers the issues most c
 - Receiving accessibility feedback from code review tools (CodeRabbit, ESLint a11y)
 - Building components that must support screen readers
 
-## Form Accessibility
+### Form Accessibility
 
 Missing `htmlFor` / `id` pairing and disconnected error messages are the most common issues flagged in code review.
 
-### Label Connection
+#### Label Connection
 
 ```tsx
 // BAD: label has no connection to input — screen readers cannot associate them
@@ -30,7 +34,7 @@ Missing `htmlFor` / `id` pairing and disconnected error messages are the most co
 <input id="email" type="email" />
 ```
 
-### Required Fields
+#### Required Fields
 
 ```tsx
 // BAD: visual-only asterisk conveys nothing to screen readers
@@ -44,7 +48,7 @@ Missing `htmlFor` / `id` pairing and disconnected error messages are the most co
 <input id="email" type="email" required aria-required="true" />
 ```
 
-### Error Messages
+#### Error Messages
 
 ```tsx
 // BAD: error text exists visually but is not linked to the input
@@ -66,7 +70,7 @@ Missing `htmlFor` / `id` pairing and disconnected error messages are the most co
 )}
 ```
 
-### Complete Accessible Form
+#### Complete Accessible Form
 
 ```tsx
 interface LoginFormProps {
@@ -140,7 +144,7 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
 }
 ```
 
-## Semantic HTML
+### Semantic HTML
 
 Use the element that matches the intent. Screen readers and keyboard users depend on native semantics.
 
@@ -170,11 +174,11 @@ Use the element that matches the intent. Screen readers and keyboard users depen
 <h2>Recent Activity</h2>
 ```
 
-## ARIA Attributes
+### ARIA Attributes
 
 Use ARIA only when native HTML semantics are insufficient. Wrong ARIA is worse than no ARIA.
 
-### aria-label vs aria-labelledby
+#### aria-label vs aria-labelledby
 
 ```tsx
 // aria-label: inline string label — use when no visible label text exists
@@ -189,7 +193,7 @@ Use ARIA only when native HTML semantics are insufficient. Wrong ARIA is worse t
 </section>
 ```
 
-### aria-describedby
+#### aria-describedby
 
 ```tsx
 // Provides supplementary description beyond the label
@@ -201,7 +205,7 @@ Use ARIA only when native HTML semantics are insufficient. Wrong ARIA is worse t
 <p id="delete-warning">This action cannot be undone.</p>
 ```
 
-### aria-live for Dynamic Content
+#### aria-live for Dynamic Content
 
 ```tsx
 // Use aria-live to announce content that updates without a page reload
@@ -217,7 +221,7 @@ export function StatusMessage({ message, isError }: { message: string; isError?:
 }
 ```
 
-### aria-expanded and aria-controls
+#### aria-expanded and aria-controls
 
 ```tsx
 export function Accordion({ title, children }: { title: string; children: React.ReactNode }) {
@@ -237,11 +241,11 @@ export function Accordion({ title, children }: { title: string; children: React.
 }
 ```
 
-## Keyboard Navigation
+### Keyboard Navigation
 
 Every interactive element must be reachable and operable by keyboard alone.
 
-### Custom Dropdown
+#### Custom Dropdown
 
 ```tsx
 export function Dropdown({ options, onSelect }: { options: string[]; onSelect: (value: string) => void }) {
@@ -306,11 +310,11 @@ export function Dropdown({ options, onSelect }: { options: string[]; onSelect: (
 }
 ```
 
-## Focus Management
+### Focus Management
 
 Focus must move logically when UI state changes — especially for modals and route transitions.
 
-### Modal Focus Restoration
+#### Modal Focus Restoration
 
 > This example covers initial focus and restoration. For a full focus trap (Tab/Shift+Tab cycling within the modal), use a library like [`focus-trap-react`](https://github.com/focus-trap/focus-trap-react) which handles edge cases like dynamic content and nested portals.
 
@@ -342,7 +346,7 @@ export function Modal({ isOpen, onClose, title, children }: { isOpen: boolean; o
 }
 ```
 
-## Images and Icons
+### Images and Icons
 
 ```tsx
 // BAD: decorative icon announced as unlabeled image
@@ -360,7 +364,7 @@ export function Modal({ isOpen, onClose, title, children }: { isOpen: boolean; o
 </button>
 ```
 
-## Reduced Motion
+### Reduced Motion
 
 Respect users who have requested reduced motion in their OS settings.
 
@@ -395,7 +399,7 @@ export function AnimatedCard({ children }: { children: React.ReactNode }) {
 }
 ```
 
-## Anti-Patterns
+### Anti-Patterns
 
 ```tsx
 // BAD: onClick on non-interactive element with no keyboard support
@@ -418,7 +422,7 @@ export function AnimatedCard({ children }: { children: React.ReactNode }) {
 // Missing: tabIndex={0}, onKeyDown for Enter/Space
 ```
 
-## Checklist
+### Checklist
 
 Before submitting any interactive component for review:
 
@@ -431,8 +435,8 @@ Before submitting any interactive component for review:
 - [ ] Dynamic content updates use `aria-live`
 - [ ] `prefers-reduced-motion` is respected for animations
 
-## Related Skills
+### Related Skills
 
 - `languages:typescript` (`references/standards.md`) — general React component and state patterns
 - `ui:design-system` — design token and component consistency
-- `motion-foundations` and `motion-patterns`: animation patterns with accessibility considerations
+- `ui:motion-and-polish` and `ui:motion-and-polish`: animation patterns with accessibility considerations

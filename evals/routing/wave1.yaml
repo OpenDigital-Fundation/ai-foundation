@@ -127,3 +127,7 @@
 - {prompt: "this idea is too big for one session; chart the decisions we need before building", expect: "workflow:initiative-mapping"}
 - {prompt: "turn the approved spec into GitHub issues with blocking relationships", expect: "workflow:issue-breakdown"}
 - {prompt: "triage the 20 open issues and label which ones are ready for an agent", expect: "workflow:issue-triage"}
+- {prompt: "do a full multi-agent review of this repository and write a graded report", expect: "code-quality:codebase-audit"}
+- {prompt: "generate a VPAT and an accessibility statement for our web app", expect: "accessibility:accessibility-audit"}
+- {prompt: "make our PDF annual report and Word templates accessible", expect: "accessibility:document-accessibility"}
+- {prompt: "how should we test this flow with NVDA and VoiceOver?", expect: "accessibility:assistive-technology-testing"}

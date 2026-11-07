@@ -45,7 +45,7 @@ artifacts:
   - obra/superpowers:skill:receiving-code-review
 - id: code-quality/codebase-audit
   type: skill
-  capability: Audit a whole repository for bugs, risk, scale, missing tests, slowness and bloat in a ranked report.
+  capability: Multi-specialist audit of a repository, diff or folder with a sceptical verifier and a graded, prioritised report.
   supersedes:
   - DietrichGebert/ponytail:skill:ponytail-audit
 - id: code-quality/debt-ledger

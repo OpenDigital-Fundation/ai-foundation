@@ -107,3 +107,12 @@ Load only what the task needs:
 - [`references/post-deploy-qa.md`](references/post-deploy-qa.md) — covers Browser QA Automated Visual Testing & Interaction; QA Report URL timestamp
 - [`references/e2e-runner.md`](references/e2e-runner.md) — covers E2E Test Runner
 - [`references/windows-desktop.md`](references/windows-desktop.md) — covers Windows Desktop E2E Testing
+- [`references/playwright-overview.md`](references/playwright-overview.md) — covers Playwright Best Practices
+- `references/playwright-advanced/`
+- `references/playwright-architecture/`
+- `references/playwright-browser-apis/`
+- `references/playwright-core/`
+- `references/playwright-debugging/`
+- `references/playwright-frameworks/`
+- `references/playwright-infrastructure-ci-cd/`
+- `references/playwright-testing-patterns/`

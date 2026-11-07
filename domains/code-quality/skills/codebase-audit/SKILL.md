@@ -1,101 +1,78 @@
 ---
 name: codebase-audit
-description: "Use when the user asks to audit a whole codebase or repository (not a single change): find bugs, security holes, what breaks under real load, risky code without tests, slow paths, and what to delete, merge or split. Produces a ranked, plain-English report and changes nothing."
+description: Use when the user asks for a thorough review or audit of a whole codebase, a branch or diff, or a folder - "audit this repo", "review the whole project", "find vulnerabilities", "find duplicated code", "optimise the code", "make it production-ready". Orchestrates specialist reviewers (security, data and secret leaks, dependencies, correctness, performance, duplication and architecture, practices, tests, infrastructure) and a sceptical verifier that removes false positives, then writes a prioritised report with fixes.
 license: MIT
 metadata:
   domain: code-quality
   status: experimental
 ---
-Audit the whole repo like the senior developer who just inherited it and
-will be paged when it breaks. Order of importance: correct, safe, holds under
-load, tested, fast, lean. Lean still matters: every extra line must be read,
-tested and fixed later. This is a report the user asked for, so give it in full.
 
-## 1. Map first
+# Codebase audit
 
-- Audit what the user names: a folder, a package, or the whole repo.
-  Nothing named: the whole repo.
-- Read the README, the deploy and build config, the dependency list, the
-  entry points (main, routes, handlers, jobs, CLI commands) and the tests.
-- Find the expected load: one person running a script, or many users and
-  processes at once. Judge scale against that, and say which load you assumed.
-- Trace the main flows end to end: where data comes in, what is stored,
-  what goes out. Read those paths fully: input from users, money, auth,
-  data writes, background jobs, anything shared between processes.
-- Big repo: go deep where a mistake costs the most, not file by file. Say
-  which parts you did not read.
+You are the **orchestrator** of a high-rigour review. You do not review alone: you coordinate specialists, each with a narrow, deep focus, submit everything to a sceptical verifier and consolidate a report people can trust.
 
-## 2. Look for
+Non-negotiable principles:
 
-1. **Bug:** wrong result, crash, missed edge case (empty, zero, last item,
-   rounding, time zones), callers that disagree with what a function returns,
-   the same rule applied differently in two places.
-2. **Risk:** security holes (injection, weak randomness, secrets in code,
-   missing checks on input from users), data loss (errors swallowed, writes
-   in the wrong order, no transaction).
-3. **Scale:** fine for one user, wrong for many: check-then-write races, the
-   same work done by every process, memory or lists that only grow, a query
-   per item, O(n^2) on big input, per-process state that must be shared.
-4. **Missing test:** risky logic (a branch, a parser, money, security, data
-   writes) with no test that fails when it breaks. One good test, not coverage.
-5. **Speed:** big slowdowns are problems. Small wins (work repeated in a hot
-   loop) are suggestions; some software counts every millisecond.
-6. **Lean:** code that should not exist or should be smaller.
-   - delete: dead code, unused options, flags and config, speculative features
-   - reuse: two helpers doing the same thing (keep one, name the path)
-   - stdlib / native: the standard library or platform already does it;
-     a dependency doing what a few lines or the platform can do
-   - yagni: interface with one implementation, factory with one product,
-     wrapper that only passes calls through
-   - merge: near-copies that must change together
-   - split: one function or class doing several unrelated jobs, so it is
-     hard to read or test. Split by job, never by line count, and never into
-     helpers that exist only to make a function shorter.
+1. **Evidence over opinion.** Every finding has a file, a line and a real excerpt. No generic findings ("consider validating input").
+2. **No false positives in the final report.** Ten real problems beat fifty doubtful ones; the verifier exists for this.
+3. **Read-only while reviewing.** Do not change project files, install packages, run migrations or commit. Allowed: reading, searching, `git log/diff/show/blame`, listing dependencies and, if the user allows it, linters, tests and audits that do not modify the project.
+4. **Never expose secrets.** Mask any credential you quote (`sk_live_****9f2a`). Never send project code or secrets to external services.
+5. **Prioritise by real impact**, not by count.
 
-## 3. Check before you report
+## Step 0 — Scope and mode
 
-- Every finding needs a concrete case: "this input or situation leads to this
-  wrong result". No case, no finding.
-- Before calling code unused, grep the whole tree for it, including tests,
-  fixtures, config, and string or dynamic references.
-- A shortcut marked with a `shortcut:` comment that names its limit is a
-  decision, not a finding, unless the expected load already crosses it.
-- Propose the smallest fix that works. Prefer fixes that delete code. Never
-  add layers, frameworks or config the problem does not need.
-- No style taste, no "consider", no vague worries.
+Infer, and ask only when you cannot:
 
-## 4. Output
+- **Scope:** `project` (default, the whole repository); `diff` (changes against a base, `git diff <base>...HEAD`, default `main`; specialists may read surrounding code); `path` (a folder or file).
+- **Mode:** `full` (default, all specialists); `quick` (mapper, security, data leaks, correctness and verifier; with no subagents available, use [references/quick-audit.md](references/quick-audit.md)); `focus:<area>` (mapper, the specialist for that area, verifier).
 
-Very simple English: short sentences, everyday words. Explain a technical
-term the first time you use it. The reader may never have seen this code.
+Always exclude `node_modules`, `vendor`, `dist`, `build`, `.next`, `target`, `bin/obj`, `__pycache__`, `.venv`, minified files, generated files and lockfiles (except for the dependency specialist).
 
-Start with `What this repo does:` in two or three sentences, and the load
-you assumed.
+## Step 1 — Map (sequential, mandatory)
 
-Then the findings in three groups, most important first, skip empty groups:
-- **Must fix:** bug, security, data loss, breaks at the expected load.
-- **Should fix:** risky code without a test, real slowness, duplication, a
-  function that mixes jobs, code that should not exist.
-- **Nice to have:** small speed-ups, shorter forms.
+Run the **mapper** ([agents/01-mapper.md](agents/01-mapper.md)) first. It produces the **project map**: stack, structure, entry points, trust boundaries, sensitive data flows and files ranked by risk. Every other specialist receives the map. For large projects (over ~300 source files), use the map to split the code into **batches by module** and give batches to several instances of the same specialist when the platform allows it.
 
-Number findings across all groups, so the user can say "fix 2 and 5". At
-most 20 findings; if you left smaller ones out, say how many.
-Every finding has all four parts, each one or two short sentences:
+## Step 2 — Specialists (in parallel whenever possible)
 
-2. **Orders land on the wrong day** (`billing/close_day.py:L40-52`)
-   - **What this is:** At midnight this job closes the day and bills all orders of that day.
-   - **Problem:** It takes "today" from the server clock, which runs in UTC. An order placed
-     at 00:30 in Berlin is billed on the day before.
-   - **Fix:** Compute the day once in the shop's time zone:
-     `datetime.now(ZoneInfo("Europe/Berlin")).date()`. One line, nothing else changes.
-   - **If we skip it:** Late orders show the wrong date, and accounting fixes them by hand.
+| # | Specialist | Instructions | Focus |
+|---|---|---|---|
+| 02 | Security | [agents/02-security.md](agents/02-security.md) | Injection, authentication, authorisation, cryptography, SSRF, XSS, CSRF, deserialisation, OWASP Top 10 / ASVS |
+| 03 | Data and secret leaks | [agents/03-data-leaks.md](agents/03-data-leaks.md) | Credentials in code and git history, personal data in logs, responses that expose data, GDPR/LGPD |
+| 04 | Dependencies and supply chain | [agents/04-dependencies.md](agents/04-dependencies.md) | CVEs, abandoned versions, pinning, lockfiles, typosquatting, licences, install scripts |
+| 05 | Correctness and logic | [agents/05-correctness.md](agents/05-correctness.md) | Bugs, edge cases, concurrency, error handling, state, broken contracts |
+| 06 | Performance | [agents/06-performance.md](agents/06-performance.md) | Complexity, N+1, I/O, memory, caching, rendering, bundles, queries |
+| 07 | Duplication and architecture | [agents/07-duplication-architecture.md](agents/07-duplication-architecture.md) | Duplicated and dead code, coupling, layering, wrong abstractions, reuse of existing helpers |
+| 08 | Practices and readability | [agents/08-practices.md](agents/08-practices.md) | Language idioms, names, typing, complexity, consistency, documentation |
+| 09 | Tests and reliability | [agents/09-tests.md](agents/09-tests.md) | Coverage of critical paths, flaky tests, weak asserts, excessive mocks, observability |
+| 10 | Infrastructure and configuration | [agents/10-infrastructure.md](agents/10-infrastructure.md) | Docker, CI/CD, IaC, CORS, headers, TLS, permissions, per-environment configuration |
 
-End with:
-- `Verdict:` one line: healthy, or what to fix first.
-- `Lean: -<N> lines, -<M> dependencies possible.` when lean findings exist.
-- `Not checked:` the parts you did not read or could not run.
+Each specialist reads its instructions, the project map and [references/finding-format.md](references/finding-format.md); investigates for real (opens files, follows calls, traces data from input to sink) rather than only grepping; and returns **only** its findings in the standard format, plus "Strengths observed" and "Areas not covered" (what it could not analyse and why). Language specifics come from the matching `languages:<language>` pack.
 
-Nothing found: `What this repo does:`, then `Healthy. Nothing to fix.` and
-one line on what you checked.
+## Step 3 — Sceptical verification (mandatory)
 
-One-shot report, changes no code.
+Merge all findings, remove obvious duplicates between specialists (same file, line and cause: keep one, cite the specialists) and send them to the **verifier** ([agents/11-verifier.md](agents/11-verifier.md)). It reopens the code of each finding and marks it `CONFIRMED`, `LIKELY` or `DISMISSED`, adjusting severity when needed. Dismissed findings do not enter the report (one line each in the appendix). With many findings, split verification across several verifiers by specialist or module.
+
+## Step 4 — Final report
+
+Write the report with [references/report-template.md](references/report-template.md) to `docs/code-review/REPORT-<YYYY-MM-DD>.md` in the reviewed project (create the folder; this is the only file you write; the repository's `AGENTS.md` may set another location). Then give the user a summary: overall grade, count by severity and the five most urgent items. Do not apply fixes automatically; offer: "Do you want me to fix the critical and high items now?"
+
+## Running the specialists on each platform
+
+The specialist content is the same everywhere; only the delegation mechanism changes.
+
+- **Claude Code (or any harness with subagents):** dispatch a read-only subagent per specialist whose prompt contains (1) the full specialist file, (2) the project map, (3) the finding format, (4) the scope or batch and (5) the read-only rule. Dispatch all Step 2 specialists in the same message so they run in parallel; wait for all before Step 3.
+- **Codex:** use native multi-agent support if enabled; otherwise, if commands are allowed, run each specialist as a non-interactive read-only subprocess (for example `codex exec --sandbox read-only "<specialist prompt>"`), saving each output outside the project; otherwise use sequential mode.
+- **Other harnesses (Antigravity, Gemini CLI, OpenCode):** create one parallel task per specialist if the agent manager supports it; otherwise use sequential mode.
+- **Sequential mode (universal fallback):** run one specialist at a time; before each, reread its file and take **only** that role; record each specialist's findings in a separate section before moving on; the verifier runs last and reopens the code of every finding as if it trusted nobody.
+
+## Quality rules for every specialist
+
+- Cite the exact location: `path/file.ext:line` (or a range).
+- Show the short problematic excerpt and the suggested fix in code.
+- Explain the concrete failure scenario: which input or state causes which harm.
+- Calibrate severity with the finding format; do not inflate.
+- Follow the project's conventions: fixes match its style, libraries and architecture; look for an existing helper before suggesting a new one.
+- Do not repeat what a configured linter already catches; if no linter is configured, that is one practices finding.
+- State uncertainty: if a finding depends on something outside the code (production configuration, a proxy), say so.
+
+For reviewing a single change rather than a whole codebase, use `code-quality:code-review`; for a deep security-only audit with sandboxed validation, use `security:security-audit`.

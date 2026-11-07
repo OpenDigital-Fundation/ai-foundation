@@ -132,6 +132,14 @@ def sources_md(root, cat, exc, lock, inv, prov) -> str:
         if excluded[sid]:
             lines.append("- Excluded items by reason: " + ", ".join(f"{r}: {n}" for r, n in excluded[sid].most_common()))
         lines.append("")
+    contrib = root / "catalog/contributions.yaml"
+    if contrib.is_file():
+        lines += ["## Original OpenDigital contributions", "", "Skills written by OpenDigital people, generalised and brought into the catalog "
+                  "(client-specific details removed).", "", "| Contribution | Authors | Original language | Used in | How |", "|---|---|---|---|---|"]
+        for c in yaml.safe_load(contrib.read_text()).get("contributions") or []:
+            lines.append(f"| {c['title']} | {', '.join(c['authors'])} | {c['language']} | "
+                         + ", ".join(f"`{x.replace('/', ':')}`" for x in c["artifacts"]) + f" | {_cell(c['how'])} |")
+        lines.append("")
     lines += ["Licence texts and copyright notices: [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md). "
               "Per-file origin: each domain's `PROVENANCE.yaml`. Per-item decisions: `catalog/catalog.yaml` (`supersedes`) and "
               "`catalog/exclusions.yaml`.", ""]

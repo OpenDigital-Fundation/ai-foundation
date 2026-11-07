@@ -1,16 +1,124 @@
 version: 1
 artifacts:
-- id: accessibility/wcag-accessibility
+- id: accessibility/accessibility-audit
   type: skill
-  capability: Design, build and audit interfaces to WCAG 2.2 AA on web, iOS and Android.
+  capability: Use when the user asks for an accessibility audit of a website or web app, a conformance or compliance report
+    (Section 508, EN 301 549, EAA, ADA, AODA, VPAT), an accessibility statement, acc
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "affaan-m/ECC:skill:accessibility"
-  - "affaan-m/ECC:skill:frontend-a11y"
+  - "Community-Access/accessibility-agents:skill:a11y-core"
+  - "Community-Access/accessibility-agents:skill:accessibility-regression-detector"
+  - "Community-Access/accessibility-agents:skill:accessibility-statement"
+  - "Community-Access/accessibility-agents:skill:ci-accessibility"
+  - "Community-Access/accessibility-agents:skill:compliance-mapping"
+  - "Community-Access/accessibility-agents:skill:cross-page-analyzer"
+  - "Community-Access/accessibility-agents:skill:kb-ci-integration"
+  - "Community-Access/accessibility-agents:skill:kb-github-a11y-scanner"
+  - "Community-Access/accessibility-agents:skill:kb-help-url-reference"
+  - "Community-Access/accessibility-agents:skill:kb-legal-compliance-mapping"
+  - "Community-Access/accessibility-agents:skill:kb-lighthouse-scanner"
+  - "Community-Access/accessibility-agents:skill:kb-open-source-accessibility-framework"
+  - "Community-Access/accessibility-agents:skill:kb-report-generation"
+  - "Community-Access/accessibility-agents:skill:kb-severity-mapping"
+  - "Community-Access/accessibility-agents:skill:kb-web-scanning"
+  - "Community-Access/accessibility-agents:skill:kb-web-severity-scoring"
+  - "Community-Access/accessibility-agents:skill:lighthouse-bridge"
+  - "Community-Access/accessibility-agents:skill:osaf-community"
+  - "Community-Access/accessibility-agents:skill:osaf-foundational"
+  - "Community-Access/accessibility-agents:skill:osaf-testing"
+  - "Community-Access/accessibility-agents:skill:osaf-workflow"
+  - "Community-Access/accessibility-agents:skill:playwright-scanner"
+  - "Community-Access/accessibility-agents:skill:playwright-verifier"
+  - "Community-Access/accessibility-agents:skill:scanner-bridge"
+  - "Community-Access/accessibility-agents:skill:web-accessibility-wizard"
+  - "Community-Access/accessibility-agents:skill:web-csv-reporter"
+  - "Community-Access/accessibility-agents:skill:web-issue-fixer"
+  - "msitarzewski/agency-agents:agent:Accessibility Auditor"
+- id: accessibility/assistive-technology-testing
+  type: skill
+  capability: "Use when deciding how to test accessibility or running the tests: screen readers (NVDA, JAWS, VoiceOver, Narrator,\
+    \ TalkBack), keyboard-only passes, simulated narration of HTML or JSX, deskto"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "Community-Access/accessibility-agents:skill:desktop-a11y-testing-coach"
+  - "Community-Access/accessibility-agents:skill:kb-playwright-testing"
+  - "Community-Access/accessibility-agents:skill:kb-testing-strategy"
+  - "Community-Access/accessibility-agents:skill:screen-reader-lab"
+  - "Community-Access/accessibility-agents:skill:testing-coach"
+- id: accessibility/document-accessibility
+  type: skill
+  capability: "Use when Word, Excel, PowerPoint, PDF, ePub or Markdown files must be accessible: auditing them one by one\
+    \ or as a folder inventory, fixing titles, headings, reading order, tags, alt text an"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "Community-Access/accessibility-agents:skill:cross-document-analyzer"
+  - "Community-Access/accessibility-agents:skill:document-accessibility-wizard"
+  - "Community-Access/accessibility-agents:skill:document-csv-reporter"
+  - "Community-Access/accessibility-agents:skill:document-inventory"
+  - "Community-Access/accessibility-agents:skill:epub-accessibility"
+  - "Community-Access/accessibility-agents:skill:epub-scan-config"
+  - "Community-Access/accessibility-agents:skill:excel-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-document-scanning"
+  - "Community-Access/accessibility-agents:skill:kb-markdown-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-office-remediation"
+  - "Community-Access/accessibility-agents:skill:markdown-a11y-assistant"
+  - "Community-Access/accessibility-agents:skill:markdown-csv-reporter"
+  - "Community-Access/accessibility-agents:skill:markdown-fixer"
+  - "Community-Access/accessibility-agents:skill:markdown-scanner"
+  - "Community-Access/accessibility-agents:skill:office-remediator"
+  - "Community-Access/accessibility-agents:skill:office-scan-config"
+  - "Community-Access/accessibility-agents:skill:pdf-accessibility"
+  - "Community-Access/accessibility-agents:skill:pdf-remediator"
+  - "Community-Access/accessibility-agents:skill:pdf-scan-config"
+  - "Community-Access/accessibility-agents:skill:powerpoint-accessibility"
+  - "Community-Access/accessibility-agents:skill:word-accessibility"
+- id: accessibility/wcag-accessibility
+  type: skill
+  capability: "Use when designing, building or reviewing interfaces for accessibility on web, mobile or desktop: WCAG 2.2\
+    \ AA (and AAA or WCAG 3 when asked), semantic roles and ARIA, keyboard and focus, for"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "Community-Access/accessibility-agents:skill:accessibility-lead"
+  - "Community-Access/accessibility-agents:skill:alt-text-headings"
+  - "Community-Access/accessibility-agents:skill:aria-specialist"
+  - "Community-Access/accessibility-agents:skill:cognitive-accessibility"
+  - "Community-Access/accessibility-agents:skill:contrast-master"
+  - "Community-Access/accessibility-agents:skill:data-visualization-accessibility"
+  - "Community-Access/accessibility-agents:skill:design-system-auditor"
+  - "Community-Access/accessibility-agents:skill:desktop-a11y-specialist"
+  - "Community-Access/accessibility-agents:skill:email-accessibility"
+  - "Community-Access/accessibility-agents:skill:forms-specialist"
+  - "Community-Access/accessibility-agents:skill:i18n-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-accessibility-rules"
+  - "Community-Access/accessibility-agents:skill:kb-cognitive-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-data-visualization-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-design-system"
+  - "Community-Access/accessibility-agents:skill:kb-email-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-framework-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-media-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-mobile-accessibility"
+  - "Community-Access/accessibility-agents:skill:kb-path-instructions"
+  - "Community-Access/accessibility-agents:skill:keyboard-navigator"
+  - "Community-Access/accessibility-agents:skill:link-checker"
+  - "Community-Access/accessibility-agents:skill:live-region-controller"
+  - "Community-Access/accessibility-agents:skill:media-accessibility"
+  - "Community-Access/accessibility-agents:skill:mobile-accessibility"
+  - "Community-Access/accessibility-agents:skill:modal-specialist"
+  - "Community-Access/accessibility-agents:skill:performance-accessibility"
+  - "Community-Access/accessibility-agents:skill:tables-data-specialist"
+  - "Community-Access/accessibility-agents:skill:text-quality-reviewer"
+  - "Community-Access/accessibility-agents:skill:wcag-aaa"
+  - "Community-Access/accessibility-agents:skill:wcag-guide"
+  - "Community-Access/accessibility-agents:skill:wcag3-preview"
+  - "Community-Access/accessibility-agents:skill:web-component-specialist"
   - "affaan-m/ECC:agent:a11y-architect"
   - "affaan-m/ECC:rule:react-native/accessibility"
-  - "msitarzewski/agency-agents:agent:Accessibility Auditor"
+  - "affaan-m/ECC:skill:accessibility"
+  - "affaan-m/ECC:skill:frontend-a11y"
 - id: agent-engineering/agent-debugging
   type: skill
   capability: "Use when an agent run failed, looped, ignored instructions or produced a bad result and you need to know why:\
@@ -310,6 +418,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Community-Access/accessibility-agents:skill:pr-review"
   - "DietrichGebert/ponytail:command:ponytail-review"
   - "DietrichGebert/ponytail:skill:ponytail-review"
   - "affaan-m/ECC:command:code-review"
@@ -327,7 +436,7 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Code Reviewer"
 - id: code-quality/codebase-audit
   type: skill
-  capability: Audit a whole repository for bugs, risk, scale, missing tests, slowness and bloat in a ranked report.
+  capability: Multi-specialist audit of a repository, diff or folder with a sceptical verifier and a graded, prioritised report.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
@@ -603,6 +712,12 @@ artifacts:
   - "affaan-m/ECC:skill:csharp-testing"
   - "affaan-m/ECC:skill:dotnet-patterns"
   - "affaan-m/ECC:skill:fsharp-testing"
+- id: languages/external-tools
+  type: knowledge
+  capability: "External language tools referenced, not vendored: react-doctor (restricted licence), godoctor, Vercel interface\
+    \ guidelines."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
 - id: languages/go
   type: skill
   capability: Go patterns, testing, security, review and build knowledge, plus framework references.
@@ -832,6 +947,126 @@ artifacts:
   - "mattpocock/skills:skill:migrate-to-shoehorn"
   - "mattpocock/skills:skill:setup-ts-deep-modules"
   - "msitarzewski/agency-agents:agent:Mobile App Builder"
+  - "vercel-labs/agent-skills:rule:_sections"
+  - "vercel-labs/agent-skills:rule:_template"
+  - "vercel-labs/agent-skills:rule:advanced-effect-event-deps"
+  - "vercel-labs/agent-skills:rule:advanced-event-handler-refs"
+  - "vercel-labs/agent-skills:rule:advanced-init-once"
+  - "vercel-labs/agent-skills:rule:advanced-use-latest"
+  - "vercel-labs/agent-skills:rule:animation-derived-value"
+  - "vercel-labs/agent-skills:rule:animation-gesture-detector-press"
+  - "vercel-labs/agent-skills:rule:animation-gpu-properties"
+  - "vercel-labs/agent-skills:rule:architecture-avoid-boolean-props"
+  - "vercel-labs/agent-skills:rule:architecture-compound-components"
+  - "vercel-labs/agent-skills:rule:async-api-routes"
+  - "vercel-labs/agent-skills:rule:async-cheap-condition-before-await"
+  - "vercel-labs/agent-skills:rule:async-defer-await"
+  - "vercel-labs/agent-skills:rule:async-dependencies"
+  - "vercel-labs/agent-skills:rule:async-parallel"
+  - "vercel-labs/agent-skills:rule:async-suspense-boundaries"
+  - "vercel-labs/agent-skills:rule:bundle-analyzable-paths"
+  - "vercel-labs/agent-skills:rule:bundle-barrel-imports"
+  - "vercel-labs/agent-skills:rule:bundle-conditional"
+  - "vercel-labs/agent-skills:rule:bundle-defer-third-party"
+  - "vercel-labs/agent-skills:rule:bundle-dynamic-imports"
+  - "vercel-labs/agent-skills:rule:bundle-preload"
+  - "vercel-labs/agent-skills:rule:client-event-listeners"
+  - "vercel-labs/agent-skills:rule:client-localstorage-schema"
+  - "vercel-labs/agent-skills:rule:client-passive-event-listeners"
+  - "vercel-labs/agent-skills:rule:client-swr-dedup"
+  - "vercel-labs/agent-skills:rule:design-system-compound-components"
+  - "vercel-labs/agent-skills:rule:fonts-config-plugin"
+  - "vercel-labs/agent-skills:rule:imports-design-system-folder"
+  - "vercel-labs/agent-skills:rule:js-batch-dom-css"
+  - "vercel-labs/agent-skills:rule:js-cache-function-results"
+  - "vercel-labs/agent-skills:rule:js-cache-property-access"
+  - "vercel-labs/agent-skills:rule:js-cache-storage"
+  - "vercel-labs/agent-skills:rule:js-combine-iterations"
+  - "vercel-labs/agent-skills:rule:js-early-exit"
+  - "vercel-labs/agent-skills:rule:js-flatmap-filter"
+  - "vercel-labs/agent-skills:rule:js-hoist-intl"
+  - "vercel-labs/agent-skills:rule:js-hoist-regexp"
+  - "vercel-labs/agent-skills:rule:js-index-maps"
+  - "vercel-labs/agent-skills:rule:js-length-check-first"
+  - "vercel-labs/agent-skills:rule:js-min-max-loop"
+  - "vercel-labs/agent-skills:rule:js-request-idle-callback"
+  - "vercel-labs/agent-skills:rule:js-set-map-lookups"
+  - "vercel-labs/agent-skills:rule:js-tosorted-immutable"
+  - "vercel-labs/agent-skills:rule:list-performance-callbacks"
+  - "vercel-labs/agent-skills:rule:list-performance-function-references"
+  - "vercel-labs/agent-skills:rule:list-performance-images"
+  - "vercel-labs/agent-skills:rule:list-performance-inline-objects"
+  - "vercel-labs/agent-skills:rule:list-performance-item-expensive"
+  - "vercel-labs/agent-skills:rule:list-performance-item-memo"
+  - "vercel-labs/agent-skills:rule:list-performance-item-types"
+  - "vercel-labs/agent-skills:rule:list-performance-virtualize"
+  - "vercel-labs/agent-skills:rule:monorepo-native-deps-in-app"
+  - "vercel-labs/agent-skills:rule:monorepo-single-dependency-versions"
+  - "vercel-labs/agent-skills:rule:navigation-native-navigators"
+  - "vercel-labs/agent-skills:rule:patterns-children-over-render-props"
+  - "vercel-labs/agent-skills:rule:patterns-explicit-variants"
+  - "vercel-labs/agent-skills:rule:react-compiler-destructure-functions"
+  - "vercel-labs/agent-skills:rule:react-compiler-reanimated-shared-values"
+  - "vercel-labs/agent-skills:rule:react-state-dispatcher"
+  - "vercel-labs/agent-skills:rule:react-state-fallback"
+  - "vercel-labs/agent-skills:rule:react-state-minimize"
+  - "vercel-labs/agent-skills:rule:react19-no-forwardref"
+  - "vercel-labs/agent-skills:rule:rendering-activity"
+  - "vercel-labs/agent-skills:rule:rendering-animate-svg-wrapper"
+  - "vercel-labs/agent-skills:rule:rendering-conditional-render"
+  - "vercel-labs/agent-skills:rule:rendering-content-visibility"
+  - "vercel-labs/agent-skills:rule:rendering-hoist-jsx"
+  - "vercel-labs/agent-skills:rule:rendering-hydration-no-flicker"
+  - "vercel-labs/agent-skills:rule:rendering-hydration-suppress-warning"
+  - "vercel-labs/agent-skills:rule:rendering-no-falsy-and"
+  - "vercel-labs/agent-skills:rule:rendering-resource-hints"
+  - "vercel-labs/agent-skills:rule:rendering-script-defer-async"
+  - "vercel-labs/agent-skills:rule:rendering-svg-precision"
+  - "vercel-labs/agent-skills:rule:rendering-text-in-text-component"
+  - "vercel-labs/agent-skills:rule:rendering-usetransition-loading"
+  - "vercel-labs/agent-skills:rule:rerender-defer-reads"
+  - "vercel-labs/agent-skills:rule:rerender-dependencies"
+  - "vercel-labs/agent-skills:rule:rerender-derived-state"
+  - "vercel-labs/agent-skills:rule:rerender-derived-state-no-effect"
+  - "vercel-labs/agent-skills:rule:rerender-functional-setstate"
+  - "vercel-labs/agent-skills:rule:rerender-lazy-state-init"
+  - "vercel-labs/agent-skills:rule:rerender-memo"
+  - "vercel-labs/agent-skills:rule:rerender-memo-with-default-value"
+  - "vercel-labs/agent-skills:rule:rerender-move-effect-to-event"
+  - "vercel-labs/agent-skills:rule:rerender-no-inline-components"
+  - "vercel-labs/agent-skills:rule:rerender-simple-expression-in-memo"
+  - "vercel-labs/agent-skills:rule:rerender-split-combined-hooks"
+  - "vercel-labs/agent-skills:rule:rerender-transitions"
+  - "vercel-labs/agent-skills:rule:rerender-use-deferred-value"
+  - "vercel-labs/agent-skills:rule:rerender-use-ref-transient-values"
+  - "vercel-labs/agent-skills:rule:scroll-position-no-state"
+  - "vercel-labs/agent-skills:rule:server-after-nonblocking"
+  - "vercel-labs/agent-skills:rule:server-auth-actions"
+  - "vercel-labs/agent-skills:rule:server-cache-lru"
+  - "vercel-labs/agent-skills:rule:server-cache-react"
+  - "vercel-labs/agent-skills:rule:server-dedup-props"
+  - "vercel-labs/agent-skills:rule:server-hoist-static-io"
+  - "vercel-labs/agent-skills:rule:server-no-shared-module-state"
+  - "vercel-labs/agent-skills:rule:server-parallel-fetching"
+  - "vercel-labs/agent-skills:rule:server-parallel-nested-fetching"
+  - "vercel-labs/agent-skills:rule:server-serialization"
+  - "vercel-labs/agent-skills:rule:state-context-interface"
+  - "vercel-labs/agent-skills:rule:state-decouple-implementation"
+  - "vercel-labs/agent-skills:rule:state-ground-truth"
+  - "vercel-labs/agent-skills:rule:state-lift-state"
+  - "vercel-labs/agent-skills:rule:ui-expo-image"
+  - "vercel-labs/agent-skills:rule:ui-image-gallery"
+  - "vercel-labs/agent-skills:rule:ui-measure-views"
+  - "vercel-labs/agent-skills:rule:ui-menus"
+  - "vercel-labs/agent-skills:rule:ui-native-modals"
+  - "vercel-labs/agent-skills:rule:ui-pressable"
+  - "vercel-labs/agent-skills:rule:ui-safe-area-scroll"
+  - "vercel-labs/agent-skills:rule:ui-scrollview-content-inset"
+  - "vercel-labs/agent-skills:rule:ui-styling"
+  - "vercel-labs/agent-skills:skill:vercel-composition-patterns"
+  - "vercel-labs/agent-skills:skill:vercel-react-best-practices"
+  - "vercel-labs/agent-skills:skill:vercel-react-native-skills"
+  - "vercel-labs/agent-skills:skill:vercel-react-view-transitions"
 - id: legal-compliance/compliance-programs
   type: skill
   capability: "Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy\
@@ -1193,6 +1428,7 @@ artifacts:
   - "affaan-m/ECC:skill:ui-demo"
   - "affaan-m/ECC:skill:windows-desktop-e2e"
   - "anthropics/skills:skill:webapp-testing"
+  - "currents-dev/playwright-best-practices-skill:skill:playwright-best-practices"
 - id: testing/test-driven-development
   type: skill
   capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.
@@ -1407,9 +1643,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "mattpocock/skills:skill:triage"
+  - "Community-Access/accessibility-agents:skill:issue-tracker"
+  - "Community-Access/accessibility-agents:skill:projects-manager"
   - "affaan-m/ECC:command:issue-review"
   - "affaan-m/ECC:skill:issue-review"
+  - "mattpocock/skills:skill:triage"
 - id: workflow/writing-plans
   type: skill
   capability: Turn an approved spec into plan.md and tasks.md with exact files, interfaces, tests and commands.
