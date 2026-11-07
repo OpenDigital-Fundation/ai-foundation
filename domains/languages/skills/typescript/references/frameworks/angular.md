@@ -466,7 +466,7 @@ When asked to create a new Angular project, you must determine the correct execu
 **Step 3: Fallback to Latest.**
 
 - **IF** no specific version is requested AND the `ng version` command fails (indicating no Angular installation exists), you must use `npx` to fetch the latest version.
-- **Command:** `npx @angular/cli@latest new <project-name>`
+- **Command:** `npx @angular/cli@<version> new <project-name>`
 
 ### Components
 

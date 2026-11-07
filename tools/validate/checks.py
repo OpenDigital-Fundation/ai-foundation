@@ -301,19 +301,23 @@ HYGIENE = [
     (re.compile(r"(?i)\b(app\.posthog\.com|[a-z]{2}\.i\.posthog\.com|api\.segment\.io|api(-js)?\.mixpanel\.com|api2?\.amplitude\.com|www\.google-analytics\.com|googletagmanager\.com/gtag)\b"), "telemetry endpoint"),
     (re.compile(r"(?i)you (must|MUST) (use|invoke) this skill before any|before ANY response"), "self-promoting activation instruction"),
     (re.compile(r"(?i)\b(auto[- ]?update|self[- ]update)\b.*\b(curl|wget|npm i|npx)\b"), "auto-update instruction"),
+    (re.compile(r"\b(npx|bunx|pnpx|pnpm dlx|yarn dlx|uvx)\s+(-y\s+)?(@?[\w./-]+)@latest\b"), "unpinned package execution (@latest)"),
+    (re.compile(r"(?i)(fetch|download|curl)[^\n]{0,80}\b(and|then)\s+(follow|obey|execute|run)\s+(every|all|each|its|the)\b[^\n]{0,40}\b(step|instruction|prompt)s?"), "remote instructions to fetch and follow"),
 ]
 TEXT_EXT = {".md", ".yaml", ".yml", ".json", ".txt", ".sh", ".py", ".js", ".ts", ".toml"}
 
 
 def check_hygiene(root: Path) -> list[str]:
     errs: list[str] = []
+    allow_file = root / "catalog/hygiene-allowlist.yaml"
+    allowed = {(e["path"], e["rule"]) for e in (load_yaml(allow_file).get("entries") or [])} if allow_file.is_file() else set()
     for p in sorted((root / "domains").rglob("*")):
         if not p.is_file() or p.suffix not in TEXT_EXT:
             continue
         text = p.read_text(encoding="utf-8", errors="ignore")
         for rx, label in HYGIENE:
             m = rx.search(text)
-            if m:
+            if m and (str(p.relative_to(root)), label) not in allowed:
                 line = text.count("\n", 0, m.start()) + 1
                 errs.append(f"{p.relative_to(root)}:{line}: {label}")
     for p in sorted((root / "domains").glob("*/mcps/*.json")):

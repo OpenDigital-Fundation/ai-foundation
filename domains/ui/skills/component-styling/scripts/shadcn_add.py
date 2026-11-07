@@ -105,7 +105,7 @@ class ShadcnInstaller:
         if not self.check_shadcn_config():
             return (
                 False,
-                "shadcn not initialized. Run 'npx shadcn@latest init' first",
+                "shadcn not initialized. Run 'npx shadcn@2.3.0 init' first",
             )
 
         # Check which components already exist
@@ -164,7 +164,7 @@ class ShadcnInstaller:
         if not self.check_shadcn_config():
             return (
                 False,
-                "shadcn not initialized. Run 'npx shadcn@latest init' first",
+                "shadcn not initialized. Run 'npx shadcn@2.3.0 init' first",
             )
 
         shadcn_version = self._get_shadcn_version()

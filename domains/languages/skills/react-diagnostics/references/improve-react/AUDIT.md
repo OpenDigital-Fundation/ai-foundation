@@ -2,7 +2,7 @@
 
 For any finding that maps to a React Doctor rule, never invent the fix. Copy the
 reviewer-tested recipe from `https://www.react.doctor/prompts/rules/<plugin>/<rule>.md`,
-or run `npx react-doctor@latest rules explain <rule>`. The exact fix is not yours
+or run `npx react-doctor@0.9.22 rules explain <rule>`. The exact fix is not yours
 to approximate; the canonical prompt is.
 
 Use these five categories as the user-facing audit buckets. Judge leverage from
@@ -134,7 +134,7 @@ Do not split a component or add a hook just to satisfy a metric.
 ## Working rule
 
 The scan supplies evidence; the senior audit supplies leverage and context.
-For every rule-backed plan, fetch the canonical prompt, quote the current code,
+For every rule-backed plan, run `rules explain <rule>` locally, quote the current code,
 and inline the exact target recipe. For every missed opportunity, label it
 separately from a diagnostic finding and state what runtime or product evidence
 would confirm its value.

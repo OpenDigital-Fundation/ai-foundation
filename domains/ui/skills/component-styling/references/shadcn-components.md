@@ -6,9 +6,9 @@ Complete catalog of shadcn/ui components with usage patterns and installation.
 
 **Add specific components:**
 ```bash
-npx shadcn@latest add button
-npx shadcn@latest add button card dialog  # Multiple
-npx shadcn@latest add --all              # All components
+npx shadcn@2.3.0 add button
+npx shadcn@2.3.0 add button card dialog  # Multiple
+npx shadcn@2.3.0 add --all              # All components
 ```
 
 Components install to `components/ui/` with automatic dependency management.

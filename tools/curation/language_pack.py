@@ -132,6 +132,11 @@ def rewrite_refs(text: str, refs: dict[str, str], unresolved: set[str]) -> str:
                  ("the canonical ECC SEO workflow", "the canonical SEO workflow"), ("ECC or website", "product or website"),
                  ("inside ECC", "inside this catalog"), (", and ECC 2.0", ""), ("ECC 2.0", "")]:
         text = text.replace(a, b)
+    # Pin package executions that upstream wrote as @latest (reviewed versions or an explicit placeholder).
+    for pkg, pinned in [("shadcn-ui@latest", "shadcn@2.3.0"), ("shadcn@latest", "shadcn@2.3.0"),
+                        ("@angular/cli@latest", "@angular/cli@<version>"),
+                        ("@modelcontextprotocol/codemod@latest", "@modelcontextprotocol/codemod@<version>")]:
+        text = text.replace(pkg, pinned)
     text = re.sub(r"^.*\bAffaan\b.*\n", "", text, flags=re.M)  # lines about the upstream author's own voice or setup
     text = re.sub(r"(?<!source: affaan-m/)\bECC\b(?!-)", "the upstream project", text)
 

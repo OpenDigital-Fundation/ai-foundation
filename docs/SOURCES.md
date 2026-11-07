@@ -178,7 +178,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 ## millionco/react-doctor
 
 - URL: <https://github.com/millionco/react-doctor> · commit `9791c32f61fb1477a4f8dd596ff80184ad26b2e3` · licence Modified-MIT (no AI training/evaluation use, no resale without permission) · policy `merge`
-- Note: Vendored with its licence at the maintainer request (2026-11-07); excluded from evals until Million Software grants written permission
+- Note: Vendored with its licence at the maintainer request (2026-11-07); excluded from evals until Million Software grants written permission; CLI pinned to react-doctor@0.9.22 (version at this commit); remote playbook instructions removed
 - Used in: `languages:react-diagnostics`
 - Excluded items by reason: license: 2, out-of-scope: 1
 

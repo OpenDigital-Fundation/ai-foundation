@@ -24,7 +24,7 @@ Use a production build when available. Development builds add framework work tha
 Run the scan in an interactive terminal:
 
 ```bash
-npx react-doctor@latest scan http://localhost:3000 --format json
+npx react-doctor@0.9.22 scan http://localhost:3000 --format json
 ```
 
 React Doctor opens an isolated Chrome profile. Perform the planned interaction while purple outlines identify rendered components. Press Enter after the interaction settles; recordings stop automatically after five minutes.
@@ -34,7 +34,7 @@ Interactive users can omit the URL and choose a detected localhost app or enter 
 For an authenticated session, connect through the Chrome DevTools Protocol (CDP):
 
 ```bash
-npx react-doctor@latest scan https://app.example.com \
+npx react-doctor@0.9.22 scan https://app.example.com \
   --cdp http://127.0.0.1:9222 \
   --format json
 ```

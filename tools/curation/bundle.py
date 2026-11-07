@@ -16,6 +16,7 @@ bundle file:
       supersedes: [extra inventory keys]  # in addition to every entry used
       remove: [regex, ...]               # passages to cut from the body (source-internal content)
       append: |                          # text added at the end of SKILL.md (local notes, safety caveats)
+      replace: [[regex, replacement], ...]  # reviewed rewrites applied to every generated Markdown file
   exclusions: [...]                      # copied to the decision file
 Files under catalog/overrides/<domain>/<skill>/ are copied over the generated skill afterwards.
 Entries use the language_pack syntax: s:/a:/r:/c: for affaan-m/ECC, or "<owner>/<repo>:<path>".
@@ -75,17 +76,21 @@ def build(root: Path, sources: Path, spec: dict) -> None:
     refs = reference_map(root, packs)
 
     current_remove: list[str] = []
+    current_replace: list[tuple[str, str]] = []
 
     def rw(text: str) -> str:
         for x, y in subs:
             text = text.replace(x, y)
         for pattern in current_remove:  # cut source-internal passages before any rewording
             text = re.sub(pattern, "", text, flags=re.S | re.M)
+        for pattern, replacement in current_replace:  # reviewed rewrites (e.g. pin versions, drop remote instructions)
+            text = re.sub(pattern, replacement, text, flags=re.S | re.M)
         return rewrite_refs(text, refs, unresolved)
 
     for aid, a in spec["artifacts"].items():
         domain, name = aid.split("/")
         current_remove[:] = a.get("remove") or []
+        current_replace[:] = [tuple(x) for x in (a.get("replace") or [])]
         d = root / "domains" / domain / "skills" / name
         if d.exists():
             shutil.rmtree(d)  # generated output; regenerated from the bundle file

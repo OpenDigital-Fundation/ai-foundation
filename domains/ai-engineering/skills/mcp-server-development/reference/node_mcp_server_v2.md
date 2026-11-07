@@ -709,7 +709,7 @@ Each linked example is a runnable server and client pair from the SDK repository
 To move an existing `@modelcontextprotocol/sdk` server to v2, run the official codemod at the package root, then fix what it marks:
 
 ```bash
-npx @modelcontextprotocol/codemod@latest v1-to-v2 .
+npx @modelcontextprotocol/codemod@<version> v1-to-v2 .
 grep -rn '@mcp-codemod-error' .   # Spots the codemod could not rewrite safely
 npx tsc --noEmit
 ```
