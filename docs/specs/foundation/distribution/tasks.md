@@ -7,5 +7,5 @@
 - [x] **T5.** Extensão Gemini CLI: `gemini-extension.json`, `GEMINI.md` e um comando `.toml` por skill, com teste que parseia o TOML.
 - [x] **T6.** OpenCode: `.opencode/skills/` + `AGENTS.md` índice. Copilot CLI usa o layout Agent Skills de T3.
 - [x] **T7.** `release.yml`: em tag `v*.*.*`, testa, valida, gera os quatro pacotes e publica a release com notas geradas.
-- [ ] **T8.** `upstream-sync.yml` que abre issue com diff. Verificar: critério 4 em fork de teste.
+- [x] **T8.** `tools.inventory.sync_report` + `upstream-sync.yml` semanal: fontes que andaram, artefatos novos/removidos/alterados e arquivos derivados (via PROVENANCE) que mudaram; abre issue, nunca altera conteúdo. Verificado localmente em 2026-11-06 (ECC e anthropics/skills andaram; nenhum arquivo derivado mudou).
 - [ ] **T9.** Verificar cada pacote num harness real (Codex, Cursor, Gemini CLI, OpenCode): carregamento e gatilho de uma skill-piloto.

@@ -1,0 +1,32 @@
+name: upstream-sync
+
+# Weekly report of what changed upstream since the pinned commits. It opens an issue for review and
+# never changes repository content.
+on:
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - run: uv run python -m tools.inventory.sync_report "$RUNNER_TEMP/sync" --out report.md
+      - name: Open an issue when sources moved
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! grep -q "Nothing to review" report.md; then
+            gh issue create --title "Upstream sync $(date -u +%Y-%m-%d)" --body-file report.md --label upstream-sync || \
+            gh issue create --title "Upstream sync $(date -u +%Y-%m-%d)" --body-file report.md
+          fi
