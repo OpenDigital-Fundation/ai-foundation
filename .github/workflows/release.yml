@@ -1,0 +1,31 @@
+name: release
+
+# Builds release artefacts from a version tag. Creating the tag is a deliberate, human step.
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - run: uv run pytest -q
+      - run: uv run python -m tools.validate
+      - name: Build adapters
+        run: |
+          uv run python -m tools.build adapters dist
+          cd dist && for h in agent-skills cursor gemini opencode; do zip -qr "../ai-foundation-${h}-${GITHUB_REF_NAME}.zip" "$h"; done
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+        run: gh release create "$TAG" ai-foundation-*.zip --generate-notes --title "$TAG"

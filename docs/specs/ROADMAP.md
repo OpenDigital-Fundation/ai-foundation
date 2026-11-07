@@ -62,7 +62,7 @@ Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística
 | `foundation/catalog-governance` | implementada (falta T6: revisão humana da tabela de domínios) |
 | `foundation/source-curation` | implementada; 100% do inventário decidido (verificado no CI) |
 | `foundation/quality-gates` | validação estática implementada; faltam calibração do limiar (T3), runner de evals (T7–T9) |
-| `foundation/distribution` | marketplace e profiles implementados; faltam adaptadores multi-harness e release (T3–T8) |
+| `foundation/distribution` | marketplace, profiles, adaptadores (Agent Skills, Cursor, Gemini, OpenCode) e release implementados; faltam sync upstream (T8) e verificação em harness real (T9) |
 | `principles`, `workflow`, `testing`, `debugging`, `code-quality` | primeira versão implementada (`experimental`); faltam evals |
 | `agent-engineering` | parcial: `parallel-agents`, `writing-skills`, `session-retrospective` portados; fusão com `skill-creator` pendente |
 | `architecture`, `security` | primeira versão implementada (`experimental`); faltam evals |
