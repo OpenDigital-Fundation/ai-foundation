@@ -112,3 +112,21 @@ def test_cli_preflights_entire_selection_before_starting_any_domain(tmp_path, mo
         main([str(sources), "--domain", "testing", "--domain", "languages"])
     assert sentinel.read_text() == "Existing output\n"
     assert (tmp_path / "catalog/catalog.yaml").read_bytes() == before
+
+
+def test_apache_reference_files_carry_modification_notice(tmp_path):
+    sources, _, domain = prepare(tmp_path, "testing")
+    guide = sources / "getsentry_skills/synthetic/guide"
+    (guide / "references").mkdir(parents=True)
+    (guide / "SKILL.md").write_text("---\nname: guide\n---\n# Apache guide\n")
+    (guide / "references/topic.md").write_text("# Topic\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the Apache notice fixture only.",
+        "body": "# Synthetic browser check\n\nUse the guide below.",
+        "reference_dirs": {"guide": "getsentry/skills:synthetic/guide"},
+    }}})
+    refs = domain / "skills/browser-testing/references/guide"
+    for f in (refs / "README.md", refs / "references/topic.md"):
+        text = f.read_text()
+        assert "Modified by OpenDigital from getsentry/skills (Apache-2.0)" in text, f
+        assert text.count("Modified by OpenDigital") == 1

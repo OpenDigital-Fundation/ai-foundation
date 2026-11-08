@@ -1144,744 +1144,729 @@ excluded:
 - key: "vercel-labs/agent-skills:skill:writing-guidelines"
   reason: license
   note: No licence declared.
-- key: anthropics/claude-cookbooks:command:budget-impact
+- key: "anthropics/claude-cookbooks:command:budget-impact"
   reason: duplicate-of
-  into: &id003
+  into:
   - finance/financial-analysis
-- key: anthropics/claude-cookbooks:command:slash-command-test
+- key: "anthropics/claude-cookbooks:command:slash-command-test"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:command:strategic-brief
+- key: "anthropics/claude-cookbooks:command:strategic-brief"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:command:talent-scan
+- key: "anthropics/claude-cookbooks:command:talent-scan"
   reason: duplicate-of
-  into: &id002
+  into:
   - operations/people-operations
-- key: trailofbits/skills:hook:cleanup-clones
+- key: "trailofbits/skills:hook:cleanup-clones"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:hook:hooks
+- key: "trailofbits/skills:hook:hooks"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:hook:intercept-github-curl
+- key: "trailofbits/skills:hook:intercept-github-curl"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:hook:intercept-github-fetch
+- key: "trailofbits/skills:hook:intercept-github-fetch"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:hook:persist-session-id
+- key: "trailofbits/skills:hook:persist-session-id"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: anthropics/claude-cookbooks:hook:pre-bash
+- key: "anthropics/claude-cookbooks:hook:pre-bash"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:hook:pre-write
+- key: "anthropics/claude-cookbooks:hook:pre-write"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:hook:report-tracker
+- key: "anthropics/claude-cookbooks:hook:report-tracker"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:hook:script-usage-logger
+- key: "anthropics/claude-cookbooks:hook:script-usage-logger"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:hook:session-start
+- key: "anthropics/claude-cookbooks:hook:session-start"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: trailofbits/skills:hook:setup-shims
+- key: "trailofbits/skills:hook:setup-shims"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:agentic-actions-auditor
+- key: "trailofbits/skills:skill:agentic-actions-auditor"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:agents-md
+- key: "getsentry/skills:skill:agents-md"
   reason: duplicate-of
   into:
   - agent-engineering/harness-design
-- key: trailofbits/skills:skill:audit-context-building
+- key: "trailofbits/skills:skill:audit-context-building"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: vercel-labs/skills:skill:find-skills
+- key: "vercel-labs/skills:skill:find-skills"
   reason: vendor-specific
   note: Discovery through the skills.sh registry; this catalog is browsed via docs/CATALOG.md.
-- key: trailofbits/skills:skill:harness-writing
+- key: "trailofbits/skills:skill:harness-writing"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:prompt-optimizer
+- key: "openai/skills:skill:skill-creator"
   reason: duplicate-of
   into:
-  - ai-engineering/prompt-engineering
-- key: openai/skills:skill:skill-creator
-  reason: duplicate-of
-  into: &id008
   - agent-engineering/skill-authoring
-- key: trailofbits/skills:skill:skill-improver
+- key: "trailofbits/skills:skill:skill-improver"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:skill-installer
+- key: "openai/skills:skill:skill-installer"
   reason: vendor-specific
   note: Codex-specific install and tooling.
-- key: getsentry/skills:skill:skill-scanner
-  reason: duplicate-of
-  into: &id001
-  - security/agent-security
-- key: getsentry/skills:skill:skill-writer
+- key: "getsentry/skills:skill:skill-writer"
   reason: duplicate-of
   into:
   - agent-engineering/skill-authoring
-- key: trailofbits/skills:skill:slicing-code-context
+- key: "trailofbits/skills:skill:slicing-code-context"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:token-integration-analyzer
+- key: "trailofbits/skills:skill:token-integration-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:1-mcp-resolver
+- key: "trailofbits/skills:agent:1-mcp-resolver"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:mcp:.mcp
+- key: "trailofbits/skills:mcp:.mcp"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:chrome-mcp-troubleshooting
+- key: "trailofbits/skills:skill:chrome-mcp-troubleshooting"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:coverage-analysis
+- key: "trailofbits/skills:skill:coverage-analysis"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:goal-prompt
+- key: "trailofbits/skills:skill:goal-prompt"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: anthropics/claude-cookbooks:skill:applying-brand-guidelines
+- key: "anthropics/claude-cookbooks:skill:applying-brand-guidelines"
   reason: duplicate-of
   into:
   - brand/brand-identity
-- key: getsentry/skills:skill:brand-guidelines
+- key: "getsentry/skills:skill:brand-guidelines"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: trailofbits/skills:agent:c-review-worker
+- key: "trailofbits/skills:agent:c-review-worker"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: anthropics/claude-cookbooks:agent:code-reviewer
+- key: "anthropics/claude-cookbooks:agent:code-reviewer"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: trailofbits/skills:agent:rust-review-dedup-judge
+- key: "trailofbits/skills:agent:rust-review-dedup-judge"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:rust-review-fp-judge
+- key: "trailofbits/skills:agent:rust-review-fp-judge"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:rust-review-worker
+- key: "trailofbits/skills:agent:rust-review-worker"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:command:diff-review
+- key: "trailofbits/skills:command:diff-review"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:command:git-cleanup
+- key: "trailofbits/skills:command:git-cleanup"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: anthropics/claude-cookbooks:command:link-review
+- key: "anthropics/claude-cookbooks:command:link-review"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:command:notebook-review
+- key: "anthropics/claude-cookbooks:command:notebook-review"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:command:review-issue
+- key: "anthropics/claude-cookbooks:command:review-issue"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:command:review-pr
+- key: "anthropics/claude-cookbooks:command:review-pr"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: anthropics/claude-cookbooks:command:review-pr-ci
+- key: "anthropics/claude-cookbooks:command:review-pr-ci"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: trailofbits/skills:skill:audit-augmentation
+- key: "trailofbits/skills:skill:audit-augmentation"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:audit-prep-assistant
+- key: "trailofbits/skills:skill:audit-prep-assistant"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:c-review
+- key: "trailofbits/skills:skill:c-review"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:claude-settings-audit
+- key: "getsentry/skills:skill:claude-settings-audit"
   reason: duplicate-of
-  into: *id001
-- key: getsentry/skills:skill:code-review
+  into:
+  - security/agent-security
+- key: "getsentry/skills:skill:code-review"
   reason: duplicate-of
-  into: &id006
+  into:
   - code-quality/code-review
-- key: getsentry/skills:skill:code-simplifier
+- key: "getsentry/skills:skill:code-simplifier"
   reason: duplicate-of
   into:
   - code-quality/simplification
-- key: anthropics/claude-cookbooks:skill:cookbook-audit
+- key: "anthropics/claude-cookbooks:skill:cookbook-audit"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: trailofbits/skills:skill:differential-review
+- key: "trailofbits/skills:skill:differential-review"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:django-access-review
-  reason: duplicate-of
-  into: &id004
-  - security/security-audit
-- key: getsentry/skills:skill:django-perf-review
+- key: "getsentry/skills:skill:django-perf-review"
   reason: duplicate-of
   into:
   - languages/python
-- key: getsentry/skills:skill:gh-review-requests
+- key: "getsentry/skills:skill:gh-review-requests"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: trailofbits/skills:skill:review-walkthrough
+- key: "trailofbits/skills:skill:review-walkthrough"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:rust-review
+- key: "trailofbits/skills:skill:rust-review"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:supply-chain-risk-auditor
+- key: "trailofbits/skills:skill:supply-chain-risk-auditor"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:trailmark-review-gate
+- key: "trailofbits/skills:skill:trailmark-review-gate"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:zeroize-audit
+- key: "trailofbits/skills:skill:zeroize-audit"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:data-flow-analyzer
+- key: "trailofbits/skills:agent:data-flow-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:poc-builder
+- key: "trailofbits/skills:agent:poc-builder"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:4-report-assembler
+- key: "trailofbits/skills:agent:4-report-assembler"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:blog-writing-guide
+- key: "getsentry/skills:skill:blog-writing-guide"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: getsentry/skills:skill:doc-coauthoring
+- key: "getsentry/skills:skill:doc-coauthoring"
   reason: duplicate-of
   into:
   - documents/doc-coauthoring
-- key: getsentry/skills:skill:document-api-endpoint
+- key: "getsentry/skills:skill:document-api-endpoint"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: openai/skills:skill:jupyter-notebook
+- key: "openai/skills:skill:jupyter-notebook"
   reason: out-of-scope
   note: No owning capability yet; reopen with a domain spec if demand appears.
-- key: openai/skills:skill:notion-research-documentation
+- key: "openai/skills:skill:notion-research-documentation"
   reason: vendor-specific
   note: Requires a specific SaaS connector.
-- key: openai/skills:skill:openai-docs
+- key: "openai/skills:skill:openai-docs"
   reason: vendor-specific
   note: Bound to OpenAI products and APIs.
-- key: openai/skills:skill:pdf
+- key: "openai/skills:skill:pdf"
   reason: duplicate-of
   into:
   - documents/office-documents
-- key: trailofbits/skills:skill:report-regressions
+- key: "trailofbits/skills:skill:report-regressions"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:writing-lean-proofs
+- key: "trailofbits/skills:skill:writing-lean-proofs"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:2b-rust-source-analyzer
+- key: "trailofbits/skills:agent:2b-rust-source-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:3b-rust-compiler-analyzer
+- key: "trailofbits/skills:agent:3b-rust-compiler-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:cargo-fuzz
+- key: "trailofbits/skills:skill:cargo-fuzz"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:modern-cpp
+- key: "trailofbits/skills:skill:modern-cpp"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:modern-python
+- key: "trailofbits/skills:skill:modern-python"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: anthropics/claude-cookbooks:agent:recruiter
+- key: "anthropics/claude-cookbooks:agent:recruiter"
   reason: duplicate-of
-  into: *id002
-- key: trailofbits/skills:command:burp-search
+  into:
+  - operations/people-operations
+- key: "trailofbits/skills:command:burp-search"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:burpsuite-project-parser
+- key: "trailofbits/skills:skill:burpsuite-project-parser"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:notion-meeting-intelligence
+- key: "openai/skills:skill:notion-meeting-intelligence"
   reason: vendor-specific
   note: Requires a specific SaaS connector.
-- key: anthropics/claude-cookbooks:command:add-registry
+- key: "anthropics/claude-cookbooks:command:add-registry"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: openai/skills:skill:define-goal
+- key: "openai/skills:skill:define-goal"
   reason: duplicate-of
   into:
   - workflow/brainstorming
-- key: anthropics/claude-cookbooks:agent:financial-analyst
-  reason: duplicate-of
-  into: *id003
-- key: anthropics/claude-cookbooks:skill:analyzing-financial-statements
-  reason: duplicate-of
-  into: *id003
-- key: openai/skills:skill:cloudflare-deploy
-  reason: vendor-specific
-  note: Provider-specific; platform/deployment covers the generic flow.
-- key: anthropics/claude-cookbooks:skill:creating-financial-models
-  reason: duplicate-of
-  into: *id003
-- key: openai/skills:skill:gh-fix-ci
-  reason: duplicate-of
-  into: &id010
-  - platform/github-operations
-- key: trailofbits/skills:skill:let-fate-decide
-  reason: license
-  note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:netlify-deploy
-  reason: vendor-specific
-  note: Provider-specific; platform/deployment covers the generic flow.
-- key: trailofbits/skills:skill:open-sourcing
-  reason: license
-  note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:render-deploy
-  reason: vendor-specific
-  note: Provider-specific; platform/deployment covers the generic flow.
-- key: getsentry/skills:skill:sred-project-organizer
-  reason: vendor-specific
-  note: Sentry conventions, brand or internal services.
-- key: getsentry/skills:skill:sred-work-summary
-  reason: vendor-specific
-  note: Sentry conventions, brand or internal services.
-- key: openai/skills:skill:vercel-deploy
-  reason: vendor-specific
-  note: Provider-specific; platform/deployment covers the generic flow.
-- key: trailofbits/skills:command:audit
-  reason: license
-  note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:algorand-vulnerability-scanner
-  reason: license
-  note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:cairo-vulnerability-scanner
-  reason: license
-  note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:cosmos-vulnerability-scanner
-  reason: license
-  note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:gha-security-review
-  reason: duplicate-of
-  into: *id004
-- key: getsentry/skills:skill:secret-serialization
+- key: "anthropics/claude-cookbooks:agent:financial-analyst"
   reason: duplicate-of
   into:
-  - security/secrets-hygiene
-- key: trailofbits/skills:skill:secure-workflow-guide
+  - finance/financial-analysis
+- key: "anthropics/claude-cookbooks:skill:analyzing-financial-statements"
+  reason: duplicate-of
+  into:
+  - finance/financial-analysis
+- key: "openai/skills:skill:cloudflare-deploy"
+  reason: vendor-specific
+  note: Provider-specific; platform/deployment covers the generic flow.
+- key: "anthropics/claude-cookbooks:skill:creating-financial-models"
+  reason: duplicate-of
+  into:
+  - finance/financial-analysis
+- key: "openai/skills:skill:gh-fix-ci"
+  reason: duplicate-of
+  into:
+  - platform/github-operations
+- key: "trailofbits/skills:skill:let-fate-decide"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:security-best-practices
+- key: "openai/skills:skill:netlify-deploy"
+  reason: vendor-specific
+  note: Provider-specific; platform/deployment covers the generic flow.
+- key: "trailofbits/skills:skill:open-sourcing"
+  reason: license
+  note: CC BY-SA 4.0; linked from security/external-references.
+- key: "openai/skills:skill:render-deploy"
+  reason: vendor-specific
+  note: Provider-specific; platform/deployment covers the generic flow.
+- key: "getsentry/skills:skill:sred-project-organizer"
+  reason: vendor-specific
+  note: Sentry conventions, brand or internal services.
+- key: "getsentry/skills:skill:sred-work-summary"
+  reason: vendor-specific
+  note: Sentry conventions, brand or internal services.
+- key: "openai/skills:skill:vercel-deploy"
+  reason: vendor-specific
+  note: Provider-specific; platform/deployment covers the generic flow.
+- key: "trailofbits/skills:command:audit"
+  reason: license
+  note: CC BY-SA 4.0; linked from security/external-references.
+- key: "trailofbits/skills:skill:algorand-vulnerability-scanner"
+  reason: license
+  note: CC BY-SA 4.0; linked from security/external-references.
+- key: "trailofbits/skills:skill:cairo-vulnerability-scanner"
+  reason: license
+  note: CC BY-SA 4.0; linked from security/external-references.
+- key: "trailofbits/skills:skill:cosmos-vulnerability-scanner"
+  reason: license
+  note: CC BY-SA 4.0; linked from security/external-references.
+- key: "trailofbits/skills:skill:secure-workflow-guide"
+  reason: license
+  note: CC BY-SA 4.0; linked from security/external-references.
+- key: "openai/skills:skill:security-best-practices"
   reason: duplicate-of
   into:
   - security/security-audit
-- key: getsentry/skills:skill:security-model
+- key: "getsentry/skills:skill:security-model"
   reason: duplicate-of
   into:
   - security/threat-modeling
-- key: openai/skills:skill:security-ownership-map
+- key: "openai/skills:skill:security-ownership-map"
   reason: out-of-scope
   note: No owning capability yet; reopen with a domain spec if demand appears.
-- key: getsentry/skills:skill:security-review
+- key: "getsentry/skills:skill:security-review"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:security-threat-model
-  reason: duplicate-of
-  into:
-  - security/threat-modeling
-- key: trailofbits/skills:skill:solana-vulnerability-scanner
+- key: "trailofbits/skills:skill:solana-vulnerability-scanner"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:substrate-vulnerability-scanner
+- key: "trailofbits/skills:skill:substrate-vulnerability-scanner"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:ton-vulnerability-scanner
+- key: "trailofbits/skills:skill:ton-vulnerability-scanner"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:vulnerability-triage-brocards
+- key: "trailofbits/skills:skill:vulnerability-triage-brocards"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:5c-poc-verifier
+- key: "trailofbits/skills:agent:5c-poc-verifier"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:6-test-generator
+- key: "trailofbits/skills:agent:6-test-generator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:exploitability-verifier
+- key: "trailofbits/skills:agent:exploitability-verifier"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:constant-time-testing
+- key: "trailofbits/skills:skill:constant-time-testing"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:mermaid-to-proverif
+- key: "trailofbits/skills:skill:mermaid-to-proverif"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:mutation-testing
+- key: "trailofbits/skills:skill:mutation-testing"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:property-based-testing
+- key: "trailofbits/skills:skill:property-based-testing"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:testing-handbook-generator
+- key: "trailofbits/skills:skill:testing-handbook-generator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:figma-create-design-system-rules
+- key: "openai/skills:skill:figma-create-design-system-rules"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: openai/skills:skill:winui-app
+- key: "openai/skills:skill:winui-app"
   reason: out-of-scope
   note: No owning capability yet; reopen with a domain spec if demand appears.
-- key: trailofbits/skills:agent:0-preflight
+- key: "trailofbits/skills:agent:0-preflight"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:2-source-analyzer
+- key: "trailofbits/skills:agent:2-source-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:3-tu-compiler-analyzer
+- key: "trailofbits/skills:agent:3-tu-compiler-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:5-poc-generator
+- key: "trailofbits/skills:agent:5-poc-generator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:5b-poc-validator
+- key: "trailofbits/skills:agent:5b-poc-validator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:adversarial-modeler
+- key: "trailofbits/skills:agent:adversarial-modeler"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:arithmetic-scanner
+- key: "trailofbits/skills:agent:arithmetic-scanner"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:code-slice-worker
+- key: "trailofbits/skills:agent:code-slice-worker"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:dimension-annotator
+- key: "trailofbits/skills:agent:dimension-annotator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:dimension-discoverer
+- key: "trailofbits/skills:agent:dimension-discoverer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:dimension-propagator
+- key: "trailofbits/skills:agent:dimension-propagator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:dimension-validator
+- key: "trailofbits/skills:agent:dimension-validator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:draw
+- key: "trailofbits/skills:agent:draw"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:fixer
+- key: "trailofbits/skills:agent:fixer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:agent:function-analyzer
+- key: "trailofbits/skills:agent:function-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:agent:senpai
+- key: "getsentry/skills:agent:senpai"
   reason: source-internal
-- key: trailofbits/skills:agent:sharp-edges-analyzer
+- key: "trailofbits/skills:agent:sharp-edges-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:command:ct-check
+- key: "trailofbits/skills:command:ct-check"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:command:entry-points
+- key: "trailofbits/skills:command:entry-points"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: anthropics/claude-cookbooks:command:model-check
+- key: "anthropics/claude-cookbooks:command:model-check"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
-- key: trailofbits/skills:command:scan-apk
+- key: "trailofbits/skills:command:scan-apk"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:command:semgrep-rule
+- key: "trailofbits/skills:command:semgrep-rule"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:address-sanitizer
+- key: "trailofbits/skills:skill:address-sanitizer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:adjudicate-regression
+- key: "trailofbits/skills:skill:adjudicate-regression"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:aflpp
+- key: "trailofbits/skills:skill:aflpp"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:aspnet-core
+- key: "openai/skills:skill:aspnet-core"
   reason: duplicate-of
   into:
   - languages/dotnet
-- key: trailofbits/skills:skill:atheris
+- key: "trailofbits/skills:skill:atheris"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:browse-local-sentry
+- key: "getsentry/skills:skill:browse-local-sentry"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: openai/skills:skill:chatgpt-apps
+- key: "openai/skills:skill:chatgpt-apps"
   reason: vendor-specific
   note: Bound to OpenAI products and APIs.
-- key: openai/skills:skill:cli-creator
+- key: "openai/skills:skill:cli-creator"
   reason: vendor-specific
   note: Codex-specific install and tooling.
-- key: trailofbits/skills:skill:code-improver
+- key: "trailofbits/skills:skill:code-improver"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:code-maturity-assessor
+- key: "trailofbits/skills:skill:code-maturity-assessor"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:codeql
+- key: "trailofbits/skills:skill:codeql"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:commit
+- key: "getsentry/skills:skill:commit"
   reason: duplicate-of
-  into: &id005
+  into:
   - platform/git-workflow
-- key: trailofbits/skills:skill:constant-time-analysis
+- key: "trailofbits/skills:skill:constant-time-analysis"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:create-branch
+- key: "getsentry/skills:skill:create-branch"
   reason: duplicate-of
-  into: *id005
-- key: trailofbits/skills:skill:crypto-protocol-diagram
+  into:
+  - platform/git-workflow
+- key: "trailofbits/skills:skill:crypto-protocol-diagram"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:cvss-scoring
+- key: "trailofbits/skills:skill:cvss-scoring"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:devcontainer-setup
+- key: "trailofbits/skills:skill:devcontainer-setup"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:diagramming-code
+- key: "trailofbits/skills:skill:diagramming-code"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:dimensional-analysis
+- key: "trailofbits/skills:skill:dimensional-analysis"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:dwarf-expert
+- key: "trailofbits/skills:skill:dwarf-expert"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:entry-point-analyzer
+- key: "trailofbits/skills:skill:entry-point-analyzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:figma
+- key: "openai/skills:skill:figma"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: openai/skills:skill:figma-code-connect-components
+- key: "openai/skills:skill:figma-code-connect-components"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: openai/skills:skill:figma-create-new-file
+- key: "openai/skills:skill:figma-create-new-file"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: openai/skills:skill:figma-generate-design
+- key: "openai/skills:skill:figma-generate-design"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: openai/skills:skill:figma-generate-library
+- key: "openai/skills:skill:figma-generate-library"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: openai/skills:skill:figma-use
+- key: "openai/skills:skill:figma-use"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: getsentry/skills:skill:find-bugs
+- key: "getsentry/skills:skill:find-bugs"
   reason: duplicate-of
-  into: *id006
-- key: trailofbits/skills:skill:firebase-apk-scanner
+  into:
+  - code-quality/code-review
+- key: "trailofbits/skills:skill:firebase-apk-scanner"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:fp-check
+- key: "trailofbits/skills:skill:fp-check"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:fuzzing-dictionary
+- key: "trailofbits/skills:skill:fuzzing-dictionary"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:fuzzing-obstacles
+- key: "trailofbits/skills:skill:fuzzing-obstacles"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:genotoxic
+- key: "trailofbits/skills:skill:genotoxic"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:gh-address-comments
+- key: "openai/skills:skill:gh-address-comments"
   reason: duplicate-of
   into:
   - code-quality/receiving-code-review
-- key: trailofbits/skills:skill:gh-cli
+- key: "trailofbits/skills:skill:gh-cli"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:graph-evolution
+- key: "trailofbits/skills:skill:graph-evolution"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:guidelines-advisor
+- key: "trailofbits/skills:skill:guidelines-advisor"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:hatch-pet
+- key: "openai/skills:skill:hatch-pet"
   reason: out-of-scope
-- key: trailofbits/skills:skill:hunt-regressions
+- key: "trailofbits/skills:skill:hunt-regressions"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:imagegen
+- key: "openai/skills:skill:imagegen"
   reason: vendor-specific
   note: Bound to OpenAI products and APIs.
-- key: trailofbits/skills:skill:interpreting-culture-index
+- key: "trailofbits/skills:skill:interpreting-culture-index"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:iterate-pr
-  reason: duplicate-of
-  into: &id009
-  - platform/github-operations
-- key: trailofbits/skills:skill:libafl
+- key: "trailofbits/skills:skill:libafl"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:libfuzzer
+- key: "trailofbits/skills:skill:libfuzzer"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:linear
+- key: "openai/skills:skill:linear"
   reason: vendor-specific
   note: Requires a specific SaaS connector.
-- key: openai/skills:skill:migrate-to-codex
+- key: "openai/skills:skill:migrate-to-codex"
   reason: vendor-specific
   note: Codex-specific install and tooling.
-- key: openai/skills:skill:notion-knowledge-capture
+- key: "openai/skills:skill:notion-knowledge-capture"
   reason: vendor-specific
   note: Requires a specific SaaS connector.
-- key: trailofbits/skills:skill:ossfuzz
+- key: "trailofbits/skills:skill:ossfuzz"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:patching-bugs
+- key: "trailofbits/skills:skill:patching-bugs"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:playwright
+- key: "openai/skills:skill:playwright"
   reason: duplicate-of
-  into: &id007
+  into:
   - testing/browser-testing
-- key: openai/skills:skill:playwright-interactive
+- key: "openai/skills:skill:playwright-interactive"
   reason: duplicate-of
-  into: *id007
-- key: openai/skills:skill:plugin-creator
+  into:
+  - testing/browser-testing
+- key: "openai/skills:skill:plugin-creator"
   reason: duplicate-of
-  into: *id008
-- key: trailofbits/skills:skill:post-patch-validation
+  into:
+  - agent-engineering/skill-authoring
+- key: "trailofbits/skills:skill:post-patch-validation"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:pr-improver
+- key: "trailofbits/skills:skill:pr-improver"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:pr-link-issue
+- key: "getsentry/skills:skill:pr-link-issue"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: getsentry/skills:skill:pr-screenshots
+- key: "getsentry/skills:skill:pr-screenshots"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: getsentry/skills:skill:pr-writer
+- key: "getsentry/skills:skill:pr-writer"
   reason: duplicate-of
-  into: *id009
-- key: trailofbits/skills:skill:prepare-regression
+  into:
+  - platform/github-operations
+- key: "trailofbits/skills:skill:prepare-regression"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:presentation-creator
+- key: "getsentry/skills:skill:presentation-creator"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: trailofbits/skills:skill:prove-patch
+- key: "trailofbits/skills:skill:prove-patch"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:regression-hunt
+- key: "trailofbits/skills:skill:regression-hunt"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:replay-regression
+- key: "trailofbits/skills:skill:replay-regression"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:reproduce-bug
+- key: "trailofbits/skills:skill:reproduce-bug"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:reproduce-regression
+- key: "trailofbits/skills:skill:reproduce-regression"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:ruzzy
+- key: "trailofbits/skills:skill:ruzzy"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:sarif-parsing
+- key: "trailofbits/skills:skill:sarif-parsing"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:screenshot
+- key: "openai/skills:skill:screenshot"
   reason: duplicate-of
-  into: *id007
-- key: trailofbits/skills:skill:second-opinion
+  into:
+  - testing/browser-testing
+- key: "trailofbits/skills:skill:second-opinion"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:semgrep
+- key: "trailofbits/skills:skill:semgrep"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:semgrep-rule-creator
+- key: "trailofbits/skills:skill:semgrep-rule-creator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:semgrep-rule-variant-creator
+- key: "trailofbits/skills:skill:semgrep-rule-variant-creator"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:sentry
+- key: "openai/skills:skill:sentry"
   reason: vendor-specific
   note: Requires a specific SaaS connector.
-- key: trailofbits/skills:skill:sharp-edges
+- key: "trailofbits/skills:skill:sharp-edges"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:speech
+- key: "openai/skills:skill:speech"
   reason: vendor-specific
   note: Bound to OpenAI products and APIs.
-- key: trailofbits/skills:skill:trailmark
+- key: "trailofbits/skills:skill:trailmark"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:trailmark-structural
+- key: "trailofbits/skills:skill:trailmark-structural"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:trailmark-summary
+- key: "trailofbits/skills:skill:trailmark-summary"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:trailmark-variant-neighborhood
+- key: "trailofbits/skills:skill:trailmark-variant-neighborhood"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:transcribe
+- key: "openai/skills:skill:transcribe"
   reason: vendor-specific
   note: Bound to OpenAI products and APIs.
-- key: getsentry/skills:skill:typing-exclusion-worker
+- key: "getsentry/skills:skill:typing-exclusion-worker"
   reason: source-internal
-- key: trailofbits/skills:skill:validate-bug
+- key: "trailofbits/skills:skill:validate-bug"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:variant-analysis
+- key: "trailofbits/skills:skill:variant-analysis"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:vector-forge
+- key: "trailofbits/skills:skill:vector-forge"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:wycheproof
+- key: "trailofbits/skills:skill:wycheproof"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:yara-rule-authoring
+- key: "trailofbits/skills:skill:yara-rule-authoring"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:yeet
+- key: "openai/skills:skill:yeet"
   reason: duplicate-of
-  into: *id010
-- key: trailofbits/skills:agent:spec-compliance-checker
+  into:
+  - platform/github-operations
+- key: "trailofbits/skills:agent:spec-compliance-checker"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:figma-implement-design
+- key: "openai/skills:skill:figma-implement-design"
   reason: license
   note: Figma terms, not a permissive licence.
-- key: trailofbits/skills:skill:github-triage
+- key: "trailofbits/skills:skill:github-triage"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:implement-patch
+- key: "trailofbits/skills:skill:implement-patch"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: openai/skills:skill:notion-spec-to-implementation
+- key: "openai/skills:skill:notion-spec-to-implementation"
   reason: vendor-specific
   note: Requires a specific SaaS connector.
-- key: trailofbits/skills:skill:spec-to-code-compliance
+- key: "trailofbits/skills:skill:spec-to-code-compliance"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: trailofbits/skills:skill:trailmark-finding-triage
+- key: "trailofbits/skills:skill:trailmark-finding-triage"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: getsentry/skills:skill:triage-frontend-issues
+- key: "getsentry/skills:skill:triage-frontend-issues"
   reason: source-internal

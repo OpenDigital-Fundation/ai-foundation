@@ -311,6 +311,7 @@ artifacts:
   - "affaan-m/ECC:skill:prompt-caching-strategy"
   - "affaan-m/ECC:skill:prompt-optimizer"
   - "affaan-m/ECC:skill:regex-vs-llm-structured-text"
+  - "getsentry/skills:skill:prompt-optimizer"
   - "msitarzewski/agency-agents:agent:Prompt Engineer"
 - id: ai-engineering/rag-pipelines
   type: skill
@@ -1253,6 +1254,7 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:github-ops"
   - "affaan-m/ECC:skill:opensource-pipeline"
+  - "getsentry/skills:skill:iterate-pr"
 - id: platform/incident-response
   type: skill
   capability: "Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess\
@@ -1388,6 +1390,7 @@ artifacts:
   - "affaan-m/ECC:skill:mcp-dependency-review"
   - "affaan-m/ECC:skill:security-scan"
   - "affaan-m/ECC:command:security-scan"
+  - "getsentry/skills:skill:skill-scanner"
 - id: security/external-references
   type: knowledge
   capability: Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP).
@@ -1400,6 +1403,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer"
+  - "getsentry/skills:skill:secret-serialization"
 - id: security/security-audit
   type: skill
   capability: Source-first security guidance or full audit with sandboxed validation and schema-checked findings.
@@ -1419,6 +1423,8 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Penetration Tester"
   - "msitarzewski/agency-agents:agent:Privacy Engineer"
   - "msitarzewski/agency-agents:agent:Senior SecOps Engineer"
+  - "getsentry/skills:skill:gha-security-review"
+  - "getsentry/skills:skill:django-access-review"
 - id: security/threat-modeling
   type: skill
   capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
@@ -1426,6 +1432,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "msitarzewski/agency-agents:agent:Security Architect"
+  - "openai/skills:skill:security-threat-model"
 - id: testing/browser-testing
   type: skill
   capability: "Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising\

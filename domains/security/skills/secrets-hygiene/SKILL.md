@@ -36,6 +36,10 @@ The incident is closed when the exposed credential is revoked and a fresh one is
 2. **Inventory and broker.** Find secrets already in play (code, `.env` files, CI variables, images) and move them into a secret manager with access policy and audit logging.
 3. **Rotate on a schedule.** Automate where the provider supports it; otherwise write a runbook. Overlap old and new during cutover so rotation is never an outage. Every credential has an owner, a lifetime and a revocation path.
 
+## Secrets that leak through serialization
+
+Generated `__repr__`, `toJSON`, logging and tracing can print a secret no one wrote to a log. To find these in Python or JavaScript/TypeScript code, follow [references/serialization-leaks/README.md](references/serialization-leaks/README.md).
+
 ## Hand-off
 
 For a full review of how an application handles credentials, use `security:security-audit`. For agent and MCP credentials, see `security:agent-security`.

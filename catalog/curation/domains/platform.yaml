@@ -127,6 +127,7 @@ artifacts:
   supersedes:
   - affaan-m/ECC:skill:github-ops
   - affaan-m/ECC:skill:opensource-pipeline
+  - getsentry/skills:skill:iterate-pr
   recipe:
     title: GitHub operations
     description: 'Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and
@@ -134,6 +135,13 @@ artifacts:
     base: s:github-ops
     remove:
     - ^For the ECC repository's maintainer release path.*?\n\n
+    append: '## Iterating on a PR until CI passes
+
+
+      To drive one PR to green — triage review feedback by severity, fix CI failures at the root, push and re-check until
+      only human gates remain — follow [references/pr-iteration.md](references/pr-iteration.md).
+
+      '
 - id: platform/incident-response
   type: skill
   capability: 'Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess

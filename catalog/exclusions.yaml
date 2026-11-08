@@ -638,18 +638,19 @@ excluded:
   note: Cookbook repository maintenance or demo.
 - key: "anthropics/claude-cookbooks:agent:financial-analyst"
   reason: duplicate-of
-  into: &id001
+  into:
   - finance/financial-analysis
 - key: "anthropics/claude-cookbooks:agent:recruiter"
   reason: duplicate-of
-  into: &id002
+  into:
   - operations/people-operations
 - key: "anthropics/claude-cookbooks:command:add-registry"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
 - key: "anthropics/claude-cookbooks:command:budget-impact"
   reason: duplicate-of
-  into: *id001
+  into:
+  - finance/financial-analysis
 - key: "anthropics/claude-cookbooks:command:link-review"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
@@ -676,7 +677,8 @@ excluded:
   note: Cookbook repository maintenance or demo.
 - key: "anthropics/claude-cookbooks:command:talent-scan"
   reason: duplicate-of
-  into: *id002
+  into:
+  - operations/people-operations
 - key: "anthropics/claude-cookbooks:hook:pre-bash"
   reason: source-internal
   note: Cookbook repository maintenance or demo.
@@ -694,7 +696,8 @@ excluded:
   note: Cookbook repository maintenance or demo.
 - key: "anthropics/claude-cookbooks:skill:analyzing-financial-statements"
   reason: duplicate-of
-  into: *id001
+  into:
+  - finance/financial-analysis
 - key: "anthropics/claude-cookbooks:skill:applying-brand-guidelines"
   reason: duplicate-of
   into:
@@ -704,7 +707,8 @@ excluded:
   note: Cookbook repository maintenance or demo.
 - key: "anthropics/claude-cookbooks:skill:creating-financial-models"
   reason: duplicate-of
-  into: *id001
+  into:
+  - finance/financial-analysis
 - key: "anthropics/skills:skill:academy-guide"
   reason: vendor-specific
 - key: "anthropics/skills:skill:brand-guidelines"
@@ -903,11 +907,11 @@ excluded:
   note: Sentry conventions, brand or internal services.
 - key: "getsentry/skills:skill:claude-settings-audit"
   reason: duplicate-of
-  into: &id007
+  into:
   - security/agent-security
 - key: "getsentry/skills:skill:code-review"
   reason: duplicate-of
-  into: &id004
+  into:
   - code-quality/code-review
 - key: "getsentry/skills:skill:code-simplifier"
   reason: duplicate-of
@@ -915,15 +919,12 @@ excluded:
   - code-quality/simplification
 - key: "getsentry/skills:skill:commit"
   reason: duplicate-of
-  into: &id003
+  into:
   - platform/git-workflow
 - key: "getsentry/skills:skill:create-branch"
   reason: duplicate-of
-  into: *id003
-- key: "getsentry/skills:skill:django-access-review"
-  reason: duplicate-of
-  into: &id005
-  - security/security-audit
+  into:
+  - platform/git-workflow
 - key: "getsentry/skills:skill:django-perf-review"
   reason: duplicate-of
   into:
@@ -937,17 +938,11 @@ excluded:
   note: Sentry conventions, brand or internal services.
 - key: "getsentry/skills:skill:find-bugs"
   reason: duplicate-of
-  into: *id004
+  into:
+  - code-quality/code-review
 - key: "getsentry/skills:skill:gh-review-requests"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: "getsentry/skills:skill:gha-security-review"
-  reason: duplicate-of
-  into: *id005
-- key: "getsentry/skills:skill:iterate-pr"
-  reason: duplicate-of
-  into: &id006
-  - platform/github-operations
 - key: "getsentry/skills:skill:pr-link-issue"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
@@ -956,18 +951,11 @@ excluded:
   note: Sentry conventions, brand or internal services.
 - key: "getsentry/skills:skill:pr-writer"
   reason: duplicate-of
-  into: *id006
+  into:
+  - platform/github-operations
 - key: "getsentry/skills:skill:presentation-creator"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: "getsentry/skills:skill:prompt-optimizer"
-  reason: duplicate-of
-  into:
-  - ai-engineering/prompt-engineering
-- key: "getsentry/skills:skill:secret-serialization"
-  reason: duplicate-of
-  into:
-  - security/secrets-hygiene
 - key: "getsentry/skills:skill:security-model"
   reason: duplicate-of
   into:
@@ -975,9 +963,6 @@ excluded:
 - key: "getsentry/skills:skill:security-review"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: "getsentry/skills:skill:skill-scanner"
-  reason: duplicate-of
-  into: *id007
 - key: "getsentry/skills:skill:skill-writer"
   reason: duplicate-of
   into:
@@ -1349,7 +1334,7 @@ excluded:
   - code-quality/receiving-code-review
 - key: "openai/skills:skill:gh-fix-ci"
   reason: duplicate-of
-  into: &id010
+  into:
   - platform/github-operations
 - key: "openai/skills:skill:hatch-pet"
   reason: out-of-scope
@@ -1389,21 +1374,23 @@ excluded:
   - documents/office-documents
 - key: "openai/skills:skill:playwright"
   reason: duplicate-of
-  into: &id008
+  into:
   - testing/browser-testing
 - key: "openai/skills:skill:playwright-interactive"
   reason: duplicate-of
-  into: *id008
+  into:
+  - testing/browser-testing
 - key: "openai/skills:skill:plugin-creator"
   reason: duplicate-of
-  into: &id009
+  into:
   - agent-engineering/skill-authoring
 - key: "openai/skills:skill:render-deploy"
   reason: vendor-specific
   note: Provider-specific; platform/deployment covers the generic flow.
 - key: "openai/skills:skill:screenshot"
   reason: duplicate-of
-  into: *id008
+  into:
+  - testing/browser-testing
 - key: "openai/skills:skill:security-best-practices"
   reason: duplicate-of
   into:
@@ -1411,16 +1398,13 @@ excluded:
 - key: "openai/skills:skill:security-ownership-map"
   reason: out-of-scope
   note: No owning capability yet; reopen with a domain spec if demand appears.
-- key: "openai/skills:skill:security-threat-model"
-  reason: duplicate-of
-  into:
-  - security/threat-modeling
 - key: "openai/skills:skill:sentry"
   reason: vendor-specific
   note: Requires a specific SaaS connector.
 - key: "openai/skills:skill:skill-creator"
   reason: duplicate-of
-  into: *id009
+  into:
+  - agent-engineering/skill-authoring
 - key: "openai/skills:skill:skill-installer"
   reason: vendor-specific
   note: Codex-specific install and tooling.
@@ -1438,7 +1422,8 @@ excluded:
   note: No owning capability yet; reopen with a domain spec if demand appears.
 - key: "openai/skills:skill:yeet"
   reason: duplicate-of
-  into: *id010
+  into:
+  - platform/github-operations
 - key: "SecurityStandards/agent-pentester:command:debug"
   reason: source-internal
   note: Commands of the pentester product itself.

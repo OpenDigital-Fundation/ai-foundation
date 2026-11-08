@@ -14,12 +14,61 @@ files:
     path: skills/mcp-dependency-review/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-security/references/skill-scanning/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/references/dangerous-code-patterns.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/references/dangerous-code-patterns.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/references/permission-analysis.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/references/permission-analysis.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/references/prompt-injection-patterns.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/references/prompt-injection-patterns.md
+    license: Apache-2.0
+    modification: adapted
 - path: skills/secrets-hygiene/SKILL.md
   derived_from:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: security/security-secrets-credential-engineer.md
     license: MIT
+    modification: adapted
+- path: skills/secrets-hygiene/references/serialization-leaks/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/secret-serialization/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/secrets-hygiene/references/serialization-leaks/references/javascript-typescript.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/secret-serialization/references/javascript-typescript.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/secrets-hygiene/references/serialization-leaks/references/python.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/secret-serialization/references/python.md
+    license: Apache-2.0
     modification: adapted
 - path: skills/security-audit/AI-AND-LLM.md
   derived_from:
@@ -126,6 +175,111 @@ files:
     path: skills/security-audit/WEB-PROTOCOL-AND-AUTH.md
     license: MIT
     modification: base
+- path: skills/security-audit/references/django-access/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/django-access-review/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/django-access/references/django-orm.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/django-access-review/references/django-orm.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/django-access/references/django-views.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/django-access-review/references/django-views.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/django-access/references/drf-permissions.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/django-access-review/references/drf-permissions.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/django-access/references/tenant-isolation.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/django-access-review/references/tenant-isolation.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/ai-prompt-injection-via-ci.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/ai-prompt-injection-via-ci.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/comment-triggered-commands.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/comment-triggered-commands.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/credential-escalation.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/credential-escalation.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/expression-injection.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/expression-injection.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/permissions-and-secrets.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/permissions-and-secrets.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/pwn-request.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/pwn-request.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/real-world-attacks.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/real-world-attacks.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/runner-infrastructure.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/runner-infrastructure.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/supply-chain.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/supply-chain.md
+    license: Apache-2.0
+    modification: adapted
 - path: skills/security-audit/report-schema.json
   derived_from:
   - source: SecurityStandards/skill-security-audit
@@ -167,6 +321,18 @@ files:
     commit: b859c51
     path: security/security-architect.md
     license: MIT
+    modification: adapted
+  - source: openai/skills
+    commit: 49f948f
+    path: skills/.curated/security-threat-model/SKILL.md
+    license: Apache-2.0
+    modification: merged-section
+- path: skills/threat-modeling/references/assets-and-controls.md
+  derived_from:
+  - source: openai/skills
+    commit: 49f948f
+    path: skills/.curated/security-threat-model/references/security-controls-and-assets.md
+    license: Apache-2.0
     modification: adapted
 - path: skills/threat-modeling/templates/threat-model.md
   derived_from:

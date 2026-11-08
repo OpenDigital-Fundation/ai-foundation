@@ -154,3 +154,7 @@ Before completing any GitHub operations task:
 - CI failures have been investigated (not just re-run)
 - releases include accurate changelogs
 - security alerts are acknowledged and tracked
+
+## Iterating on a PR until CI passes
+
+To drive one PR to green — triage review feedback by severity, fix CI failures at the root, push and re-check until only human gates remain — follow [references/pr-iteration.md](references/pr-iteration.md).

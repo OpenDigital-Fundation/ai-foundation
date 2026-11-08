@@ -32,6 +32,10 @@ and `xlsx` are licensed under the Apache License, Version 2.0
 (<https://www.apache.org/licenses/LICENSE-2.0>). Files derived from them carry a notice stating that
 they were modified, and `PROVENANCE.yaml` records the modification.
 
+[openai/skills](https://github.com/openai/skills) — skills with an Apache-2.0 `LICENSE.txt` (the `figma-*` skills carry Figma terms and are not copied). Same notice and provenance rules.
+
+[getsentry/skills](https://github.com/getsentry/skills) — Apache-2.0, except `security-review` (CC BY-SA 4.0, linked only). Same notice and provenance rules.
+
 ## Modified MIT (restricted)
 
 [millionco/react-doctor](https://github.com/millionco/react-doctor) — Copyright (c) 2026 Million Software, Inc. MIT with one modification: using the software or derivatives as AI training, fine-tuning or evaluation data, or reselling it as a hosted service, requires prior written permission. Vendored only in `domains/languages/skills/react-diagnostics/` with its licence text, and excluded from this catalog's evals (`metadata.eval_excluded`) until permission is granted.
@@ -45,4 +49,6 @@ redistribution in an MIT, commercially usable repository:
 - `SecurityStandards/agent-pentester` (AGPL-3.0)
 - `SecurityStandards/CTOSecurityChecklist`, `SecurityStandards/DevOpsSecurityChecklist` (CC BY-NC-SA 4.0)
 - `SecurityStandards/security-standards` (no licence declared)
+- `trailofbits/skills` and `getsentry/skills` `security-review` (CC BY-SA 4.0)
+- `openai/skills` `figma-*` (Figma terms)
 - `SecurityStandards/agent-reverse-engineer` (MIT; a product/MCP server, referenced rather than vendored)

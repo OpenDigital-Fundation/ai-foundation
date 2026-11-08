@@ -180,3 +180,7 @@ Redact before values enter the logger, tracer, exception, or model context. Add 
 ## Reviewing MCP, hook and plugin configuration
 
 Before approving or merging changes to `.mcp.json`, editor MCP settings, hooks or plugin manifests, run the static review in [references/mcp-config-review.md](references/mcp-config-review.md): it flags unpinned or mutable package references without executing any server.
+
+## Reviewing a third-party skill before adoption
+
+Before installing or vendoring a skill, follow [references/skill-scanning/README.md](references/skill-scanning/README.md): frontmatter and tool permissions, prompt-injection and dangerous-code patterns, URLs, and a severity-ranked report. Read the skill's scripts as data; never run them to find out what they do.

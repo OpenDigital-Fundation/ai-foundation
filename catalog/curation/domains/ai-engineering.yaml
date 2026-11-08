@@ -87,6 +87,7 @@ artifacts:
   - affaan-m/ECC:skill:prompt-caching-strategy
   - affaan-m/ECC:skill:prompt-optimizer
   - affaan-m/ECC:skill:regex-vs-llm-structured-text
+  - getsentry/skills:skill:prompt-optimizer
   - msitarzewski/agency-agents:agent:Prompt Engineer
   recipe:
     title: Prompt engineering
@@ -100,6 +101,8 @@ artifacts:
       - s:prompt-caching-strategy
       regex-or-llm.md:
       - s:regex-vs-llm-structured-text
+    reference_dirs:
+      prompt-optimization: getsentry/skills:skills/prompt-optimizer
     body: '# Prompt engineering
 
 

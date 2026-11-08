@@ -39,5 +39,5 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `claude-api` | anthropics/skills |
 | `mcp-server-development` | affaan-m/ECC, anthropics/skills, msitarzewski/agency-agents |
 | `ml-engineering` | affaan-m/ECC, msitarzewski/agency-agents |
-| `prompt-engineering` | affaan-m/ECC, msitarzewski/agency-agents |
+| `prompt-engineering` | affaan-m/ECC, getsentry/skills, msitarzewski/agency-agents |
 | `rag-pipelines` | affaan-m/ECC, msitarzewski/agency-agents |

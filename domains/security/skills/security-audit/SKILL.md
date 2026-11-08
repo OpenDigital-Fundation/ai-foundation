@@ -181,6 +181,13 @@ In full audit mode, follow all six phases in order:
 
 Do not end the run before one of exactly two terminal states: (a) all Phase 6 artifacts are written and both validators pass, or (b) `run_status: "incomplete"` is recorded with its exact reason and the gap is disclosed in the report. Never stop mid-phase.
 
+## Framework and CI deep dives
+
+Load when the target uses them; both come from `getsentry/skills` (Apache-2.0):
+
+- [references/github-actions/README.md](references/github-actions/README.md) — workflow exploitation review: `pull_request_target`, expression injection, comment-triggered commands, credential escalation, AI prompt injection through CI, runners and supply chain.
+- [references/django-access/README.md](references/django-access/README.md) — Django and DRF authorization review: IDOR, missing object-level checks, tenant isolation.
+
 ## Anti-patterns
 
 1. Checklist deviations presented as vulnerabilities.

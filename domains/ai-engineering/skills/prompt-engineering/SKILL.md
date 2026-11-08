@@ -32,3 +32,4 @@ Load only what the task needs:
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/prompt-caching.md`](references/prompt-caching.md) — covers Prompt Caching Strategy
 - [`references/regex-or-llm.md`](references/regex-or-llm.md) — covers Regex vs LLM for Structured Text Parsing
+- `references/prompt-optimization/`

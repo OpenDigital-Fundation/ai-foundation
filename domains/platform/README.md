@@ -38,6 +38,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `deployment` | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
 | `git-workflow` | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
-| `github-operations` | affaan-m/ECC |
+| `github-operations` | affaan-m/ECC, getsentry/skills |
 | `incident-response` | msitarzewski/agency-agents |
 | `reliability` | affaan-m/ECC, msitarzewski/agency-agents |

@@ -4,3 +4,6 @@ entries:
   rule: unpinned package execution (@latest)
   reason: The review guide quotes @latest as the dangerous pattern it teaches agents
     to flag.
+- path: domains/security/skills/security-audit/references/github-actions/references/runner-infrastructure.md
+  rule: absolute machine path
+  reason: The runner-persistence example quotes the GitHub-hosted runner workspace path that the attack targets.

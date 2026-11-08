@@ -42,7 +42,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `external-references` | contribuição original |
-| `agent-security` | affaan-m/ECC |
-| `secrets-hygiene` | msitarzewski/agency-agents |
-| `security-audit` | SecurityStandards/skill-security-audit, affaan-m/ECC, msitarzewski/agency-agents |
-| `threat-modeling` | msitarzewski/agency-agents |
+| `agent-security` | affaan-m/ECC, getsentry/skills |
+| `secrets-hygiene` | getsentry/skills, msitarzewski/agency-agents |
+| `security-audit` | SecurityStandards/skill-security-audit, affaan-m/ECC, getsentry/skills, msitarzewski/agency-agents |
+| `threat-modeling` | msitarzewski/agency-agents, openai/skills |

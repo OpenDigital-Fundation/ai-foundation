@@ -826,6 +826,55 @@ files:
     path: skills/prompt-caching-strategy/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/SOURCES.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/SOURCES.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/SPEC.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/SPEC.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/core-patterns.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/core-patterns.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/meta-optimization-loop.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/meta-optimization-loop.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/model-family-notes.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/model-family-notes.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/transformed-examples.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/transformed-examples.md
+    license: Apache-2.0
+    modification: adapted
 - path: skills/prompt-engineering/references/regex-or-llm.md
   derived_from:
   - source: affaan-m/ECC

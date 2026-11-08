@@ -33,9 +33,9 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [millionco/react-doctor](https://github.com/millionco/react-doctor) @ `9791c32` | Modified-MIT (no AI training/evaluation use, no resale without permission) | merge | 6 | 1 | 2 license, 1 out-of-scope |
 | [danicat/godoctor](https://github.com/danicat/godoctor) @ `ad2eacc` | Apache-2.0 | reference | 1 | 0 | 1 vendor-specific |
 | [ankitchiplunkar/frontend-design](https://github.com/ankitchiplunkar/frontend-design) @ `34bbe42` | MIT | merge | 0 | 0 | — |
-| [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 0 | 18 vendor-specific, 13 duplicate-of, 8 license, 4 out-of-scope |
+| [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 1 | 18 vendor-specific, 12 duplicate-of, 8 license, 4 out-of-scope |
 | [vercel-labs/skills](https://github.com/vercel-labs/skills) @ `d3701c1` | MIT | merge | 1 | 0 | 1 vendor-specific |
-| [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 0 | 18 duplicate-of, 10 vendor-specific, 3 source-internal, 1 license |
+| [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 5 | 12 duplicate-of, 10 vendor-specific, 3 source-internal, 1 license |
 | [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
 | [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) @ `ce8b262` | MIT | merge | 23 | 0 | 16 source-internal, 7 duplicate-of |
 
@@ -203,7 +203,8 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 
 - URL: <https://github.com/openai/skills> · commit `49f948faa9258a0c61caceaf225e179651397431` · licence NOASSERTION · policy `merge`
 - Note: Licence declared per skill: Apache-2.0 or MIT for most; Figma and Notion skills carry their own terms and are not copied
-- Excluded items by reason: vendor-specific: 18, duplicate-of: 13, license: 8, out-of-scope: 4
+- Used in: `security:threat-modeling`
+- Excluded items by reason: vendor-specific: 18, duplicate-of: 12, license: 8, out-of-scope: 4
 
 ## vercel-labs/skills
 
@@ -213,7 +214,8 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 ## getsentry/skills
 
 - URL: <https://github.com/getsentry/skills> · commit `e94f22214528d69899d09c627b3315ddc3544816` · licence Apache-2.0 · policy `merge`
-- Excluded items by reason: duplicate-of: 18, vendor-specific: 10, source-internal: 3, license: 1
+- Used in: `ai-engineering:prompt-engineering`, `platform:github-operations`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`
+- Excluded items by reason: duplicate-of: 12, vendor-specific: 10, source-internal: 3, license: 1
 
 ## trailofbits/skills
 

@@ -35,6 +35,14 @@ from tools.curation.links import unlink_missing
 from tools.curation.port import substitutions
 
 
+def _with_notice(text: str, notice: str) -> str:
+    """Apache-2.0 §4(b): modified files state the change; keep any frontmatter first."""
+    if "Modified by OpenDigital" in text:
+        return text
+    m = re.match(r"---\n.*?\n---\n", text, re.S)
+    return text[:m.end()] + notice + text[m.end():] if m else notice + text
+
+
 def _resolve(entry: str, idx) -> tuple[str, str, str]:
     if entry.startswith("c:"):
         name = entry[2:]
@@ -140,9 +148,13 @@ def build(root: Path, sources: Path, spec: dict) -> None:
             srcdir = sources / src.replace("/", "_") / path
             dest = d / "references" / dname
             shutil.copytree(srcdir, dest, ignore=shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests"))
+            apache_dir = lock[src]["license"].startswith("Apache")
             for f in sorted(x for x in dest.rglob("*") if x.is_file()):
                 if f.suffix in {".md", ".txt"}:
-                    f.write_text(rw(f.read_text(encoding="utf-8", errors="ignore")), encoding="utf-8")
+                    text = rw(f.read_text(encoding="utf-8", errors="ignore"))
+                    if apache_dir and f.suffix == ".md":
+                        text = _with_notice(text, f"<!-- Modified by OpenDigital from {src} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n")
+                    f.write_text(text, encoding="utf-8")
                 prov.append({"path": f"skills/{name}/references/{dname}/{f.relative_to(dest).as_posix()}",
                              "derived_from": [{"source": src, "commit": lock[src]["commit"][:7], "path": f"{path}/{f.relative_to(dest).as_posix()}",
                                                "license": lock[src]["license"], "modification": "adapted"}]})
