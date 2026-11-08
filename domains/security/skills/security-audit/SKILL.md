@@ -183,10 +183,11 @@ Do not end the run before one of exactly two terminal states: (a) all Phase 6 ar
 
 ## Framework and CI deep dives
 
-Load when the target uses them; both come from `getsentry/skills` (Apache-2.0):
+Load when the target uses it; it comes from `getsentry/skills` (Apache-2.0):
 
 - [references/github-actions/README.md](references/github-actions/README.md) — workflow exploitation review: `pull_request_target`, expression injection, comment-triggered commands, credential escalation, AI prompt injection through CI, runners and supply chain.
-- [references/django-access/README.md](references/django-access/README.md) — Django and DRF authorization review: IDOR, missing object-level checks, tenant isolation.
+
+For Django and DRF authorization (IDOR, object-level checks, tenant isolation), see the external guide listed in [../../knowledge/external-references.md](../../knowledge/external-references.md); its text is not copied here.
 
 ## Anti-patterns
 

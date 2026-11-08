@@ -1424,7 +1424,6 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Privacy Engineer"
   - "msitarzewski/agency-agents:agent:Senior SecOps Engineer"
   - "getsentry/skills:skill:gha-security-review"
-  - "getsentry/skills:skill:django-access-review"
 - id: security/threat-modeling
   type: skill
   capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.

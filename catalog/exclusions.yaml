@@ -925,6 +925,9 @@ excluded:
   reason: duplicate-of
   into:
   - platform/git-workflow
+- key: "getsentry/skills:skill:django-access-review"
+  reason: license
+  note: Declares it is based on the OWASP Cheat Sheet Series (CC BY-SA 4.0); linked from security/external-references.
 - key: "getsentry/skills:skill:django-perf-review"
   reason: duplicate-of
   into:

@@ -35,7 +35,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [ankitchiplunkar/frontend-design](https://github.com/ankitchiplunkar/frontend-design) @ `34bbe42` | MIT | merge | 0 | 0 | — |
 | [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 1 | 19 vendor-specific, 10 duplicate-of, 8 license, 5 out-of-scope |
 | [vercel-labs/skills](https://github.com/vercel-labs/skills) @ `d3701c1` | MIT | merge | 1 | 0 | 1 vendor-specific |
-| [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 5 | 12 duplicate-of, 10 vendor-specific, 3 source-internal, 1 license |
+| [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 5 | 12 duplicate-of, 10 vendor-specific, 3 source-internal, 2 license |
 | [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
 | [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) @ `ce8b262` | MIT | merge | 23 | 0 | 16 source-internal, 7 duplicate-of |
 
@@ -215,7 +215,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 
 - URL: <https://github.com/getsentry/skills> · commit `e94f22214528d69899d09c627b3315ddc3544816` · licence Apache-2.0 · policy `merge`
 - Used in: `ai-engineering:prompt-engineering`, `platform:github-operations`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`
-- Excluded items by reason: duplicate-of: 12, vendor-specific: 10, source-internal: 3, license: 1
+- Excluded items by reason: duplicate-of: 12, vendor-specific: 10, source-internal: 3, license: 2
 
 ## trailofbits/skills
 

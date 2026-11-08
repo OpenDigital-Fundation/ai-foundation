@@ -175,41 +175,6 @@ files:
     path: skills/security-audit/WEB-PROTOCOL-AND-AUTH.md
     license: MIT
     modification: base
-- path: skills/security-audit/references/django-access/README.md
-  derived_from:
-  - source: getsentry/skills
-    commit: e94f222
-    path: skills/django-access-review/SKILL.md
-    license: Apache-2.0
-    modification: adapted
-- path: skills/security-audit/references/django-access/references/django-orm.md
-  derived_from:
-  - source: getsentry/skills
-    commit: e94f222
-    path: skills/django-access-review/references/django-orm.md
-    license: Apache-2.0
-    modification: adapted
-- path: skills/security-audit/references/django-access/references/django-views.md
-  derived_from:
-  - source: getsentry/skills
-    commit: e94f222
-    path: skills/django-access-review/references/django-views.md
-    license: Apache-2.0
-    modification: adapted
-- path: skills/security-audit/references/django-access/references/drf-permissions.md
-  derived_from:
-  - source: getsentry/skills
-    commit: e94f222
-    path: skills/django-access-review/references/drf-permissions.md
-    license: Apache-2.0
-    modification: adapted
-- path: skills/security-audit/references/django-access/references/tenant-isolation.md
-  derived_from:
-  - source: getsentry/skills
-    commit: e94f222
-    path: skills/django-access-review/references/tenant-isolation.md
-    license: Apache-2.0
-    modification: adapted
 - path: skills/security-audit/references/github-actions/README.md
   derived_from:
   - source: getsentry/skills

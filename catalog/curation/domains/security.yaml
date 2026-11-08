@@ -46,7 +46,6 @@ artifacts:
   - msitarzewski/agency-agents:agent:Privacy Engineer
   - msitarzewski/agency-agents:agent:Senior SecOps Engineer
   - getsentry/skills:skill:gha-security-review
-  - getsentry/skills:skill:django-access-review
 - id: security/threat-modeling
   type: skill
   capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
@@ -111,21 +110,6 @@ imports:
 - dest: domains/security/skills/security-audit/references/github-actions/references/supply-chain.md
   source: getsentry/skills
   src: skills/gha-security-review/references/supply-chain.md
-- dest: domains/security/skills/security-audit/references/django-access/README.md
-  source: getsentry/skills
-  src: skills/django-access-review/SKILL.md
-- dest: domains/security/skills/security-audit/references/django-access/references/django-orm.md
-  source: getsentry/skills
-  src: skills/django-access-review/references/django-orm.md
-- dest: domains/security/skills/security-audit/references/django-access/references/django-views.md
-  source: getsentry/skills
-  src: skills/django-access-review/references/django-views.md
-- dest: domains/security/skills/security-audit/references/django-access/references/drf-permissions.md
-  source: getsentry/skills
-  src: skills/django-access-review/references/drf-permissions.md
-- dest: domains/security/skills/security-audit/references/django-access/references/tenant-isolation.md
-  source: getsentry/skills
-  src: skills/django-access-review/references/tenant-isolation.md
 - dest: domains/security/skills/agent-security/references/skill-scanning/README.md
   source: getsentry/skills
   src: skills/skill-scanner/SKILL.md
