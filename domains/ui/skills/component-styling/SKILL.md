@@ -6,6 +6,8 @@ metadata:
   domain: ui
   status: experimental
 ---
+<!-- Modified by OpenDigital from nextlevelbuilder/ui-ux-pro-max-skill (Apache-2.0). See PROVENANCE.yaml in this domain. -->
+
 # UI Styling Skill
 
 Comprehensive skill for creating beautiful, accessible user interfaces combining shadcn/ui components, Tailwind CSS utility styling, and canvas-based visual design systems.

@@ -31,6 +31,7 @@ import yaml
 
 from tools.catalog import apply
 from tools.curation.language_pack import (ECC, body_of, load_index, reference_map, resolve, rewrite_refs, section)
+from tools.curation.licences import effective_licence
 from tools.curation.links import unlink_missing
 from tools.curation.port import substitutions
 
@@ -108,7 +109,7 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 if f.suffix in {".md", ".py", ".txt", ".sh", ".js", ".mjs"}:
                     f.write_text(rw(f.read_text(encoding="utf-8")), encoding="utf-8")
                 prov.append({"path": f"skills/{name}/{rel}", "derived_from": [{"source": src, "commit": lock[src]["commit"][:7],
-                             "path": f"{path}/{rel}", "license": lock[src]["license"], "modification": "adapted"}]})
+                             "path": f"{path}/{rel}", "license": effective_licence(lock, sources, src, f"{path}/{rel}"), "modification": "adapted"}]})
             body = re.sub(r"\A---\s*\n.*?\n---\s*\n", "", (d / "SKILL.md").read_text(encoding="utf-8"), flags=re.S)
             main_prov = None
         else:
@@ -118,7 +119,7 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 src, path, _ = _resolve(a["base"], idx)
                 raw = (sources / src.replace("/", "_") / path).read_text(encoding="utf-8")
                 body = re.sub(r"\A---\s*\n.*?\n---\s*\n", "", raw, flags=re.S)  # keep heading levels
-                main_prov = [{"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": lock[src]["license"], "modification": "adapted"}]
+                main_prov = [{"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": effective_licence(lock, sources, src, path), "modification": "adapted"}]
             else:
                 body = a["body"].strip()
         title = a.get("title") or name.replace("-", " ").capitalize()
@@ -132,7 +133,11 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 parts.append(text)
                 derived.append(pv)
             (d / "references" / rel).parent.mkdir(parents=True, exist_ok=True)
-            (d / "references" / rel).write_text(rw("\n".join(parts).rstrip() + "\n"), encoding="utf-8")
+            ref_text = rw("\n".join(parts).rstrip() + "\n")
+            apache_refs = sorted({pv["source"] for pv in derived if pv["license"].startswith("Apache")})
+            if apache_refs:
+                ref_text = _with_notice(ref_text, f"<!-- Modified by OpenDigital from {', '.join(apache_refs)} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n")
+            (d / "references" / rel).write_text(ref_text, encoding="utf-8")
             prov.append({"path": f"skills/{name}/references/{rel}", "derived_from": derived})
             note = (a.get("reference_notes") or {}).get(rel)
             if not note and rel == "role-guide.md":
@@ -148,16 +153,16 @@ def build(root: Path, sources: Path, spec: dict) -> None:
             srcdir = sources / src.replace("/", "_") / path
             dest = d / "references" / dname
             shutil.copytree(srcdir, dest, ignore=shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests"))
-            apache_dir = lock[src]["license"].startswith("Apache")
             for f in sorted(x for x in dest.rglob("*") if x.is_file()):
                 if f.suffix in {".md", ".txt"}:
                     text = rw(f.read_text(encoding="utf-8", errors="ignore"))
-                    if apache_dir and f.suffix == ".md":
-                        text = _with_notice(text, f"<!-- Modified by OpenDigital from {src} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n")
+                    if effective_licence(lock, sources, src, f"{path}/{f.relative_to(dest).as_posix()}").startswith("Apache"):
+                        line = f"Modified by OpenDigital from {src} (Apache-2.0). See PROVENANCE.yaml in this domain."
+                        text = _with_notice(text, f"<!-- {line} -->\n" if f.suffix == ".md" else line + "\n\n")
                     f.write_text(text, encoding="utf-8")
                 prov.append({"path": f"skills/{name}/references/{dname}/{f.relative_to(dest).as_posix()}",
                              "derived_from": [{"source": src, "commit": lock[src]["commit"][:7], "path": f"{path}/{f.relative_to(dest).as_posix()}",
-                                               "license": lock[src]["license"], "modification": "adapted"}]})
+                                               "license": effective_licence(lock, sources, src, f"{path}/{f.relative_to(dest).as_posix()}"), "modification": "adapted"}]})
             note = (a.get("reference_notes") or {}).get(dname, "")
             ref_lines.append(f"- `references/{dname}/`" + (f" — {note}" if note else "") )
         fm = ["---", f"name: {name}", f"description: {json.dumps(a['description'])}", "license: MIT",
@@ -167,7 +172,7 @@ def build(root: Path, sources: Path, spec: dict) -> None:
         for mk, mv in (a.get("metadata") or {}).items():
             fm.append(f"  {mk}: {json.dumps(mv)}")
         fm += ["---", ""]
-        apache = [s for s in [a.get("base_dir", ":").split(":")[0], (a.get("base") or ":").split(":")[0]] if s in lock and lock[s]["license"].startswith("Apache")]
+        apache = [s for s, pth in (x.split(":", 1) for x in [a.get("base_dir", ":"), a.get("base") or ":"] if x != ":") if s in lock and effective_licence(lock, sources, s, pth).startswith("Apache")]
         notice = f"<!-- Modified by OpenDigital from {apache[0]} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n\n" if apache else ""
         text = "\n".join(fm) + notice + (f"# {title}\n\n" if not body.lstrip().startswith("# ") else "") + rw(body).strip() + "\n"
         if a.get("append"):

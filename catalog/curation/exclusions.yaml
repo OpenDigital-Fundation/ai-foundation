@@ -1740,9 +1740,8 @@ excluded:
   into:
   - testing/browser-testing
 - key: "openai/skills:skill:plugin-creator"
-  reason: duplicate-of
-  into:
-  - agent-engineering/skill-authoring
+  reason: vendor-specific
+  note: Scaffolds the Codex plugin manifest and marketplace; skill-authoring does not cover packaging. Reopen with a packaging spec in agent-engineering if a Codex adapter is wanted.
 - key: "trailofbits/skills:skill:post-patch-validation"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
@@ -1787,9 +1786,8 @@ excluded:
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
 - key: "openai/skills:skill:screenshot"
-  reason: duplicate-of
-  into:
-  - testing/browser-testing
+  reason: out-of-scope
+  note: Native desktop capture on macOS, Linux and Windows; testing/browser-testing covers browser screenshots only. Needs its own owner and spec before incorporation.
 - key: "trailofbits/skills:skill:second-opinion"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.

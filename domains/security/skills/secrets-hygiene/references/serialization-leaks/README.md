@@ -1,4 +1,4 @@
-<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0): frontmatter removed; imported as a reference guide. See PROVENANCE.yaml in this domain. -->
+<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0): frontmatter removed; skill names mapped to this catalog. See PROVENANCE.yaml in this domain. -->
 
 # Secret Serialization Review
 
@@ -14,7 +14,7 @@ The two sides are often written months apart by different authors. Report either
 ## Boundary
 
 - This skill covers indirect leaks through generated serialization and wholesale sinks.
-- Direct leaks, such as interpolating a token into a log message, belong to `security-review`. Report them here only when they come from a changed wholesale sink.
+- Direct leaks, such as interpolating a token into a log message, belong to the main `security:secrets-hygiene` procedure or to `security:security-audit`. Report them here only when they come from a changed wholesale sink.
 - Hardcoded secret literals and committed `.env` files are out of scope.
 
 ## References

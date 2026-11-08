@@ -130,3 +130,24 @@ def test_apache_reference_files_carry_modification_notice(tmp_path):
         text = f.read_text()
         assert "Modified by OpenDigital from getsentry/skills (Apache-2.0)" in text, f
         assert text.count("Modified by OpenDigital") == 1
+
+
+def test_notice_covers_assembled_references_and_text_files(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    (clone / "synthetic").mkdir(parents=True)
+    (clone / "synthetic/mit.md").write_text("# MIT part\n\nBody.\n")
+    guide = sources / "getsentry_skills/synthetic/guide"
+    guide.mkdir(parents=True)
+    (guide / "part.md").write_text("# Apache part\n\nBody.\n")
+    (guide / "notes.txt").write_text("plain notes\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the Apache notice fixture only.",
+        "body": "# Synthetic browser check\n\nUse the guide below.",
+        "references": {"mixed.md": ["affaan-m/ECC:synthetic/mit.md", "getsentry/skills:synthetic/guide/part.md"],
+                       "mit-only.md": ["affaan-m/ECC:synthetic/mit.md"]},
+        "reference_dirs": {"guide": "getsentry/skills:synthetic/guide"},
+    }}})
+    refs = domain / "skills/browser-testing/references"
+    assert "Modified by OpenDigital from getsentry/skills (Apache-2.0)" in (refs / "mixed.md").read_text()
+    assert "Modified by OpenDigital" not in (refs / "mit-only.md").read_text()
+    assert (refs / "guide/notes.txt").read_text().startswith("Modified by OpenDigital from getsentry/skills (Apache-2.0)")

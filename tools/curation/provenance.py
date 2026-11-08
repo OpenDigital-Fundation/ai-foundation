@@ -19,6 +19,7 @@ from pathlib import Path
 import yaml
 
 from tools.catalog import apply
+from tools.curation.licences import effective_licence
 
 
 def build(root: Path, sources: Path, mapping: list[dict]) -> dict:
@@ -42,11 +43,11 @@ def build(root: Path, sources: Path, mapping: list[dict]) -> dict:
                 print(f"original (no upstream match): {f.relative_to(root)}")
                 continue
             mod = "base" if src.read_bytes() == f.read_bytes() else "adapted"
-            derived = [{"source": m["source"], "commit": s["commit"][:7], "path": src_rel, "license": s["license"], "modification": mod}]
+            derived = [{"source": m["source"], "commit": s["commit"][:7], "path": src_rel, "license": effective_licence(lock, sources, m["source"], src_rel), "modification": mod}]
             if f.name in {"SKILL.md"} and rel in {"SKILL.md", ""}:
                 for e in m.get("extra") or []:
                     derived.append({"source": e["source"], "commit": lock[e["source"]]["commit"][:7], "path": e["path"],
-                                    "license": lock[e["source"]]["license"], "modification": e.get("modification", "merged-section")})
+                                    "license": effective_licence(lock, sources, e["source"], e["path"]), "modification": e.get("modification", "merged-section")})
             out.setdefault(domain, []).append({"path": f.relative_to(droot).as_posix(), "derived_from": derived})
     return out
 

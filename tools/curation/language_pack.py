@@ -81,11 +81,12 @@ def body_of(text: str) -> tuple[str, str]:
 
 
 def section(sources_dir: Path, src: str, path: str, lock: dict) -> tuple[str, dict]:
+    from tools.curation.licences import effective_licence
     text = (sources_dir / src.replace("/", "_") / path).read_text(encoding="utf-8")
     title, body = body_of(text)
     title = title or Path(path).stem
     return (f"## {title}\n\n<!-- source: {src} {path} -->\n\n{body}\n",
-            {"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": lock[src]["license"], "modification": "adapted"})
+            {"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": effective_licence(lock, sources_dir, src, path), "modification": "adapted"})
 
 
 COMMAND_TARGET = {"review": "`code-quality:code-review`", "test": "`testing:test-driven-development`",

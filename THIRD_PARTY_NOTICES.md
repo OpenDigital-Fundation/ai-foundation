@@ -36,6 +36,10 @@ they were modified, and `PROVENANCE.yaml` records the modification.
 
 [getsentry/skills](https://github.com/getsentry/skills) — Apache-2.0, except `security-review` (CC BY-SA 4.0, linked only). Same notice and provenance rules.
 
+[nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) — the `ui-styling` folder carries its own Apache-2.0 `LICENSE.txt` (the rest of the collection is MIT); `ui/component-styling` is derived from it. Bundled fonts keep their own OFL licence files.
+
+The generator resolves the licence nearest to each copied file, refuses ShareAlike, non-commercial, unlicensed or unaccepted restricted material, and adds the modification notice wherever the effective licence is Apache-2.0.
+
 ## Modified MIT (restricted)
 
 [millionco/react-doctor](https://github.com/millionco/react-doctor) — Copyright (c) 2026 Million Software, Inc. MIT with one modification: using the software or derivatives as AI training, fine-tuning or evaluation data, or reselling it as a hosted service, requires prior written permission. Vendored only in `domains/languages/skills/react-diagnostics/` with its licence text, and excluded from this catalog's evals (`metadata.eval_excluded`) until permission is granted.

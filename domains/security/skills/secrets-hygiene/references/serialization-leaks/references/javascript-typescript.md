@@ -1,4 +1,4 @@
-<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0): imported unchanged apart from this notice. See PROVENANCE.yaml in this domain. -->
+<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0): skill-file references mapped to README.md. See PROVENANCE.yaml in this domain. -->
 # JavaScript and TypeScript Secret Serialization Notes
 
 Use this when reviewing JavaScript or TypeScript code. These notes refine the core skill; they do not add reporting scope.

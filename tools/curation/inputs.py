@@ -7,6 +7,7 @@ from pathlib import Path
 
 def preflight(root: Path, sources: Path, recipes: dict, packs: dict | None = None) -> None:
     from tools.curation.bundle import _resolve
+    from tools.curation.licences import check_copy
     from tools.curation.language_pack import ECC, TOPICS, load_index, resolve, section
     from tools.curation.manifests import load
     import yaml
@@ -24,6 +25,7 @@ def preflight(root: Path, sources: Path, recipes: dict, packs: dict | None = Non
             raise ValueError(f"source path escapes its clone: {src}:{path}")
         if not (target.is_dir() if directory else target.is_file()):
             raise ValueError(f"missing source {'directory' if directory else 'file'}: {src}:{path}")
+        check_copy(lock, sources, src, path)
         return target
 
     def owns(aid: str, keys: set[str]) -> None:

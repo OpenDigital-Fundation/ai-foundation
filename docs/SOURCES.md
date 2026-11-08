@@ -33,7 +33,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [millionco/react-doctor](https://github.com/millionco/react-doctor) @ `9791c32` | Modified-MIT (no AI training/evaluation use, no resale without permission) | merge | 6 | 1 | 2 license, 1 out-of-scope |
 | [danicat/godoctor](https://github.com/danicat/godoctor) @ `ad2eacc` | Apache-2.0 | reference | 1 | 0 | 1 vendor-specific |
 | [ankitchiplunkar/frontend-design](https://github.com/ankitchiplunkar/frontend-design) @ `34bbe42` | MIT | merge | 0 | 0 | — |
-| [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 1 | 18 vendor-specific, 12 duplicate-of, 8 license, 4 out-of-scope |
+| [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 1 | 19 vendor-specific, 10 duplicate-of, 8 license, 5 out-of-scope |
 | [vercel-labs/skills](https://github.com/vercel-labs/skills) @ `d3701c1` | MIT | merge | 1 | 0 | 1 vendor-specific |
 | [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 5 | 12 duplicate-of, 10 vendor-specific, 3 source-internal, 1 license |
 | [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
@@ -202,9 +202,9 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 ## openai/skills
 
 - URL: <https://github.com/openai/skills> · commit `49f948faa9258a0c61caceaf225e179651397431` · licence NOASSERTION · policy `merge`
-- Note: Licence declared per skill: Apache-2.0 or MIT for most; Figma and Notion skills carry their own terms and are not copied
+- Note: Licence declared per skill: Apache-2.0 or MIT for most; Figma skills carry Figma terms and are not copied; Notion skills are MIT but bound to the Notion connector
 - Used in: `security:threat-modeling`
-- Excluded items by reason: vendor-specific: 18, duplicate-of: 12, license: 8, out-of-scope: 4
+- Excluded items by reason: vendor-specific: 19, duplicate-of: 10, license: 8, out-of-scope: 5
 
 ## vercel-labs/skills
 

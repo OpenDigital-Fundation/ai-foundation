@@ -68,6 +68,10 @@ imports:
 - dest: domains/security/skills/threat-modeling/SKILL.md
   source: msitarzewski/agency-agents
   src: security/security-architect.md
+  extra:
+  - source: openai/skills
+    path: skills/.curated/security-threat-model/SKILL.md
+    modification: merged-section
 - dest: domains/security/skills/threat-modeling/templates/threat-model.md
   source: msitarzewski/agency-agents
   src: security/security-architect.md

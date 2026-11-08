@@ -1,7 +1,7 @@
-<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0): imported unchanged apart from this notice. See PROVENANCE.yaml in this domain. -->
+<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0): skill-file references mapped to README.md. See PROVENANCE.yaml in this domain. -->
 # Python Secret Serialization Notes
 
-Use this when reviewing Python code. These notes refine the core skill; they do not add reporting scope. "Generated paths" and "raw attribute access" have the meanings defined in `SKILL.md` under Explicit Exclusion.
+Use this when reviewing Python code. These notes refine the core skill; they do not add reporting scope. "Generated paths" and "raw attribute access" have the meanings defined in [../README.md](../README.md) under Explicit Exclusion.
 
 ## Generated Serialization Paths
 

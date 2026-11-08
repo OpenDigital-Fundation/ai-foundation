@@ -1,4 +1,4 @@
-<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0). See PROVENANCE.yaml in this domain. -->
+<!-- Modified by OpenDigital from getsentry/skills (Apache-2.0): skill names mapped to this catalog. See PROVENANCE.yaml in this domain. -->
 # Prompt Optimizer Specification
 
 ## Intent
@@ -47,7 +47,7 @@ Out of scope:
 Authoritative sources:
 
 - Local `ai-engineering:prompt-engineering` runtime files and references.
-- Repository instructions and `skill-writer` authoring rules.
+- Repository instructions and the `agent-engineering:skill-authoring` rules.
 - Official OpenAI, Anthropic, and Gemini prompting and eval guidance.
 - Prompt optimization research and framework docs already captured in `SOURCES.md`.
 
@@ -62,7 +62,7 @@ Do not store secrets, customer data, private policy text, or long copyrighted pr
 
 ## Reference Architecture
 
-- `SKILL.md` contains the runtime workflow and output contract.
+- `README.md` (this guide's entry) contains the runtime workflow and output contract.
 - `SPEC.md` contains this maintenance contract.
 - `SOURCES.md` stores source inventory, decisions, coverage, gaps, and changelog.
 - `references/core-patterns.md` covers prompt structure, layering, markers, external files, tool policy, and symptom fixes.
@@ -87,7 +87,7 @@ Do not store secrets, customer data, private policy text, or long copyrighted pr
 
 ## Maintenance Notes
 
-- Update `SKILL.md` when runtime workflow, output package, or failure modes change.
+- Update `README.md` when runtime workflow, output package, or failure modes change.
 - Update `SPEC.md` when scope, evidence policy, evaluation, or reference architecture changes.
 - Update `SOURCES.md` when source inventory, decisions, coverage, gaps, or changelog entries change.
 - Keep reference files focused; split any file that mixes unrelated lookup needs.
