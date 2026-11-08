@@ -118,7 +118,7 @@ def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> Non
             sys.exit(f"missing clone for {s['id']}; run tools.inventory.fetch first")
         restricted_source = s["policy"] == "reference"
         for dp, dns, fns in os.walk(base):
-            dns[:] = sorted(d for d in dns if d not in SKIP_DIRS and not (d.startswith(".") and d != ".claude"))
+            dns[:] = sorted(d for d in dns if d not in SKIP_DIRS and not (d.startswith(".") and d not in {".claude", ".curated", ".system"}))
             for f in sorted(fns):
                 p = Path(dp) / f
                 rel = str(p.relative_to(base))

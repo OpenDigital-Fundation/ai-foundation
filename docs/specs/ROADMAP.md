@@ -10,6 +10,7 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`foundation/source-curation`](foundation/source-curation/spec.md) | catalog-governance | Inventário das fontes, `sources.lock.yaml`, matriz manter/fundir/descartar, proveniência |
 | [`foundation/quality-gates`](foundation/quality-gates/spec.md) | catalog-governance | Validadores de CI, detecção de duplicata, evals |
 | [`foundation/distribution`](foundation/distribution/spec.md) | catalog-governance, quality-gates | Marketplace de plugins por domínio e adaptadores multi-harness |
+| [`foundation/source-expansion`](foundation/source-expansion/spec.md) | source-curation | Fontes novas em quatro fatias (oficiais, awesome-copilot, grandes coleções, ciência) |
 | [`foundation/faceted-classification`](foundation/faceted-classification/spec.md) | catalog-governance | Facetas N:N (tecnologia, conhecimento, capacidade, setor, áreas multidisciplinares) sobre a posse por domínio |
 
 ## Revisão da organização do repositório
