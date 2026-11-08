@@ -243,3 +243,4 @@ Load only what the task needs:
 - [`references/archaeology.md`](references/archaeology.md) — covers Codebase Archaeologist; Findings; Eras; Responsibilities
 - [`references/explorer.md`](references/explorer.md) — covers Code Explorer; Exploration Feature/Area Name
 - [`references/spec-mining.md`](references/spec-mining.md) — covers Spec Miner
+- [`references/agent-instructions.md`](references/agent-instructions.md) — covers Maintaining AGENTS.md; Package Manager; Commands; External References

@@ -49,6 +49,10 @@ Make sure tests exist for each applicable class:
 - **Headers and transport:** CSP, HSTS, content-type sniffing, framing, CORS.
 - **Secrets:** none in code, logs, URLs, client bundles or image layers (see `security:secrets-hygiene`).
 
+## Policy for review tools
+
+A threat model records analysis; a `SECURITY_MODEL.md` tells scanners and reviewers what is reportable — invariants with stable IDs, finding classes and severity, narrow exclusions and dated accepted risks. To write or review one, follow [references/security-model/README.md](references/security-model/README.md); to make review procedures read it, see [references/security-model/references/consuming-policy.md](references/security-model/references/consuming-policy.md).
+
 ## Hand-off
 
 To verify an existing implementation against the model, use `security:security-audit`. For agents and tool-using systems, add the boundaries in `security:agent-security`.

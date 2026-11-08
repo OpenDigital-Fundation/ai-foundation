@@ -45,4 +45,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `agent-security` | affaan-m/ECC, getsentry/skills |
 | `secrets-hygiene` | getsentry/skills, msitarzewski/agency-agents |
 | `security-audit` | SecurityStandards/skill-security-audit, affaan-m/ECC, getsentry/skills, msitarzewski/agency-agents |
-| `threat-modeling` | msitarzewski/agency-agents, openai/skills |
+| `threat-modeling` | getsentry/skills, msitarzewski/agency-agents, openai/skills |

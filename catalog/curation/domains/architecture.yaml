@@ -41,6 +41,7 @@ artifacts:
   - affaan-m/ECC:skill:codebase-onboarding
   - msitarzewski/agency-agents:agent:Codebase Archaeologist
   - msitarzewski/agency-agents:agent:Codebase Onboarding Engineer
+  - getsentry/skills:skill:agents-md
   recipe:
     title: Codebase onboarding
     description: 'Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry
@@ -58,6 +59,8 @@ artifacts:
       - a:code-explorer
       spec-mining.md:
       - a:spec-miner
+      agent-instructions.md:
+      - getsentry/skills:skills/agents-md/SKILL.md
 - id: architecture/decision-records
   type: skill
   capability: Record, supersede, index and read architecture decision records, one decision per file.

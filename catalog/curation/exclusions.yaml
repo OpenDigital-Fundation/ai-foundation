@@ -1194,10 +1194,6 @@ excluded:
 - key: "trailofbits/skills:skill:agentic-actions-auditor"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: "getsentry/skills:skill:agents-md"
-  reason: duplicate-of
-  into:
-  - agent-engineering/harness-design
 - key: "trailofbits/skills:skill:audit-context-building"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
@@ -1466,10 +1462,6 @@ excluded:
   reason: duplicate-of
   into:
   - security/security-audit
-- key: "getsentry/skills:skill:security-model"
-  reason: duplicate-of
-  into:
-  - security/threat-modeling
 - key: "openai/skills:skill:security-ownership-map"
   reason: out-of-scope
   note: No owning capability yet; reopen with a domain spec if demand appears.

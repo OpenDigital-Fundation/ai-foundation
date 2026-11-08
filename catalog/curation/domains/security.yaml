@@ -54,6 +54,7 @@ artifacts:
   supersedes:
   - msitarzewski/agency-agents:agent:Security Architect
   - openai/skills:skill:security-threat-model
+  - getsentry/skills:skill:security-model
 imports:
 - dest: domains/security/skills/security-audit
   source: SecurityStandards/skill-security-audit
@@ -77,6 +78,11 @@ imports:
 - dest: domains/security/skills/threat-modeling/references/assets-and-controls.md
   source: openai/skills
   src: skills/.curated/security-threat-model/references/security-controls-and-assets.md
+- dest: domains/security/skills/threat-modeling/references/security-model
+  source: getsentry/skills
+  src: skills/security-model
+  files:
+    README.md: skills/security-model/SKILL.md
 - dest: domains/security/skills/secrets-hygiene/SKILL.md
   source: msitarzewski/agency-agents
   src: security/security-secrets-credential-engineer.md

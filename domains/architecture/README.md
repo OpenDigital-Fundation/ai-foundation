@@ -41,7 +41,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `api-design` | affaan-m/ECC |
 | `architecture-review` | affaan-m/ECC, mattpocock/skills |
 | `codebase-design` | affaan-m/ECC, mattpocock/skills |
-| `codebase-onboarding` | affaan-m/ECC, msitarzewski/agency-agents |
+| `codebase-onboarding` | affaan-m/ECC, getsentry/skills, msitarzewski/agency-agents |
 | `decision-records` | affaan-m/ECC, mattpocock/skills |
 | `domain-modeling` | mattpocock/skills |
 | `system-design` | affaan-m/ECC, msitarzewski/agency-agents |

@@ -363,6 +363,7 @@ artifacts:
   - "affaan-m/ECC:skill:codebase-onboarding"
   - "msitarzewski/agency-agents:agent:Codebase Archaeologist"
   - "msitarzewski/agency-agents:agent:Codebase Onboarding Engineer"
+  - "getsentry/skills:skill:agents-md"
 - id: architecture/decision-records
   type: skill
   capability: Record, supersede, index and read architecture decision records, one decision per file.
@@ -1432,6 +1433,7 @@ artifacts:
   supersedes:
   - "msitarzewski/agency-agents:agent:Security Architect"
   - "openai/skills:skill:security-threat-model"
+  - "getsentry/skills:skill:security-model"
 - id: testing/browser-testing
   type: skill
   capability: "Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising\

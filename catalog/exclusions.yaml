@@ -892,10 +892,6 @@ excluded:
   reason: source-internal
 - key: "getsentry/skills:agent:senpai"
   reason: source-internal
-- key: "getsentry/skills:skill:agents-md"
-  reason: duplicate-of
-  into:
-  - agent-engineering/harness-design
 - key: "getsentry/skills:skill:blog-writing-guide"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
@@ -959,10 +955,6 @@ excluded:
 - key: "getsentry/skills:skill:presentation-creator"
   reason: vendor-specific
   note: Sentry conventions, brand or internal services.
-- key: "getsentry/skills:skill:security-model"
-  reason: duplicate-of
-  into:
-  - security/threat-modeling
 - key: "getsentry/skills:skill:security-review"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.

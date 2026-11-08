@@ -299,6 +299,20 @@ files:
     path: skills/.curated/security-threat-model/references/security-controls-and-assets.md
     license: Apache-2.0
     modification: adapted
+- path: skills/threat-modeling/references/security-model/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/security-model/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/threat-modeling/references/security-model/references/consuming-policy.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/security-model/references/consuming-policy.md
+    license: Apache-2.0
+    modification: adapted
 - path: skills/threat-modeling/templates/threat-model.md
   derived_from:
   - source: msitarzewski/agency-agents
