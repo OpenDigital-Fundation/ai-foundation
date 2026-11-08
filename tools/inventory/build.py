@@ -56,10 +56,58 @@ def kind_of(source_id: str, rel: str, fname: str) -> str | None:
     return None
 
 
-def licence_of(source: dict, rel: str, name: str) -> str:
+PERMISSIVE = ("MIT", "Apache-2.0", "BSD")
+_LICENCE_CACHE: dict[Path, str | None] = {}
+
+
+def classify_licence_text(text: str) -> str:
+    head = text[:3000]
+    if "Apache License" in head:
+        return "Apache-2.0"
+    if "Modified MIT" in head:
+        return "Restricted (Modified MIT)"
+    if "Permission is hereby granted, free of charge" in head or head.lstrip().startswith("MIT License"):
+        return "MIT"
+    if "Redistribution and use in source and binary forms" in head:
+        return "BSD"
+    if "Attribution-ShareAlike" in head or "CC BY-SA" in head:
+        return "CC-BY-SA-4.0"
+    if "NonCommercial" in head:
+        return "CC-BY-NC"
+    return "Restricted (see LICENSE)"
+
+
+def nearest_licence(base: Path, file: Path) -> str | None:
+    """Licence file closest to `file` inside the source, excluding the source root (that one is the lock's licence)."""
+    d = file.parent
+    while d != base and base in d.parents:
+        if d not in _LICENCE_CACHE:
+            found = next((x for x in sorted(d.iterdir()) if x.is_file() and x.name.upper().startswith(("LICENSE", "LICENCE", "COPYING"))), None)
+            _LICENCE_CACHE[d] = classify_licence_text(found.read_text(errors="ignore")) if found else None
+        if _LICENCE_CACHE[d]:
+            return _LICENCE_CACHE[d]
+        d = d.parent
+    return None
+
+
+def licence_of(source: dict, rel: str, name: str, base: Path | None = None) -> str:
     if source["id"] == "anthropics/skills" and name in PROPRIETARY_SKILLS:
         return "Proprietary (Anthropic)"
+    if base is not None:
+        local = nearest_licence(base, base / rel)
+        if local:
+            return local
     return source["license"]
+
+
+def is_permissive(licence: str) -> bool:
+    return licence.startswith(PERMISSIVE)
+
+
+def same_licence(local: str, accepted: str) -> bool:
+    """Compare a detected licence with the label recorded in the lock (labels differ in wording)."""
+    norm = lambda x: "modified-mit" if "modified" in x.lower() and "mit" in x.lower() else x.split(" ")[0].lower()
+    return norm(local) == norm(accepted)
 
 
 def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> None:
@@ -80,8 +128,10 @@ def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> Non
                 if kind == "rule":  # rules have no frontmatter and repeat file names across languages
                     m = re.search(r"(?:^|/)rules/(.+)\.md$", rel)
                     name = m.group(1) if m else p.stem
-                lic = licence_of(s, rel, name if f == "SKILL.md" else "")
-                if (restricted_source or lic.startswith("Proprietary")) and p.stat().st_size > 64 and p.suffix in {".md", ".py", ".js", ".ts", ".json", ".yaml", ".yml", ".txt", ".sh"}:
+                lic = licence_of(s, rel, name if f == "SKILL.md" else "", base)
+                # Restricted: reference-only sources, or a local licence that is neither permissive nor the
+                # licence accepted for the whole source in the lock (e.g. proprietary skills inside an Apache repo).
+                if (restricted_source or (not is_permissive(lic) and not same_licence(lic, s["license"]))) and p.stat().st_size > 64 and p.suffix in {".md", ".py", ".js", ".ts", ".json", ".yaml", ".yml", ".txt", ".sh"}:
                     hashes.append(f"{hashlib.sha256(p.read_bytes()).hexdigest()} {s['id']}:{rel}")
                 if not kind or (kind in {"skill", "agent"} and not fm):
                     continue
