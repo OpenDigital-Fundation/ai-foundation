@@ -34,6 +34,10 @@ Load the framework file only when the project uses it (check the manifest: `pack
 - [`nestjs`](references/frameworks/nestjs.md)
 - [`vite`](references/frameworks/vite.md)
 - [`bun`](references/frameworks/bun.md)
+- [`electron`](references/frameworks/electron.md)
+- [`astro`](references/frameworks/astro.md)
+- [`svelte`](references/frameworks/svelte.md)
+- [`tanstack`](references/frameworks/tanstack.md)
 
 ## Precedence
 

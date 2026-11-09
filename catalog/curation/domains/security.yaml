@@ -8,11 +8,14 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - affaan-m/ECC:command:security-scan
   - affaan-m/ECC:skill:agent-security-hardening
   - affaan-m/ECC:skill:mcp-dependency-review
   - affaan-m/ECC:skill:security-scan
-  - affaan-m/ECC:command:security-scan
   - getsentry/skills:skill:skill-scanner
+  - github/awesome-copilot:agent:Agent Governance Reviewer
+  - github/awesome-copilot:agent:Trojan Skill Hunter
+  - github/awesome-copilot:rule:agent-safety.instructions
 - id: security/external-references
   type: knowledge
   capability: Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP).
@@ -24,8 +27,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer
   - getsentry/skills:skill:secret-serialization
+  - github/awesome-copilot:hook:scan-secrets
+  - github/awesome-copilot:hook:secrets-scanner
+  - msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer
 - id: security/security-audit
   type: skill
   capability: Source-first security guidance or full audit with sandboxed validation and schema-checked findings.
@@ -38,6 +43,9 @@ artifacts:
   - affaan-m/ECC:skill:osint-investigation
   - affaan-m/ECC:skill:security-bounty-hunter
   - affaan-m/ECC:skill:security-review
+  - getsentry/skills:skill:gha-security-review
+  - github/awesome-copilot:agent:sast-sca-security-analyzer
+  - github/awesome-copilot:rule:security-and-owasp.instructions
   - msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor
   - msitarzewski/agency-agents:agent:Application Security Engineer
   - msitarzewski/agency-agents:agent:Cloud Security Architect
@@ -45,7 +53,6 @@ artifacts:
   - msitarzewski/agency-agents:agent:Penetration Tester
   - msitarzewski/agency-agents:agent:Privacy Engineer
   - msitarzewski/agency-agents:agent:Senior SecOps Engineer
-  - getsentry/skills:skill:gha-security-review
 - id: security/threat-modeling
   type: skill
   capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
@@ -137,3 +144,21 @@ imports:
 - dest: domains/security/skills/secrets-hygiene/references/serialization-leaks/references/python.md
   source: getsentry/skills
   src: skills/secret-serialization/references/python.md
+- dest: domains/security/skills/agent-security/references/customization-review/agent-governance-reviewer.md
+  source: github/awesome-copilot
+  src: agents/agent-governance-reviewer.agent.md
+- dest: domains/security/skills/agent-security/references/customization-review/agent-safety.md
+  source: github/awesome-copilot
+  src: instructions/agent-safety.instructions.md
+- dest: domains/security/skills/agent-security/references/skill-scanning/tool-shadowing.md
+  source: github/awesome-copilot
+  src: agents/trojan-skill-hunter.agent.md
+- dest: domains/security/skills/security-audit/references/review-checklists/sast-sca-security-analyzer.md
+  source: github/awesome-copilot
+  src: agents/sast-sca-security-analyzer.agent.md
+- dest: domains/security/skills/security-audit/references/review-checklists/security-and-owasp.md
+  source: github/awesome-copilot
+  src: instructions/security-and-owasp.instructions.md
+- dest: domains/security/skills/secrets-hygiene/references/scanning-recipes.md
+  source: github/awesome-copilot
+  src: hooks/secrets-scanner/README.md

@@ -7,6 +7,13 @@ files:
     path: agents/build-error-resolver.md
     license: MIT
     modification: adapted
+- path: skills/build-failure-resolution/references/make/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/makefile.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/build-failure-resolution/references/silent-failures.md
   derived_from:
   - source: affaan-m/ECC
@@ -54,6 +61,27 @@ files:
     path: skills/systematic-debugging/find-polluter.sh
     license: MIT
     modification: base
+- path: skills/systematic-debugging/references/browser-regressions/devtools-regression-investigator.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/devtools-regression-investigator.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/systematic-debugging/references/browser-regressions/frontend-performance-investigator.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/frontend-performance-investigator.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/systematic-debugging/references/browser-regressions/performance-optimization.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/performance-optimization.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/systematic-debugging/references/feedback-loop.md
   derived_from:
   - source: mattpocock/skills

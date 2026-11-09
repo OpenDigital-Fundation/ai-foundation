@@ -14,6 +14,7 @@ artifacts:
   - affaan-m/ECC:command:code-review
   - affaan-m/ECC:command:review-pr
   - affaan-m/ECC:rule:common/code-review
+  - github/awesome-copilot:rule:code-review-generic.instructions
   - mattpocock/skills:skill:code-review
   - obra/superpowers:skill:requesting-code-review
 - id: code-quality/code-reviewer
@@ -43,6 +44,7 @@ artifacts:
   supersedes:
   - DietrichGebert/ponytail:command:ponytail-debt
   - DietrichGebert/ponytail:skill:ponytail-debt
+  - github/awesome-copilot:agent:Technical Debt Remediation Plan
 - id: code-quality/receiving-code-review
   type: skill
   capability: Verify review findings before acting, push back with evidence, and fix in severity order.
@@ -100,3 +102,9 @@ imports:
 - dest: domains/code-quality/skills/debt-ledger
   source: DietrichGebert/ponytail
   src: skills/ponytail-debt
+- dest: domains/code-quality/skills/debt-ledger/references/remediation-planning.md
+  source: github/awesome-copilot
+  src: agents/tech-debt-remediation-plan.agent.md
+- dest: domains/code-quality/skills/code-review/references/review-checklists.md
+  source: github/awesome-copilot
+  src: instructions/code-review-generic.instructions.md

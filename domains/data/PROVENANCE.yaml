@@ -14,6 +14,18 @@ files:
     path: engineering/engineering-data-engineer.md
     license: MIT
     modification: adapted
+- path: skills/data-pipelines/references/spark/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/spark-performance.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/scala-spark.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/data-pipelines/references/throughput.md
   derived_from:
   - source: affaan-m/ECC
@@ -56,6 +68,18 @@ files:
     path: pi/core/skills/prisma-patterns/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/database-design/references/query-review/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/postgresql-dba.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/sql-sp-generation.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/database-design/references/redis.md
   derived_from:
   - source: affaan-m/ECC
@@ -82,5 +106,12 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/database-migrations/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-migrations/references/cross-engine-migration/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/oracle-to-postgres-migration-expert.agent.md
     license: MIT
     modification: adapted

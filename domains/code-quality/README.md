@@ -43,8 +43,8 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `code-reviewer` | affaan-m/ECC, msitarzewski/agency-agents, obra/superpowers |
-| `code-review` | Community-Access/accessibility-agents, DietrichGebert/ponytail, affaan-m/ECC, mattpocock/skills, obra/superpowers |
+| `code-review` | Community-Access/accessibility-agents, DietrichGebert/ponytail, affaan-m/ECC, github/awesome-copilot, mattpocock/skills, obra/superpowers |
 | `codebase-audit` | DietrichGebert/ponytail, affaan-m/ECC |
-| `debt-ledger` | DietrichGebert/ponytail |
+| `debt-ledger` | DietrichGebert/ponytail, github/awesome-copilot |
 | `receiving-code-review` | obra/superpowers |
 | `simplification` | affaan-m/ECC |

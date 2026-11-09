@@ -34,4 +34,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `usability-review` | msitarzewski/agency-agents |
-| `user-research` | msitarzewski/agency-agents |
+| `user-research` | github/awesome-copilot, msitarzewski/agency-agents |

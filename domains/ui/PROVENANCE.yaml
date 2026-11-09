@@ -595,6 +595,23 @@ files:
     path: design/design-ux-architect.md
     license: MIT
     modification: adapted
+- path: skills/component-styling/references/framework-integration/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/html-css-style-color-guide.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/tailwind-v4-vite.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/bulma-v1.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/component-styling/references/frontend-engineering.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -1361,6 +1378,13 @@ files:
     path: skills/hallmark/references/design-md.md
     license: MIT
     modification: base
+- path: skills/visual-design/references/design-review.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/gem-designer.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/visual-design/references/direction.md
   derived_from:
   - source: Nutlope/hallmark

@@ -130,3 +130,4 @@ npx eslint . --fix
 Load only what the task needs:
 
 - [`references/silent-failures.md`](references/silent-failures.md) — covers Silent Failure Hunter
+- [`references/make/README.md`](references/make/README.md) — covers Makefile Development Instructions

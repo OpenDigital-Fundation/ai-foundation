@@ -63,6 +63,63 @@ files:
     path: engineering/engineering-technical-writer.md
     license: MIT
     modification: adapted
+- path: skills/technical-writing/references/documentation-quality/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/technical-content-evaluator.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/exclude-prompt-data.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/use-cliche-data-in-docs.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/project-documenter.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/update-docs-on-code-change.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/markdown-content-creation.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/draw-io.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/localization.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/markdown-gfm.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/markdown.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/se-technical-writer.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/technical-writing/references/keeping-docs-current.md
   derived_from:
   - source: affaan-m/ECC

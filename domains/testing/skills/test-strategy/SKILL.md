@@ -183,3 +183,4 @@ Load only what the task needs:
 - [`references/performance.md`](references/performance.md) — covers Performance Benchmarker; Performance Test Results; Core Web Vitals Analysis; Bottleneck Analysis
 - [`references/click-path-audit.md`](references/click-path-audit.md) — covers /click-path-audit Behavioural Flow Audit
 - [`references/delivery-gates.md`](references/delivery-gates.md) — covers Delivery Gate Mechanical Quality Gate for Claude Code
+- [`references/risk-based-quality/README.md`](references/risk-based-quality/README.md) — covers ai-team-qa; MOBILE TESTER; QA Engineering Best Practices

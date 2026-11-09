@@ -163,3 +163,4 @@ Load only what the task needs:
 - [`references/strategy.md`](references/strategy.md) — covers Marketing SEO Specialist; Crawlability & Indexation; Site Architecture & Internal Linking; Core Web Vitals (Field Data)
 - [`references/answer-engines.md`](references/answer-engines.md) — covers AEO Foundations Architect; Date YYYY-MM-DD; Key Pages; Content by Topic
 - [`references/app-stores.md`](references/app-stores.md) — covers App Store Optimizer; Keyword Research and Analysis; Metadata Optimization; App Icon Design Principles
+- [`references/answer-search/README.md`](references/answer-search/README.md) — covers Search & AI Optimization Expert

@@ -357,3 +357,4 @@ Load only what the task needs:
 - [`references/ai-engineering.md`](references/ai-engineering.md) — covers AI Engineer
 - [`references/recommendation-systems.md`](references/recommendation-systems.md) — covers recsys-pipeline-architect
 - [`references/post-training.md`](references/post-training.md) — covers LLM Post-Training Engineer; Status; Observed Evidence; Failure Classification
+- [`references/fairness-evaluation/README.md`](references/fairness-evaluation/README.md) — covers Responsible AI Specialist

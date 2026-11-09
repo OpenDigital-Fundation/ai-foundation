@@ -26,6 +26,7 @@ Language-specific knowledge for PHP. The procedures themselves live elsewhere an
 Load the framework file only when the project uses it (check the manifest: `package.json`, `pyproject.toml`, `build.gradle`, `Gemfile`, `composer.json`, `pubspec.yaml`, `Package.swift`).
 
 - [`laravel`](references/frameworks/laravel.md)
+- [`symfony`](references/frameworks/symfony.md)
 
 ## Precedence
 

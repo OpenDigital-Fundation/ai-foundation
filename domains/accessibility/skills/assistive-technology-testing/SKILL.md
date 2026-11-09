@@ -158,6 +158,7 @@ Authoritative specifications for this skill: `skills/a11y-core/references/source
 
 Load only what the task needs:
 
+- [`references/runtime-verification/README.md`](references/runtime-verification/README.md) — covers Accessibility Runtime Tester
 - `references/screen-reader-lab/`
 - `references/desktop-a11y-testing-coach/`
 - `references/kb-testing-strategy/`

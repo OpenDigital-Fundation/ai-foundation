@@ -38,10 +38,10 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `api-design` | affaan-m/ECC |
-| `architecture-review` | affaan-m/ECC, mattpocock/skills |
-| `codebase-design` | affaan-m/ECC, mattpocock/skills |
-| `codebase-onboarding` | affaan-m/ECC, getsentry/skills, msitarzewski/agency-agents |
-| `decision-records` | affaan-m/ECC, mattpocock/skills |
-| `domain-modeling` | mattpocock/skills |
-| `system-design` | affaan-m/ECC, msitarzewski/agency-agents |
+| `api-design` | affaan-m/ECC, github/awesome-copilot |
+| `architecture-review` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills |
+| `codebase-design` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills |
+| `codebase-onboarding` | affaan-m/ECC, getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents |
+| `decision-records` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills |
+| `domain-modeling` | github/awesome-copilot, mattpocock/skills |
+| `system-design` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

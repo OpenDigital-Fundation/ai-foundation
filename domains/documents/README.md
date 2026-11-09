@@ -38,4 +38,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `doc-coauthoring` | anthropics/skills, msitarzewski/agency-agents |
 | `internal-comms` | anthropics/skills, msitarzewski/agency-agents |
 | `office-documents` | anthropics/skills, msitarzewski/agency-agents |
-| `technical-writing` | affaan-m/ECC, msitarzewski/agency-agents |
+| `technical-writing` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

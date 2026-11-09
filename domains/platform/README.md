@@ -36,8 +36,8 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `deployment` | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
-| `git-workflow` | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
-| `github-operations` | affaan-m/ECC, getsentry/skills |
-| `incident-response` | msitarzewski/agency-agents |
-| `reliability` | affaan-m/ECC, msitarzewski/agency-agents |
+| `deployment` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills, msitarzewski/agency-agents |
+| `git-workflow` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills, msitarzewski/agency-agents |
+| `github-operations` | affaan-m/ECC, getsentry/skills, github/awesome-copilot |
+| `incident-response` | github/awesome-copilot, msitarzewski/agency-agents |
+| `reliability` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

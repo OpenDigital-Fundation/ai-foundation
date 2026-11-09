@@ -10,6 +10,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - affaan-m/ECC:skill:data-throughput-accelerator
+  - github/awesome-copilot:agent:PySpark Expert Agent
+  - github/awesome-copilot:rule:scala-spark.instructions
   - msitarzewski/agency-agents:agent:Data Engineer
   recipe:
     title: Data pipelines
@@ -20,6 +22,9 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-data-engineer.md
       throughput.md:
       - s:data-throughput-accelerator
+      spark/README.md:
+      - github/awesome-copilot:agents/spark-performance.agent.md
+      - github/awesome-copilot:instructions/scala-spark.instructions.md
     body: '# Data pipelines
 
 
@@ -67,6 +72,8 @@ artifacts:
   - affaan-m/ECC:skill:postgres-patterns
   - affaan-m/ECC:skill:prisma-patterns
   - affaan-m/ECC:skill:redis-patterns
+  - github/awesome-copilot:agent:PostgreSQL Database Administrator
+  - github/awesome-copilot:rule:sql-sp-generation.instructions
   - msitarzewski/agency-agents:agent:Database Optimizer
   - msitarzewski/agency-agents:agent:Database Reliability Engineer
   recipe:
@@ -90,6 +97,9 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-database-reliability-engineer.md
       review.md:
       - a:database-reviewer
+      query-review/README.md:
+      - github/awesome-copilot:agents/postgresql-dba.agent.md
+      - github/awesome-copilot:instructions/sql-sp-generation.instructions.md
 - id: data/database-migrations
   type: skill
   capability: 'Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills,
@@ -99,6 +109,7 @@ artifacts:
   supersedes:
   - affaan-m/ECC:command:database-migration
   - affaan-m/ECC:skill:database-migrations
+  - github/awesome-copilot:agent:Oracle-to-PostgreSQL Migration Expert
   recipe:
     title: Database migrations
     description: 'Use when changing a production database schema or data: writing migrations, renaming or dropping columns,
@@ -107,3 +118,6 @@ artifacts:
     base: s:database-migrations
     supersedes:
     - affaan-m/ECC:command:database-migration
+    references:
+      cross-engine-migration/README.md:
+      - github/awesome-copilot:agents/oracle-to-postgres-migration-expert.agent.md

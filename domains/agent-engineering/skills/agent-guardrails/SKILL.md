@@ -111,4 +111,7 @@ The hook script is a best-effort tripwire, not a security boundary. For real pro
 
 Load only what the task needs:
 
+- [`references/action-verification.md`](references/action-verification.md) — covers Verify Action; Result; Action; Control matrix
 - [`references/safety-modes.md`](references/safety-modes.md) — covers Safety Guard Prevent Destructive Operations
+- [`references/operation-policies/README.md`](references/operation-policies/README.md) — upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass and fail-closed behaviour
+- [`references/hook-contracts/README.md`](references/hook-contracts/README.md) — upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass and fail-closed behaviour

@@ -152,6 +152,7 @@ Load only what the task needs:
 
 - [`references/web-react.md`](references/web-react.md) — covers Frontend Accessibility Patterns
 - [`references/wcag-checklist.md`](references/wcag-checklist.md) — covers ADR-ACC-000 Title of the Accessibility Decision; Status; Context; Decision
+- [`references/implementation-checklists/README.md`](references/implementation-checklists/README.md) — covers Accessibility Standards
 - `references/accessibility-lead/` — orchestrates the specialists below for a UI change
 - `references/aria-specialist/`
 - `references/keyboard-navigator/`

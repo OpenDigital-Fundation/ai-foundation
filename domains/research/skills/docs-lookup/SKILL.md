@@ -97,3 +97,4 @@ Load only what the task needs:
 
 - [`references/lookup-agent.md`](references/lookup-agent.md) — covers docs-lookup
 - [`references/search-before-building.md`](references/search-before-building.md) — covers /search-first Research Before You Code
+- [`references/lookup-boundaries/README.md`](references/lookup-boundaries/README.md) — covers Context7-aware development

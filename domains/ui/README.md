@@ -35,7 +35,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `component-styling` | anthropics/skills, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |
+| `component-styling` | anthropics/skills, github/awesome-copilot, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |
 | `design-system` | affaan-m/ECC, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |
 | `motion-and-polish` | affaan-m/ECC, msitarzewski/agency-agents |
-| `visual-design` | Nutlope/hallmark, affaan-m/ECC, anthropics/skills, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |
+| `visual-design` | Nutlope/hallmark, affaan-m/ECC, anthropics/skills, github/awesome-copilot, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |

@@ -16,6 +16,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - 'github/awesome-copilot:agent:SE: UX Designer'
   - msitarzewski/agency-agents:agent:UX Researcher
 imports:
 - dest: domains/ux/skills/user-research/references/research-playbook.md
@@ -24,3 +25,6 @@ imports:
 - dest: domains/ux/skills/usability-review/references/persona-walkthrough.md
   source: msitarzewski/agency-agents
   src: design/design-persona-walkthrough.md
+- dest: domains/ux/skills/user-research/references/jobs-and-journeys.md
+  source: github/awesome-copilot
+  src: agents/se-ux-ui-designer.agent.md

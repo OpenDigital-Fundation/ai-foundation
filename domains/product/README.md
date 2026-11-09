@@ -32,4 +32,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `product-management` | affaan-m/ECC, msitarzewski/agency-agents |
+| `product-management` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

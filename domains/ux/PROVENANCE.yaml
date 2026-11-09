@@ -7,6 +7,13 @@ files:
     path: design/design-persona-walkthrough.md
     license: MIT
     modification: adapted
+- path: skills/user-research/references/jobs-and-journeys.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/se-ux-ui-designer.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/user-research/references/research-playbook.md
   derived_from:
   - source: msitarzewski/agency-agents

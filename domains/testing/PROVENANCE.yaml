@@ -462,6 +462,28 @@ files:
     path: playwright-best-practices/testing-patterns/visual-regression.md
     license: MIT
     modification: adapted
+- path: skills/browser-testing/references/playwright/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/playwright-dotnet.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/playwright-python.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/playwright-typescript.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/playwright-tester.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/browser-testing/references/post-deploy-qa.md
   derived_from:
   - source: affaan-m/ECC
@@ -585,6 +607,23 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: agents/pr-test-analyzer.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/risk-based-quality/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/ai-team-qa.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/gem-mobile-tester.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/qa-engineering-best-practices.instructions.md
     license: MIT
     modification: adapted
 - path: skills/verification-before-completion/SKILL.md

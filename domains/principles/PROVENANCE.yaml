@@ -17,3 +17,10 @@ files:
     path: engineering/engineering-minimal-change-engineer.md
     license: MIT
     modification: merged-section
+- path: skills/coding-discipline/references/comments.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/self-explanatory-code-commenting.instructions.md
+    license: MIT
+    modification: adapted

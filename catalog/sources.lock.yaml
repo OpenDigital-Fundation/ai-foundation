@@ -32,3 +32,4 @@ sources:
   - {id: getsentry/skills, url: https://github.com/getsentry/skills, commit: e94f22214528d69899d09c627b3315ddc3544816, license: "Apache-2.0", policy: merge}
   - {id: trailofbits/skills, url: https://github.com/trailofbits/skills, commit: e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff, license: "CC-BY-SA-4.0", policy: reference, note: "ShareAlike would force the licence on derivatives; linked only"}
   - {id: anthropics/claude-cookbooks, url: https://github.com/anthropics/claude-cookbooks, commit: ce8b2629efe8b24048b127b4c79af1e9cbab93d4, license: "MIT", policy: merge, note: "Notebooks and examples; agent prompts reviewed as references"}
+  - {id: github/awesome-copilot, url: https://github.com/github/awesome-copilot, commit: 797337f33f73e35d08d82f840e21c4b8c4932d88, license: MIT, policy: merge, note: "Collection MIT (GitHub, Inc.); some skills and extensions carry their own LICENSE files, resolved per folder"}

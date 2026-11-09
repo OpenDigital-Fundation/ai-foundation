@@ -31,3 +31,4 @@ Load only what the task needs:
 
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/throughput.md`](references/throughput.md) — covers Data Throughput Accelerator
+- [`references/spark/README.md`](references/spark/README.md) — covers PySpark Performance & Parallelism Reviewer (); Decision Rules (must follow); Example prompts this agent is optimized for; Safety / correctness boundaries

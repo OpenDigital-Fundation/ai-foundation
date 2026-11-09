@@ -103,6 +103,17 @@ artifacts:
   - affaan-m/ECC:command:update-docs
   - affaan-m/ECC:skill:docs-governance
   - affaan-m/ECC:skill:living-docs-governance
+  - github/awesome-copilot:agent:Project Documenter
+  - 'github/awesome-copilot:agent:SE: Tech Writer'
+  - github/awesome-copilot:agent:technical-content-evaluator
+  - github/awesome-copilot:rule:draw-io.instructions
+  - github/awesome-copilot:rule:exclude-prompt-data.instructions
+  - github/awesome-copilot:rule:localization.instructions
+  - github/awesome-copilot:rule:markdown-content-creation.instructions
+  - github/awesome-copilot:rule:markdown-gfm.instructions
+  - github/awesome-copilot:rule:markdown.instructions
+  - github/awesome-copilot:rule:update-docs-on-code-change.instructions
+  - github/awesome-copilot:rule:use-cliche-data-in-docs.instructions
   - msitarzewski/agency-agents:agent:Technical Writer
   recipe:
     title: Technical writing
@@ -113,6 +124,18 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-technical-writer.md
       keeping-docs-current.md:
       - a:doc-updater
+      documentation-quality/README.md:
+      - github/awesome-copilot:agents/technical-content-evaluator.agent.md
+      - github/awesome-copilot:instructions/exclude-prompt-data.instructions.md
+      - github/awesome-copilot:instructions/use-cliche-data-in-docs.instructions.md
+      - github/awesome-copilot:agents/project-documenter.agent.md
+      - github/awesome-copilot:instructions/update-docs-on-code-change.instructions.md
+      - github/awesome-copilot:instructions/markdown-content-creation.instructions.md
+      - github/awesome-copilot:instructions/draw-io.instructions.md
+      - github/awesome-copilot:instructions/localization.instructions.md
+      - github/awesome-copilot:instructions/markdown-gfm.instructions.md
+      - github/awesome-copilot:instructions/markdown.instructions.md
+      - github/awesome-copilot:agents/se-technical-writer.agent.md
     body: '# Technical writing
 
 

@@ -49,3 +49,9 @@ For those, stop and ask. Repository rules (`AGENTS.md`) and the user's instructi
 ## Finish
 
 After the final review passes, use `testing:verification-before-completion`, then `workflow:finishing-a-branch`.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/implementation-tracking.md`](references/implementation-tracking.md)

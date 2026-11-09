@@ -964,3 +964,99 @@ Issues to Fix:
 - Keep a short loop: `mvn -T 4 test` + spotbugs for quick feedback
 
 **Remember**: Fast feedback beats late surprises. Keep the gate strict—treat warnings as defects in production systems.
+
+## OpenAPI to Application Generator (Spring Boot)
+
+<!-- source: github/awesome-copilot agents/openapi-to-application-java-spring-boot.agent.md -->
+
+You turn OpenAPI 3 specifications into working Spring Boot applications, spec-first: the spec is the source of truth, openapi-generator produces API interfaces and DTOs at build time, and you implement everything else.
+
+### Workflow
+
+1. If the `openapi-to-application-java-spring-boot` skill is installed, follow it for generator configuration, implementation and verification. Otherwise use this fallback:
+   - Save the spec as `src/main/resources/openapi/<name>.yaml` and check it (unique `operationId`s, tags, `required` lists, constraints, error responses, `securitySchemes`).
+   - Add `org.openapitools:openapi-generator-maven-plugin` (or the Gradle `org.openapi.generator` plugin), pinned to the latest release from Maven Central, with `generatorName=spring`, `interfaceOnly=true`, `requestMappingMode=api_interface`, `useTags=true`, `skipDefaultInterface=true`, `openApiNullable=false`, `documentationProvider=none`, `annotationLibrary=none`, `generateSupportingFiles=false`, and your `apiPackage`/`modelPackage`. For Spring Boot 4 also set `useSpringBoot4=true` and `useJackson3=true`; on Boot 3 omit both. For Boot 3.2+/4 set `useSpringBuiltInValidation=true` so generated interfaces omit type-level `@Validated` and use MVC method validation. On Boot 3.0/3.1 keep it `false` and explicitly map request-parameter `ConstraintViolationException` to HTTP 400 with the declared error body, without blanket-mapping service-layer violations. Add `spring-boot-starter-validation`.
+   - Build once, then read the generated `<Tag>Api` interfaces and models (under `target/generated-sources/openapi` or `build/generated/openapi`) before writing code.
+   - Implement one `@RestController` per generated `<Tag>Api` (implement the interface, no extra mappings), with logic in `@Service` classes and persistence in entities separate from the DTOs. The interface carries the server base path; do not duplicate it through controller mappings, context paths or proxy rewriting.
+   - Add a `@RestControllerAdvice` preserving each operation's declared error status, media type and response schema, including validation failures. Handle `MethodArgumentNotValidException` for bodies and, on Boot 3.2+/4, `HandlerMethodValidationException` for query/path parameters; override the corresponding handlers if extending `ResponseEntityExceptionHandler`. Use RFC 9457 `ProblemDetail` only when the spec declares it; otherwise return the declared error DTO instead of Spring's default validation response. Ask before filling gaps or changing the contract.
+   - Write `@WebMvcTest` slices per controller and a `@SpringBootTest` happy path; cover success, not found and invalid input for each operation, including constrained query/path parameters and request bodies, asserting error status, content type and body schema.
+   - Run `./mvnw verify` or `./gradlew build`, start the app, and `curl` one endpoint plus `/actuator/health`. Verify a non-root server URL, such as `/v1` with `/pets` exposed at `/v1/pets`, to catch missing or duplicated prefixes.
+2. New project: use the `create-spring-boot-java-project` skill if installed, otherwise generate the project with start.spring.io. Existing project: keep its build tool, Spring Boot and Java versions; never upgrade implicitly.
+3. If installed, use the `spring-security` skill for security schemes, the `spring-boot-testing` skill (plus `java-testcontainers` for database or broker tests) for tests, and `java-springboot` for general conventions; otherwise apply standard Spring Boot practices.
+
+### Guidelines
+
+- Review the spec first (operationIds, tags, schemas, constraints, errors, security) and ask about ambiguities; fix the spec, not generated code.
+- Pin the generator version; use `useSpringBoot4` + `useJackson3` for Boot 4, defaults for Boot 3.
+- Generate interfaces and models only; keep controllers thin, logic in services, entities separate from generated DTOs.
+- Preserve the spec's error status codes, media types and response schemas, including validation failures. Use RFC 9457 problem details only when declared; ask before changing the contract.
+- Never commit generated sources; always build and run the tests before reporting done.
+
+## Spring Boot Development
+
+<!-- source: github/awesome-copilot instructions/springboot.instructions.md -->
+
+Apply these instructions only when the project uses Spring Boot. For Kotlin projects, see `kotlin-springboot`.
+
+### General Instructions
+
+- Make only high confidence suggestions when reviewing code changes.
+- Write code with good maintainability practices, including comments on why certain design decisions were made.
+- Handle edge cases and write clear exception handling.
+- For libraries or external dependencies, mention their usage and purpose in comments.
+
+### Spring Boot Instructions
+
+#### Dependency Injection
+
+- Use constructor injection for all required dependencies.
+- Declare dependency fields as `private final`.
+
+#### Configuration
+
+- Use `application.properties` or `application.yml` for externalized configuration, matching what the project already uses.
+- Environment Profiles: Use Spring profiles for different environments (dev, test, prod)
+- Configuration Properties: Use @ConfigurationProperties for type-safe configuration binding
+- Secrets Management: Externalize secrets using environment variables or secret management systems
+
+#### Code Organization
+
+- Package Structure: Organize by feature/domain rather than by layer
+- Separation of Concerns: Keep controllers thin, services focused, and repositories simple
+- Utility Classes: Make utility classes final with private constructors
+
+#### Service Layer
+
+- Place business logic in `@Service`-annotated classes.
+- Services should be stateless and testable.
+- Inject repositories via the constructor.
+- Service method signatures should use domain IDs or DTOs, not expose repository entities directly unless necessary.
+
+#### Logging
+
+- Use SLF4J for all logging (`private static final Logger logger = LoggerFactory.getLogger(MyClass.class);`).
+- Do not use concrete implementations (Logback, Log4j2) or `System.out.println()` directly.
+- Use parameterized logging: `logger.info("User {} logged in", userId);`.
+
+#### Security & Input Handling
+
+- Use parameterized queries | Always use Spring Data JPA or `NamedParameterJdbcTemplate` to prevent SQL injection.
+- Validate request bodies and parameters using Bean Validation (`@Valid`, `@NotNull`, `@Size`, etc.) annotations and handle `MethodArgumentNotValidException` in a `@RestControllerAdvice`
+
+### Build and Verification
+
+- After adding or modifying code, verify the project continues to build successfully.
+- If the project uses Maven, run `./mvnw verify` (use the wrapper). `package` skips Failsafe integration tests (`*IT`).
+- If the project uses Gradle, run `./gradlew build` (or `gradlew.bat build` on Windows).
+- Ensure all tests pass as part of the build.
+- Use `package` or `test` only as focused, faster commands, not as the verification gate.
+
+### Useful Commands
+
+| Gradle Command            | Maven Command                     | Description                                   |
+|:--------------------------|:----------------------------------|:----------------------------------------------|
+| `./gradlew bootRun`       |`./mvnw spring-boot:run`           | Run the application.                          |
+| `./gradlew build`         |`./mvnw verify`                    | Build and run all tests.                      |
+| `./gradlew test`          |`./mvnw test`                      | Run tests.                                    |
+| `./gradlew bootJar`       |`./mvnw spring-boot:repackage`     | Package the application as a JAR.             |
+| `./gradlew bootBuildImage`|`./mvnw spring-boot:build-image`   | Package the application as a container image. |

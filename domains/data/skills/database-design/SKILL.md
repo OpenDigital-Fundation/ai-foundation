@@ -159,3 +159,4 @@ Load only what the task needs:
 - [`references/optimisation.md`](references/optimisation.md) — covers Database Optimizer
 - [`references/reliability.md`](references/reliability.md) — covers Database Reliability Engineer
 - [`references/review.md`](references/review.md) — covers Database Reviewer
+- [`references/query-review/README.md`](references/query-review/README.md) — covers PostgreSQL Database Administrator; SQL Development

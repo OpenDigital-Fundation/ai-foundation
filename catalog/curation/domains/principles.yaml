@@ -12,6 +12,7 @@ artifacts:
   - DietrichGebert/ponytail:skill:ponytail
   - affaan-m/ECC:skill:coding-standards
   - affaan-m/ECC:skill:inherit-legacy-style
+  - github/awesome-copilot:rule:self-explanatory-code-commenting.instructions
   - msitarzewski/agency-agents:agent:Minimal Change Engineer
   - msitarzewski/agency-agents:agent:Senior Developer
   - multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines
@@ -33,3 +34,7 @@ provenance:
     path: engineering/engineering-minimal-change-engineer.md
     license: MIT
     modification: merged-section
+imports:
+- dest: domains/principles/skills/coding-discipline/references/comments.md
+  source: github/awesome-copilot
+  src: instructions/self-explanatory-code-commenting.instructions.md

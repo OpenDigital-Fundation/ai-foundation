@@ -32,4 +32,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `coding-discipline` | DietrichGebert/ponytail, affaan-m/ECC, msitarzewski/agency-agents, multica-ai/andrej-karpathy-skills |
+| `coding-discipline` | DietrichGebert/ponytail, affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents, multica-ai/andrej-karpathy-skills |

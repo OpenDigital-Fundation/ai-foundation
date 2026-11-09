@@ -581,6 +581,13 @@ files:
     path: skills/kb-testing-strategy/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/assistive-technology-testing/references/runtime-verification/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/accessibility-runtime-tester.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/assistive-technology-testing/references/screen-reader-lab/README.md
   derived_from:
   - source: Community-Access/accessibility-agents
@@ -831,6 +838,18 @@ files:
   - source: Community-Access/accessibility-agents
     commit: f736c87
     path: skills/markdown-scanner/references/multi-agent-reliability.md
+    license: MIT
+    modification: adapted
+- path: skills/document-accessibility/references/markdown/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/markdown-accessibility-assistant.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/markdown-accessibility.instructions.md
     license: MIT
     modification: adapted
 - path: skills/document-accessibility/references/multi-agent-reliability.md
@@ -1286,6 +1305,13 @@ files:
   - source: Community-Access/accessibility-agents
     commit: f736c87
     path: skills/i18n-accessibility/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/wcag-accessibility/references/implementation-checklists/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/a11y.instructions.md
     license: MIT
     modification: adapted
 - path: skills/wcag-accessibility/references/kb-accessibility-rules/README.md

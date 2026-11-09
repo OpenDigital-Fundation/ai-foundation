@@ -153,3 +153,4 @@ Load only what the task needs:
 - [`references/self-evaluation.md`](references/self-evaluation.md) — covers Self-Evaluation
 - [`references/evaluator.md`](references/evaluator.md) — covers agent-evaluator
 - [`references/benchmark-loops.md`](references/benchmark-loops.md) — covers Benchmark Optimization Loop
+- [`references/benchmark-integrity/README.md`](references/benchmark-integrity/README.md) — covers Research Harness Engineer mode instructions

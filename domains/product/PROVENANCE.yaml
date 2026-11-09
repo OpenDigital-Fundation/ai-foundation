@@ -35,6 +35,13 @@ files:
     path: product/product-sprint-prioritizer.md
     license: MIT
     modification: adapted
+- path: skills/product-management/references/product-briefs/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/prd.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/product-management/references/product-lens.md
   derived_from:
   - source: affaan-m/ECC

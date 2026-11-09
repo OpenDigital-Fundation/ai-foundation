@@ -89,6 +89,7 @@ artifacts:
   - Community-Access/accessibility-agents:skill:kb-testing-strategy
   - Community-Access/accessibility-agents:skill:screen-reader-lab
   - Community-Access/accessibility-agents:skill:testing-coach
+  - github/awesome-copilot:agent:Accessibility Runtime Tester
   recipe:
     title: Assistive technology testing
     description: 'Use when deciding how to test accessibility or running the tests: screen readers (NVDA, JAWS, VoiceOver,
@@ -100,6 +101,9 @@ artifacts:
       desktop-a11y-testing-coach: Community-Access/accessibility-agents:skills/desktop-a11y-testing-coach
       kb-testing-strategy: Community-Access/accessibility-agents:skills/kb-testing-strategy
       kb-playwright-testing: Community-Access/accessibility-agents:skills/kb-playwright-testing
+    references:
+      runtime-verification/README.md:
+      - github/awesome-copilot:agents/accessibility-runtime-tester.agent.md
 - id: accessibility/document-accessibility
   type: skill
   capability: 'Use when Word, Excel, PowerPoint, PDF, ePub or Markdown files must be accessible: auditing them one by one
@@ -128,6 +132,8 @@ artifacts:
   - Community-Access/accessibility-agents:skill:pdf-scan-config
   - Community-Access/accessibility-agents:skill:powerpoint-accessibility
   - Community-Access/accessibility-agents:skill:word-accessibility
+  - github/awesome-copilot:agent:Markdown Accessibility Assistant
+  - github/awesome-copilot:rule:markdown-accessibility.instructions
   recipe:
     title: Document accessibility
     description: 'Use when Word, Excel, PowerPoint, PDF, ePub or Markdown files must be accessible: auditing them one by one
@@ -155,6 +161,10 @@ artifacts:
       kb-document-scanning: Community-Access/accessibility-agents:skills/kb-document-scanning
       kb-office-remediation: Community-Access/accessibility-agents:skills/kb-office-remediation
       kb-markdown-accessibility: Community-Access/accessibility-agents:skills/kb-markdown-accessibility
+    references:
+      markdown/README.md:
+      - github/awesome-copilot:agents/markdown-accessibility-assistant.agent.md
+      - github/awesome-copilot:instructions/markdown-accessibility.instructions.md
 - id: accessibility/wcag-accessibility
   type: skill
   capability: 'Use when designing, building or reviewing interfaces for accessibility on web, mobile or desktop: WCAG 2.2
@@ -199,6 +209,7 @@ artifacts:
   - affaan-m/ECC:rule:react-native/accessibility
   - affaan-m/ECC:skill:accessibility
   - affaan-m/ECC:skill:frontend-a11y
+  - github/awesome-copilot:rule:a11y.instructions
   recipe:
     title: WCAG accessibility
     description: 'Use when designing, building or reviewing interfaces for accessibility on web, mobile or desktop: WCAG 2.2
@@ -211,6 +222,8 @@ artifacts:
       - s:frontend-a11y
       wcag-checklist.md:
       - a:a11y-architect
+      implementation-checklists/README.md:
+      - github/awesome-copilot:instructions/a11y.instructions.md
     reference_dirs:
       accessibility-lead: Community-Access/accessibility-agents:skills/accessibility-lead
       aria-specialist: Community-Access/accessibility-agents:skills/aria-specialist

@@ -37,3 +37,4 @@ Load only what the task needs:
 - [`references/experiments.md`](references/experiments.md) — covers Experiment Tracker; Hypothesis; Experimental Design; Risk Assessment
 - [`references/product-lens.md`](references/product-lens.md) — covers Product Lens Think Before You Build
 - [`references/capability-mapping.md`](references/capability-mapping.md) — covers Product Capability
+- [`references/product-briefs/README.md`](references/product-briefs/README.md) — covers Create PRD Chat Mode; PRD Outline

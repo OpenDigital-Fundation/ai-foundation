@@ -12,6 +12,7 @@ artifacts:
   - affaan-m/ECC:agent:docs-lookup
   - affaan-m/ECC:skill:documentation-lookup
   - affaan-m/ECC:skill:search-first
+  - github/awesome-copilot:rule:context7.instructions
   recipe:
     title: Documentation lookup
     description: Use when the user asks how to use a library, framework, SDK or API, or before writing code against one whose
@@ -23,6 +24,8 @@ artifacts:
       - a:docs-lookup
       search-before-building.md:
       - s:search-first
+      lookup-boundaries/README.md:
+      - github/awesome-copilot:instructions/context7.instructions.md
 - id: research/literature-review
   type: skill
   capability: 'Use for a systematic literature review or for evaluating scholarly work: search planning across academic databases,
@@ -52,6 +55,8 @@ artifacts:
   supersedes:
   - affaan-m/ECC:skill:deep-research
   - affaan-m/ECC:skill:research-ops
+  - github/awesome-copilot:agent:Doublecheck
+  - github/awesome-copilot:agent:Technical spike research mode
   - mattpocock/skills:skill:research
   - msitarzewski/agency-agents:agent:Research Synthesist
   - msitarzewski/agency-agents:agent:Tool Evaluator
@@ -111,6 +116,9 @@ artifacts:
       - s:deep-research
       synthesis.md:
       - msitarzewski/agency-agents:research/research-synthesist.md
+      claim-verification/README.md:
+      - github/awesome-copilot:agents/research-technical-spike.agent.md
+      - github/awesome-copilot:agents/doublecheck.agent.md
     supersedes:
     - mattpocock/skills:skill:research
     - affaan-m/ECC:skill:research-ops

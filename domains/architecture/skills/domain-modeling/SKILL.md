@@ -75,3 +75,9 @@ Only offer to create an ADR when all three are true:
 3. **The result of a real trade-off**: there were genuine alternatives and you picked one for specific reasons
 
 If any of the three is missing, skip the ADR. To write one, use `architecture:decision-records`, which owns the format and the location.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/domain-code-heuristics.md`](references/domain-code-heuristics.md)

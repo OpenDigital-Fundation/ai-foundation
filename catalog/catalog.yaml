@@ -48,6 +48,7 @@ artifacts:
   - "Community-Access/accessibility-agents:skill:kb-testing-strategy"
   - "Community-Access/accessibility-agents:skill:screen-reader-lab"
   - "Community-Access/accessibility-agents:skill:testing-coach"
+  - "github/awesome-copilot:agent:Accessibility Runtime Tester"
 - id: accessibility/document-accessibility
   type: skill
   capability: "Use when Word, Excel, PowerPoint, PDF, ePub or Markdown files must be accessible: auditing them one by one\
@@ -76,6 +77,8 @@ artifacts:
   - "Community-Access/accessibility-agents:skill:pdf-scan-config"
   - "Community-Access/accessibility-agents:skill:powerpoint-accessibility"
   - "Community-Access/accessibility-agents:skill:word-accessibility"
+  - "github/awesome-copilot:agent:Markdown Accessibility Assistant"
+  - "github/awesome-copilot:rule:markdown-accessibility.instructions"
 - id: accessibility/wcag-accessibility
   type: skill
   capability: "Use when designing, building or reviewing interfaces for accessibility on web, mobile or desktop: WCAG 2.2\
@@ -120,6 +123,7 @@ artifacts:
   - "affaan-m/ECC:rule:react-native/accessibility"
   - "affaan-m/ECC:skill:accessibility"
   - "affaan-m/ECC:skill:frontend-a11y"
+  - "github/awesome-copilot:rule:a11y.instructions"
 - id: agent-engineering/agent-debugging
   type: skill
   capability: "Use when an agent run failed, looped, ignored instructions or produced a bad result and you need to know why:\
@@ -141,6 +145,7 @@ artifacts:
   - "affaan-m/ECC:skill:agent-self-evaluation"
   - "affaan-m/ECC:skill:benchmark-optimization-loop"
   - "affaan-m/ECC:skill:eval-harness"
+  - "github/awesome-copilot:agent:Research Harness Engineer"
 - id: agent-engineering/agent-guardrails
   type: skill
   capability: "Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell commands\
@@ -149,6 +154,10 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:safety-guard"
+  - "github/awesome-copilot:hook:guard-tool"
+  - "github/awesome-copilot:hook:tool-guardian"
+  - "github/awesome-copilot:rule:hooks.instructions"
+  - "github/awesome-copilot:skill:verify-agent-action"
   - "mattpocock/skills:skill:git-guardrails-claude-code"
 - id: agent-engineering/agent-loops
   type: skill
@@ -186,6 +195,8 @@ artifacts:
   - "affaan-m/ECC:skill:continuous-learning-v2"
   - "affaan-m/ECC:skill:rules-distill"
   - "affaan-m/ECC:skill:unified-memory"
+  - "github/awesome-copilot:agent:.NET Self-Learning Architect"
+  - "github/awesome-copilot:rule:memory-bank.instructions"
 - id: agent-engineering/agent-teams
   type: skill
   capability: "Use when coordinating several agents as a team on one effort: assigning owners and scope to work items, isolating\
@@ -218,6 +229,7 @@ artifacts:
   - "affaan-m/ECC:skill:strategic-compact"
   - "affaan-m/ECC:skill:token-budget-advisor"
   - "affaan-m/ECC:skill:token-card"
+  - "github/awesome-copilot:rule:context-engineering.instructions"
 - id: agent-engineering/harness-design
   type: skill
   capability: "Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting,\
@@ -234,6 +246,15 @@ artifacts:
   - "affaan-m/ECC:skill:agentic-engineering"
   - "affaan-m/ECC:skill:ai-first-engineering"
   - "affaan-m/ECC:skill:enterprise-agent-ops"
+  - "github/awesome-copilot:hook:audit-session-end"
+  - "github/awesome-copilot:hook:audit-session-start"
+  - "github/awesome-copilot:hook:log-prompt"
+  - "github/awesome-copilot:hook:log-session-end"
+  - "github/awesome-copilot:hook:log-session-start"
+  - "github/awesome-copilot:hook:session-logger"
+  - "github/awesome-copilot:rule:agents.instructions"
+  - "github/awesome-copilot:rule:instructions.instructions"
+  - "github/awesome-copilot:skill:harness-engineering"
   - "msitarzewski/agency-agents:agent:Agentic Identity & Trust Architect"
   - "msitarzewski/agency-agents:agent:Agents Orchestrator"
   - "msitarzewski/agency-agents:agent:Multi-Agent Systems Architect"
@@ -281,6 +302,28 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:mcp-server-patterns"
   - "anthropics/skills:skill:mcp-builder"
+  - "github/awesome-copilot:agent:C# MCP Server Expert"
+  - "github/awesome-copilot:agent:Go MCP Server Development Expert"
+  - "github/awesome-copilot:agent:Java MCP Expert"
+  - "github/awesome-copilot:agent:Kotlin MCP Server Development Expert"
+  - "github/awesome-copilot:agent:PHP MCP Expert"
+  - "github/awesome-copilot:agent:Python MCP Server Expert"
+  - "github/awesome-copilot:agent:Ruby MCP Expert"
+  - "github/awesome-copilot:agent:Rust MCP Expert"
+  - "github/awesome-copilot:agent:Swift MCP Expert"
+  - "github/awesome-copilot:agent:TypeScript MCP Server Expert"
+  - "github/awesome-copilot:rule:csharp-mcp-server.instructions"
+  - "github/awesome-copilot:rule:go-mcp-server.instructions"
+  - "github/awesome-copilot:rule:java-mcp-server.instructions"
+  - "github/awesome-copilot:rule:kotlin-mcp-server.instructions"
+  - "github/awesome-copilot:rule:php-mcp-server.instructions"
+  - "github/awesome-copilot:rule:python-mcp-server.instructions"
+  - "github/awesome-copilot:rule:quarkus-mcp-server-sse.instructions"
+  - "github/awesome-copilot:rule:ruby-mcp-server.instructions"
+  - "github/awesome-copilot:rule:rust-mcp-server.instructions"
+  - "github/awesome-copilot:rule:swift-mcp-server.instructions"
+  - "github/awesome-copilot:rule:typescript-mcp-server.instructions"
+  - "github/awesome-copilot:skill:mcp-release-qa"
   - "msitarzewski/agency-agents:agent:MCP Builder"
 - id: ai-engineering/ml-engineering
   type: skill
@@ -293,6 +336,7 @@ artifacts:
   - "affaan-m/ECC:skill:ml-adoption-playbook"
   - "affaan-m/ECC:skill:mle-workflow"
   - "affaan-m/ECC:skill:recsys-pipeline-architect"
+  - "github/awesome-copilot:agent:SE: Responsible AI"
   - "msitarzewski/agency-agents:agent:AI Data Remediation Engineer"
   - "msitarzewski/agency-agents:agent:AI Engineer"
   - "msitarzewski/agency-agents:agent:Autonomous Optimization Architect"
@@ -312,6 +356,10 @@ artifacts:
   - "affaan-m/ECC:skill:prompt-optimizer"
   - "affaan-m/ECC:skill:regex-vs-llm-structured-text"
   - "getsentry/skills:skill:prompt-optimizer"
+  - "github/awesome-copilot:agent:Prompt Builder"
+  - "github/awesome-copilot:agent:Prompt Engineer"
+  - "github/awesome-copilot:rule:ai-prompt-engineering-safety-best-practices.instructions"
+  - "github/awesome-copilot:rule:prompt.instructions"
   - "msitarzewski/agency-agents:agent:Prompt Engineer"
 - id: ai-engineering/rag-pipelines
   type: skill
@@ -322,6 +370,7 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:agent:rag-pipeline-reviewer"
   - "affaan-m/ECC:skill:iterative-retrieval"
+  - "github/awesome-copilot:rule:langchain-python.instructions"
   - "msitarzewski/agency-agents:agent:RAG Pipeline Engineer"
   - "msitarzewski/agency-agents:agent:Search Relevance Engineer"
 - id: architecture/api-design
@@ -333,6 +382,8 @@ artifacts:
   - "affaan-m/ECC:skill:api-connector-builder"
   - "affaan-m/ECC:skill:api-design"
   - "affaan-m/ECC:skill:contract-first"
+  - "github/awesome-copilot:agent:API Architect"
+  - "github/awesome-copilot:agent:OpenAPI to Application Generator"
 - id: architecture/architecture-review
   type: skill
   capability: Scan an existing codebase for deepening opportunities and walk the chosen one with the user.
@@ -341,6 +392,9 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:brownfield-retrospective"
   - "affaan-m/ECC:skill:module-governance"
+  - "github/awesome-copilot:agent:Modernization Agent"
+  - "github/awesome-copilot:agent:SE: Architect"
+  - "github/awesome-copilot:agent:Senior Cloud Architect"
   - "mattpocock/skills:skill:improve-codebase-architecture"
 - id: architecture/codebase-design
   type: skill
@@ -348,8 +402,9 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "mattpocock/skills:skill:codebase-design"
   - "affaan-m/ECC:skill:hexagonal-architecture"
+  - "github/awesome-copilot:rule:oop-design-patterns.instructions"
+  - "mattpocock/skills:skill:codebase-design"
 - id: architecture/codebase-onboarding
   type: skill
   capability: "Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry\
@@ -361,9 +416,10 @@ artifacts:
   - "affaan-m/ECC:agent:spec-miner"
   - "affaan-m/ECC:skill:code-tour"
   - "affaan-m/ECC:skill:codebase-onboarding"
+  - "getsentry/skills:skill:agents-md"
+  - "github/awesome-copilot:agent:Context Architect"
   - "msitarzewski/agency-agents:agent:Codebase Archaeologist"
   - "msitarzewski/agency-agents:agent:Codebase Onboarding Engineer"
-  - "getsentry/skills:skill:agents-md"
 - id: architecture/decision-records
   type: skill
   capability: Record, supersede, index and read architecture decision records, one decision per file.
@@ -371,12 +427,14 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:architecture-decision-records"
+  - "github/awesome-copilot:agent:ADR Generator"
 - id: architecture/domain-modeling
   type: skill
   capability: Sharpen the domain language with scenarios, keep GLOSSARY.md current, and flag decisions worth an ADR.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:rule:object-calisthenics.instructions"
   - "mattpocock/skills:skill:domain-modeling"
 - id: architecture/system-design
   type: skill
@@ -392,6 +450,8 @@ artifacts:
   - "affaan-m/ECC:skill:error-handling"
   - "affaan-m/ECC:skill:i18n-sync"
   - "affaan-m/ECC:skill:latency-critical-systems"
+  - "github/awesome-copilot:agent:High-Level Big Picture Architect (HLBPA)"
+  - "github/awesome-copilot:agent:Project Architecture Planner"
   - "msitarzewski/agency-agents:agent:API Platform Engineer"
   - "msitarzewski/agency-agents:agent:Backend Architect"
   - "msitarzewski/agency-agents:agent:Internationalization Engineer"
@@ -427,6 +487,7 @@ artifacts:
   - "affaan-m/ECC:command:code-review"
   - "affaan-m/ECC:command:review-pr"
   - "affaan-m/ECC:rule:common/code-review"
+  - "github/awesome-copilot:rule:code-review-generic.instructions"
   - "mattpocock/skills:skill:code-review"
   - "obra/superpowers:skill:requesting-code-review"
 - id: code-quality/code-reviewer
@@ -456,6 +517,7 @@ artifacts:
   supersedes:
   - "DietrichGebert/ponytail:command:ponytail-debt"
   - "DietrichGebert/ponytail:skill:ponytail-debt"
+  - "github/awesome-copilot:agent:Technical Debt Remediation Plan"
 - id: code-quality/receiving-code-review
   type: skill
   capability: Verify review findings before acting, push back with evidence, and fix in severity order.
@@ -534,6 +596,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:data-throughput-accelerator"
+  - "github/awesome-copilot:agent:PySpark Expert Agent"
+  - "github/awesome-copilot:rule:scala-spark.instructions"
   - "msitarzewski/agency-agents:agent:Data Engineer"
 - id: data/database-design
   type: skill
@@ -548,6 +612,8 @@ artifacts:
   - "affaan-m/ECC:skill:postgres-patterns"
   - "affaan-m/ECC:skill:prisma-patterns"
   - "affaan-m/ECC:skill:redis-patterns"
+  - "github/awesome-copilot:agent:PostgreSQL Database Administrator"
+  - "github/awesome-copilot:rule:sql-sp-generation.instructions"
   - "msitarzewski/agency-agents:agent:Database Optimizer"
   - "msitarzewski/agency-agents:agent:Database Reliability Engineer"
 - id: data/database-migrations
@@ -559,6 +625,7 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:command:database-migration"
   - "affaan-m/ECC:skill:database-migrations"
+  - "github/awesome-copilot:agent:Oracle-to-PostgreSQL Migration Expert"
 - id: debugging/build-failure-resolution
   type: skill
   capability: "Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed\
@@ -569,6 +636,7 @@ artifacts:
   - "affaan-m/ECC:agent:build-error-resolver"
   - "affaan-m/ECC:agent:silent-failure-hunter"
   - "affaan-m/ECC:command:build-fix"
+  - "github/awesome-copilot:rule:makefile.instructions"
 - id: debugging/systematic-debugging
   type: skill
   capability: Build a tight feedback loop on the exact symptom, find the root cause from evidence, then fix with a regression
@@ -576,8 +644,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "obra/superpowers:skill:systematic-debugging"
+  - "github/awesome-copilot:agent:DevTools Regression Investigator"
+  - "github/awesome-copilot:agent:Frontend Performance Investigator"
+  - "github/awesome-copilot:rule:performance-optimization.instructions"
   - "mattpocock/skills:skill:diagnosing-bugs"
+  - "obra/superpowers:skill:systematic-debugging"
 - id: documents/doc-coauthoring
   type: skill
   capability: "Use when the user wants to write a document together with you - a proposal, technical spec, decision doc, RFC\
@@ -624,6 +695,17 @@ artifacts:
   - "affaan-m/ECC:command:update-docs"
   - "affaan-m/ECC:skill:docs-governance"
   - "affaan-m/ECC:skill:living-docs-governance"
+  - "github/awesome-copilot:agent:Project Documenter"
+  - "github/awesome-copilot:agent:SE: Tech Writer"
+  - "github/awesome-copilot:agent:technical-content-evaluator"
+  - "github/awesome-copilot:rule:draw-io.instructions"
+  - "github/awesome-copilot:rule:exclude-prompt-data.instructions"
+  - "github/awesome-copilot:rule:localization.instructions"
+  - "github/awesome-copilot:rule:markdown-content-creation.instructions"
+  - "github/awesome-copilot:rule:markdown-gfm.instructions"
+  - "github/awesome-copilot:rule:markdown.instructions"
+  - "github/awesome-copilot:rule:update-docs-on-code-change.instructions"
+  - "github/awesome-copilot:rule:use-cliche-data-in-docs.instructions"
   - "msitarzewski/agency-agents:agent:Technical Writer"
 - id: finance/accounting
   type: skill
@@ -676,6 +758,8 @@ artifacts:
   - "affaan-m/ECC:rule:cpp/testing"
   - "affaan-m/ECC:skill:cpp-coding-standards"
   - "affaan-m/ECC:skill:cpp-testing"
+  - "github/awesome-copilot:agent:C++ Expert"
+  - "github/awesome-copilot:rule:cmake-vcpkg.instructions"
 - id: languages/dart
   type: skill
   capability: Dart and Flutter patterns, testing, security, review and build knowledge, plus framework references.
@@ -694,6 +778,7 @@ artifacts:
   - "affaan-m/ECC:rule:dart/testing"
   - "affaan-m/ECC:skill:dart-flutter-patterns"
   - "affaan-m/ECC:skill:flutter-dart-code-review"
+  - "github/awesome-copilot:rule:dart-n-flutter.instructions"
 - id: languages/dotnet
   type: skill
   capability: C# and F# on .NET patterns, testing, security, review and build knowledge, plus framework references.
@@ -715,6 +800,25 @@ artifacts:
   - "affaan-m/ECC:skill:csharp-testing"
   - "affaan-m/ECC:skill:dotnet-patterns"
   - "affaan-m/ECC:skill:fsharp-testing"
+  - "github/awesome-copilot:agent:.NET Upgrade"
+  - "github/awesome-copilot:agent:C# Expert"
+  - "github/awesome-copilot:agent:C#/.NET Janitor"
+  - "github/awesome-copilot:agent:Expert .NET software engineer mode instructions"
+  - "github/awesome-copilot:agent:MAUI Expert"
+  - "github/awesome-copilot:agent:WinForms Expert"
+  - "github/awesome-copilot:agent:dotnet-fullstack-mentor"
+  - "github/awesome-copilot:rule:aspnet-rest-apis.instructions"
+  - "github/awesome-copilot:rule:blazor.instructions"
+  - "github/awesome-copilot:rule:csharp-razorpages.instructions"
+  - "github/awesome-copilot:rule:csharp.instructions"
+  - "github/awesome-copilot:rule:dotnet-architecture-good-practices.instructions"
+  - "github/awesome-copilot:rule:dotnet-framework.instructions"
+  - "github/awesome-copilot:rule:dotnet-maui-9-to-dotnet-maui-10-upgrade.instructions"
+  - "github/awesome-copilot:rule:dotnet-maui.instructions"
+  - "github/awesome-copilot:rule:dotnet-upgrade.instructions"
+  - "github/awesome-copilot:rule:dotnet-wpf.instructions"
+  - "github/awesome-copilot:rule:mvvm-toolkit.instructions"
+  - "github/awesome-copilot:rule:winui3.instructions"
 - id: languages/external-tools
   type: knowledge
   capability: "External language tools referenced, not vendored: react-doctor (restricted licence), godoctor, Vercel interface\
@@ -739,6 +843,7 @@ artifacts:
   - "affaan-m/ECC:rule:golang/testing"
   - "affaan-m/ECC:skill:golang-patterns"
   - "affaan-m/ECC:skill:golang-testing"
+  - "github/awesome-copilot:rule:go.instructions"
 - id: languages/jvm
   type: skill
   capability: Java and Kotlin patterns, testing, security, review and build knowledge, plus framework references.
@@ -781,6 +886,11 @@ artifacts:
   - "affaan-m/ECC:skill:springboot-security"
   - "affaan-m/ECC:skill:springboot-tdd"
   - "affaan-m/ECC:skill:springboot-verification"
+  - "github/awesome-copilot:agent:OpenAPI to Application Generator (Spring Boot)"
+  - "github/awesome-copilot:rule:intellij-java-kotlin.instructions"
+  - "github/awesome-copilot:rule:java-junit5-assertions.instructions"
+  - "github/awesome-copilot:rule:quarkus.instructions"
+  - "github/awesome-copilot:rule:springboot.instructions"
 - id: languages/php
   type: skill
   capability: PHP patterns, testing, security, review and build knowledge, plus framework references.
@@ -798,6 +908,8 @@ artifacts:
   - "affaan-m/ECC:skill:laravel-security"
   - "affaan-m/ECC:skill:laravel-tdd"
   - "affaan-m/ECC:skill:laravel-verification"
+  - "github/awesome-copilot:agent:Laravel Expert Agent"
+  - "github/awesome-copilot:rule:php-symfony.instructions"
 - id: languages/python
   type: skill
   capability: Python patterns, testing, security, review and build knowledge, plus framework references.
@@ -827,6 +939,7 @@ artifacts:
   - "affaan-m/ECC:skill:python-patterns"
   - "affaan-m/ECC:skill:python-testing"
   - "affaan-m/ECC:skill:pytorch-patterns"
+  - "github/awesome-copilot:agent:GitHub Actions Windows ARM64 wheel builder"
 - id: languages/react-diagnostics
   type: skill
   capability: Use when finishing a feature, fixing a bug or before committing React code, or when the user types /doctor or
@@ -834,6 +947,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:agent:react18-auditor"
+  - "github/awesome-copilot:agent:react19-auditor"
   - "millionco/react-doctor:skill:improve-react"
   - "millionco/react-doctor:skill:performance"
   - "millionco/react-doctor:skill:react-doctor"
@@ -850,6 +965,7 @@ artifacts:
   - "affaan-m/ECC:rule:ruby/security"
   - "affaan-m/ECC:rule:ruby/testing"
   - "affaan-m/ECC:skill:rails-patterns"
+  - "github/awesome-copilot:rule:ruby-on-rails.instructions"
 - id: languages/rust
   type: skill
   capability: Rust patterns, testing, security, review and build knowledge, plus framework references.
@@ -868,6 +984,7 @@ artifacts:
   - "affaan-m/ECC:rule:rust/testing"
   - "affaan-m/ECC:skill:rust-patterns"
   - "affaan-m/ECC:skill:rust-testing"
+  - "github/awesome-copilot:rule:rust.instructions"
   - "msitarzewski/agency-agents:agent:Rust Refactoring Specialist"
   - "msitarzewski/agency-agents:agent:WebAssembly Engineer"
 - id: languages/swift
@@ -957,6 +1074,28 @@ artifacts:
   - "affaan-m/ECC:skill:ui-to-vue"
   - "affaan-m/ECC:skill:vite-patterns"
   - "affaan-m/ECC:skill:vue-patterns"
+  - "github/awesome-copilot:agent:Electron Code Review Mode Instructions"
+  - "github/awesome-copilot:agent:Expert Nuxt Developer"
+  - "github/awesome-copilot:agent:Expert React Frontend Engineer"
+  - "github/awesome-copilot:agent:Expert Vue.js Frontend Engineer"
+  - "github/awesome-copilot:agent:Next.js Expert"
+  - "github/awesome-copilot:agent:react18-batching-fixer"
+  - "github/awesome-copilot:agent:react18-class-surgeon"
+  - "github/awesome-copilot:agent:react18-commander"
+  - "github/awesome-copilot:agent:react18-dep-surgeon"
+  - "github/awesome-copilot:agent:react18-test-guardian"
+  - "github/awesome-copilot:agent:react19-commander"
+  - "github/awesome-copilot:agent:react19-dep-surgeon"
+  - "github/awesome-copilot:agent:react19-migrator"
+  - "github/awesome-copilot:agent:react19-test-guardian"
+  - "github/awesome-copilot:rule:astro.instructions"
+  - "github/awesome-copilot:rule:nestjs.instructions"
+  - "github/awesome-copilot:rule:nextjs-tailwind.instructions"
+  - "github/awesome-copilot:rule:nextjs.instructions"
+  - "github/awesome-copilot:rule:nodejs-javascript-vitest.instructions"
+  - "github/awesome-copilot:rule:svelte.instructions"
+  - "github/awesome-copilot:rule:tanstack-start-shadcn-tailwind.instructions"
+  - "github/awesome-copilot:rule:vue.instructions"
   - "mattpocock/skills:skill:migrate-to-shoehorn"
   - "mattpocock/skills:skill:setup-ts-deep-modules"
   - "msitarzewski/agency-agents:agent:Mobile App Builder"
@@ -1087,6 +1226,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:hook:check-licenses"
+  - "github/awesome-copilot:hook:dependency-license-checker"
   - "msitarzewski/agency-agents:agent:Compliance Auditor"
   - "msitarzewski/agency-agents:agent:Data Privacy Officer"
   - "msitarzewski/agency-agents:agent:Legal Compliance Checker"
@@ -1167,6 +1308,7 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:agent:seo-specialist"
   - "affaan-m/ECC:skill:seo"
+  - "github/awesome-copilot:agent:Search & AI Optimization Expert"
   - "msitarzewski/agency-agents:agent:AEO Foundations Architect"
   - "msitarzewski/agency-agents:agent:AI Citation Strategist"
   - "msitarzewski/agency-agents:agent:Agentic Search Optimizer"
@@ -1227,6 +1369,15 @@ artifacts:
   - "affaan-m/ECC:skill:deployment-patterns"
   - "affaan-m/ECC:skill:docker-patterns"
   - "affaan-m/ECC:skill:kubernetes-patterns"
+  - "github/awesome-copilot:agent:SE: DevOps/CI"
+  - "github/awesome-copilot:agent:Terraform IaC Reviewer"
+  - "github/awesome-copilot:agent:Terratest Module Testing"
+  - "github/awesome-copilot:rule:ansible.instructions"
+  - "github/awesome-copilot:rule:containerization-docker-best-practices.instructions"
+  - "github/awesome-copilot:rule:devcontainers.instructions"
+  - "github/awesome-copilot:rule:kubernetes-deployment-best-practices.instructions"
+  - "github/awesome-copilot:rule:kubernetes-manifests.instructions"
+  - "github/awesome-copilot:rule:terraform.instructions"
   - "mattpocock/skills:skill:wizard"
   - "msitarzewski/agency-agents:agent:DX Engineer"
   - "msitarzewski/agency-agents:agent:DevOps Automator"
@@ -1244,6 +1395,7 @@ artifacts:
   - "affaan-m/ECC:rule:common/git-workflow"
   - "affaan-m/ECC:skill:conventional-commit-review"
   - "affaan-m/ECC:skill:git-workflow"
+  - "github/awesome-copilot:agent:Gitmoji Setup"
   - "mattpocock/skills:skill:setup-pre-commit"
   - "msitarzewski/agency-agents:agent:Git Workflow Master"
 - id: platform/github-operations
@@ -1256,6 +1408,9 @@ artifacts:
   - "affaan-m/ECC:skill:github-ops"
   - "affaan-m/ECC:skill:opensource-pipeline"
   - "getsentry/skills:skill:iterate-pr"
+  - "github/awesome-copilot:agent:GitHub Actions Expert"
+  - "github/awesome-copilot:agent:GitHub Actions Node Runtime Upgrade"
+  - "github/awesome-copilot:rule:github-actions-ci-cd-best-practices.instructions"
 - id: platform/incident-response
   type: skill
   capability: "Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess\
@@ -1263,6 +1418,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:agent:Cloud and SaaS Outage Triage"
   - "msitarzewski/agency-agents:agent:Incident Responder"
   - "msitarzewski/agency-agents:agent:Incident Response Commander"
 - id: platform/reliability
@@ -1273,6 +1429,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:dashboard-builder"
+  - "github/awesome-copilot:agent:Platform SRE for Kubernetes"
+  - "github/awesome-copilot:rule:devops-core-principles.instructions"
   - "msitarzewski/agency-agents:agent:FinOps Engineer"
   - "msitarzewski/agency-agents:agent:Infrastructure Maintainer"
   - "msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)"
@@ -1286,6 +1444,7 @@ artifacts:
   - "DietrichGebert/ponytail:skill:ponytail"
   - "affaan-m/ECC:skill:coding-standards"
   - "affaan-m/ECC:skill:inherit-legacy-style"
+  - "github/awesome-copilot:rule:self-explanatory-code-commenting.instructions"
   - "msitarzewski/agency-agents:agent:Minimal Change Engineer"
   - "msitarzewski/agency-agents:agent:Senior Developer"
   - "multica-ai/andrej-karpathy-skills:skill:karpathy-guidelines"
@@ -1301,6 +1460,7 @@ artifacts:
   - "affaan-m/ECC:skill:market-research"
   - "affaan-m/ECC:skill:product-capability"
   - "affaan-m/ECC:skill:product-lens"
+  - "github/awesome-copilot:agent:Create PRD Chat Mode"
   - "msitarzewski/agency-agents:agent:Business Strategist"
   - "msitarzewski/agency-agents:agent:Experiment Tracker"
   - "msitarzewski/agency-agents:agent:Feedback Synthesizer"
@@ -1317,6 +1477,7 @@ artifacts:
   - "affaan-m/ECC:agent:docs-lookup"
   - "affaan-m/ECC:skill:documentation-lookup"
   - "affaan-m/ECC:skill:search-first"
+  - "github/awesome-copilot:rule:context7.instructions"
 - id: research/literature-review
   type: skill
   capability: "Use for a systematic literature review or for evaluating scholarly work: search planning across academic databases,\
@@ -1337,6 +1498,8 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:deep-research"
   - "affaan-m/ECC:skill:research-ops"
+  - "github/awesome-copilot:agent:Doublecheck"
+  - "github/awesome-copilot:agent:Technical spike research mode"
   - "mattpocock/skills:skill:research"
   - "msitarzewski/agency-agents:agent:Research Synthesist"
   - "msitarzewski/agency-agents:agent:Tool Evaluator"
@@ -1387,11 +1550,14 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "affaan-m/ECC:command:security-scan"
   - "affaan-m/ECC:skill:agent-security-hardening"
   - "affaan-m/ECC:skill:mcp-dependency-review"
   - "affaan-m/ECC:skill:security-scan"
-  - "affaan-m/ECC:command:security-scan"
   - "getsentry/skills:skill:skill-scanner"
+  - "github/awesome-copilot:agent:Agent Governance Reviewer"
+  - "github/awesome-copilot:agent:Trojan Skill Hunter"
+  - "github/awesome-copilot:rule:agent-safety.instructions"
 - id: security/external-references
   type: knowledge
   capability: Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP).
@@ -1403,8 +1569,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer"
   - "getsentry/skills:skill:secret-serialization"
+  - "github/awesome-copilot:hook:scan-secrets"
+  - "github/awesome-copilot:hook:secrets-scanner"
+  - "msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer"
 - id: security/security-audit
   type: skill
   capability: Source-first security guidance or full audit with sandboxed validation and schema-checked findings.
@@ -1417,6 +1585,9 @@ artifacts:
   - "affaan-m/ECC:skill:osint-investigation"
   - "affaan-m/ECC:skill:security-bounty-hunter"
   - "affaan-m/ECC:skill:security-review"
+  - "getsentry/skills:skill:gha-security-review"
+  - "github/awesome-copilot:agent:sast-sca-security-analyzer"
+  - "github/awesome-copilot:rule:security-and-owasp.instructions"
   - "msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor"
   - "msitarzewski/agency-agents:agent:Application Security Engineer"
   - "msitarzewski/agency-agents:agent:Cloud Security Architect"
@@ -1424,7 +1595,6 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Penetration Tester"
   - "msitarzewski/agency-agents:agent:Privacy Engineer"
   - "msitarzewski/agency-agents:agent:Senior SecOps Engineer"
-  - "getsentry/skills:skill:gha-security-review"
 - id: security/threat-modeling
   type: skill
   capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
@@ -1448,6 +1618,10 @@ artifacts:
   - "affaan-m/ECC:skill:windows-desktop-e2e"
   - "anthropics/skills:skill:webapp-testing"
   - "currents-dev/playwright-best-practices-skill:skill:playwright-best-practices"
+  - "github/awesome-copilot:agent:Playwright Tester Mode"
+  - "github/awesome-copilot:rule:playwright-dotnet.instructions"
+  - "github/awesome-copilot:rule:playwright-python.instructions"
+  - "github/awesome-copilot:rule:playwright-typescript.instructions"
 - id: testing/test-driven-development
   type: skill
   capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.
@@ -1475,6 +1649,9 @@ artifacts:
   - "affaan-m/ECC:skill:click-path-audit"
   - "affaan-m/ECC:skill:delivery-gate"
   - "affaan-m/ECC:skill:test-collaboration"
+  - "github/awesome-copilot:agent:ai-team-qa"
+  - "github/awesome-copilot:agent:gem-mobile-tester"
+  - "github/awesome-copilot:rule:qa-engineering-best-practices.instructions"
   - "msitarzewski/agency-agents:agent:API Tester"
   - "msitarzewski/agency-agents:agent:Performance Benchmarker"
   - "msitarzewski/agency-agents:agent:Test Automation Engineer"
@@ -1497,6 +1674,9 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "anthropics/skills:skill:theme-factory"
+  - "github/awesome-copilot:rule:bulma-v1.instructions"
+  - "github/awesome-copilot:rule:html-css-style-color-guide.instructions"
+  - "github/awesome-copilot:rule:tailwind-v4-vite.instructions"
   - "msitarzewski/agency-agents:agent:Frontend Developer"
   - "msitarzewski/agency-agents:agent:UX Architect"
   - "nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-styling"
@@ -1535,8 +1715,9 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "Nutlope/hallmark:skill:hallmark"
-  - "anthropics/skills:skill:frontend-design"
   - "affaan-m/ECC:skill:frontend-design-direction"
+  - "anthropics/skills:skill:frontend-design"
+  - "github/awesome-copilot:agent:gem-designer"
   - "msitarzewski/agency-agents:agent:UI Designer"
   - "msitarzewski/agency-agents:agent:UI Finish-Gate Reviewer"
   - "nextlevelbuilder/ui-ux-pro-max-skill:agent:design-review"
@@ -1555,6 +1736,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:agent:SE: UX Designer"
   - "msitarzewski/agency-agents:agent:UX Researcher"
 - id: workflow/brainstorming
   type: skill
@@ -1575,11 +1757,12 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "obra/superpowers:skill:executing-plans"
-  - "obra/superpowers:skill:subagent-driven-development"
+  - "affaan-m/ECC:command:prp-implement"
+  - "github/awesome-copilot:rule:task-implementation.instructions"
   - "mattpocock/skills:skill:implement"
   - "mattpocock/skills:skill:implement-spec"
-  - "affaan-m/ECC:command:prp-implement"
+  - "obra/superpowers:skill:executing-plans"
+  - "obra/superpowers:skill:subagent-driven-development"
 - id: workflow/feature-delivery
   type: workflow
   capability: Orchestrate the stages from idea to merge-ready branch with an approval gate between each stage.
@@ -1648,9 +1831,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - "mattpocock/skills:skill:to-tickets"
   - "affaan-m/ECC:command:epic-decompose"
   - "affaan-m/ECC:skill:story-lifecycle"
+  - "github/awesome-copilot:agent:one-shot-feature-issue-planner"
+  - "mattpocock/skills:skill:to-tickets"
 - id: workflow/issue-tracking
   type: knowledge
   capability: How to create, link, label and query issues on GitHub, GitLab or local markdown trackers.
@@ -1678,4 +1862,7 @@ artifacts:
   - "affaan-m/ECC:command:prp-plan"
   - "affaan-m/ECC:skill:blueprint"
   - "affaan-m/ECC:skill:change-impact"
+  - "github/awesome-copilot:agent:Implementation Plan Generation Mode"
+  - "github/awesome-copilot:agent:Specification"
+  - "github/awesome-copilot:rule:spec-driven-workflow-v1.instructions"
   - "obra/superpowers:skill:writing-plans"

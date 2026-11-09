@@ -32,3 +32,4 @@ Load only what the task needs:
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/dashboards.md`](references/dashboards.md) — covers Dashboard Builder
 - [`references/infrastructure-maintenance.md`](references/infrastructure-maintenance.md) — covers Infrastructure Maintainer; Executive Summary; Detailed Infrastructure Analysis; Cost Analysis and Optimization
+- [`references/operational-checklists/README.md`](references/operational-checklists/README.md) — covers Platform SRE for Kubernetes; DevOps Core Principles

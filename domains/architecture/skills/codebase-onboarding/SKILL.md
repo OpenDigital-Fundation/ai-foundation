@@ -244,3 +244,4 @@ Load only what the task needs:
 - [`references/explorer.md`](references/explorer.md) — covers Code Explorer; Exploration Feature/Area Name
 - [`references/spec-mining.md`](references/spec-mining.md) — covers Spec Miner
 - [`references/agent-instructions.md`](references/agent-instructions.md) — covers Maintaining AGENTS.md; Package Manager; Commands; External References
+- [`references/context-mapping/README.md`](references/context-mapping/README.md) — covers Context Architect; Context Map for task description

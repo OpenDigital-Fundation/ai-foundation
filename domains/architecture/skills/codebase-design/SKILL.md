@@ -119,3 +119,9 @@ Good interfaces make testing natural:
 ## Ports and adapters
 
 For application-level boundaries (use cases, outbound ports, adapters at the edge, composition root), see [references/ports-and-adapters.md](references/ports-and-adapters.md). Its vocabulary maps onto this one: a port is an interface at a seam; an adapter fills it.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/design-patterns.md`](references/design-patterns.md)

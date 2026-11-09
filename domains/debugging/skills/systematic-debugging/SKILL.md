@@ -285,3 +285,11 @@ These techniques are part of systematic debugging and available in this director
 - **`root-cause-tracing.md`** - Trace bugs backward through call stack to find original trigger
 - **`defense-in-depth.md`** - Add validation at multiple layers after finding root cause
 - **`condition-based-waiting.md`** - Replace arbitrary timeouts with condition polling
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/browser-regressions/devtools-regression-investigator.md`](references/browser-regressions/devtools-regression-investigator.md)
+- [`references/browser-regressions/frontend-performance-investigator.md`](references/browser-regressions/frontend-performance-investigator.md)
+- [`references/browser-regressions/performance-optimization.md`](references/browser-regressions/performance-optimization.md)

@@ -38,3 +38,4 @@ Load only what the task needs:
 - [`references/caching.md`](references/caching.md) — covers Content-Hash File Cache Pattern
 - [`references/realtime-collaboration.md`](references/realtime-collaboration.md) — covers Realtime Collaboration Engineer
 - [`references/internationalisation.md`](references/internationalisation.md) — covers Internationalization Engineer; i18n Sync
+- [`references/design-checklists/README.md`](references/design-checklists/README.md) — covers High-Level Big Picture Architect (HLBPA); Constraints & Guardrails; Tooling & Commands; Verification Checklist

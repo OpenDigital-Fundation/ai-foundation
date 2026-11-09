@@ -40,4 +40,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `content-marketing` | affaan-m/ECC, msitarzewski/agency-agents |
 | `email-marketing` | affaan-m/ECC, msitarzewski/agency-agents |
 | `paid-media` | msitarzewski/agency-agents |
-| `seo` | affaan-m/ECC, msitarzewski/agency-agents |
+| `seo` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

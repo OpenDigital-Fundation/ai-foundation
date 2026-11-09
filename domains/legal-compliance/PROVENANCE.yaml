@@ -14,6 +14,13 @@ files:
     path: support/support-legal-compliance-checker.md
     license: MIT
     modification: adapted
+- path: skills/compliance-programs/references/dependency-licenses/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/dependency-license-checker/README.md
+    license: MIT
+    modification: adapted
 - path: skills/compliance-programs/references/privacy.md
   derived_from:
   - source: msitarzewski/agency-agents

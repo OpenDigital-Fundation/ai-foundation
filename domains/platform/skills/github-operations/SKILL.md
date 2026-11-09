@@ -158,3 +158,9 @@ Before completing any GitHub operations task:
 ## Iterating on a PR until CI passes
 
 To drive one PR to green — triage review feedback by severity, fix CI failures at the root, push and re-check until only human gates remain — follow [references/pr-iteration.md](references/pr-iteration.md).
+
+## References
+
+Load only what the task needs:
+
+- [`references/actions/README.md`](references/actions/README.md) — covers GitHub Actions Expert; GitHub Actions Node Runtime Upgrade; GitHub Actions CI/CD Best Practices

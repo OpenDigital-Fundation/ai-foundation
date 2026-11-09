@@ -7,11 +7,30 @@ files:
     path: pi/core/skills/deployment-patterns/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/deployment/references/ansible/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/ansible.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/deployment/references/ci-cd-automation.md
   derived_from:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-devops-automator.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/containers/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/containerization-docker-best-practices.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/devcontainers.instructions.md
     license: MIT
     modification: adapted
 - path: skills/deployment/references/docker.md
@@ -21,11 +40,30 @@ files:
     path: pi/core/skills/docker-patterns/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/deployment/references/gitops/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/se-gitops-ci-specialist.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/deployment/references/kubernetes.md
   derived_from:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/kubernetes-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/kubernetes/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/kubernetes-deployment-best-practices.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/kubernetes-manifests.instructions.md
     license: MIT
     modification: adapted
 - path: skills/deployment/references/mobile-release.md
@@ -56,6 +94,23 @@ files:
     path: commands/pm2.md
     license: MIT
     modification: adapted
+- path: skills/deployment/references/terraform/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/terraform-iac-reviewer.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/terraform.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/terratest-module-testing.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/git-workflow/SKILL.md
   derived_from:
   - source: affaan-m/ECC
@@ -68,6 +123,13 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/git-workflow/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/git-workflow/references/hook-installation/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/gitmoji-setup.agent.md
     license: MIT
     modification: adapted
 - path: skills/git-workflow/references/practices.md
@@ -91,6 +153,23 @@ files:
     path: skills/github-ops/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/github-operations/references/actions/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/github-actions-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/github-actions-node-upgrade.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/github-actions-ci-cd-best-practices.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/github-operations/references/pr-iteration.md
   derived_from:
   - source: getsentry/skills
@@ -103,6 +182,13 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-incident-response-commander.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/dependency-outages/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/cloud-saas-outage-triage.agent.md
     license: MIT
     modification: adapted
 - path: skills/incident-response/references/role-guide.md
@@ -138,6 +224,18 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: support/support-infrastructure-maintainer.md
+    license: MIT
+    modification: adapted
+- path: skills/reliability/references/operational-checklists/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/platform-sre-kubernetes.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/devops-core-principles.instructions.md
     license: MIT
     modification: adapted
 - path: skills/reliability/references/role-guide.md

@@ -27,6 +27,28 @@ artifacts:
   supersedes:
   - affaan-m/ECC:skill:mcp-server-patterns
   - anthropics/skills:skill:mcp-builder
+  - github/awesome-copilot:agent:C# MCP Server Expert
+  - github/awesome-copilot:agent:Go MCP Server Development Expert
+  - github/awesome-copilot:agent:Java MCP Expert
+  - github/awesome-copilot:agent:Kotlin MCP Server Development Expert
+  - github/awesome-copilot:agent:PHP MCP Expert
+  - github/awesome-copilot:agent:Python MCP Server Expert
+  - github/awesome-copilot:agent:Ruby MCP Expert
+  - github/awesome-copilot:agent:Rust MCP Expert
+  - github/awesome-copilot:agent:Swift MCP Expert
+  - github/awesome-copilot:agent:TypeScript MCP Server Expert
+  - github/awesome-copilot:rule:csharp-mcp-server.instructions
+  - github/awesome-copilot:rule:go-mcp-server.instructions
+  - github/awesome-copilot:rule:java-mcp-server.instructions
+  - github/awesome-copilot:rule:kotlin-mcp-server.instructions
+  - github/awesome-copilot:rule:php-mcp-server.instructions
+  - github/awesome-copilot:rule:python-mcp-server.instructions
+  - github/awesome-copilot:rule:quarkus-mcp-server-sse.instructions
+  - github/awesome-copilot:rule:ruby-mcp-server.instructions
+  - github/awesome-copilot:rule:rust-mcp-server.instructions
+  - github/awesome-copilot:rule:swift-mcp-server.instructions
+  - github/awesome-copilot:rule:typescript-mcp-server.instructions
+  - github/awesome-copilot:skill:mcp-release-qa
   - msitarzewski/agency-agents:agent:MCP Builder
   recipe:
     title: MCP server development
@@ -35,10 +57,44 @@ artifacts:
       and evaluations that prove an agent can use the server.'
     base_dir: anthropics/skills:skills/mcp-builder
     references:
+      release-qa.md:
+      - github/awesome-copilot:skills/mcp-release-qa/SKILL.md
       typescript-sdk-patterns.md:
       - s:mcp-server-patterns
       server-design.md:
       - msitarzewski/agency-agents:specialized/specialized-mcp-builder.md
+      sdk/csharp/README.md:
+      - github/awesome-copilot:agents/csharp-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/csharp-mcp-server.instructions.md
+      sdk/go/README.md:
+      - github/awesome-copilot:agents/go-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/go-mcp-server.instructions.md
+      sdk/java/README.md:
+      - github/awesome-copilot:agents/java-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/java-mcp-server.instructions.md
+      sdk/kotlin/README.md:
+      - github/awesome-copilot:agents/kotlin-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/kotlin-mcp-server.instructions.md
+      sdk/php/README.md:
+      - github/awesome-copilot:agents/php-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/php-mcp-server.instructions.md
+      sdk/python/README.md:
+      - github/awesome-copilot:agents/python-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/python-mcp-server.instructions.md
+      sdk/ruby/README.md:
+      - github/awesome-copilot:agents/ruby-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/ruby-mcp-server.instructions.md
+      sdk/rust/README.md:
+      - github/awesome-copilot:agents/rust-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/rust-mcp-server.instructions.md
+      sdk/swift/README.md:
+      - github/awesome-copilot:agents/swift-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/swift-mcp-server.instructions.md
+      sdk/typescript/README.md:
+      - github/awesome-copilot:agents/typescript-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/typescript-mcp-server.instructions.md
+      sdk/quarkus/README.md:
+      - github/awesome-copilot:instructions/quarkus-mcp-server-sse.instructions.md
 - id: ai-engineering/ml-engineering
   type: skill
   capability: 'Use when adding or operating machine learning in a product: data contracts, features, reproducible training,
@@ -50,6 +106,7 @@ artifacts:
   - affaan-m/ECC:skill:ml-adoption-playbook
   - affaan-m/ECC:skill:mle-workflow
   - affaan-m/ECC:skill:recsys-pipeline-architect
+  - 'github/awesome-copilot:agent:SE: Responsible AI'
   - msitarzewski/agency-agents:agent:AI Data Remediation Engineer
   - msitarzewski/agency-agents:agent:AI Engineer
   - msitarzewski/agency-agents:agent:Autonomous Optimization Architect
@@ -76,6 +133,8 @@ artifacts:
       - s:recsys-pipeline-architect
       post-training.md:
       - msitarzewski/agency-agents:engineering/engineering-llm-post-training-engineer.md
+      fairness-evaluation/README.md:
+      - github/awesome-copilot:agents/se-responsible-ai-code.agent.md
 - id: ai-engineering/prompt-engineering
   type: skill
   capability: 'Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured
@@ -88,6 +147,10 @@ artifacts:
   - affaan-m/ECC:skill:prompt-optimizer
   - affaan-m/ECC:skill:regex-vs-llm-structured-text
   - getsentry/skills:skill:prompt-optimizer
+  - github/awesome-copilot:agent:Prompt Builder
+  - github/awesome-copilot:agent:Prompt Engineer
+  - github/awesome-copilot:rule:ai-prompt-engineering-safety-best-practices.instructions
+  - github/awesome-copilot:rule:prompt.instructions
   - msitarzewski/agency-agents:agent:Prompt Engineer
   recipe:
     title: Prompt engineering
@@ -101,6 +164,11 @@ artifacts:
       - s:prompt-caching-strategy
       regex-or-llm.md:
       - s:regex-vs-llm-structured-text
+      prompt-design/README.md:
+      - github/awesome-copilot:agents/prompt-builder.agent.md
+      - github/awesome-copilot:agents/prompt-engineer.agent.md
+      - github/awesome-copilot:instructions/ai-prompt-engineering-safety-best-practices.instructions.md
+      - github/awesome-copilot:instructions/prompt.instructions.md
     reference_dirs:
       prompt-optimization: getsentry/skills:skills/prompt-optimizer
     body: '# Prompt engineering
@@ -146,6 +214,7 @@ artifacts:
   supersedes:
   - affaan-m/ECC:agent:rag-pipeline-reviewer
   - affaan-m/ECC:skill:iterative-retrieval
+  - github/awesome-copilot:rule:langchain-python.instructions
   - msitarzewski/agency-agents:agent:RAG Pipeline Engineer
   - msitarzewski/agency-agents:agent:Search Relevance Engineer
   recipe:
@@ -162,6 +231,8 @@ artifacts:
       - s:iterative-retrieval
       search-relevance.md:
       - msitarzewski/agency-agents:engineering/engineering-search-relevance-engineer.md
+      langchain/README.md:
+      - github/awesome-copilot:instructions/langchain-python.instructions.md
     body: '# RAG pipelines
 
 

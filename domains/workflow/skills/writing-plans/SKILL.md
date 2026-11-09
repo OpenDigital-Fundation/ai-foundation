@@ -205,3 +205,11 @@ them to review the plan and choose an execution method before implementation.
 **If Subagent-driven chosen:** use `workflow:executing-plans` in subagent mode.
 
 **If Native chosen:** use `workflow:executing-plans` in inline mode.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/spec-traceability/implementation-plan.md`](references/spec-traceability/implementation-plan.md)
+- [`references/spec-traceability/spec-driven-workflow-v1.md`](references/spec-traceability/spec-driven-workflow-v1.md)
+- [`references/spec-traceability/specification.md`](references/spec-traceability/specification.md)

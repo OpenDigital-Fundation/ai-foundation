@@ -78,9 +78,12 @@ Track:
 
 Load only what the task needs:
 
+- [`references/repository-harness.md`](references/repository-harness.md) — covers Harness Engineering; Summary; Root Cause; Prevention
 - [`references/architecture-audit.md`](references/architecture-audit.md) — covers Architecture Audit
 - [`references/agentic-engineering.md`](references/agentic-engineering.md) — covers Agentic Engineering; AI-First Engineering
 - [`references/multi-agent-systems.md`](references/multi-agent-systems.md) — covers Multi- Systems Architect; AgentsOrchestrator; Current Task Validation Process; Failure Management
 - [`references/identity-and-trust.md`](references/identity-and-trust.md) — covers Agentic Identity & Trust Architect
 - [`references/harness-tuning.md`](references/harness-tuning.md) — covers harness-optimizer
 - [`references/enterprise-operations.md`](references/enterprise-operations.md) — covers Enterprise Ops
+- [`references/session-observability/README.md`](references/session-observability/README.md) — upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass and fail-closed behaviour; never log prompts or tool input unredacted
+- [`references/customizations/README.md`](references/customizations/README.md) — covers Custom File Guidelines; Dynamic Parameters; Your Mission; Variable Resolution Strategy

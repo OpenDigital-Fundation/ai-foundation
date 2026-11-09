@@ -259,5 +259,17 @@ Load these resources as needed during development:
 
 Load only what the task needs:
 
+- [`references/release-qa.md`](references/release-qa.md) — covers MCP Release QA; Commands and results; Session transcript; Parity
 - [`references/typescript-sdk-patterns.md`](references/typescript-sdk-patterns.md) — covers MCP Server Patterns
 - [`references/server-design.md`](references/server-design.md) — covers MCP Builder
+- [`references/sdk/csharp/README.md`](references/sdk/csharp/README.md) — covers C MCP Server Expert; C MCP Server Development
+- [`references/sdk/go/README.md`](references/sdk/go/README.md) — covers Go MCP Server Development Expert; Go MCP Server Development Guidelines
+- [`references/sdk/java/README.md`](references/sdk/java/README.md) — covers Java MCP Expert; Java MCP Server Development
+- [`references/sdk/kotlin/README.md`](references/sdk/kotlin/README.md) — covers Kotlin MCP Server Development Expert; Kotlin MCP Server Development Guidelines
+- [`references/sdk/php/README.md`](references/sdk/php/README.md) — covers PHP MCP Expert; PHP MCP Server Development Best Practices
+- [`references/sdk/python/README.md`](references/sdk/python/README.md) — covers Python MCP Server Expert; Python MCP Server Development
+- [`references/sdk/ruby/README.md`](references/sdk/ruby/README.md) — covers Ruby MCP Expert; Ruby MCP Server Development Guidelines
+- [`references/sdk/rust/README.md`](references/sdk/rust/README.md) — covers Rust MCP Expert; Rust MCP Server Development Best Practices
+- [`references/sdk/swift/README.md`](references/sdk/swift/README.md) — covers Swift MCP Expert; Swift MCP Server Development Guidelines
+- [`references/sdk/typescript/README.md`](references/sdk/typescript/README.md) — covers TypeScript MCP Server Expert; TypeScript MCP Server Development
+- [`references/sdk/quarkus/README.md`](references/sdk/quarkus/README.md) — covers Quarkus MCP Server

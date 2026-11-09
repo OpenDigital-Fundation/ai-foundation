@@ -32,3 +32,4 @@ Load only what the task needs:
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/privacy.md`](references/privacy.md) — covers Data Privacy Officer
 - [`references/checks.md`](references/checks.md) — covers Legal Compliance Checker; Executive Summary; Detailed Compliance Analysis; Risk Mitigation Strategies
+- [`references/dependency-licenses/README.md`](references/dependency-licenses/README.md) — upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass and fail-closed behaviour; licence checks by substring are heuristics, not proof of compliance

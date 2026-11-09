@@ -193,6 +193,7 @@ artifacts:
   supersedes:
   - affaan-m/ECC:agent:seo-specialist
   - affaan-m/ECC:skill:seo
+  - github/awesome-copilot:agent:Search & AI Optimization Expert
   - msitarzewski/agency-agents:agent:AEO Foundations Architect
   - msitarzewski/agency-agents:agent:AI Citation Strategist
   - msitarzewski/agency-agents:agent:Agentic Search Optimizer
@@ -214,3 +215,5 @@ artifacts:
       - msitarzewski/agency-agents:marketing/marketing-agentic-search-optimizer.md
       app-stores.md:
       - msitarzewski/agency-agents:marketing/marketing-app-store-optimizer.md
+      answer-search/README.md:
+      - github/awesome-copilot:agents/search-ai-optimization-expert.agent.md

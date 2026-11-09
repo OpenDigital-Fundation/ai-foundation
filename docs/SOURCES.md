@@ -38,6 +38,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 7 | 10 vendor-specific, 10 duplicate-of, 3 source-internal, 2 license |
 | [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
 | [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) @ `ce8b262` | MIT | merge | 23 | 0 | 16 source-internal, 7 duplicate-of |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) @ `797337f` | MIT | merge | 918 | 60 | 320 vendor-specific, 310 duplicate-of, 60 out-of-scope, 24 source-internal, 17 low-quality |
 
 ## obra/superpowers
 
@@ -229,6 +230,13 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 - URL: <https://github.com/anthropics/claude-cookbooks> · commit `ce8b2629efe8b24048b127b4c79af1e9cbab93d4` · licence MIT · policy `merge`
 - Note: Notebooks and examples; agent prompts reviewed as references
 - Excluded items by reason: source-internal: 16, duplicate-of: 7
+
+## github/awesome-copilot
+
+- URL: <https://github.com/github/awesome-copilot> · commit `797337f33f73e35d08d82f840e21c4b8c4932d88` · licence MIT · policy `merge`
+- Note: Collection MIT (GitHub, Inc.); some skills and extensions carry their own LICENSE files, resolved per folder
+- Used in: `accessibility:assistive-technology-testing`, `accessibility:document-accessibility`, `accessibility:wcag-accessibility`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-guardrails`, `agent-engineering:agent-memory`, `agent-engineering:context-management`, `agent-engineering:harness-design`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `architecture:api-design`, `architecture:architecture-review`, `architecture:codebase-design`, `architecture:codebase-onboarding`, `architecture:decision-records`, `architecture:domain-modeling`, `architecture:system-design`, `code-quality:code-review`, `code-quality:debt-ledger`, `data:data-pipelines`, `data:database-design`, `data:database-migrations`, `debugging:build-failure-resolution`, `debugging:systematic-debugging`, `documents:technical-writing`, `languages:cpp`, `languages:dart`, `languages:dotnet`, `languages:go`, `languages:jvm`, `languages:php`, `languages:python`, `languages:react-diagnostics`, `languages:ruby`, `languages:rust`, `languages:typescript`, `legal-compliance:compliance-programs`, `marketing:seo`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:incident-response`, `platform:reliability`, `principles:coding-discipline`, `product:product-management`, `research:docs-lookup`, `research:source-research`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`, `testing:browser-testing`, `testing:test-strategy`, `ui:component-styling`, `ui:visual-design`, `ux:user-research`, `workflow:executing-plans`, `workflow:issue-breakdown`, `workflow:writing-plans`
+- Excluded items by reason: vendor-specific: 320, duplicate-of: 310, out-of-scope: 60, source-internal: 24, low-quality: 17
 
 ## Original OpenDigital contributions
 

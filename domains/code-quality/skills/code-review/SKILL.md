@@ -53,3 +53,9 @@ Dispatch the `code-quality:code-reviewer` agent (in harnesses without plugin age
 ## 6. Report
 
 Relay the reviewer's report to the user unchanged in structure (what the change does, numbered findings, verdict), so they can say "fix 2 and 5".
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/review-checklists.md`](references/review-checklists.md)

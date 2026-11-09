@@ -439,3 +439,8 @@ Load only what the task needs:
 - [`references/post-deploy-checks.md`](references/post-deploy-checks.md) — covers Canary Watch Post-Deploy Monitoring; Canary Report myapp.com 2026-03-23 0315 PST
 - [`references/process-managers.md`](references/process-managers.md) — covers PM2 Init; PM2 Services; PM2 Init Complete; First time (with config file)
 - [`references/mobile-release.md`](references/mobile-release.md) — covers Mobile Release Engineer; Release version (build) go/no-go
+- [`references/terraform/README.md`](references/terraform/README.md) — covers Terraform IaC Reviewer; Terraform Conventions; Terratest Module Testing
+- [`references/gitops/README.md`](references/gitops/README.md) — covers GitOps & CI Specialist
+- [`references/containers/README.md`](references/containers/README.md) — covers Containerization & Docker Best Practices; Dev Container Configuration
+- [`references/kubernetes/README.md`](references/kubernetes/README.md) — covers Kubernetes Deployment Best Practices; Kubernetes Manifests Instructions
+- [`references/ansible/README.md`](references/ansible/README.md) — covers Ansible Conventions and Best Practices

@@ -721,6 +721,140 @@ files:
     path: skills/mcp-builder/reference/python_mcp_server.md
     license: Apache-2.0
     modification: adapted
+- path: skills/mcp-server-development/references/release-qa.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/mcp-release-qa/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/csharp/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/csharp-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/csharp-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/go/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/go-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/go-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/java/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/java-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/java-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/kotlin/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/kotlin-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/kotlin-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/php/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/php-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/php-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/python/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/python-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/python-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/quarkus/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/quarkus-mcp-server-sse.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/ruby/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/ruby-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/ruby-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/rust/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/rust-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/rust-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/swift/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/swift-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/swift-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/typescript/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/typescript-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/typescript-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/mcp-server-development/references/server-design.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -784,6 +918,13 @@ files:
     path: engineering/engineering-ai-engineer.md
     license: MIT
     modification: adapted
+- path: skills/ml-engineering/references/fairness-evaluation/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/se-responsible-ai-code.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/ml-engineering/references/model-qa.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -824,6 +965,28 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: skills/prompt-caching-strategy/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-design/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/prompt-builder.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/prompt-engineer.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/ai-prompt-engineering-safety-best-practices.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/prompt.instructions.md
     license: MIT
     modification: adapted
 - path: skills/prompt-engineering/references/prompt-optimization/README.md
@@ -901,6 +1064,13 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: skills/iterative-retrieval/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/langchain/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/langchain-python.instructions.md
     license: MIT
     modification: adapted
 - path: skills/rag-pipelines/references/review.md

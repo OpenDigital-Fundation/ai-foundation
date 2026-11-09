@@ -20,6 +20,7 @@ Language-specific knowledge for Python. The procedures themselves live elsewhere
 | [`references/security.md`](references/security.md) | code that handles untrusted input, auth, secrets, files, network or SQL |
 | [`references/review.md`](references/review.md) | reviewing a change; read by `code-quality:code-reviewer` |
 | [`references/tooling.md`](references/tooling.md) | formatters, linters, type checkers and editor hooks |
+| [`references/build.md`](references/build.md) | compiler, build tool, type-checker or dependency failures |
 
 ## Frameworks
 

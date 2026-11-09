@@ -37,7 +37,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `claude-api` | anthropics/skills |
-| `mcp-server-development` | affaan-m/ECC, anthropics/skills, msitarzewski/agency-agents |
-| `ml-engineering` | affaan-m/ECC, msitarzewski/agency-agents |
-| `prompt-engineering` | affaan-m/ECC, getsentry/skills, msitarzewski/agency-agents |
-| `rag-pipelines` | affaan-m/ECC, msitarzewski/agency-agents |
+| `mcp-server-development` | affaan-m/ECC, anthropics/skills, github/awesome-copilot, msitarzewski/agency-agents |
+| `ml-engineering` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `prompt-engineering` | affaan-m/ECC, getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents |
+| `rag-pipelines` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

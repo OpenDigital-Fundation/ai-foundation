@@ -26,3 +26,20 @@ def test_nearest_skill_licence_overrides_source_licence(tmp_path: Path):
 def test_same_licence_normalises_labels():
     assert same_licence("Restricted (Modified MIT)", "Modified-MIT (no AI training/evaluation use)")
     assert not same_licence("Restricted (see LICENSE)", "Apache-2.0")
+
+
+def test_copilot_instructions_are_rules():
+    from tools.inventory.build import kind_of
+    assert kind_of("github/awesome-copilot", "instructions/python.instructions.md", "python.instructions.md") == "rule"
+    assert kind_of("github/awesome-copilot", "agents/x.agent.md", "x.agent.md") == "agent"
+    assert kind_of("github/awesome-copilot", "README.md", "README.md") is None
+
+
+def test_copilot_generic_json_names_use_their_folder():
+    from tools.inventory.build import artifact_name, kind_of
+    assert kind_of("github/awesome-copilot", "plugins/go-mcp-development/plugin.json", "plugin.json") is None
+    assert artifact_name("github/awesome-copilot", "hooks/dependency-check/hooks.json", "hook") == "dependency-check"
+    assert artifact_name("github/awesome-copilot", "plugins/awesome-copilot/mcp.json", "mcp") == "awesome-copilot"
+    assert artifact_name("github/awesome-copilot", "mcp.json", "mcp") == "mcp"
+    # other sources keep their established keys
+    assert artifact_name("trailofbits/skills", "plugins/gh-cli/hooks/hooks.json", "hook") == "hooks"

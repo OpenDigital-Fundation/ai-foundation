@@ -136,6 +136,13 @@ files:
     path: skills/subagent-driven-development/references/handling-reports.md
     license: MIT
     modification: adapted
+- path: skills/executing-plans/references/implementation-tracking.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/task-implementation.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/executing-plans/references/preflight.md
   derived_from:
   - source: obra/superpowers
@@ -244,6 +251,13 @@ files:
     path: skills/engineering/to-tickets/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/issue-breakdown/references/feature-issue-drafts.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/one-shot-feature-issue-planner.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/issue-triage/AGENT-BRIEF.md
   derived_from:
   - source: mattpocock/skills
@@ -270,5 +284,26 @@ files:
   - source: obra/superpowers
     commit: 22f0b46
     path: skills/writing-plans/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-plans/references/spec-traceability/implementation-plan.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/implementation-plan.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-plans/references/spec-traceability/spec-driven-workflow-v1.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/spec-driven-workflow-v1.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/writing-plans/references/spec-traceability/specification.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/specification.agent.md
     license: MIT
     modification: adapted

@@ -7,6 +7,11 @@ files:
     path: agents/cpp-build-resolver.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/cmake-vcpkg.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/cpp/references/review.md
   derived_from:
   - source: affaan-m/ECC
@@ -36,6 +41,11 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/cpp-coding-standards/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/expert-cpp-software-engineer.agent.md
     license: MIT
     modification: adapted
 - path: skills/cpp/references/testing.md
@@ -100,6 +110,11 @@ files:
     path: pi/core/skills/dart-flutter-patterns/SKILL.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/dart-n-flutter.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/dart/references/testing.md
   derived_from:
   - source: affaan-m/ECC
@@ -112,6 +127,84 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/dart/hooks.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/build.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/dotnet-upgrade.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/dotnet-upgrade.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/aspnet-core.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/aspnet-rest-apis.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/blazor.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/blazor.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/maui.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/dotnet-maui.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/dotnet-maui.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/dotnet-maui-9-to-dotnet-maui-10-upgrade.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/mvvm.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/mvvm-toolkit.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/razor.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/csharp-razorpages.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/winforms.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/WinFormsExpert.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/winui.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/winui3.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/dotnet/references/frameworks/wpf.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/dotnet-wpf.instructions.md
     license: MIT
     modification: adapted
 - path: skills/dotnet/references/review.md
@@ -163,6 +256,41 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/fsharp/patterns.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/dotnet-architecture-good-practices.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/dotnet-fullstack-mentor.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/csharp.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/dotnet-framework.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/CSharpExpert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/csharp-dotnet-janitor.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/expert-dotnet-software-engineer.agent.md
     license: MIT
     modification: adapted
 - path: skills/dotnet/references/testing.md
@@ -235,6 +363,11 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/golang-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/go.instructions.md
     license: MIT
     modification: adapted
 - path: skills/go/references/testing.md
@@ -332,6 +465,11 @@ files:
     path: pi/core/skills/quarkus-verification/SKILL.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/quarkus.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/jvm/references/frameworks/spring-boot.md
   derived_from:
   - source: affaan-m/ECC
@@ -352,6 +490,16 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/springboot-verification/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/openapi-to-application-java-spring-boot.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/springboot.instructions.md
     license: MIT
     modification: adapted
 - path: skills/jvm/references/review.md
@@ -432,6 +580,11 @@ files:
     path: pi/core/skills/kotlin-testing/SKILL.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/java-junit5-assertions.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/jvm/references/tooling.md
   derived_from:
   - source: affaan-m/ECC
@@ -442,6 +595,11 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/kotlin/hooks.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/intellij-java-kotlin.instructions.md
     license: MIT
     modification: adapted
 - path: skills/php/references/frameworks/laravel.md
@@ -469,6 +627,18 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: skills/laravel-plugin-discovery/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/laravel-expert-agent.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/php/references/frameworks/symfony.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/php-symfony.instructions.md
     license: MIT
     modification: adapted
 - path: skills/php/references/review.md
@@ -509,6 +679,13 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/php/hooks.md
+    license: MIT
+    modification: adapted
+- path: skills/python/references/build.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/python-win-arm64-gha-wheel-builder.agent.md
     license: MIT
     modification: adapted
 - path: skills/python/references/frameworks/django.md
@@ -674,11 +851,28 @@ files:
     path: skills/performance/SKILL.md
     license: Modified-MIT (no AI training/evaluation use, no resale without permission)
     modification: adapted
+- path: skills/react-diagnostics/references/react-compatibility/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react18-auditor.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react19-auditor.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/ruby/references/frameworks/rails.md
   derived_from:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/rails-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/ruby-on-rails.instructions.md
     license: MIT
     modification: adapted
 - path: skills/ruby/references/review.md
@@ -762,6 +956,11 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-rust-refactoring-specialist.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/rust.instructions.md
     license: MIT
     modification: adapted
 - path: skills/rust/references/testing.md
@@ -893,11 +1092,25 @@ files:
     path: rules/angular/security.md
     license: MIT
     modification: adapted
+- path: skills/typescript/references/frameworks/astro.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/astro.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/typescript/references/frameworks/bun.md
   derived_from:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/bun-runtime/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/typescript/references/frameworks/electron.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/electron-angular-native.agent.md
     license: MIT
     modification: adapted
 - path: skills/typescript/references/frameworks/nestjs.md
@@ -907,11 +1120,31 @@ files:
     path: pi/core/skills/nestjs-patterns/SKILL.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/nestjs.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/typescript/references/frameworks/nextjs.md
   derived_from:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/nextjs-turbopack/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/nextjs-tailwind.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/nextjs.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/expert-nextjs-developer.agent.md
     license: MIT
     modification: adapted
 - path: skills/typescript/references/frameworks/nuxt.md
@@ -939,6 +1172,11 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/nuxt/security.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/nuxt-expert.agent.md
     license: MIT
     modification: adapted
 - path: skills/typescript/references/frameworks/react-native.md
@@ -1045,6 +1283,70 @@ files:
     path: agents/react-build-resolver.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/expert-react-frontend-engineer.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react18-batching-fixer.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react18-commander.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react19-commander.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react19-migrator.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react18-class-surgeon.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react18-dep-surgeon.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react19-dep-surgeon.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react18-test-guardian.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/react19-test-guardian.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/typescript/references/frameworks/svelte.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/svelte.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/typescript/references/frameworks/tanstack.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/tanstack-start-shadcn-tailwind.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/typescript/references/frameworks/vite.md
   derived_from:
   - source: affaan-m/ECC
@@ -1087,6 +1389,16 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: skills/ui-to-vue/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/vuejs-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/vue.instructions.md
     license: MIT
     modification: adapted
 - path: skills/typescript/references/review.md
@@ -1155,6 +1467,11 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: rules/web/testing.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/nodejs-javascript-vitest.instructions.md
     license: MIT
     modification: adapted
 - path: skills/typescript/references/tooling.md

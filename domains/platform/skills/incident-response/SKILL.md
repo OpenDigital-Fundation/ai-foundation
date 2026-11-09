@@ -31,3 +31,4 @@ Load only what the task needs:
 
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/security-incidents.md`](references/security-incidents.md) — covers Incident Responder; SEV1 Critical (Response Immediate, 24/7); SEV2 High (Response Same business day); SEV3 Medium (Response Next business day)
+- [`references/dependency-outages/README.md`](references/dependency-outages/README.md) — covers Cloud and SaaS Outage Triage

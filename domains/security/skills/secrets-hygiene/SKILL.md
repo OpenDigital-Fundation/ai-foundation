@@ -43,3 +43,9 @@ Generated `__repr__`, `toJSON`, logging and tracing can print a secret no one wr
 ## Hand-off
 
 For a full review of how an application handles credentials, use `security:security-audit`. For agent and MCP credentials, see `security:agent-security`.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/scanning-recipes.md`](references/scanning-recipes.md)

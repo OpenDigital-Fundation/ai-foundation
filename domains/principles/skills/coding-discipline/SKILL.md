@@ -74,3 +74,9 @@ A shortcut with a known limit gets a one-line comment in this exact form, so it 
 ## 8. Before you hand back
 
 Walk every changed line and ask: *does the task require this line?* If the honest answer is "no, but it is nicer", delete it. Then end your reply with one or two lines: what you skipped or did not verify, and any risk the user must know.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/comments.md`](references/comments.md)

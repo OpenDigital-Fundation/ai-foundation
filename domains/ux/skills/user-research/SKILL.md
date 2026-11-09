@@ -48,3 +48,9 @@ Produce personas or journey maps only when a decision needs them, built from the
 ## 6. Hand off
 
 Feed recommendations into `workflow:brainstorming` or the relevant spec. Interface-level problems go to `ux:usability-review`; visual ones to `ui:visual-design`; accessibility barriers to `accessibility:wcag-accessibility`.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/jobs-and-journeys.md`](references/jobs-and-journeys.md)

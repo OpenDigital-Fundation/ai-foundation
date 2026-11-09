@@ -33,5 +33,5 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `build-failure-resolution` | affaan-m/ECC |
-| `systematic-debugging` | mattpocock/skills, obra/superpowers |
+| `build-failure-resolution` | affaan-m/ECC, github/awesome-copilot |
+| `systematic-debugging` | github/awesome-copilot, mattpocock/skills, obra/superpowers |

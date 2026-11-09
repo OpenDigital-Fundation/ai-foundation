@@ -16,6 +16,10 @@ artifacts:
   - affaan-m/ECC:skill:windows-desktop-e2e
   - anthropics/skills:skill:webapp-testing
   - currents-dev/playwright-best-practices-skill:skill:playwright-best-practices
+  - github/awesome-copilot:agent:Playwright Tester Mode
+  - github/awesome-copilot:rule:playwright-dotnet.instructions
+  - github/awesome-copilot:rule:playwright-python.instructions
+  - github/awesome-copilot:rule:playwright-typescript.instructions
   recipe:
     title: Browser testing
     description: 'Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising
@@ -33,6 +37,11 @@ artifacts:
       - s:windows-desktop-e2e
       playwright-overview.md:
       - currents-dev/playwright-best-practices-skill:playwright-best-practices/SKILL.md
+      playwright/README.md:
+      - github/awesome-copilot:instructions/playwright-dotnet.instructions.md
+      - github/awesome-copilot:instructions/playwright-python.instructions.md
+      - github/awesome-copilot:instructions/playwright-typescript.instructions.md
+      - github/awesome-copilot:agents/playwright-tester.agent.md
     reference_dirs:
       playwright-advanced: currents-dev/playwright-best-practices-skill:playwright-best-practices/advanced
       playwright-architecture: currents-dev/playwright-best-practices-skill:playwright-best-practices/architecture
@@ -69,6 +78,9 @@ artifacts:
   - affaan-m/ECC:skill:click-path-audit
   - affaan-m/ECC:skill:delivery-gate
   - affaan-m/ECC:skill:test-collaboration
+  - github/awesome-copilot:agent:ai-team-qa
+  - github/awesome-copilot:agent:gem-mobile-tester
+  - github/awesome-copilot:rule:qa-engineering-best-practices.instructions
   - msitarzewski/agency-agents:agent:API Tester
   - msitarzewski/agency-agents:agent:Performance Benchmarker
   - msitarzewski/agency-agents:agent:Test Automation Engineer
@@ -97,6 +109,10 @@ artifacts:
       - s:click-path-audit
       delivery-gates.md:
       - s:delivery-gate
+      risk-based-quality/README.md:
+      - github/awesome-copilot:agents/ai-team-qa.agent.md
+      - github/awesome-copilot:agents/gem-mobile-tester.agent.md
+      - github/awesome-copilot:instructions/qa-engineering-best-practices.instructions.md
     supersedes:
     - affaan-m/ECC:command:test-coverage
     - affaan-m/ECC:command:quality-gate

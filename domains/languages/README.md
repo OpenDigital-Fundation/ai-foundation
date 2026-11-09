@@ -50,15 +50,15 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `external-tools` | contribuição original |
-| `cpp` | affaan-m/ECC |
-| `dart` | affaan-m/ECC |
-| `dotnet` | affaan-m/ECC |
-| `go` | affaan-m/ECC |
-| `jvm` | affaan-m/ECC |
-| `php` | affaan-m/ECC |
-| `python` | affaan-m/ECC |
-| `react-diagnostics` | millionco/react-doctor |
-| `ruby` | affaan-m/ECC |
-| `rust` | affaan-m/ECC, msitarzewski/agency-agents |
+| `cpp` | affaan-m/ECC, github/awesome-copilot |
+| `dart` | affaan-m/ECC, github/awesome-copilot |
+| `dotnet` | affaan-m/ECC, github/awesome-copilot |
+| `go` | affaan-m/ECC, github/awesome-copilot |
+| `jvm` | affaan-m/ECC, github/awesome-copilot |
+| `php` | affaan-m/ECC, github/awesome-copilot |
+| `python` | affaan-m/ECC, github/awesome-copilot |
+| `react-diagnostics` | github/awesome-copilot, millionco/react-doctor |
+| `ruby` | affaan-m/ECC, github/awesome-copilot |
+| `rust` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
 | `swift` | affaan-m/ECC |
-| `typescript` | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents, vercel-labs/agent-skills |
+| `typescript` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills, msitarzewski/agency-agents, vercel-labs/agent-skills |

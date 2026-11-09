@@ -7,6 +7,20 @@ files:
     path: skills/agent-security-hardening/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-security/references/customization-review/agent-governance-reviewer.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/agent-governance-reviewer.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-security/references/customization-review/agent-safety.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/agent-safety.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/agent-security/references/mcp-config-review.md
   derived_from:
   - source: affaan-m/ECC
@@ -42,11 +56,25 @@ files:
     path: skills/skill-scanner/references/prompt-injection-patterns.md
     license: Apache-2.0
     modification: adapted
+- path: skills/agent-security/references/skill-scanning/tool-shadowing.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/trojan-skill-hunter.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/secrets-hygiene/SKILL.md
   derived_from:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: security/security-secrets-credential-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/secrets-hygiene/references/scanning-recipes.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/secrets-scanner/README.md
     license: MIT
     modification: adapted
 - path: skills/secrets-hygiene/references/serialization-leaks/README.md
@@ -244,6 +272,20 @@ files:
     commit: e94f222
     path: skills/gha-security-review/references/supply-chain.md
     license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/review-checklists/sast-sca-security-analyzer.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/sast-sca-security-analyzer.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/security-audit/references/review-checklists/security-and-owasp.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/security-and-owasp.instructions.md
+    license: MIT
     modification: adapted
 - path: skills/security-audit/report-schema.json
   derived_from:

@@ -40,3 +40,4 @@ Load only what the task needs:
 - [`references/branching-and-history.md`](references/branching-and-history.md) — covers Git Workflow Patterns; What; Why; How
 - [`references/practices.md`](references/practices.md) — covers Git Workflow Master
 - [`references/pre-commit.md`](references/pre-commit.md) — covers Setup Pre-Commit Hooks
+- [`references/hook-installation/README.md`](references/hook-installation/README.md) — covers Gitmoji Setup

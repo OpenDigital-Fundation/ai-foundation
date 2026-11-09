@@ -14,6 +14,15 @@ artifacts:
   - affaan-m/ECC:skill:deployment-patterns
   - affaan-m/ECC:skill:docker-patterns
   - affaan-m/ECC:skill:kubernetes-patterns
+  - 'github/awesome-copilot:agent:SE: DevOps/CI'
+  - github/awesome-copilot:agent:Terraform IaC Reviewer
+  - github/awesome-copilot:agent:Terratest Module Testing
+  - github/awesome-copilot:rule:ansible.instructions
+  - github/awesome-copilot:rule:containerization-docker-best-practices.instructions
+  - github/awesome-copilot:rule:devcontainers.instructions
+  - github/awesome-copilot:rule:kubernetes-deployment-best-practices.instructions
+  - github/awesome-copilot:rule:kubernetes-manifests.instructions
+  - github/awesome-copilot:rule:terraform.instructions
   - mattpocock/skills:skill:wizard
   - msitarzewski/agency-agents:agent:DX Engineer
   - msitarzewski/agency-agents:agent:DevOps Automator
@@ -43,6 +52,20 @@ artifacts:
       - c:pm2
       mobile-release.md:
       - msitarzewski/agency-agents:engineering/engineering-mobile-release-engineer.md
+      terraform/README.md:
+      - github/awesome-copilot:agents/terraform-iac-reviewer.agent.md
+      - github/awesome-copilot:instructions/terraform.instructions.md
+      - github/awesome-copilot:agents/terratest-module-testing.agent.md
+      gitops/README.md:
+      - github/awesome-copilot:agents/se-gitops-ci-specialist.agent.md
+      containers/README.md:
+      - github/awesome-copilot:instructions/containerization-docker-best-practices.instructions.md
+      - github/awesome-copilot:instructions/devcontainers.instructions.md
+      kubernetes/README.md:
+      - github/awesome-copilot:instructions/kubernetes-deployment-best-practices.instructions.md
+      - github/awesome-copilot:instructions/kubernetes-manifests.instructions.md
+      ansible/README.md:
+      - github/awesome-copilot:instructions/ansible.instructions.md
 - id: platform/git-workflow
   type: skill
   capability: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts,
@@ -54,6 +77,7 @@ artifacts:
   - affaan-m/ECC:rule:common/git-workflow
   - affaan-m/ECC:skill:conventional-commit-review
   - affaan-m/ECC:skill:git-workflow
+  - github/awesome-copilot:agent:Gitmoji Setup
   - mattpocock/skills:skill:setup-pre-commit
   - msitarzewski/agency-agents:agent:Git Workflow Master
   recipe:
@@ -116,6 +140,8 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-git-workflow-master.md
       pre-commit.md:
       - mattpocock/skills:skills/misc/setup-pre-commit/SKILL.md
+      hook-installation/README.md:
+      - github/awesome-copilot:agents/gitmoji-setup.agent.md
     supersedes:
     - affaan-m/ECC:skill:conventional-commit-review
 - id: platform/github-operations
@@ -128,6 +154,9 @@ artifacts:
   - affaan-m/ECC:skill:github-ops
   - affaan-m/ECC:skill:opensource-pipeline
   - getsentry/skills:skill:iterate-pr
+  - github/awesome-copilot:agent:GitHub Actions Expert
+  - github/awesome-copilot:agent:GitHub Actions Node Runtime Upgrade
+  - github/awesome-copilot:rule:github-actions-ci-cd-best-practices.instructions
   recipe:
     title: GitHub operations
     description: 'Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and
@@ -142,6 +171,11 @@ artifacts:
       only human gates remain — follow [references/pr-iteration.md](references/pr-iteration.md).
 
       '
+    references:
+      actions/README.md:
+      - github/awesome-copilot:agents/github-actions-expert.agent.md
+      - github/awesome-copilot:agents/github-actions-node-upgrade.agent.md
+      - github/awesome-copilot:instructions/github-actions-ci-cd-best-practices.instructions.md
 - id: platform/incident-response
   type: skill
   capability: 'Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess
@@ -149,6 +183,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - github/awesome-copilot:agent:Cloud and SaaS Outage Triage
   - msitarzewski/agency-agents:agent:Incident Responder
   - msitarzewski/agency-agents:agent:Incident Response Commander
   recipe:
@@ -161,6 +196,8 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-incident-response-commander.md
       security-incidents.md:
       - msitarzewski/agency-agents:security/security-incident-responder.md
+      dependency-outages/README.md:
+      - github/awesome-copilot:agents/cloud-saas-outage-triage.agent.md
     body: '# Incident response
 
 
@@ -202,6 +239,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - affaan-m/ECC:skill:dashboard-builder
+  - github/awesome-copilot:agent:Platform SRE for Kubernetes
+  - github/awesome-copilot:rule:devops-core-principles.instructions
   - msitarzewski/agency-agents:agent:FinOps Engineer
   - msitarzewski/agency-agents:agent:Infrastructure Maintainer
   - msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)
@@ -216,6 +255,9 @@ artifacts:
       - s:dashboard-builder
       infrastructure-maintenance.md:
       - msitarzewski/agency-agents:support/support-infrastructure-maintainer.md
+      operational-checklists/README.md:
+      - github/awesome-copilot:agents/platform-sre-kubernetes.agent.md
+      - github/awesome-copilot:instructions/devops-core-principles.instructions.md
     body: '# Reliability and observability
 
 

@@ -22,6 +22,8 @@ from tools.inventory.classify import classify
 SKIP_DIRS = {"node_modules", ".git", "tests", "test", "examples", "docs", "i18n", "legacy-command-shims",
              ".openclaw", "cli", "site", "gallery", "preview", "eval", "benchmarks", "translations"}
 PROPRIETARY_SKILLS = {"docx", "pdf", "pptx", "xlsx"}
+# Per-source folders that hold the upstream site or build tooling, not artifacts.
+SOURCE_SKIP_DIRS = {"github/awesome-copilot": {"website", "eng"}}
 FIELDS = ["source", "kind", "name", "path", "license", "suggested_domain", "description"]
 
 
@@ -37,8 +39,21 @@ def frontmatter(path: Path) -> dict | None:
             "description": re.sub(r"\s+", " ", desc.group(2)).strip().strip("\"'") if desc else ""}
 
 
+GENERIC_JSON = {"hooks", "mcp", ".mcp", "plugin"}
+
+
+def artifact_name(source_id: str, rel: str, stem: str) -> str:
+    """awesome-copilot names many hooks.json/mcp.json files identically; use their folder there."""
+    p = Path(rel)
+    if source_id == "github/awesome-copilot" and p.stem in GENERIC_JSON and p.suffix == ".json" and p.parent.name:
+        return p.parent.name
+    return p.stem
+
+
 def kind_of(source_id: str, rel: str, fname: str) -> str | None:
     parent = os.path.dirname(rel)
+    if source_id == "github/awesome-copilot" and fname == "plugin.json":
+        return None  # plugin manifests list artifacts inventoried elsewhere
     if fname == "SKILL.md":
         return "skill"
     if fname.endswith(".md") and re.search(r"(^|/)agents(/|$)", parent):
@@ -48,6 +63,8 @@ def kind_of(source_id: str, rel: str, fname: str) -> str | None:
     if fname.endswith((".md", ".toml")) and re.search(r"(^|/)commands(/|$)", parent):
         return "command"
     if fname.endswith(".md") and re.search(r"(^|/)rules(/|$)", parent):
+        return "rule"
+    if fname.endswith(".instructions.md"):
         return "rule"
     if fname.endswith((".json", ".js", ".sh", ".py")) and re.search(r"(^|/)hooks(/|$)", parent):
         return "hook"
@@ -118,13 +135,13 @@ def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> Non
             sys.exit(f"missing clone for {s['id']}; run tools.inventory.fetch first")
         restricted_source = s["policy"] == "reference"
         for dp, dns, fns in os.walk(base):
-            dns[:] = sorted(d for d in dns if d not in SKIP_DIRS and not (d.startswith(".") and d not in {".claude", ".curated", ".system"}))
+            dns[:] = sorted(d for d in dns if d not in SKIP_DIRS and not (Path(dp) == base and d in SOURCE_SKIP_DIRS.get(s["id"], ())) and not (d.startswith(".") and d not in {".claude", ".curated", ".system"}))
             for f in sorted(fns):
                 p = Path(dp) / f
                 rel = str(p.relative_to(base))
                 kind = kind_of(s["id"], rel, f)
                 fm = frontmatter(p) if f.endswith(".md") and kind else None
-                name = (fm or {}).get("name") or (p.parent.name if f == "SKILL.md" else p.stem)
+                name = (fm or {}).get("name") or (p.parent.name if f == "SKILL.md" else artifact_name(s["id"], rel, p.stem))
                 if kind == "rule":  # rules have no frontmatter and repeat file names across languages
                     m = re.search(r"(?:^|/)rules/(.+)\.md$", rel)
                     name = m.group(1) if m else p.stem

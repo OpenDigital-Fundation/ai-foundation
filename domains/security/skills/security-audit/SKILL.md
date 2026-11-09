@@ -201,3 +201,10 @@ For Django and DRF authorization (IDOR, object-level checks, tenant isolation), 
 8. Re-reporting carried same-source prior confirmed records or using them as exemplars that anchor the hunt.
 9. Assigning severity to `needs_validation` records.
 10. Writing the report before independent verification or letting prose and JSON disagree.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/review-checklists/sast-sca-security-analyzer.md`](references/review-checklists/sast-sca-security-analyzer.md)
+- [`references/review-checklists/security-and-owasp.md`](references/review-checklists/security-and-owasp.md)

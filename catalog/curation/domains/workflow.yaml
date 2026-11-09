@@ -21,11 +21,12 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - obra/superpowers:skill:executing-plans
-  - obra/superpowers:skill:subagent-driven-development
+  - affaan-m/ECC:command:prp-implement
+  - github/awesome-copilot:rule:task-implementation.instructions
   - mattpocock/skills:skill:implement
   - mattpocock/skills:skill:implement-spec
-  - affaan-m/ECC:command:prp-implement
+  - obra/superpowers:skill:executing-plans
+  - obra/superpowers:skill:subagent-driven-development
 - id: workflow/feature-delivery
   type: workflow
   capability: Orchestrate the stages from idea to merge-ready branch with an approval gate between each stage.
@@ -94,9 +95,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - mattpocock/skills:skill:to-tickets
   - affaan-m/ECC:command:epic-decompose
   - affaan-m/ECC:skill:story-lifecycle
+  - github/awesome-copilot:agent:one-shot-feature-issue-planner
+  - mattpocock/skills:skill:to-tickets
 - id: workflow/issue-tracking
   type: knowledge
   capability: How to create, link, label and query issues on GitHub, GitLab or local markdown trackers.
@@ -124,6 +126,9 @@ artifacts:
   - affaan-m/ECC:command:prp-plan
   - affaan-m/ECC:skill:blueprint
   - affaan-m/ECC:skill:change-impact
+  - github/awesome-copilot:agent:Implementation Plan Generation Mode
+  - github/awesome-copilot:agent:Specification
+  - github/awesome-copilot:rule:spec-driven-workflow-v1.instructions
   - obra/superpowers:skill:writing-plans
 imports:
 - dest: domains/workflow/skills/brainstorming
@@ -190,3 +195,18 @@ imports:
 - dest: domains/workflow/skills/brainstorming/templates/spec.md
   source: mattpocock/skills
   src: skills/engineering/to-spec/SKILL.md
+- dest: domains/workflow/skills/writing-plans/references/spec-traceability/implementation-plan.md
+  source: github/awesome-copilot
+  src: agents/implementation-plan.agent.md
+- dest: domains/workflow/skills/writing-plans/references/spec-traceability/specification.md
+  source: github/awesome-copilot
+  src: agents/specification.agent.md
+- dest: domains/workflow/skills/writing-plans/references/spec-traceability/spec-driven-workflow-v1.md
+  source: github/awesome-copilot
+  src: instructions/spec-driven-workflow-v1.instructions.md
+- dest: domains/workflow/skills/issue-breakdown/references/feature-issue-drafts.md
+  source: github/awesome-copilot
+  src: agents/one-shot-feature-issue-planner.agent.md
+- dest: domains/workflow/skills/executing-plans/references/implementation-tracking.md
+  source: github/awesome-copilot
+  src: instructions/task-implementation.instructions.md

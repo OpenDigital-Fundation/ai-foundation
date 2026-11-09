@@ -33,3 +33,4 @@ Load only what the task needs:
 - [`references/review.md`](references/review.md) — covers rag-pipeline-reviewer
 - [`references/iterative-retrieval.md`](references/iterative-retrieval.md) — covers Iterative Retrieval Pattern
 - [`references/search-relevance.md`](references/search-relevance.md) — covers Search Relevance Engineer
+- [`references/langchain/README.md`](references/langchain/README.md) — covers LangChain Python Instructions

@@ -21,6 +21,13 @@ files:
     path: pi/core/skills/agent-eval/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-evaluation/references/benchmark-integrity/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/research-harness-engineer.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/agent-evaluation/references/benchmark-loops.md
   derived_from:
   - source: affaan-m/ECC
@@ -61,6 +68,32 @@ files:
   - source: mattpocock/skills
     commit: 4ae2317
     path: skills/misc/git-guardrails-claude-code/agents/openai.yaml
+    license: MIT
+    modification: adapted
+- path: skills/agent-guardrails/references/action-verification.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/verify-agent-action/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-guardrails/references/hook-contracts/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/tool-guardian/README.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/hooks.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-guardrails/references/operation-policies/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/tool-guardian/README.md
     license: MIT
     modification: adapted
 - path: skills/agent-guardrails/references/safety-modes.md
@@ -129,6 +162,18 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/context-and-decisions/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-memory/references/durable-project-context/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/dotnet-self-learning-architect.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/memory-bank.instructions.md
     license: MIT
     modification: adapted
 - path: skills/agent-memory/references/learning-loop.md
@@ -201,6 +246,13 @@ files:
     path: skills/strategic-compact/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/context-management/references/context-mapping/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/context-engineering.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/context-management/references/token-budgeting.md
   derived_from:
   - source: affaan-m/ECC
@@ -234,6 +286,18 @@ files:
     path: pi/core/skills/agent-architecture-audit/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/harness-design/references/customizations/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/agents.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/instructions.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/harness-design/references/enterprise-operations.md
   derived_from:
   - source: affaan-m/ECC
@@ -265,6 +329,25 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: specialized/agents-orchestrator.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/repository-harness.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/harness-engineering/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/harness-design/references/session-observability/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/governance-audit/README.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/session-logger/README.md
     license: MIT
     modification: adapted
 - path: skills/parallel-agents/SKILL.md

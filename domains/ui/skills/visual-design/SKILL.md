@@ -158,3 +158,9 @@ Verification is budgeted: one batched inspection, one fix batch, at most one con
 ## Aesthetic direction
 
 For committing to a bold, specific aesthetic direction (typography, colour, motion, spatial composition) see [references/aesthetic-direction.md](references/aesthetic-direction.md). Accessibility is owned by `accessibility:wcag-accessibility`; the Floor gates here call it, they do not replace it.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/design-review.md`](references/design-review.md)

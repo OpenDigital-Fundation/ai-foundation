@@ -20,6 +20,20 @@ Language-specific knowledge for C# and F# on .NET. The procedures themselves liv
 | [`references/security.md`](references/security.md) | code that handles untrusted input, auth, secrets, files, network or SQL |
 | [`references/review.md`](references/review.md) | reviewing a change; read by `code-quality:code-reviewer` |
 | [`references/tooling.md`](references/tooling.md) | formatters, linters, type checkers and editor hooks |
+| [`references/build.md`](references/build.md) | compiler, build tool, type-checker or dependency failures |
+
+## Frameworks
+
+Load the framework file only when the project uses it (check the manifest: `package.json`, `pyproject.toml`, `build.gradle`, `Gemfile`, `composer.json`, `pubspec.yaml`, `Package.swift`).
+
+- [`razor`](references/frameworks/razor.md)
+- [`maui`](references/frameworks/maui.md)
+- [`wpf`](references/frameworks/wpf.md)
+- [`aspnet-core`](references/frameworks/aspnet-core.md)
+- [`blazor`](references/frameworks/blazor.md)
+- [`mvvm`](references/frameworks/mvvm.md)
+- [`winui`](references/frameworks/winui.md)
+- [`winforms`](references/frameworks/winforms.md)
 
 ## Precedence
 

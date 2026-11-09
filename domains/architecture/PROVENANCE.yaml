@@ -7,6 +7,20 @@ files:
     path: skills/api-design/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/api-design/references/contract-driven/api-architect.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/api-architect.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/api-design/references/contract-driven/openapi-to-application.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/openapi-to-application.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/api-design/references/implementation-patterns.md
   derived_from:
   - source: affaan-m/ECC
@@ -28,6 +42,27 @@ files:
     path: skills/engineering/improve-codebase-architecture/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/architecture-review/references/modernization-review/arch.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/arch.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/references/modernization-review/modernization.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/modernization.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/references/modernization-review/se-system-architecture-reviewer.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/se-system-architecture-reviewer.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/codebase-design/DEEPENING.md
   derived_from:
   - source: mattpocock/skills
@@ -47,6 +82,13 @@ files:
   - source: mattpocock/skills
     commit: 4ae2317
     path: skills/engineering/codebase-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-design/references/design-patterns.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/oop-design-patterns.instructions.md
     license: MIT
     modification: adapted
 - path: skills/codebase-design/references/ports-and-adapters.md
@@ -82,6 +124,13 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/code-tour/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/context-mapping/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/context-architect.agent.md
     license: MIT
     modification: adapted
 - path: skills/codebase-onboarding/references/explorer.md
@@ -124,6 +173,13 @@ files:
     path: skills/engineering/domain-modeling/ADR-FORMAT.md
     license: MIT
     modification: merged-section
+- path: skills/decision-records/references/decision-templates.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/adr-generator.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/domain-modeling/GLOSSARY-FORMAT.md
   derived_from:
   - source: mattpocock/skills
@@ -136,6 +192,13 @@ files:
   - source: mattpocock/skills
     commit: 4ae2317
     path: skills/engineering/domain-modeling/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/domain-modeling/references/domain-code-heuristics.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/object-calisthenics.instructions.md
     license: MIT
     modification: adapted
 - path: skills/system-design/SKILL.md
@@ -181,6 +244,18 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/content-hash-cache-pattern/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/design-checklists/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/hlbpa.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/project-architecture-planner.agent.md
     license: MIT
     modification: adapted
 - path: skills/system-design/references/error-handling.md

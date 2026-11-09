@@ -51,3 +51,9 @@ Start minimal; add sections only when they carry information. See [ADR-FORMAT.md
 ## Reading ADRs
 
 Before proposing a change in an area, read its ADRs. If your proposal contradicts one, say so explicitly and only push when the friction is real enough to reopen the decision.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/decision-templates.md`](references/decision-templates.md)

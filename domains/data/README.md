@@ -34,6 +34,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `data-pipelines` | affaan-m/ECC, msitarzewski/agency-agents |
-| `database-design` | affaan-m/ECC, msitarzewski/agency-agents |
-| `database-migrations` | affaan-m/ECC |
+| `data-pipelines` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `database-design` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `database-migrations` | affaan-m/ECC, github/awesome-copilot |

@@ -12,6 +12,7 @@ artifacts:
   - affaan-m/ECC:agent:build-error-resolver
   - affaan-m/ECC:agent:silent-failure-hunter
   - affaan-m/ECC:command:build-fix
+  - github/awesome-copilot:rule:makefile.instructions
   recipe:
     title: Build failure resolution
     description: 'Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed
@@ -21,6 +22,8 @@ artifacts:
     references:
       silent-failures.md:
       - a:silent-failure-hunter
+      make/README.md:
+      - github/awesome-copilot:instructions/makefile.instructions.md
     supersedes:
     - affaan-m/ECC:command:build-fix
 - id: debugging/systematic-debugging
@@ -30,8 +33,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - obra/superpowers:skill:systematic-debugging
+  - github/awesome-copilot:agent:DevTools Regression Investigator
+  - github/awesome-copilot:agent:Frontend Performance Investigator
+  - github/awesome-copilot:rule:performance-optimization.instructions
   - mattpocock/skills:skill:diagnosing-bugs
+  - obra/superpowers:skill:systematic-debugging
 imports:
 - dest: domains/debugging/skills/systematic-debugging
   source: obra/superpowers
@@ -45,3 +51,12 @@ imports:
 - dest: domains/debugging/skills/systematic-debugging/scripts/hitl-loop.template.sh
   source: mattpocock/skills
   src: skills/engineering/diagnosing-bugs/scripts/hitl-loop.template.sh
+- dest: domains/debugging/skills/systematic-debugging/references/browser-regressions/devtools-regression-investigator.md
+  source: github/awesome-copilot
+  src: agents/devtools-regression-investigator.agent.md
+- dest: domains/debugging/skills/systematic-debugging/references/browser-regressions/frontend-performance-investigator.md
+  source: github/awesome-copilot
+  src: agents/frontend-performance-investigator.agent.md
+- dest: domains/debugging/skills/systematic-debugging/references/browser-regressions/performance-optimization.md
+  source: github/awesome-copilot
+  src: instructions/performance-optimization.instructions.md

@@ -43,13 +43,13 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `agent-debugging` | affaan-m/ECC |
-| `agent-evaluation` | affaan-m/ECC |
-| `agent-guardrails` | affaan-m/ECC, mattpocock/skills |
+| `agent-evaluation` | affaan-m/ECC, github/awesome-copilot |
+| `agent-guardrails` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills |
 | `agent-loops` | affaan-m/ECC |
-| `agent-memory` | affaan-m/ECC |
+| `agent-memory` | affaan-m/ECC, github/awesome-copilot |
 | `agent-teams` | affaan-m/ECC |
-| `context-management` | affaan-m/ECC |
-| `harness-design` | affaan-m/ECC, msitarzewski/agency-agents |
+| `context-management` | affaan-m/ECC, github/awesome-copilot |
+| `harness-design` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
 | `parallel-agents` | obra/superpowers |
 | `session-retrospective` | mattpocock/skills |
 | `skill-authoring` | affaan-m/ECC, anthropics/skills, mattpocock/skills, obra/superpowers |

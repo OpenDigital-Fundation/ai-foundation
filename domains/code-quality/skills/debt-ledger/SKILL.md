@@ -42,3 +42,9 @@ End with `<N> markers, <M> with no trigger.` Nothing found: `No shortcut debt. C
 
 Reads and reports only, changes nothing. To persist it, ask and it writes the
 ledger to a file (e.g. `DEBT-LEDGER.md`). One-shot.
+
+## Further references
+
+Guides merged from github/awesome-copilot; load only what the task needs:
+
+- [`references/remediation-planning.md`](references/remediation-planning.md)

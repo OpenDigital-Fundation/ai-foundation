@@ -34,6 +34,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `docs-lookup` | affaan-m/ECC |
+| `docs-lookup` | affaan-m/ECC, github/awesome-copilot |
 | `literature-review` | affaan-m/ECC, msitarzewski/agency-agents |
-| `source-research` | affaan-m/ECC, mattpocock/skills, msitarzewski/agency-agents |
+| `source-research` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills, msitarzewski/agency-agents |

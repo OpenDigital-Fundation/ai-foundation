@@ -108,6 +108,7 @@ Load only what the task needs:
 - [`references/e2e-runner.md`](references/e2e-runner.md) — covers E2E Test Runner
 - [`references/windows-desktop.md`](references/windows-desktop.md) — covers Windows Desktop E2E Testing
 - [`references/playwright-overview.md`](references/playwright-overview.md) — covers Playwright Best Practices
+- [`references/playwright/README.md`](references/playwright/README.md) — covers Playwright .NET Test Generation Instructions; Playwright Python Test Generation Instructions; playwright-typescript.instructions; Playwright Tester Mode
 - `references/playwright-advanced/`
 - `references/playwright-architecture/`
 - `references/playwright-browser-apis/`

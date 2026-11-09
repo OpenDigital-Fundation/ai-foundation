@@ -14,6 +14,7 @@ artifacts:
   - affaan-m/ECC:skill:market-research
   - affaan-m/ECC:skill:product-capability
   - affaan-m/ECC:skill:product-lens
+  - github/awesome-copilot:agent:Create PRD Chat Mode
   - msitarzewski/agency-agents:agent:Business Strategist
   - msitarzewski/agency-agents:agent:Experiment Tracker
   - msitarzewski/agency-agents:agent:Feedback Synthesizer
@@ -38,6 +39,8 @@ artifacts:
       - s:product-lens
       capability-mapping.md:
       - s:product-capability
+      product-briefs/README.md:
+      - github/awesome-copilot:agents/prd.agent.md
     body: '# Product management
 
 

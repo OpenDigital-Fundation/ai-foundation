@@ -11,6 +11,8 @@ artifacts:
   - affaan-m/ECC:skill:api-connector-builder
   - affaan-m/ECC:skill:api-design
   - affaan-m/ECC:skill:contract-first
+  - github/awesome-copilot:agent:API Architect
+  - github/awesome-copilot:agent:OpenAPI to Application Generator
 - id: architecture/architecture-review
   type: skill
   capability: Scan an existing codebase for deepening opportunities and walk the chosen one with the user.
@@ -19,6 +21,9 @@ artifacts:
   supersedes:
   - affaan-m/ECC:skill:brownfield-retrospective
   - affaan-m/ECC:skill:module-governance
+  - github/awesome-copilot:agent:Modernization Agent
+  - 'github/awesome-copilot:agent:SE: Architect'
+  - github/awesome-copilot:agent:Senior Cloud Architect
   - mattpocock/skills:skill:improve-codebase-architecture
 - id: architecture/codebase-design
   type: skill
@@ -26,8 +31,9 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - mattpocock/skills:skill:codebase-design
   - affaan-m/ECC:skill:hexagonal-architecture
+  - github/awesome-copilot:rule:oop-design-patterns.instructions
+  - mattpocock/skills:skill:codebase-design
 - id: architecture/codebase-onboarding
   type: skill
   capability: 'Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry
@@ -39,9 +45,10 @@ artifacts:
   - affaan-m/ECC:agent:spec-miner
   - affaan-m/ECC:skill:code-tour
   - affaan-m/ECC:skill:codebase-onboarding
+  - getsentry/skills:skill:agents-md
+  - github/awesome-copilot:agent:Context Architect
   - msitarzewski/agency-agents:agent:Codebase Archaeologist
   - msitarzewski/agency-agents:agent:Codebase Onboarding Engineer
-  - getsentry/skills:skill:agents-md
   recipe:
     title: Codebase onboarding
     description: 'Use when someone (or an agent) needs to understand an unfamiliar codebase fast: map its structure and entry
@@ -61,6 +68,8 @@ artifacts:
       - a:spec-miner
       agent-instructions.md:
       - getsentry/skills:skills/agents-md/SKILL.md
+      context-mapping/README.md:
+      - github/awesome-copilot:agents/context-architect.agent.md
 - id: architecture/decision-records
   type: skill
   capability: Record, supersede, index and read architecture decision records, one decision per file.
@@ -68,12 +77,14 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - affaan-m/ECC:skill:architecture-decision-records
+  - github/awesome-copilot:agent:ADR Generator
 - id: architecture/domain-modeling
   type: skill
   capability: Sharpen the domain language with scenarios, keep GLOSSARY.md current, and flag decisions worth an ADR.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - github/awesome-copilot:rule:object-calisthenics.instructions
   - mattpocock/skills:skill:domain-modeling
 - id: architecture/system-design
   type: skill
@@ -89,6 +100,8 @@ artifacts:
   - affaan-m/ECC:skill:error-handling
   - affaan-m/ECC:skill:i18n-sync
   - affaan-m/ECC:skill:latency-critical-systems
+  - github/awesome-copilot:agent:High-Level Big Picture Architect (HLBPA)
+  - github/awesome-copilot:agent:Project Architecture Planner
   - msitarzewski/agency-agents:agent:API Platform Engineer
   - msitarzewski/agency-agents:agent:Backend Architect
   - msitarzewski/agency-agents:agent:Internationalization Engineer
@@ -121,6 +134,9 @@ artifacts:
       internationalisation.md:
       - msitarzewski/agency-agents:engineering/engineering-i18n-engineer.md
       - s:i18n-sync
+      design-checklists/README.md:
+      - github/awesome-copilot:agents/hlbpa.agent.md
+      - github/awesome-copilot:agents/project-architecture-planner.agent.md
     body: '# System design
 
 
@@ -182,3 +198,27 @@ imports:
   src: skills/api-design
   files:
     references/implementation-patterns.md: skills/api-design/SKILL.md
+- dest: domains/architecture/skills/architecture-review/references/modernization-review/modernization.md
+  source: github/awesome-copilot
+  src: agents/modernization.agent.md
+- dest: domains/architecture/skills/architecture-review/references/modernization-review/se-system-architecture-reviewer.md
+  source: github/awesome-copilot
+  src: agents/se-system-architecture-reviewer.agent.md
+- dest: domains/architecture/skills/architecture-review/references/modernization-review/arch.md
+  source: github/awesome-copilot
+  src: agents/arch.agent.md
+- dest: domains/architecture/skills/decision-records/references/decision-templates.md
+  source: github/awesome-copilot
+  src: agents/adr-generator.agent.md
+- dest: domains/architecture/skills/api-design/references/contract-driven/api-architect.md
+  source: github/awesome-copilot
+  src: agents/api-architect.agent.md
+- dest: domains/architecture/skills/api-design/references/contract-driven/openapi-to-application.md
+  source: github/awesome-copilot
+  src: agents/openapi-to-application.agent.md
+- dest: domains/architecture/skills/domain-modeling/references/domain-code-heuristics.md
+  source: github/awesome-copilot
+  src: instructions/object-calisthenics.instructions.md
+- dest: domains/architecture/skills/codebase-design/references/design-patterns.md
+  source: github/awesome-copilot
+  src: instructions/oop-design-patterns.instructions.md

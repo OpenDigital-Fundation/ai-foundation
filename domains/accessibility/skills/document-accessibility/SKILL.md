@@ -109,6 +109,7 @@ Authoritative specifications for this skill: `skills/a11y-core/references/source
 
 Load only what the task needs:
 
+- [`references/markdown/README.md`](references/markdown/README.md) — covers Markdown Accessibility Assistant; Getting Started; Contributing; Accessibility Improvements Made
 - `references/word-accessibility/`
 - `references/excel-accessibility/`
 - `references/powerpoint-accessibility/`

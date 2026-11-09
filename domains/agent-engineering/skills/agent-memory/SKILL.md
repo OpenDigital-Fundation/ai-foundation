@@ -385,3 +385,4 @@ Load only what the task needs:
 - [`references/context-and-decisions.md`](references/context-and-decisions.md) — covers Domain Context and Decision Handoff
 - [`references/rules-distillation.md`](references/rules-distillation.md) — covers Rules Distill; Input; Extraction Criteria; Matching & Verdict
 - [`references/observer.md`](references/observer.md) — covers Observer; Action; Evidence
+- [`references/durable-project-context/README.md`](references/durable-project-context/README.md) — covers Dotnet Self-Learning Architect; Metadata; Task Context; Mistake

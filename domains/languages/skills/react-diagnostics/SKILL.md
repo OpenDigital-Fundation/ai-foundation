@@ -85,5 +85,6 @@ This skill is derived from [millionco/react-doctor](https://github.com/millionco
 
 Load only what the task needs:
 
+- [`references/react-compatibility/README.md`](references/react-compatibility/README.md) — covers React 18 Auditor - Class-Component Deep Scanner; Why 18.3.1 is the Target; Critical - Silent Runtime Breakers; Unsafe Lifecycle Methods (Warns in 18.3.1, Required for React 19)
 - `references/improve-react/` — audit and improvement plan for a React codebase
 - `references/performance/` — rendering and runtime performance work

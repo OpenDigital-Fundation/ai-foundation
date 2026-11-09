@@ -341,3 +341,4 @@ Load only what the task needs:
 
 - [`references/frontend-engineering.md`](references/frontend-engineering.md) — covers Frontend Developer; UI Implementation; Performance Optimization; Accessibility Implementation
 - [`references/css-architecture.md`](references/css-architecture.md) — covers ArchitectUX; Layout Architecture; Information Architecture; CSS Architecture
+- [`references/framework-integration/README.md`](references/framework-integration/README.md) — covers HTML CSS Style Color Guide; Tailwind CSS v4 Installation with Vite; Bulma v1

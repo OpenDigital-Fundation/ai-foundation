@@ -24,6 +24,13 @@ files:
     path: skills/ponytail-review/SKILL.md
     license: MIT
     modification: merged-section
+- path: skills/code-review/references/review-checklists.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/code-review-generic.instructions.md
+    license: MIT
+    modification: adapted
 - path: skills/code-review/references/smell-baseline.md
   derived_from:
   - source: mattpocock/skills
@@ -43,6 +50,13 @@ files:
   - source: DietrichGebert/ponytail
     commit: 96608e0
     path: skills/ponytail-debt/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/debt-ledger/references/remediation-planning.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/tech-debt-remediation-plan.agent.md
     license: MIT
     modification: adapted
 - path: skills/receiving-code-review/SKILL.md

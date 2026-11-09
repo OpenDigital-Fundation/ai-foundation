@@ -10,6 +10,9 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - anthropics/skills:skill:theme-factory
+  - github/awesome-copilot:rule:bulma-v1.instructions
+  - github/awesome-copilot:rule:html-css-style-color-guide.instructions
+  - github/awesome-copilot:rule:tailwind-v4-vite.instructions
   - msitarzewski/agency-agents:agent:Frontend Developer
   - msitarzewski/agency-agents:agent:UX Architect
   - nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-styling
@@ -24,6 +27,10 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-frontend-developer.md
       css-architecture.md:
       - msitarzewski/agency-agents:design/design-ux-architect.md
+      framework-integration/README.md:
+      - github/awesome-copilot:instructions/html-css-style-color-guide.instructions.md
+      - github/awesome-copilot:instructions/tailwind-v4-vite.instructions.md
+      - github/awesome-copilot:instructions/bulma-v1.instructions.md
 - id: ui/design-system
   type: skill
   capability: Choose or generate a design system (style, palette, type, charts, icons, tokens) from a curated database.
@@ -80,8 +87,9 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - Nutlope/hallmark:skill:hallmark
-  - anthropics/skills:skill:frontend-design
   - affaan-m/ECC:skill:frontend-design-direction
+  - anthropics/skills:skill:frontend-design
+  - github/awesome-copilot:agent:gem-designer
   - msitarzewski/agency-agents:agent:UI Designer
   - msitarzewski/agency-agents:agent:UI Finish-Gate Reviewer
   - nextlevelbuilder/ui-ux-pro-max-skill:agent:design-review
@@ -105,3 +113,6 @@ imports:
 - dest: domains/ui/skills/design-system/references/extract-from-codebase.md
   source: affaan-m/ECC
   src: skills/design-system/SKILL.md
+- dest: domains/ui/skills/visual-design/references/design-review.md
+  source: github/awesome-copilot
+  src: agents/gem-designer.agent.md

@@ -176,6 +176,13 @@ files:
     path: marketing/marketing-agentic-search-optimizer.md
     license: MIT
     modification: adapted
+- path: skills/seo/references/answer-search/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/search-ai-optimization-expert.agent.md
+    license: MIT
+    modification: adapted
 - path: skills/seo/references/app-stores.md
   derived_from:
   - source: msitarzewski/agency-agents
