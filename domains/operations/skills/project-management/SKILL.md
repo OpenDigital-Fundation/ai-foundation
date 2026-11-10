@@ -25,6 +25,8 @@ Short status updates (done, next, blocked, decisions needed), meeting notes with
 ## 5. Close
 Confirm acceptance, hand over, and write a short retrospective: what worked, what to change.
 
+Management schools, organisational laws (Pareto, Parkinson, Goodhart, Little, Brooks…) with their evidence weight, and execution methods (PDCA, Lean, Six Sigma, TOC, Kanban, OKR, Balanced Scorecard, RACI): [`references/management-models.md`](references/management-models.md).
+
 ## References
 
 Load only what the task needs:

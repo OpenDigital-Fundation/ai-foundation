@@ -114,6 +114,8 @@ Delete and rewrite any:
 - `product:product-management` — audience and competitive intelligence
 - `seo` — on-page optimisation for landing page copy
 
+Marketing foundations (4Ps, STP, 5As), laws of brand growth (Ehrenberg-Bass), brand building versus activation (Binet and Field), growth funnels and loops, and metric definitions with their traps: [`references/marketing-science.md`](references/marketing-science.md).
+
 ## References
 
 Load only what the task needs:

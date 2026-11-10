@@ -106,6 +106,8 @@ intentional, re-run with `--force`.
 2. Load corresponding `references/{subcommand}.md`
 3. Execute with remaining arguments
 
+Brand equity (Aaker, Keller), identity prism (Kapferer), personality, archetypes, positioning (Ries and Trout), diffusion of innovations and crossing the chasm: [`references/brand-theory.md`](references/brand-theory.md).
+
 ## References
 
 Load only what the task needs:

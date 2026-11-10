@@ -22,6 +22,10 @@ artifacts:
       - msitarzewski/agency-agents:design/design-brand-guardian.md
       discovery-interview.md:
       - s:brand-discovery
+    append: 'Brand equity (Aaker, Keller), identity prism (Kapferer), personality, archetypes, positioning (Ries and Trout),
+      diffusion of innovations and crossing the chasm: [`references/brand-theory.md`](references/brand-theory.md).
+
+      '
 - id: brand/brand-voice
   type: skill
   capability: 'Use when writing should sound like a specific person or company: build a style profile from their real posts,

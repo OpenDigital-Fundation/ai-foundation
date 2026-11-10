@@ -131,6 +131,8 @@ Before delivering:
 - `crosspost` for platform-specific distribution
 - `marketing:content-marketing` for sourcing recent posts and publishing approved X output
 
+Influence principles (Cialdini), decision biases and the Fogg behaviour model, each with its honest use and the dark pattern to refuse: [`references/persuasion-and-behaviour.md`](references/persuasion-and-behaviour.md).
+
 ## References
 
 Load only what the task needs:

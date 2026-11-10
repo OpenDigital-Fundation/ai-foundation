@@ -32,6 +32,10 @@ artifacts:
     reference_notes:
       derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Technical Implementation;
         Understanding Buyers & Human Psychology'
+    append: 'Marketing foundations (4Ps, STP, 5As), laws of brand growth (Ehrenberg-Bass), brand building versus activation
+      (Binet and Field), growth funnels and loops, and metric definitions with their traps: [`references/marketing-science.md`](references/marketing-science.md).
+
+      '
 - id: marketing/content-marketing
   type: skill
   capability: 'Use when planning or producing marketing content: content strategy and calendars, articles and newsletters,
@@ -84,6 +88,10 @@ artifacts:
     reference_notes:
       derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Reverse Engineering Viral
         Content; Page Structure Framework; Platform Strategy Guide; Building the post; Landing Page Section Variety'
+    append: 'Influence principles (Cialdini), decision biases and the Fogg behaviour model, each with its honest use and the
+      dark pattern to refuse: [`references/persuasion-and-behaviour.md`](references/persuasion-and-behaviour.md).
+
+      '
 - id: marketing/email-marketing
   type: skill
   capability: 'Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation, deliverability,

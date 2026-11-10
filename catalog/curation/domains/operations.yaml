@@ -126,6 +126,10 @@ artifacts:
     reference_notes:
       derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Performance Review Prep;
         Entry Format; Teaching Techniques'
+    append: 'Motivation and leadership theories (Maslow, Herzberg, McGregor, Vroom, Adams, self-determination, situational
+      and transformational leadership, psychological safety) with evidence and caveats: [`references/motivation-and-leadership.md`](references/motivation-and-leadership.md).
+
+      '
 - id: operations/project-management
   type: skill
   capability: 'Use when running a project or programme: plans and milestones, status tracking, risks and dependencies, stakeholder
@@ -208,3 +212,7 @@ artifacts:
       derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Metrics Dashboard; Async
         Standup Patterns; Scoring Rubric (1–10 scales); Yesterday''s Accomplishments Extraction; Blockers and Dependencies
         Identification; Communication Best Practices'
+    append: 'Management schools, organisational laws (Pareto, Parkinson, Goodhart, Little, Brooks…) with their evidence weight,
+      and execution methods (PDCA, Lean, Six Sigma, TOC, Kanban, OKR, Balanced Scorecard, RACI): [`references/management-models.md`](references/management-models.md).
+
+      '

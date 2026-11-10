@@ -24,6 +24,8 @@ For organisational change: why, what changes for whom, timeline, communication p
 
 Employment-law questions need a qualified professional in the relevant jurisdiction.
 
+Motivation and leadership theories (Maslow, Herzberg, McGregor, Vroom, Adams, self-determination, situational and transformational leadership, psychological safety) with evidence and caveats: [`references/motivation-and-leadership.md`](references/motivation-and-leadership.md).
+
 ## References
 
 Load only what the task needs:

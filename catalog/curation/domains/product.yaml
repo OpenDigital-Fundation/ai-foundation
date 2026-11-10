@@ -87,3 +87,7 @@ artifacts:
     reference_notes:
       derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Business Case Document
         Structure; Pricing Research Methods'
+    append: 'Strategy frameworks (PESTEL, five forces, SWOT, value chain, VRIO, Blue Ocean, Ansoff, BCG, GE–McKinsey, 7S,
+      scenarios) and a working sequence: [`references/strategy-frameworks.md`](references/strategy-frameworks.md).
+
+      '

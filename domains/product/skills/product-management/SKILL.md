@@ -27,6 +27,8 @@ Run experiments with a hypothesis, metric, sample size and stop rule. Synthesise
 
 Market, competitor and capability analyses are in the references.
 
+Strategy frameworks (PESTEL, five forces, SWOT, value chain, VRIO, Blue Ocean, Ansoff, BCG, GE–McKinsey, 7S, scenarios) and a working sequence: [`references/strategy-frameworks.md`](references/strategy-frameworks.md).
+
 ## References
 
 Load only what the task needs:
