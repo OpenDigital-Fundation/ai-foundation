@@ -41,8 +41,9 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [github/awesome-copilot](https://github.com/github/awesome-copilot) @ `797337f` | MIT | merge | 918 | 71 | 320 vendor-specific, 279 duplicate-of, 60 out-of-scope, 24 source-internal, 17 low-quality |
 | [wshobson/agents](https://github.com/wshobson/agents) @ `9c61ab2` | MIT | merge | 488 | 24 | 346 duplicate-of, 29 vendor-specific, 24 out-of-scope, 22 source-internal |
 | [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) @ `ed74d11` | MIT | merge | 166 | 2 | 140 duplicate-of, 17 out-of-scope, 6 vendor-specific |
-| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) @ `bf9b0b4` | MIT | merge | 2051 | 29 | 924 duplicate-of, 614 vendor-specific, 213 out-of-scope, 25 source-internal, 15 low-quality, 3 license |
+| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) @ `bf9b0b4` | MIT | merge | 2190 | 29 | 1038 duplicate-of, 628 vendor-specific, 217 out-of-scope, 25 source-internal, 15 low-quality, 6 license |
 | [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) @ `078a25c` | MIT | merge | 77 | 7 | 65 duplicate-of, 4 vendor-specific, 1 out-of-scope |
+| [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) @ `2d2065f` | MIT | merge | 177 | 8 | 27 vendor-specific, 16 duplicate-of, 11 license, 6 out-of-scope, 3 low-quality |
 
 ## obra/superpowers
 
@@ -259,13 +260,20 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 - URL: <https://github.com/davila7/claude-code-templates> · commit `bf9b0b4ae66831ad3bc683f7ff9319fbaaaae12c` · licence MIT · policy `merge`
 - Note: Collection MIT; many vendored components carry their own LICENSE files, resolved per folder
 - Used in: `accessibility:accessibility-audit`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-memory`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `code-quality:simplification`, `creative-media:generative-art`, `data:database-design`, `documents:internal-comms`, `documents:office-documents`, `documents:technical-writing`, `legal-compliance:compliance-programs`, `marketing:campaign-planning`, `marketing:content-marketing`, `marketing:email-marketing`, `marketing:seo`, `operations:customer-support`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:reliability`, `product:product-management`, `research:source-research`, `sales:deal-strategy`, `testing:test-strategy`, `ui:component-styling`, `ui:motion-and-polish`
-- Excluded items by reason: duplicate-of: 924, vendor-specific: 614, out-of-scope: 213, source-internal: 25, low-quality: 15, license: 3
+- Excluded items by reason: duplicate-of: 1038, vendor-specific: 628, out-of-scope: 217, source-internal: 25, low-quality: 15, license: 6
 
 ## Jeffallan/claude-skills
 
 - URL: <https://github.com/Jeffallan/claude-skills> · commit `078a25cc5bfd8011459be7b91d004e900c1d02d3` · licence MIT · policy `merge`
 - Used in: `data:data-pipelines`, `languages:dart`, `languages:php`, `languages:python`, `operations:project-management`, `platform:deployment`, `platform:reliability`
 - Excluded items by reason: duplicate-of: 65, vendor-specific: 4, out-of-scope: 1
+
+## K-Dense-AI/claude-scientific-skills
+
+- URL: <https://github.com/K-Dense-AI/claude-scientific-skills> · commit `2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5` · licence MIT · policy `merge`
+- Note: Collection MIT; skills declare their own licence in frontmatter, read before copying (restrictive or ambiguous ones are linked only)
+- Used in: `ai-engineering:ml-engineering`, `science:bioinformatics`, `science:biomedical-data`, `science:cheminformatics`, `science:experimental-design`, `science:lab-automation`, `science:scientific-computing`, `science:scientific-writing`
+- Excluded items by reason: vendor-specific: 27, duplicate-of: 16, license: 11, out-of-scope: 6, low-quality: 3
 
 ## Original OpenDigital contributions
 

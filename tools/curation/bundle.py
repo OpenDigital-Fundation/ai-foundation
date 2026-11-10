@@ -152,7 +152,15 @@ def build(root: Path, sources: Path, spec: dict) -> None:
             src, path = spec_dir.split(":", 1)
             srcdir = sources / src.replace("/", "_") / path
             dest = d / "references" / dname
-            shutil.copytree(srcdir, dest, ignore=shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests"))
+            base_ignore = shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests")
+
+            def ignore(directory, names, root=srcdir):
+                skipped = set(base_ignore(directory, names))
+                # The upstream SKILL.md becomes this reference's README.md; a sibling README.md would collide.
+                if Path(directory) == root and "SKILL.md" in names and "README.md" in names:
+                    skipped.add("README.md")
+                return skipped
+            shutil.copytree(srcdir, dest, ignore=ignore)
             for f in sorted(x for x in dest.rglob("*") if x.is_file()):
                 if f.suffix in {".md", ".txt"}:
                     text = rw(f.read_text(encoding="utf-8", errors="ignore"))

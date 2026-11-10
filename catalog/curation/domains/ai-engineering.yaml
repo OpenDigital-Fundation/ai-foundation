@@ -107,6 +107,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - K-Dense-AI/claude-scientific-skills:skill:aeon
+  - K-Dense-AI/claude-scientific-skills:skill:scikit-learn
+  - K-Dense-AI/claude-scientific-skills:skill:shap
+  - K-Dense-AI/claude-scientific-skills:skill:umap-learn
   - affaan-m/ECC:agent:mle-reviewer
   - affaan-m/ECC:skill:ml-adoption-playbook
   - affaan-m/ECC:skill:mle-workflow
@@ -156,6 +160,10 @@ artifacts:
       finetuning-method-selection: wshobson/agents:plugins/llm-finetuning/skills/finetuning-method-selection
       lora-qlora-recipes: wshobson/agents:plugins/llm-finetuning/skills/lora-qlora-recipes
       preference-optimization: wshobson/agents:plugins/llm-finetuning/skills/preference-optimization
+      scikit-learn: K-Dense-AI/claude-scientific-skills:skills/scikit-learn
+      shap: K-Dense-AI/claude-scientific-skills:skills/shap
+      umap-learn: K-Dense-AI/claude-scientific-skills:skills/umap-learn
+      aeon: K-Dense-AI/claude-scientific-skills:skills/aeon
     reference_notes:
       dataset-curation: Prepare, format, and validate datasets for supervised fine-tuning and preference training. Use when
         converting raw data into training format, applying chat templates, configuring sequence packing, gen
@@ -169,6 +177,14 @@ artifacts:
         pairs or thumbs-up/down feedback exist, when choosing between preference-optimization methods, or when
       derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Regulatory Compliance
         Framework; Writing Philosophy for Top ML Conferences; Agentic AI Ethics'
+      scikit-learn: Supports machine learning in Python with scikit-learn. Applies when working with supervised learning (classification,
+        regression), unsupervised learning (clustering, dimensionality
+      shap: Explain and audit machine-learning predictions with SHAP. Use for selecting SHAP explainers and maskers, computing
+        and validating feature attributions, handling multi-output explan
+      umap-learn: 'Applies UMAP-learn to nonlinear dimensionality reduction, 2D/3D embeddings, clustering preprocessing, supervised
+        or semi-supervised UMAP, DensMAP, AlignedUMAP, and Parametric UMAP '
+      aeon: This skill should be used for time series machine learning tasks including classification, regression, clustering,
+        forecasting, anomaly detection, segmentation, and similarity sear
 - id: ai-engineering/prompt-engineering
   type: skill
   capability: 'Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured

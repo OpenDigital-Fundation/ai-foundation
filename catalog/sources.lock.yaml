@@ -37,3 +37,4 @@ sources:
   - {id: VoltAgent/awesome-claude-code-subagents, url: https://github.com/VoltAgent/awesome-claude-code-subagents, commit: ed74d115b7fb7026a22a4f816a8e3250f425e3b4, license: MIT, policy: merge}
   - {id: davila7/claude-code-templates, url: https://github.com/davila7/claude-code-templates, commit: bf9b0b4ae66831ad3bc683f7ff9319fbaaaae12c, license: MIT, policy: merge, note: "Collection MIT; many vendored components carry their own LICENSE files, resolved per folder"}
   - {id: Jeffallan/claude-skills, url: https://github.com/Jeffallan/claude-skills, commit: 078a25cc5bfd8011459be7b91d004e900c1d02d3, license: MIT, policy: merge}
+  - {id: K-Dense-AI/claude-scientific-skills, url: https://github.com/K-Dense-AI/claude-scientific-skills, commit: 2d2065fb4520fa3f3f2bcf61cff26ec8b7eba4b5, license: MIT, policy: merge, note: "Collection MIT; skills declare their own licence in frontmatter, read before copying (restrictive or ambiguous ones are linked only)"}

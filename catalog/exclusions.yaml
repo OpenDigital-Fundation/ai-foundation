@@ -5299,11 +5299,20 @@ excluded:
   into:
   - security/security-audit
   note: Offensive-testing playbook; the owner skill covers authorised testing and points to dedicated tools.
+- key: "davila7/claude-code-templates:skill:adaptyv"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'adaptyv'; the same decision applies. Bound to one commercial platform,
+    hosted API or harness; no portable procedure to keep.
 - key: "davila7/claude-code-templates:skill:address-github-comments"
   reason: duplicate-of
   into:
   - code-quality/receiving-code-review
   note: "Near copy of openai/skills:skill:gh-address-comments (similarity 0.66); the same decision applies."
+- key: "davila7/claude-code-templates:skill:aeon"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'aeon', merged into ai-engineering/ml-engineering.
 - key: "davila7/claude-code-templates:skill:agent-development"
   reason: duplicate-of
   into:
@@ -5405,6 +5414,11 @@ excluded:
 - key: "davila7/claude-code-templates:skill:alloydb-basics"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:alphafold-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:analytics-tracking"
   reason: duplicate-of
   into:
@@ -5420,6 +5434,11 @@ excluded:
   into:
   - languages/typescript
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:anndata"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'anndata', merged into science/bioinformatics.
 - key: "davila7/claude-code-templates:skill:api-design-principles"
   reason: duplicate-of
   into:
@@ -5465,6 +5484,11 @@ excluded:
   into:
   - marketing/seo
   note: "Near copy of msitarzewski/agency-agents:agent:App Store Optimizer (similarity 0.63), already merged into marketing/seo."
+- key: "davila7/claude-code-templates:skill:arboreto"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'arboreto', merged into science/bioinformatics.
 - key: "davila7/claude-code-templates:skill:architecture"
   reason: duplicate-of
   into:
@@ -5488,6 +5512,11 @@ excluded:
   into:
   - languages/typescript
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:astropy"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'astropy', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:async-python-patterns"
   reason: duplicate-of
   into:
@@ -5553,6 +5582,10 @@ excluded:
   into:
   - agent-engineering/harness-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:benchling-integration"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'benchling-integration'; the same decision applies. Bound to one
+    commercial platform, hosted API or harness; no portable procedure to keep.
 - key: "davila7/claude-code-templates:skill:best-practices"
   reason: duplicate-of
   into:
@@ -5561,6 +5594,23 @@ excluded:
 - key: "davila7/claude-code-templates:skill:bigquery-basics"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:biomni"
+  reason: vendor-specific
+  note: Wraps one hosted agent, service or tool.
+- key: "davila7/claude-code-templates:skill:biopython"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'biopython', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:biorxiv-database"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:bioservices"
+  reason: license
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'bioservices'; the same decision applies. Declared licence 'GPLv3
+    license' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
 - key: "davila7/claude-code-templates:skill:bleu"
   reason: duplicate-of
   into:
@@ -5583,6 +5633,11 @@ excluded:
 - key: "davila7/claude-code-templates:skill:brand-guidelines-community"
   reason: vendor-specific
   note: "Near copy of anthropics/skills:skill:brand-guidelines (similarity 0.93); the same decision applies."
+- key: "davila7/claude-code-templates:skill:brenda-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:bright-data-best-practices"
   reason: vendor-specific
   note: Bound to one product or hosted service. (the folder wraps one service).
@@ -5689,6 +5744,11 @@ excluded:
   into:
   - agent-engineering/context-management
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:cellxgene-census"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'cellxgene-census', merged into science/bioinformatics.
 - key: "davila7/claude-code-templates:skill:ceo-advisor"
   reason: duplicate-of
   into:
@@ -5702,6 +5762,11 @@ excluded:
   into:
   - platform/git-workflow
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:chembl-database"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:chisle"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
@@ -5710,6 +5775,17 @@ excluded:
   into:
   - languages/typescript
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:cirq"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'cirq', merged into science/scientific-computing.
+- key: "davila7/claude-code-templates:skill:citation-management"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'citation-management'; the same decision applies. Covered by the
+    owner skill; this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:claude-api"
   reason: duplicate-of
   into:
@@ -5732,6 +5808,29 @@ excluded:
 - key: "davila7/claude-code-templates:skill:clerk-auth"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:clinical-decision-support"
+  reason: out-of-scope
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'clinical-decision-support'; the same decision applies. Clinical
+    or regulated health use; needs its own spec with risk review (see ADR science-domain).
+- key: "davila7/claude-code-templates:skill:clinical-reports"
+  reason: out-of-scope
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'clinical-reports'; the same decision applies. Clinical or regulated
+    health use; needs its own spec with risk review (see ADR science-domain).
+- key: "davila7/claude-code-templates:skill:clinicaltrials-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:clinpgx-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:clinvar-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:Cloud Penetration Testing"
   reason: duplicate-of
   into:
@@ -5756,6 +5855,10 @@ excluded:
 - key: "davila7/claude-code-templates:skill:cloudflare-deploy"
   reason: vendor-specific
   note: "Near copy of openai/skills:skill:cloudflare-deploy (similarity 0.98); the same decision applies."
+- key: "davila7/claude-code-templates:skill:cobrapy"
+  reason: license
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'cobrapy'; the same decision applies. Declared licence 'GPL-2.0
+    license' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
 - key: "davila7/claude-code-templates:skill:cocoindex"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
@@ -5859,6 +5962,11 @@ excluded:
   into:
   - ui/design-system
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:cosmic-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:cover-letter-generator"
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
@@ -5942,6 +6050,11 @@ excluded:
   into:
   - documents/internal-comms
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:dask"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'dask', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:data-engineer"
   reason: duplicate-of
   into:
@@ -5986,9 +6099,19 @@ excluded:
   into:
   - data/database-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:datacommons-client"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:datadog-cli"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:datamol"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'datamol', merged into science/cheminformatics.
 - key: "davila7/claude-code-templates:skill:deadline-prep"
   reason: duplicate-of
   into:
@@ -6012,6 +6135,19 @@ excluded:
 - key: "davila7/claude-code-templates:skill:deep-research-notebooklm"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:deepchem"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'deepchem', merged into science/cheminformatics.
+- key: "davila7/claude-code-templates:skill:deeptools"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'deeptools', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:denario"
+  reason: vendor-specific
+  note: Wraps one hosted agent, service or tool.
 - key: "davila7/claude-code-templates:skill:dependabot-review"
   reason: duplicate-of
   into:
@@ -6067,6 +6203,11 @@ excluded:
   into:
   - architecture/system-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:diffdock"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'diffdock', merged into science/cheminformatics.
 - key: "davila7/claude-code-templates:skill:discernment-nudge"
   reason: out-of-scope
   note: "Near copy of anthropics/skills:skill:discernment-nudge (similarity 0.99); the same decision applies."
@@ -6101,6 +6242,10 @@ excluded:
   into:
   - languages/python
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:dnanexus-integration"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'dnanexus-integration'; the same decision applies. Bound to one
+    commercial platform, hosted API or harness; no portable procedure to keep.
 - key: "davila7/claude-code-templates:skill:doc"
   reason: duplicate-of
   into:
@@ -6174,6 +6319,11 @@ excluded:
   into:
   - data/database-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:drugbank-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:e2e-testing-patterns"
   reason: duplicate-of
   into:
@@ -6212,6 +6362,16 @@ excluded:
 - key: "davila7/claude-code-templates:skill:emerging-techniques-speculative-decoding"
   reason: out-of-scope
   note: Framework-specific model-training or serving recipe; ai-engineering/ml-engineering covers the method, not each library.
+- key: "davila7/claude-code-templates:skill:ena-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:ensembl-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:environment-setup-guide"
   reason: duplicate-of
   into:
@@ -6222,6 +6382,15 @@ excluded:
   into:
   - debugging/systematic-debugging
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:esm"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'esm', merged into science/cheminformatics.
+- key: "davila7/claude-code-templates:skill:etetoolkit"
+  reason: license
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'etetoolkit'; the same decision applies. Declared licence 'GPL-3.0-or-later'
+    is restrictive or ambiguous between the tool and the skill text; linked, not copied.
 - key: "davila7/claude-code-templates:skill:Ethical Hacking Methodology"
   reason: duplicate-of
   into:
@@ -6273,6 +6442,11 @@ excluded:
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
     capability.
+- key: "davila7/claude-code-templates:skill:exploratory-data-analysis"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'exploratory-data-analysis', merged into science/experimental-design.
 - key: "davila7/claude-code-templates:skill:expo-deployment"
   reason: duplicate-of
   into:
@@ -6292,6 +6466,11 @@ excluded:
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
     capability.
+- key: "davila7/claude-code-templates:skill:fda-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:feature-design-assistant"
   reason: duplicate-of
   into:
@@ -6354,6 +6533,16 @@ excluded:
   into:
   - debugging/systematic-debugging
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:flowio"
+  reason: duplicate-of
+  into:
+  - science/biomedical-data
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'flowio', merged into science/biomedical-data.
+- key: "davila7/claude-code-templates:skill:fluidsim"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'fluidsim', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:flutter-expert"
   reason: duplicate-of
   into:
@@ -6424,14 +6613,47 @@ excluded:
 - key: "davila7/claude-code-templates:skill:gemini-api-agent-platform"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:gene-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:generate-image"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'generate-image'; the same decision applies. Bound to one commercial
+    platform, hosted API or harness; no portable procedure to keep.
+- key: "davila7/claude-code-templates:skill:geniml"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'geniml', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:geo-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:geo-fundamentals"
   reason: duplicate-of
   into:
   - marketing/seo
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:geopandas"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'geopandas', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:gepetto"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:get-available-resources"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'get-available-resources'; the same decision applies. Bound to one
+    commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "davila7/claude-code-templates:skill:gget"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'gget', merged into science/bioinformatics.
 - key: "davila7/claude-code-templates:skill:gh-address-comments"
   reason: duplicate-of
   into:
@@ -6527,6 +6749,16 @@ excluded:
   into:
   - architecture/api-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:gtars"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'gtars', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:gwas-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:haskell-pro"
   reason: duplicate-of
   into:
@@ -6544,6 +6776,16 @@ excluded:
 - key: "davila7/claude-code-templates:skill:heygen-best-practices"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:histolab"
+  reason: duplicate-of
+  into:
+  - science/biomedical-data
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'histolab', merged into science/biomedical-data.
+- key: "davila7/claude-code-templates:skill:hmdb-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:hono"
   reason: duplicate-of
   into:
@@ -6562,6 +6804,15 @@ excluded:
 - key: "davila7/claude-code-templates:skill:hubspot-integration"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:hypogenic"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'hypogenic'; the same decision applies. Bound to one commercial
+    platform, hosted API or harness; no portable procedure to keep.
+- key: "davila7/claude-code-templates:skill:hypothesis-generation"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'hypothesis-generation', merged into science/experimental-design.
 - key: "davila7/claude-code-templates:skill:i18n-localization"
   reason: duplicate-of
   into:
@@ -6706,6 +6957,11 @@ excluded:
   into:
   - code-quality/simplification
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:kegg-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:kotlin-coroutines-expert"
   reason: duplicate-of
   into:
@@ -6716,6 +6972,15 @@ excluded:
   into:
   - platform/deployment
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:labarchive-integration"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'labarchive-integration'; the same decision applies. Bound to one
+    commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "davila7/claude-code-templates:skill:lamindb"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'lamindb', merged into science/bioinformatics.
 - key: "davila7/claude-code-templates:skill:langfuse"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
@@ -6729,6 +6994,15 @@ excluded:
   into:
   - languages/php
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:latchbio-integration"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'latchbio-integration'; the same decision applies. Bound to one
+    commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "davila7/claude-code-templates:skill:latex-posters"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'latex-posters', merged into science/scientific-writing.
 - key: "davila7/claude-code-templates:skill:launch-strategy"
   reason: duplicate-of
   into:
@@ -6764,6 +7038,12 @@ excluded:
   into:
   - platform/reliability
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:literature-review"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'literature-review'; the same decision applies. Covered by the owner
+    skill; this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:llm-app-patterns"
   reason: duplicate-of
   into:
@@ -6789,6 +7069,12 @@ excluded:
 - key: "davila7/claude-code-templates:skill:manim"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:market-research-reports"
+  reason: duplicate-of
+  into:
+  - research/source-research
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'market-research-reports'; the same decision applies. Covered by
+    the owner skill; this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:marketing-demand-acquisition"
   reason: duplicate-of
   into:
@@ -6804,9 +7090,25 @@ excluded:
   into:
   - marketing/campaign-planning
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:markitdown"
+  reason: duplicate-of
+  into:
+  - documents/office-documents
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'markitdown'; the same decision applies. Covered by the owner skill;
+    this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:marp-slide"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:matchms"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'matchms', merged into science/cheminformatics.
+- key: "davila7/claude-code-templates:skill:matplotlib"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'matplotlib', merged into science/scientific-writing.
 - key: "davila7/claude-code-templates:skill:MCP Integration"
   reason: duplicate-of
   into:
@@ -6833,6 +7135,11 @@ excluded:
 - key: "davila7/claude-code-templates:skill:mechanistic-interpretability-transformer-lens"
   reason: out-of-scope
   note: Framework-specific model-training or serving recipe; ai-engineering/ml-engineering covers the method, not each library.
+- key: "davila7/claude-code-templates:skill:medchem"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'medchem', merged into science/cheminformatics.
 - key: "davila7/claude-code-templates:skill:meeting-insights-analyzer"
   reason: duplicate-of
   into:
@@ -6854,6 +7161,11 @@ excluded:
   into:
   - architecture/system-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:metabolomics-workbench-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:Metasploit Framework"
   reason: duplicate-of
   into:
@@ -6892,6 +7204,10 @@ excluded:
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
     capability.
+- key: "davila7/claude-code-templates:skill:modal"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'modal'; the same decision applies. Bound to one commercial platform,
+    hosted API or harness; no portable procedure to keep.
 - key: "davila7/claude-code-templates:skill:model-architecture-litgpt"
   reason: out-of-scope
   note: Framework-specific model-training or serving recipe; ai-engineering/ml-engineering covers the method, not each library.
@@ -6907,6 +7223,11 @@ excluded:
 - key: "davila7/claude-code-templates:skill:model-architecture-torchtitan"
   reason: out-of-scope
   note: Framework-specific model-training or serving recipe; ai-engineering/ml-engineering covers the method, not each library.
+- key: "davila7/claude-code-templates:skill:molfeat"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'molfeat', merged into science/cheminformatics.
 - key: "davila7/claude-code-templates:skill:monorepo-architect"
   reason: duplicate-of
   into:
@@ -6996,6 +7317,21 @@ excluded:
   into:
   - platform/reliability
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:networkx"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'networkx', merged into science/scientific-computing.
+- key: "davila7/claude-code-templates:skill:neurokit2"
+  reason: duplicate-of
+  into:
+  - science/biomedical-data
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'neurokit2', merged into science/biomedical-data.
+- key: "davila7/claude-code-templates:skill:neuropixels-analysis"
+  reason: duplicate-of
+  into:
+  - science/biomedical-data
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'neuropixels-analysis', merged into science/biomedical-data.
 - key: "davila7/claude-code-templates:skill:nextjs-app-router-patterns"
   reason: duplicate-of
   into:
@@ -7069,6 +7405,11 @@ excluded:
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
     capability.
+- key: "davila7/claude-code-templates:skill:omero-integration"
+  reason: duplicate-of
+  into:
+  - science/biomedical-data
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'omero-integration', merged into science/biomedical-data.
 - key: "davila7/claude-code-templates:skill:onboarding-cro"
   reason: duplicate-of
   into:
@@ -7080,11 +7421,26 @@ excluded:
 - key: "davila7/claude-code-templates:skill:openai-docs"
   reason: vendor-specific
   note: "Near copy of openai/skills:skill:openai-docs (similarity 0.62); the same decision applies."
+- key: "davila7/claude-code-templates:skill:openalex-database"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:openapi-to-typescript"
   reason: duplicate-of
   into:
   - architecture/api-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:opentargets-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:opentrons-integration"
+  reason: duplicate-of
+  into:
+  - science/lab-automation
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'opentrons-integration', merged into science/lab-automation.
 - key: "davila7/claude-code-templates:skill:optimization-awq"
   reason: out-of-scope
   note: Framework-specific model-training or serving recipe; ai-engineering/ml-engineering covers the method, not each library.
@@ -7117,6 +7473,9 @@ excluded:
   into:
   - marketing/campaign-planning
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:paper-2-web"
+  reason: vendor-specific
+  note: Wraps one hosted agent, service or tool.
 - key: "davila7/claude-code-templates:skill:parallel-agents"
   reason: duplicate-of
   into:
@@ -7125,6 +7484,11 @@ excluded:
 - key: "davila7/claude-code-templates:skill:patentfig"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:pathml"
+  reason: duplicate-of
+  into:
+  - science/biomedical-data
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pathml', merged into science/biomedical-data.
 - key: "davila7/claude-code-templates:skill:paywall-upgrade-cro"
   reason: duplicate-of
   into:
@@ -7152,6 +7516,11 @@ excluded:
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
     capability.
+- key: "davila7/claude-code-templates:skill:pdb-database"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:pdf"
   reason: duplicate-of
   into:
@@ -7177,6 +7546,16 @@ excluded:
   into:
   - documents/office-documents
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:peer-review"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'peer-review', merged into science/scientific-writing.
+- key: "davila7/claude-code-templates:skill:pennylane"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pennylane', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:Pentest Commands"
   reason: duplicate-of
   into:
@@ -7200,6 +7579,9 @@ excluded:
 - key: "davila7/claude-code-templates:skill:perplexity"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:perplexity-search"
+  reason: vendor-specific
+  note: Wraps one hosted agent, service or tool.
 - key: "davila7/claude-code-templates:skill:personal-tool-builder"
   reason: duplicate-of
   into:
@@ -7246,6 +7628,11 @@ excluded:
   into:
   - testing/browser-testing
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:plotly"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:Plugin Settings"
   reason: duplicate-of
   into:
@@ -7261,6 +7648,11 @@ excluded:
   into:
   - agent-engineering/skill-authoring
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:polars"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'polars', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:popup-cro"
   reason: duplicate-of
   into:
@@ -7324,6 +7716,11 @@ excluded:
   into:
   - documents/office-documents
   note: "Near copy of anthropics/skills:skill:pptx (similarity 0.82), already merged into documents/office-documents."
+- key: "davila7/claude-code-templates:skill:pptx-posters"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pptx-posters', merged into science/scientific-writing.
 - key: "davila7/claude-code-templates:skill:pre-mortem"
   reason: duplicate-of
   into:
@@ -7422,12 +7819,82 @@ excluded:
   into:
   - ai-engineering/prompt-engineering
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:protocolsio-integration"
+  reason: duplicate-of
+  into:
+  - science/lab-automation
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'protocolsio-integration', merged into science/lab-automation.
+- key: "davila7/claude-code-templates:skill:pubchem-database"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:pubmed-database"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:pudu-task-telemetry"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:pufferlib"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pufferlib'; the same decision applies. Covered by the owner skill;
+    this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:pydantic-ai"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:pydeseq2"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pydeseq2', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:pydicom"
+  reason: duplicate-of
+  into:
+  - science/biomedical-data
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pydicom', merged into science/biomedical-data.
+- key: "davila7/claude-code-templates:skill:pyhealth"
+  reason: out-of-scope
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pyhealth'; the same decision applies. Clinical or regulated health
+    use; needs its own spec with risk review (see ADR science-domain).
+- key: "davila7/claude-code-templates:skill:pylabrobot"
+  reason: duplicate-of
+  into:
+  - science/lab-automation
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pylabrobot', merged into science/lab-automation.
+- key: "davila7/claude-code-templates:skill:pymatgen"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pymatgen', merged into science/cheminformatics.
+- key: "davila7/claude-code-templates:skill:pymc"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pymc', merged into science/experimental-design.
+- key: "davila7/claude-code-templates:skill:pymoo"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pymoo', merged into science/scientific-computing.
+- key: "davila7/claude-code-templates:skill:pyopenms"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pyopenms', merged into science/cheminformatics.
+- key: "davila7/claude-code-templates:skill:pysam"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pysam', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:pytdc"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pytdc', merged into science/cheminformatics.
 - key: "davila7/claude-code-templates:skill:python-patterns"
   reason: duplicate-of
   into:
@@ -7443,11 +7910,22 @@ excluded:
   into:
   - testing/test-strategy
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:pytorch-lightning"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'pytorch-lightning'; the same decision applies. Covered by the owner
+    skill; this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:qa-test-planner"
   reason: duplicate-of
   into:
   - testing/test-strategy
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:qiskit"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'qiskit', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:qms-audit-expert"
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
@@ -7464,6 +7942,11 @@ excluded:
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
     capability.
+- key: "davila7/claude-code-templates:skill:qutip"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'qutip', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:raffle-winner-picker"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
@@ -7533,6 +8016,11 @@ excluded:
 - key: "davila7/claude-code-templates:skill:railway-templates"
   reason: vendor-specific
   note: Bound to one product or hosted service. (the folder wraps one service).
+- key: "davila7/claude-code-templates:skill:rdkit"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'rdkit', merged into science/cheminformatics.
 - key: "davila7/claude-code-templates:skill:react-best-practices"
   reason: duplicate-of
   into:
@@ -7573,6 +8061,11 @@ excluded:
   into:
   - languages/typescript
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:reactome-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:readonly-sql-guard"
   reason: duplicate-of
   into:
@@ -7640,6 +8133,17 @@ excluded:
   into:
   - ai-engineering/ml-engineering
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:research-grants"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'research-grants', merged into science/scientific-writing.
+- key: "davila7/claude-code-templates:skill:research-lookup"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'research-lookup'; the same decision applies. Covered by the owner
+    skill; this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:resume-ats-optimizer"
   reason: out-of-scope
   note: Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning
@@ -7737,11 +8241,65 @@ excluded:
   into:
   - languages/jvm
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:scanpy"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scanpy', merged into science/bioinformatics.
 - key: "davila7/claude-code-templates:skill:schema-markup"
   reason: duplicate-of
   into:
   - data/database-design
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:scholar-evaluation"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scholar-evaluation', merged into science/scientific-writing.
+- key: "davila7/claude-code-templates:skill:scientific-brainstorming"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scientific-brainstorming', merged into science/experimental-design.
+- key: "davila7/claude-code-templates:skill:scientific-critical-thinking"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scientific-critical-thinking', merged into science/experimental-design.
+- key: "davila7/claude-code-templates:skill:scientific-schematics"
+  reason: vendor-specific
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scientific-schematics'; the same decision applies. Bound to one
+    commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "davila7/claude-code-templates:skill:scientific-slides"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scientific-slides', merged into science/scientific-writing.
+- key: "davila7/claude-code-templates:skill:scientific-visualization"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scientific-visualization', merged into science/scientific-writing.
+- key: "davila7/claude-code-templates:skill:scientific-writing"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scientific-writing', merged into science/scientific-writing.
+- key: "davila7/claude-code-templates:skill:scikit-bio"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scikit-bio', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:scikit-learn"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scikit-learn', merged into ai-engineering/ml-engineering.
+- key: "davila7/claude-code-templates:skill:scikit-survival"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scikit-survival', merged into science/experimental-design.
 - key: "davila7/claude-code-templates:skill:scrape"
   reason: vendor-specific
   note: Bound to one product or hosted service. (the folder wraps one service).
@@ -7753,6 +8311,16 @@ excluded:
   into:
   - testing/browser-testing
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:scvi-tools"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'scvi-tools', merged into science/bioinformatics.
+- key: "davila7/claude-code-templates:skill:seaborn"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'seaborn', merged into science/scientific-writing.
 - key: "davila7/claude-code-templates:skill:search"
   reason: vendor-specific
   note: Bound to one product or hosted service. (the folder wraps one service).
@@ -7885,6 +8453,11 @@ excluded:
   into:
   - ui/design-system
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:shap"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'shap', merged into ai-engineering/ml-engineering.
 - key: "davila7/claude-code-templates:skill:ship-learn-next"
   reason: duplicate-of
   into:
@@ -7906,6 +8479,11 @@ excluded:
   into:
   - marketing/campaign-planning
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:simpy"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'simpy', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:skill-creation-guide"
   reason: duplicate-of
   into:
@@ -7991,9 +8569,30 @@ excluded:
   into:
   - security/security-audit
   note: Offensive-testing playbook; the owner skill covers authorised testing and points to dedicated tools.
+- key: "davila7/claude-code-templates:skill:stable-baselines3"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'stable-baselines3'; the same decision applies. Covered by the owner
+    skill; this catalog keeps one artifact per capability.
 - key: "davila7/claude-code-templates:skill:star-history-chart"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:statistical-analysis"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'statistical-analysis', merged into science/experimental-design.
+- key: "davila7/claude-code-templates:skill:statsmodels"
+  reason: duplicate-of
+  into:
+  - science/experimental-design
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'statsmodels', merged into science/experimental-design.
+- key: "davila7/claude-code-templates:skill:string-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:stripe-integration"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
@@ -8023,6 +8622,11 @@ excluded:
   into:
   - languages/swift
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:sympy"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'sympy', merged into science/scientific-computing.
 - key: "davila7/claude-code-templates:skill:systematic-debugging"
   reason: duplicate-of
   into:
@@ -8145,6 +8749,16 @@ excluded:
   into:
   - security/security-audit
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:torch-geometric"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
+- key: "davila7/claude-code-templates:skill:torchdrug"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'torchdrug', merged into science/cheminformatics.
 - key: "davila7/claude-code-templates:skill:tradeoff-analysis"
   reason: duplicate-of
   into:
@@ -8153,6 +8767,16 @@ excluded:
 - key: "davila7/claude-code-templates:skill:transcribe"
   reason: vendor-specific
   note: "Near copy of openai/skills:skill:transcribe (similarity 0.98); the same decision applies."
+- key: "davila7/claude-code-templates:skill:transformers"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'transformers'; the same decision applies. Covered by the owner
+    skill; this catalog keeps one artifact per capability.
+- key: "davila7/claude-code-templates:skill:treatment-plans"
+  reason: out-of-scope
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'treatment-plans'; the same decision applies. Clinical or regulated
+    health use; needs its own spec with risk review (see ADR science-domain).
 - key: "davila7/claude-code-templates:skill:trigger-dev"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
@@ -8177,6 +8801,16 @@ excluded:
 - key: "davila7/claude-code-templates:skill:ui-ux-pro-max"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:umap-learn"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'umap-learn', merged into ai-engineering/ml-engineering.
+- key: "davila7/claude-code-templates:skill:uniprot-database"
+  reason: duplicate-of
+  into:
+  - science/bioinformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:upstash-qstash"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
@@ -8191,11 +8825,26 @@ excluded:
 - key: "davila7/claude-code-templates:skill:using-superpowers"
   reason: low-quality
   note: "Near copy of obra/superpowers:skill:using-superpowers (similarity 0.99); the same decision applies."
+- key: "davila7/claude-code-templates:skill:uspto-database"
+  reason: duplicate-of
+  into:
+  - research/source-research
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:ux-researcher-designer"
   reason: duplicate-of
   into:
   - ux/user-research
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "davila7/claude-code-templates:skill:vaex"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'vaex', merged into science/scientific-computing.
+- key: "davila7/claude-code-templates:skill:venue-templates"
+  reason: duplicate-of
+  into:
+  - science/scientific-writing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'venue-templates', merged into science/scientific-writing.
 - key: "davila7/claude-code-templates:skill:vercel-deploy"
   reason: vendor-specific
   note: "Near copy of vercel-labs/agent-skills:skill:deploy-to-vercel (similarity 1.00); the same decision applies."
@@ -8354,6 +9003,16 @@ excluded:
 - key: "davila7/claude-code-templates:skill:zapier-workflows"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "davila7/claude-code-templates:skill:zarr-python"
+  reason: duplicate-of
+  into:
+  - science/scientific-computing
+  note: Copy of K-Dense-AI/claude-scientific-skills skill 'zarr-python', merged into science/scientific-computing.
+- key: "davila7/claude-code-templates:skill:zinc-database"
+  reason: duplicate-of
+  into:
+  - science/cheminformatics
+  note: Older single-resource skill; the owner covers it (public databases are consolidated in database-lookup).
 - key: "davila7/claude-code-templates:skill:zod-validation-expert"
   reason: duplicate-of
   into:
@@ -11793,6 +12452,230 @@ excluded:
 - key: "Jeffallan/claude-skills:skill:wordpress-pro"
   reason: vendor-specific
   note: Bound to one product or hosted service. or the harness's own plugin and command format.
+- key: "K-Dense-AI/claude-scientific-skills:skill:adaptyv"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:arbor"
+  reason: low-quality
+  note: Speculative reasoning framework without a verifiable scientific procedure.
+- key: "K-Dense-AI/claude-scientific-skills:skill:autoskill"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:benchling-integration"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:bgpt-paper-search"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:bids"
+  reason: license
+  note: "Declared licence 'https://creativecommons.org/licenses/by/4.0/' is restrictive or ambiguous between the tool and\
+    \ the skill text; linked, not copied."
+- key: "K-Dense-AI/claude-scientific-skills:skill:bioservices"
+  reason: license
+  note: Declared licence 'GPLv3 license' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:citation-management"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:clinical-decision-support"
+  reason: out-of-scope
+  note: Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain).
+- key: "K-Dense-AI/claude-scientific-skills:skill:clinical-reports"
+  reason: out-of-scope
+  note: Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain).
+- key: "K-Dense-AI/claude-scientific-skills:skill:cobrapy"
+  reason: license
+  note: Declared licence 'GPL-2.0 license' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:consciousness-council"
+  reason: low-quality
+  note: Speculative reasoning framework without a verifiable scientific procedure.
+- key: "K-Dense-AI/claude-scientific-skills:skill:deepspot-m"
+  reason: license
+  note: Declared licence 'PolyForm-Noncommercial-1.0.0' is restrictive or ambiguous between the tool and the skill text; linked,
+    not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:depmap"
+  reason: license
+  note: Declared licence 'CC-BY-4.0' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:dhdna-profiler"
+  reason: low-quality
+  note: Speculative reasoning framework without a verifiable scientific procedure.
+- key: "K-Dense-AI/claude-scientific-skills:skill:dnanexus-integration"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:etetoolkit"
+  reason: license
+  note: Declared licence 'GPL-3.0-or-later' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:exa-search"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:fictiv"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:folklore-variant-evidence"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:generate-image"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:get-available-resources"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:ginkgo-cloud-lab"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:glycoengineering"
+  reason: license
+  note: Declared licence 'Unknown' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:hugging-science"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:hypogenic"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:infographics"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:iso-standards-readiness"
+  reason: duplicate-of
+  into:
+  - legal-compliance/compliance-programs
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:labarchive-integration"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:latchbio-integration"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:liteparse"
+  reason: duplicate-of
+  into:
+  - documents/office-documents
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:literature-review"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:markdown-mermaid-writing"
+  reason: duplicate-of
+  into:
+  - documents/technical-writing
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:market-research-reports"
+  reason: duplicate-of
+  into:
+  - research/source-research
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:markitdown"
+  reason: duplicate-of
+  into:
+  - documents/office-documents
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:modal"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:ncats-arax"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:open-notebook"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:paper-lookup"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:paperclip"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:paperzilla"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:parallel-web"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:phylogenetics"
+  reason: license
+  note: Declared licence 'Unknown' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:pi-agent"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:pkpd-modeling"
+  reason: out-of-scope
+  note: Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain).
+- key: "K-Dense-AI/claude-scientific-skills:skill:primekg"
+  reason: license
+  note: Declared licence 'Unknown' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:pufferlib"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:pyhealth"
+  reason: out-of-scope
+  note: Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain).
+- key: "K-Dense-AI/claude-scientific-skills:skill:pytorch-lightning"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:pyzotero"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:relsa-severity-assessment"
+  reason: out-of-scope
+  note: Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain).
+- key: "K-Dense-AI/claude-scientific-skills:skill:research-lookup"
+  reason: duplicate-of
+  into:
+  - research/literature-review
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:rowan"
+  reason: license
+  note: Declared licence 'Proprietary (API key required)' is restrictive or ambiguous between the tool and the skill text;
+    linked, not copied.
+- key: "K-Dense-AI/claude-scientific-skills:skill:scientific-schematics"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:stable-baselines3"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:tamarind"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:timesfm-forecasting"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:torch-geometric"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:transformers"
+  reason: duplicate-of
+  into:
+  - ai-engineering/ml-engineering
+  note: Covered by the owner skill; this catalog keeps one artifact per capability.
+- key: "K-Dense-AI/claude-scientific-skills:skill:treatment-plans"
+  reason: out-of-scope
+  note: Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain).
+- key: "K-Dense-AI/claude-scientific-skills:skill:usfiscaldata"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:waypoint-bio"
+  reason: vendor-specific
+  note: Bound to one commercial platform, hosted API or harness; no portable procedure to keep.
+- key: "K-Dense-AI/claude-scientific-skills:skill:what-if-oracle"
+  reason: license
+  note: Declared licence 'CC BY-NC-SA 4.0' is restrictive or ambiguous between the tool and the skill text; linked, not copied.
 - key: "mattpocock/skills:skill:ask-matt"
   reason: source-internal
   note: Router over the source's own skills.

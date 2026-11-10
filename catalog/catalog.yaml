@@ -352,6 +352,10 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:aeon"
+  - "K-Dense-AI/claude-scientific-skills:skill:scikit-learn"
+  - "K-Dense-AI/claude-scientific-skills:skill:shap"
+  - "K-Dense-AI/claude-scientific-skills:skill:umap-learn"
   - "affaan-m/ECC:agent:mle-reviewer"
   - "affaan-m/ECC:skill:ml-adoption-playbook"
   - "affaan-m/ECC:skill:mle-workflow"
@@ -1715,6 +1719,165 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Offer & Lead Gen Strategist"
   - "msitarzewski/agency-agents:agent:Outbound Strategist"
   - "msitarzewski/agency-agents:agent:Sales Outreach"
+- id: science/bioinformatics
+  type: skill
+  capability: "Use when analysing biological sequence or omics data: single-cell or bulk RNA-seq, genomic intervals and variants,\
+    \ CRISPR screens, amplicon and microbiome reads, gene regulatory networks, pa"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:13c-metabolic-flux"
+  - "K-Dense-AI/claude-scientific-skills:skill:alphagenome"
+  - "K-Dense-AI/claude-scientific-skills:skill:anndata"
+  - "K-Dense-AI/claude-scientific-skills:skill:arboreto"
+  - "K-Dense-AI/claude-scientific-skills:skill:biopython"
+  - "K-Dense-AI/claude-scientific-skills:skill:bulk-rnaseq"
+  - "K-Dense-AI/claude-scientific-skills:skill:cellxgene-census"
+  - "K-Dense-AI/claude-scientific-skills:skill:database-lookup"
+  - "K-Dense-AI/claude-scientific-skills:skill:deeptools"
+  - "K-Dense-AI/claude-scientific-skills:skill:geniml"
+  - "K-Dense-AI/claude-scientific-skills:skill:genomic-coordinates"
+  - "K-Dense-AI/claude-scientific-skills:skill:genomic-intelligence"
+  - "K-Dense-AI/claude-scientific-skills:skill:gget"
+  - "K-Dense-AI/claude-scientific-skills:skill:gtars"
+  - "K-Dense-AI/claude-scientific-skills:skill:lamindb"
+  - "K-Dense-AI/claude-scientific-skills:skill:mageck"
+  - "K-Dense-AI/claude-scientific-skills:skill:nextflow"
+  - "K-Dense-AI/claude-scientific-skills:skill:onekgpd"
+  - "K-Dense-AI/claude-scientific-skills:skill:ontology-term-resolution"
+  - "K-Dense-AI/claude-scientific-skills:skill:pacsomatic"
+  - "K-Dense-AI/claude-scientific-skills:skill:pathogen-variant-surveillance"
+  - "K-Dense-AI/claude-scientific-skills:skill:pathway-enrichment"
+  - "K-Dense-AI/claude-scientific-skills:skill:polars-bio"
+  - "K-Dense-AI/claude-scientific-skills:skill:primer-design"
+  - "K-Dense-AI/claude-scientific-skills:skill:pydeseq2"
+  - "K-Dense-AI/claude-scientific-skills:skill:pysam"
+  - "K-Dense-AI/claude-scientific-skills:skill:qiime2-amplicon"
+  - "K-Dense-AI/claude-scientific-skills:skill:scanpy"
+  - "K-Dense-AI/claude-scientific-skills:skill:scikit-bio"
+  - "K-Dense-AI/claude-scientific-skills:skill:scvelo"
+  - "K-Dense-AI/claude-scientific-skills:skill:scvi-tools"
+  - "K-Dense-AI/claude-scientific-skills:skill:tellurium"
+  - "K-Dense-AI/claude-scientific-skills:skill:tiledbvcf"
+- id: science/biomedical-data
+  type: skill
+  capability: "Use when processing biomedical research data: DICOM images, whole-slide pathology, microscopy pipelines and\
+    \ OMERO, flow cytometry files, physiological signals, Neuropixels electrophysiology,"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:cellprofiler"
+  - "K-Dense-AI/claude-scientific-skills:skill:flowio"
+  - "K-Dense-AI/claude-scientific-skills:skill:flowkit"
+  - "K-Dense-AI/claude-scientific-skills:skill:histolab"
+  - "K-Dense-AI/claude-scientific-skills:skill:imaging-data-commons"
+  - "K-Dense-AI/claude-scientific-skills:skill:neurokit2"
+  - "K-Dense-AI/claude-scientific-skills:skill:neuropixels-analysis"
+  - "K-Dense-AI/claude-scientific-skills:skill:nwb-conversion"
+  - "K-Dense-AI/claude-scientific-skills:skill:omero-integration"
+  - "K-Dense-AI/claude-scientific-skills:skill:pathml"
+  - "K-Dense-AI/claude-scientific-skills:skill:pydicom"
+  - "K-Dense-AI/claude-scientific-skills:skill:relion"
+- id: science/cheminformatics
+  type: skill
+  capability: "Use when working with small molecules, proteins or materials computationally: parsing and standardising SMILES\
+    \ or SDF, descriptors and fingerprints, similarity and substructure search, drug-"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:datamol"
+  - "K-Dense-AI/claude-scientific-skills:skill:deepchem"
+  - "K-Dense-AI/claude-scientific-skills:skill:diffdock"
+  - "K-Dense-AI/claude-scientific-skills:skill:esm"
+  - "K-Dense-AI/claude-scientific-skills:skill:matchms"
+  - "K-Dense-AI/claude-scientific-skills:skill:medchem"
+  - "K-Dense-AI/claude-scientific-skills:skill:molecular-dynamics"
+  - "K-Dense-AI/claude-scientific-skills:skill:molfeat"
+  - "K-Dense-AI/claude-scientific-skills:skill:nmrglue"
+  - "K-Dense-AI/claude-scientific-skills:skill:pycalphad"
+  - "K-Dense-AI/claude-scientific-skills:skill:pymatgen"
+  - "K-Dense-AI/claude-scientific-skills:skill:pyopenms"
+  - "K-Dense-AI/claude-scientific-skills:skill:pytdc"
+  - "K-Dense-AI/claude-scientific-skills:skill:rdkit"
+  - "K-Dense-AI/claude-scientific-skills:skill:torchdrug"
+- id: science/experimental-design
+  type: skill
+  capability: "Use when planning or analysing a study: forming hypotheses and rival explanations, choosing a design, randomisation\
+    \ and blinding, sample size and power, choosing and checking statistical tes"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:analytical-method-validation"
+  - "K-Dense-AI/claude-scientific-skills:skill:experimental-design"
+  - "K-Dense-AI/claude-scientific-skills:skill:exploratory-data-analysis"
+  - "K-Dense-AI/claude-scientific-skills:skill:hypothesis-generation"
+  - "K-Dense-AI/claude-scientific-skills:skill:pymc"
+  - "K-Dense-AI/claude-scientific-skills:skill:scientific-brainstorming"
+  - "K-Dense-AI/claude-scientific-skills:skill:scientific-critical-thinking"
+  - "K-Dense-AI/claude-scientific-skills:skill:scikit-survival"
+  - "K-Dense-AI/claude-scientific-skills:skill:statistical-analysis"
+  - "K-Dense-AI/claude-scientific-skills:skill:statistical-power"
+  - "K-Dense-AI/claude-scientific-skills:skill:statsmodels"
+- id: science/lab-automation
+  type: skill
+  capability: "Use when automating laboratory work: writing or reviewing liquid-handling protocols for Opentrons or PyLabRobot,\
+    \ simulating runs before hardware, exporting and validating protocols from prot"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:lab-hardware-cad"
+  - "K-Dense-AI/claude-scientific-skills:skill:opentrons-integration"
+  - "K-Dense-AI/claude-scientific-skills:skill:protocolsio-integration"
+  - "K-Dense-AI/claude-scientific-skills:skill:pylabrobot"
+- id: science/scientific-computing
+  type: skill
+  capability: "Use when doing numerical or symbolic scientific computation: symbolic maths, units and uncertainty propagation,\
+    \ discrete-event or physical simulation (fluids, combustion, batteries), quantum"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:astropy"
+  - "K-Dense-AI/claude-scientific-skills:skill:cantera"
+  - "K-Dense-AI/claude-scientific-skills:skill:cirq"
+  - "K-Dense-AI/claude-scientific-skills:skill:dask"
+  - "K-Dense-AI/claude-scientific-skills:skill:datalad"
+  - "K-Dense-AI/claude-scientific-skills:skill:fluidsim"
+  - "K-Dense-AI/claude-scientific-skills:skill:geomaster"
+  - "K-Dense-AI/claude-scientific-skills:skill:geopandas"
+  - "K-Dense-AI/claude-scientific-skills:skill:marine-carbonate-chemistry"
+  - "K-Dense-AI/claude-scientific-skills:skill:matlab"
+  - "K-Dense-AI/claude-scientific-skills:skill:networkx"
+  - "K-Dense-AI/claude-scientific-skills:skill:openpiv"
+  - "K-Dense-AI/claude-scientific-skills:skill:optimize-for-gpu"
+  - "K-Dense-AI/claude-scientific-skills:skill:pennylane"
+  - "K-Dense-AI/claude-scientific-skills:skill:polars"
+  - "K-Dense-AI/claude-scientific-skills:skill:pybamm"
+  - "K-Dense-AI/claude-scientific-skills:skill:pymoo"
+  - "K-Dense-AI/claude-scientific-skills:skill:qiskit"
+  - "K-Dense-AI/claude-scientific-skills:skill:qutip"
+  - "K-Dense-AI/claude-scientific-skills:skill:simpy"
+  - "K-Dense-AI/claude-scientific-skills:skill:sympy"
+  - "K-Dense-AI/claude-scientific-skills:skill:uncertainty-and-units"
+  - "K-Dense-AI/claude-scientific-skills:skill:vaex"
+  - "K-Dense-AI/claude-scientific-skills:skill:zarr-python"
+- id: science/scientific-writing
+  type: skill
+  capability: "Use when writing or reviewing scientific work: manuscripts and reports in IMRaD or journal formats, peer-review\
+    \ reports, grant proposals, venue and journal templates, posters, research talks"
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:latex-posters"
+  - "K-Dense-AI/claude-scientific-skills:skill:matplotlib"
+  - "K-Dense-AI/claude-scientific-skills:skill:peer-review"
+  - "K-Dense-AI/claude-scientific-skills:skill:pptx-posters"
+  - "K-Dense-AI/claude-scientific-skills:skill:research-grants"
+  - "K-Dense-AI/claude-scientific-skills:skill:scholar-evaluation"
+  - "K-Dense-AI/claude-scientific-skills:skill:scientific-slides"
+  - "K-Dense-AI/claude-scientific-skills:skill:scientific-visualization"
+  - "K-Dense-AI/claude-scientific-skills:skill:scientific-writing"
+  - "K-Dense-AI/claude-scientific-skills:skill:seaborn"
+  - "K-Dense-AI/claude-scientific-skills:skill:venue-templates"
 - id: security/agent-security
   type: skill
   capability: Harden agents and harnesses against injection and over-permission; statically review MCP and hook configs.

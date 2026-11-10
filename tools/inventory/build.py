@@ -30,9 +30,9 @@ SOURCE_SKIP_DIRS = {
     "davila7/claude-code-templates": {"dashboard", "docs-site", "database", "cloudflare-workers", "cli-rust", "scripts",
                                       "cli-tool/analytics-ui", "cli-tool/src", "cli-tool/templates", "cli-tool/docs_to_claude",
                                       "cli-tool/bin", "cli-tool/components/sandbox",
-                                      # Mostly vendored K-Dense scientific skills; decided with that source (slice 4).
-                                      "cli-tool/components/skills/scientific"},
+                                      },
     "Jeffallan/claude-skills": {"research", "specs", "scripts", "assets"},
+    "K-Dense-AI/claude-scientific-skills": {"scripts"},
 }
 FIELDS = ["source", "kind", "name", "path", "license", "suggested_domain", "description"]
 

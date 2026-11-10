@@ -1214,6 +1214,117 @@ artifacts:
     - sales-commerce
     technology:
     - skills-reusable-capabilities
+  science/bioinformatics:
+    knowledge:
+    - life-sciences
+    - ai-data
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - science
+    - health
+    capabilities:
+    - analyse
+    - query
+    - transform
+    multidisciplinary:
+    - bioinformatics
+    - scientific-computing
+  science/biomedical-data:
+    knowledge:
+    - health-medicine
+    - life-sciences
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - health
+    - science
+    capabilities:
+    - analyse
+    - transform
+    - validate
+    multidisciplinary:
+    - bioinformatics
+    - healthtech
+  science/cheminformatics:
+    knowledge:
+    - chemistry-materials
+    - life-sciences
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - science
+    - health
+    - industry
+    capabilities:
+    - analyse
+    - estimate
+    - transform
+    multidisciplinary:
+    - bioinformatics
+    - scientific-computing
+  science/experimental-design:
+    knowledge:
+    - mathematics-statistics
+    - life-sciences
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - science
+    - health
+    capabilities:
+    - plan
+    - analyse
+    - evaluate
+    multidisciplinary:
+    - research-automation
+  science/lab-automation:
+    knowledge:
+    - life-sciences
+    - engineering
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - science
+    - industry
+    capabilities:
+    - automate
+    - plan
+    - validate
+    multidisciplinary:
+    - robotics
+    - research-automation
+  science/scientific-computing:
+    knowledge:
+    - mathematics-statistics
+    - physics-astronomy
+    - engineering
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - science
+    - energy
+    capabilities:
+    - analyse
+    - estimate
+    - code
+    multidisciplinary:
+    - scientific-computing
+    - digital-twins
+  science/scientific-writing:
+    knowledge:
+    - writing-publishing
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - science
+    - education
+    capabilities:
+    - write
+    - review
+    - visualise
+    multidisciplinary:
+    - research-automation
   security/agent-security:
     capabilities:
     - detect

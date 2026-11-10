@@ -918,6 +918,90 @@ files:
     path: pi/core/skills/ml-adoption-playbook/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/ml-engineering/references/aeon/README.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/anomaly_detection.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/anomaly_detection.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/classification.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/classification.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/clustering.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/clustering.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/datasets_benchmarking.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/datasets_benchmarking.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/distances.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/distances.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/forecasting.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/forecasting.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/networks.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/networks.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/regression.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/regression.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/segmentation.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/segmentation.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/similarity_search.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/similarity_search.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/aeon/references/transformations.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/aeon/references/transformations.md
+    license: MIT
+    modification: adapted
 - path: skills/ml-engineering/references/ai-engineering.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -1068,6 +1152,167 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: agents/mle-reviewer.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/README.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/common_workflows.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/common_workflows.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/core_capabilities.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/core_capabilities.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/model_evaluation.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/model_evaluation.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/pipelines_and_composition.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/pipelines_and_composition.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/preprocessing.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/preprocessing.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/quick_reference.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/quick_reference.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/supervised_learning.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/supervised_learning.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/references/unsupervised_learning.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/references/unsupervised_learning.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/scripts/classification_pipeline.py
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/scripts/classification_pipeline.py
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/scikit-learn/scripts/clustering_analysis.py
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/scikit-learn/scripts/clustering_analysis.py
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/README.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/data-maskers.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/data-maskers.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/explainers.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/explainers.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/migration.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/migration.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/modalities.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/modalities.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/plots.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/plots.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/theory.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/theory.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/troubleshooting.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/troubleshooting.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/references/workflows.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/references/workflows.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/shap/scripts/tabular_report.py
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/shap/scripts/tabular_report.py
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/umap-learn/README.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/umap-learn/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/umap-learn/references/api_reference.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/umap-learn/references/api_reference.md
     license: MIT
     modification: adapted
 - path: skills/prompt-engineering/SKILL.md

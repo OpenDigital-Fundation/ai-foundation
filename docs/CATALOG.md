@@ -2,7 +2,7 @@
 
 <!-- Gerado por `python -m tools.build docs` a partir de catalog/. Não editar. -->
 
-116 artefatos em 25 domínios. Tipos: 1 agent, 3 knowledge, 111 skill, 1 workflow.
+123 artefatos em 26 domínios. Tipos: 1 agent, 3 knowledge, 118 skill, 1 workflow.
 
 [Início](../README.md) · [Buscar por faceta](FACETS.md) · [Como manter](architecture/repository-layout.md)
 
@@ -28,6 +28,7 @@
 - [product](#product) — 1 artefatos
 - [research](#research) — 3 artefatos
 - [sales](#sales) — 3 artefatos
+- [science](#science) — 7 artefatos
 - [security](#security) — 5 artefatos
 - [testing](#testing) — 4 artefatos
 - [ui](#ui) — 4 artefatos
@@ -302,6 +303,22 @@ Prospecting, qualification, proposals, pipeline.
 | [`sales:deal-strategy`](../domains/sales/skills/deal-strategy/SKILL.md) | skill | Use when working an active sales opportunity: discovery calls, qualification, mapping stakeholders, technical sales and demos, proposals, handling objections, pipeline reviews and forecastin |
 | [`sales:investor-relations`](../domains/sales/skills/investor-relations/SKILL.md) | skill | Use when raising money: pitch decks, one-pagers, financial narratives, data rooms, and investor outreach and follow-up. |
 | [`sales:prospecting`](../domains/sales/skills/prospecting/SKILL.md) | skill | Use when finding and reaching new customers: defining the ideal customer profile, building and scoring lead lists, finding warm paths, and writing personalised outbound sequences. |
+
+## science
+
+[Plugin e instalação](../domains/science/README.md) · [Manifesto editorial](../catalog/curation/domains/science.yaml)
+
+Computational science - omics, chemistry, simulation, study design and statistics, scientific writing, biomedical research data, lab automation.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md) | skill | Use when analysing biological sequence or omics data: single-cell or bulk RNA-seq, genomic intervals and variants, CRISPR screens, amplicon and microbiome reads, gene regulatory networks, pa |
+| [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md) | skill | Use when processing biomedical research data: DICOM images, whole-slide pathology, microscopy pipelines and OMERO, flow cytometry files, physiological signals, Neuropixels electrophysiology, |
+| [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md) | skill | Use when working with small molecules, proteins or materials computationally: parsing and standardising SMILES or SDF, descriptors and fingerprints, similarity and substructure search, drug- |
+| [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md) | skill | Use when planning or analysing a study: forming hypotheses and rival explanations, choosing a design, randomisation and blinding, sample size and power, choosing and checking statistical tes |
+| [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md) | skill | Use when automating laboratory work: writing or reviewing liquid-handling protocols for Opentrons or PyLabRobot, simulating runs before hardware, exporting and validating protocols from prot |
+| [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md) | skill | Use when doing numerical or symbolic scientific computation: symbolic maths, units and uncertainty propagation, discrete-event or physical simulation (fluids, combustion, batteries), quantum |
+| [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md) | skill | Use when writing or reviewing scientific work: manuscripts and reports in IMRaD or journal formats, peer-review reports, grant proposals, venue and journal templates, posters, research talks |
 
 ## security
 

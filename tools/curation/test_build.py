@@ -183,3 +183,19 @@ def test_reference_entry_with_missing_fragment_fails_before_writing(tmp_path):
             "references": {"derived/extra.md": ["affaan-m/ECC:synthetic/guide.md#absent"]},
         }}})
     assert not (domain / "skills/browser-testing").exists()
+
+
+def test_reference_dir_with_both_skill_and_readme_keeps_the_skill_as_readme(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    guide = clone / "synthetic/both"
+    guide.mkdir(parents=True)
+    (guide / "SKILL.md").write_text("# Skill entry\n\nProcedure.\n")
+    (guide / "README.md").write_text("# Upstream readme\n\nInstall notes.\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the readme collision fixture only.",
+        "body": "# Synthetic\n\nBody.",
+        "reference_dirs": {"both": "affaan-m/ECC:synthetic/both"},
+    }}})
+    readme = domain / "skills/browser-testing/references/both/README.md"
+    assert "Procedure." in readme.read_text()
+    assert not (readme.parent / "SKILL.md").exists()
