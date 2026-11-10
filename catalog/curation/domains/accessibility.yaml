@@ -279,3 +279,7 @@ artifacts:
       kb-path-instructions: per-file-type rules (HTML, JSX, Vue, CSS...)
     supersedes:
     - affaan-m/ECC:rule:react-native/accessibility
+    append: 'Which standard applies (WCAG 2.2, ABNT NBR 17225, NBR 17060, eMAG, EN 301 549, Section 508, ISO 9241), what WCAG
+      2.2 added, and what to cite in an audit: [`references/standards-map.md`](references/standards-map.md).
+
+      '

@@ -164,3 +164,8 @@ For committing to a bold, specific aesthetic direction (typography, colour, moti
 Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/design-review.md`](references/design-review.md)
+
+## Perception
+
+Gestalt grouping and the levers of visual hierarchy, with layout checks: [`references/gestalt-and-hierarchy.md`](references/gestalt-and-hierarchy.md).
+

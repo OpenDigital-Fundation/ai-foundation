@@ -54,3 +54,4 @@ Feed recommendations into `workflow:brainstorming` or the relevant spec. Interfa
 Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/jobs-and-journeys.md`](references/jobs-and-journeys.md)
+- [`references/ux-measurement.md`](references/ux-measurement.md) — task success, time on task, SEQ, SUS, UEQ, HEART, and where measurement fits in the design process

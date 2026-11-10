@@ -146,6 +146,8 @@ Switch(
 - `languages:swift` (`references/frameworks/liquid-glass.md`)
 - `languages:swift` (`references/frameworks/swiftui.md`)
 
+Which standard applies (WCAG 2.2, ABNT NBR 17225, NBR 17060, eMAG, EN 301 549, Section 508, ISO 9241), what WCAG 2.2 added, and what to cite in an audit: [`references/standards-map.md`](references/standards-map.md).
+
 ## References
 
 Load only what the task needs:

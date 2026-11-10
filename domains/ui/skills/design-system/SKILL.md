@@ -223,3 +223,4 @@ Read `references/pro-rules.md` and run through its canonical Pre-Delivery Checkl
 
 - Three-layer token architecture (primitive, semantic, component) and component specs: [references/token-architecture.md](references/token-architecture.md)
 - Extracting tokens from, or auditing consistency in, an existing codebase: [references/extract-from-codebase.md](references/extract-from-codebase.md)
+- Platform guidelines (HIG, Material, Fluent, Carbon, GOV.BR DS, GOV.UK) and minimum target sizes: [references/platform-guidelines.md](references/platform-guidelines.md)
