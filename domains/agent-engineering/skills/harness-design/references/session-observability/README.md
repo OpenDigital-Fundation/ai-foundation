@@ -1,154 +1,35 @@
-# Agent harness design — README
+# Session observability
 
-Part of `agent-engineering:harness-design`.
+Part of `agent-engineering:harness-design`. Adapted from upstream session logging and governance audit documentation. Only the event/logging concepts are retained; no upstream hook, config or prompt-threat detector is distributed or installed.
 
-## Governance Audit Hook
+## Minimal event record
 
-<!-- source: github/awesome-copilot hooks/governance-audit/README.md -->
-
-Real-time threat detection and audit logging for GitHub Copilot coding agent sessions. Scans user prompts for dangerous patterns before the agent processes them.
-
-### Overview
-
-This hook provides governance controls for Copilot coding agent sessions:
-- **Threat detection**: Scans prompts for data exfiltration, privilege escalation, system destruction, prompt injection, and credential exposure
-- **Governance levels**: Open, standard, strict, locked — from audit-only to full blocking
-- **Audit trail**: Append-only JSON log of all governance events
-- **Session summary**: Reports threat counts at session end
-
-### Threat Categories
-
-| Category | Examples | Severity |
-|----------|----------|----------|
-| `data_exfiltration` | "send all records to external API" | 0.7 - 0.95 |
-| `privilege_escalation` | "sudo", "chmod 777", "add to sudoers" | 0.8 - 0.95 |
-| `system_destruction` | "rm -rf /", "drop database" | 0.9 - 0.95 |
-| `prompt_injection` | "ignore previous instructions" | 0.6 - 0.9 |
-| `credential_exposure` | Hardcoded API keys, AWS access keys | 0.9 - 0.95 |
-
-### Governance Levels
-
-| Level | Behavior |
-|-------|----------|
-| `open` | Log threats only, never block |
-| `standard` | Log threats, block only if `BLOCK_ON_THREAT=true` |
-| `strict` | Log and block all detected threats |
-| `locked` | Log and block all detected threats |
-
-### Installation
-
-1. Copy the hook folder to your repository:
-   ```bash
-   cp -r hooks/governance-audit .github/hooks/
-   ```
-
-2. Ensure scripts are executable:
-   ```bash
-   chmod +x .github/hooks/governance-audit/*.sh
-   ```
-
-3. Create the logs directory and add to `.gitignore`:
-   ```bash
-   mkdir -p logs/copilot/governance
-   echo "logs/" >> .gitignore
-   ```
-
-4. Commit to your repository's default branch.
-
-### Configuration
-
-Set environment variables in `hooks.json`:
+Record a timestamp, event type, stable session identifier and the smallest relevant context. For example:
 
 ```json
-{
-  "env": {
-    "GOVERNANCE_LEVEL": "strict",
-    "BLOCK_ON_THREAT": "true"
-  }
-}
+{"timestamp":"2026-01-01T00:00:00Z","event":"session_start","session_id":"example-session","policy_mode":"observe"}
 ```
 
-| Variable | Values | Default | Description |
-|----------|--------|---------|-------------|
-| `GOVERNANCE_LEVEL` | `open`, `standard`, `strict`, `locked` | `standard` | Controls blocking behavior |
-| `BLOCK_ON_THREAT` | `true`, `false` | `false` | Block prompts with threats (standard level) |
-| `SKIP_GOVERNANCE_AUDIT` | `true` | unset | Disable governance audit entirely |
+Serialize with a JSON encoder. Do not interpolate environment values into JSON strings, store raw prompts, credentials or full tool arguments, or claim that JSON formatting alone provides redaction.
 
-### Log Format
+## Lifecycle
 
-Events are written to `logs/copilot/governance/audit.log` in JSON Lines format:
+| Event | Useful observation | Limitation |
+|---|---|---|
+| Session start | Session identity, adapter version and policy mode | A start event does not prove controls are active |
+| Prompt submitted | Timestamp and event type, without prompt contents | Metadata cannot detect prompt injection |
+| Session end | Counts scoped by session_id and outcome | Reporting after the action cannot prevent a commit or tool call |
 
-```json
-{"timestamp":"2026-01-15T10:30:00Z","event":"session_start","governance_level":"standard","cwd":"/workspace/project"}
-{"timestamp":"2026-01-15T10:31:00Z","event":"prompt_scanned","governance_level":"standard","status":"clean"}
-{"timestamp":"2026-01-15T10:32:00Z","event":"threat_detected","governance_level":"standard","threat_count":1,"threats":[{"category":"privilege_escalation","severity":0.8,"description":"Elevated privileges","evidence":"sudo"}]}
-{"timestamp":"2026-01-15T10:45:00Z","event":"session_end","total_events":12,"threats_detected":1}
-```
+Correlate by session_id, not the last timestamp in a shared log. Account for concurrent sessions, missing termination, clock skew and duplicate events. Counts must refer to records, not formatted text lines.
 
-### Requirements
+## Privacy and retention
 
-- `jq` for JSON processing (pre-installed on most CI environments and macOS)
-- `grep` with `-E` (extended regex) support
-- `bc` for floating-point comparison (optional, gracefully degrades)
+Logging is opt-in. Agree the destination, access restrictions, retention period and deletion procedure before enabling it. Omit private paths when unnecessary; prevent symlink/path escape and uncontrolled growth. A disabled logger should not create directories.
 
-### Privacy & Security
+Audit events are observations, not a governance guarantee. The upstream regex prompt detector is not adopted; arbitrary numeric threat scores and absence of alerts are not evidence that a session is safe. Keep permissions and policy enforcement at the tool boundary.
 
-- Full prompts are **never** logged — only matched threat patterns (minimal evidence snippets) and metadata are recorded
-- Add `logs/` to `.gitignore` to keep audit data local
-- Set `SKIP_GOVERNANCE_AUDIT=true` to disable entirely
-- All data stays local — no external network calls
+## Verification
 
-## Session Logger Hook
+Test the logger using harmless synthetic metadata: quoted/newline-containing values, invalid event JSON, simultaneous sessions, full storage, permission errors, and redaction cases. Verify parseable records and bounded failure without exposing raw data.
 
-<!-- source: github/awesome-copilot hooks/session-logger/README.md -->
-
-Comprehensive logging for GitHub Copilot coding agent sessions, tracking session starts, ends, and user prompts for audit trails and usage analytics.
-
-### Overview
-
-This hook provides detailed logging of Copilot coding agent activity:
-- Session start/end times with working directory context
-- User prompt submission events
-- Configurable log levels
-
-### Features
-
-- **Session Tracking**: Log session start and end events
-- **Prompt Logging**: Record when user prompts are submitted
-- **Structured Logging**: JSON format for easy parsing
-- **Privacy Aware**: Configurable to disable logging entirely
-
-### Installation
-
-1. Copy this hook folder to your repository's `.github/hooks/` directory:
-   ```bash
-   cp -r hooks/session-logger .github/hooks/
-   ```
-
-2. Create the logs directory:
-   ```bash
-   mkdir -p logs/copilot
-   ```
-
-3. Ensure scripts are executable:
-   ```bash
-   chmod +x .github/hooks/session-logger/*.sh
-   ```
-
-4. Commit the hook configuration to your repository's default branch
-
-### Log Format
-
-Session events are written to `logs/copilot/session.log` and prompt events to `logs/copilot/prompts.log` in JSON format:
-
-```json
-{"timestamp":"2024-01-15T10:30:00Z","event":"sessionStart","cwd":"/workspace/project"}
-{"timestamp":"2024-01-15T10:35:00Z","event":"sessionEnd"}
-```
-
-### Privacy & Security
-
-- Add `logs/` to `.gitignore` to avoid committing session data
-- Use `LOG_LEVEL=ERROR` to only log errors
-- Set `SKIP_LOGGING=true` environment variable to disable
-- Logs are stored locally only
+For a tool-blocking implementation, use `agent-engineering:agent-guardrails` and verify the host-specific pre-action contract separately.

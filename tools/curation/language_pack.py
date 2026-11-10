@@ -138,6 +138,15 @@ def rewrite_refs(text: str, refs: dict[str, str], unresolved: set[str]) -> str:
                         ("@angular/cli@latest", "@angular/cli@<version>"),
                         ("@modelcontextprotocol/codemod@latest", "@modelcontextprotocol/codemod@<version>")]:
         text = text.replace(pkg, pinned)
+    # Versions belong to the consuming project; never silently install the newest release.
+    for package in ("@apollo/client", "graphql", "@emotion/react", "@emotion/styled", "react-router-dom", "<package>"):
+        text = text.replace(f"{package}@latest", f"{package}@<version>")
+    text = text.replace("go get github.com/modelcontextprotocol/go-sdk@latest",
+                        "# Select a reviewed SDK version compatible with the project before running.\ngo get github.com/modelcontextprotocol/go-sdk@<version>")
+    text = text.replace("COPY --from=composer:latest", "COPY --from=composer:<version>")
+    text = text.replace("image: myapp:latest", "image: myapp:<release-tag>")
+    # A failed install is evidence to report, not a reason to claim the dependency was unused.
+    text = re.sub(r'^(\s*npm install[^\n]*?) 2>/dev/null(?: && echo [^\n]*)?$', r"\1", text, flags=re.M)
     text = re.sub(r"^.*\bAffaan\b.*\n", "", text, flags=re.M)  # lines about the upstream author's own voice or setup
     text = re.sub(r"(?<!source: affaan-m/)\bECC\b(?!-)", "the upstream project", text)
 

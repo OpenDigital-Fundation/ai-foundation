@@ -498,7 +498,7 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
 ```yaml
 services:
   app:
-    image: myapp:latest
+    image: myapp:<release-tag>
     deploy:
       resources:
         limits:
@@ -619,7 +619,7 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: myapp:latest
+        image: myapp:<release-tag>
         resources:
           requests:
             memory: "64Mi"

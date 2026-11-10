@@ -8808,7 +8808,7 @@ Apollo 3.7 and below have concurrent mode issues with React 18. Apollo 3.8+ uses
 npm ls @apollo/client 2>/dev/null | head -3
 
 # If found:
-npm install @apollo/client@latest graphql@latest 2>/dev/null && echo "Apollo upgraded" || echo "Apollo not used"
+npm install @apollo/client@<version> graphql@<version>
 
 # Verify version
 npm ls @apollo/client 2>/dev/null | head -3
@@ -8822,7 +8822,7 @@ Write memory: `step3-complete:apollo-or-skip`
 
 ```bash
 npm ls @emotion/react @emotion/styled 2>/dev/null | head -5
-npm install @emotion/react@latest @emotion/styled@latest 2>/dev/null && echo "Emotion upgraded" || echo "Emotion not used"
+npm install @emotion/react@<version> @emotion/styled@<version>
 ```
 
 Write memory: `step4-complete:emotion-or-skip`
@@ -8850,7 +8850,7 @@ If v5 is found:
 If v6 already:
 
 ```bash
-npm install react-router-dom@latest 2>/dev/null
+npm install react-router-dom@<version>
 ```
 
 Write memory: `step5-complete:router-version-[N]`
@@ -8867,7 +8867,7 @@ For each conflict:
 
 1. Identify the conflicting package
 2. Check if it has React 18 support: `npm info <package> peerDependencies`
-3. Try: `npm install <package>@latest`
+3. Try: `npm install <package>@<version>`
 4. Re-check
 
 **Rules:**
@@ -8994,7 +8994,7 @@ Write memory: `testing-library: upgraded`
 
 ```bash
 if npm ls @apollo/client >/dev/null 2>&1; then
-  npm install @apollo/client@latest
+  npm install @apollo/client@<version>
   echo "upgraded"
 else
   echo "not used"
@@ -9009,7 +9009,7 @@ Write memory: `apollo: upgraded or not-used`
 
 ```bash
 if npm ls @emotion/react @emotion/styled >/dev/null 2>&1; then
-  npm install @emotion/react@latest @emotion/styled@latest
+  npm install @emotion/react@<version> @emotion/styled@<version>
   echo "upgraded"
 else
   echo "not used"
@@ -9029,7 +9029,7 @@ npm ls 2>&1 | grep -E "WARN|ERR|peer|invalid|unmet"
 For each conflict:
 
 1. Identify the offending package
-2. `npm install <package>@latest`
+2. `npm install <package>@<version>`
 3. Re-check
 
 Rules:

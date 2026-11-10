@@ -356,7 +356,7 @@ resources:
 # WRONG: No requests or limits — unpredictable scheduling, OOM evictions
 containers:
   - name: app
-    image: myapp:latest
+    image: myapp:<release-tag>
     # Missing resources: {} — this is dangerous in production
 
 # WRONG: Limits without requests — requests default to limits, over-reserves capacity
@@ -654,7 +654,7 @@ kubectl describe pod <pod-name> -n my-namespace | grep -A5 "Last State"
 
 ```yaml
 # BAD: Using :latest tag — non-deterministic deployments
-image: myapp:latest
+image: myapp:<release-tag>
 
 # GOOD: Pin to a specific immutable tag (SHA or semver)
 image: ghcr.io/org/myapp:1.4.2

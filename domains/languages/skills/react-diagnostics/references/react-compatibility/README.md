@@ -547,7 +547,7 @@ React current version: [version]
 
 1. Upgrade react@19 + react-dom@19
 2. Upgrade @testing-library/react@16+, @testing-library/jest-dom@6+
-3. Upgrade @apollo/client@latest (if used)
+3. Upgrade @apollo/client@<version> (if used)
 4. Upgrade @emotion/react + @emotion/styled (if used)
 5. Resolve all remaining peer conflicts
 6. Fix ReactDOM.render → createRoot (source files)

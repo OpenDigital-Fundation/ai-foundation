@@ -151,3 +151,32 @@ def test_notice_covers_assembled_references_and_text_files(tmp_path):
     assert "Modified by OpenDigital from getsentry/skills (Apache-2.0)" in (refs / "mixed.md").read_text()
     assert "Modified by OpenDigital" not in (refs / "mit-only.md").read_text()
     assert (refs / "guide/notes.txt").read_text().startswith("Modified by OpenDigital from getsentry/skills (Apache-2.0)")
+
+
+def test_reference_install_failure_remains_observable():
+    import subprocess
+    from tools.curation.language_pack import rewrite_refs
+    synthetic = 'npm install example-package@1.2.3 2>/dev/null && echo "upgraded" || echo "not used"'
+    adapted = rewrite_refs(synthetic, {}, set())
+    shell = 'npm() { printf "synthetic installer failure\\n" >&2; return 42; };\n' + adapted
+    result = subprocess.run(["bash", "-c", shell], capture_output=True, text=True)
+    assert result.returncode == 42
+    assert "synthetic installer failure" in result.stderr
+    assert "not used" not in result.stdout
+
+
+def test_reference_version_selection_is_explicit_and_warnings_survive():
+    from tools.curation.language_pack import rewrite_refs
+    synthetic = "\n".join([
+        "npm install @apollo/client@latest graphql@latest",
+        "go get github.com/modelcontextprotocol/go-sdk@latest",
+        "COPY --from=composer:latest /usr/bin/composer /usr/bin/composer",
+        "image: myapp:latest",
+        "Never use @latest in repeatable workflows.",
+    ])
+    adapted = rewrite_refs(synthetic, {}, set())
+    for line in adapted.splitlines():
+        if line.startswith(("npm install", "go get", "COPY --from", "image:")):
+            assert "latest" not in line
+    assert "@apollo/client@<version>" in adapted
+    assert "Never use @latest in repeatable workflows." in adapted

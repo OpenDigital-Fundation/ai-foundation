@@ -412,7 +412,8 @@ Initialize your Go module properly:
 
 ```bash
 go mod init github.com/yourusername/yourserver
-go get github.com/modelcontextprotocol/go-sdk@latest
+# Select a reviewed SDK version compatible with the project before running.
+go get github.com/modelcontextprotocol/go-sdk@<version>
 ```
 
 Your `go.mod` should include:
