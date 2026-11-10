@@ -1,0 +1,29 @@
+# Routing evals for the science domain: the whole catalog is installed; the expected skill must fire first.
+# expect: <plugin>:<skill>, or none when no catalog skill should fire.
+- {prompt: "run QC, normalisation and clustering on this 10x single-cell h5ad file", expect: "science:bioinformatics"}
+- {prompt: "find differentially expressed genes between treated and control from these Salmon quant files", expect: "science:bioinformatics"}
+- {prompt: "convert these BED intervals from hg19 to GRCh38 and intersect them with the promoters", expect: "science:bioinformatics"}
+- {prompt: "analisa esse screen CRISPR com MAGeCK e me diz os genes essenciais", expect: "science:bioinformatics"}
+- {prompt: "standardise these SMILES, compute Morgan fingerprints and find the nearest neighbours to aspirin", expect: "science:cheminformatics"}
+- {prompt: "dock this ligand into the PDB 6LU7 binding site and rank the poses", expect: "science:cheminformatics"}
+- {prompt: "set up a short OpenMM molecular dynamics run for this protein and check it is equilibrated", expect: "science:cheminformatics"}
+- {prompt: "solve this ODE symbolically and check the units of the result", expect: "science:scientific-computing"}
+- {prompt: "build a Qiskit circuit for a 3-qubit GHZ state and simulate the measurement counts", expect: "science:scientific-computing"}
+- {prompt: "simula a descarga de uma bateria de lítio a 1C com PyBaMM", expect: "science:scientific-computing"}
+- {prompt: "how many participants do I need to detect a 0.4 effect size with 80% power?", expect: "science:experimental-design"}
+- {prompt: "design a randomised experiment to test whether the new fertiliser improves yield, with blocking by field", expect: "science:experimental-design"}
+- {prompt: "fit a mixed-effects model with random intercepts per patient and check the assumptions", expect: "science:experimental-design"}
+- {prompt: "is the evidence in this paper strong enough to support its causal claim?", expect: "science:experimental-design"}
+- {prompt: "draft the methods and results sections of my manuscript from these analysis outputs", expect: "science:scientific-writing"}
+- {prompt: "write a peer review report for this submitted paper", expect: "science:scientific-writing"}
+- {prompt: "make a publication-quality figure of these dose-response curves with error bars", expect: "science:scientific-writing"}
+- {prompt: "prepara um pôster acadêmico em LaTeX para o congresso", expect: "science:scientific-writing"}
+- {prompt: "read these DICOM files, check the pixel spacing and strip patient identifiers", expect: "science:biomedical-data"}
+- {prompt: "tile this whole-slide pathology image and filter out background tiles", expect: "science:biomedical-data"}
+- {prompt: "compensate and gate this flow cytometry FCS file", expect: "science:biomedical-data"}
+- {prompt: "write an Opentrons protocol for a serial dilution across a 96-well plate and simulate it", expect: "science:lab-automation"}
+- {prompt: "convert this bench protocol into a PyLabRobot liquid-handling script", expect: "science:lab-automation"}
+# Boundaries with other domains
+- {prompt: "do a systematic literature review on CAR-T therapy resistance with citations", expect: "research:literature-review"}
+- {prompt: "train a gradient boosting classifier on this tabular dataset and explain it with SHAP", expect: "ai-engineering:ml-engineering"}
+- {prompt: "build a CSV import pipeline into our Postgres warehouse", expect: "data:data-pipelines"}

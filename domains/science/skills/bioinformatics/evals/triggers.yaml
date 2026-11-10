@@ -1,0 +1,7 @@
+should_trigger:
+- "run QC and clustering on this single-cell h5ad"
+- "differential expression from these featureCounts tables"
+- "lift over these intervals to GRCh38"
+should_not_trigger:
+- "dock this ligand into the protein"
+- "write the methods section of my paper"

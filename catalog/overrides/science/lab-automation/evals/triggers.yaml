@@ -1,0 +1,7 @@
+should_trigger:
+- "write an Opentrons protocol for a plate normalisation"
+- "simulate this liquid-handling run before we use the robot"
+- "export this protocols.io protocol and check its steps"
+should_not_trigger:
+- "design a CI pipeline"
+- "analyse my qPCR results statistically"

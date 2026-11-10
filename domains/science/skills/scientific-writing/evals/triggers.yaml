@@ -1,0 +1,7 @@
+should_trigger:
+- "draft the discussion section of my manuscript"
+- "review this paper as a referee"
+- "format my article for the journal template"
+should_not_trigger:
+- "write a blog post about our product launch"
+- "run a power analysis"

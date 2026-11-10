@@ -1,0 +1,7 @@
+should_trigger:
+- "calculate the sample size for a two-arm trial"
+- "which statistical test should I use for paired non-normal data"
+- "design the experiment before we collect data"
+should_not_trigger:
+- "make a poster for my conference"
+- "convert these SMILES to SDF"
