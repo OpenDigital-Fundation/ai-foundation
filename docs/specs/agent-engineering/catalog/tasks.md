@@ -1,0 +1,26 @@
+# Tarefas — `agent-engineering`
+
+- [x] **T1.** `agent-engineering/agent-debugging` gerado/portado (base), registrado com proveniência.
+- [x] **T2.** `agent-engineering/agent-evaluation` gerado/portado (base), registrado com proveniência.
+- [x] **T3.** `agent-engineering/agent-guardrails` gerado/portado (base_dir), registrado com proveniência.
+- [x] **T4.** `agent-engineering/agent-loops` gerado/portado (base), registrado com proveniência.
+- [x] **T5.** `agent-engineering/agent-memory` gerado/portado (base), registrado com proveniência.
+- [x] **T6.** `agent-engineering/agent-teams` gerado/portado (base), registrado com proveniência.
+- [x] **T7.** `agent-engineering/context-management` gerado/portado (base), registrado com proveniência.
+- [x] **T8.** `agent-engineering/harness-design` gerado/portado (base), registrado com proveniência.
+- [x] **T9.** `agent-engineering/parallel-agents` gerado/portado (port), registrado com proveniência.
+- [x] **T10.** `agent-engineering/session-retrospective` gerado/portado (port), registrado com proveniência.
+- [x] **T11.** `agent-engineering/skill-authoring` gerado/portado (port), registrado com proveniência.
+- [x] **T12.** Spec do domínio e casos em `evals/routing/wave1.yaml` para cada artefato.
+- [ ] **T13.** `agent-debugging`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T14.** `agent-evaluation`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T15.** `agent-guardrails`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T16.** `agent-loops`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T17.** `agent-memory`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T18.** `agent-teams`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T19.** `context-management`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T20.** `harness-design`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T21.** `parallel-agents`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T22.** `session-retrospective`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T23.** `skill-authoring`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
+- [ ] **T24.** Rodar os testes/scripts vindos do upstream em sandbox (código de terceiros, requer aprovação): `agent-engineering/agent-guardrails`, `agent-engineering/skill-authoring`.

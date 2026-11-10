@@ -1,0 +1,133 @@
+# Routing evals for wave 1: the whole catalog is installed; the expected skill must fire first.
+# expect: <plugin>:<skill>, or none when no catalog skill should fire.
+- {prompt: "I want to add a loyalty points system to our checkout, let's figure out what it should do", expect: "workflow:brainstorming"}
+- {prompt: "quero criar um app pra agendar aulas de yoga, me ajuda a pensar no que precisa", expect: "workflow:brainstorming"}
+- {prompt: "we already agreed on everything above, turn this conversation into a spec", expect: "workflow:brainstorming"}
+- {prompt: "here is my migration plan for moving auth to OIDC, grill me on it", expect: "workflow:grilling"}
+- {prompt: "stress-test this decision: we're replacing Redis with Postgres advisory locks", expect: "workflow:grilling"}
+- {prompt: "the spec in docs/specs/billing/invoices/spec.md is approved, write the implementation plan", expect: "workflow:writing-plans"}
+- {prompt: "o plano em docs/specs/auth/login/tasks.md foi aprovado, pode executar", expect: "workflow:executing-plans"}
+- {prompt: "execute the approved plan task by task with a fresh subagent per task", expect: "workflow:executing-plans"}
+- {prompt: "set up an isolated worktree for this feature before we start", expect: "workflow:git-worktrees"}
+- {prompt: "all tasks are done and tests pass, let's wrap up this branch", expect: "workflow:finishing-a-branch"}
+- {prompt: "I'm out of context soon, write a handoff so another session can continue", expect: "workflow:handoff"}
+- {prompt: "faz um handoff, vou pausar aqui", expect: "workflow:handoff"}
+- {prompt: "resume from docs/handoffs/2026-11-05-1730-billing-sync.md", expect: "workflow:handoff"}
+- {prompt: "take this feature end to end: from idea to a merge-ready PR, with approvals", expect: "workflow:feature-delivery"}
+- {prompt: "add a retry with backoff to fetchUser in api/client.ts", expect: "principles:coding-discipline"}
+- {prompt: "this PR is way over-engineered, give me the simplest version that works", expect: "principles:coding-discipline"}
+- {prompt: "implement slugify() in src/text.ts test-first", expect: "testing:test-driven-development"}
+- {prompt: "fix the bug where discounts apply twice; write the failing test first", expect: "testing:test-driven-development"}
+- {prompt: "I think it's done, let me just tell the client it's fixed", expect: "testing:verification-before-completion"}
+- {prompt: "before you open the PR, prove the build and tests actually pass", expect: "testing:verification-before-completion"}
+- {prompt: "the checkout test fails only on CI and I don't know why", expect: "debugging:systematic-debugging"}
+- {prompt: "o endpoint /orders ficou 10x mais lento depois do deploy de ontem", expect: "debugging:systematic-debugging"}
+- {prompt: "TypeError: cannot read properties of undefined (reading 'id') in cart.ts:42", expect: "debugging:systematic-debugging"}
+- {prompt: "review my last commit", expect: "code-quality:code-review"}
+- {prompt: "revisa o PR 128 antes do merge", expect: "code-quality:code-review"}
+- {prompt: "the reviewer says my caching is racy, I'm not sure they're right; how should I respond?", expect: "code-quality:receiving-code-review"}
+- {prompt: "audit this whole repository: bugs, security holes, what can be deleted", expect: "code-quality:codebase-audit"}
+- {prompt: "list every shortcut we deferred in this codebase", expect: "code-quality:debt-ledger"}
+- {prompt: "these four test failures are in unrelated modules, investigate them in parallel", expect: "agent-engineering:parallel-agents"}
+- {prompt: "write a new skill that teaches the agent our release checklist", expect: "agent-engineering:skill-authoring"}
+- {prompt: "do a retrospective on this agent session: what slowed it down and what should change in our setup", expect: "agent-engineering:session-retrospective"}
+- {prompt: "what's the capital of Portugal?", expect: none}
+- {prompt: "translate 'good morning' to Spanish", expect: none}
+- {prompt: "we keep saying 'account' for both customers and users, help me pin down the terms", expect: "architecture:domain-modeling"}
+- {prompt: "write an ADR: we chose Postgres advisory locks over Redis for job claiming", expect: "architecture:decision-records"}
+- {prompt: "this module's interface is as big as its implementation; where should the seam go?", expect: "architecture:codebase-design"}
+- {prompt: "look at our codebase and suggest architecture improvements", expect: "architecture:architecture-review"}
+- {prompt: "design the REST endpoints for invoices, including pagination and errors", expect: "architecture:api-design"}
+- {prompt: "do a full security audit of this repository and write the report", expect: "security:security-audit"}
+- {prompt: "is this endpoint vulnerable to IDOR?", expect: "security:security-audit"}
+- {prompt: "we're designing a payments service, build a threat model first", expect: "security:threat-modeling"}
+- {prompt: "I accidentally committed our Stripe secret key last week", expect: "security:secrets-hygiene"}
+- {prompt: "review this .mcp.json before I merge it", expect: "security:agent-security"}
+- {prompt: "our agent reads emails and can run shell commands; how do we stop prompt injection?", expect: "security:agent-security"}
+- {prompt: "my skill never triggers when people ask for release notes; optimise its description", expect: "agent-engineering:skill-authoring"}
+- {prompt: "benchmark this skill against running without it on five test prompts", expect: "agent-engineering:skill-authoring"}
+- {prompt: "what's the idiomatic way to handle errors in this Go service?", expect: "languages:go"}
+- {prompt: "set up pytest fixtures for our Django models", expect: "languages:python"}
+- {prompt: "this cargo build fails with a borrow checker error in parser.rs", expect: "debugging:systematic-debugging"}
+- {prompt: "como organizo os componentes e hooks nesse app React?", expect: "languages:typescript"}
+- {prompt: "design a landing page for our bakery that doesn't look AI-generated", expect: "ui:visual-design"}
+- {prompt: "pick a palette, fonts and visual style for a fintech dashboard", expect: "ui:design-system"}
+- {prompt: "audit our checkout form for WCAG 2.2 AA", expect: "accessibility:wcag-accessibility"}
+- {prompt: "plan five user interviews to understand why people abandon onboarding", expect: "ux:user-research"}
+- {prompt: "walk through our sign-up flow as a first-time mobile user and tell me where they'd get stuck", expect: "ux:usability-review"}
+- {prompt: "this Postgres query is slow, which index should I add?", expect: "data:database-design"}
+- {prompt: "rename the users.email column in production without downtime", expect: "data:database-migrations"}
+- {prompt: "build a nightly ETL from our app DB into the warehouse", expect: "data:data-pipelines"}
+- {prompt: "should we rebase or merge this feature branch, and how do I clean up the commits?", expect: "platform:git-workflow"}
+- {prompt: "re-run the failed CI checks on PR 42 and see why they failed", expect: "platform:github-operations"}
+- {prompt: "write a Dockerfile and a Kubernetes deployment with health checks for this API", expect: "platform:deployment"}
+- {prompt: "define SLOs and alerts for the checkout service", expect: "platform:reliability"}
+- {prompt: "production is down, the API returns 500 for everyone", expect: "platform:incident-response"}
+- {prompt: "test the login flow of our local app in a real browser with Playwright", expect: "testing:browser-testing"}
+- {prompt: "add streaming and tool use to our Anthropic SDK integration", expect: "ai-engineering:claude-api"}
+- {prompt: "build an MCP server that exposes our Jira as tools", expect: "ai-engineering:mcp-server-development"}
+- {prompt: "our RAG answers cite the wrong documents; improve retrieval", expect: "ai-engineering:rag-pipelines"}
+- {prompt: "write and evaluate the system prompt for our support classifier", expect: "ai-engineering:prompt-engineering"}
+- {prompt: "convert this quarterly report into an Excel file with formulas", expect: "documents:office-documents"}
+- {prompt: "let's write the RFC for the new billing service together", expect: "documents:doc-coauthoring"}
+- {prompt: "update the README and API reference after this change", expect: "documents:technical-writing"}
+- {prompt: "draft the weekly leadership update from these notes", expect: "documents:internal-comms"}
+- {prompt: "research the current pricing and limits of the three main vector databases, with sources", expect: "research:source-research"}
+- {prompt: "how do I configure middleware in the latest Next.js version?", expect: "research:docs-lookup"}
+- {prompt: "define our brand identity: positioning, colours and typography", expect: "brand:brand-identity"}
+- {prompt: "write this launch post in my voice, here are five of my old posts", expect: "brand:brand-voice"}
+- {prompt: "make an HTML slide deck for the investor pitch", expect: "creative-media:presentation-slides"}
+- {prompt: "create a LinkedIn banner and an Instagram post for the launch", expect: "creative-media:banner-design"}
+- {prompt: "write a PRD for team workspaces with success metrics", expect: "product:product-management"}
+- {prompt: "run a technical SEO audit of our marketing site", expect: "marketing:seo"}
+- {prompt: "plan a content calendar for our developer blog and LinkedIn", expect: "marketing:content-marketing"}
+- {prompt: "write a five-email onboarding nurture sequence", expect: "marketing:email-marketing"}
+- {prompt: "our Google Ads CPA doubled, audit the account", expect: "marketing:paid-media"}
+- {prompt: "plan the launch campaign for our new pricing tier", expect: "marketing:campaign-planning"}
+- {prompt: "build a lead list of fintech CTOs and draft outbound emails", expect: "sales:prospecting"}
+- {prompt: "prep me for the discovery call with Acme tomorrow", expect: "sales:deal-strategy"}
+- {prompt: "build a three-statement model and 18-month forecast", expect: "finance:financial-analysis"}
+- {prompt: "reconcile last month's bank statements and prepare the close", expect: "finance:accounting"}
+- {prompt: "set up dunning for failed subscription payments in Stripe", expect: "finance:billing-operations"}
+- {prompt: "what do we need for SOC 2 Type I readiness?", expect: "legal-compliance:compliance-programs"}
+- {prompt: "draft an MSA and order form for a new enterprise customer", expect: "legal-compliance:contracts"}
+- {prompt: "build a project plan with milestones and risks for the migration", expect: "operations:project-management"}
+- {prompt: "reply to this angry customer whose export keeps failing", expect: "operations:customer-support"}
+- {prompt: "write the onboarding plan for a new backend engineer", expect: "operations:people-operations"}
+- {prompt: "this session is huge and slow; what should I compact and what can go to files?", expect: "agent-engineering:context-management"}
+- {prompt: "design the tool set and permissions for our customer-support agent", expect: "agent-engineering:harness-design"}
+- {prompt: "set up an autonomous loop that keeps fixing lint until clean, with stop conditions", expect: "agent-engineering:agent-loops"}
+- {prompt: "compare Claude Code and Codex on these ten tasks for pass rate and cost", expect: "agent-engineering:agent-evaluation"}
+- {prompt: "the agent ignored my instructions and deleted the wrong file; figure out why", expect: "agent-engineering:agent-debugging"}
+- {prompt: "block the agent from running git push --force or rm -rf", expect: "agent-engineering:agent-guardrails"}
+- {prompt: "split this plan across three agents in separate worktrees with merge gates", expect: "agent-engineering:agent-teams"}
+- {prompt: "make the agent remember the lessons from today's corrections next time", expect: "agent-engineering:agent-memory"}
+- {prompt: "design the architecture for a multi-tenant notifications service", expect: "architecture:system-design"}
+- {prompt: "I just joined; give me a tour of how this codebase handles payments", expect: "architecture:codebase-onboarding"}
+- {prompt: "remove dead code and needless abstractions in src/billing without changing behaviour", expect: "code-quality:simplification"}
+- {prompt: "what should our testing strategy and coverage targets be for this service?", expect: "testing:test-strategy"}
+- {prompt: "tsc fails with 40 type errors after the upgrade", expect: "debugging:build-failure-resolution"}
+- {prompt: "the dashboard works but feels flat; add tasteful motion and polish", expect: "ui:motion-and-polish"}
+- {prompt: "build the settings page with shadcn/ui and Tailwind, with dark mode", expect: "ui:component-styling"}
+- {prompt: "set up a training and evaluation pipeline for our churn model with drift monitoring", expect: "ai-engineering:ml-engineering"}
+- {prompt: "make an animated GIF of a rocket launching for Slack", expect: "creative-media:animated-gifs"}
+- {prompt: "generate a flow-field artwork in p5.js with a seed I can change", expect: "creative-media:generative-art"}
+- {prompt: "design a poster PDF for our conference talk", expect: "creative-media:poster-design"}
+- {prompt: "write an image-generation prompt for a hero photo of a nurse at a rural clinic", expect: "creative-media:image-prompting"}
+- {prompt: "is this use of std::unique_ptr and move semantics correct?", expect: "languages:cpp"}
+- {prompt: "structure state management in our Flutter app with Riverpod", expect: "languages:dart"}
+- {prompt: "write xUnit tests for this ASP.NET Core controller", expect: "languages:dotnet"}
+- {prompt: "set up Spring Boot integration tests with Testcontainers", expect: "languages:jvm"}
+- {prompt: "add policies and form requests to this Laravel controller", expect: "languages:php"}
+- {prompt: "refactor this Rails model callback into a service object", expect: "languages:ruby"}
+- {prompt: "fix the lifetimes in this Rust parser so it compiles", expect: "languages:rust"}
+- {prompt: "migrate this SwiftUI view model to Swift 6 strict concurrency", expect: "languages:swift"}
+- {prompt: "do a systematic literature review on retrieval-augmented generation evaluation", expect: "research:literature-review"}
+- {prompt: "build our seed pitch deck and investor one-pager", expect: "sales:investor-relations"}
+- {prompt: "this idea is too big for one session; chart the decisions we need before building", expect: "workflow:initiative-mapping"}
+- {prompt: "turn the approved spec into GitHub issues with blocking relationships", expect: "workflow:issue-breakdown"}
+- {prompt: "triage the 20 open issues and label which ones are ready for an agent", expect: "workflow:issue-triage"}
+- {prompt: "do a full multi-agent review of this repository and write a graded report", expect: "code-quality:codebase-audit"}
+- {prompt: "generate a VPAT and an accessibility statement for our web app", expect: "accessibility:accessibility-audit"}
+- {prompt: "make our PDF annual report and Word templates accessible", expect: "accessibility:document-accessibility"}
+- {prompt: "how should we test this flow with NVDA and VoiceOver?", expect: "accessibility:assistive-technology-testing"}

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SKILL.md / WORKFLOW.md / agent frontmatter",
+  "type": "object",
+  "required": ["name", "description"],
+  "properties": {
+    "name": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "maxLength": 64},
+    "description": {"type": "string", "minLength": 50, "maxLength": 1024},
+    "license": {"type": "string"},
+    "tools": {"type": ["string", "array"]},
+    "model": {"type": "string"},
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "domain": {"type": "string"},
+        "status": {"enum": ["experimental", "stable", "deprecated"]},
+        "requires": {"type": "array", "items": {"type": "string"}},
+        "line_budget_exception": {"type": "string", "minLength": 20},
+        "eval_excluded": {"type": "string", "minLength": 20}
+      }
+    }
+  }
+}

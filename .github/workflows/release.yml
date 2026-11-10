@@ -1,0 +1,47 @@
+name: release
+
+# Builds release artefacts from a version tag. Creating the tag is a deliberate, human step.
+on:
+  push:
+    tags: ["v*.*.*"]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - run: uv run pytest -q
+      - run: uv run python -m tools.validate
+      - name: Build adapters
+        run: |
+          uv run python -m tools.build adapters dist
+          cd dist && for h in agent-skills cursor gemini opencode; do zip -qr "../ai-foundation-${h}-${GITHUB_REF_NAME}.zip" "$h"; done
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: packages
+          path: ai-foundation-*.zip
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write  # only this job can create the release, and it runs no repository code
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: packages
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          REPO: ${{ github.repository }}
+        run: gh release create "$TAG" ai-foundation-*.zip --repo "$REPO" --generate-notes --title "$TAG"

@@ -1,0 +1,10 @@
+{
+  "name": "architecture",
+  "version": "0.0.0",
+  "description": "System and code design - modules, domain models, ADRs, APIs, boundaries.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

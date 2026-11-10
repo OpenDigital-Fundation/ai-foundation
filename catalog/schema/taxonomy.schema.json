@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "catalog/taxonomy/<facet>.yaml",
+  "type": "object",
+  "required": ["version", "terms"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"const": 1},
+    "terms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "origin"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"},
+          "name": {"type": "object", "required": ["pt", "en"], "properties": {"pt": {"type": "string"}, "en": {"type": "string"}}},
+          "origin": {"enum": ["landscape-v1", "proposed"]},
+          "parent": {"type": "string"},
+          "description": {"type": "string"},
+          "external": {"type": "object", "additionalProperties": {"type": "string"},
+                       "propertyNames": {"enum": ["ipl", "isced", "esco", "onet", "isic", "cnae", "ford"]}}
+        }
+      }
+    }
+  }
+}

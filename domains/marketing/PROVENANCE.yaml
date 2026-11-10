@@ -1,0 +1,206 @@
+version: 1
+files:
+- path: skills/campaign-planning/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/marketing-campaign/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/campaign-planning/references/growth.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-growth-hacker.md
+    license: MIT
+    modification: adapted
+- path: skills/campaign-planning/references/pr-communications.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-pr-communications-manager.md
+    license: MIT
+    modification: adapted
+- path: skills/content-marketing/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/content-engine/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/content-marketing/references/creation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-content-creator.md
+    license: MIT
+    modification: adapted
+- path: skills/content-marketing/references/cross-posting.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/crosspost/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/content-marketing/references/developer-relations.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/specialized-developer-advocate.md
+    license: MIT
+    modification: adapted
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-developer-community-builder.md
+    license: MIT
+    modification: adapted
+- path: skills/content-marketing/references/linkedin.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-linkedin-content-creator.md
+    license: MIT
+    modification: adapted
+- path: skills/content-marketing/references/long-form.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/article-writing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/content-marketing/references/social-strategy.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-social-media-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/email-marketing/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-email-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/email-marketing/references/operations.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/email-ops/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/email-marketing/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-email-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-ppc-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/audit.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-auditor.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/creative.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-creative-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/paid-social.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-paid-social-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/programmatic.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-programmatic-buyer.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-ppc-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/search-queries.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-search-query-analyst.md
+    license: MIT
+    modification: adapted
+- path: skills/paid-media/references/tracking.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: paid-media/paid-media-tracking-specialist.md
+    license: MIT
+    modification: adapted
+- path: skills/seo/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/seo/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/seo/references/answer-engines.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-aeo-foundations.md
+    license: MIT
+    modification: adapted
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-ai-citation-strategist.md
+    license: MIT
+    modification: adapted
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-agentic-search-optimizer.md
+    license: MIT
+    modification: adapted
+- path: skills/seo/references/answer-search/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/search-ai-optimization-expert.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/seo/references/app-stores.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-app-store-optimizer.md
+    license: MIT
+    modification: adapted
+- path: skills/seo/references/strategy.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: marketing/marketing-seo-specialist.md
+    license: MIT
+    modification: adapted
+- path: skills/seo/references/technical-audit.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/seo-specialist.md
+    license: MIT
+    modification: adapted

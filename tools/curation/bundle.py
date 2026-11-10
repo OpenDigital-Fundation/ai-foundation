@@ -1,0 +1,206 @@
+"""Assemble skills from upstream files: one base plus references.
+
+python -m tools.curation <sources-dir> --domain <domain>
+
+Internal bundle shape (assembled from the domain manifest):
+  artifacts:
+    <domain>/<skill>:
+      description: "Use when ..."
+      base: "s:postgres-patterns"        # entry whose body becomes the SKILL.md body, or
+      base_dir: "<owner>/<repo>:<dir>"   # copy a whole upstream skill directory, or
+      body: |                            # write the body inline (original procedure)
+        ...
+      references: {<file>.md: [entries...]}
+      reference_dirs: {<name>: "<owner>/<repo>:<dir>"}  # copy a whole upstream folder to references/<name>/
+      supersedes: [extra inventory keys]  # in addition to every entry used
+      remove: [regex, ...]               # passages to cut from the body (source-internal content)
+      append: |                          # text added at the end of SKILL.md (local notes, safety caveats)
+      replace: [[regex, replacement], ...]  # reviewed rewrites applied to every generated Markdown file
+Files under catalog/overrides/<domain>/<skill>/ are copied over the generated skill afterwards.
+Entries use the language_pack syntax: s:/a:/r:/c: for affaan-m/ECC, or "<owner>/<repo>:<path>".
+"""
+from __future__ import annotations
+
+import json
+import re
+import shutil
+import sys
+from pathlib import Path
+
+import yaml
+
+from tools.catalog import apply
+from tools.curation.language_pack import (ECC, body_of, load_index, reference_map, resolve, rewrite_refs, section)
+from tools.curation.licences import effective_licence
+from tools.curation.links import unlink_missing
+from tools.curation.port import substitutions
+
+
+def _with_notice(text: str, notice: str) -> str:
+    """Apache-2.0 §4(b): modified files state the change; keep any frontmatter first."""
+    if "Modified by OpenDigital" in text:
+        return text
+    m = re.match(r"---\n.*?\n---\n", text, re.S)
+    return text[:m.end()] + notice + text[m.end():] if m else notice + text
+
+
+def _resolve(entry: str, idx) -> tuple[str, str, str]:
+    if entry.startswith("c:"):
+        name = entry[2:]
+        path = idx.get((ECC, "command", name))
+        if not path:
+            raise SystemExit(f"not in inventory: {entry}")
+        return ECC, path, f"{ECC}:command:{name}"
+    return resolve(entry, idx)
+
+
+def build(root: Path, sources: Path, spec: dict) -> None:
+    from tools.curation.inputs import preflight
+    preflight(root, sources, spec["artifacts"])
+    idx = load_index(root)
+    lock = {s["id"]: s for s in yaml.safe_load((root / "catalog/sources.lock.yaml").read_text())["sources"]}
+    from tools.curation.manifests import language_packs
+    packs = language_packs(root)
+    subs = substitutions(root)
+    artifacts, provenance, unresolved = [], {}, set()
+    # Registry metadata comes from manifests; count the source items used by this build.
+    for aid, a in spec["artifacts"].items():
+        keys = [_resolve(a["base"], idx)[2]] if a.get("base") else []
+        for entries in (a.get("references") or {}).values():
+            keys += [_resolve(e, idx)[2] for e in entries]
+        if a.get("base_dir"):
+            src, path = a["base_dir"].split(":", 1)
+            keys += [k for (s, kind, n), p in idx.items() if s == src and p == f"{path}/SKILL.md" for k in [f"{s}:{kind}:{n}"]]
+        for spec_dir in (a.get("reference_dirs") or {}).values():
+            src, path = spec_dir.split(":", 1)
+            keys += [f"{s}:{kind}:{n}" for (s, kind, n), p in idx.items() if s == src and (p == path or p.startswith(path.rstrip("/") + "/"))]
+        keys += a.get("supersedes", [])
+        artifacts.append({"id": aid, "type": a.get("type", "skill"), "capability": a.get("capability") or a["description"][:190],
+                          "supersedes": sorted({k for k in keys if k})})
+    from tools.catalog import rebuild
+    rebuild(root)
+    refs = reference_map(root, packs)
+
+    current_remove: list[str] = []
+    current_replace: list[tuple[str, str]] = []
+
+    def rw(text: str) -> str:
+        for x, y in subs:
+            text = text.replace(x, y)
+        for pattern in current_remove:  # cut source-internal passages before any rewording
+            text = re.sub(pattern, "", text, flags=re.S | re.M)
+        for pattern, replacement in current_replace:  # reviewed rewrites (e.g. pin versions, drop remote instructions)
+            text = re.sub(pattern, replacement, text, flags=re.S | re.M)
+        return rewrite_refs(text, refs, unresolved)
+
+    for aid, a in spec["artifacts"].items():
+        domain, name = aid.split("/")
+        current_remove[:] = a.get("remove") or []
+        current_replace[:] = [tuple(x) for x in (a.get("replace") or [])]
+        d = root / "domains" / domain / "skills" / name
+        if d.exists():
+            shutil.rmtree(d)  # generated output; regenerated from the bundle file
+        prov = provenance.setdefault(domain, [])
+        if a.get("base_dir"):
+            src, path = a["base_dir"].split(":", 1)
+            shutil.copytree(sources / src.replace("/", "_") / path, d, ignore=shutil.ignore_patterns(".*"))
+            for f in sorted(p for p in d.rglob("*") if p.is_file()):
+                rel = f.relative_to(d).as_posix()
+                if f.suffix in {".md", ".py", ".txt", ".sh", ".js", ".mjs"}:
+                    f.write_text(rw(f.read_text(encoding="utf-8")), encoding="utf-8")
+                prov.append({"path": f"skills/{name}/{rel}", "derived_from": [{"source": src, "commit": lock[src]["commit"][:7],
+                             "path": f"{path}/{rel}", "license": effective_licence(lock, sources, src, f"{path}/{rel}"), "modification": "adapted"}]})
+            body = re.sub(r"\A---\s*\n.*?\n---\s*\n", "", (d / "SKILL.md").read_text(encoding="utf-8"), flags=re.S)
+            main_prov = None
+        else:
+            d.mkdir(parents=True)
+            main_prov = None
+            if a.get("base"):
+                src, path, _ = _resolve(a["base"], idx)
+                raw = (sources / src.replace("/", "_") / path).read_text(encoding="utf-8")
+                body = re.sub(r"\A---\s*\n.*?\n---\s*\n", "", raw, flags=re.S)  # keep heading levels
+                main_prov = [{"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": effective_licence(lock, sources, src, path), "modification": "adapted"}]
+            else:
+                body = a["body"].strip()
+        title = a.get("title") or name.replace("-", " ").capitalize()
+        ref_lines = []
+        for rel, entries in (a.get("references") or {}).items():
+            (d / "references").mkdir(exist_ok=True)
+            parts, derived = [f"# {title} — {Path(rel).stem.replace('-', ' ')}\n\nPart of `{domain}:{name}`.\n"], []
+            for e in entries:
+                src, path, _ = _resolve(e, idx)
+                text, pv = section(sources, src, path, lock)
+                parts.append(text)
+                derived.append(pv)
+            (d / "references" / rel).parent.mkdir(parents=True, exist_ok=True)
+            ref_text = rw("\n".join(parts).rstrip() + "\n")
+            apache_refs = sorted({pv["source"] for pv in derived if pv["license"].startswith("Apache")})
+            if apache_refs:
+                ref_text = _with_notice(ref_text, f"<!-- Modified by OpenDigital from {', '.join(apache_refs)} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n")
+            (d / "references" / rel).write_text(ref_text, encoding="utf-8")
+            prov.append({"path": f"skills/{name}/references/{rel}", "derived_from": derived})
+            note = (a.get("reference_notes") or {}).get(rel)
+            if not note and rel == "role-guide.md":
+                note = "the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples"
+            if not note:
+                titles = [re.sub(r"\s+", " ", re.sub(r"[^\w\s&/().,'-]|\b(Agent|Personality|Specialist Agent)\b", "", m)).strip(" -")
+                          for m in re.findall(r"^## (.+)$", "\n".join(parts[1:]), re.M)]
+                titles = [x for x in dict.fromkeys(titles) if x][:4]
+                note = "covers " + "; ".join(titles) if titles else ""
+            ref_lines.append(f"- [`references/{rel}`](references/{rel})" + (f" — {note}" if note else ""))
+        for dname, spec_dir in (a.get("reference_dirs") or {}).items():
+            src, path = spec_dir.split(":", 1)
+            srcdir = sources / src.replace("/", "_") / path
+            dest = d / "references" / dname
+            shutil.copytree(srcdir, dest, ignore=shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests"))
+            for f in sorted(x for x in dest.rglob("*") if x.is_file()):
+                if f.suffix in {".md", ".txt"}:
+                    text = rw(f.read_text(encoding="utf-8", errors="ignore"))
+                    if effective_licence(lock, sources, src, f"{path}/{f.relative_to(dest).as_posix()}").startswith("Apache"):
+                        line = f"Modified by OpenDigital from {src} (Apache-2.0). See PROVENANCE.yaml in this domain."
+                        text = _with_notice(text, f"<!-- {line} -->\n" if f.suffix == ".md" else line + "\n\n")
+                    f.write_text(text, encoding="utf-8")
+                prov.append({"path": f"skills/{name}/references/{dname}/{f.relative_to(dest).as_posix()}",
+                             "derived_from": [{"source": src, "commit": lock[src]["commit"][:7], "path": f"{path}/{f.relative_to(dest).as_posix()}",
+                                               "license": effective_licence(lock, sources, src, f"{path}/{f.relative_to(dest).as_posix()}"), "modification": "adapted"}]})
+            note = (a.get("reference_notes") or {}).get(dname, "")
+            ref_lines.append(f"- `references/{dname}/`" + (f" — {note}" if note else "") )
+        fm = ["---", f"name: {name}", f"description: {json.dumps(a['description'])}", "license: MIT",
+              "metadata:", f"  domain: {domain}", "  status: experimental"]
+        if a.get("line_budget_exception"):
+            fm.append(f"  line_budget_exception: {json.dumps(a['line_budget_exception'])}")
+        for mk, mv in (a.get("metadata") or {}).items():
+            fm.append(f"  {mk}: {json.dumps(mv)}")
+        fm += ["---", ""]
+        apache = [s for s, pth in (x.split(":", 1) for x in [a.get("base_dir", ":"), a.get("base") or ":"] if x != ":") if s in lock and effective_licence(lock, sources, s, pth).startswith("Apache")]
+        notice = f"<!-- Modified by OpenDigital from {apache[0]} (Apache-2.0). See PROVENANCE.yaml in this domain. -->\n\n" if apache else ""
+        text = "\n".join(fm) + notice + (f"# {title}\n\n" if not body.lstrip().startswith("# ") else "") + rw(body).strip() + "\n"
+        if a.get("append"):
+            text += "\n" + a["append"].strip() + "\n"
+        if ref_lines:
+            text += "\n## References\n\nLoad only what the task needs:\n\n" + "\n".join(ref_lines) + "\n"
+        (d / "SKILL.md").write_text(text, encoding="utf-8")
+        # Reviewed local fixes to generated files (e.g. security patches) live outside the
+        # generated tree so regeneration never drops them.
+        override = root / "catalog/overrides" / domain / name
+        if override.is_dir():
+            for f in sorted(p for p in override.rglob("*") if p.is_file()):
+                target = d / f.relative_to(override)
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(f, target)
+        for f in d.rglob("*.md"):  # links into upstream files that were not copied become plain text
+            f.write_text(unlink_missing(f.read_text(encoding="utf-8"), f), encoding="utf-8")
+        from tools.curation.layout import normalize, remap_provenance
+        moves = normalize(d)
+        remap_provenance(prov, f"skills/{name}", moves)
+        if main_prov:
+            prov.append({"path": f"skills/{name}/SKILL.md", "derived_from": main_prov})
+    apply(root, {"provenance": provenance})
+    print(f"{len(artifacts)} artifacts, {sum(len(a['supersedes']) for a in artifacts)} upstream items")
+    if unresolved:
+        print("unresolved references:", ", ".join(sorted(unresolved)))
+
+
+if __name__ == "__main__":
+    from tools.curation.__main__ import main
+    raise SystemExit(main())

@@ -1,0 +1,269 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: ai-engineering
+artifacts:
+- id: ai-engineering/claude-api
+  type: skill
+  capability: 'Use when building with the Claude API or Anthropic SDKs: choosing a model, messages and streaming, tool use,
+    MCP, agents, prompt caching, batch, token counting, error handling, or migrating '
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:claude-api
+  recipe:
+    title: Claude API
+    description: 'Use when building with the Claude API or Anthropic SDKs: choosing a model, messages and streaming, tool
+      use, MCP, agents, prompt caching, batch, token counting, error handling, or migrating between model versions. Read it
+      before answering any pricing or limits question from memory.'
+    base_dir: anthropics/skills:skills/claude-api
+    line_budget_exception: Official upstream skill; its SKILL.md links to per-language references by relative path, so splitting
+      it would break the links.
+- id: ai-engineering/mcp-server-development
+  type: skill
+  capability: 'Use when designing, building, testing or evaluating a Model Context Protocol server: choosing tools, resources
+    and prompts, writing tool schemas and descriptions, transports, auth, error han'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:mcp-server-patterns
+  - anthropics/skills:skill:mcp-builder
+  - github/awesome-copilot:agent:C# MCP Server Expert
+  - github/awesome-copilot:agent:Go MCP Server Development Expert
+  - github/awesome-copilot:agent:Java MCP Expert
+  - github/awesome-copilot:agent:Kotlin MCP Server Development Expert
+  - github/awesome-copilot:agent:PHP MCP Expert
+  - github/awesome-copilot:agent:Python MCP Server Expert
+  - github/awesome-copilot:agent:Ruby MCP Expert
+  - github/awesome-copilot:agent:Rust MCP Expert
+  - github/awesome-copilot:agent:Swift MCP Expert
+  - github/awesome-copilot:agent:TypeScript MCP Server Expert
+  - github/awesome-copilot:rule:csharp-mcp-server.instructions
+  - github/awesome-copilot:rule:go-mcp-server.instructions
+  - github/awesome-copilot:rule:java-mcp-server.instructions
+  - github/awesome-copilot:rule:kotlin-mcp-server.instructions
+  - github/awesome-copilot:rule:php-mcp-server.instructions
+  - github/awesome-copilot:rule:python-mcp-server.instructions
+  - github/awesome-copilot:rule:quarkus-mcp-server-sse.instructions
+  - github/awesome-copilot:rule:ruby-mcp-server.instructions
+  - github/awesome-copilot:rule:rust-mcp-server.instructions
+  - github/awesome-copilot:rule:swift-mcp-server.instructions
+  - github/awesome-copilot:rule:typescript-mcp-server.instructions
+  - github/awesome-copilot:skill:mcp-release-qa
+  - msitarzewski/agency-agents:agent:MCP Builder
+  recipe:
+    title: MCP server development
+    description: 'Use when designing, building, testing or evaluating a Model Context Protocol server: choosing tools, resources
+      and prompts, writing tool schemas and descriptions, transports, auth, error handling, the TypeScript or Python SDK,
+      and evaluations that prove an agent can use the server.'
+    base_dir: anthropics/skills:skills/mcp-builder
+    references:
+      release-qa.md:
+      - github/awesome-copilot:skills/mcp-release-qa/SKILL.md
+      typescript-sdk-patterns.md:
+      - s:mcp-server-patterns
+      server-design.md:
+      - msitarzewski/agency-agents:specialized/specialized-mcp-builder.md
+      sdk/csharp/README.md:
+      - github/awesome-copilot:agents/csharp-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/csharp-mcp-server.instructions.md
+      sdk/go/README.md:
+      - github/awesome-copilot:agents/go-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/go-mcp-server.instructions.md
+      sdk/java/README.md:
+      - github/awesome-copilot:agents/java-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/java-mcp-server.instructions.md
+      sdk/kotlin/README.md:
+      - github/awesome-copilot:agents/kotlin-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/kotlin-mcp-server.instructions.md
+      sdk/php/README.md:
+      - github/awesome-copilot:agents/php-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/php-mcp-server.instructions.md
+      sdk/python/README.md:
+      - github/awesome-copilot:agents/python-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/python-mcp-server.instructions.md
+      sdk/ruby/README.md:
+      - github/awesome-copilot:agents/ruby-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/ruby-mcp-server.instructions.md
+      sdk/rust/README.md:
+      - github/awesome-copilot:agents/rust-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/rust-mcp-server.instructions.md
+      sdk/swift/README.md:
+      - github/awesome-copilot:agents/swift-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/swift-mcp-server.instructions.md
+      sdk/typescript/README.md:
+      - github/awesome-copilot:agents/typescript-mcp-expert.agent.md
+      - github/awesome-copilot:instructions/typescript-mcp-server.instructions.md
+      sdk/quarkus/README.md:
+      - github/awesome-copilot:instructions/quarkus-mcp-server-sse.instructions.md
+- id: ai-engineering/ml-engineering
+  type: skill
+  capability: 'Use when adding or operating machine learning in a product: data contracts, features, reproducible training,
+    evaluation and model QA, serving, monitoring and drift, recommendation and rankin'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:mle-reviewer
+  - affaan-m/ECC:skill:ml-adoption-playbook
+  - affaan-m/ECC:skill:mle-workflow
+  - affaan-m/ECC:skill:recsys-pipeline-architect
+  - 'github/awesome-copilot:agent:SE: Responsible AI'
+  - msitarzewski/agency-agents:agent:AI Data Remediation Engineer
+  - msitarzewski/agency-agents:agent:AI Engineer
+  - msitarzewski/agency-agents:agent:Autonomous Optimization Architect
+  - msitarzewski/agency-agents:agent:Knowledge Graph Engineer
+  - msitarzewski/agency-agents:agent:LLM Post-Training Engineer
+  - msitarzewski/agency-agents:agent:Model QA Specialist
+  - msitarzewski/agency-agents:agent:Voice AI Integration Engineer
+  recipe:
+    title: ML engineering
+    description: 'Use when adding or operating machine learning in a product: data contracts, features, reproducible training,
+      evaluation and model QA, serving, monitoring and drift, recommendation and ranking pipelines, and LLM post-training
+      (SFT, preference optimisation).'
+    base: s:mle-workflow
+    references:
+      review.md:
+      - a:mle-reviewer
+      adoption-playbook.md:
+      - s:ml-adoption-playbook
+      model-qa.md:
+      - msitarzewski/agency-agents:specialized/specialized-model-qa.md
+      ai-engineering.md:
+      - msitarzewski/agency-agents:engineering/engineering-ai-engineer.md
+      recommendation-systems.md:
+      - s:recsys-pipeline-architect
+      post-training.md:
+      - msitarzewski/agency-agents:engineering/engineering-llm-post-training-engineer.md
+      fairness-evaluation/README.md:
+      - github/awesome-copilot:agents/se-responsible-ai-code.agent.md
+- id: ai-engineering/prompt-engineering
+  type: skill
+  capability: 'Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured
+    output, prompt evaluation sets, prompt caching for cost and latency, and dec'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:cost-aware-llm-pipeline
+  - affaan-m/ECC:skill:prompt-caching-strategy
+  - affaan-m/ECC:skill:prompt-optimizer
+  - affaan-m/ECC:skill:regex-vs-llm-structured-text
+  - getsentry/skills:skill:prompt-optimizer
+  - github/awesome-copilot:agent:Prompt Builder
+  - github/awesome-copilot:agent:Prompt Engineer
+  - github/awesome-copilot:rule:ai-prompt-engineering-safety-best-practices.instructions
+  - github/awesome-copilot:rule:prompt.instructions
+  - msitarzewski/agency-agents:agent:Prompt Engineer
+  recipe:
+    title: Prompt engineering
+    description: 'Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured
+      output, prompt evaluation sets, prompt caching for cost and latency, and deciding whether a regex or parser beats an
+      LLM for structured text.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-prompt-engineer.md
+      prompt-caching.md:
+      - s:prompt-caching-strategy
+      regex-or-llm.md:
+      - s:regex-vs-llm-structured-text
+      prompt-design/README.md:
+      - github/awesome-copilot:agents/prompt-builder.agent.md
+      - github/awesome-copilot:agents/prompt-engineer.agent.md
+      - github/awesome-copilot:instructions/ai-prompt-engineering-safety-best-practices.instructions.md
+      - github/awesome-copilot:instructions/prompt.instructions.md
+    reference_dirs:
+      prompt-optimization: getsentry/skills:skills/prompt-optimizer
+    body: '# Prompt engineering
+
+
+      Treat prompts as code: specified, tested against cases, and changed one variable at a time.
+
+
+      ## 1. Specify
+
+      The task, inputs, the exact output format, and what good looks like. Collect 20 or more realistic test inputs, including
+      edge cases and adversarial ones.
+
+
+      ## 2. Draft
+
+      Clear role and goal, the context the model needs, explicit constraints, a few varied examples when the format is subtle,
+      and structured output (JSON schema or tool calls) when code consumes it. Put stable content first so it can be cached.
+
+
+      ## 3. Evaluate
+
+      Run the test set; grade with code checks where possible and a versioned rubric (LLM-as-judge) otherwise. Record pass
+      rate, cost and latency.
+
+
+      ## 4. Iterate
+
+      Fix the failure categories one at a time; keep a changelog of prompt versions and their scores. Consider whether a parser,
+      regex or smaller model solves part of the task more reliably.
+
+
+      ## 5. Ship
+
+      Pin the model version, cache the static prefix, monitor quality on production samples, and rerun the evaluation before
+      any model or prompt change. For the Claude API specifics, use `ai-engineering:claude-api`.'
+- id: ai-engineering/rag-pipelines
+  type: skill
+  capability: 'Use when building, debugging or reviewing retrieval-augmented generation or search: chunking, embeddings, hybrid
+    and lexical search, reranking, query rewriting, iterative retrieval for agent'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:rag-pipeline-reviewer
+  - affaan-m/ECC:skill:iterative-retrieval
+  - github/awesome-copilot:rule:langchain-python.instructions
+  - msitarzewski/agency-agents:agent:RAG Pipeline Engineer
+  - msitarzewski/agency-agents:agent:Search Relevance Engineer
+  recipe:
+    title: RAG pipelines
+    description: 'Use when building, debugging or reviewing retrieval-augmented generation or search: chunking, embeddings,
+      hybrid and lexical search, reranking, query rewriting, iterative retrieval for agents, Elasticsearch/OpenSearch relevance
+      tuning, and retrieval evaluation.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-rag-pipeline-engineer.md
+      review.md:
+      - a:rag-pipeline-reviewer
+      iterative-retrieval.md:
+      - s:iterative-retrieval
+      search-relevance.md:
+      - msitarzewski/agency-agents:engineering/engineering-search-relevance-engineer.md
+      langchain/README.md:
+      - github/awesome-copilot:instructions/langchain-python.instructions.md
+    body: '# RAG pipelines
+
+
+      Retrieval quality decides answer quality: measure retrieval before tuning the prompt.
+
+
+      ## 1. Build an evaluation set
+
+      Real questions with the documents or passages that answer them. Measure recall@k and precision of retrieval, then faithfulness
+      and correctness of answers.
+
+
+      ## 2. Ingest
+
+      Parse documents faithfully (tables, headings), chunk by structure rather than fixed size, keep metadata (source, section,
+      date, permissions), and deduplicate.
+
+
+      ## 3. Retrieve
+
+      Hybrid search (lexical plus embeddings) with metadata filters, then rerank. Rewrite or decompose the query when questions
+      are multi-part; for agents, retrieve iteratively.
+
+
+      ## 4. Generate
+
+      Pass only the top passages with their sources; instruct the model to answer from them and cite, and to say when the
+      context does not contain the answer.
+
+
+      ## 5. Iterate and monitor
+
+      Change one thing at a time against the evaluation set; log queries, retrieved chunks and feedback in production; enforce
+      document permissions at retrieval time.'

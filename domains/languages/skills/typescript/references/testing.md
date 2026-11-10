@@ -1,0 +1,105 @@
+# TypeScript and JavaScript — Testing
+
+Part of `languages:typescript`. Load when writing or fixing tests: runner, fixtures, mocking, coverage.
+
+## TypeScript/JavaScript Testing
+
+<!-- source: affaan-m/ECC rules/typescript/testing.md -->
+
+> This file extends common/testing.md with TypeScript/JavaScript specific content.
+
+### E2E Testing
+
+Use **Playwright** as the E2E testing framework for critical user flows.
+
+### Agent Support
+
+- **e2e-runner** - Playwright E2E testing specialist
+
+## Web Testing Rules
+
+<!-- source: affaan-m/ECC rules/web/testing.md -->
+
+> This file extends common/testing.md with web-specific testing content.
+
+
+
+### Priority Order
+
+#### 1. Visual Regression
+
+- Screenshot key breakpoints: 320, 768, 1024, 1440
+- Test hero sections, scrollytelling sections, and meaningful states
+- Use Playwright screenshots for visual-heavy work
+- If both themes exist, test both
+
+#### 2. Accessibility
+
+- Run automated accessibility checks
+- Test keyboard navigation
+- Verify reduced-motion behavior
+- Verify color contrast
+
+#### 3. Performance
+
+- Run Lighthouse or equivalent against meaningful pages
+- Keep CWV targets from performance.md
+
+#### 4. Cross-Browser
+
+- Minimum: Chrome, Firefox, Safari
+- Test scrolling, motion, and fallback behavior
+
+#### 5. Responsive
+
+- Test 320, 375, 768, 1024, 1440, 1920
+- Verify no overflow
+- Verify touch interactions
+
+### E2E Shape
+
+```ts
+import { test, expect } from '@playwright/test';
+
+test('landing hero loads', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('h1')).toBeVisible();
+});
+```
+
+- Avoid flaky timeout-based assertions
+- Prefer deterministic waits
+
+### Unit Tests
+
+- Test utilities, data transforms, and custom hooks
+- For highly visual components, visual regression often carries more signal than brittle markup assertions
+- Visual regression supplements coverage targets; it does not replace them
+
+## Code Generation Guidelines
+
+<!-- source: github/awesome-copilot instructions/nodejs-javascript-vitest.instructions.md -->
+
+### Coding standards
+- Use JavaScript with ES2022 features and Node.js (20+) ESM modules
+- Use Node.js built-in modules and avoid external dependencies where possible
+- Ask the user if you require any additional dependencies before adding them
+- Always use async/await for asynchronous code, and use 'node:util' promisify function to avoid callbacks
+- Keep the code simple and maintainable
+- Use descriptive variable and function names
+- Do not add comments unless absolutely necessary, the code should be self-explanatory
+- Never use `null`, always use `undefined` for optional values
+- Prefer functions over classes
+
+### Testing
+- Use Vitest for testing
+- Write tests for all new features and bug fixes
+- Ensure tests cover edge cases and error handling
+- NEVER change the original code to make it easier to test, instead, write tests that cover the original code as it is
+
+### Documentation
+- When adding new features or making significant changes, update the README.md file where necessary
+
+### User interactions
+- Ask questions if you are unsure about the implementation details, design choices, or need clarification on the requirements
+- Always answer in the same language as the question, but use english for the generated content like code, comments or docs

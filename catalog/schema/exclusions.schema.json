@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "exclusions.yaml",
+  "type": "object",
+  "required": ["version", "excluded"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"const": 1},
+    "excluded": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "object",
+        "required": ["key", "reason"],
+        "additionalProperties": false,
+        "properties": {
+          "key": {"type": "string", "pattern": "^[^:]+/[^:]+:(skill|agent|command|rule|hook|mcp):.+$"},
+          "reason": {"enum": ["duplicate-of", "split", "out-of-scope", "license", "source-internal", "low-quality", "vendor-specific"]},
+          "into": {"type": "array", "items": {"type": "string", "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"}},
+          "note": {"type": "string"}
+        },
+        "allOf": [
+          {"if": {"properties": {"reason": {"enum": ["duplicate-of", "split"]}}}, "then": {"required": ["into"]}}
+        ]
+      }
+    }
+  }
+}

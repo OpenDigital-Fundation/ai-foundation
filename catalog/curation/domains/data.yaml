@@ -1,0 +1,123 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: data
+artifacts:
+- id: data/data-pipelines
+  type: skill
+  capability: 'Use when building or fixing data pipelines and bulk data movement: ingestion, ETL/ELT, backfills, exports,
+    warehouse or lakehouse loading, streaming, data quality checks and throughput probl'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:data-throughput-accelerator
+  - github/awesome-copilot:agent:PySpark Expert Agent
+  - github/awesome-copilot:rule:scala-spark.instructions
+  - msitarzewski/agency-agents:agent:Data Engineer
+  recipe:
+    title: Data pipelines
+    description: 'Use when building or fixing data pipelines and bulk data movement: ingestion, ETL/ELT, backfills, exports,
+      warehouse or lakehouse loading, streaming, data quality checks and throughput problems.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-data-engineer.md
+      throughput.md:
+      - s:data-throughput-accelerator
+      spark/README.md:
+      - github/awesome-copilot:agents/spark-performance.agent.md
+      - github/awesome-copilot:instructions/scala-spark.instructions.md
+    body: '# Data pipelines
+
+
+      Move data reliably: correct, complete, on time, and recoverable when something breaks.
+
+
+      ## 1. Define the contract
+
+      Sources, destination, schema, freshness target, volume, and who consumes the data. Write the data contract (fields,
+      types, keys, nullability) before writing code.
+
+
+      ## 2. Design the flow
+
+      Batch or streaming; ELT into the warehouse or ETL before it; incremental loads keyed on a watermark or change data capture
+      rather than full reloads. Every step idempotent so a rerun never duplicates.
+
+
+      ## 3. Build in quality checks
+
+      Row counts, uniqueness of keys, nulls, ranges and referential checks at each stage; quarantine bad records instead of
+      failing silently.
+
+
+      ## 4. Operate
+
+      Orchestrate with retries and alerts, record lineage, and keep backfills as a first-class, rate-limited job. For slow
+      or large movements, see the throughput reference.
+
+
+      ## 5. Verify
+
+      Compare source and destination totals for the run, check freshness against the target, and document how to replay a
+      failed window.'
+- id: data/database-design
+  type: skill
+  capability: Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels,
+    or reviewing database code for PostgreSQL, MySQL/MariaDB, Redis, ClickHouse or
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:database-reviewer
+  - affaan-m/ECC:skill:clickhouse-io
+  - affaan-m/ECC:skill:mysql-patterns
+  - affaan-m/ECC:skill:postgres-patterns
+  - affaan-m/ECC:skill:prisma-patterns
+  - affaan-m/ECC:skill:redis-patterns
+  - github/awesome-copilot:agent:PostgreSQL Database Administrator
+  - github/awesome-copilot:rule:sql-sp-generation.instructions
+  - msitarzewski/agency-agents:agent:Database Optimizer
+  - msitarzewski/agency-agents:agent:Database Reliability Engineer
+  recipe:
+    title: Database design
+    description: Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels,
+      or reviewing database code for PostgreSQL, MySQL/MariaDB, Redis, ClickHouse or an ORM such as Prisma. Covers data modelling,
+      query plans, connection pooling, caching, replication and database security.
+    base: s:postgres-patterns
+    references:
+      mysql.md:
+      - s:mysql-patterns
+      redis.md:
+      - s:redis-patterns
+      clickhouse.md:
+      - s:clickhouse-io
+      prisma.md:
+      - s:prisma-patterns
+      optimisation.md:
+      - msitarzewski/agency-agents:engineering/engineering-database-optimizer.md
+      reliability.md:
+      - msitarzewski/agency-agents:engineering/engineering-database-reliability-engineer.md
+      review.md:
+      - a:database-reviewer
+      query-review/README.md:
+      - github/awesome-copilot:agents/postgresql-dba.agent.md
+      - github/awesome-copilot:instructions/sql-sp-generation.instructions.md
+- id: data/database-migrations
+  type: skill
+  capability: 'Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills,
+    adding indexes or constraints without downtime, and planning rollback. Ap'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:database-migration
+  - affaan-m/ECC:skill:database-migrations
+  - github/awesome-copilot:agent:Oracle-to-PostgreSQL Migration Expert
+  recipe:
+    title: Database migrations
+    description: 'Use when changing a production database schema or data: writing migrations, renaming or dropping columns,
+      backfills, adding indexes or constraints without downtime, and planning rollback. Applies expand-migrate-contract, forward-only
+      changes and safety checks before running anything against shared data.'
+    base: s:database-migrations
+    supersedes:
+    - affaan-m/ECC:command:database-migration
+    references:
+      cross-engine-migration/README.md:
+      - github/awesome-copilot:agents/oracle-to-postgres-migration-expert.agent.md

@@ -1,0 +1,10 @@
+{
+  "name": "testing",
+  "version": "0.0.0",
+  "description": "Proving behaviour - TDD, test strategy, end-to-end and browser testing, verification before completion.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

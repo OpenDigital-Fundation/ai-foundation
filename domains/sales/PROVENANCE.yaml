@@ -1,0 +1,121 @@
+version: 1
+files:
+- path: skills/deal-strategy/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-deal-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/deal-strategy/references/accounts.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-account-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/deal-strategy/references/coaching.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-coach.md
+    license: MIT
+    modification: adapted
+- path: skills/deal-strategy/references/discovery.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-discovery-coach.md
+    license: MIT
+    modification: adapted
+- path: skills/deal-strategy/references/pipeline.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-pipeline-analyst.md
+    license: MIT
+    modification: adapted
+- path: skills/deal-strategy/references/proposals.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-proposal-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/deal-strategy/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-deal-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/deal-strategy/references/sales-engineering.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/investor-relations/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/investor-materials/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/investor-relations/references/outreach.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/investor-outreach/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/prospecting/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/lead-intelligence/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/prospecting/references/drafting.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/lead-intelligence/agents/outreach-drafter.md
+    license: MIT
+    modification: adapted
+- path: skills/prospecting/references/offers.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-offer-lead-gen-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/prospecting/references/outbound.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: sales/sales-outbound-strategist.md
+    license: MIT
+    modification: adapted
+- path: skills/prospecting/references/outreach.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/sales-outreach.md
+    license: MIT
+    modification: adapted
+- path: skills/prospecting/references/signal-scoring.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/lead-intelligence/agents/signal-scorer.md
+    license: MIT
+    modification: adapted
+- path: skills/prospecting/references/warm-paths.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/lead-intelligence/agents/mutual-mapper.md
+    license: MIT
+    modification: adapted

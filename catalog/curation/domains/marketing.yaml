@@ -1,0 +1,219 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: marketing
+artifacts:
+- id: marketing/campaign-planning
+  type: skill
+  capability: 'Use when planning a marketing campaign or launch end to end: goals, audience, positioning and messaging, channel
+    mix, calendar, growth experiments, press and communications, and success metr'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:marketing-campaign
+  - affaan-m/ECC:skill:growth-log
+  - affaan-m/ECC:skill:marketing-campaign
+  - msitarzewski/agency-agents:agent:Growth Hacker
+  - msitarzewski/agency-agents:agent:PR & Communications Manager
+  recipe:
+    title: Campaign planning
+    description: 'Use when planning a marketing campaign or launch end to end: goals, audience, positioning and messaging,
+      channel mix, calendar, growth experiments, press and communications, and success metrics.'
+    base: s:marketing-campaign
+    references:
+      growth.md:
+      - msitarzewski/agency-agents:marketing/marketing-growth-hacker.md
+      pr-communications.md:
+      - msitarzewski/agency-agents:marketing/marketing-pr-communications-manager.md
+- id: marketing/content-marketing
+  type: skill
+  capability: 'Use when planning or producing marketing content: content strategy and calendars, articles and newsletters,
+    LinkedIn and social posts, cross-posting across platforms, developer relations con'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:article-writing
+  - affaan-m/ECC:skill:content-engine
+  - affaan-m/ECC:skill:crosspost
+  - affaan-m/ECC:skill:social-publisher
+  - affaan-m/ECC:skill:x-api
+  - msitarzewski/agency-agents:agent:Carousel Growth Engine
+  - msitarzewski/agency-agents:agent:Content Creator
+  - msitarzewski/agency-agents:agent:Developer Advocate
+  - msitarzewski/agency-agents:agent:Developer Community Builder
+  - msitarzewski/agency-agents:agent:Instagram Curator
+  - msitarzewski/agency-agents:agent:LinkedIn Content Creator
+  - msitarzewski/agency-agents:agent:Podcast Strategist
+  - msitarzewski/agency-agents:agent:Reddit Community Builder
+  - msitarzewski/agency-agents:agent:Social Media Strategist
+  - msitarzewski/agency-agents:agent:Twitter Engager
+  - msitarzewski/agency-agents:agent:X/Twitter Intelligence Analyst
+  recipe:
+    title: Content marketing
+    description: 'Use when planning or producing marketing content: content strategy and calendars, articles and newsletters,
+      LinkedIn and social posts, cross-posting across platforms, developer relations content and community building.'
+    base: s:content-engine
+    references:
+      long-form.md:
+      - s:article-writing
+      creation.md:
+      - msitarzewski/agency-agents:marketing/marketing-content-creator.md
+      linkedin.md:
+      - msitarzewski/agency-agents:marketing/marketing-linkedin-content-creator.md
+      social-strategy.md:
+      - msitarzewski/agency-agents:marketing/marketing-social-media-strategist.md
+      cross-posting.md:
+      - s:crosspost
+      developer-relations.md:
+      - msitarzewski/agency-agents:specialized/specialized-developer-advocate.md
+      - msitarzewski/agency-agents:marketing/marketing-developer-community-builder.md
+- id: marketing/email-marketing
+  type: skill
+  capability: 'Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation, deliverability,
+    subject lines and A/B tests, and operating email tools.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:email-ops
+  - msitarzewski/agency-agents:agent:Email Marketing Strategist
+  recipe:
+    title: Email marketing
+    description: 'Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation,
+      deliverability, subject lines and A/B tests, and operating email tools.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:marketing/marketing-email-strategist.md
+      operations.md:
+      - s:email-ops
+    body: '# Email marketing
+
+
+      Send fewer, more relevant emails that people expect and act on.
+
+
+      ## 1. Define the programme
+
+      Goal per flow (activation, retention, conversion, win-back), audience segment, trigger or cadence, and the metric (clicks,
+      conversions, revenue per send; opens are directional only).
+
+
+      ## 2. Build the sequence
+
+      For each email: one purpose, one call to action, subject line and preview text, timing relative to the trigger, and
+      the exit condition (converted, unsubscribed, moved segment). Map branches for engaged versus silent recipients.
+
+
+      ## 3. Write
+
+      Lead with the reader''s benefit, keep it scannable, make the CTA a verb, and match the brand voice (`brand:brand-voice`).
+      Write two subject-line variants for testing.
+
+
+      ## 4. Protect deliverability
+
+      Consent and easy unsubscribe, authenticated domain (SPF, DKIM, DMARC), list hygiene (suppress bounces and long-inactive
+      contacts), and steady sending volume.
+
+
+      ## 5. Test and report
+
+      A/B test one variable at a time with enough volume to decide; report against the goal metric and roll the winner into
+      the default.'
+- id: marketing/paid-media
+  type: skill
+  capability: 'Use for paid acquisition: search (PPC) and paid social campaigns, programmatic and display buying, search-query
+    mining, ad creative, conversion tracking and attribution, and auditing ad acco'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Ad Creative Strategist
+  - msitarzewski/agency-agents:agent:PPC Campaign Strategist
+  - msitarzewski/agency-agents:agent:Paid Media Auditor
+  - msitarzewski/agency-agents:agent:Paid Social Strategist
+  - msitarzewski/agency-agents:agent:Programmatic & Display Buyer
+  - msitarzewski/agency-agents:agent:Search Query Analyst
+  - msitarzewski/agency-agents:agent:Tracking & Measurement Specialist
+  recipe:
+    title: Paid media
+    description: 'Use for paid acquisition: search (PPC) and paid social campaigns, programmatic and display buying, search-query
+      mining, ad creative, conversion tracking and attribution, and auditing ad accounts.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-ppc-strategist.md
+      paid-social.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-paid-social-strategist.md
+      programmatic.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-programmatic-buyer.md
+      search-queries.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-search-query-analyst.md
+      audit.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-auditor.md
+      creative.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-creative-strategist.md
+      tracking.md:
+      - msitarzewski/agency-agents:paid-media/paid-media-tracking-specialist.md
+    body: '# Paid media
+
+
+      Spend where the next dollar returns the most, and prove it with clean measurement.
+
+
+      ## 1. Measurement first
+
+      Confirm conversion tracking end to end (pixel or tag, server-side events where possible, deduplication, consent mode)
+      and agree the attribution model before changing bids. Without trustworthy conversions, stop and fix tracking.
+
+
+      ## 2. Structure
+
+      Campaigns by goal and audience, ad groups by tight intent, budgets by expected return. Search: match types and negatives
+      from real query reports. Social and display: audiences, exclusions, frequency caps.
+
+
+      ## 3. Creative
+
+      Several angles per audience, each tied to a specific pain or desire, with clear offers and CTAs. Rotate on fatigue signals.
+
+
+      ## 4. Optimise weekly
+
+      Mine search terms, add negatives, shift budget toward cost per acquisition and return targets, pause losers with enough
+      data, and test one change at a time.
+
+
+      ## 5. Audit and report
+
+      Wasted spend, tracking gaps, structure problems and opportunities, ranked by money at stake. Report spend, conversions,
+      CPA or ROAS against target and the next actions.'
+- id: marketing/seo
+  type: skill
+  capability: 'Use for search visibility: technical SEO audits, keyword and intent research, on-page optimisation, structured
+    data, Core Web Vitals, answer-engine and AI-citation optimisation, and app stor'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:seo-specialist
+  - affaan-m/ECC:skill:seo
+  - github/awesome-copilot:agent:Search & AI Optimization Expert
+  - msitarzewski/agency-agents:agent:AEO Foundations Architect
+  - msitarzewski/agency-agents:agent:AI Citation Strategist
+  - msitarzewski/agency-agents:agent:Agentic Search Optimizer
+  - msitarzewski/agency-agents:agent:App Store Optimizer
+  - msitarzewski/agency-agents:agent:SEO Specialist
+  recipe:
+    title: SEO
+    description: 'Use for search visibility: technical SEO audits, keyword and intent research, on-page optimisation, structured
+      data, Core Web Vitals, answer-engine and AI-citation optimisation, and app store optimisation.'
+    base: s:seo
+    references:
+      technical-audit.md:
+      - a:seo-specialist
+      strategy.md:
+      - msitarzewski/agency-agents:marketing/marketing-seo-specialist.md
+      answer-engines.md:
+      - msitarzewski/agency-agents:marketing/marketing-aeo-foundations.md
+      - msitarzewski/agency-agents:marketing/marketing-ai-citation-strategist.md
+      - msitarzewski/agency-agents:marketing/marketing-agentic-search-optimizer.md
+      app-stores.md:
+      - msitarzewski/agency-agents:marketing/marketing-app-store-optimizer.md
+      answer-search/README.md:
+      - github/awesome-copilot:agents/search-ai-optimization-expert.agent.md

@@ -1,0 +1,364 @@
+version: 1
+files:
+- path: skills/agent-security/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/agent-security-hardening/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-security/references/customization-review/agent-governance-reviewer.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/agent-governance-reviewer.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-security/references/customization-review/agent-safety.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/agent-safety.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-security/references/mcp-config-review.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/mcp-dependency-review/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/references/dangerous-code-patterns.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/references/dangerous-code-patterns.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/references/permission-analysis.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/references/permission-analysis.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/references/prompt-injection-patterns.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/skill-scanner/references/prompt-injection-patterns.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/agent-security/references/skill-scanning/tool-shadowing.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/trojan-skill-hunter.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/secrets-hygiene/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-secrets-credential-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/secrets-hygiene/references/scanning-recipes.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/secrets-scanner/README.md
+    license: MIT
+    modification: adapted
+- path: skills/secrets-hygiene/references/serialization-leaks/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/secret-serialization/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/secrets-hygiene/references/serialization-leaks/references/javascript-typescript.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/secret-serialization/references/javascript-typescript.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/secrets-hygiene/references/serialization-leaks/references/python.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/secret-serialization/references/python.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/AI-AND-LLM.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/AI-AND-LLM.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/ATTACK-CLASSES.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/ATTACK-CLASSES.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/CLIENT-SIDE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/CLIENT-SIDE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/CLOUD-AND-DEPLOYMENT.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/CLOUD-AND-DEPLOYMENT.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/DATA-ISOLATION-AND-LIFECYCLE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/DESKTOP-MOBILE-AND-LOCAL-IPC.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/DESKTOP-MOBILE-AND-LOCAL-IPC.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/HUNTING.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/HUNTING.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/MEMORY-SAFETY-AND-BINARY.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/MEMORY-SAFETY-AND-BINARY.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/PROTOCOLS-RPC-AND-MESSAGING.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/PROTOCOLS-RPC-AND-MESSAGING.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/RECONNAISSANCE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/RECONNAISSANCE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/RESOURCE-EXHAUSTION-AND-AVAILABILITY.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/RESOURCE-EXHAUSTION-AND-AVAILABILITY.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/SKILL.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/security-audit/SUPPLY-CHAIN-AND-RELEASE.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/SUPPLY-CHAIN-AND-RELEASE.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/VALIDATION-AND-REPORTING.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/VALIDATION-AND-REPORTING.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/WEB-PROTOCOL-AND-AUTH.md
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/WEB-PROTOCOL-AND-AUTH.md
+    license: MIT
+    modification: base
+- path: skills/security-audit/references/github-actions/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/ai-prompt-injection-via-ci.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/ai-prompt-injection-via-ci.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/comment-triggered-commands.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/comment-triggered-commands.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/credential-escalation.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/credential-escalation.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/expression-injection.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/expression-injection.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/permissions-and-secrets.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/permissions-and-secrets.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/pwn-request.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/pwn-request.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/real-world-attacks.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/real-world-attacks.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/runner-infrastructure.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/runner-infrastructure.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/github-actions/references/supply-chain.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/gha-security-review/references/supply-chain.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/security-audit/references/review-checklists/sast-sca-security-analyzer.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/sast-sca-security-analyzer.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/security-audit/references/review-checklists/security-and-owasp.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/security-and-owasp.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/security-audit/report-schema.json
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/report-schema.json
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-coverage-ledger.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-coverage-ledger.cjs
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-coverage-ledger.test.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-coverage-ledger.test.cjs
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-findings.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-findings.cjs
+    license: MIT
+    modification: base
+- path: skills/security-audit/validate-findings.test.cjs
+  derived_from:
+  - source: SecurityStandards/skill-security-audit
+    commit: c1c8a8c
+    path: skills/security-audit/validate-findings.test.cjs
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-architect.md
+    license: MIT
+    modification: adapted
+  - source: openai/skills
+    commit: 49f948f
+    path: skills/.curated/security-threat-model/SKILL.md
+    license: Apache-2.0
+    modification: merged-section
+- path: skills/threat-modeling/references/assets-and-controls.md
+  derived_from:
+  - source: openai/skills
+    commit: 49f948f
+    path: skills/.curated/security-threat-model/references/security-controls-and-assets.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/threat-modeling/references/security-model/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/security-model/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/threat-modeling/references/security-model/references/consuming-policy.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/security-model/references/consuming-policy.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/threat-modeling/templates/threat-model.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-architect.md
+    license: MIT
+    modification: adapted

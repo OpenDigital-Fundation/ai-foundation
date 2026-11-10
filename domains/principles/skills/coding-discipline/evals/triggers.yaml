@@ -1,0 +1,13 @@
+should_trigger:
+  - "add a retry to the fetchUser call"
+  - "fix the off-by-one in paginatePosts"
+  - "refactor the config loader to read env vars"
+  - "this PR is way over-engineered, give me the simplest version"
+  - "implementa um endpoint que retorna o saldo do usuário"
+  - "write a function that parses ISO dates in utils.ts"
+should_not_trigger:
+  - "review my last commit"                      # code-quality/code-review
+  - "why does this test fail only on CI?"        # debugging
+  - "write an ADR for choosing Postgres"         # architecture
+  - "draft a launch email for the new feature"   # marketing
+  - "create a slide deck for the board meeting"  # creative-media

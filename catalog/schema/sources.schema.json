@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "sources.lock.yaml",
+  "type": "object",
+  "required": ["version", "sources"],
+  "additionalProperties": false,
+  "properties": {
+    "version": {"const": 1},
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "url", "commit", "license", "policy"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
+          "url": {"type": "string", "pattern": "^https://github\\.com/"},
+          "commit": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"},
+          "license": {"type": "string"},
+          "policy": {"enum": ["merge", "reference"]},
+          "note": {"type": "string"}
+        }
+      }
+    }
+  }
+}

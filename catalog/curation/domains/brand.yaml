@@ -1,0 +1,40 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: brand
+artifacts:
+- id: brand/brand-identity
+  type: skill
+  capability: 'Use when defining or applying a brand: discovery interviews, positioning, visual identity (logo direction,
+    colour, typography), messaging framework, brand guidelines, asset management and ch'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:brand-discovery
+  - msitarzewski/agency-agents:agent:Brand Guardian
+  - nextlevelbuilder/ui-ux-pro-max-skill:skill:brand
+  recipe:
+    title: Brand identity
+    description: 'Use when defining or applying a brand: discovery interviews, positioning, visual identity (logo direction,
+      colour, typography), messaging framework, brand guidelines, asset management and checking content for brand consistency.'
+    base_dir: nextlevelbuilder/ui-ux-pro-max-skill:.claude/skills/brand
+    references:
+      brand-stewardship.md:
+      - msitarzewski/agency-agents:design/design-brand-guardian.md
+      discovery-interview.md:
+      - s:brand-discovery
+- id: brand/brand-voice
+  type: skill
+  capability: 'Use when writing should sound like a specific person or company: build a style profile from their real posts,
+    essays, launch notes or docs, then write or edit drafts in that voice and flag l'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:brand-voice
+  recipe:
+    title: Brand voice
+    description: 'Use when writing should sound like a specific person or company: build a style profile from their real posts,
+      essays, launch notes or docs, then write or edit drafts in that voice and flag lines that break it.'
+    base_dir: affaan-m/ECC:skills/brand-voice
+    remove:
+    - ^## Affaan / ECC Defaults\n.*?(?=^## )
+    - ^\d+\. If site copy matters, include the current ECC landing page.*?\n

@@ -1,0 +1,10 @@
+{
+  "name": "documents",
+  "version": "0.0.0",
+  "description": "Office documents and technical or corporate writing.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

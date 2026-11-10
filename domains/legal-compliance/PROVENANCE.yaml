@@ -1,0 +1,79 @@
+version: 1
+files:
+- path: skills/compliance-programs/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-compliance-auditor.md
+    license: MIT
+    modification: adapted
+- path: skills/compliance-programs/references/checks.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: support/support-legal-compliance-checker.md
+    license: MIT
+    modification: adapted
+- path: skills/compliance-programs/references/dependency-licenses/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: hooks/dependency-license-checker/README.md
+    license: MIT
+    modification: adapted
+- path: skills/compliance-programs/references/privacy.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/data-privacy-officer.md
+    license: MIT
+    modification: adapted
+- path: skills/compliance-programs/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: security/security-compliance-auditor.md
+    license: MIT
+    modification: adapted
+- path: skills/contracts/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/master-agreement-generator/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/contracts/references/intake.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/legal-client-intake.md
+    license: MIT
+    modification: adapted
+- path: skills/contracts/references/master-template.example.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/master-agreement-generator/references/master-template.example.md
+    license: MIT
+    modification: adapted
+- path: skills/contracts/references/review.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/legal-document-review.md
+    license: MIT
+    modification: adapted
+- path: skills/contracts/references/spec.example.json
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/master-agreement-generator/references/spec.example.json
+    license: MIT
+    modification: adapted
+- path: skills/contracts/scripts/build-agreement.js
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/master-agreement-generator/scripts/build-agreement.js
+    license: MIT
+    modification: adapted

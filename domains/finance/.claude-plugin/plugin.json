@@ -1,0 +1,10 @@
+{
+  "name": "finance",
+  "version": "0.0.0",
+  "description": "Bookkeeping, FP&A, pricing, tax.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

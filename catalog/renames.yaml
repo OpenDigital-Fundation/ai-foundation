@@ -1,0 +1,42 @@
+version: 1
+references:
+  superpowers:brainstorming: workflow:brainstorming
+  superpowers:writing-plans: workflow:writing-plans
+  superpowers:executing-plans: workflow:executing-plans
+  superpowers:subagent-driven-development: workflow:executing-plans
+  superpowers:using-git-worktrees: workflow:git-worktrees
+  superpowers:finishing-a-development-branch: workflow:finishing-a-branch
+  superpowers:dispatching-parallel-agents: agent-engineering:parallel-agents
+  superpowers:verification-before-completion: testing:verification-before-completion
+  superpowers:test-driven-development: testing:test-driven-development
+  superpowers:systematic-debugging: debugging:systematic-debugging
+  superpowers:requesting-code-review: code-quality:code-review
+  superpowers:receiving-code-review: code-quality:receiving-code-review
+  superpowers:writing-skills: agent-engineering:skill-authoring
+  superpowers:using-superpowers: agent-engineering:using-skills
+text:
+  your human partner's: the user's
+  Your human partner's: The user's
+  your human partner: the user
+  Your human partner: The user
+  your partner: the user
+  docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md: 'the spec location from the repository''s AGENTS.md (default: `docs/specs/<domain>/<feature>/spec.md`)'
+  docs/superpowers/plans/<filename>.md: docs/specs/<domain>/<feature>/plan.md
+  docs/superpowers/plans/: docs/specs/<domain>/<feature>/
+  docs/superpowers/specs/: docs/specs/<domain>/<feature>/
+  .superpowers/: .ai-foundation/
+  ? The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
+  : Find the issue tracker and triage labels in the repository's `AGENTS.md`; without one, use `workflow/knowledge/issue-tracking/` (GitHub Issues via `gh` when the repo has a GitHub remote, otherwise local markdown files).
+  The issue tracker should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.: Find the issue tracker in the repository's `AGENTS.md`; without one, use `workflow/knowledge/issue-tracking/`.
+  The mapping should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.: The mapping lives in the repository's `AGENTS.md`; without one, use the defaults in `workflow/knowledge/issue-tracking/triage-labels.md`.
+  the tracker `/setup-matt-pocock-skills` configured: the repository's tracker
+  Call the Skill tool with "grilling": Use `workflow:grilling`
+  Call the Skill tool with "domain-modeling": Use `architecture:domain-modeling`
+  Call the Skill tool with "research": Use `research:source-research`
+  Call the Skill tool with "prototype": Use the spike section of `workflow:brainstorming`
+  Call the Skill tool with `writing-for-agents`: Use `agent-engineering:skill-authoring` (its writing guide)
+  Call the Skill tool with "codebase-design": Use `architecture:codebase-design`
+  call the Skill tool with "codebase-design": use `architecture:codebase-design`
+  call the Skill tool with "grilling": use `workflow:grilling`
+  call the Skill tool with "domain-modeling": use `architecture:domain-modeling`
+  the `/codebase-design` vocabulary: the `architecture:codebase-design` vocabulary

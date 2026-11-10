@@ -1,0 +1,1096 @@
+version: 1
+files:
+- path: skills/claude-api/LICENSE.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/LICENSE.txt
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/SKILL.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/csharp/claude-api/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/csharp/claude-api/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/csharp/claude-api/batches.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/csharp/claude-api/batches.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/csharp/claude-api/files-api.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/csharp/claude-api/files-api.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/csharp/claude-api/streaming.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/csharp/claude-api/streaming.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/csharp/claude-api/tool-use.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/csharp/claude-api/tool-use.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/curl/examples.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/curl/examples.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/curl/managed-agents.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/curl/managed-agents.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/go/claude-api/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/go/claude-api/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/go/claude-api/files-api.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/go/claude-api/files-api.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/go/claude-api/streaming.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/go/claude-api/streaming.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/go/claude-api/tool-use.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/go/claude-api/tool-use.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/go/managed-agents/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/go/managed-agents/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/java/claude-api/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/java/claude-api/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/java/claude-api/files-api.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/java/claude-api/files-api.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/java/claude-api/streaming.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/java/claude-api/streaming.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/java/claude-api/tool-use.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/java/claude-api/tool-use.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/java/managed-agents/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/java/managed-agents/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/php/claude-api/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/php/claude-api/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/php/claude-api/batches.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/php/claude-api/batches.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/php/claude-api/files-api.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/php/claude-api/files-api.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/php/claude-api/streaming.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/php/claude-api/streaming.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/php/claude-api/tool-use.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/php/claude-api/tool-use.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/php/managed-agents/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/php/managed-agents/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/python/claude-api/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/python/claude-api/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/python/claude-api/batches.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/python/claude-api/batches.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/python/claude-api/files-api.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/python/claude-api/files-api.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/python/claude-api/sdk-upgrade.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/python/claude-api/sdk-upgrade.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/python/claude-api/streaming.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/python/claude-api/streaming.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/python/claude-api/tool-use.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/python/claude-api/tool-use.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/python/managed-agents/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/python/managed-agents/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/ruby/claude-api/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/ruby/claude-api/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/ruby/claude-api/streaming.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/ruby/claude-api/streaming.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/ruby/claude-api/tool-use.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/ruby/claude-api/tool-use.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/ruby/managed-agents/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/ruby/managed-agents/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/admin-api.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/admin-api.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/agent-design.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/agent-design.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/anthropic-cli.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/anthropic-cli.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/claude-platform-on-aws.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/claude-platform-on-aws.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/cost-optimization.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/cost-optimization.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/error-codes.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/error-codes.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/evals/build-eval.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/evals/build-eval.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/evals/cost-hillclimb.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/evals/cost-hillclimb.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/evals/eval-audit.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/evals/eval-audit.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/evals/eval-hillclimb.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/evals/eval-hillclimb.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/evals/report/SCHEMA.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/evals/report/SCHEMA.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/evals/report/build-report-lite.mjs
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/evals/report/build-report-lite.mjs
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/evals/report/runner-scaffold.mjs
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/evals/report/runner-scaffold.mjs
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/live-sources.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/live-sources.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-api-reference.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-api-reference.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-client-patterns.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-client-patterns.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-core.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-core.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-environments.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-environments.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-events.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-events.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-memory.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-memory.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-multiagent.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-multiagent.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-onboarding-from-quickstart.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-onboarding-from-quickstart.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-onboarding-from-url.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-onboarding-from-url.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-onboarding.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-onboarding.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-outcomes.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-outcomes.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-overview.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-overview.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/bug-hunter.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/bug-hunter.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/contract-tracker.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/contract-tracker.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/data-analyst.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/data-analyst.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/deep-researcher.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/deep-researcher.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/explainer-video-maker.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/explainer-video-maker.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/field-monitor.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/field-monitor.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/incident-commander.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/incident-commander.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/performance-tuner.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/performance-tuner.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/sprint-retro-facilitator.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/sprint-retro-facilitator.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/structured-extractor.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/structured-extractor.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/support-agent.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/support-agent.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/support-to-eng-escalator.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/support-to-eng-escalator.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-quickstarts/watchlist-scanner.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-quickstarts/watchlist-scanner.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-scheduled-deployments.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-scheduled-deployments.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-self-hosted-sandboxes.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-self-hosted-sandboxes.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-tools.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-tools.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/managed-agents-webhooks.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/managed-agents-webhooks.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/model-migration.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/model-migration.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/models.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/models.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/platform-availability.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/platform-availability.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/preserved-thinking-migration.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/preserved-thinking-migration.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/preserved-thinking-migration/causes.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/preserved-thinking-migration/causes.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/preserved-thinking-migration/drop_block_probe.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/preserved-thinking-migration/drop_block_probe.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/preserved-thinking-migration/prefix_diff.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/preserved-thinking-migration/prefix_diff.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/prompt-audit.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/prompt-audit.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/prompt-caching.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/prompt-caching.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/token-counting.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/token-counting.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/shared/tool-use-concepts.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/shared/tool-use-concepts.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/typescript/claude-api/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/typescript/claude-api/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/typescript/claude-api/batches.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/typescript/claude-api/batches.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/typescript/claude-api/files-api.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/typescript/claude-api/files-api.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/typescript/claude-api/streaming.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/typescript/claude-api/streaming.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/typescript/claude-api/tool-use.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/typescript/claude-api/tool-use.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/claude-api/typescript/managed-agents/README.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/claude-api/typescript/managed-agents/README.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/LICENSE.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/LICENSE.txt
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/SKILL.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/reference/evaluation.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/reference/evaluation.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/reference/mcp_best_practices.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/reference/mcp_best_practices.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/reference/node_mcp_server.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/reference/node_mcp_server.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/reference/node_mcp_server_v2.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/reference/node_mcp_server_v2.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/reference/python_mcp_server.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/reference/python_mcp_server.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/references/release-qa.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/mcp-release-qa/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/csharp/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/csharp-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/csharp-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/go/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/go-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/go-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/java/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/java-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/java-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/kotlin/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/kotlin-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/kotlin-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/php/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/php-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/php-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/python/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/python-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/python-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/quarkus/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/quarkus-mcp-server-sse.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/ruby/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/ruby-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/ruby-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/rust/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/rust-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/rust-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/swift/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/swift-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/swift-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/sdk/typescript/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/typescript-mcp-expert.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/typescript-mcp-server.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/server-design.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/specialized-mcp-builder.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/references/typescript-sdk-patterns.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/mcp-server-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/mcp-server-development/scripts/connections.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/scripts/connections.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/scripts/evaluation.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/scripts/evaluation.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/scripts/example_evaluation.xml
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/scripts/example_evaluation.xml
+    license: Apache-2.0
+    modification: adapted
+- path: skills/mcp-server-development/scripts/requirements.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/mcp-builder/scripts/requirements.txt
+    license: Apache-2.0
+    modification: adapted
+- path: skills/ml-engineering/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/mle-workflow/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/adoption-playbook.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/ml-adoption-playbook/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/ai-engineering.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-ai-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/fairness-evaluation/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/se-responsible-ai-code.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/model-qa.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/specialized-model-qa.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/post-training.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-llm-post-training-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/recommendation-systems.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/recsys-pipeline-architect/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/review.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/mle-reviewer.md
+    license: MIT
+    modification: adapted
+- path: skills/prompt-engineering/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-prompt-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-caching.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/prompt-caching-strategy/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-design/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/prompt-builder.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/prompt-engineer.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/ai-prompt-engineering-safety-best-practices.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/prompt.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/README.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/SOURCES.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/SOURCES.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/SPEC.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/SPEC.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/core-patterns.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/core-patterns.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/meta-optimization-loop.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/meta-optimization-loop.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/model-family-notes.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/model-family-notes.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/prompt-optimization/references/transformed-examples.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/prompt-optimizer/references/transformed-examples.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/prompt-engineering/references/regex-or-llm.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/regex-vs-llm-structured-text/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/prompt-engineering/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-prompt-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-rag-pipeline-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/iterative-retrieval.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/iterative-retrieval/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/langchain/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/langchain-python.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/review.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/rag-pipeline-reviewer.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-rag-pipeline-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/search-relevance.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-search-relevance-engineer.md
+    license: MIT
+    modification: adapted

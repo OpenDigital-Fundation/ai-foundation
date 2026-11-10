@@ -1,0 +1,106 @@
+# Vocabulary for faceted classification. IDs are stable contracts (changing one needs an ADR); names may change.
+# origin: landscape-v1 = from the "OpenDigital AI & Knowledge Landscape v1.0" taxonomy; proposed = added to complete a truncated list, pending review.
+version: 1
+terms:
+- id: technology
+  name:
+    pt: Tecnologia
+    en: Technology
+  origin: landscape-v1
+  description: SaaS, software, cloud, telecomunicações, cibersegurança, IA
+- id: government
+  name:
+    pt: Governo
+    en: Government
+  origin: landscape-v1
+  description: GovTech, CivicTech, administração pública, segurança pública, justiça
+- id: health
+  name:
+    pt: Saúde
+    en: Health
+  origin: landscape-v1
+  description: HealthTech, hospitais, clínicas, farmacêutica, biotecnologia
+- id: education
+  name:
+    pt: Educação
+    en: Education
+  origin: landscape-v1
+  description: EdTech, ensino básico, superior, profissional e corporativo
+- id: finance
+  name:
+    pt: Finanças
+    en: Finance
+  origin: landscape-v1
+  description: FinTech, bancos, seguros, investimentos, pagamentos, RegTech
+- id: commerce
+  name:
+    pt: Comércio
+    en: Commerce
+  origin: landscape-v1
+  description: RetailTech, e-commerce, marketplaces, atacado, varejo
+- id: industry
+  name:
+    pt: Indústria
+    en: Industry
+  origin: landscape-v1
+  description: Indústria 4.0, manufatura, automotiva, siderurgia, química
+- id: energy
+  name:
+    pt: Energia
+    en: Energy
+  origin: landscape-v1
+  description: EnergyTech, petróleo, gás, energia renovável, utilities
+- id: agriculture
+  name:
+    pt: Agropecuária
+    en: Agriculture
+  origin: landscape-v1
+  description: AgriTech, agricultura, pecuária, alimentos, florestas
+- id: infrastructure
+  name:
+    pt: Infraestrutura
+    en: Infrastructure
+  origin: landscape-v1
+  description: Construção, arquitetura, urbanismo, saneamento, transportes
+- id: logistics
+  name:
+    pt: Logística
+    en: Logistics
+  origin: landscape-v1
+  description: Supply chain, mobilidade, transporte, armazenamento
+- id: communication
+  name:
+    pt: Comunicação
+    en: Communication
+  origin: landscape-v1
+  description: MarTech, AdTech, mídia, publicidade, jornalismo
+- id: creative
+  name:
+    pt: Criatividade
+    en: Creative
+  origin: landscape-v1
+  description: Design, audiovisual, games, música, entretenimento
+- id: services
+  name:
+    pt: Serviços
+    en: Services
+  origin: landscape-v1
+  description: Consultoria, jurídico, contabilidade, imobiliário, turismo
+- id: society
+  name:
+    pt: Sociedade
+    en: Society
+  origin: landscape-v1
+  description: ONGs, terceiro setor, desenvolvimento social, sustentabilidade
+- id: science
+  name:
+    pt: Ciência
+    en: Science
+  origin: landscape-v1
+  description: Universidades, laboratórios, centros de pesquisa, P&D
+- id: consumer
+  name:
+    pt: Consumo
+    en: Consumer
+  origin: landscape-v1
+  description: Moda, beleza, esportes, alimentação, hospitalidade

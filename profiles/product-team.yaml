@@ -1,0 +1,9 @@
+name: product-team
+description: Product discovery, specs and go-to-market.
+include:
+- workflow/*
+- product/*
+- research/*
+- ux/*
+- marketing/*
+- documents/*

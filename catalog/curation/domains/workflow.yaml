@@ -1,0 +1,212 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: workflow
+artifacts:
+- id: workflow/brainstorming
+  type: skill
+  capability: Find out what the user wants and why, compare approaches, and get a written spec approved before building.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - obra/superpowers:skill:brainstorming
+  - mattpocock/skills:skill:to-spec
+  - mattpocock/skills:skill:prototype
+  - msitarzewski/agency-agents:agent:Rapid Prototyper
+  - affaan-m/ECC:command:plan-prd
+  - affaan-m/ECC:command:prp-prd
+  - affaan-m/ECC:skill:intent-driven-development
+- id: workflow/executing-plans
+  type: skill
+  capability: Build an approved plan task by task, via subagents or inline, with TDD, a ledger and a final branch review.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:prp-implement
+  - github/awesome-copilot:rule:task-implementation.instructions
+  - mattpocock/skills:skill:implement
+  - mattpocock/skills:skill:implement-spec
+  - obra/superpowers:skill:executing-plans
+  - obra/superpowers:skill:subagent-driven-development
+- id: workflow/feature-delivery
+  type: workflow
+  capability: Orchestrate the stages from idea to merge-ready branch with an approval gate between each stage.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:epic-review
+  - affaan-m/ECC:command:feature-dev
+  - affaan-m/ECC:command:feature-development
+  - affaan-m/ECC:command:orch-add-feature
+  - affaan-m/ECC:command:orch-build-mvp
+  - affaan-m/ECC:command:orch-change-feature
+  - affaan-m/ECC:command:orch-review
+  - affaan-m/ECC:rule:common/development-workflow
+  - affaan-m/ECC:skill:orch-add-feature
+  - affaan-m/ECC:skill:orch-build-mvp
+  - affaan-m/ECC:skill:orch-change-feature
+  - affaan-m/ECC:skill:orch-pipeline
+- id: workflow/finishing-a-branch
+  type: skill
+  capability: 'Decide how finished work is integrated: merge, pull request, keep or discard, and clean up.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:pr
+  - affaan-m/ECC:command:prp-pr
+  - mattpocock/skills:skill:pr
+  - obra/superpowers:skill:finishing-a-development-branch
+- id: workflow/git-worktrees
+  type: skill
+  capability: Create an isolated worktree or branch from the right base with a passing baseline before building.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - obra/superpowers:skill:using-git-worktrees
+- id: workflow/grilling
+  type: skill
+  capability: Stress-test an existing plan or decision through rounds of questions over a design tree.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - mattpocock/skills:skill:grill-me
+  - mattpocock/skills:skill:grill-with-docs
+  - mattpocock/skills:skill:grilling
+  - mattpocock/skills:skill:to-questionnaire
+- id: workflow/handoff
+  type: skill
+  capability: Write or resume a handoff document so another session or person continues without re-deriving context.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - mattpocock/skills:skill:handoff
+  - affaan-m/ECC:command:save-session
+  - affaan-m/ECC:command:resume-session
+- id: workflow/initiative-mapping
+  type: skill
+  capability: Chart an initiative too big for one session as a map of decision tickets resolved one at a time.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - mattpocock/skills:skill:wayfinder
+  - msitarzewski/agency-agents:agent:Master Plan Architect
+- id: workflow/issue-breakdown
+  type: skill
+  capability: Break approved work into tracer-bullet tickets with blocking edges and publish them to the tracker.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:epic-decompose
+  - affaan-m/ECC:skill:story-lifecycle
+  - github/awesome-copilot:agent:one-shot-feature-issue-planner
+  - mattpocock/skills:skill:to-tickets
+- id: workflow/issue-tracking
+  type: knowledge
+  capability: How to create, link, label and query issues on GitHub, GitLab or local markdown trackers.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: workflow/issue-triage
+  type: skill
+  capability: Move issues and external pull requests through triage roles and write agent-ready briefs.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - Community-Access/accessibility-agents:skill:issue-tracker
+  - Community-Access/accessibility-agents:skill:projects-manager
+  - affaan-m/ECC:command:issue-review
+  - affaan-m/ECC:skill:issue-review
+  - mattpocock/skills:skill:triage
+- id: workflow/writing-plans
+  type: skill
+  capability: Turn an approved spec into plan.md and tasks.md with exact files, interfaces, tests and commands.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:planner
+  - affaan-m/ECC:command:plan
+  - affaan-m/ECC:command:prp-plan
+  - affaan-m/ECC:skill:blueprint
+  - affaan-m/ECC:skill:change-impact
+  - github/awesome-copilot:agent:Implementation Plan Generation Mode
+  - github/awesome-copilot:agent:Specification
+  - github/awesome-copilot:rule:spec-driven-workflow-v1.instructions
+  - obra/superpowers:skill:writing-plans
+imports:
+- dest: domains/workflow/skills/brainstorming
+  source: obra/superpowers
+  src: skills/brainstorming
+  extra:
+  - source: mattpocock/skills
+    path: skills/engineering/to-spec/SKILL.md
+  - source: mattpocock/skills
+    path: skills/engineering/prototype/SKILL.md
+- dest: domains/workflow/skills/writing-plans
+  source: obra/superpowers
+  src: skills/writing-plans
+- dest: domains/workflow/skills/executing-plans
+  source: obra/superpowers
+  src: skills/subagent-driven-development
+  files:
+    SKILL.md: skills/executing-plans/SKILL.md
+    modes/inline.md: skills/executing-plans/SKILL.md
+    modes/subagent.md: skills/subagent-driven-development/SKILL.md
+    prompts/implementer-prompt.md: skills/subagent-driven-development/implementer-prompt.md
+    prompts/task-reviewer-prompt.md: skills/subagent-driven-development/task-reviewer-prompt.md
+    prompts/re-review-prompt.md: skills/subagent-driven-development/re-review-prompt.md
+    scripts/task-start: skills/executing-plans/scripts/task-start
+    scripts/task-done: skills/executing-plans/scripts/task-done
+- dest: domains/workflow/skills/git-worktrees
+  source: obra/superpowers
+  src: skills/using-git-worktrees
+- dest: domains/workflow/skills/finishing-a-branch
+  source: obra/superpowers
+  src: skills/finishing-a-development-branch
+- dest: domains/workflow/skills/grilling
+  source: mattpocock/skills
+  src: skills/productivity/grilling
+- dest: domains/workflow/skills/issue-breakdown
+  source: mattpocock/skills
+  src: skills/engineering/to-tickets
+- dest: domains/workflow/skills/initiative-mapping
+  source: mattpocock/skills
+  src: skills/engineering/wayfinder
+- dest: domains/workflow/skills/issue-triage
+  source: mattpocock/skills
+  src: skills/engineering/triage
+- dest: domains/workflow/skills/handoff/SKILL.md
+  source: mattpocock/skills
+  src: skills/productivity/handoff/SKILL.md
+  extra:
+  - source: affaan-m/ECC
+    path: commands/save-session.md
+  - source: affaan-m/ECC
+    path: commands/resume-session.md
+- dest: domains/workflow/knowledge/issue-tracking/github.md
+  source: mattpocock/skills
+  src: skills/engineering/setup-matt-pocock-skills/issue-tracker-github.md
+- dest: domains/workflow/knowledge/issue-tracking/gitlab.md
+  source: mattpocock/skills
+  src: skills/engineering/setup-matt-pocock-skills/issue-tracker-gitlab.md
+- dest: domains/workflow/knowledge/issue-tracking/local.md
+  source: mattpocock/skills
+  src: skills/engineering/setup-matt-pocock-skills/issue-tracker-local.md
+- dest: domains/workflow/knowledge/issue-tracking/triage-labels.md
+  source: mattpocock/skills
+  src: skills/engineering/setup-matt-pocock-skills/triage-labels.md
+- dest: domains/workflow/skills/brainstorming/templates/spec.md
+  source: mattpocock/skills
+  src: skills/engineering/to-spec/SKILL.md
+- dest: domains/workflow/skills/writing-plans/references/spec-traceability/implementation-plan.md
+  source: github/awesome-copilot
+  src: agents/implementation-plan.agent.md
+- dest: domains/workflow/skills/writing-plans/references/spec-traceability/specification.md
+  source: github/awesome-copilot
+  src: agents/specification.agent.md
+- dest: domains/workflow/skills/writing-plans/references/spec-traceability/spec-driven-workflow-v1.md
+  source: github/awesome-copilot
+  src: instructions/spec-driven-workflow-v1.instructions.md
+- dest: domains/workflow/skills/issue-breakdown/references/feature-issue-drafts.md
+  source: github/awesome-copilot
+  src: agents/one-shot-feature-issue-planner.agent.md
+- dest: domains/workflow/skills/executing-plans/references/implementation-tracking.md
+  source: github/awesome-copilot
+  src: instructions/task-implementation.instructions.md

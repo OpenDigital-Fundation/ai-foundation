@@ -1,0 +1,293 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: platform
+artifacts:
+- id: platform/deployment
+  type: skill
+  capability: 'Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD
+    pipelines, health checks, blue-green and canary rollouts, rollback, post-deploy'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:pm2
+  - affaan-m/ECC:skill:canary-watch
+  - affaan-m/ECC:skill:deployment-patterns
+  - affaan-m/ECC:skill:docker-patterns
+  - affaan-m/ECC:skill:kubernetes-patterns
+  - 'github/awesome-copilot:agent:SE: DevOps/CI'
+  - github/awesome-copilot:agent:Terraform IaC Reviewer
+  - github/awesome-copilot:agent:Terratest Module Testing
+  - github/awesome-copilot:rule:ansible.instructions
+  - github/awesome-copilot:rule:containerization-docker-best-practices.instructions
+  - github/awesome-copilot:rule:devcontainers.instructions
+  - github/awesome-copilot:rule:kubernetes-deployment-best-practices.instructions
+  - github/awesome-copilot:rule:kubernetes-manifests.instructions
+  - github/awesome-copilot:rule:terraform.instructions
+  - mattpocock/skills:skill:wizard
+  - msitarzewski/agency-agents:agent:DX Engineer
+  - msitarzewski/agency-agents:agent:DevOps Automator
+  - msitarzewski/agency-agents:agent:Developer Tooling Engineer
+  - msitarzewski/agency-agents:agent:Mobile Release Engineer
+  - msitarzewski/agency-agents:agent:Platform Engineer
+  recipe:
+    title: Deployment
+    description: 'Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads,
+      CI/CD pipelines, health checks, blue-green and canary rollouts, rollback, post-deploy verification, process managers,
+      and mobile app signing and store release.'
+    base: s:deployment-patterns
+    remove:
+    - ^#### Exercise the ECC Plugin Setup Harness\n.*?(?=^#{2,4} )
+    references:
+      docker.md:
+      - s:docker-patterns
+      kubernetes.md:
+      - s:kubernetes-patterns
+      ci-cd-automation.md:
+      - msitarzewski/agency-agents:engineering/engineering-devops-automator.md
+      platform-engineering.md:
+      - msitarzewski/agency-agents:engineering/engineering-platform-engineer.md
+      post-deploy-checks.md:
+      - s:canary-watch
+      process-managers.md:
+      - c:pm2
+      mobile-release.md:
+      - msitarzewski/agency-agents:engineering/engineering-mobile-release-engineer.md
+      terraform/README.md:
+      - github/awesome-copilot:agents/terraform-iac-reviewer.agent.md
+      - github/awesome-copilot:instructions/terraform.instructions.md
+      - github/awesome-copilot:agents/terratest-module-testing.agent.md
+      gitops/README.md:
+      - github/awesome-copilot:agents/se-gitops-ci-specialist.agent.md
+      containers/README.md:
+      - github/awesome-copilot:instructions/containerization-docker-best-practices.instructions.md
+      - github/awesome-copilot:instructions/devcontainers.instructions.md
+      kubernetes/README.md:
+      - github/awesome-copilot:instructions/kubernetes-deployment-best-practices.instructions.md
+      - github/awesome-copilot:instructions/kubernetes-manifests.instructions.md
+      ansible/README.md:
+      - github/awesome-copilot:instructions/ansible.instructions.md
+- id: platform/git-workflow
+  type: skill
+  capability: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts,
+    rebasing versus merging, or setting up pre-commit hooks with formatting,
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:commit-reviewer
+  - affaan-m/ECC:rule:common/git-workflow
+  - affaan-m/ECC:skill:conventional-commit-review
+  - affaan-m/ECC:skill:git-workflow
+  - github/awesome-copilot:agent:Gitmoji Setup
+  - mattpocock/skills:skill:setup-pre-commit
+  - msitarzewski/agency-agents:agent:Git Workflow Master
+  recipe:
+    title: Git workflow
+    description: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving
+      conflicts, rebasing versus merging, or setting up pre-commit hooks with formatting, type checks and tests.
+    body: '# Git workflow
+
+
+      Keep history readable and every change reviewable. The repository''s own conventions (`AGENTS.md`, `CONTRIBUTING.md`)
+      always win; read them first.
+
+
+      ## Branching
+
+
+      - Work on a short-lived branch from the current main; never commit directly to the main branch unless the repository
+      says so. For parallel or isolated work use `workflow:git-worktrees`.
+
+      - Prefer trunk-based development with small pull requests; use release branches only when the product ships versions
+      that need maintenance.
+
+
+      ## Commits
+
+
+      - One logical change per commit, with tests and code together. Write messages in the repository''s style; without one,
+      use Conventional Commits (`feat(scope): imperative summary`, body explaining why).
+
+      - Keep the author identity and signing the repository requires. Never bypass hooks or signing to make a commit pass.
+
+
+      ## Before merging
+
+
+      - Tidy local history (squash fixups, reorder) only on commits that were never shared. Rewriting shared history, force-pushing
+      and deleting branches are destructive: present the exact refs and get explicit approval first.
+
+      - Rebase onto main for a linear history when the team prefers it; merge when the branch is shared. Resolve conflicts
+      by understanding both sides, then re-run the tests.
+
+
+      ## Hooks
+
+
+      Run formatting, type checks and fast tests before each commit with a pre-commit framework; keep the slow suite in CI.
+      Setup steps are in the pre-commit reference.
+
+
+      ## Stacked pull requests
+
+
+      For large changes split into a chain of small, dependent PRs, see `references/stacked-pull-requests.md`.
+
+      '
+    references:
+      branching-and-history.md:
+      - s:git-workflow
+      practices.md:
+      - msitarzewski/agency-agents:engineering/engineering-git-workflow-master.md
+      pre-commit.md:
+      - mattpocock/skills:skills/misc/setup-pre-commit/SKILL.md
+      hook-installation/README.md:
+      - github/awesome-copilot:agents/gitmoji-setup.agent.md
+    supersedes:
+    - affaan-m/ECC:skill:conventional-commit-review
+- id: platform/github-operations
+  type: skill
+  capability: 'Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and re-running
+    CI, configuring Actions, branch protection and releases, or monitoring Depe'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:github-ops
+  - affaan-m/ECC:skill:opensource-pipeline
+  - getsentry/skills:skill:iterate-pr
+  - github/awesome-copilot:agent:GitHub Actions Expert
+  - github/awesome-copilot:agent:GitHub Actions Node Runtime Upgrade
+  - github/awesome-copilot:rule:github-actions-ci-cd-best-practices.instructions
+  recipe:
+    title: GitHub operations
+    description: 'Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and
+      re-running CI, configuring Actions, branch protection and releases, or monitoring Dependabot and security alerts.'
+    base: s:github-ops
+    remove:
+    - ^For the ECC repository's maintainer release path.*?\n\n
+    append: '## Iterating on a PR until CI passes
+
+
+      To drive one PR to green — triage review feedback by severity, fix CI failures at the root, push and re-check until
+      only human gates remain — follow [references/pr-iteration.md](references/pr-iteration.md).
+
+      '
+    references:
+      actions/README.md:
+      - github/awesome-copilot:agents/github-actions-expert.agent.md
+      - github/awesome-copilot:agents/github-actions-node-upgrade.agent.md
+      - github/awesome-copilot:instructions/github-actions-ci-cd-best-practices.instructions.md
+- id: platform/incident-response
+  type: skill
+  capability: 'Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess
+    severity, coordinate responders, communicate status, contain, recover, preserve'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - github/awesome-copilot:agent:Cloud and SaaS Outage Triage
+  - msitarzewski/agency-agents:agent:Incident Responder
+  - msitarzewski/agency-agents:agent:Incident Response Commander
+  recipe:
+    title: Incident response
+    description: 'Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due:
+      assess severity, coordinate responders, communicate status, contain, recover, preserve evidence and write a blameless
+      postmortem.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-incident-response-commander.md
+      security-incidents.md:
+      - msitarzewski/agency-agents:security/security-incident-responder.md
+      dependency-outages/README.md:
+      - github/awesome-copilot:agents/cloud-saas-outage-triage.agent.md
+    body: '# Incident response
+
+
+      Restore service first, communicate clearly throughout, and learn without blame afterwards.
+
+
+      ## 1. Declare and assess
+
+      Declare an incident as soon as users are affected. Assign severity from impact (who, how many, which function) and name
+      an incident commander, a communicator and responders.
+
+
+      ## 2. Stabilise
+
+      Mitigate before diagnosing: roll back the last change, fail over, scale, or disable the feature flag. Every action in
+      production follows the team''s change rules; destructive or irreversible steps need the commander''s explicit go.
+
+
+      ## 3. Communicate
+
+      Status updates at a fixed cadence to stakeholders and customers: what is affected, what is being done, next update time.
+      No speculation about cause.
+
+
+      ## 4. Resolve and verify
+
+      Confirm recovery with the same signals that detected the incident; keep watching for a while before closing.
+
+
+      ## 5. Postmortem
+
+      Blameless timeline, impact, root cause and contributing factors, what went well, and action items with owners and dates.
+      Suspected security incidents follow the security reference: preserve evidence, contain, and involve the security owner.'
+- id: platform/reliability
+  type: skill
+  capability: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
+    SigNoz), planning capacity, running chaos experiments, or maintaining infras
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:dashboard-builder
+  - github/awesome-copilot:agent:Platform SRE for Kubernetes
+  - github/awesome-copilot:rule:devops-core-principles.instructions
+  - msitarzewski/agency-agents:agent:FinOps Engineer
+  - msitarzewski/agency-agents:agent:Infrastructure Maintainer
+  - msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)
+  recipe:
+    title: Reliability and observability
+    description: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
+      SigNoz), planning capacity, running chaos experiments, or maintaining infrastructure health.
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-sre.md
+      dashboards.md:
+      - s:dashboard-builder
+      infrastructure-maintenance.md:
+      - msitarzewski/agency-agents:support/support-infrastructure-maintainer.md
+      operational-checklists/README.md:
+      - github/awesome-copilot:agents/platform-sre-kubernetes.agent.md
+      - github/awesome-copilot:instructions/devops-core-principles.instructions.md
+    body: '# Reliability and observability
+
+
+      Make reliability measurable, then spend effort where the measurement says.
+
+
+      ## 1. Define SLOs
+
+      For each user-facing journey: the SLI (successful, fast-enough requests over valid requests), the target and window,
+      and the error budget. Start from what users notice, not what is easy to measure.
+
+
+      ## 2. Instrument
+
+      Structured logs with request IDs, RED metrics (rate, errors, duration) per service, traces across service boundaries,
+      and saturation for the resources that run out first.
+
+
+      ## 3. Alert on symptoms
+
+      Multi-window burn-rate alerts on the SLOs, routed to an owner, each with a runbook. Remove alerts nobody acts on.
+
+
+      ## 4. Dashboards
+
+      One page per service that answers "is it healthy, and if not, where": SLOs and budget, golden signals, recent deploys.
+      See the dashboards reference.
+
+
+      ## 5. Spend the budget
+
+      Budget left: ship. Budget burnt: freeze risky changes and fix reliability. Reduce toil you repeat, plan capacity from
+      data, and test failure modes deliberately (game days, chaos experiments) in safe environments.'

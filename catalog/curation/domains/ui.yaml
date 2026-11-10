@@ -1,0 +1,118 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: ui
+artifacts:
+- id: ui/component-styling
+  type: skill
+  capability: 'Use when implementing interface components and styles in code: shadcn/ui and Radix components, Tailwind utility
+    styling, theming and dark mode, responsive layouts, CSS architecture, and appl'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:theme-factory
+  - github/awesome-copilot:rule:bulma-v1.instructions
+  - github/awesome-copilot:rule:html-css-style-color-guide.instructions
+  - github/awesome-copilot:rule:tailwind-v4-vite.instructions
+  - msitarzewski/agency-agents:agent:Frontend Developer
+  - msitarzewski/agency-agents:agent:UX Architect
+  - nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-styling
+  recipe:
+    title: Component styling
+    description: 'Use when implementing interface components and styles in code: shadcn/ui and Radix components, Tailwind
+      utility styling, theming and dark mode, responsive layouts, CSS architecture, and applying a ready-made theme to an
+      artifact.'
+    base_dir: nextlevelbuilder/ui-ux-pro-max-skill:.claude/skills/ui-styling
+    references:
+      frontend-engineering.md:
+      - msitarzewski/agency-agents:engineering/engineering-frontend-developer.md
+      css-architecture.md:
+      - msitarzewski/agency-agents:design/design-ux-architect.md
+      framework-integration/README.md:
+      - github/awesome-copilot:instructions/html-css-style-color-guide.instructions.md
+      - github/awesome-copilot:instructions/tailwind-v4-vite.instructions.md
+      - github/awesome-copilot:instructions/bulma-v1.instructions.md
+- id: ui/design-system
+  type: skill
+  capability: Choose or generate a design system (style, palette, type, charts, icons, tokens) from a curated database.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:design-system
+  - msitarzewski/agency-agents:agent:Data Visualization Engineer
+  - nextlevelbuilder/ui-ux-pro-max-skill:command:design-plan
+  - nextlevelbuilder/ui-ux-pro-max-skill:skill:design
+  - nextlevelbuilder/ui-ux-pro-max-skill:skill:design-system
+  - nextlevelbuilder/ui-ux-pro-max-skill:skill:ui-ux-pro-max
+- id: ui/motion-and-polish
+  type: skill
+  capability: 'Use when an interface works but feels flat or rough: adding purposeful motion and transitions, micro-interactions,
+    easing and timing, reduced-motion support, and the small craft details that'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:rule:web/design-quality
+  - affaan-m/ECC:skill:make-interfaces-feel-better
+  - affaan-m/ECC:skill:motion-advanced
+  - affaan-m/ECC:skill:motion-foundations
+  - affaan-m/ECC:skill:motion-patterns
+  - affaan-m/ECC:skill:taste
+  - affaan-m/ECC:skill:taste-application
+  - affaan-m/ECC:skill:taste-distillation
+  - msitarzewski/agency-agents:agent:Whimsy Injector
+  recipe:
+    title: Motion and polish
+    description: 'Use when an interface works but feels flat or rough: adding purposeful motion and transitions, micro-interactions,
+      easing and timing, reduced-motion support, and the small craft details that make an interface feel considered, with
+      taste guidance to avoid gimmicks.'
+    base: s:motion-foundations
+    references:
+      motion-patterns.md:
+      - s:motion-patterns
+      advanced-motion.md:
+      - s:motion-advanced
+      feel.md:
+      - s:make-interfaces-feel-better
+      taste.md:
+      - s:taste
+      - s:taste-application
+      - s:taste-distillation
+      design-quality.md:
+      - r:web/design-quality.md
+      delight.md:
+      - msitarzewski/agency-agents:design/design-whimsy-injector.md
+- id: ui/visual-design
+  type: skill
+  capability: Design and build new pages that look designed, with themes, job-first layout and browser-linted quality gates.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - Nutlope/hallmark:skill:hallmark
+  - affaan-m/ECC:skill:frontend-design-direction
+  - anthropics/skills:skill:frontend-design
+  - github/awesome-copilot:agent:gem-designer
+  - msitarzewski/agency-agents:agent:UI Designer
+  - msitarzewski/agency-agents:agent:UI Finish-Gate Reviewer
+  - nextlevelbuilder/ui-ux-pro-max-skill:agent:design-review
+  - nextlevelbuilder/ui-ux-pro-max-skill:command:design-review
+imports:
+- dest: domains/ui/skills/visual-design
+  source: Nutlope/hallmark
+  src: skills/hallmark
+- dest: domains/ui/skills/visual-design/references/aesthetic-direction.md
+  source: anthropics/skills
+  src: skills/frontend-design/SKILL.md
+- dest: domains/ui/skills/visual-design/LICENSE-frontend-design.txt
+  source: anthropics/skills
+  src: skills/frontend-design/LICENSE.txt
+- dest: domains/ui/skills/design-system
+  source: nextlevelbuilder/ui-ux-pro-max-skill
+  src: .claude/skills/ui-ux-pro-max
+- dest: domains/ui/skills/design-system/references/token-architecture.md
+  source: nextlevelbuilder/ui-ux-pro-max-skill
+  src: .claude/skills/design-system/SKILL.md
+- dest: domains/ui/skills/design-system/references/extract-from-codebase.md
+  source: affaan-m/ECC
+  src: skills/design-system/SKILL.md
+- dest: domains/ui/skills/visual-design/references/design-review.md
+  source: github/awesome-copilot
+  src: agents/gem-designer.agent.md

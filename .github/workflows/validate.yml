@@ -1,0 +1,30 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  static:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: astral-sh/setup-uv@d0cc045d04ccac9d8b7881df0226f9e82c39688e # v6
+        with:
+          python-version: "3.12"
+      - run: uv sync --frozen
+      - name: Unit tests for the tooling
+        run: uv run pytest -q
+      - name: Catalog checks
+        run: uv run python -m tools.validate
+      - name: Generated files are up to date
+        run: |
+          uv run python -m tools.build
+          uv run python -m tools.catalog rebuild
+          uv run python -m tools.build docs
+          git diff --exit-code -- .claude-plugin/marketplace.json catalog/catalog.yaml catalog/exclusions.yaml docs/CATALOG.md docs/SOURCES.md docs/FACETS.md domains/*/README.md

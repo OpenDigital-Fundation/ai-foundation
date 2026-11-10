@@ -1,0 +1,378 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: agent-engineering
+artifacts:
+- id: agent-engineering/agent-debugging
+  type: skill
+  capability: 'Use when an agent run failed, looped, ignored instructions or produced a bad result and you need to know why:
+    capture the transcript, diagnose the failure, contain and recover, and write an '
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:conversation-analyzer
+  - affaan-m/ECC:skill:agent-introspection-debugging
+  recipe:
+    title: Agent debugging
+    description: 'Use when an agent run failed, looped, ignored instructions or produced a bad result and you need to know
+      why: capture the transcript, diagnose the failure, contain and recover, and write an introspection report with fixes
+      to prompts, tools or skills.'
+    base: s:agent-introspection-debugging
+    references:
+      conversation-analysis.md:
+      - a:conversation-analyzer
+- id: agent-engineering/agent-evaluation
+  type: skill
+  capability: 'Use when measuring agents rather than a single skill: comparing coding agents or configurations head to head
+    on custom tasks, building an eval harness with pass rate, cost and time, self-eva'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:agent-evaluator
+  - affaan-m/ECC:skill:agent-eval
+  - affaan-m/ECC:skill:agent-self-evaluation
+  - affaan-m/ECC:skill:benchmark-optimization-loop
+  - affaan-m/ECC:skill:eval-harness
+  - github/awesome-copilot:agent:Research Harness Engineer
+  recipe:
+    title: Agent evaluation
+    description: 'Use when measuring agents rather than a single skill: comparing coding agents or configurations head to
+      head on custom tasks, building an eval harness with pass rate, cost and time, self-evaluation of finished work, and
+      benchmark-driven optimisation loops.'
+    base: s:agent-eval
+    references:
+      eval-harness.md:
+      - s:eval-harness
+      self-evaluation.md:
+      - s:agent-self-evaluation
+      evaluator.md:
+      - a:agent-evaluator
+      benchmark-loops.md:
+      - s:benchmark-optimization-loop
+      benchmark-integrity/README.md:
+      - github/awesome-copilot:agents/research-harness-engineer.agent.md
+- id: agent-engineering/agent-guardrails
+  type: skill
+  capability: 'Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell commands
+    (push, reset --hard, clean, rm -rf, --no-verify) with harness hooks, carefu'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:safety-guard
+  - github/awesome-copilot:hook:guard-tool
+  - github/awesome-copilot:hook:tool-guardian
+  - github/awesome-copilot:rule:hooks.instructions
+  - github/awesome-copilot:skill:verify-agent-action
+  - mattpocock/skills:skill:git-guardrails-claude-code
+  recipe:
+    title: Agent guardrails
+    description: 'Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell
+      commands (push, reset --hard, clean, rm -rf, --no-verify) with harness hooks, careful and frozen modes, and protecting
+      configuration files. Hooks are opt-in and installed only with the user''s approval.'
+    base_dir: mattpocock/skills:skills/misc/git-guardrails-claude-code
+    references:
+      action-verification.md:
+      - github/awesome-copilot:skills/verify-agent-action/SKILL.md
+      safety-modes.md:
+      - s:safety-guard
+      operation-policies/README.md:
+      - github/awesome-copilot:hooks/tool-guardian/README.md
+      hook-contracts/README.md:
+      - github/awesome-copilot:hooks/tool-guardian/README.md
+      - github/awesome-copilot:instructions/hooks.instructions.md
+    append: '## Limits of this guardrail
+
+
+      The hook script is a best-effort tripwire, not a security boundary. For real protection add permission deny rules or
+      run the agent in an OS sandbox.
+
+
+      - **Default deny on uncertainty:** it blocks when it cannot parse the input, when a git subcommand is not a known built-in
+      (aliases are not inspected), when `git -c`/`--config-env` sets anything but presentation keys, when `GIT_CONFIG_*` variables
+      are present, when `git config` would write aliases, includes, hooks paths or helper commands, for `env -S`, for a shell
+      reading commands from stdin, and for `xargs` feeding git or a shell. A crash of the checker also blocks.
+
+      - **Blocked operations:** `git push`, `reset --hard`, `clean -f`, `branch -D`, `checkout .`, `restore .`, `--no-verify`,
+      and `rm` with recursive force, including through `bash -c`, `eval`, `$(...)`, `find -exec` and wrappers such as `sudo`/`env`.
+
+      - **Known limit:** a script file passed to a shell (`bash scripts/x.sh`) is not inspected.
+
+      - It needs `python3`; without it every Bash call is blocked with an explanation.
+
+      - Installing the hook changes the user''s harness settings: show the exact file and JSON first and install only after
+      explicit approval.'
+    reference_notes:
+      operation-policies/README.md: upstream hook documentation kept for its policy and pattern catalogue; the hook scripts
+        are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass
+        and fail-closed behaviour
+      hook-contracts/README.md: upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are
+        not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass
+        and fail-closed behaviour
+- id: agent-engineering/agent-loops
+  type: skill
+  capability: 'Use when designing, running or reviewing an autonomous or long-running agent loop: machine-checkable goals
+    and stop conditions, quality gates and evals inside the loop, operator approval poi'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:loop-operator
+  - affaan-m/ECC:command:loop-start
+  - affaan-m/ECC:command:loop-status
+  - affaan-m/ECC:skill:autonomous-agent-harness
+  - affaan-m/ECC:skill:autonomous-loops
+  - affaan-m/ECC:skill:continuous-agent-loop
+  - affaan-m/ECC:skill:loop-design-check
+  - affaan-m/ECC:skill:operator-approval-loop
+  recipe:
+    title: Agent loops
+    description: 'Use when designing, running or reviewing an autonomous or long-running agent loop: machine-checkable goals
+      and stop conditions, quality gates and evals inside the loop, operator approval points, recovery, and failure modes
+      such as spinning, gaming the verifier or finishing a wrong answer.'
+    base: s:loop-design-check
+    references:
+      autonomous-loops.md:
+      - s:autonomous-loops
+      - s:continuous-agent-loop
+      approval-loops.md:
+      - s:operator-approval-loop
+      operating-loops.md:
+      - a:loop-operator
+      autonomous-harness.md:
+      - s:autonomous-agent-harness
+    supersedes:
+    - affaan-m/ECC:command:loop-start
+    - affaan-m/ECC:command:loop-status
+- id: agent-engineering/agent-memory
+  type: skill
+  capability: 'Use when an agent should learn across sessions: capturing durable lessons and decisions, promoting observations
+    into rules or skills, pruning stale memory, keeping a scoped context file, and'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:observer
+  - affaan-m/ECC:command:evolve
+  - affaan-m/ECC:command:instinct-export
+  - affaan-m/ECC:command:instinct-import
+  - affaan-m/ECC:command:instinct-status
+  - affaan-m/ECC:command:learn
+  - affaan-m/ECC:command:learn-eval
+  - affaan-m/ECC:command:promote
+  - affaan-m/ECC:command:prune
+  - affaan-m/ECC:skill:context-and-decisions
+  - affaan-m/ECC:skill:continuous-learning
+  - affaan-m/ECC:skill:continuous-learning-v2
+  - affaan-m/ECC:skill:rules-distill
+  - affaan-m/ECC:skill:unified-memory
+  - github/awesome-copilot:agent:.NET Self-Learning Architect
+  - github/awesome-copilot:rule:memory-bank.instructions
+  recipe:
+    title: Agent memory
+    description: 'Use when an agent should learn across sessions: capturing durable lessons and decisions, promoting observations
+      into rules or skills, pruning stale memory, keeping a scoped context file, and distilling repeated corrections into
+      instructions.'
+    base: s:continuous-learning-v2
+    references:
+      learning-loop.md:
+      - s:continuous-learning
+      unified-memory.md:
+      - s:unified-memory
+      context-and-decisions.md:
+      - s:context-and-decisions
+      rules-distillation.md:
+      - s:rules-distill
+      observer.md:
+      - a:observer
+      durable-project-context/README.md:
+      - github/awesome-copilot:agents/dotnet-self-learning-architect.agent.md
+      - github/awesome-copilot:instructions/memory-bank.instructions.md
+    supersedes:
+    - affaan-m/ECC:command:learn
+    - affaan-m/ECC:command:learn-eval
+    - affaan-m/ECC:command:evolve
+    - affaan-m/ECC:command:promote
+    - affaan-m/ECC:command:prune
+    - affaan-m/ECC:command:instinct-export
+    - affaan-m/ECC:command:instinct-import
+    - affaan-m/ECC:command:instinct-status
+- id: agent-engineering/agent-teams
+  type: skill
+  capability: 'Use when coordinating several agents as a team on one effort: assigning owners and scope to work items, isolating
+    each agent in its own branch or worktree, tracking state on a board, merge g'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:multi-backend
+  - affaan-m/ECC:command:multi-execute
+  - affaan-m/ECC:command:multi-frontend
+  - affaan-m/ECC:command:multi-plan
+  - affaan-m/ECC:command:multi-workflow
+  - affaan-m/ECC:skill:claude-devfleet
+  - affaan-m/ECC:skill:dev-team
+  - affaan-m/ECC:skill:parallel-execution-optimizer
+  - affaan-m/ECC:skill:plan-orchestrate
+  - affaan-m/ECC:skill:team-agent-orchestration
+  - affaan-m/ECC:skill:team-builder
+  recipe:
+    title: Agent teams
+    description: 'Use when coordinating several agents as a team on one effort: assigning owners and scope to work items,
+      isolating each agent in its own branch or worktree, tracking state on a board, merge gates, and splitting a plan into
+      frontend, backend and integration streams.'
+    base: s:team-agent-orchestration
+    references:
+      team-assembly.md:
+      - s:team-builder
+      plan-orchestration.md:
+      - s:plan-orchestrate
+      parallel-execution.md:
+      - s:parallel-execution-optimizer
+    supersedes:
+    - affaan-m/ECC:command:multi-plan
+    - affaan-m/ECC:command:multi-execute
+    - affaan-m/ECC:command:multi-workflow
+    - affaan-m/ECC:command:multi-frontend
+    - affaan-m/ECC:command:multi-backend
+    - affaan-m/ECC:skill:claude-devfleet
+    - affaan-m/ECC:skill:dev-team
+- id: agent-engineering/context-management
+  type: skill
+  capability: 'Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and
+    how to compact, what to keep in context versus files, and estimating the token cos'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:cost-report
+  - affaan-m/ECC:command:token-card
+  - affaan-m/ECC:skill:context-budget
+  - affaan-m/ECC:skill:cost-tracking
+  - affaan-m/ECC:skill:strategic-compact
+  - affaan-m/ECC:skill:token-budget-advisor
+  - affaan-m/ECC:skill:token-card
+  - github/awesome-copilot:rule:context-engineering.instructions
+  recipe:
+    title: Context management
+    description: 'Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when
+      and how to compact, what to keep in context versus files, and estimating the token cost of a task before running it.'
+    base: s:context-budget
+    references:
+      compaction.md:
+      - s:strategic-compact
+      token-budgeting.md:
+      - s:token-budget-advisor
+      context-mapping/README.md:
+      - github/awesome-copilot:instructions/context-engineering.instructions.md
+- id: agent-engineering/harness-design
+  type: skill
+  capability: 'Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting,
+    permissions, identity and trust, multi-agent topology, and the twelve-layer'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:harness-optimizer
+  - affaan-m/ECC:command:harness-audit
+  - affaan-m/ECC:command:model-route
+  - affaan-m/ECC:rule:common/agents
+  - affaan-m/ECC:skill:agent-architecture-audit
+  - affaan-m/ECC:skill:agent-harness-construction
+  - affaan-m/ECC:skill:agentic-engineering
+  - affaan-m/ECC:skill:ai-first-engineering
+  - affaan-m/ECC:skill:enterprise-agent-ops
+  - github/awesome-copilot:hook:audit-session-end
+  - github/awesome-copilot:hook:audit-session-start
+  - github/awesome-copilot:hook:log-prompt
+  - github/awesome-copilot:hook:log-session-end
+  - github/awesome-copilot:hook:log-session-start
+  - github/awesome-copilot:hook:session-logger
+  - github/awesome-copilot:rule:agents.instructions
+  - github/awesome-copilot:rule:instructions.instructions
+  - github/awesome-copilot:skill:harness-engineering
+  - msitarzewski/agency-agents:agent:Agentic Identity & Trust Architect
+  - msitarzewski/agency-agents:agent:Agents Orchestrator
+  - msitarzewski/agency-agents:agent:Multi-Agent Systems Architect
+  recipe:
+    remove:
+    - ^#+ Optional Reference\n\nThe prompt-first workflow in\n`https://github\.com/baskduf/harness-starter-kit`.*?source of
+      truth\.\n
+    title: Agent harness design
+    description: 'Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting,
+      permissions, identity and trust, multi-agent topology, and the twelve-layer audit for wrapper regressions, memory pollution
+      and silent repair loops.'
+    base: s:agent-harness-construction
+    references:
+      repository-harness.md:
+      - github/awesome-copilot:skills/harness-engineering/SKILL.md
+      architecture-audit.md:
+      - s:agent-architecture-audit
+      agentic-engineering.md:
+      - s:agentic-engineering
+      - s:ai-first-engineering
+      multi-agent-systems.md:
+      - msitarzewski/agency-agents:engineering/engineering-multi-agent-systems-architect.md
+      - msitarzewski/agency-agents:specialized/agents-orchestrator.md
+      identity-and-trust.md:
+      - msitarzewski/agency-agents:specialized/agentic-identity-trust.md
+      harness-tuning.md:
+      - a:harness-optimizer
+      enterprise-operations.md:
+      - s:enterprise-agent-ops
+      session-observability/README.md:
+      - github/awesome-copilot:hooks/governance-audit/README.md
+      - github/awesome-copilot:hooks/session-logger/README.md
+      customizations/README.md:
+      - github/awesome-copilot:instructions/agents.instructions.md
+      - github/awesome-copilot:instructions/instructions.instructions.md
+    reference_notes:
+      session-observability/README.md: upstream hook documentation kept for its policy and pattern catalogue; the hook scripts
+        are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass
+        and fail-closed behaviour; never log prompts or tool input unredacted
+- id: agent-engineering/parallel-agents
+  type: skill
+  capability: Dispatch one focused subagent per independent task and integrate their verified results.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - obra/superpowers:skill:dispatching-parallel-agents
+- id: agent-engineering/session-retrospective
+  type: skill
+  capability: Review a coding-agent session and propose ranked improvements to the agent's environment.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - mattpocock/skills:skill:retro
+- id: agent-engineering/skill-authoring
+  type: skill
+  capability: Create, test, benchmark and tune skills, with eval loops, pressure tests and catalog placement rules.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:skill-creator
+  - obra/superpowers:skill:writing-skills
+  - mattpocock/skills:skill:writing-for-agents
+  - affaan-m/ECC:command:skill-create
+  - affaan-m/ECC:skill:skill-stocktake
+  - affaan-m/ECC:skill:skill-comply
+  - affaan-m/ECC:command:skill-health
+imports:
+- dest: domains/agent-engineering/skills/session-retrospective
+  source: mattpocock/skills
+  src: skills/engineering/retro
+- dest: domains/agent-engineering/skills/parallel-agents
+  source: obra/superpowers
+  src: skills/dispatching-parallel-agents
+- dest: domains/agent-engineering/skills/skill-authoring
+  source: anthropics/skills
+  src: skills/skill-creator
+  extra:
+  - source: obra/superpowers
+    path: skills/writing-skills/SKILL.md
+  - source: mattpocock/skills
+    path: skills/productivity/writing-for-agents/SKILL.md
+- dest: domains/agent-engineering/skills/skill-authoring/pressure-testing
+  source: obra/superpowers
+  src: skills/writing-skills
+  files:
+    GUIDE.md: skills/writing-skills/SKILL.md
+- dest: domains/agent-engineering/skills/skill-authoring/references/writing-for-agents.md
+  source: mattpocock/skills
+  src: skills/productivity/writing-for-agents/SKILL.md
+- dest: domains/agent-engineering/skills/skill-authoring/references/environments.md
+  source: anthropics/skills
+  src: skills/skill-creator/SKILL.md

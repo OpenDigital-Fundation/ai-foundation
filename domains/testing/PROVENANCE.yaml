@@ -1,0 +1,635 @@
+version: 1
+files:
+- path: skills/browser-testing/LICENSE.txt
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/LICENSE.txt
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/SKILL.md
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/examples/console_logging.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/examples/console_logging.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/examples/element_discovery.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/examples/element_discovery.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/examples/static_html_automation.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/examples/static_html_automation.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/browser-testing/references/e2e-patterns.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/e2e-testing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/e2e-runner.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/e2e-runner.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/authentication-flows.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/authentication-flows.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/authentication.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/authentication.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/clock-mocking.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/clock-mocking.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/mobile-testing.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/mobile-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/multi-context.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/multi-context.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/multi-user.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/multi-user.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/network-advanced.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/network-advanced.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-advanced/third-party.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/advanced/third-party.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-architecture/pom-vs-fixtures.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/architecture/pom-vs-fixtures.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-architecture/test-architecture.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/architecture/test-architecture.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-architecture/when-to-mock.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/architecture/when-to-mock.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-browser-apis/browser-apis.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/browser-apis/browser-apis.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-browser-apis/iframes.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/browser-apis/iframes.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-browser-apis/service-workers.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/browser-apis/service-workers.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-browser-apis/websockets.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/browser-apis/websockets.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/annotations.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/annotations.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/assertions-waiting.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/assertions-waiting.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/configuration.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/configuration.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/fixtures-hooks.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/fixtures-hooks.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/global-setup.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/global-setup.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/locators.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/locators.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/page-object-model.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/page-object-model.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/projects-dependencies.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/projects-dependencies.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/test-data.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/test-data.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/test-suite-structure.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/test-suite-structure.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-core/test-tags.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/core/test-tags.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-debugging/console-errors.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/debugging/console-errors.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-debugging/debugging.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/debugging/debugging.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-debugging/error-testing.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/debugging/error-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-debugging/flaky-tests.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/debugging/flaky-tests.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-frameworks/angular.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/frameworks/angular.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-frameworks/nextjs.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/frameworks/nextjs.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-frameworks/react.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/frameworks/react.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-frameworks/vue.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/frameworks/vue.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/ci-cd.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/ci-cd.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/docker.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/docker.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/github-actions.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/github-actions.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/gitlab.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/gitlab.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/other-providers.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/other-providers.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/parallel-sharding.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/parallel-sharding.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/performance.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/performance.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/reporting.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/reporting.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-infrastructure-ci-cd/test-coverage.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/infrastructure-ci-cd/test-coverage.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-overview.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/accessibility.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/accessibility.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/api-testing.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/api-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/browser-extensions.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/browser-extensions.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/canvas-webgl.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/canvas-webgl.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/component-testing.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/component-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/drag-drop.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/drag-drop.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/electron.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/electron.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/file-operations.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/file-operations.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/file-upload-download.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/file-upload-download.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/forms-validation.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/forms-validation.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/graphql-testing.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/graphql-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/i18n.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/i18n.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/performance-testing.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/performance-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/security-testing.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/security-testing.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright-testing-patterns/visual-regression.md
+  derived_from:
+  - source: currents-dev/playwright-best-practices-skill
+    commit: 283d5cb
+    path: playwright-best-practices/testing-patterns/visual-regression.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/playwright/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/playwright-dotnet.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/playwright-python.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/playwright-typescript.instructions.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/playwright-tester.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/post-deploy-qa.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/browser-qa/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/references/windows-desktop.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/windows-desktop-e2e/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/browser-testing/scripts/with_server.py
+  derived_from:
+  - source: anthropics/skills
+    commit: ca45fc4
+    path: skills/webapp-testing/scripts/with_server.py
+    license: Apache-2.0
+    modification: adapted
+- path: skills/test-driven-development/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/test-driven-development/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/tdd/SKILL.md
+    license: MIT
+    modification: merged-section
+- path: skills/test-driven-development/references/mocking.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/tdd/mocking.md
+    license: MIT
+    modification: base
+- path: skills/test-driven-development/references/test-examples.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/tdd/tests.md
+    license: MIT
+    modification: base
+- path: skills/test-driven-development/writing-good-tests.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/test-driven-development/writing-good-tests.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/test-collaboration/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/ai-regression.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/ai-regression-testing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/api-testing.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-api-tester.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/automation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-test-automation-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/click-path-audit.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/click-path-audit/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/delivery-gates.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/delivery-gate/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/performance.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-performance-benchmarker.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/benchmark/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/benchmark-methodology/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/results-analysis.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: testing/testing-test-results-analyzer.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/pr-test-analyzer.md
+    license: MIT
+    modification: adapted
+- path: skills/test-strategy/references/risk-based-quality/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/ai-team-qa.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/gem-mobile-tester.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/qa-engineering-best-practices.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/verification-before-completion/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/verification-before-completion/SKILL.md
+    license: MIT
+    modification: adapted

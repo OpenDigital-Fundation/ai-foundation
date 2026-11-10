@@ -1,0 +1,171 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: documents
+artifacts:
+- id: documents/doc-coauthoring
+  type: skill
+  capability: 'Use when the user wants to write a document together with you - a proposal, technical spec, decision doc, RFC
+    or similar - through a structured workflow: gather context, refine section by se'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:doc-coauthoring
+  - msitarzewski/agency-agents:agent:Book Co-Author
+  - msitarzewski/agency-agents:agent:Grant Writer
+  recipe:
+    title: Doc co-authoring
+    description: 'Use when the user wants to write a document together with you - a proposal, technical spec, decision doc,
+      RFC or similar - through a structured workflow: gather context, refine section by section, then test the draft against
+      a fresh reader.'
+    base_dir: anthropics/skills:skills/doc-coauthoring
+- id: documents/internal-comms
+  type: skill
+  capability: 'Use when writing internal communications: status reports, leadership updates, incident notices, company newsletters,
+    FAQs and project updates, in the formats and tone a company expects.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:internal-comms
+  - msitarzewski/agency-agents:agent:Analytics Reporter
+  - msitarzewski/agency-agents:agent:Executive Summary Generator
+  recipe:
+    title: Internal communications
+    description: 'Use when writing internal communications: status reports, leadership updates, incident notices, company
+      newsletters, FAQs and project updates, in the formats and tone a company expects.'
+    base_dir: anthropics/skills:skills/internal-comms
+- id: documents/office-documents
+  type: skill
+  capability: 'Use when a task reads or produces Word, Excel, PowerPoint or PDF files (.docx, .xlsx, .pptx, .pdf): creating,
+    editing, converting, extracting tables or text, filling forms or merging. Routes'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - anthropics/skills:skill:docx
+  - anthropics/skills:skill:pdf
+  - anthropics/skills:skill:pptx
+  - anthropics/skills:skill:xlsx
+  - msitarzewski/agency-agents:agent:Document Generator
+  - msitarzewski/agency-agents:agent:PDF Engine Architect
+  - msitarzewski/agency-agents:agent:Universal Document Compiler
+  recipe:
+    title: Office documents
+    description: 'Use when a task reads or produces Word, Excel, PowerPoint or PDF files (.docx, .xlsx, .pptx, .pdf): creating,
+      editing, converting, extracting tables or text, filling forms or merging. Routes to the official document skills and
+      gives a fallback workflow when they are not installed.'
+    body: '# Office documents
+
+
+      The best skills for Office and PDF files are Anthropic''s `docx`, `xlsx`, `pptx` and `pdf` skills. Their licence does
+      not allow redistribution, so this catalog does not copy them: install them from <https://github.com/anthropics/skills>
+      (they are also built into claude.ai), and prefer them whenever they are available.
+
+
+      ## Without the official skills
+
+
+      1. **Identify the job:** read, create, edit in place, convert, or extract. Ask for the exact input files and the expected
+      output format.
+
+      2. **Pick a library already in the environment** and do not install new ones without asking: `python-docx`, `openpyxl`,
+      `python-pptx`, `pypdf`/`pdfplumber`, or LibreOffice headless for conversion.
+
+      3. **Preserve what you did not change:** edit existing files in place (styles, formulas, layouts, comments); never regenerate
+      a document from scratch when the user asked for an edit.
+
+      4. **Spreadsheets:** keep formulas as formulas, never paste computed values over them; recalculate and check for errors
+      before delivering.
+
+      5. **Verify the output** by reopening it and, for visual formats, rendering it to an image or PDF and looking at it.
+
+      6. **Report** the output path and anything that could not be preserved.
+
+
+      For a professional document generated from data or a template, see the reference below.
+
+      '
+    references:
+      document-generation.md:
+      - msitarzewski/agency-agents:specialized/specialized-document-generator.md
+    supersedes:
+    - anthropics/skills:skill:docx
+    - anthropics/skills:skill:xlsx
+    - anthropics/skills:skill:pptx
+    - anthropics/skills:skill:pdf
+- id: documents/technical-writing
+  type: skill
+  capability: 'Use when writing or updating developer documentation: READMEs, API references, guides, tutorials, runbooks,
+    architecture overviews or code maps, and keeping docs in sync after code changes.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:doc-updater
+  - affaan-m/ECC:command:update-codemaps
+  - affaan-m/ECC:command:update-docs
+  - affaan-m/ECC:skill:docs-governance
+  - affaan-m/ECC:skill:living-docs-governance
+  - github/awesome-copilot:agent:Project Documenter
+  - 'github/awesome-copilot:agent:SE: Tech Writer'
+  - github/awesome-copilot:agent:technical-content-evaluator
+  - github/awesome-copilot:rule:draw-io.instructions
+  - github/awesome-copilot:rule:exclude-prompt-data.instructions
+  - github/awesome-copilot:rule:localization.instructions
+  - github/awesome-copilot:rule:markdown-content-creation.instructions
+  - github/awesome-copilot:rule:markdown-gfm.instructions
+  - github/awesome-copilot:rule:markdown.instructions
+  - github/awesome-copilot:rule:update-docs-on-code-change.instructions
+  - github/awesome-copilot:rule:use-cliche-data-in-docs.instructions
+  - msitarzewski/agency-agents:agent:Technical Writer
+  recipe:
+    title: Technical writing
+    description: 'Use when writing or updating developer documentation: READMEs, API references, guides, tutorials, runbooks,
+      architecture overviews or code maps, and keeping docs in sync after code changes.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:engineering/engineering-technical-writer.md
+      keeping-docs-current.md:
+      - a:doc-updater
+      documentation-quality/README.md:
+      - github/awesome-copilot:agents/technical-content-evaluator.agent.md
+      - github/awesome-copilot:instructions/exclude-prompt-data.instructions.md
+      - github/awesome-copilot:instructions/use-cliche-data-in-docs.instructions.md
+      - github/awesome-copilot:agents/project-documenter.agent.md
+      - github/awesome-copilot:instructions/update-docs-on-code-change.instructions.md
+      - github/awesome-copilot:instructions/markdown-content-creation.instructions.md
+      - github/awesome-copilot:instructions/draw-io.instructions.md
+      - github/awesome-copilot:instructions/localization.instructions.md
+      - github/awesome-copilot:instructions/markdown-gfm.instructions.md
+      - github/awesome-copilot:instructions/markdown.instructions.md
+      - github/awesome-copilot:agents/se-technical-writer.agent.md
+    body: '# Technical writing
+
+
+      Write documentation that lets a reader succeed at a task without asking anyone.
+
+
+      ## 1. Know the reader and the task
+
+      Who reads it (new user, integrator, operator, maintainer) and what they are trying to do. Pick the type: tutorial (learn),
+      how-to (do), reference (look up), explanation (understand).
+
+
+      ## 2. Structure
+
+      Lead with the outcome and prerequisites; one task per section; numbered steps with the exact commands and expected output;
+      examples that run.
+
+
+      ## 3. Write
+
+      Short sentences, active voice, consistent terms (the project glossary wins), no marketing language. Every code sample
+      is copied from something that was run.
+
+
+      ## 4. Verify
+
+      Follow the doc from a clean environment; fix every step that failed or needed knowledge it did not give.
+
+
+      ## 5. Keep it current
+
+      Update docs in the same change as the code they describe; find stale docs by searching for changed names; record breaking
+      changes in the changelog.'

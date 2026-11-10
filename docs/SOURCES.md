@@ -1,0 +1,253 @@
+# Sources
+
+<!-- Gerado por `python -m tools.build docs` a partir de catalog/. Não editar. -->
+
+Every upstream source evaluated for this catalog, pinned in `catalog/sources.lock.yaml`. `merge` sources may be copied and adapted (with provenance); `reference` sources are only linked.
+
+| Source | Licence | Policy | Upstream items | Used in artifacts | Excluded |
+|---|---|---|---|---|---|
+| [obra/superpowers](https://github.com/obra/superpowers) @ `22f0b46` | MIT | merge | 17 | 13 | 3 source-internal, 1 low-quality |
+| [mattpocock/skills](https://github.com/mattpocock/skills) @ `4ae2317` | MIT | merge | 39 | 23 | 7 low-quality, 2 source-internal, 1 duplicate-of, 1 out-of-scope, 1 split |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) @ `b38be6a` | MIT | merge | 716 | 78 | 148 source-internal, 87 out-of-scope, 8 duplicate-of, 6 vendor-specific, 3 low-quality |
+| [multica-ai/andrej-karpathy-skills](https://github.com/multica-ai/andrej-karpathy-skills) @ `2c60614` | MIT | merge | 1 | 1 | — |
+| [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) @ `b859c51` | MIT | merge | 283 | 56 | 121 out-of-scope, 1 vendor-specific, 1 low-quality |
+| [anthropics/skills](https://github.com/anthropics/skills) @ `ca45fc4` | Apache-2.0 | merge | 20 | 12 | 3 vendor-specific, 1 out-of-scope, 1 duplicate-of |
+| [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) @ `b7d5353` | MIT | merge | 11 | 6 | 1 source-internal |
+| [Nutlope/hallmark](https://github.com/Nutlope/hallmark) @ `407fa68` | MIT | merge | 1 | 1 | — |
+| [DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail) @ `96608e0` | MIT | merge | 26 | 4 | 18 source-internal |
+| [SecurityStandards/skill-security-audit](https://github.com/SecurityStandards/skill-security-audit) @ `c1c8a8c` | MIT | merge | 1 | 1 | — |
+| [SecurityStandards/agent-reverse-engineer](https://github.com/SecurityStandards/agent-reverse-engineer) @ `f254f5a` | MIT | reference | 0 | 0 | — |
+| [SecurityStandards/agent-pentester](https://github.com/SecurityStandards/agent-pentester) @ `2468b67` | AGPL-3.0 | reference | 3 | 0 | 2 source-internal, 1 out-of-scope |
+| [SecurityStandards/security-standards](https://github.com/SecurityStandards/security-standards) @ `3bd356a` | NOASSERTION | reference | 0 | 0 | — |
+| [SecurityStandards/CTOSecurityChecklist](https://github.com/SecurityStandards/CTOSecurityChecklist) @ `aeea8c3` | CC-BY-NC-SA-4.0 | reference | 0 | 0 | — |
+| [SecurityStandards/DevOpsSecurityChecklist](https://github.com/SecurityStandards/DevOpsSecurityChecklist) @ `568f21f` | CC-BY-NC-SA-4.0 | reference | 0 | 0 | — |
+| [SecurityStandards/security-policy-templates](https://github.com/SecurityStandards/security-policy-templates) @ `98c150b` | CC-BY-SA-4.0 | reference | 0 | 0 | — |
+| [SecurityStandards/security-page](https://github.com/SecurityStandards/security-page) @ `11b455e` | MIT | reference | 0 | 0 | — |
+| [SecurityStandards/vsaq](https://github.com/SecurityStandards/vsaq) @ `366d670` | Apache-2.0 | reference | 0 | 0 | — |
+| [SecurityStandards/open-intelligence](https://github.com/SecurityStandards/open-intelligence) @ `8397aa9` | MIT | reference | 0 | 0 | — |
+| [SecurityStandards/awesome-security](https://github.com/SecurityStandards/awesome-security) @ `5103610` | NOASSERTION | reference | 0 | 0 | — |
+| [SecurityStandards/.github](https://github.com/SecurityStandards/.github) @ `82a6471` | NOASSERTION | reference | 0 | 0 | — |
+| [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) @ `1a2c79d` | MIT | merge | 129 | 1 | 3 vendor-specific, 2 license |
+| [currents-dev/playwright-best-practices-skill](https://github.com/currents-dev/playwright-best-practices-skill) @ `283d5cb` | MIT | merge | 1 | 1 | — |
+| [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) @ `f736c87` | MIT | merge | 123 | 6 | 18 duplicate-of, 9 source-internal, 6 out-of-scope |
+| [millionco/react-doctor](https://github.com/millionco/react-doctor) @ `9791c32` | Modified-MIT (no AI training/evaluation use, no resale without permission) | merge | 6 | 1 | 2 license, 1 out-of-scope |
+| [danicat/godoctor](https://github.com/danicat/godoctor) @ `ad2eacc` | Apache-2.0 | reference | 1 | 0 | 1 vendor-specific |
+| [ankitchiplunkar/frontend-design](https://github.com/ankitchiplunkar/frontend-design) @ `34bbe42` | MIT | merge | 0 | 0 | — |
+| [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 1 | 19 vendor-specific, 10 duplicate-of, 8 license, 5 out-of-scope |
+| [vercel-labs/skills](https://github.com/vercel-labs/skills) @ `d3701c1` | MIT | merge | 1 | 0 | 1 vendor-specific |
+| [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 7 | 10 vendor-specific, 10 duplicate-of, 3 source-internal, 2 license |
+| [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
+| [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) @ `ce8b262` | MIT | merge | 23 | 0 | 16 source-internal, 7 duplicate-of |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) @ `797337f` | MIT | merge | 918 | 60 | 320 vendor-specific, 310 duplicate-of, 60 out-of-scope, 24 source-internal, 17 low-quality |
+
+## obra/superpowers
+
+- URL: <https://github.com/obra/superpowers> · commit `22f0b463e7a5e579904dd6211a520321035526f7` · licence MIT · policy `merge`
+- Used in: `agent-engineering:parallel-agents`, `agent-engineering:skill-authoring`, `code-quality:code-review`, `code-quality:code-reviewer`, `code-quality:receiving-code-review`, `debugging:systematic-debugging`, `testing:test-driven-development`, `testing:verification-before-completion`, `workflow:brainstorming`, `workflow:executing-plans`, `workflow:finishing-a-branch`, `workflow:git-worktrees`, `workflow:writing-plans`
+- Excluded items by reason: source-internal: 3, low-quality: 1
+
+## mattpocock/skills
+
+- URL: <https://github.com/mattpocock/skills> · commit `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d` · licence MIT · policy `merge`
+- Used in: `agent-engineering:agent-guardrails`, `agent-engineering:session-retrospective`, `agent-engineering:skill-authoring`, `architecture:architecture-review`, `architecture:codebase-design`, `architecture:decision-records`, `architecture:domain-modeling`, `code-quality:code-review`, `debugging:systematic-debugging`, `languages:typescript`, `platform:deployment`, `platform:git-workflow`, `research:source-research`, `testing:test-driven-development`, `workflow:brainstorming`, `workflow:executing-plans`, `workflow:finishing-a-branch`, `workflow:grilling`, `workflow:handoff`, `workflow:initiative-mapping`, `workflow:issue-breakdown`, `workflow:issue-tracking`, `workflow:issue-triage`
+- Excluded items by reason: low-quality: 7, source-internal: 2, duplicate-of: 1, out-of-scope: 1, split: 1
+
+## affaan-m/ECC
+
+- URL: <https://github.com/affaan-m/ECC> · commit `b38be6a7f6350964d59328b52f0624e1d1d552d1` · licence MIT · policy `merge`
+- Used in: `accessibility:wcag-accessibility`, `agent-engineering:agent-debugging`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-guardrails`, `agent-engineering:agent-loops`, `agent-engineering:agent-memory`, `agent-engineering:agent-teams`, `agent-engineering:context-management`, `agent-engineering:harness-design`, `agent-engineering:skill-authoring`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `architecture:api-design`, `architecture:architecture-review`, `architecture:codebase-design`, `architecture:codebase-onboarding`, `architecture:decision-records`, `architecture:system-design`, `brand:brand-identity`, `brand:brand-voice`, `code-quality:code-review`, `code-quality:code-reviewer`, `code-quality:codebase-audit`, `code-quality:simplification`, `creative-media:presentation-slides`, `data:data-pipelines`, `data:database-design`, `data:database-migrations`, `debugging:build-failure-resolution`, `documents:technical-writing`, `finance:billing-operations`, `languages:cpp`, `languages:dart`, `languages:dotnet`, `languages:go`, `languages:jvm`, `languages:php`, `languages:python`, `languages:ruby`, `languages:rust`, `languages:swift`, `languages:typescript`, `legal-compliance:contracts`, `marketing:campaign-planning`, `marketing:content-marketing`, `marketing:email-marketing`, `marketing:seo`, `operations:project-management`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:reliability`, `principles:coding-discipline`, `product:product-management`, `research:docs-lookup`, `research:literature-review`, `research:source-research`, `sales:investor-relations`, `sales:prospecting`, `security:agent-security`, `security:security-audit`, `testing:browser-testing`, `testing:test-driven-development`, `testing:test-strategy`, `testing:verification-before-completion`, `ui:design-system`, `ui:motion-and-polish`, `ui:visual-design`, `workflow:brainstorming`, `workflow:executing-plans`, `workflow:feature-delivery`, `workflow:finishing-a-branch`, `workflow:handoff`, `workflow:issue-breakdown`, `workflow:issue-triage`, `workflow:writing-plans`
+- Excluded items by reason: source-internal: 148, out-of-scope: 87, duplicate-of: 8, vendor-specific: 6, low-quality: 3
+
+## multica-ai/andrej-karpathy-skills
+
+- URL: <https://github.com/multica-ai/andrej-karpathy-skills> · commit `2c606141936f1eeef17fa3043a72095b4765b9c2` · licence MIT · policy `merge`
+- Note: MIT declared in README only; no LICENSE file
+- Used in: `principles:coding-discipline`
+
+## msitarzewski/agency-agents
+
+- URL: <https://github.com/msitarzewski/agency-agents> · commit `b859c515d813efcfc4755d3471dd9e7686c7706d` · licence MIT · policy `merge`
+- Used in: `accessibility:accessibility-audit`, `agent-engineering:harness-design`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `architecture:codebase-onboarding`, `architecture:system-design`, `brand:brand-identity`, `code-quality:code-reviewer`, `creative-media:image-prompting`, `creative-media:presentation-slides`, `data:data-pipelines`, `data:database-design`, `documents:doc-coauthoring`, `documents:internal-comms`, `documents:office-documents`, `documents:technical-writing`, `finance:accounting`, `finance:billing-operations`, `finance:financial-analysis`, `languages:rust`, `languages:typescript`, `legal-compliance:compliance-programs`, `legal-compliance:contracts`, `marketing:campaign-planning`, `marketing:content-marketing`, `marketing:email-marketing`, `marketing:paid-media`, `marketing:seo`, `operations:customer-support`, `operations:people-operations`, `operations:project-management`, `platform:deployment`, `platform:git-workflow`, `platform:incident-response`, `platform:reliability`, `principles:coding-discipline`, `product:product-management`, `research:literature-review`, `research:source-research`, `sales:deal-strategy`, `sales:prospecting`, `security:secrets-hygiene`, `security:security-audit`, `security:threat-modeling`, `testing:test-strategy`, `testing:verification-before-completion`, `ui:component-styling`, `ui:design-system`, `ui:motion-and-polish`, `ui:visual-design`, `ux:usability-review`, `ux:user-research`, `workflow:brainstorming`, `workflow:initiative-mapping`
+- Excluded items by reason: out-of-scope: 121, vendor-specific: 1, low-quality: 1
+
+## anthropics/skills
+
+- URL: <https://github.com/anthropics/skills> · commit `ca45fc496a3436251f191354091d557da31c15b5` · licence Apache-2.0 · policy `merge`
+- Note: Per-skill licences. docx, pdf, pptx, xlsx are proprietary and must only be referenced.
+- Used in: `agent-engineering:skill-authoring`, `ai-engineering:claude-api`, `ai-engineering:mcp-server-development`, `creative-media:animated-gifs`, `creative-media:generative-art`, `creative-media:poster-design`, `documents:doc-coauthoring`, `documents:internal-comms`, `documents:office-documents`, `testing:browser-testing`, `ui:component-styling`, `ui:visual-design`
+- Excluded items by reason: vendor-specific: 3, out-of-scope: 1, duplicate-of: 1
+
+## nextlevelbuilder/ui-ux-pro-max-skill
+
+- URL: <https://github.com/nextlevelbuilder/ui-ux-pro-max-skill> · commit `b7d5353e0130feb8c5574ef1251f8a1db1873ccb` · licence MIT · policy `merge`
+- Used in: `brand:brand-identity`, `creative-media:banner-design`, `creative-media:presentation-slides`, `ui:component-styling`, `ui:design-system`, `ui:visual-design`
+- Excluded items by reason: source-internal: 1
+
+## Nutlope/hallmark
+
+- URL: <https://github.com/Nutlope/hallmark> · commit `407fa689f4a276f2fd389208d271d0fef08f5058` · licence MIT · policy `merge`
+- Used in: `ui:visual-design`
+
+## DietrichGebert/ponytail
+
+- URL: <https://github.com/DietrichGebert/ponytail> · commit `96608e078b2d5ea607c5c3b8b5a54d1c1fba6846` · licence MIT · policy `merge`
+- Used in: `code-quality:code-review`, `code-quality:codebase-audit`, `code-quality:debt-ledger`, `principles:coding-discipline`
+- Excluded items by reason: source-internal: 18
+
+## SecurityStandards/skill-security-audit
+
+- URL: <https://github.com/SecurityStandards/skill-security-audit> · commit `c1c8a8c1471069fb0e188eeaff69b8e8db6564a8` · licence MIT · policy `merge`
+- Used in: `security:security-audit`
+
+## SecurityStandards/agent-reverse-engineer
+
+- URL: <https://github.com/SecurityStandards/agent-reverse-engineer> · commit `f254f5ac2b804b353a711264bb178f43fdf07867` · licence MIT · policy `reference`
+- Note: Product/MCP server, not a skill collection
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/agent-pentester
+
+- URL: <https://github.com/SecurityStandards/agent-pentester> · commit `2468b67d9e40d70d0b189462c5041c24e1dc886c` · licence AGPL-3.0 · policy `reference`
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+- Excluded items by reason: source-internal: 2, out-of-scope: 1
+
+## SecurityStandards/security-standards
+
+- URL: <https://github.com/SecurityStandards/security-standards> · commit `3bd356a95bbc4273ccca92a65ecce564d281bb57` · licence NOASSERTION · policy `reference`
+- Note: No licence declared
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/CTOSecurityChecklist
+
+- URL: <https://github.com/SecurityStandards/CTOSecurityChecklist> · commit `aeea8c369bd066d1234167c0a791e11710225259` · licence CC-BY-NC-SA-4.0 · policy `reference`
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/DevOpsSecurityChecklist
+
+- URL: <https://github.com/SecurityStandards/DevOpsSecurityChecklist> · commit `568f21fb6b0b35e7df0721097ae2fd378f78053d` · licence CC-BY-NC-SA-4.0 · policy `reference`
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/security-policy-templates
+
+- URL: <https://github.com/SecurityStandards/security-policy-templates> · commit `98c150b8428aa4c4940aa7e4e48647d10cad9a9d` · licence CC-BY-SA-4.0 · policy `reference`
+- Note: ShareAlike would force the licence on derivatives; linked only
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/security-page
+
+- URL: <https://github.com/SecurityStandards/security-page> · commit `11b455e830845ce5c365cde449b5739c53850406` · licence MIT · policy `reference`
+- Note: Website template for a security page; not an agent artifact
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/vsaq
+
+- URL: <https://github.com/SecurityStandards/vsaq> · commit `366d670e7e2a544166f74182e1093e6162786eb7` · licence Apache-2.0 · policy `reference`
+- Note: Vendor security assessment questionnaire app
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/open-intelligence
+
+- URL: <https://github.com/SecurityStandards/open-intelligence> · commit `8397aa997e9fe96e57d8b60198094e5f4e29c3f8` · licence MIT · policy `reference`
+- Note: OSINT source catalogue focused on Brazil (JSON dataset and guide)
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/awesome-security
+
+- URL: <https://github.com/SecurityStandards/awesome-security> · commit `5103610cb2f375b603b56988ebab9d4704be2a59` · licence NOASSERTION · policy `reference`
+- Note: Curated list; no licence declared
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+
+## SecurityStandards/.github
+
+- URL: <https://github.com/SecurityStandards/.github> · commit `82a6471ab514a24b6105df5bf953de14417bafa6` · licence NOASSERTION · policy `reference`
+- Note: Organisation health files; evaluated, nothing applicable to this catalog
+- Referenced (not copied) from: **nowhere — add a reference**
+
+## vercel-labs/agent-skills
+
+- URL: <https://github.com/vercel-labs/agent-skills> · commit `1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62` · licence MIT · policy `merge`
+- Note: MIT per skill where declared (react-best-practices, composition-patterns, react-view-transitions, react-native-skills); skills without a declared licence are referenced only
+- Used in: `languages:typescript`
+- Excluded items by reason: vendor-specific: 3, license: 2
+
+## currents-dev/playwright-best-practices-skill
+
+- URL: <https://github.com/currents-dev/playwright-best-practices-skill> · commit `283d5cbc5d11aac1abda058b16ad22c317d54dc0` · licence MIT · policy `merge`
+- Used in: `testing:browser-testing`
+
+## Community-Access/accessibility-agents
+
+- URL: <https://github.com/Community-Access/accessibility-agents> · commit `f736c87d146712badc64e7f5cf18088cdd7da3c9` · licence MIT · policy `merge`
+- Used in: `accessibility:accessibility-audit`, `accessibility:assistive-technology-testing`, `accessibility:document-accessibility`, `accessibility:wcag-accessibility`, `code-quality:code-review`, `workflow:issue-triage`
+- Excluded items by reason: duplicate-of: 18, source-internal: 9, out-of-scope: 6
+
+## millionco/react-doctor
+
+- URL: <https://github.com/millionco/react-doctor> · commit `9791c32f61fb1477a4f8dd596ff80184ad26b2e3` · licence Modified-MIT (no AI training/evaluation use, no resale without permission) · policy `merge`
+- Note: Vendored with its licence at the maintainer request (2026-11-07); excluded from evals until Million Software grants written permission; CLI pinned to react-doctor@0.9.22 (version at this commit); remote playbook instructions removed
+- Used in: `languages:react-diagnostics`
+- Excluded items by reason: license: 2, out-of-scope: 1
+
+## danicat/godoctor
+
+- URL: <https://github.com/danicat/godoctor> · commit `ad2eacc3804a4f6605d0a2297ecfc335e4a38bf1` · licence Apache-2.0 · policy `reference`
+- Note: Go tooling MCP server and Gemini extension; a tool, not vendored
+- Referenced (not copied) from: [`domains/languages/knowledge/external-tools.md`](../domains/languages/knowledge/external-tools.md)
+- Excluded items by reason: vendor-specific: 1
+
+## ankitchiplunkar/frontend-design
+
+- URL: <https://github.com/ankitchiplunkar/frontend-design> · commit `34bbe421e2adf10ed08f552a3e4aded7a15db8ca` · licence MIT · policy `merge`
+- Note: Generic persona; evaluated and excluded as weaker than the existing ui:visual-design
+
+## openai/skills
+
+- URL: <https://github.com/openai/skills> · commit `49f948faa9258a0c61caceaf225e179651397431` · licence NOASSERTION · policy `merge`
+- Note: Licence declared per skill: Apache-2.0 or MIT for most; Figma skills carry Figma terms and are not copied; Notion skills are MIT but bound to the Notion connector
+- Used in: `security:threat-modeling`
+- Excluded items by reason: vendor-specific: 19, duplicate-of: 10, license: 8, out-of-scope: 5
+
+## vercel-labs/skills
+
+- URL: <https://github.com/vercel-labs/skills> · commit `d3701c11b1101251af14c9d148f026e1a47ebe17` · licence MIT · policy `merge`
+- Excluded items by reason: vendor-specific: 1
+
+## getsentry/skills
+
+- URL: <https://github.com/getsentry/skills> · commit `e94f22214528d69899d09c627b3315ddc3544816` · licence Apache-2.0 · policy `merge`
+- Used in: `ai-engineering:prompt-engineering`, `architecture:codebase-onboarding`, `platform:github-operations`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`, `security:threat-modeling`
+- Excluded items by reason: vendor-specific: 10, duplicate-of: 10, source-internal: 3, license: 2
+
+## trailofbits/skills
+
+- URL: <https://github.com/trailofbits/skills> · commit `e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff` · licence CC-BY-SA-4.0 · policy `reference`
+- Note: ShareAlike would force the licence on derivatives; linked only
+- Referenced (not copied) from: [`domains/security/knowledge/external-references.md`](../domains/security/knowledge/external-references.md)
+- Excluded items by reason: license: 141
+
+## anthropics/claude-cookbooks
+
+- URL: <https://github.com/anthropics/claude-cookbooks> · commit `ce8b2629efe8b24048b127b4c79af1e9cbab93d4` · licence MIT · policy `merge`
+- Note: Notebooks and examples; agent prompts reviewed as references
+- Excluded items by reason: source-internal: 16, duplicate-of: 7
+
+## github/awesome-copilot
+
+- URL: <https://github.com/github/awesome-copilot> · commit `797337f33f73e35d08d82f840e21c4b8c4932d88` · licence MIT · policy `merge`
+- Note: Collection MIT (GitHub, Inc.); some skills and extensions carry their own LICENSE files, resolved per folder
+- Used in: `accessibility:assistive-technology-testing`, `accessibility:document-accessibility`, `accessibility:wcag-accessibility`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-guardrails`, `agent-engineering:agent-memory`, `agent-engineering:context-management`, `agent-engineering:harness-design`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `architecture:api-design`, `architecture:architecture-review`, `architecture:codebase-design`, `architecture:codebase-onboarding`, `architecture:decision-records`, `architecture:domain-modeling`, `architecture:system-design`, `code-quality:code-review`, `code-quality:debt-ledger`, `data:data-pipelines`, `data:database-design`, `data:database-migrations`, `debugging:build-failure-resolution`, `debugging:systematic-debugging`, `documents:technical-writing`, `languages:cpp`, `languages:dart`, `languages:dotnet`, `languages:go`, `languages:jvm`, `languages:php`, `languages:python`, `languages:react-diagnostics`, `languages:ruby`, `languages:rust`, `languages:typescript`, `legal-compliance:compliance-programs`, `marketing:seo`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:incident-response`, `platform:reliability`, `principles:coding-discipline`, `product:product-management`, `research:docs-lookup`, `research:source-research`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`, `testing:browser-testing`, `testing:test-strategy`, `ui:component-styling`, `ui:visual-design`, `ux:user-research`, `workflow:executing-plans`, `workflow:issue-breakdown`, `workflow:writing-plans`
+- Excluded items by reason: vendor-specific: 320, duplicate-of: 310, out-of-scope: 60, source-internal: 24, low-quality: 17
+
+## Original OpenDigital contributions
+
+Skills written by OpenDigital people, generalised and brought into the catalog (client-specific details removed).
+
+| Contribution | Authors | Original language | Used in | How |
+|---|---|---|---|---|
+| Multi-agent code review (revisor de código) | Matheus Breguêz, Danilo Ribeiro | pt-BR | `code-quality:codebase-audit` | Translated to English and generalised; became the orchestrator, specialists, finding format and report template of codebase-audit. |
+| Heuristic issue triage and multi-board routing | Matheus Breguêz | pt-BR | `workflow:issue-triage` | Generalised: client organisation, project IDs and repositories replaced by placeholders; scripts not copied. |
+| Stacked pull requests | Matheus Breguêz | pt-BR | `platform:git-workflow` | Generalised and translated; organisation-specific policy removed. |
+| Specification and decision-question workflow (Codex) | Matheus Breguêz | en | `workflow:brainstorming` | Question rules, spec standards and issue shape added as a reference. |
+| Handoff document | Matheus Breguêz | pt-BR | `workflow:handoff` | Base of workflow:handoff, translated and generalised. |
+
+Licence texts and copyright notices: [`THIRD_PARTY_NOTICES.md`](../THIRD_PARTY_NOTICES.md). Per-file origin: each domain's `PROVENANCE.yaml`. Per-item decisions: `catalog/catalog.yaml` (`supersedes`) and `catalog/curation/exclusions.yaml`.

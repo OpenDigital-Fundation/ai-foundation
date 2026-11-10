@@ -1,0 +1,110 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: code-quality
+artifacts:
+- id: code-quality/code-review
+  type: skill
+  capability: Pin a change, gather spec and standards, dispatch a fresh reviewer and act on numbered findings.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - Community-Access/accessibility-agents:skill:pr-review
+  - DietrichGebert/ponytail:command:ponytail-review
+  - DietrichGebert/ponytail:skill:ponytail-review
+  - affaan-m/ECC:command:code-review
+  - affaan-m/ECC:command:review-pr
+  - affaan-m/ECC:rule:common/code-review
+  - github/awesome-copilot:rule:code-review-generic.instructions
+  - mattpocock/skills:skill:code-review
+  - obra/superpowers:skill:requesting-code-review
+- id: code-quality/code-reviewer
+  type: agent
+  capability: Read-only, fresh-context reviewer that reports evidence-backed findings by severity with a verdict.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:code-reviewer
+  - msitarzewski/agency-agents:agent:Code Reviewer
+- id: code-quality/codebase-audit
+  type: skill
+  capability: Multi-specialist audit of a repository, diff or folder with a sceptical verifier and a graded, prioritised report.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - DietrichGebert/ponytail:command:ponytail-audit
+  - DietrichGebert/ponytail:skill:ponytail-audit
+  - affaan-m/ECC:agent:performance-optimizer
+  - affaan-m/ECC:skill:production-audit
+  - affaan-m/ECC:skill:repo-scan
+- id: code-quality/debt-ledger
+  type: skill
+  capability: Collect every recorded shortcut comment into one ranked technical-debt ledger.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - DietrichGebert/ponytail:command:ponytail-debt
+  - DietrichGebert/ponytail:skill:ponytail-debt
+  - github/awesome-copilot:agent:Technical Debt Remediation Plan
+- id: code-quality/receiving-code-review
+  type: skill
+  capability: Verify review findings before acting, push back with evidence, and fix in severity order.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - obra/superpowers:skill:receiving-code-review
+- id: code-quality/simplification
+  type: skill
+  capability: 'Use when existing code should get simpler without changing behaviour: removing dead code and unused exports,
+    collapsing needless abstraction, clarifying names and types, cleaning comments, a'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:code-simplifier
+  - affaan-m/ECC:agent:comment-analyzer
+  - affaan-m/ECC:agent:refactor-cleaner
+  - affaan-m/ECC:agent:type-design-analyzer
+  - affaan-m/ECC:command:refactor-clean
+  recipe:
+    title: Simplification
+    description: 'Use when existing code should get simpler without changing behaviour: removing dead code and unused exports,
+      collapsing needless abstraction, clarifying names and types, cleaning comments, and refactoring safely behind tests.'
+    base: a:code-simplifier
+    references:
+      cleanup.md:
+      - a:refactor-cleaner
+      comments.md:
+      - a:comment-analyzer
+      type-design.md:
+      - a:type-design-analyzer
+    supersedes:
+    - affaan-m/ECC:command:refactor-clean
+imports:
+- dest: domains/code-quality/skills/code-review/SKILL.md
+  source: obra/superpowers
+  src: skills/requesting-code-review/SKILL.md
+  extra:
+  - source: mattpocock/skills
+    path: skills/engineering/code-review/SKILL.md
+  - source: DietrichGebert/ponytail
+    path: skills/ponytail-review/SKILL.md
+- dest: domains/code-quality/skills/code-review/references/smell-baseline.md
+  source: mattpocock/skills
+  src: skills/engineering/code-review/SKILL.md
+- dest: domains/code-quality/agents/code-reviewer.md
+  source: obra/superpowers
+  src: skills/requesting-code-review/code-reviewer.md
+- dest: domains/code-quality/skills/receiving-code-review
+  source: obra/superpowers
+  src: skills/receiving-code-review
+- dest: domains/code-quality/skills/codebase-audit/references/quick-audit.md
+  source: DietrichGebert/ponytail
+  src: skills/ponytail-audit/SKILL.md
+- dest: domains/code-quality/skills/debt-ledger
+  source: DietrichGebert/ponytail
+  src: skills/ponytail-debt
+- dest: domains/code-quality/skills/debt-ledger/references/remediation-planning.md
+  source: github/awesome-copilot
+  src: agents/tech-debt-remediation-plan.agent.md
+- dest: domains/code-quality/skills/code-review/references/review-checklists.md
+  source: github/awesome-copilot
+  src: instructions/code-review-generic.instructions.md

@@ -1,0 +1,156 @@
+version: 1
+files:
+- path: skills/brand-identity/SKILL.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/approval-checklist.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/approval-checklist.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/asset-organization.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/asset-organization.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/brand-guideline-template.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/brand-guideline-template.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/brand-stewardship.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: design/design-brand-guardian.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/color-palette-management.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/color-palette-management.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/consistency-checklist.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/consistency-checklist.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/discovery-interview.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/brand-discovery/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/logo-usage-rules.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/logo-usage-rules.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/messaging-framework.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/messaging-framework.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/typography-specifications.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/typography-specifications.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/update.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/update.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/visual-identity.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/visual-identity.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/references/voice-framework.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/references/voice-framework.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/scripts/extract-colors.cjs
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/scripts/extract-colors.cjs
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/scripts/inject-brand-context.cjs
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/scripts/inject-brand-context.cjs
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/scripts/sync-brand-to-tokens.cjs
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/scripts/sync-brand-to-tokens.cjs
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/scripts/tests/test_sync_brand_to_tokens.py
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/scripts/tests/test_sync_brand_to_tokens.py
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/scripts/validate-asset.cjs
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/scripts/validate-asset.cjs
+    license: MIT
+    modification: adapted
+- path: skills/brand-identity/templates/brand-guidelines-starter.md
+  derived_from:
+  - source: nextlevelbuilder/ui-ux-pro-max-skill
+    commit: b7d5353
+    path: .claude/skills/brand/templates/brand-guidelines-starter.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-voice/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/brand-voice/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/brand-voice/references/voice-profile-schema.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/brand-voice/references/voice-profile-schema.md
+    license: MIT
+    modification: adapted

@@ -1,0 +1,9 @@
+- id: no-speculative-options
+  prompt: "Add a function that returns the user's full name from first and last name."
+  rubric: "Output is a single small function using existing conventions; no options object, no i18n layer, no new dependency; reply names anything skipped."
+- id: bugfix-root-cause
+  prompt: "Fix: totals are wrong when a cart has a discount (see cart.ts and checkout.ts)."
+  rubric: "Fix lands once in the shared calculation used by both callers; a test reproducing the bug is added; no unrelated formatting changes in the diff."
+- id: shortcut-ledger
+  prompt: "Cache the exchange-rate lookup in memory; we only run one instance for now."
+  rubric: "Implementation includes a comment of the form 'shortcut: <limit>, <when to upgrade>' mentioning multi-instance deployments."

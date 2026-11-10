@@ -1,0 +1,300 @@
+version: 1
+files:
+- path: skills/api-design/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/api-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/api-design/references/contract-driven/api-architect.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/api-architect.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/api-design/references/contract-driven/openapi-to-application.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/openapi-to-application.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/api-design/references/implementation-patterns.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/api-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/HTML-REPORT.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/improve-codebase-architecture/HTML-REPORT.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/improve-codebase-architecture/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/references/modernization-review/arch.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/arch.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/references/modernization-review/modernization.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/modernization.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/architecture-review/references/modernization-review/se-system-architecture-reviewer.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/se-system-architecture-reviewer.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-design/DEEPENING.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/codebase-design/DEEPENING.md
+    license: MIT
+    modification: base
+- path: skills/codebase-design/DESIGN-IT-TWICE.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/codebase-design/DESIGN-IT-TWICE.md
+    license: MIT
+    modification: base
+- path: skills/codebase-design/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/codebase-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-design/references/design-patterns.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/oop-design-patterns.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-design/references/ports-and-adapters.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/hexagonal-architecture/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/codebase-onboarding/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/agent-instructions.md
+  derived_from:
+  - source: getsentry/skills
+    commit: e94f222
+    path: skills/agents-md/SKILL.md
+    license: Apache-2.0
+    modification: adapted
+- path: skills/codebase-onboarding/references/archaeology.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/specialized-codebase-archaeologist.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/code-tour.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/code-tour/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/context-mapping/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/context-architect.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/explorer.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/code-explorer.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/onboarding-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-codebase-onboarding-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-onboarding/references/spec-mining.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/spec-miner.md
+    license: MIT
+    modification: adapted
+- path: skills/decision-records/ADR-FORMAT.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/ADR-FORMAT.md
+    license: MIT
+    modification: adapted
+- path: skills/decision-records/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/architecture-decision-records/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/ADR-FORMAT.md
+    license: MIT
+    modification: merged-section
+- path: skills/decision-records/references/decision-templates.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/adr-generator.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/domain-modeling/GLOSSARY-FORMAT.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/GLOSSARY-FORMAT.md
+    license: MIT
+    modification: base
+- path: skills/domain-modeling/SKILL.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/domain-modeling/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/domain-modeling/references/domain-code-heuristics.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/object-calisthenics.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/SKILL.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-software-architect.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/api-platforms.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-api-platform-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/architect-agent.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/architect.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/code-architect.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/backend-architecture.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-backend-architect.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/backend-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/caching.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/content-hash-cache-pattern/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/design-checklists/README.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/hlbpa.agent.md
+    license: MIT
+    modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/project-architecture-planner.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/error-handling.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/error-handling/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/internationalisation.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-i18n-engineer.md
+    license: MIT
+    modification: adapted
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/i18n-sync/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/latency.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: pi/core/skills/latency-critical-systems/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/realtime-collaboration.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-realtime-collaboration-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/role-guide.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-software-architect.md
+    license: MIT
+    modification: adapted

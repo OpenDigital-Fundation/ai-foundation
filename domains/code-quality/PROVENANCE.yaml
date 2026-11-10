@@ -1,0 +1,96 @@
+version: 1
+files:
+- path: agents/code-reviewer.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/requesting-code-review/code-reviewer.md
+    license: MIT
+    modification: adapted
+- path: skills/code-review/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/requesting-code-review/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/code-review/SKILL.md
+    license: MIT
+    modification: merged-section
+  - source: DietrichGebert/ponytail
+    commit: 96608e0
+    path: skills/ponytail-review/SKILL.md
+    license: MIT
+    modification: merged-section
+- path: skills/code-review/references/review-checklists.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: instructions/code-review-generic.instructions.md
+    license: MIT
+    modification: adapted
+- path: skills/code-review/references/smell-baseline.md
+  derived_from:
+  - source: mattpocock/skills
+    commit: 4ae2317
+    path: skills/engineering/code-review/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/codebase-audit/references/quick-audit.md
+  derived_from:
+  - source: DietrichGebert/ponytail
+    commit: 96608e0
+    path: skills/ponytail-audit/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/debt-ledger/SKILL.md
+  derived_from:
+  - source: DietrichGebert/ponytail
+    commit: 96608e0
+    path: skills/ponytail-debt/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/debt-ledger/references/remediation-planning.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/tech-debt-remediation-plan.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/receiving-code-review/SKILL.md
+  derived_from:
+  - source: obra/superpowers
+    commit: 22f0b46
+    path: skills/receiving-code-review/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/simplification/SKILL.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/code-simplifier.md
+    license: MIT
+    modification: adapted
+- path: skills/simplification/references/cleanup.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/refactor-cleaner.md
+    license: MIT
+    modification: adapted
+- path: skills/simplification/references/comments.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/comment-analyzer.md
+    license: MIT
+    modification: adapted
+- path: skills/simplification/references/type-design.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/type-design-analyzer.md
+    license: MIT
+    modification: adapted

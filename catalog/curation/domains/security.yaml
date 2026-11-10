@@ -1,0 +1,164 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: security
+artifacts:
+- id: security/agent-security
+  type: skill
+  capability: Harden agents and harnesses against injection and over-permission; statically review MCP and hook configs.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:command:security-scan
+  - affaan-m/ECC:skill:agent-security-hardening
+  - affaan-m/ECC:skill:mcp-dependency-review
+  - affaan-m/ECC:skill:security-scan
+  - getsentry/skills:skill:skill-scanner
+  - github/awesome-copilot:agent:Agent Governance Reviewer
+  - github/awesome-copilot:agent:Trojan Skill Hunter
+  - github/awesome-copilot:rule:agent-safety.instructions
+- id: security/external-references
+  type: knowledge
+  capability: Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP).
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: security/secrets-hygiene
+  type: skill
+  capability: Respond to exposed secrets rotation-first and set up scanning, brokering and rotation.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - getsentry/skills:skill:secret-serialization
+  - github/awesome-copilot:hook:scan-secrets
+  - github/awesome-copilot:hook:secrets-scanner
+  - msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer
+- id: security/security-audit
+  type: skill
+  capability: Source-first security guidance or full audit with sandboxed validation and schema-checked findings.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - SecurityStandards/skill-security-audit:skill:security-audit
+  - affaan-m/ECC:agent:security-reviewer
+  - affaan-m/ECC:rule:common/security
+  - affaan-m/ECC:skill:osint-investigation
+  - affaan-m/ECC:skill:security-bounty-hunter
+  - affaan-m/ECC:skill:security-review
+  - getsentry/skills:skill:gha-security-review
+  - github/awesome-copilot:agent:sast-sca-security-analyzer
+  - github/awesome-copilot:rule:security-and-owasp.instructions
+  - msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor
+  - msitarzewski/agency-agents:agent:Application Security Engineer
+  - msitarzewski/agency-agents:agent:Cloud Security Architect
+  - msitarzewski/agency-agents:agent:Identity & Access Engineer
+  - msitarzewski/agency-agents:agent:Penetration Tester
+  - msitarzewski/agency-agents:agent:Privacy Engineer
+  - msitarzewski/agency-agents:agent:Senior SecOps Engineer
+- id: security/threat-modeling
+  type: skill
+  capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Security Architect
+  - openai/skills:skill:security-threat-model
+  - getsentry/skills:skill:security-model
+imports:
+- dest: domains/security/skills/security-audit
+  source: SecurityStandards/skill-security-audit
+  src: skills/security-audit
+- dest: domains/security/skills/agent-security/SKILL.md
+  source: affaan-m/ECC
+  src: skills/agent-security-hardening/SKILL.md
+- dest: domains/security/skills/agent-security/references/mcp-config-review.md
+  source: affaan-m/ECC
+  src: skills/mcp-dependency-review/SKILL.md
+- dest: domains/security/skills/threat-modeling/SKILL.md
+  source: msitarzewski/agency-agents
+  src: security/security-architect.md
+  extra:
+  - source: openai/skills
+    path: skills/.curated/security-threat-model/SKILL.md
+    modification: merged-section
+- dest: domains/security/skills/threat-modeling/templates/threat-model.md
+  source: msitarzewski/agency-agents
+  src: security/security-architect.md
+- dest: domains/security/skills/threat-modeling/references/assets-and-controls.md
+  source: openai/skills
+  src: skills/.curated/security-threat-model/references/security-controls-and-assets.md
+- dest: domains/security/skills/threat-modeling/references/security-model
+  source: getsentry/skills
+  src: skills/security-model
+  files:
+    README.md: skills/security-model/SKILL.md
+- dest: domains/security/skills/secrets-hygiene/SKILL.md
+  source: msitarzewski/agency-agents
+  src: security/security-secrets-credential-engineer.md
+- dest: domains/security/skills/security-audit/references/github-actions/README.md
+  source: getsentry/skills
+  src: skills/gha-security-review/SKILL.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/ai-prompt-injection-via-ci.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/ai-prompt-injection-via-ci.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/comment-triggered-commands.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/comment-triggered-commands.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/credential-escalation.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/credential-escalation.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/expression-injection.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/expression-injection.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/permissions-and-secrets.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/permissions-and-secrets.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/pwn-request.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/pwn-request.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/real-world-attacks.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/real-world-attacks.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/runner-infrastructure.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/runner-infrastructure.md
+- dest: domains/security/skills/security-audit/references/github-actions/references/supply-chain.md
+  source: getsentry/skills
+  src: skills/gha-security-review/references/supply-chain.md
+- dest: domains/security/skills/agent-security/references/skill-scanning/README.md
+  source: getsentry/skills
+  src: skills/skill-scanner/SKILL.md
+- dest: domains/security/skills/agent-security/references/skill-scanning/references/dangerous-code-patterns.md
+  source: getsentry/skills
+  src: skills/skill-scanner/references/dangerous-code-patterns.md
+- dest: domains/security/skills/agent-security/references/skill-scanning/references/permission-analysis.md
+  source: getsentry/skills
+  src: skills/skill-scanner/references/permission-analysis.md
+- dest: domains/security/skills/agent-security/references/skill-scanning/references/prompt-injection-patterns.md
+  source: getsentry/skills
+  src: skills/skill-scanner/references/prompt-injection-patterns.md
+- dest: domains/security/skills/secrets-hygiene/references/serialization-leaks/README.md
+  source: getsentry/skills
+  src: skills/secret-serialization/SKILL.md
+- dest: domains/security/skills/secrets-hygiene/references/serialization-leaks/references/javascript-typescript.md
+  source: getsentry/skills
+  src: skills/secret-serialization/references/javascript-typescript.md
+- dest: domains/security/skills/secrets-hygiene/references/serialization-leaks/references/python.md
+  source: getsentry/skills
+  src: skills/secret-serialization/references/python.md
+- dest: domains/security/skills/agent-security/references/customization-review/agent-governance-reviewer.md
+  source: github/awesome-copilot
+  src: agents/agent-governance-reviewer.agent.md
+- dest: domains/security/skills/agent-security/references/customization-review/agent-safety.md
+  source: github/awesome-copilot
+  src: instructions/agent-safety.instructions.md
+- dest: domains/security/skills/agent-security/references/skill-scanning/tool-shadowing.md
+  source: github/awesome-copilot
+  src: agents/trojan-skill-hunter.agent.md
+- dest: domains/security/skills/security-audit/references/review-checklists/sast-sca-security-analyzer.md
+  source: github/awesome-copilot
+  src: agents/sast-sca-security-analyzer.agent.md
+- dest: domains/security/skills/security-audit/references/review-checklists/security-and-owasp.md
+  source: github/awesome-copilot
+  src: instructions/security-and-owasp.instructions.md
+- dest: domains/security/skills/secrets-hygiene/references/scanning-recipes.md
+  source: github/awesome-copilot
+  src: hooks/secrets-scanner/README.md

@@ -1,0 +1,182 @@
+"""Synthetic source trees exercise generation without downloading or executing upstream code."""
+import shutil
+from pathlib import Path
+
+import yaml
+import pytest
+
+from tools.curation.bundle import build as build_bundle
+from tools.curation.language_pack import build as build_languages
+
+REPO = Path(__file__).resolve().parents[2]
+
+
+def prepare(tmp_path, domain):
+    shutil.copytree(REPO / "catalog", tmp_path / "catalog")
+    directory = tmp_path / "domains" / domain
+    directory.mkdir(parents=True)
+    (directory / "PROVENANCE.yaml").write_text("version: 1\nfiles: []\n")
+    sources = tmp_path / "sources"
+    clone = sources / "affaan-m_ECC"
+    clone.mkdir(parents=True)
+    return sources, clone, directory
+
+
+def test_bundle_normalizes_private_guides_and_records_original_provenance(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    guide = clone / "synthetic/guide"
+    guide.mkdir(parents=True)
+    (guide / "SKILL.md").write_text("# Synthetic guide\n\n[Self](SKILL.md)\n")
+    registry_before = yaml.safe_load((tmp_path / "catalog/catalog.yaml").read_text())
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the synthetic bundler fixture only.",
+        "body": "# Synthetic browser check\n\nUse the guide below.",
+        "reference_dirs": {"guide": "affaan-m/ECC:synthetic/guide"},
+    }}})
+    result = domain / "skills/browser-testing"
+    assert (result / "references/guide/README.md").is_file()
+    assert "(README.md)" in (result / "references/guide/README.md").read_text()
+    files = yaml.safe_load((domain / "PROVENANCE.yaml").read_text())["files"]
+    entry = next(f for f in files if f["path"].endswith("guide/README.md"))
+    assert entry["derived_from"][0]["path"] == "synthetic/guide/SKILL.md"
+    assert yaml.safe_load((tmp_path / "catalog/catalog.yaml").read_text()) == registry_before
+    assert not list((tmp_path / "catalog/decisions").rglob("*.yaml"))
+
+
+def test_language_builder_uses_domain_metadata_without_intermediate_decisions(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "languages")
+    source = clone / "synthetic/python.md"
+    source.parent.mkdir()
+    source.write_text("# Synthetic Python standard\n\nPrefer explicit contracts.\n")
+    before = (tmp_path / "catalog/catalog.yaml").read_bytes()
+    build_languages(tmp_path, sources, {"packs": {"python": {
+        "title": "Python", "description": "Use when checking the synthetic Python pack fixture.",
+        "topics": {"standards": ["affaan-m/ECC:synthetic/python.md"]},
+    }}})
+    assert (domain / "skills/python/SKILL.md").is_file()
+    assert "explicit contracts" in (domain / "skills/python/references/standards.md").read_text()
+    assert (tmp_path / "catalog/catalog.yaml").read_bytes() == before
+    assert not list((tmp_path / "catalog/decisions").rglob("*.yaml"))
+
+
+@pytest.mark.parametrize("builder", ["bundle", "language"])
+def test_missing_source_preserves_existing_generated_output(tmp_path, builder):
+    domain_name = "testing" if builder == "bundle" else "languages"
+    sources, clone, domain = prepare(tmp_path, domain_name)
+    output = domain / ("skills/browser-testing" if builder == "bundle" else "skills/python")
+    output.mkdir(parents=True)
+    sentinel = output / "SKILL.md"
+    sentinel.write_text("Existing reviewed content must survive invalid inputs.\n")
+    provenance = (domain / "PROVENANCE.yaml").read_bytes()
+    registry = (tmp_path / "catalog/catalog.yaml").read_bytes()
+    with pytest.raises(ValueError, match="missing source file"):
+        if builder == "bundle":
+            build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+                "description": "Use when exercising the missing source regression.",
+                "base": "affaan-m/ECC:missing.md",
+            }}})
+        else:
+            build_languages(tmp_path, sources, {"packs": {"python": {
+                "title": "Python", "description": "Use when exercising the missing source regression.",
+                "topics": {"standards": ["affaan-m/ECC:missing.md"]},
+            }}})
+    assert sentinel.read_text() == "Existing reviewed content must survive invalid inputs.\n"
+    assert (domain / "PROVENANCE.yaml").read_bytes() == provenance
+    assert (tmp_path / "catalog/catalog.yaml").read_bytes() == registry
+
+
+def test_recipe_cannot_silently_absorb_item_owned_by_another_artifact(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    import csv
+    row = next(row for row in csv.DictReader((tmp_path / "catalog/inventory/artifacts.csv").open())
+               if row["source"] == "affaan-m/ECC" and row["kind"] == "skill" and row["name"] == "tdd-workflow")
+    source = clone / row["path"]
+    source.parent.mkdir(parents=True)
+    source.write_text("# Synthetic TDD fixture\n\nOwned by the test-driven-development artifact.\n")
+    with pytest.raises(ValueError, match="missing from manifest supersedes"):
+        build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+            "description": "Use when checking wrong editorial ownership.", "base": "s:tdd-workflow",
+        }}})
+    assert not (domain / "skills/browser-testing").exists()
+
+
+def test_cli_preflights_entire_selection_before_starting_any_domain(tmp_path, monkeypatch):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    from tools.curation.__main__ import main
+    sentinel = domain / "skills/browser-testing/SKILL.md"
+    sentinel.parent.mkdir(parents=True)
+    sentinel.write_text("Existing output\n")
+    monkeypatch.chdir(tmp_path)
+    before = (tmp_path / "catalog/catalog.yaml").read_bytes()
+    with pytest.raises(ValueError, match="missing source"):
+        main([str(sources), "--domain", "testing", "--domain", "languages"])
+    assert sentinel.read_text() == "Existing output\n"
+    assert (tmp_path / "catalog/catalog.yaml").read_bytes() == before
+
+
+def test_apache_reference_files_carry_modification_notice(tmp_path):
+    sources, _, domain = prepare(tmp_path, "testing")
+    guide = sources / "getsentry_skills/synthetic/guide"
+    (guide / "references").mkdir(parents=True)
+    (guide / "SKILL.md").write_text("---\nname: guide\n---\n# Apache guide\n")
+    (guide / "references/topic.md").write_text("# Topic\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the Apache notice fixture only.",
+        "body": "# Synthetic browser check\n\nUse the guide below.",
+        "reference_dirs": {"guide": "getsentry/skills:synthetic/guide"},
+    }}})
+    refs = domain / "skills/browser-testing/references/guide"
+    for f in (refs / "README.md", refs / "references/topic.md"):
+        text = f.read_text()
+        assert "Modified by OpenDigital from getsentry/skills (Apache-2.0)" in text, f
+        assert text.count("Modified by OpenDigital") == 1
+
+
+def test_notice_covers_assembled_references_and_text_files(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    (clone / "synthetic").mkdir(parents=True)
+    (clone / "synthetic/mit.md").write_text("# MIT part\n\nBody.\n")
+    guide = sources / "getsentry_skills/synthetic/guide"
+    guide.mkdir(parents=True)
+    (guide / "part.md").write_text("# Apache part\n\nBody.\n")
+    (guide / "notes.txt").write_text("plain notes\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the Apache notice fixture only.",
+        "body": "# Synthetic browser check\n\nUse the guide below.",
+        "references": {"mixed.md": ["affaan-m/ECC:synthetic/mit.md", "getsentry/skills:synthetic/guide/part.md"],
+                       "mit-only.md": ["affaan-m/ECC:synthetic/mit.md"]},
+        "reference_dirs": {"guide": "getsentry/skills:synthetic/guide"},
+    }}})
+    refs = domain / "skills/browser-testing/references"
+    assert "Modified by OpenDigital from getsentry/skills (Apache-2.0)" in (refs / "mixed.md").read_text()
+    assert "Modified by OpenDigital" not in (refs / "mit-only.md").read_text()
+    assert (refs / "guide/notes.txt").read_text().startswith("Modified by OpenDigital from getsentry/skills (Apache-2.0)")
+
+
+def test_reference_install_failure_remains_observable():
+    import subprocess
+    from tools.curation.language_pack import rewrite_refs
+    synthetic = 'npm install example-package@1.2.3 2>/dev/null && echo "upgraded" || echo "not used"'
+    adapted = rewrite_refs(synthetic, {}, set())
+    shell = 'npm() { printf "synthetic installer failure\\n" >&2; return 42; };\n' + adapted
+    result = subprocess.run(["bash", "-c", shell], capture_output=True, text=True)
+    assert result.returncode == 42
+    assert "synthetic installer failure" in result.stderr
+    assert "not used" not in result.stdout
+
+
+def test_reference_version_selection_is_explicit_and_warnings_survive():
+    from tools.curation.language_pack import rewrite_refs
+    synthetic = "\n".join([
+        "npm install @apollo/client@latest graphql@latest",
+        "go get github.com/modelcontextprotocol/go-sdk@latest",
+        "COPY --from=composer:latest /usr/bin/composer /usr/bin/composer",
+        "image: myapp:latest",
+        "Never use @latest in repeatable workflows.",
+    ])
+    adapted = rewrite_refs(synthetic, {}, set())
+    for line in adapted.splitlines():
+        if line.startswith(("npm install", "go get", "COPY --from", "image:")):
+            assert "latest" not in line
+    assert "@apollo/client@<version>" in adapted
+    assert "Never use @latest in repeatable workflows." in adapted

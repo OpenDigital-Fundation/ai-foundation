@@ -1,0 +1,1598 @@
+# Facets per artifact (see docs/adr/foundation/faceted-classification.md). IDs come from catalog/taxonomy/*.yaml.
+version: 1
+artifacts:
+  accessibility/accessibility-audit:
+    knowledge:
+    - design
+    - software-engineering
+    - law
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - technology
+    - government
+    capabilities:
+    - audit
+    - evaluate
+    - validate
+    multidisciplinary:
+    - design-systems
+    - govtech
+  accessibility/assistive-technology-testing:
+    knowledge:
+    - software-engineering
+    - design
+    capabilities:
+    - test
+    - evaluate
+    technology:
+    - skills-reusable-capabilities
+    - browser-computer-use
+    industries:
+    - technology
+    - government
+  accessibility/document-accessibility:
+    knowledge:
+    - design
+    - writing-publishing
+    - law
+    capabilities:
+    - audit
+    - transform
+    - validate
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - government
+    - education
+    - services
+  accessibility/wcag-accessibility:
+    capabilities:
+    - audit
+    - code
+    - review
+    - validate
+    industries:
+    - technology
+    - government
+    knowledge:
+    - design
+    - software-engineering
+    - law
+    multidisciplinary:
+    - design-systems
+    technology:
+    - skills-reusable-capabilities
+  agent-engineering/agent-debugging:
+    capabilities:
+    - plan
+    - evaluate
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - observability-operations
+  agent-engineering/agent-evaluation:
+    capabilities:
+    - plan
+    - evaluate
+    - benchmark
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - evals-benchmarks
+  agent-engineering/agent-guardrails:
+    capabilities:
+    - plan
+    - evaluate
+    - prevent
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    - cybersecurity-privacy
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - guardrails-security
+  agent-engineering/agent-loops:
+    capabilities:
+    - plan
+    - evaluate
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - workflows-automation
+  agent-engineering/agent-memory:
+    capabilities:
+    - plan
+    - evaluate
+    - memorise
+    - recall
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - memory
+  agent-engineering/agent-teams:
+    capabilities:
+    - plan
+    - evaluate
+    - delegate
+    - synchronise
+    - approve
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - multi-agent-orchestration
+  agent-engineering/context-management:
+    capabilities:
+    - plan
+    - evaluate
+    - estimate
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - prompts-context-engineering
+  agent-engineering/harness-design:
+    capabilities:
+    - plan
+    - evaluate
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - agent-frameworks
+    - tools-mcp-integrations
+  agent-engineering/parallel-agents:
+    capabilities:
+    - plan
+    - evaluate
+    - delegate
+    - distribute
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - multi-agent-orchestration
+  agent-engineering/session-retrospective:
+    capabilities:
+    - plan
+    - evaluate
+    - analyse
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+  agent-engineering/skill-authoring:
+    capabilities:
+    - plan
+    - evaluate
+    - write
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    - evals-benchmarks
+  ai-engineering/claude-api:
+    capabilities:
+    - code
+    - evaluate
+    - integrate
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - mlops-llmops
+    technology:
+    - skills-reusable-capabilities
+    - models-inference
+    - tools-mcp-integrations
+  ai-engineering/mcp-server-development:
+    capabilities:
+    - code
+    - evaluate
+    - integrate
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - mlops-llmops
+    technology:
+    - skills-reusable-capabilities
+    - tools-mcp-integrations
+  ai-engineering/ml-engineering:
+    capabilities:
+    - code
+    - evaluate
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    - mathematics-statistics
+    multidisciplinary:
+    - mlops-llmops
+    technology:
+    - skills-reusable-capabilities
+    - models-inference
+  ai-engineering/prompt-engineering:
+    capabilities:
+    - code
+    - evaluate
+    - write
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - mlops-llmops
+    technology:
+    - skills-reusable-capabilities
+    - prompts-context-engineering
+  ai-engineering/rag-pipelines:
+    capabilities:
+    - code
+    - evaluate
+    - retrieve
+    - index
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - mlops-llmops
+    technology:
+    - skills-reusable-capabilities
+    - rag-retrieval
+  architecture/api-design:
+    capabilities:
+    - plan
+    - decide
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  architecture/architecture-review:
+    capabilities:
+    - plan
+    - decide
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  architecture/codebase-design:
+    capabilities:
+    - plan
+    - decide
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  architecture/codebase-onboarding:
+    capabilities:
+    - plan
+    - decide
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  architecture/decision-records:
+    capabilities:
+    - plan
+    - decide
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  architecture/domain-modeling:
+    capabilities:
+    - plan
+    - decide
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  architecture/system-design:
+    capabilities:
+    - plan
+    - decide
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  brand/brand-identity:
+    capabilities:
+    - write
+    - adapt
+    industries:
+    - communication
+    knowledge:
+    - marketing-communication
+    - design
+    multidisciplinary:
+    - brand-strategy
+    technology:
+    - skills-reusable-capabilities
+  brand/brand-voice:
+    capabilities:
+    - write
+    - adapt
+    industries:
+    - communication
+    knowledge:
+    - marketing-communication
+    - design
+    multidisciplinary:
+    - brand-strategy
+    technology:
+    - skills-reusable-capabilities
+  code-quality/code-review:
+    capabilities:
+    - review
+    - refactor
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  code-quality/code-reviewer:
+    capabilities:
+    - review
+    - refactor
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - multi-agent-orchestration
+  code-quality/codebase-audit:
+    capabilities:
+    - review
+    - refactor
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  code-quality/debt-ledger:
+    capabilities:
+    - review
+    - refactor
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  code-quality/receiving-code-review:
+    capabilities:
+    - review
+    - refactor
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  code-quality/simplification:
+    capabilities:
+    - review
+    - refactor
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  creative-media/animated-gifs:
+    capabilities:
+    - draw
+    - generate-images
+    - present
+    - generate-video
+    industries:
+    - creative
+    - communication
+    knowledge:
+    - design
+    - arts-media
+    multidisciplinary:
+    - computational-creativity
+    technology:
+    - skills-reusable-capabilities
+  creative-media/banner-design:
+    capabilities:
+    - draw
+    - generate-images
+    - present
+    industries:
+    - creative
+    - communication
+    knowledge:
+    - design
+    - arts-media
+    multidisciplinary:
+    - computational-creativity
+    technology:
+    - skills-reusable-capabilities
+  creative-media/generative-art:
+    capabilities:
+    - draw
+    - generate-images
+    - present
+    industries:
+    - creative
+    - communication
+    knowledge:
+    - design
+    - arts-media
+    - mathematics-statistics
+    multidisciplinary:
+    - computational-creativity
+    technology:
+    - skills-reusable-capabilities
+  creative-media/image-prompting:
+    capabilities:
+    - draw
+    - generate-images
+    - present
+    industries:
+    - creative
+    - communication
+    knowledge:
+    - design
+    - arts-media
+    multidisciplinary:
+    - computational-creativity
+    technology:
+    - skills-reusable-capabilities
+    - prompts-context-engineering
+    - models-inference
+  creative-media/poster-design:
+    capabilities:
+    - draw
+    - generate-images
+    - present
+    industries:
+    - creative
+    - communication
+    knowledge:
+    - design
+    - arts-media
+    multidisciplinary:
+    - computational-creativity
+    technology:
+    - skills-reusable-capabilities
+  creative-media/presentation-slides:
+    capabilities:
+    - draw
+    - generate-images
+    - present
+    - visualise
+    industries:
+    - creative
+    - communication
+    knowledge:
+    - design
+    - arts-media
+    multidisciplinary:
+    - computational-creativity
+    technology:
+    - skills-reusable-capabilities
+  data/data-pipelines:
+    capabilities:
+    - query
+    - transform
+    - analyse
+    - extract
+    - clean
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  data/database-design:
+    capabilities:
+    - query
+    - transform
+    - analyse
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  data/database-migrations:
+    capabilities:
+    - query
+    - transform
+    - analyse
+    industries:
+    - technology
+    knowledge:
+    - ai-data
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  debugging/build-failure-resolution:
+    capabilities:
+    - debug
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  debugging/systematic-debugging:
+    capabilities:
+    - debug
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  documents/doc-coauthoring:
+    capabilities:
+    - write
+    - edit
+    - summarise
+    industries:
+    - services
+    knowledge:
+    - writing-publishing
+    technology:
+    - skills-reusable-capabilities
+  documents/internal-comms:
+    capabilities:
+    - write
+    - edit
+    - summarise
+    industries:
+    - services
+    knowledge:
+    - writing-publishing
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+  documents/office-documents:
+    capabilities:
+    - write
+    - edit
+    - summarise
+    - extract
+    - transform
+    industries:
+    - services
+    knowledge:
+    - writing-publishing
+    technology:
+    - skills-reusable-capabilities
+  documents/technical-writing:
+    capabilities:
+    - write
+    - edit
+    - summarise
+    industries:
+    - services
+    knowledge:
+    - writing-publishing
+    technology:
+    - skills-reusable-capabilities
+  finance/accounting:
+    capabilities:
+    - analyse
+    - forecast
+    - price
+    industries:
+    - finance
+    - services
+    knowledge:
+    - finance-accounting
+    technology:
+    - skills-reusable-capabilities
+  finance/billing-operations:
+    capabilities:
+    - analyse
+    - forecast
+    - price
+    industries:
+    - finance
+    - services
+    knowledge:
+    - finance-accounting
+    - software-engineering
+    multidisciplinary:
+    - fintech
+    technology:
+    - skills-reusable-capabilities
+  finance/financial-analysis:
+    capabilities:
+    - analyse
+    - forecast
+    - price
+    industries:
+    - finance
+    - services
+    knowledge:
+    - finance-accounting
+    technology:
+    - skills-reusable-capabilities
+  languages/cpp:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/dart:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/dotnet:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/external-tools:
+    knowledge:
+    - software-engineering
+    capabilities:
+    - retrieve
+    technology:
+    - tools-mcp-integrations
+    industries:
+    - technology
+  languages/go:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/jvm:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/php:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/python:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/react-diagnostics:
+    knowledge:
+    - software-engineering
+    capabilities:
+    - debug
+    - review
+    - audit
+    technology:
+    - skills-reusable-capabilities
+    - tools-mcp-integrations
+    industries:
+    - technology
+  languages/ruby:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/rust:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/swift:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  languages/typescript:
+    capabilities:
+    - code
+    - test
+    - review
+    - debug
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - computer-science
+    technology:
+    - skills-reusable-capabilities
+  legal-compliance/compliance-programs:
+    capabilities:
+    - audit
+    - validate
+    - write
+    industries:
+    - services
+    - government
+    knowledge:
+    - law
+    - cybersecurity-privacy
+    multidisciplinary:
+    - legaltech
+    - ai-governance
+    technology:
+    - skills-reusable-capabilities
+  legal-compliance/contracts:
+    capabilities:
+    - audit
+    - validate
+    - write
+    industries:
+    - services
+    - government
+    knowledge:
+    - law
+    multidisciplinary:
+    - legaltech
+    technology:
+    - skills-reusable-capabilities
+  marketing/campaign-planning:
+    capabilities:
+    - write
+    - publish
+    - analyse
+    industries:
+    - communication
+    knowledge:
+    - marketing-communication
+    multidisciplinary:
+    - growth-hacking
+    technology:
+    - skills-reusable-capabilities
+  marketing/content-marketing:
+    capabilities:
+    - write
+    - publish
+    - analyse
+    industries:
+    - communication
+    knowledge:
+    - marketing-communication
+    multidisciplinary:
+    - growth-hacking
+    technology:
+    - skills-reusable-capabilities
+  marketing/email-marketing:
+    capabilities:
+    - write
+    - publish
+    - analyse
+    industries:
+    - communication
+    knowledge:
+    - marketing-communication
+    multidisciplinary:
+    - growth-hacking
+    technology:
+    - skills-reusable-capabilities
+  marketing/paid-media:
+    capabilities:
+    - write
+    - publish
+    - analyse
+    industries:
+    - communication
+    knowledge:
+    - marketing-communication
+    - ai-data
+    multidisciplinary:
+    - growth-hacking
+    technology:
+    - skills-reusable-capabilities
+  marketing/seo:
+    capabilities:
+    - write
+    - publish
+    - analyse
+    industries:
+    - communication
+    knowledge:
+    - marketing-communication
+    - software-engineering
+    multidisciplinary:
+    - growth-hacking
+    technology:
+    - skills-reusable-capabilities
+  operations/customer-support:
+    capabilities:
+    - plan
+    - supervise
+    - support
+    - converse
+    industries:
+    - services
+    knowledge:
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+  operations/people-operations:
+    capabilities:
+    - plan
+    - supervise
+    - support
+    - tutor
+    industries:
+    - services
+    knowledge:
+    - management-strategy
+    - psychology-human-development
+    - education
+    technology:
+    - skills-reusable-capabilities
+  operations/project-management:
+    capabilities:
+    - plan
+    - supervise
+    - support
+    industries:
+    - services
+    knowledge:
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+  platform/deployment:
+    capabilities:
+    - automate
+    - monitor
+    - integrate
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  platform/git-workflow:
+    capabilities:
+    - automate
+    - monitor
+    - integrate
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  platform/github-operations:
+    capabilities:
+    - automate
+    - monitor
+    - integrate
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  platform/incident-response:
+    capabilities:
+    - automate
+    - monitor
+    - integrate
+    - detect
+    - facilitate
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  platform/reliability:
+    capabilities:
+    - automate
+    - monitor
+    - integrate
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+    - observability-operations
+  principles/coding-discipline:
+    capabilities:
+    - code
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+  product/product-management:
+    capabilities:
+    - plan
+    - decide
+    - synthesise
+    industries:
+    - technology
+    knowledge:
+    - management-strategy
+    - ai-data
+    - design
+    multidisciplinary:
+    - product-management
+    technology:
+    - skills-reusable-capabilities
+  research/docs-lookup:
+    capabilities:
+    - search
+    - synthesise
+    - cite
+    - compare-sources
+    industries:
+    - science
+    - technology
+    knowledge:
+    - social-sciences
+    - ai-data
+    - software-engineering
+    multidisciplinary:
+    - research-automation
+    technology:
+    - skills-reusable-capabilities
+    - rag-retrieval
+  research/literature-review:
+    capabilities:
+    - search
+    - synthesise
+    - cite
+    - compare-sources
+    - evaluate
+    industries:
+    - science
+    knowledge:
+    - social-sciences
+    - ai-data
+    - mathematics-statistics
+    multidisciplinary:
+    - research-automation
+    technology:
+    - skills-reusable-capabilities
+    - rag-retrieval
+  research/source-research:
+    capabilities:
+    - search
+    - synthesise
+    - cite
+    - compare-sources
+    industries:
+    - science
+    knowledge:
+    - social-sciences
+    - ai-data
+    multidisciplinary:
+    - research-automation
+    technology:
+    - skills-reusable-capabilities
+    - rag-retrieval
+  sales/deal-strategy:
+    capabilities:
+    - prospect
+    - negotiate
+    - forecast
+    industries:
+    - services
+    - technology
+    knowledge:
+    - sales-commerce
+    technology:
+    - skills-reusable-capabilities
+  sales/investor-relations:
+    capabilities:
+    - prospect
+    - negotiate
+    - forecast
+    - present
+    - persuade
+    industries:
+    - services
+    - technology
+    knowledge:
+    - sales-commerce
+    - finance-accounting
+    technology:
+    - skills-reusable-capabilities
+  sales/prospecting:
+    capabilities:
+    - prospect
+    - negotiate
+    - forecast
+    industries:
+    - services
+    - technology
+    knowledge:
+    - sales-commerce
+    technology:
+    - skills-reusable-capabilities
+  security/agent-security:
+    capabilities:
+    - detect
+    - prevent
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - cybersecurity-privacy
+    - ai-data
+    multidisciplinary:
+    - devsecops
+    - ai-governance
+    technology:
+    - skills-reusable-capabilities
+    - guardrails-security
+    - tools-mcp-integrations
+  security/external-references:
+    capabilities:
+    - detect
+    - prevent
+    - audit
+    - retrieve
+    industries:
+    - technology
+    knowledge:
+    - cybersecurity-privacy
+    multidisciplinary:
+    - devsecops
+    technology:
+    - guardrails-security
+    - rag-retrieval
+  security/secrets-hygiene:
+    capabilities:
+    - detect
+    - prevent
+    - audit
+    - isolate
+    industries:
+    - technology
+    knowledge:
+    - cybersecurity-privacy
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - guardrails-security
+  security/security-audit:
+    capabilities:
+    - detect
+    - prevent
+    - audit
+    industries:
+    - technology
+    knowledge:
+    - cybersecurity-privacy
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - guardrails-security
+  security/threat-modeling:
+    capabilities:
+    - detect
+    - prevent
+    - audit
+    - plan
+    industries:
+    - technology
+    knowledge:
+    - cybersecurity-privacy
+    multidisciplinary:
+    - devsecops
+    technology:
+    - skills-reusable-capabilities
+    - guardrails-security
+  testing/browser-testing:
+    capabilities:
+    - test
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+    - evals-benchmarks
+    - browser-computer-use
+  testing/test-driven-development:
+    capabilities:
+    - test
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+    - evals-benchmarks
+  testing/test-strategy:
+    capabilities:
+    - test
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+    - evals-benchmarks
+  testing/verification-before-completion:
+    capabilities:
+    - test
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+    - evals-benchmarks
+  ui/component-styling:
+    capabilities:
+    - draw
+    - generate-interfaces
+    - prototype
+    industries:
+    - technology
+    - creative
+    knowledge:
+    - design
+    - software-engineering
+    multidisciplinary:
+    - design-systems
+    technology:
+    - skills-reusable-capabilities
+  ui/design-system:
+    capabilities:
+    - draw
+    - generate-interfaces
+    - prototype
+    - classify
+    - visualise
+    industries:
+    - technology
+    - creative
+    knowledge:
+    - design
+    - software-engineering
+    multidisciplinary:
+    - design-systems
+    technology:
+    - skills-reusable-capabilities
+  ui/motion-and-polish:
+    capabilities:
+    - draw
+    - generate-interfaces
+    - prototype
+    industries:
+    - technology
+    - creative
+    knowledge:
+    - design
+    - software-engineering
+    multidisciplinary:
+    - design-systems
+    technology:
+    - skills-reusable-capabilities
+  ui/visual-design:
+    capabilities:
+    - draw
+    - generate-interfaces
+    - prototype
+    industries:
+    - technology
+    - creative
+    knowledge:
+    - design
+    - software-engineering
+    multidisciplinary:
+    - design-systems
+    technology:
+    - skills-reusable-capabilities
+  ux/usability-review:
+    capabilities:
+    - analyse
+    - evaluate
+    - synthesise
+    industries:
+    - technology
+    knowledge:
+    - design
+    - psychology-human-development
+    multidisciplinary:
+    - behavioral-design
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+  ux/user-research:
+    capabilities:
+    - analyse
+    - evaluate
+    - synthesise
+    - search
+    industries:
+    - technology
+    knowledge:
+    - design
+    - psychology-human-development
+    - social-sciences
+    multidisciplinary:
+    - behavioral-design
+    - human-ai-interaction
+    technology:
+    - skills-reusable-capabilities
+  workflow/brainstorming:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/executing-plans:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    - execute
+    - delegate
+    - supervise
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+    - multi-agent-orchestration
+  workflow/feature-delivery:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    - supervise
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/finishing-a-branch:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/git-worktrees:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/grilling:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    - verify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/handoff:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    - summarise
+    - memorise
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+    - memory
+  workflow/initiative-mapping:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/issue-breakdown:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/issue-tracking:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    - integrate
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - workflows-automation
+    - rag-retrieval
+  workflow/issue-triage:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    - classify
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation
+  workflow/writing-plans:
+    capabilities:
+    - plan
+    - decompose
+    - approve
+    industries:
+    - technology
+    knowledge:
+    - software-engineering
+    - management-strategy
+    technology:
+    - skills-reusable-capabilities
+    - workflows-automation

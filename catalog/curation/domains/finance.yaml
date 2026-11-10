@@ -1,0 +1,137 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: finance
+artifacts:
+- id: finance/accounting
+  type: skill
+  capability: 'Use for day-to-day accounting: bookkeeping, reconciliations, month-end close, accounts payable, expense tracking,
+    financial statements, and tax planning questions to prepare for an accountan'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Accounts Payable Agent
+  - msitarzewski/agency-agents:agent:Bookkeeper & Controller
+  - msitarzewski/agency-agents:agent:Finance Tracker
+  - msitarzewski/agency-agents:agent:Tax Strategist
+  recipe:
+    title: Accounting
+    description: 'Use for day-to-day accounting: bookkeeping, reconciliations, month-end close, accounts payable, expense
+      tracking, financial statements, and tax planning questions to prepare for an accountant.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:finance/finance-bookkeeper-controller.md
+      tax.md:
+      - msitarzewski/agency-agents:finance/finance-tax-strategist.md
+      accounts-payable.md:
+      - msitarzewski/agency-agents:specialized/accounts-payable-agent.md
+      tracking.md:
+      - msitarzewski/agency-agents:support/support-finance-tracker.md
+    body: '# Accounting
+
+
+      Keep the books accurate, closed on time and ready for an accountant or auditor.
+
+
+      ## 1. Record
+
+      Every transaction categorised to the chart of accounts with its document (invoice, receipt, contract). Separate business
+      and personal; never guess a category, flag it.
+
+
+      ## 2. Reconcile
+
+      Bank, cards, payment processors and payables against the ledger, monthly at least. Investigate every difference; do
+      not plug it.
+
+
+      ## 3. Close the month
+
+      Accruals and prepayments, depreciation, revenue recognition, payroll entries, intercompany if any; review against the
+      prior month and budget; lock the period.
+
+
+      ## 4. Report
+
+      Profit and loss, balance sheet and cash flow, with variance explanations for anything material.
+
+
+      ## 5. Prepare for tax
+
+      Organise records and open questions for the accountant. Tax positions and filings need a qualified professional; say
+      so.'
+- id: finance/billing-operations
+  type: skill
+  capability: 'Use when building or operating billing: subscriptions, invoicing, payment providers, refunds and disputes,
+    dunning, revenue reporting and customer billing issues.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:customer-billing-ops
+  - affaan-m/ECC:skill:finance-billing-ops
+  - msitarzewski/agency-agents:agent:Payments & Billing Engineer
+  recipe:
+    title: Billing operations
+    description: 'Use when building or operating billing: subscriptions, invoicing, payment providers, refunds and disputes,
+      dunning, revenue reporting and customer billing issues.'
+    base: s:finance-billing-ops
+    references:
+      customer-billing.md:
+      - s:customer-billing-ops
+      payments-engineering.md:
+      - msitarzewski/agency-agents:engineering/engineering-payments-billing-engineer.md
+- id: finance/financial-analysis
+  type: skill
+  capability: 'Use for financial modelling and planning: three-statement and unit-economics models, forecasts and budgets,
+    scenario analysis, variance analysis, pricing models and investment memos.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Chief Financial Officer
+  - msitarzewski/agency-agents:agent:FP&A Analyst
+  - msitarzewski/agency-agents:agent:Financial Analyst
+  - msitarzewski/agency-agents:agent:Investment Researcher
+  - msitarzewski/agency-agents:agent:Pricing Analyst
+  recipe:
+    title: Financial analysis
+    description: 'Use for financial modelling and planning: three-statement and unit-economics models, forecasts and budgets,
+      scenario analysis, variance analysis, pricing models and investment memos.'
+    references:
+      role-guide.md:
+      - msitarzewski/agency-agents:finance/finance-financial-analyst.md
+      fpa.md:
+      - msitarzewski/agency-agents:finance/finance-fpa-analyst.md
+      pricing.md:
+      - msitarzewski/agency-agents:specialized/specialized-pricing-analyst.md
+      investment-research.md:
+      - msitarzewski/agency-agents:finance/finance-investment-researcher.md
+    body: '# Financial analysis
+
+
+      Turn numbers into a decision, with assumptions anyone can audit.
+
+
+      ## 1. Frame the question
+
+      The decision the analysis informs, the horizon, and the output (model, forecast, memo).
+
+
+      ## 2. Gather and check inputs
+
+      Actuals from the source of truth, with dates; flag gaps and one-offs. Keep inputs separate from calculations.
+
+
+      ## 3. Build the model
+
+      Assumptions on one sheet, clearly labelled; drivers (volume, price, conversion, churn, headcount) flowing into the statements
+      or unit economics; no hard-coded numbers inside formulas. Check that statements balance.
+
+
+      ## 4. Stress it
+
+      Base, downside and upside scenarios; sensitivity on the two or three drivers that matter most; break-even and runway.
+
+
+      ## 5. Communicate
+
+      Lead with the answer and the recommendation, then the drivers, risks and what would change the conclusion. For spreadsheet
+      files use `documents:office-documents`. This is analysis, not investment or tax advice.'

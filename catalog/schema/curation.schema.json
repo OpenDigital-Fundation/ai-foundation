@@ -1,0 +1,163 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Domain editorial manifest",
+  "type": "object",
+  "required": [
+    "version",
+    "domain",
+    "artifacts"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "type",
+          "capability",
+          "status",
+          "owner"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+/[a-z0-9-]+$"
+          },
+          "type": {
+            "enum": [
+              "skill",
+              "agent",
+              "workflow",
+              "prompt",
+              "rule",
+              "hook",
+              "mcp",
+              "template",
+              "knowledge"
+            ]
+          },
+          "capability": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 200
+          },
+          "status": {
+            "enum": [
+              "experimental",
+              "stable",
+              "deprecated"
+            ]
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1
+          },
+          "supersedes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[^:]+/[^:]+:(skill|agent|command|rule|hook|mcp):.+$"
+            },
+            "uniqueItems": true
+          },
+          "path": {
+            "type": "string"
+          },
+          "recipe": {
+            "type": "object",
+            "required": [
+              "description"
+            ],
+            "properties": {
+              "description": {
+                "type": "string",
+                "minLength": 10
+              },
+              "base": {
+                "type": "string"
+              },
+              "base_dir": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              }
+            },
+            "oneOf": [
+              {
+                "required": [
+                  "base"
+                ]
+              },
+              {
+                "required": [
+                  "base_dir"
+                ]
+              },
+              {
+                "required": [
+                  "body"
+                ]
+              }
+            ]
+          },
+          "language_pack": {
+            "type": "object",
+            "required": [
+              "title",
+              "description",
+              "topics"
+            ],
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 10
+              },
+              "topics": {
+                "type": "object"
+              }
+            }
+          }
+        }
+      }
+    },
+    "imports": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "dest",
+          "source",
+          "src"
+        ],
+        "properties": {
+          "dest": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "src": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "array"
+    }
+  }
+}

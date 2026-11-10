@@ -1,0 +1,144 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: testing
+artifacts:
+- id: testing/browser-testing
+  type: skill
+  capability: 'Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising
+    end-to-end tests, Page Objects, capturing screenshots and console logs, post'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:e2e-runner
+  - affaan-m/ECC:skill:browser-qa
+  - affaan-m/ECC:skill:e2e-testing
+  - affaan-m/ECC:skill:ui-demo
+  - affaan-m/ECC:skill:windows-desktop-e2e
+  - anthropics/skills:skill:webapp-testing
+  - currents-dev/playwright-best-practices-skill:skill:playwright-best-practices
+  - github/awesome-copilot:agent:Playwright Tester Mode
+  - github/awesome-copilot:rule:playwright-dotnet.instructions
+  - github/awesome-copilot:rule:playwright-python.instructions
+  - github/awesome-copilot:rule:playwright-typescript.instructions
+  recipe:
+    title: Browser testing
+    description: 'Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising
+      end-to-end tests, Page Objects, capturing screenshots and console logs, post-deploy UI checks, or end-to-end tests for
+      Windows desktop apps.'
+    base_dir: anthropics/skills:skills/webapp-testing
+    references:
+      e2e-patterns.md:
+      - s:e2e-testing
+      post-deploy-qa.md:
+      - s:browser-qa
+      e2e-runner.md:
+      - a:e2e-runner
+      windows-desktop.md:
+      - s:windows-desktop-e2e
+      playwright-overview.md:
+      - currents-dev/playwright-best-practices-skill:playwright-best-practices/SKILL.md
+      playwright/README.md:
+      - github/awesome-copilot:instructions/playwright-dotnet.instructions.md
+      - github/awesome-copilot:instructions/playwright-python.instructions.md
+      - github/awesome-copilot:instructions/playwright-typescript.instructions.md
+      - github/awesome-copilot:agents/playwright-tester.agent.md
+    reference_dirs:
+      playwright-advanced: currents-dev/playwright-best-practices-skill:playwright-best-practices/advanced
+      playwright-architecture: currents-dev/playwright-best-practices-skill:playwright-best-practices/architecture
+      playwright-browser-apis: currents-dev/playwright-best-practices-skill:playwright-best-practices/browser-apis
+      playwright-core: currents-dev/playwright-best-practices-skill:playwright-best-practices/core
+      playwright-debugging: currents-dev/playwright-best-practices-skill:playwright-best-practices/debugging
+      playwright-frameworks: currents-dev/playwright-best-practices-skill:playwright-best-practices/frameworks
+      playwright-infrastructure-ci-cd: currents-dev/playwright-best-practices-skill:playwright-best-practices/infrastructure-ci-cd
+      playwright-testing-patterns: currents-dev/playwright-best-practices-skill:playwright-best-practices/testing-patterns
+- id: testing/test-driven-development
+  type: skill
+  capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:tdd-guide
+  - affaan-m/ECC:rule:common/testing
+  - affaan-m/ECC:skill:tdd-workflow
+  - mattpocock/skills:skill:tdd
+  - obra/superpowers:skill:test-driven-development
+- id: testing/test-strategy
+  type: skill
+  capability: 'Use when deciding how a project should be tested rather than writing one test: the test portfolio and coverage
+    targets, linking requirements and risks to tests, API and contract tests, perfo'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:pr-test-analyzer
+  - affaan-m/ECC:command:quality-gate
+  - affaan-m/ECC:command:test-coverage
+  - affaan-m/ECC:skill:ai-regression-testing
+  - affaan-m/ECC:skill:benchmark
+  - affaan-m/ECC:skill:benchmark-methodology
+  - affaan-m/ECC:skill:click-path-audit
+  - affaan-m/ECC:skill:delivery-gate
+  - affaan-m/ECC:skill:test-collaboration
+  - github/awesome-copilot:agent:ai-team-qa
+  - github/awesome-copilot:agent:gem-mobile-tester
+  - github/awesome-copilot:rule:qa-engineering-best-practices.instructions
+  - msitarzewski/agency-agents:agent:API Tester
+  - msitarzewski/agency-agents:agent:Performance Benchmarker
+  - msitarzewski/agency-agents:agent:Test Automation Engineer
+  - msitarzewski/agency-agents:agent:Test Results Analyzer
+  recipe:
+    title: Test strategy
+    description: 'Use when deciding how a project should be tested rather than writing one test: the test portfolio and coverage
+      targets, linking requirements and risks to tests, API and contract tests, performance benchmarks, regression tests for
+      AI-written code, analysing test results and gaps in a pull request, and quality gates before delivery.'
+    base: s:test-collaboration
+    references:
+      ai-regression.md:
+      - s:ai-regression-testing
+      automation.md:
+      - msitarzewski/agency-agents:testing/testing-test-automation-engineer.md
+      api-testing.md:
+      - msitarzewski/agency-agents:testing/testing-api-tester.md
+      results-analysis.md:
+      - msitarzewski/agency-agents:testing/testing-test-results-analyzer.md
+      - a:pr-test-analyzer
+      performance.md:
+      - msitarzewski/agency-agents:testing/testing-performance-benchmarker.md
+      - s:benchmark
+      - s:benchmark-methodology
+      click-path-audit.md:
+      - s:click-path-audit
+      delivery-gates.md:
+      - s:delivery-gate
+      risk-based-quality/README.md:
+      - github/awesome-copilot:agents/ai-team-qa.agent.md
+      - github/awesome-copilot:agents/gem-mobile-tester.agent.md
+      - github/awesome-copilot:instructions/qa-engineering-best-practices.instructions.md
+    supersedes:
+    - affaan-m/ECC:command:test-coverage
+    - affaan-m/ECC:command:quality-gate
+- id: testing/verification-before-completion
+  type: skill
+  capability: Run verification fresh and read the output before claiming work is complete, fixed or passing.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - obra/superpowers:skill:verification-before-completion
+  - affaan-m/ECC:skill:verification-loop
+  - msitarzewski/agency-agents:agent:Reality Checker
+  - msitarzewski/agency-agents:agent:Evidence Collector
+imports:
+- dest: domains/testing/skills/test-driven-development
+  source: obra/superpowers
+  src: skills/test-driven-development
+  extra:
+  - source: mattpocock/skills
+    path: skills/engineering/tdd/SKILL.md
+- dest: domains/testing/skills/test-driven-development/references/test-examples.md
+  source: mattpocock/skills
+  src: skills/engineering/tdd/tests.md
+- dest: domains/testing/skills/test-driven-development/references/mocking.md
+  source: mattpocock/skills
+  src: skills/engineering/tdd/mocking.md
+- dest: domains/testing/skills/verification-before-completion
+  source: obra/superpowers
+  src: skills/verification-before-completion

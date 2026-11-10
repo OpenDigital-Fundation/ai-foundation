@@ -1,0 +1,30 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: ux
+artifacts:
+- id: ux/usability-review
+  type: skill
+  capability: Expert walkthrough and heuristic evaluation of an interface or flow, with ranked fixes.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Behavioral Nudge Engine
+  - msitarzewski/agency-agents:agent:Persona Walkthrough Specialist
+- id: ux/user-research
+  type: skill
+  capability: Plan, run and synthesise user research that informs a concrete product decision.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - 'github/awesome-copilot:agent:SE: UX Designer'
+  - msitarzewski/agency-agents:agent:UX Researcher
+imports:
+- dest: domains/ux/skills/user-research/references/research-playbook.md
+  source: msitarzewski/agency-agents
+  src: design/design-ux-researcher.md
+- dest: domains/ux/skills/usability-review/references/persona-walkthrough.md
+  source: msitarzewski/agency-agents
+  src: design/design-persona-walkthrough.md
+- dest: domains/ux/skills/user-research/references/jobs-and-journeys.md
+  source: github/awesome-copilot
+  src: agents/se-ux-ui-designer.agent.md
