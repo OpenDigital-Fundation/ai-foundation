@@ -33,5 +33,5 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `compliance-programs` | github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
+| `compliance-programs` | davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
 | `contracts` | affaan-m/ECC, msitarzewski/agency-agents |

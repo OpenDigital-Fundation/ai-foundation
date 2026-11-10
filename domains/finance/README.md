@@ -36,4 +36,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `accounting` | msitarzewski/agency-agents |
 | `billing-operations` | affaan-m/ECC, msitarzewski/agency-agents |
-| `financial-analysis` | msitarzewski/agency-agents |
+| `financial-analysis` | msitarzewski/agency-agents, wshobson/agents |

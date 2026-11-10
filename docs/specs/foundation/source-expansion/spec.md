@@ -22,9 +22,11 @@ Frameworks de agentes (LangGraph, CrewAI, Mastra, smolagents, OpenAI Agents SDK,
 - **R2.** Cada item novo do inventário recebe decisão (incorporar num artefato existente, novo artefato com spec do domínio atualizada, ou exclusão com motivo). O validador exige cobertura total.
 - **R3.** Nenhum artefato duplicado: capacidade já coberta vira referência ou `supersedes` do artefato existente.
 - **R4.** Conteúdo sob CC BY-SA, licença proprietária ou sem licença só entra como link.
+- **R6.** Derivação a partir de exclusões (pedido do mantenedor em 2026-11-10): um item excluído como `duplicate-of`, de licença permissiva por arquivo, pode ceder ao dono as seções que o dono ainda não cobre. Só entram seções novas, com proveniência `merged-section` (o `path` registra `arquivo#seções`) e o item passa de exclusão a `supersedes` do dono. Nada de artefato novo; itens de fornecedor ou fora de escopo ficam para outra etapa.
 - **R5.** Cada fatia termina com validador sem erros, testes verdes, índices regenerados e commit assinado.
 
 ## Critérios de aceite
 
 1. As quatro fatias registradas no lock e com cobertura total no inventário.
 2. `docs/SOURCES.md` mostra, por fonte, o que foi usado e o que foi excluído.
+3. Derivação: cada seção derivada vem de arquivo permissivo, tem baixa sobreposição com o conteúdo atual do dono (medida e registrada) e é ligada a partir da entrada do dono; o gerador recusa seção inexistente.

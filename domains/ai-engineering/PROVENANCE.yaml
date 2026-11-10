@@ -721,6 +721,13 @@ files:
     path: skills/mcp-builder/reference/python_mcp_server.md
     license: Apache-2.0
     modification: adapted
+- path: skills/mcp-server-development/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/fastmcp-server/SKILL.md#key-concepts
+    license: MIT
+    modification: merged-section
 - path: skills/mcp-server-development/references/release-qa.md
   derived_from:
   - source: github/awesome-copilot
@@ -939,6 +946,18 @@ files:
     path: plugins/llm-finetuning/skills/dataset-curation/references/synthetic-data.md
     license: MIT
     modification: adapted
+- path: skills/ml-engineering/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/ai-specialists/ai-ethics-advisor.md#regulatory-compliance-framework,agentic-ai-ethics
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/ai-research/ml-paper-writing/SKILL.md#writing-philosophy-for-top-ml-conferences
+    license: MIT
+    modification: merged-section
 - path: skills/ml-engineering/references/eval-harness-first/README.md
   derived_from:
   - source: wshobson/agents
@@ -1058,6 +1077,18 @@ files:
     path: engineering/engineering-prompt-engineer.md
     license: MIT
     modification: adapted
+- path: skills/prompt-engineering/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/productivity/avoid-ai-writing/SKILL.md#context-profiles
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/productivity/humanizer/SKILL.md#content-patterns
+    license: MIT
+    modification: merged-section
 - path: skills/prompt-engineering/references/prompt-caching.md
   derived_from:
   - source: affaan-m/ECC
@@ -1157,6 +1188,23 @@ files:
     path: engineering/engineering-rag-pipeline-engineer.md
     license: MIT
     modification: adapted
+- path: skills/rag-pipelines/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/ai-specialists/llm-architect.md#serving-infrastructure-selection,rag-pipeline-architecture
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/ai-research/rag-qdrant/SKILL.md#rag-integration
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/ai-specialists/search-specialist.md#search-strategies
+    license: MIT
+    modification: merged-section
 - path: skills/rag-pipelines/references/embedding-strategies/README.md
   derived_from:
   - source: wshobson/agents

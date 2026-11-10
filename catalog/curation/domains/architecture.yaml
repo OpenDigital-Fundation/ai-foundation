@@ -47,6 +47,8 @@ artifacts:
   - affaan-m/ECC:skill:codebase-onboarding
   - getsentry/skills:skill:agents-md
   - github/awesome-copilot:agent:Context Architect
+  - github/awesome-copilot:skill:acquire-codebase-knowledge
+  - github/awesome-copilot:skill:create-agentsmd
   - msitarzewski/agency-agents:agent:Codebase Archaeologist
   - msitarzewski/agency-agents:agent:Codebase Onboarding Engineer
   recipe:
@@ -70,6 +72,12 @@ artifacts:
       - getsentry/skills:skills/agents-md/SKILL.md
       context-mapping/README.md:
       - github/awesome-copilot:agents/context-architect.agent.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/create-agentsmd/SKILL.md#file-structure-and-content-guidelines
+      - github/awesome-copilot:skills/acquire-codebase-knowledge/SKILL.md#gotchas
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: File Structure and Content
+        Guidelines; Gotchas'
 - id: architecture/decision-records
   type: skill
   capability: Record, supersede, index and read architecture decision records, one decision per file.

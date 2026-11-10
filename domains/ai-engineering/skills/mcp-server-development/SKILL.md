@@ -273,3 +273,4 @@ Load only what the task needs:
 - [`references/sdk/swift/README.md`](references/sdk/swift/README.md) — covers Swift MCP Expert; Swift MCP Server Development Guidelines
 - [`references/sdk/typescript/README.md`](references/sdk/typescript/README.md) — covers TypeScript MCP Server Expert; TypeScript MCP Server Development
 - [`references/sdk/quarkus/README.md`](references/sdk/quarkus/README.md) — covers Quarkus MCP Server
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Key concepts

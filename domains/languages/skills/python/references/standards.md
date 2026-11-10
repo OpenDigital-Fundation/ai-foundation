@@ -2431,3 +2431,656 @@ Incremental adoption goals:
 - Generic collections use type parameters (`list[str]` not `list`)
 
 For existing codebases, enable strict mode per-module using `# mypy: strict` or configure per-module overrides in `pyproject.toml`.
+
+## Python Resource Management
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-resource-management/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: Class-Based Context Manager
+
+Implement the context manager protocol for complex resources.
+
+```python
+class DatabaseConnection:
+    """Database connection with automatic cleanup."""
+
+    def __init__(self, dsn: str) -> None:
+        self._dsn = dsn
+        self._conn: Connection | None = None
+
+    def connect(self) -> None:
+        """Establish database connection."""
+        self._conn = psycopg.connect(self._dsn)
+
+    def close(self) -> None:
+        """Close connection if open."""
+        if self._conn is not None:
+            self._conn.close()
+            self._conn = None
+
+    def __enter__(self) -> "DatabaseConnection":
+        """Enter context: connect and return self."""
+        self.connect()
+        return self
+
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        """Exit context: always close connection."""
+        self.close()
+
+# Usage with context manager (preferred)
+with DatabaseConnection(dsn) as db:
+    result = db.execute(query)
+
+# Manual management when needed
+db = DatabaseConnection(dsn)
+db.connect()
+try:
+    result = db.execute(query)
+finally:
+    db.close()
+```
+
+#### Pattern 2: Async Context Manager
+
+For async resources, implement the async protocol.
+
+```python
+class AsyncDatabasePool:
+    """Async database connection pool."""
+
+    def __init__(self, dsn: str, min_size: int = 1, max_size: int = 10) -> None:
+        self._dsn = dsn
+        self._min_size = min_size
+        self._max_size = max_size
+        self._pool: asyncpg.Pool | None = None
+
+    async def __aenter__(self) -> "AsyncDatabasePool":
+        """Create connection pool."""
+        self._pool = await asyncpg.create_pool(
+            self._dsn,
+            min_size=self._min_size,
+            max_size=self._max_size,
+        )
+        return self
+
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        """Close all connections in pool."""
+        if self._pool is not None:
+            await self._pool.close()
+
+    async def execute(self, query: str, *args) -> list[dict]:
+        """Execute query using pooled connection."""
+        async with self._pool.acquire() as conn:
+            return await conn.fetch(query, *args)
+
+# Usage
+async with AsyncDatabasePool(dsn) as pool:
+    users = await pool.execute("SELECT * FROM users WHERE active = $1", True)
+```
+
+#### Pattern 3: Using @contextmanager Decorator
+
+Simplify context managers with the decorator for straightforward cases.
+
+```python
+from contextlib import contextmanager, asynccontextmanager
+import time
+import structlog
+
+logger = structlog.get_logger()
+
+@contextmanager
+def timed_block(name: str):
+    """Time a block of code."""
+    start = time.perf_counter()
+    try:
+        yield
+    finally:
+        elapsed = time.perf_counter() - start
+        logger.info(f"{name} completed", duration_seconds=round(elapsed, 3))
+
+# Usage
+with timed_block("data_processing"):
+    process_large_dataset()
+
+@asynccontextmanager
+async def database_transaction(conn: AsyncConnection):
+    """Manage database transaction."""
+    await conn.execute("BEGIN")
+    try:
+        yield conn
+        await conn.execute("COMMIT")
+    except BaseException:  # also roll back on asyncio.CancelledError
+        await conn.execute("ROLLBACK")
+        raise
+
+# Usage
+async with database_transaction(conn) as tx:
+    await tx.execute("INSERT INTO users ...")
+    await tx.execute("INSERT INTO audit_log ...")
+```
+
+#### Pattern 4: Unconditional Resource Release
+
+Always clean up resources in `__exit__`, regardless of exceptions.
+
+```python
+class FileProcessor:
+    """Process file with guaranteed cleanup."""
+
+    def __init__(self, path: str) -> None:
+        self._path = path
+        self._file: IO | None = None
+        self._temp_files: list[Path] = []
+
+    def __enter__(self) -> "FileProcessor":
+        self._file = open(self._path, "r")
+        return self
+
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        """Clean up all resources unconditionally."""
+        # Close main file
+        if self._file is not None:
+            self._file.close()
+
+        # Clean up any temporary files
+        for temp_file in self._temp_files:
+            try:
+                temp_file.unlink()
+            except OSError:
+                pass  # Best effort cleanup
+
+        # Return None/False to propagate any exception
+```
+
+## Python Configuration Management
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-configuration/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: Typed Settings with Pydantic
+
+Create a central settings class that loads and validates all configuration.
+
+```python
+from pydantic_settings import BaseSettings
+from pydantic import Field, PostgresDsn, ValidationError
+import sys
+
+class Settings(BaseSettings):
+    """Application configuration loaded from environment variables."""
+
+    # Database
+    db_host: str = Field(alias="DB_HOST")
+    db_port: int = Field(default=5432, alias="DB_PORT")
+    db_name: str = Field(alias="DB_NAME")
+    db_user: str = Field(alias="DB_USER")
+    db_password: str = Field(alias="DB_PASSWORD")
+
+    # Redis
+    redis_url: str = Field(default="redis://localhost:6379", alias="REDIS_URL")
+
+    # API Keys
+    api_secret_key: str = Field(alias="API_SECRET_KEY")
+
+    # Feature flags
+    enable_new_feature: bool = Field(default=False, alias="ENABLE_NEW_FEATURE")
+
+    model_config = {
+        "env_file": ".env",
+        "env_file_encoding": "utf-8",
+    }
+
+# Create singleton instance at module load
+try:
+    settings = Settings()
+except ValidationError as e:
+    print(f"Configuration error:\n{e}")
+    sys.exit(1)
+```
+
+Import `settings` throughout your application:
+
+```python
+from myapp.config import settings
+
+def get_database_connection():
+    return connect(
+        host=settings.db_host,
+        port=settings.db_port,
+        database=settings.db_name,
+    )
+```
+
+#### Pattern 2: Fail Fast on Missing Configuration
+
+Required settings should crash the application immediately with a clear error.
+
+```python
+from pydantic_settings import BaseSettings
+from pydantic import Field, ValidationError
+import sys
+
+class Settings(BaseSettings):
+    # Required - no default means it must be set
+    api_key: str = Field(alias="API_KEY")
+    database_url: str = Field(alias="DATABASE_URL")
+
+    # Optional with defaults
+    log_level: str = Field(default="INFO", alias="LOG_LEVEL")
+
+try:
+    settings = Settings()
+except ValidationError as e:
+    print("=" * 60)
+    print("CONFIGURATION ERROR")
+    print("=" * 60)
+    for error in e.errors():
+        field = error["loc"][0]
+        print(f"  - {field}: {error['msg']}")
+    print("\nPlease set the required environment variables.")
+    sys.exit(1)
+```
+
+A clear error at startup is better than a cryptic `None` failure mid-request.
+
+#### Pattern 3: Local Development Defaults
+
+Provide sensible defaults for local development while requiring explicit values for secrets.
+
+```python
+class Settings(BaseSettings):
+    # Has local default, but prod will override
+    db_host: str = Field(default="localhost", alias="DB_HOST")
+    db_port: int = Field(default=5432, alias="DB_PORT")
+
+    # Always required - no default for secrets
+    db_password: str = Field(alias="DB_PASSWORD")
+    api_secret_key: str = Field(alias="API_SECRET_KEY")
+
+    # Development convenience
+    debug: bool = Field(default=False, alias="DEBUG")
+
+    model_config = {"env_file": ".env"}
+```
+
+Create a `.env` file for local development (never commit this):
+
+```bash
+# .env (add to .gitignore)
+DB_PASSWORD=local_dev_password
+API_SECRET_KEY=dev-secret-key
+DEBUG=true
+```
+
+#### Pattern 4: Namespaced Environment Variables
+
+Prefix related variables for clarity and easy debugging.
+
+```bash
+# Database configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=myapp
+DB_USER=admin
+DB_PASSWORD=secret
+
+# Redis configuration
+REDIS_URL=redis://localhost:6379
+REDIS_MAX_CONNECTIONS=10
+
+# Authentication
+AUTH_SECRET_KEY=your-secret-key
+AUTH_TOKEN_EXPIRY_SECONDS=3600
+AUTH_ALGORITHM=HS256
+
+# Feature flags
+FEATURE_NEW_CHECKOUT=true
+FEATURE_BETA_UI=false
+```
+
+Makes the database settings easy to list for debugging. Print only the names, so no value (such as a password inside a connection URL) reaches your terminal or logs:
+
+```bash
+env | grep -o '^DB_[A-Za-z0-9_]*'
+```
+
+## Async Python Patterns
+
+<!-- source: wshobson/agents plugins/python-development/skills/async-python-patterns/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: Basic Async/Await
+
+```python
+import asyncio
+
+async def fetch_data(url: str) -> dict:
+    """Fetch data from URL asynchronously."""
+    await asyncio.sleep(1)  # Simulate I/O
+    return {"url": url, "data": "result"}
+
+async def main():
+    result = await fetch_data("https://api.example.com")
+    print(result)
+
+asyncio.run(main())
+```
+
+#### Pattern 2: Concurrent Execution with gather()
+
+```python
+import asyncio
+from typing import List
+
+async def fetch_user(user_id: int) -> dict:
+    """Fetch user data."""
+    await asyncio.sleep(0.5)
+    return {"id": user_id, "name": f"User {user_id}"}
+
+async def fetch_all_users(user_ids: List[int]) -> List[dict]:
+    """Fetch multiple users concurrently."""
+    tasks = [fetch_user(uid) for uid in user_ids]
+    results = await asyncio.gather(*tasks)
+    return results
+
+async def main():
+    user_ids = [1, 2, 3, 4, 5]
+    users = await fetch_all_users(user_ids)
+    print(f"Fetched {len(users)} users")
+
+asyncio.run(main())
+```
+
+#### Pattern 3: Task Creation and Management
+
+```python
+import asyncio
+
+async def background_task(name: str, delay: int):
+    """Long-running background task."""
+    print(f"{name} started")
+    await asyncio.sleep(delay)
+    print(f"{name} completed")
+    return f"Result from {name}"
+
+async def main():
+    # Create tasks
+    task1 = asyncio.create_task(background_task("Task 1", 2))
+    task2 = asyncio.create_task(background_task("Task 2", 1))
+
+    # Do other work
+    print("Main: doing other work")
+    await asyncio.sleep(0.5)
+
+    # Wait for tasks
+    result1 = await task1
+    result2 = await task2
+
+    print(f"Results: {result1}, {result2}")
+
+asyncio.run(main())
+```
+
+#### Pattern 4: Error Handling in Async Code
+
+```python
+import asyncio
+from typing import List, Optional
+
+async def risky_operation(item_id: int) -> dict:
+    """Operation that might fail."""
+    await asyncio.sleep(0.1)
+    if item_id % 3 == 0:
+        raise ValueError(f"Item {item_id} failed")
+    return {"id": item_id, "status": "success"}
+
+async def safe_operation(item_id: int) -> Optional[dict]:
+    """Wrapper with error handling."""
+    try:
+        return await risky_operation(item_id)
+    except ValueError as e:
+        print(f"Error: {e}")
+        return None
+
+async def process_items(item_ids: List[int]):
+    """Process multiple items with error handling."""
+    tasks = [safe_operation(iid) for iid in item_ids]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    # Filter out failures
+    successful = [r for r in results if r is not None and not isinstance(r, Exception)]
+    failed = [r for r in results if r is None or isinstance(r, Exception)]
+
+    print(f"Success: {len(successful)}, Failed: {len(failed)}")
+    return successful
+
+asyncio.run(process_items([1, 2, 3, 4, 5, 6]))
+```
+
+#### Pattern 5: Timeout Handling
+
+```python
+import asyncio
+
+async def slow_operation(delay: int) -> str:
+    """Operation that takes time."""
+    await asyncio.sleep(delay)
+    return f"Completed after {delay}s"
+
+async def with_timeout():
+    """Execute operation with timeout."""
+    try:
+        result = await asyncio.wait_for(slow_operation(5), timeout=2.0)
+        print(result)
+    except asyncio.TimeoutError:
+        print("Operation timed out")
+
+asyncio.run(with_timeout())
+```
+
+## Python Project Structure & Module Architecture
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-project-structure/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: One Concept Per File
+
+Each file should focus on a single concept or closely related set of functions. Consider splitting when a file:
+
+- Handles multiple unrelated responsibilities
+- Grows beyond 300-500 lines (varies by complexity)
+- Contains classes that change for different reasons
+
+```python
+# Good: Focused files
+# user_service.py - User business logic
+# user_repository.py - User data access
+# user_models.py - User data structures
+
+# Avoid: Kitchen sink files
+# user.py - Contains service, repository, models, utilities...
+```
+
+#### Pattern 2: Explicit Public APIs with `__all__`
+
+Define the public interface for every module. Unlisted members are internal implementation details.
+
+```python
+# mypackage/services/__init__.py
+from .user_service import UserService
+from .order_service import OrderService
+from .exceptions import ServiceError, ValidationError
+
+__all__ = [
+    "UserService",
+    "OrderService",
+    "ServiceError",
+    "ValidationError",
+]
+
+# Internal helpers remain private by omission
+# from .internal_helpers import _validate_input  # Not exported
+```
+
+#### Pattern 3: Flat Directory Structure
+
+Prefer minimal nesting. Deep hierarchies make imports verbose and navigation difficult.
+
+```
+# Preferred: Flat structure
+project/
+├── api/
+│   ├── routes.py
+│   └── middleware.py
+├── services/
+│   ├── user_service.py
+│   └── order_service.py
+├── models/
+│   ├── user.py
+│   └── order.py
+└── utils/
+    └── validation.py
+
+# Avoid: Deep nesting
+project/core/internal/services/impl/user/
+```
+
+Add sub-packages only when there's a genuine sub-domain requiring isolation.
+
+#### Pattern 4: Test File Organization
+
+Choose one approach and apply it consistently throughout the project.
+
+**Option A: Colocated Tests**
+
+```
+src/
+├── user_service.py
+├── test_user_service.py
+├── order_service.py
+└── test_order_service.py
+```
+
+Benefits: Tests live next to the code they verify. Easy to see coverage gaps.
+
+**Option B: Parallel Test Directory**
+
+```
+src/
+├── services/
+│   ├── user_service.py
+│   └── order_service.py
+tests/
+├── services/
+│   ├── test_user_service.py
+│   └── test_order_service.py
+```
+
+Benefits: Clean separation between production and test code. Standard for larger projects.
+
+## Django Expert
+
+<!-- source: Jeffallan/claude-skills skills/django-expert/SKILL.md#minimal-working-example -->
+
+### Minimal Working Example
+
+The snippet below demonstrates the core MUST DO constraints: indexed fields, `select_related`, serializer validation, and endpoint permissions.
+
+```python
+# models.py
+from django.db import models
+
+class Article(models.Model):
+    title = models.CharField(max_length=255, db_index=True)
+    author = models.ForeignKey(
+        "auth.User", on_delete=models.CASCADE, related_name="articles"
+    )
+    published_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+    class Meta:
+        ordering = ["-published_at"]
+        indexes = [models.Index(fields=["author", "published_at"])]
+
+    def __str__(self):
+        return self.title
+
+# serializers.py
+from rest_framework import serializers
+from .models import Article
+
+class ArticleSerializer(serializers.ModelSerializer):
+    author_username = serializers.CharField(source="author.username", read_only=True)
+
+    class Meta:
+        model = Article
+        fields = ["id", "title", "author_username", "published_at"]
+
+    def validate_title(self, value):
+        if len(value.strip()) < 3:
+            raise serializers.ValidationError("Title must be at least 3 characters.")
+        return value.strip()
+
+# views.py
+from rest_framework import viewsets, permissions
+from .models import Article
+from .serializers import ArticleSerializer
+
+class ArticleViewSet(viewsets.ModelViewSet):
+    """
+    Uses select_related to avoid N+1 on author lookups.
+    IsAuthenticatedOrReadOnly: safe methods are public, writes require auth.
+    """
+    serializer_class = ArticleSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def get_queryset(self):
+        return Article.objects.select_related("author").all()
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+```
+
+```python
+# tests.py
+from rest_framework.test import APITestCase
+from rest_framework import status
+from django.contrib.auth.models import User
+
+class ArticleAPITest(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user("alice", password="<test-password>")
+
+    def test_list_public(self):
+        res = self.client.get("/api/articles/")
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+    def test_create_requires_auth(self):
+        res = self.client.post("/api/articles/", {"title": "Test"})
+        self.assertEqual(res.status_code, status.HTTP_403_FORBIDDEN)
+
+    def test_create_authenticated(self):
+        self.client.force_authenticate(self.user)
+        res = self.client.post("/api/articles/", {"title": "Hello Django"})
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED)
+```

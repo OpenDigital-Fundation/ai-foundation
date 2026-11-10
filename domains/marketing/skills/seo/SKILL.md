@@ -164,3 +164,4 @@ Load only what the task needs:
 - [`references/answer-engines.md`](references/answer-engines.md) — covers AEO Foundations Architect; Date YYYY-MM-DD; Key Pages; Content by Topic
 - [`references/app-stores.md`](references/app-stores.md) — covers App Store Optimizer; Keyword Research and Analysis; Metadata Optimization; App Icon Design Principles
 - [`references/answer-search/README.md`](references/answer-search/README.md) — covers Search & AI Optimization Expert
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Structured data (JSON-LD); Implementation Framework; Technical SEO; On-page SEO

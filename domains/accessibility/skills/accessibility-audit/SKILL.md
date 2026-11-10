@@ -108,6 +108,7 @@ Authoritative specifications for this skill: `skills/a11y-core/references/source
 Load only what the task needs:
 
 - [`references/audit-method.md`](references/audit-method.md) — covers Accessibility Auditor; Audit Overview; Testing Methodology; Summary
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Common Accessibility Issues & Fixes; Perceivable; Understandable; Robust; Target and Level Configuration; Checklists
 - `references/a11y-core/` — shared findings schema, dispatch and report rules
 - `references/accessibility-statement/`
 - `references/compliance-mapping/` — legal frameworks and VPAT

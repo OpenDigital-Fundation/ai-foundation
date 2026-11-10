@@ -17,6 +17,7 @@ def preflight(root: Path, sources: Path, recipes: dict, packs: dict | None = Non
     declared = {a["id"]: set(a.get("supersedes", [])) for m in load(root).values() for a in m["artifacts"]}
 
     def source(src: str, path: str, directory: bool = False) -> Path:
+        path = path.partition("#")[0]
         if src not in lock or lock[src]["policy"] != "merge":
             raise ValueError(f"source '{src}' is not approved for copying")
         clone = (sources / src.replace("/", "_")).resolve()

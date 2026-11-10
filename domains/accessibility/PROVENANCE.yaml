@@ -119,6 +119,28 @@ files:
     path: skills/web-accessibility-wizard/references/delegation-and-scan-context.md
     license: MIT
     modification: adapted
+- path: skills/accessibility-audit/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/creative-design/accessibility-auditor/SKILL.md#common-accessibility-issues-fixes
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/accessibility/SKILL.md#perceivable,understandable,robust
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/ui-design/commands/accessibility-audit.md#target-and-level-configuration
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/accessibility.agent.md#checklists
+    license: MIT
+    modification: merged-section
 - path: skills/accessibility-audit/references/dispatch-matrix.md
   derived_from:
   - source: Community-Access/accessibility-agents

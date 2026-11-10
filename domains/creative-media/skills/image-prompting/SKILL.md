@@ -31,3 +31,4 @@ Load only what the task needs:
 
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/inclusive-visuals.md`](references/inclusive-visuals.md) — covers Inclusive Visuals Specialist
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Animated GIF Annotations; Image Diffing

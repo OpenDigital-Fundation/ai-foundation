@@ -87,3 +87,4 @@ Load only what the task needs:
 - [`references/enterprise-operations.md`](references/enterprise-operations.md) — covers Enterprise Ops
 - [`references/session-observability/README.md`](references/session-observability/README.md) — upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass and fail-closed behaviour; never log prompts or tool input unredacted
 - [`references/customizations/README.md`](references/customizations/README.md) — covers Custom File Guidelines; Dynamic Parameters; Your Mission; Variable Resolution Strategy
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: How to work; Choose a route; Shared decision rules

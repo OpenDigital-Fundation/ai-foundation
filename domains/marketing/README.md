@@ -36,8 +36,8 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `campaign-planning` | affaan-m/ECC, msitarzewski/agency-agents |
-| `content-marketing` | affaan-m/ECC, msitarzewski/agency-agents |
-| `email-marketing` | affaan-m/ECC, msitarzewski/agency-agents |
-| `paid-media` | msitarzewski/agency-agents |
-| `seo` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `campaign-planning` | affaan-m/ECC, davila7/claude-code-templates, msitarzewski/agency-agents |
+| `content-marketing` | affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents |
+| `email-marketing` | affaan-m/ECC, davila7/claude-code-templates, msitarzewski/agency-agents |
+| `paid-media` | github/awesome-copilot, msitarzewski/agency-agents |
+| `seo` | affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents |

@@ -209,3 +209,17 @@ Remaining errors: 0
 Final: `Build Status: SUCCESS/FAILED | Errors Fixed: N | Files Modified: list`
 
 For detailed Dart patterns and code examples, see `related: `languages:dart` (`references/review.md`)`.
+
+## Flutter Expert
+
+<!-- source: Jeffallan/claude-skills skills/flutter-expert/SKILL.md#troubleshooting-common-failures -->
+
+### Troubleshooting Common Failures
+
+| Symptom | Likely Cause | Recovery |
+|---------|-------------|----------|
+| `flutter analyze` errors | Unresolved imports, missing `const`, type mismatches | Fix flagged lines; run `flutter pub get` if imports are missing |
+| Widget test assertion failures | Widget tree mismatch or async state not settled | Use `tester.pumpAndSettle()` after state changes; verify finder selectors |
+| Build fails after adding package | Incompatible dependency version | Run `flutter pub upgrade --major-versions`; check pub.dev compatibility |
+| Jank / dropped frames | Expensive `build()` calls, uncached widgets, heavy main-thread work | Use `RepaintBoundary`, move heavy work to `compute()`, add `const` |
+| Hot reload not reflecting changes | State held in `Notifier` not reset | Use hot restart (`R` in terminal) to reset full app state |

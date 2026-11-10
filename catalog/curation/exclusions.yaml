@@ -1727,10 +1727,6 @@ excluded:
   reason: duplicate-of
   into:
   - testing/browser-testing
-- key: "openai/skills:skill:playwright-interactive"
-  reason: duplicate-of
-  into:
-  - testing/browser-testing
 - key: "openai/skills:skill:plugin-creator"
   reason: vendor-specific
   note: Scaffolds the Codex plugin manifest and marketplace; skill-authoring does not cover packaging. Reopen with a packaging spec in agent-engineering if a Codex adapter is wanted.
@@ -1863,10 +1859,6 @@ excluded:
 - key: "getsentry/skills:skill:django-access-review"
   reason: license
   note: Declares it is based on the OWASP Cheat Sheet Series (CC BY-SA 4.0); linked from security/external-references.
-- key: "github/awesome-copilot:skill:acquire-codebase-knowledge"
-  reason: duplicate-of
-  into:
-  - architecture/codebase-onboarding
 - key: "github/awesome-copilot:skill:acreadiness-assess"
   reason: vendor-specific
   note: Wraps a specific product, hosted service or harness CLI.
@@ -1890,10 +1882,6 @@ excluded:
 - key: "github/awesome-copilot:skill:adobe-illustrator-scripting"
   reason: vendor-specific
   note: Bound to one product or service.
-- key: "github/awesome-copilot:skill:agent-architecture"
-  reason: duplicate-of
-  into:
-  - agent-engineering/harness-design
 - key: "github/awesome-copilot:skill:agent-governance"
   reason: duplicate-of
   into:
@@ -2070,10 +2058,6 @@ excluded:
   reason: duplicate-of
   into:
   - ai-engineering/prompt-engineering
-- key: "github/awesome-copilot:skill:brag-sheet"
-  reason: duplicate-of
-  into:
-  - operations/people-operations
 - key: "github/awesome-copilot:skill:breakdown-epic-arch"
   reason: duplicate-of
   into:
@@ -2214,10 +2198,6 @@ excluded:
 - key: "github/awesome-copilot:skill:cosmosdb-datamodeling"
   reason: vendor-specific
   note: Bound to one product or service.
-- key: "github/awesome-copilot:skill:create-agentsmd"
-  reason: duplicate-of
-  into:
-  - architecture/codebase-onboarding
 - key: "github/awesome-copilot:skill:create-architectural-decision-record"
   reason: duplicate-of
   into:
@@ -2281,10 +2261,6 @@ excluded:
   reason: duplicate-of
   into:
   - data/database-migrations
-- key: "github/awesome-copilot:skill:creating-oracle-to-postgres-migration-integration-tests"
-  reason: duplicate-of
-  into:
-  - data/database-migrations
 - key: "github/awesome-copilot:skill:csharp-async"
   reason: duplicate-of
   into:
@@ -2309,10 +2285,6 @@ excluded:
   reason: duplicate-of
   into:
   - languages/dotnet
-- key: "github/awesome-copilot:skill:cypress-flake-fixer"
-  reason: duplicate-of
-  into:
-  - testing/browser-testing
 - key: "github/awesome-copilot:skill:d365-solution-blueprint"
   reason: vendor-specific
   note: Bound to one product or service.
@@ -2371,10 +2343,6 @@ excluded:
   into:
   - debugging/build-failure-resolution
 - key: "github/awesome-copilot:skill:doc-and-modernize"
-  reason: duplicate-of
-  into:
-  - documents/technical-writing
-- key: "github/awesome-copilot:skill:docs-sync-audit"
   reason: duplicate-of
   into:
   - documents/technical-writing
@@ -2544,14 +2512,6 @@ excluded:
 - key: "github/awesome-copilot:skill:gh-attach"
   reason: vendor-specific
   note: Wraps a specific product, hosted service or harness CLI.
-- key: "github/awesome-copilot:skill:git-commit"
-  reason: duplicate-of
-  into:
-  - platform/git-workflow
-- key: "github/awesome-copilot:skill:git-flow-branch-creator"
-  reason: duplicate-of
-  into:
-  - platform/git-workflow
 - key: "github/awesome-copilot:skill:github-actions-efficiency"
   reason: duplicate-of
   into:
@@ -2590,10 +2550,6 @@ excluded:
   reason: duplicate-of
   into:
   - ai-engineering/mcp-server-development
-- key: "github/awesome-copilot:skill:gsap-framer-scroll-animation"
-  reason: duplicate-of
-  into:
-  - ui/motion-and-polish
 - key: "github/awesome-copilot:skill:gtm-0-to-1-launch"
   reason: duplicate-of
   into:
@@ -2602,19 +2558,11 @@ excluded:
   reason: duplicate-of
   into:
   - marketing/campaign-planning
-- key: "github/awesome-copilot:skill:gtm-board-and-investor-communication"
-  reason: duplicate-of
-  into:
-  - sales/investor-relations
 - key: "github/awesome-copilot:skill:gtm-developer-ecosystem"
   reason: duplicate-of
   into:
   - marketing/campaign-planning
 - key: "github/awesome-copilot:skill:gtm-enterprise-account-planning"
-  reason: duplicate-of
-  into:
-  - sales/deal-strategy
-- key: "github/awesome-copilot:skill:gtm-enterprise-onboarding"
   reason: duplicate-of
   into:
   - sales/deal-strategy
@@ -2638,17 +2586,9 @@ excluded:
   reason: duplicate-of
   into:
   - product/product-management
-- key: "github/awesome-copilot:skill:image-annotations"
-  reason: duplicate-of
-  into:
-  - creative-media/image-prompting
 - key: "github/awesome-copilot:skill:image-manipulation-image-magick"
   reason: out-of-scope
   note: Niche topic without an owning capability; reopen with a domain spec if demand appears.
-- key: "github/awesome-copilot:skill:impediment-prioritization"
-  reason: duplicate-of
-  into:
-  - operations/project-management
 - key: "github/awesome-copilot:skill:import-infrastructure-as-code"
   reason: duplicate-of
   into:
@@ -2665,10 +2605,6 @@ excluded:
   into:
   - platform/github-operations
 - key: "github/awesome-copilot:skill:java-add-graalvm-native-image-support"
-  reason: duplicate-of
-  into:
-  - languages/jvm
-- key: "github/awesome-copilot:skill:java-debugging"
   reason: duplicate-of
   into:
   - languages/jvm
@@ -2764,22 +2700,10 @@ excluded:
 - key: "github/awesome-copilot:skill:macos-golden-gate-design"
   reason: out-of-scope
   note: Niche topic without an owning capability; reopen with a domain spec if demand appears.
-- key: "github/awesome-copilot:skill:make-blog-post"
-  reason: duplicate-of
-  into:
-  - marketing/content-marketing
 - key: "github/awesome-copilot:skill:make-repo-contribution"
   reason: duplicate-of
   into:
   - platform/git-workflow
-- key: "github/awesome-copilot:skill:markdown-to-html"
-  reason: duplicate-of
-  into:
-  - documents/technical-writing
-- key: "github/awesome-copilot:skill:markdown-to-word-mermaid"
-  reason: duplicate-of
-  into:
-  - documents/office-documents
 - key: "github/awesome-copilot:skill:markstream-install"
   reason: vendor-specific
   note: Wraps a specific product, hosted service or harness CLI.
@@ -2819,10 +2743,6 @@ excluded:
   reason: duplicate-of
   into:
   - agent-engineering/agent-memory
-- key: "github/awesome-copilot:skill:mentoring-juniors"
-  reason: duplicate-of
-  into:
-  - operations/people-operations
 - key: "github/awesome-copilot:skill:microsoft-agent-framework"
   reason: vendor-specific
   note: Bound to one product or service.
@@ -2849,10 +2769,6 @@ excluded:
 - key: "github/awesome-copilot:skill:minecraft-plugin-development"
   reason: out-of-scope
   note: Niche topic without an owning capability; reopen with a domain spec if demand appears.
-- key: "github/awesome-copilot:skill:mini-context-graph"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-memory
 - key: "github/awesome-copilot:skill:mkdocs-translations"
   reason: out-of-scope
   note: Niche topic without an owning capability; reopen with a domain spec if demand appears.
@@ -3134,19 +3050,11 @@ excluded:
 - key: "github/awesome-copilot:skill:qdrant-vertical-scaling"
   reason: vendor-specific
   note: Bound to one product or service.
-- key: "github/awesome-copilot:skill:quality-playbook"
-  reason: duplicate-of
-  into:
-  - testing/test-strategy
 - key: "github/awesome-copilot:skill:quarkus-application-development"
   reason: duplicate-of
   into:
   - languages/jvm
 - key: "github/awesome-copilot:skill:quarkus-dev-services-and-testing"
-  reason: duplicate-of
-  into:
-  - languages/jvm
-- key: "github/awesome-copilot:skill:quarkus-native-and-container"
   reason: duplicate-of
   into:
   - languages/jvm
@@ -3206,10 +3114,6 @@ excluded:
   reason: duplicate-of
   into:
   - platform/git-workflow
-- key: "github/awesome-copilot:skill:refactor"
-  reason: duplicate-of
-  into:
-  - code-quality/simplification
 - key: "github/awesome-copilot:skill:refactor-method-complexity-reduce"
   reason: duplicate-of
   into:
@@ -3226,10 +3130,6 @@ excluded:
   reason: duplicate-of
   into:
   - agent-engineering/agent-memory
-- key: "github/awesome-copilot:skill:repo-standardizer"
-  reason: duplicate-of
-  into:
-  - platform/github-operations
 - key: "github/awesome-copilot:skill:repo-story-time"
   reason: duplicate-of
   into:
@@ -3252,10 +3152,6 @@ excluded:
 - key: "github/awesome-copilot:skill:rhino3d-scripts"
   reason: out-of-scope
   note: Niche topic without an owning capability; reopen with a domain spec if demand appears.
-- key: "github/awesome-copilot:skill:roslyn-analyzers"
-  reason: duplicate-of
-  into:
-  - languages/dotnet
 - key: "github/awesome-copilot:skill:roundup"
   reason: vendor-specific
   note: Wraps a specific product, hosted service or harness CLI.
@@ -3309,10 +3205,6 @@ excluded:
 - key: "github/awesome-copilot:skill:semantic-kernel"
   reason: vendor-specific
   note: Bound to one product or service.
-- key: "github/awesome-copilot:skill:server-side-conversion-tracking"
-  reason: duplicate-of
-  into:
-  - marketing/paid-media
 - key: "github/awesome-copilot:skill:setup-my-iq"
   reason: vendor-specific
   note: Bound to one product or service.
@@ -3452,10 +3344,6 @@ excluded:
 - key: "github/awesome-copilot:skill:typespec-create-api-plugin"
   reason: vendor-specific
   note: Bound to one product or service.
-- key: "github/awesome-copilot:skill:ui-screenshots"
-  reason: duplicate-of
-  into:
-  - testing/browser-testing
 - key: "github/awesome-copilot:skill:unit-test-vue-pinia"
   reason: duplicate-of
   into:
@@ -3488,10 +3376,6 @@ excluded:
 - key: "github/awesome-copilot:skill:vardoger-analyze"
   reason: vendor-specific
   note: Wraps a specific product, hosted service or harness CLI.
-- key: "github/awesome-copilot:skill:vcpkg"
-  reason: duplicate-of
-  into:
-  - languages/cpp
 - key: "github/awesome-copilot:skill:vscode-ext-commands"
   reason: out-of-scope
   note: Niche topic without an owning capability; reopen with a domain spec if demand appears.
@@ -3528,18 +3412,9 @@ excluded:
 - key: "github/awesome-copilot:skill:workshop-create"
   reason: source-internal
   note: Part of the collection's own desk, workshop or persona conventions.
-- key: "github/awesome-copilot:skill:write-coding-standards-from-file"
-  reason: duplicate-of
-  into:
-  - code-quality/simplification
 - key: "github/awesome-copilot:skill:x-twitter-scraper"
   reason: vendor-specific
   note: Wraps a specific product, hosted service or harness CLI.
-- key: "github/awesome-copilot:agent:Accessibility Expert"
-  reason: duplicate-of
-  into:
-  - accessibility/accessibility-audit
-  note: 'agents/accessibility.agent.md: Capacidade já coberta por accessibility/accessibility-audit: SKILL.md: phases, gates e output contract já governam auditoria, coordenação e relatório de acessibilidade; o invólucro/persona/handoff específico do upstream não acrescenta capacidade que justifique uma entrada paralela.'
 - key: "github/awesome-copilot:agent:VS Code Insiders Accessibility Tracker"
   reason: vendor-specific
   note: 'agents/insiders-a11y-tracker.agent.md: Foco declarado: Specialized agent for tracking and analyzing accessibility improvements in VS Code Insiders builds; o procedimento exige o produto, serviço, extensão ou ferramentas próprios citados no arquivo, sem contribuição genérica selecionada nesta fatia.'
@@ -3555,11 +3430,6 @@ excluded:
 - key: "github/awesome-copilot:agent:CAST Imaging Structural Quality Advisor Agent"
   reason: vendor-specific
   note: 'agents/cast-imaging-structural-quality-advisor.agent.md: Foco declarado: Specialized agent for identifying, analyzing, and providing remediation guidance for code quality issues using CAST Imaging; o procedimento exige o produto, serviço, extensão ou ferramentas próprios citados no arquivo, sem contribuição genérica selecionada nesta fatia.'
-- key: "github/awesome-copilot:agent:Context7-Expert"
-  reason: duplicate-of
-  into:
-  - research/docs-lookup
-  note: 'agents/context7.agent.md: Capacidade já coberta por research/docs-lookup: SKILL.md: Core Concepts, How it works e Best Practices já resolvem documentação externa por biblioteca/versão com Context7; o invólucro/persona/handoff específico do upstream não acrescenta capacidade que justifique uma entrada paralela.'
 - key: "github/awesome-copilot:agent:Custom Agent Foundry"
   reason: vendor-specific
   note: 'agents/custom-agent-foundry.agent.md: Foco declarado: Expert at designing and creating VS Code custom agents with optimal configurations; o procedimento exige o produto, serviço, extensão ou ferramentas próprios citados no arquivo, sem contribuição genérica selecionada nesta fatia.'
@@ -4436,26 +4306,11 @@ excluded:
   into:
   - accessibility/accessibility-audit
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "wshobson/agents:command:accessibility-audit"
-  reason: duplicate-of
-  into:
-  - accessibility/accessibility-audit
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
 - key: "davila7/claude-code-templates:command:svelte-a11y"
   reason: duplicate-of
   into:
   - languages/typescript
   note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
-- key: "davila7/claude-code-templates:skill:accessibility"
-  reason: duplicate-of
-  into:
-  - accessibility/accessibility-audit
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:accessibility-auditor"
-  reason: duplicate-of
-  into:
-  - accessibility/accessibility-audit
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:accessibility-compliance"
   reason: duplicate-of
   into:
@@ -4622,11 +4477,6 @@ excluded:
 - key: "davila7/claude-code-templates:agent:moc-agent"
   reason: out-of-scope
   note: "Media, podcast, OCR or note-vault production team; no owning capability."
-- key: "VoltAgent/awesome-claude-code-subagents:agent:multi-agent-coordinator"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-teams
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:multi-agent-coordinator"
   reason: duplicate-of
   into:
@@ -4721,16 +4571,6 @@ excluded:
   reason: duplicate-of
   into:
   - architecture/codebase-onboarding
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
-- key: "wshobson/agents:command:context-restore"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-memory
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
-- key: "wshobson/agents:command:context-save"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-memory
   note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
 - key: "davila7/claude-code-templates:command:feature-analyzer"
   reason: source-internal
@@ -5184,11 +5024,6 @@ excluded:
 - key: "davila7/claude-code-templates:rule:backgrounds"
   reason: vendor-specific
   note: "Bound to one product or hosted service. (HeyGen)."
-- key: "davila7/claude-code-templates:rule:base-vs-radix"
-  reason: duplicate-of
-  into:
-  - ui/component-styling
-  note: "shadcn/ui usage rules; covered by the owner's shadcn guidance."
 - key: "davila7/claude-code-templates:rule:bundle-barrel-imports"
   reason: duplicate-of
   into:
@@ -5227,19 +5062,9 @@ excluded:
   into:
   - languages/typescript
   note: "Near copy of vercel-labs/agent-skills:rule:client-swr-dedup (similarity 0.97), already merged into languages/typescript."
-- key: "davila7/claude-code-templates:rule:composition"
-  reason: duplicate-of
-  into:
-  - ui/component-styling
-  note: "shadcn/ui usage rules; covered by the owner's shadcn guidance."
 - key: "davila7/claude-code-templates:rule:dimensions"
   reason: vendor-specific
   note: "Bound to one product or hosted service. (HeyGen)."
-- key: "davila7/claude-code-templates:rule:forms"
-  reason: duplicate-of
-  into:
-  - ui/component-styling
-  note: "shadcn/ui usage rules; covered by the owner's shadcn guidance."
 - key: "davila7/claude-code-templates:rule:icons"
   reason: duplicate-of
   into:
@@ -5544,20 +5369,10 @@ excluded:
 - key: "davila7/claude-code-templates:skill:claude-code-sessions"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "davila7/claude-code-templates:skill:claude-d3js-skill"
-  reason: duplicate-of
-  into:
-  - creative-media/generative-art
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:computer-use-agents"
   reason: duplicate-of
   into:
   - agent-engineering/harness-design
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:context-architecture"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-memory
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:context-driven-development"
   reason: duplicate-of
@@ -5617,11 +5432,6 @@ excluded:
 - key: "davila7/claude-code-templates:skill:memory-search"
   reason: vendor-specific
   note: "Bound to one product or hosted service. (the folder wraps one service)."
-- key: "wshobson/agents:skill:multi-cloud-architecture"
-  reason: duplicate-of
-  into:
-  - platform/deployment
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:multi-reviewer-patterns"
   reason: duplicate-of
   into:
@@ -5671,11 +5481,6 @@ excluded:
 - key: "davila7/claude-code-templates:skill:seoagent"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "wshobson/agents:skill:session-guard"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-guardrails
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:session-handoff"
   reason: duplicate-of
   into:
@@ -5797,11 +5602,6 @@ excluded:
   into:
   - ai-engineering/rag-pipelines
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:llm-architect"
-  reason: duplicate-of
-  into:
-  - ai-engineering/rag-pipelines
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "wshobson/agents:agent:llm-finetuning-architect"
   reason: duplicate-of
   into:
@@ -5831,11 +5631,6 @@ excluded:
   - ai-engineering/mcp-server-development
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:mcp-developer"
-  reason: duplicate-of
-  into:
-  - ai-engineering/mcp-server-development
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:mcp-expert"
   reason: duplicate-of
   into:
   - ai-engineering/mcp-server-development
@@ -6124,19 +5919,9 @@ excluded:
   into:
   - agent-engineering/agent-evaluation
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:evaluation-methodology"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-evaluation
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:evaluation-nemo-evaluator"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "davila7/claude-code-templates:skill:fastmcp-server"
-  reason: duplicate-of
-  into:
-  - ai-engineering/mcp-server-development
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:html-injection-testing"
   reason: duplicate-of
   into:
@@ -6152,11 +5937,6 @@ excluded:
   reason: duplicate-of
   into:
   - agent-engineering/harness-design
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:llm-evaluation"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-evaluation
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:llm-evaluation"
   reason: duplicate-of
@@ -6187,11 +5967,6 @@ excluded:
   - ai-engineering/mcp-server-development
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:ml-engineer"
-  reason: duplicate-of
-  into:
-  - ai-engineering/ml-engineering
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:ml-paper-writing"
   reason: duplicate-of
   into:
   - ai-engineering/ml-engineering
@@ -6322,11 +6097,6 @@ excluded:
   - ai-engineering/rag-pipelines
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:rag-pinecone"
-  reason: duplicate-of
-  into:
-  - ai-engineering/rag-pipelines
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:rag-qdrant"
   reason: duplicate-of
   into:
   - ai-engineering/rag-pipelines
@@ -6495,11 +6265,6 @@ excluded:
   reason: duplicate-of
   into:
   - data/data-pipelines
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:database-architect"
-  reason: duplicate-of
-  into:
-  - data/database-design
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "wshobson/agents:agent:database-cloud-optimization-backend-architect"
   reason: duplicate-of
@@ -6724,11 +6489,6 @@ excluded:
   reason: duplicate-of
   into:
   - architecture/system-design
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "Jeffallan/claude-skills:skill:cloud-architect"
-  reason: duplicate-of
-  into:
-  - platform/deployment
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:cloud-architect"
   reason: duplicate-of
@@ -7022,21 +6782,11 @@ excluded:
 - key: "davila7/claude-code-templates:agent:smart-contract-auditor"
   reason: out-of-scope
   note: "Specialised domain (blockchain, games, niche languages, embedded, trading, reverse engineering) without an owning capability; reopen with a domain spec."
-- key: "wshobson/agents:agent:team-reviewer"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-teams
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:tech-debt-remediation-plan"
   reason: duplicate-of
   into:
   - code-quality/debt-ledger
   note: "Near copy of github/awesome-copilot:agent:Technical Debt Remediation Plan (similarity 0.88), already merged into code-quality/debt-ledger."
-- key: "davila7/claude-code-templates:agent:technical-debt-manager"
-  reason: duplicate-of
-  into:
-  - code-quality/simplification
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:terraform-iac-reviewer"
   reason: duplicate-of
   into:
@@ -7423,11 +7173,6 @@ excluded:
   - data/database-migrations
   note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
 - key: "wshobson/agents:command:data-driven-feature"
-  reason: duplicate-of
-  into:
-  - data/data-pipelines
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
-- key: "wshobson/agents:command:data-pipeline"
   reason: duplicate-of
   into:
   - data/data-pipelines
@@ -8019,11 +7764,6 @@ excluded:
   into:
   - architecture/api-design
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:avoid-ai-writing"
-  reason: duplicate-of
-  into:
-  - ai-engineering/prompt-engineering
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:avoid-ai-writing"
   reason: duplicate-of
   into:
@@ -8036,11 +7776,6 @@ excluded:
   reason: duplicate-of
   into:
   - documents/technical-writing
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:copywriting"
-  reason: duplicate-of
-  into:
-  - marketing/content-marketing
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:deep-research-notebooklm"
   reason: vendor-specific
@@ -8108,11 +7843,6 @@ excluded:
   into:
   - documents/office-documents
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:pdf-processing"
-  reason: duplicate-of
-  into:
-  - documents/office-documents
-  note: "Near copy of anthropics/skills:skill:pdf (similarity 0.93), already merged into documents/office-documents."
 - key: "davila7/claude-code-templates:skill:pdf-processing-pro"
   reason: duplicate-of
   into:
@@ -8440,11 +8170,6 @@ excluded:
   - languages/ruby
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:react-performance-optimization"
-  reason: duplicate-of
-  into:
-  - platform/reliability
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:react-performance-optimizer"
   reason: duplicate-of
   into:
   - platform/reliability
@@ -8792,11 +8517,6 @@ excluded:
   into:
   - languages/python
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:async-python-patterns"
-  reason: duplicate-of
-  into:
-  - languages/python
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:bun-development"
   reason: duplicate-of
   into:
@@ -8822,11 +8542,6 @@ excluded:
   into:
   - languages/dotnet
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "Jeffallan/claude-skills:skill:django-expert"
-  reason: duplicate-of
-  into:
-  - languages/python
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:django-pro"
   reason: duplicate-of
   into:
@@ -8836,11 +8551,6 @@ excluded:
   reason: duplicate-of
   into:
   - languages/dotnet
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:email-composer"
-  reason: duplicate-of
-  into:
-  - documents/internal-comms
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:error-handling-patterns"
   reason: duplicate-of
@@ -8866,11 +8576,6 @@ excluded:
   reason: duplicate-of
   into:
   - architecture/api-design
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "Jeffallan/claude-skills:skill:flutter-expert"
-  reason: duplicate-of
-  into:
-  - languages/dart
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:flutter-expert"
   reason: duplicate-of
@@ -9022,11 +8727,6 @@ excluded:
   into:
   - architecture/api-design
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "Jeffallan/claude-skills:skill:php-pro"
-  reason: duplicate-of
-  into:
-  - languages/php
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:php-pro"
   reason: duplicate-of
   into:
@@ -9041,16 +8741,6 @@ excluded:
   reason: duplicate-of
   into:
   - code-quality/simplification
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:python-code-style"
-  reason: duplicate-of
-  into:
-  - code-quality/simplification
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:python-configuration"
-  reason: duplicate-of
-  into:
-  - languages/python
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:python-design-patterns"
   reason: duplicate-of
@@ -9083,16 +8773,6 @@ excluded:
   - languages/python
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:python-pro"
-  reason: duplicate-of
-  into:
-  - languages/python
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:python-project-structure"
-  reason: duplicate-of
-  into:
-  - languages/python
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:python-resource-management"
   reason: duplicate-of
   into:
   - languages/python
@@ -9289,11 +8969,6 @@ excluded:
   into:
   - marketing/email-marketing
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:marketing-attribution-analyst"
-  reason: duplicate-of
-  into:
-  - marketing/campaign-planning
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:podcast-content-analyzer"
   reason: out-of-scope
   note: "Media, podcast, OCR or note-vault production team; no owning capability."
@@ -9385,11 +9060,6 @@ excluded:
   into:
   - marketing/campaign-planning
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:email-sequence"
-  reason: duplicate-of
-  into:
-  - marketing/email-marketing
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:linkedin-profile-optimizer"
   reason: out-of-scope
   note: "Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning capability."
@@ -9418,19 +9088,9 @@ excluded:
   into:
   - marketing/campaign-planning
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:programmatic-seo"
-  reason: duplicate-of
-  into:
-  - marketing/seo
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:roier-seo"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "davila7/claude-code-templates:skill:seo"
-  reason: duplicate-of
-  into:
-  - marketing/seo
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:seo-fundamentals"
   reason: duplicate-of
   into:
@@ -9448,16 +9108,6 @@ excluded:
   reason: duplicate-of
   into:
   - sales/deal-strategy
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:customer-success-manager"
-  reason: duplicate-of
-  into:
-  - sales/deal-strategy
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:customer-support"
-  reason: duplicate-of
-  into:
-  - operations/customer-support
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "wshobson/agents:agent:customer-support"
   reason: duplicate-of
@@ -10104,11 +9754,6 @@ excluded:
 - key: "davila7/claude-code-templates:agent:elasticsearch-observability"
   reason: vendor-specific
   note: "Near copy of github/awesome-copilot:agent:elasticsearch-agent (similarity 0.88); the same decision applies."
-- key: "VoltAgent/awesome-claude-code-subagents:agent:first-principles-thinking"
-  reason: duplicate-of
-  into:
-  - research/source-research
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:git-flow-manager"
   reason: duplicate-of
   into:
@@ -10135,11 +9780,6 @@ excluded:
   - platform/incident-response
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:incident-responder"
-  reason: duplicate-of
-  into:
-  - platform/incident-response
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "wshobson/agents:agent:incident-responder"
   reason: duplicate-of
   into:
   - platform/incident-response
@@ -10304,11 +9944,6 @@ excluded:
   - platform/github-operations
   note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
 - key: "davila7/claude-code-templates:command:flow-status"
-  reason: duplicate-of
-  into:
-  - platform/git-workflow
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
-- key: "davila7/claude-code-templates:command:git-bisect-helper"
   reason: duplicate-of
   into:
   - platform/git-workflow
@@ -10614,11 +10249,6 @@ excluded:
   into:
   - platform/deployment
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:docker-expert"
-  reason: duplicate-of
-  into:
-  - platform/deployment
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:docx-official"
   reason: duplicate-of
   into:
@@ -10660,11 +10290,6 @@ excluded:
   - platform/github-operations
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:github-actions-templates"
-  reason: duplicate-of
-  into:
-  - platform/github-operations
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:github-automation"
   reason: duplicate-of
   into:
   - platform/github-operations
@@ -10744,11 +10369,6 @@ excluded:
   into:
   - documents/office-documents
   note: "Near copy of anthropics/skills:skill:pptx (similarity 0.82), already merged into documents/office-documents."
-- key: "davila7/claude-code-templates:skill:pricing-strategy"
-  reason: duplicate-of
-  into:
-  - product/product-management
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:railway-deploy"
   reason: vendor-specific
   note: "Bound to one product or hosted service. (the folder wraps one service)."
@@ -10778,11 +10398,6 @@ excluded:
   into:
   - platform/reliability
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:social-content"
-  reason: duplicate-of
-  into:
-  - marketing/content-marketing
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:social-evidence-research"
   reason: duplicate-of
   into:
@@ -10797,11 +10412,6 @@ excluded:
   reason: duplicate-of
   into:
   - platform/reliability
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:startup-financial-modeling"
-  reason: duplicate-of
-  into:
-  - finance/financial-analysis
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:vercel-deploy"
   reason: vendor-specific
@@ -10825,11 +10435,6 @@ excluded:
   - research/source-research
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:competitive-analyst"
-  reason: duplicate-of
-  into:
-  - research/source-research
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:competitive-intelligence-analyst"
   reason: duplicate-of
   into:
   - research/source-research
@@ -10875,11 +10480,6 @@ excluded:
 - key: "davila7/claude-code-templates:skill:discernment-nudge"
   reason: out-of-scope
   note: "Near copy of anthropics/skills:skill:discernment-nudge (similarity 0.99); the same decision applies."
-- key: "davila7/claude-code-templates:skill:feedback-mastery"
-  reason: duplicate-of
-  into:
-  - documents/internal-comms
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:mechanistic-interpretability-saelens"
   reason: out-of-scope
   note: "Framework-specific model-training or serving recipe; ai-engineering/ml-engineering covers the method, not each library."
@@ -10944,11 +10544,6 @@ excluded:
   into:
   - agent-engineering/agent-teams
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:research-synthesizer"
-  reason: duplicate-of
-  into:
-  - research/source-research
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:research-technical-spike"
   reason: duplicate-of
   into:
@@ -10997,11 +10592,6 @@ excluded:
   into:
   - sales/prospecting
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:marketing-psychology"
-  reason: duplicate-of
-  into:
-  - marketing/campaign-planning
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:research-engineer"
   reason: duplicate-of
   into:
@@ -11010,11 +10600,6 @@ excluded:
 - key: "davila7/claude-code-templates:agent:guest-outreach-coordinator"
   reason: out-of-scope
   note: "Media, podcast, OCR or note-vault production team; no owning capability."
-- key: "davila7/claude-code-templates:agent:sales-automator"
-  reason: duplicate-of
-  into:
-  - sales/deal-strategy
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "wshobson/agents:agent:sales-automator"
   reason: duplicate-of
   into:
@@ -11293,11 +10878,6 @@ excluded:
   into:
   - legal-compliance/compliance-programs
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:data-privacy-compliance"
-  reason: duplicate-of
-  into:
-  - legal-compliance/compliance-programs
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:google-cloud-waf-security"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
@@ -11349,11 +10929,6 @@ excluded:
   into:
   - security/security-audit
   note: "Near copy of openai/skills:skill:security-best-practices (similarity 0.98); the same decision applies."
-- key: "davila7/claude-code-templates:skill:security-compliance"
-  reason: duplicate-of
-  into:
-  - legal-compliance/compliance-programs
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:security-ownership-map"
   reason: out-of-scope
   note: "Near copy of openai/skills:skill:security-ownership-map (similarity 0.99); the same decision applies."
@@ -11565,11 +11140,6 @@ excluded:
   into:
   - testing/browser-testing
   note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
-- key: "davila7/claude-code-templates:command:flaky-test-triage"
-  reason: duplicate-of
-  into:
-  - testing/test-strategy
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
 - key: "davila7/claude-code-templates:command:generate-test-cases"
   reason: duplicate-of
   into:
@@ -11722,11 +11292,6 @@ excluded:
   - security/security-audit
   note: "Offensive-testing playbook; the owner skill covers authorised testing and points to dedicated tools."
 - key: "davila7/claude-code-templates:skill:javascript-testing-patterns"
-  reason: duplicate-of
-  into:
-  - testing/test-strategy
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:javascript-testing-patterns"
   reason: duplicate-of
   into:
   - testing/test-strategy
@@ -12011,11 +11576,6 @@ excluded:
   reason: duplicate-of
   into:
   - ai-engineering/rag-pipelines
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:ai-ethics-advisor"
-  reason: duplicate-of
-  into:
-  - ai-engineering/ml-engineering
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:apify-integration-expert"
   reason: vendor-specific
@@ -12674,11 +12234,6 @@ excluded:
   into:
   - workflow/writing-plans
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "VoltAgent/awesome-claude-code-subagents:agent:task-distributor"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-teams
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:task-distributor"
   reason: duplicate-of
   into:
@@ -12804,11 +12359,6 @@ excluded:
 - key: "davila7/claude-code-templates:command:bulk-import-issues"
   reason: vendor-specific
   note: "Bound to one product or hosted service. (Linear, Jira/PAC, Unity, DGX, Meigen, ship-mate, protect-mcp or a named CLI)."
-- key: "wshobson/agents:command:business-case"
-  reason: duplicate-of
-  into:
-  - product/product-management
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
 - key: "davila7/claude-code-templates:command:business-scenario-explorer"
   reason: out-of-scope
   note: "Speculative business simulation and game-engine commands have no owning capability."
@@ -12974,11 +12524,6 @@ excluded:
 - key: "davila7/claude-code-templates:command:simulation-calibrator"
   reason: out-of-scope
   note: "Speculative business simulation and game-engine commands have no owning capability."
-- key: "wshobson/agents:command:standup-notes"
-  reason: duplicate-of
-  into:
-  - operations/project-management
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
 - key: "wshobson/agents:command:status"
   reason: source-internal
   note: "Command set of the source's own Conductor track convention."
@@ -13453,11 +12998,6 @@ excluded:
   into:
   - platform/git-workflow
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:commit-work"
-  reason: duplicate-of
-  into:
-  - platform/git-workflow
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:competitor-alternatives"
   reason: duplicate-of
   into:
@@ -13466,20 +13006,10 @@ excluded:
 - key: "davila7/claude-code-templates:skill:convex"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "davila7/claude-code-templates:skill:copy-editing"
-  reason: duplicate-of
-  into:
-  - documents/technical-writing
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:core-components"
   reason: duplicate-of
   into:
   - ui/design-system
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:core-web-vitals"
-  reason: duplicate-of
-  into:
-  - platform/reliability
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:cover-letter-generator"
   reason: out-of-scope
@@ -13568,11 +13098,6 @@ excluded:
   into:
   - architecture/system-design
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:difficult-workplace-conversations"
-  reason: duplicate-of
-  into:
-  - documents/internal-comms
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:doc"
   reason: duplicate-of
   into:
@@ -13657,11 +13182,6 @@ excluded:
 - key: "davila7/claude-code-templates:skill:figma"
   reason: license
   note: "Near copy of openai/skills:skill:figma (similarity 0.97); the same decision applies."
-- key: "wshobson/agents:skill:file-conversion"
-  reason: duplicate-of
-  into:
-  - documents/office-documents
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:file-organizer"
   reason: duplicate-of
   into:
@@ -13800,16 +13320,6 @@ excluded:
 - key: "davila7/claude-code-templates:skill:hubspot-integration"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "davila7/claude-code-templates:skill:humanizer"
-  reason: duplicate-of
-  into:
-  - ai-engineering/prompt-engineering
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:hybrid-cloud-networking"
-  reason: duplicate-of
-  into:
-  - platform/deployment
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:image-enhancer"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
@@ -13822,11 +13332,6 @@ excluded:
 - key: "davila7/claude-code-templates:skill:inngest"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "wshobson/agents:skill:interaction-design"
-  reason: duplicate-of
-  into:
-  - ui/motion-and-polish
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:interactive-portfolio"
   reason: duplicate-of
   into:
@@ -13937,11 +13442,6 @@ excluded:
   into:
   - marketing/campaign-planning
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "Jeffallan/claude-skills:skill:monitoring-expert"
-  reason: duplicate-of
-  into:
-  - platform/reliability
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "wshobson/agents:skill:monorepo-management"
   reason: duplicate-of
   into:
@@ -14050,11 +13550,6 @@ excluded:
   into:
   - marketing/campaign-planning
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "Jeffallan/claude-skills:skill:pandas-pro"
-  reason: duplicate-of
-  into:
-  - data/data-pipelines
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:patentfig"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
@@ -14076,11 +13571,6 @@ excluded:
   reason: vendor-specific
   note: "Bound to one product or hosted service. (the folder wraps one service)."
 - key: "davila7/claude-code-templates:skill:performance"
-  reason: duplicate-of
-  into:
-  - platform/reliability
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:performance-optimizer"
   reason: duplicate-of
   into:
   - platform/reliability
@@ -14152,11 +13642,6 @@ excluded:
   into:
   - security/security-audit
   note: "Offensive-testing playbook; the owner skill covers authorised testing and points to dedicated tools."
-- key: "davila7/claude-code-templates:skill:professional-communication"
-  reason: duplicate-of
-  into:
-  - documents/internal-comms
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:progressive-web-app"
   reason: duplicate-of
   into:
@@ -14297,11 +13782,6 @@ excluded:
   into:
   - testing/browser-testing
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:scroll-experience"
-  reason: duplicate-of
-  into:
-  - ui/motion-and-polish
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:search"
   reason: vendor-specific
   note: "Bound to one product or hosted service. (the folder wraps one service)."
@@ -14382,11 +13862,6 @@ excluded:
 - key: "davila7/claude-code-templates:skill:star-history-chart"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
-- key: "wshobson/agents:skill:startup-metrics-framework"
-  reason: duplicate-of
-  into:
-  - finance/financial-analysis
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:stripe-integration"
   reason: vendor-specific
   note: "Bound to one product or hosted service. or the harness's own plugin and command format."
@@ -14717,11 +14192,6 @@ excluded:
   into:
   - languages/typescript
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:nosql-specialist"
-  reason: duplicate-of
-  into:
-  - data/database-design
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:plan"
   reason: duplicate-of
   into:
@@ -14770,11 +14240,6 @@ excluded:
   into:
   - ai-engineering/rag-pipelines
   note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
-- key: "davila7/claude-code-templates:agent:search-specialist"
-  reason: duplicate-of
-  into:
-  - ai-engineering/rag-pipelines
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "wshobson/agents:agent:search-specialist"
   reason: duplicate-of
   into:
@@ -14811,11 +14276,6 @@ excluded:
 - key: "davila7/claude-code-templates:agent:task-planner"
   reason: source-internal
   note: "Near copy of github/awesome-copilot:agent:Task Planner Instructions (similarity 0.82); the same decision applies."
-- key: "wshobson/agents:agent:team-implementer"
-  reason: duplicate-of
-  into:
-  - agent-engineering/agent-teams
-  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."
 - key: "davila7/claude-code-templates:agent:terraform-azure-implement"
   reason: vendor-specific
   note: "Near copy of github/awesome-copilot:agent:Azure Terraform IaC Implementation Specialist (similarity 0.75); the same decision applies."
@@ -14837,11 +14297,6 @@ excluded:
   reason: out-of-scope
   note: "Specialised domain (blockchain, games, niche languages, embedded, trading, reverse engineering) without an owning capability; reopen with a domain spec."
 - key: "Jeffallan/claude-skills:command:complete-epic"
-  reason: duplicate-of
-  into:
-  - operations/project-management
-  note: "Slash command that runs a procedure this catalog already owns; the owner skill triggers on the same request."
-- key: "Jeffallan/claude-skills:command:complete-sprint"
   reason: duplicate-of
   into:
   - operations/project-management
@@ -14976,11 +14431,6 @@ excluded:
   reason: duplicate-of
   into:
   - workflow/writing-plans
-  note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:connectivity-triage"
-  reason: duplicate-of
-  into:
-  - platform/incident-response
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
 - key: "davila7/claude-code-templates:skill:create-plan"
   reason: duplicate-of
@@ -15120,3 +14570,8 @@ excluded:
   into:
   - workflow/writing-plans
   note: "Near copy of obra/superpowers:skill:writing-plans (similarity 0.99), already merged into workflow/writing-plans."
+- key: "davila7/claude-code-templates:agent:mcp-expert"
+  reason: duplicate-of
+  into:
+  - ai-engineering/mcp-server-development
+  note: "Role agent whose procedure the owner skill already carries; this catalog keeps one artifact per capability, not one persona per source."

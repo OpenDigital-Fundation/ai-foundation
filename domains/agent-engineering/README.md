@@ -43,11 +43,11 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `agent-debugging` | affaan-m/ECC |
-| `agent-evaluation` | affaan-m/ECC, github/awesome-copilot |
-| `agent-guardrails` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills |
+| `agent-evaluation` | affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, wshobson/agents |
+| `agent-guardrails` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills, wshobson/agents |
 | `agent-loops` | affaan-m/ECC |
-| `agent-memory` | affaan-m/ECC, github/awesome-copilot |
-| `agent-teams` | affaan-m/ECC, wshobson/agents |
+| `agent-memory` | affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, wshobson/agents |
+| `agent-teams` | VoltAgent/awesome-claude-code-subagents, affaan-m/ECC, wshobson/agents |
 | `context-management` | affaan-m/ECC, github/awesome-copilot |
 | `harness-design` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
 | `parallel-agents` | obra/superpowers |

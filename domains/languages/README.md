@@ -51,12 +51,12 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `external-tools` | contribuição original |
 | `cpp` | affaan-m/ECC, github/awesome-copilot |
-| `dart` | affaan-m/ECC, github/awesome-copilot |
+| `dart` | Jeffallan/claude-skills, affaan-m/ECC, github/awesome-copilot |
 | `dotnet` | affaan-m/ECC, github/awesome-copilot |
 | `go` | affaan-m/ECC, github/awesome-copilot |
 | `jvm` | affaan-m/ECC, github/awesome-copilot |
-| `php` | affaan-m/ECC, github/awesome-copilot |
-| `python` | affaan-m/ECC, github/awesome-copilot, wshobson/agents |
+| `php` | Jeffallan/claude-skills, affaan-m/ECC, github/awesome-copilot |
+| `python` | Jeffallan/claude-skills, affaan-m/ECC, github/awesome-copilot, wshobson/agents |
 | `react-diagnostics` | github/awesome-copilot, millionco/react-doctor |
 | `ruby` | affaan-m/ECC, github/awesome-copilot |
 | `rust` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

@@ -39,7 +39,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `animated-gifs` | anthropics/skills |
 | `banner-design` | nextlevelbuilder/ui-ux-pro-max-skill |
-| `generative-art` | anthropics/skills |
-| `image-prompting` | msitarzewski/agency-agents |
+| `generative-art` | anthropics/skills, davila7/claude-code-templates |
+| `image-prompting` | github/awesome-copilot, msitarzewski/agency-agents |
 | `poster-design` | anthropics/skills |
 | `presentation-slides` | affaan-m/ECC, msitarzewski/agency-agents, nextlevelbuilder/ui-ux-pro-max-skill |

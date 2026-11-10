@@ -1555,3 +1555,100 @@ For .NET-specific guidance, focus on the following areas:
 - **Testing**: Advocate for Test-Driven Development (TDD) and Behavior-Driven Development (BDD) practices, using frameworks like xUnit, NUnit, or MSTest.
 - **Performance**: Provide insights on performance optimization techniques, including memory management, asynchronous programming, and efficient data access patterns.
 - **Security**: Highlight best practices for securing .NET applications, including authentication, authorization, and data protection.
+
+## Roslyn Analyzers and Source Generators
+
+<!-- source: github/awesome-copilot skills/roslyn-analyzers/SKILL.md#project-and-dependency-boundaries -->
+
+### Project and dependency boundaries
+
+A typical solution has three projects:
+
+```text
+Product.Analyzers          -> Microsoft.CodeAnalysis.Common/CSharp only
+Product.CodeFixes          -> Product.Analyzers + Roslyn Workspaces/Features APIs
+Product.Analyzers.Tests    -> analyzer + code-fix projects + current testing packages
+```
+
+Target analyzer assemblies conservatively, commonly `netstandard2.0`, unless host requirements dictate otherwise. Treat the analyzer's Roslyn version as a host-compatibility floor, not a routine dependency to float.
+
+Choose exactly one Roslyn reference-assembly version for shipping analyzer projects. Pin it independently from the latest Roslyn version used by code-fix tests or the rest of the repository. Pin the analyzer dependency's entire transitive closure to mutually compatible versions, including packages such as `System.Collections.Immutable`, `System.Memory`, `System.Reflection.Metadata`, `System.Runtime.CompilerServices.Unsafe`, and `System.Threading.Tasks.Extensions` when they appear in restore. Directly pinning only `Microsoft.CodeAnalysis.*` is insufficient: a newer centrally managed transitive dependency can make the analyzer fail in an older compiler host.
+
+With central package management, create a dedicated `Directory.Packages.Analyzers.props` at the repository root and import it only for shipping analyzer, source-generator, and code-fix projects. Do not fold these overrides into the general `Directory.Packages.props`: the separate file makes the compatibility boundary visible and lets dependency automation treat it specially.
+
+Use this three-part pattern.
+
+First, have every shipping analyzer, source-generator, and code-fix project import one shared props file such as `src/AnalyzerCompatibility.props`. That file should identify the project:
+
+```xml
+<Project>
+    <PropertyGroup>
+        <!-- This is set so that Directory.Packages.Analyzers.props can apply version overrides specific to analyzer projects. -->
+        <IsAnalyzerCompatibilityProject>true</IsAnalyzerCompatibilityProject>
+    </PropertyGroup>
+</Project>
+```
+
+Second, conditionally import the dedicated package file from a repository-wide props or targets file after central package versions are available:
+
+```xml
+<Import Project="$(MSBuildThisFileDirectory)Directory.Packages.Analyzers.props"
+                Condition="'$(IsAnalyzerCompatibilityProject)' == 'true'" />
+```
+
+Third, copy this `Directory.Packages.Analyzers.props` structure and tailor the baseline comment, Roslyn version, and transitive versions to the oldest supported compiler or SDK host. Use `Update` only for a package already declared by the repository's central package file; use `Include` to add a pin for a package that is otherwise transitive-only. The example assumes the Roslyn packages are already declared and the listed runtime dependencies are new pins:
+
+```xml
+<Project>
+    <!-- These versions are chosen to support the oldest compiler/SDK host named here. -->
+  <PropertyGroup>
+        <CodeAnalysisVersionForAnalyzers>4.11.0</CodeAnalysisVersionForAnalyzers>
+      <!-- Apply analyzer compatibility pins to packages referenced only transitively. -->
+      <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+        <PackageVersion Update="Microsoft.CodeAnalysis" Version="$(CodeAnalysisVersionForAnalyzers)" />
+        <PackageVersion Update="Microsoft.CodeAnalysis.Common" Version="$(CodeAnalysisVersionForAnalyzers)" />
+        <PackageVersion Update="Microsoft.CodeAnalysis.CSharp" Version="$(CodeAnalysisVersionForAnalyzers)" />
+        <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="$(CodeAnalysisVersionForAnalyzers)" />
+        <PackageVersion Update="Microsoft.CodeAnalysis.VisualBasic" Version="$(CodeAnalysisVersionForAnalyzers)" />
+        <PackageVersion Include="Microsoft.CodeAnalysis.VisualBasic.Workspaces" Version="$(CodeAnalysisVersionForAnalyzers)" />
+        <PackageVersion Include="Microsoft.Bcl.AsyncInterfaces" Version="8.0.0" />
+        <PackageVersion Include="System.Collections.Immutable" Version="8.0.0" />
+        <PackageVersion Include="System.Memory" Version="4.5.5" />
+        <PackageVersion Include="System.Reflection.Metadata" Version="8.0.0" />
+        <PackageVersion Include="System.Runtime.CompilerServices.Unsafe" Version="6.0.0" />
+        <PackageVersion Include="System.Text.Json" Version="8.0.0" />
+        <PackageVersion Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+</Project>
+```
+
+The XML comments in these samples are required, not decorative. Keep equivalent comments in the receiving repository explaining why `IsAnalyzerCompatibilityProject` exists, why the conditional import exists when its purpose is not obvious, which oldest host the pinned versions support, and why these versions intentionally differ from the repository defaults. Include the Roslyn version-support documentation URL in or next to the baseline comment when it helps maintainers choose the correct compiler baseline. Future dependency updates must preserve or update these comments so users do not mistake deliberate compatibility pins for stale packages.
+
+The versions above are a structural example, not universal recommendations. Recalculate the complete package set for the selected oldest host by inspecting the resolved dependency graph. Retain each package that Roslyn or the generator loads in the compiler process, even when the repository does not reference it directly. `Workspaces` entries centrally pin versions for code-fix projects but must not be referenced by analyzer or source-generator projects. The test project should remain outside `IsAnalyzerCompatibilityProject` and use the latest repository-approved Roslyn and analyzer-testing packages so tests also catch compatibility with current APIs and compilers.
+
+Always prefer the latest available version of `Microsoft.CodeAnalysis.Analyzers`. It is a development-time analyzer package, not a compiler-host runtime dependency, so it does not need to match `Microsoft.CodeAnalysis`, `Microsoft.CodeAnalysis.Common`, C#/VB, or Workspaces package versions and must not be held back to the analyzer compatibility baseline. Keep it on the repository's normal latest-version update path and reference it without flowing it to consumers:
+
+```xml
+<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" PrivateAssets="all" />
+```
+
+Do not set its central version to `$(CodeAnalysisVersionForAnalyzers)` and do not include it among packages excluded from minor or major dependency updates. This exception applies specifically to `Microsoft.CodeAnalysis.Analyzers`; packages loaded with the shipping analyzer or generator still belong to the carefully pinned compatibility closure.
+
+Configure dependency automation so the analyzer baseline is not upgraded across Roslyn versions. For Renovate, isolate the analyzer version file or package group and disallow updates:
+
+```json
+{
+  "packageRules": [
+    {
+      "matchFileNames": ["Directory.Packages.Analyzers.props"],
+      "enabled": false
+    }
+  ]
+}
+```
+
+For Dependabot, use an `ignore` entry for each analyzer-baseline package with `update-types` containing `version-update:semver-major`, `version-update:semver-minor`, and `version-update:semver-patch`. Include the pinned transitive packages, not only `Microsoft.CodeAnalysis.*`. If the tool cannot distinguish analyzer-only central versions from repository-wide versions, place the analyzer pins in a dedicated file/directory or make those upgrades manual.
+
+Verify dependency isolation with a restore graph or assets file and, when practical, load the built analyzer in the oldest supported compiler/IDE host. A successful build on the newest SDK does not prove host compatibility.

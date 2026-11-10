@@ -151,3 +151,35 @@ def test_notice_covers_assembled_references_and_text_files(tmp_path):
     assert "Modified by OpenDigital from getsentry/skills (Apache-2.0)" in (refs / "mixed.md").read_text()
     assert "Modified by OpenDigital" not in (refs / "mit-only.md").read_text()
     assert (refs / "guide/notes.txt").read_text().startswith("Modified by OpenDigital from getsentry/skills (Apache-2.0)")
+
+
+def test_reference_entry_with_fragment_copies_only_named_sections(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    (clone / "synthetic").mkdir(parents=True)
+    (clone / "synthetic/guide.md").write_text(
+        "# Guide\n\nIntro.\n\n## Keep me\n\nKept body.\n\n### Nested detail\n\nAlso kept.\n\n## Drop me\n\nDropped body.\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the section-fragment fixture only.",
+        "body": "# Synthetic browser check\n\nSee references.",
+        "references": {"derived/extra.md": ["affaan-m/ECC:synthetic/guide.md#keep-me"]},
+    }}})
+    text = (domain / "skills/browser-testing/references/derived/extra.md").read_text()
+    assert "Kept body." in text and "Also kept." in text
+    assert "Dropped body." not in text and "Intro." not in text
+    files = yaml.safe_load((domain / "PROVENANCE.yaml").read_text())["files"]
+    entry = next(f for f in files if f["path"].endswith("derived/extra.md"))
+    assert entry["derived_from"][0]["path"] == "synthetic/guide.md#keep-me"
+    assert entry["derived_from"][0]["modification"] == "merged-section"
+
+
+def test_reference_entry_with_missing_fragment_fails_before_writing(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    (clone / "synthetic").mkdir(parents=True)
+    (clone / "synthetic/guide.md").write_text("# Guide\n\n## Only\n\nBody.\n")
+    with pytest.raises(ValueError, match="section not found"):
+        build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+            "description": "Use when testing the section-fragment fixture only.",
+            "body": "# Synthetic\n\nBody.",
+            "references": {"derived/extra.md": ["affaan-m/ECC:synthetic/guide.md#absent"]},
+        }}})
+    assert not (domain / "skills/browser-testing").exists()

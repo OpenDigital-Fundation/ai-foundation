@@ -102,3 +102,4 @@ Before delivering:
 Load only what the task needs:
 
 - [`references/outreach.md`](references/outreach.md) — covers Investor Outreach
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Common Mistakes

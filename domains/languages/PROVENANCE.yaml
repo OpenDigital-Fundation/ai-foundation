@@ -67,6 +67,11 @@ files:
     path: rules/cpp/hooks.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/vcpkg/SKILL.md#version-management
+    license: MIT
+    modification: merged-section
 - path: skills/dart/references/build.md
   derived_from:
   - source: affaan-m/ECC
@@ -74,6 +79,11 @@ files:
     path: agents/dart-build-resolver.md
     license: MIT
     modification: adapted
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/flutter-expert/SKILL.md#troubleshooting-common-failures
+    license: MIT
+    modification: merged-section
 - path: skills/dart/references/review.md
   derived_from:
   - source: affaan-m/ECC
@@ -293,6 +303,11 @@ files:
     path: agents/expert-dotnet-software-engineer.agent.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/roslyn-analyzers/SKILL.md#project-and-dependency-boundaries
+    license: MIT
+    modification: merged-section
 - path: skills/dotnet/references/testing.md
   derived_from:
   - source: affaan-m/ECC
@@ -401,6 +416,16 @@ files:
     path: agents/kotlin-build-resolver.md
     license: MIT
     modification: adapted
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/quarkus-native-and-container/SKILL.md#native-build,common-native-failures
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/java-debugging/SKILL.md#debug-tests-and-frameworks
+    license: MIT
+    modification: merged-section
 - path: skills/jvm/references/frameworks/android.md
   derived_from:
   - source: affaan-m/ECC
@@ -667,6 +692,11 @@ files:
     path: rules/php/patterns.md
     license: MIT
     modification: adapted
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/php-pro/SKILL.md#code-patterns
+    license: MIT
+    modification: merged-section
 - path: skills/php/references/testing.md
   derived_from:
   - source: affaan-m/ECC
@@ -825,6 +855,31 @@ files:
     path: plugins/python-development/skills/python-type-safety/references/details.md
     license: MIT
     modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-resource-management/SKILL.md#fundamental-patterns
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-configuration/SKILL.md#fundamental-patterns
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/async-python-patterns/SKILL.md#fundamental-patterns
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-project-structure/SKILL.md#fundamental-patterns
+    license: MIT
+    modification: merged-section
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/django-expert/SKILL.md#minimal-working-example
+    license: MIT
+    modification: merged-section
 - path: skills/python/references/testing.md
   derived_from:
   - source: affaan-m/ECC

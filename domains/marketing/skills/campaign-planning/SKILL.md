@@ -120,3 +120,4 @@ Load only what the task needs:
 
 - [`references/growth.md`](references/growth.md) — covers Marketing Growth Hacker
 - [`references/pr-communications.md`](references/pr-communications.md) — covers PR & Communications Manager
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Technical Implementation; Understanding Buyers & Human Psychology

@@ -154,3 +154,4 @@ Load only what the task needs:
 - [`references/evaluator.md`](references/evaluator.md) — covers agent-evaluator
 - [`references/benchmark-loops.md`](references/benchmark-loops.md) — covers Benchmark Optimization Loop
 - [`references/benchmark-integrity/README.md`](references/benchmark-integrity/README.md) — covers Research Harness Engineer mode instructions
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Automated Metrics Implementation; A/B Testing; Human Evaluation Frameworks; LLM-as-Judge Patterns; Composite score

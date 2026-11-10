@@ -35,7 +35,11 @@ artifacts:
   - "Community-Access/accessibility-agents:skill:web-accessibility-wizard"
   - "Community-Access/accessibility-agents:skill:web-csv-reporter"
   - "Community-Access/accessibility-agents:skill:web-issue-fixer"
+  - "davila7/claude-code-templates:skill:accessibility"
+  - "davila7/claude-code-templates:skill:accessibility-auditor"
+  - "github/awesome-copilot:agent:Accessibility Expert"
   - "msitarzewski/agency-agents:agent:Accessibility Auditor"
+  - "wshobson/agents:command:accessibility-audit"
 - id: accessibility/assistive-technology-testing
   type: skill
   capability: "Use when deciding how to test accessibility or running the tests: screen readers (NVDA, JAWS, VoiceOver, Narrator,\
@@ -146,7 +150,9 @@ artifacts:
   - "affaan-m/ECC:skill:agent-self-evaluation"
   - "affaan-m/ECC:skill:benchmark-optimization-loop"
   - "affaan-m/ECC:skill:eval-harness"
+  - "davila7/claude-code-templates:skill:llm-evaluation"
   - "github/awesome-copilot:agent:Research Harness Engineer"
+  - "wshobson/agents:skill:evaluation-methodology"
 - id: agent-engineering/agent-guardrails
   type: skill
   capability: "Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell commands\
@@ -160,6 +166,7 @@ artifacts:
   - "github/awesome-copilot:rule:hooks.instructions"
   - "github/awesome-copilot:skill:verify-agent-action"
   - "mattpocock/skills:skill:git-guardrails-claude-code"
+  - "wshobson/agents:skill:session-guard"
 - id: agent-engineering/agent-loops
   type: skill
   capability: "Use when designing, running or reviewing an autonomous or long-running agent loop: machine-checkable goals\
@@ -196,8 +203,12 @@ artifacts:
   - "affaan-m/ECC:skill:continuous-learning-v2"
   - "affaan-m/ECC:skill:rules-distill"
   - "affaan-m/ECC:skill:unified-memory"
+  - "davila7/claude-code-templates:skill:context-architecture"
   - "github/awesome-copilot:agent:.NET Self-Learning Architect"
   - "github/awesome-copilot:rule:memory-bank.instructions"
+  - "github/awesome-copilot:skill:mini-context-graph"
+  - "wshobson/agents:command:context-restore"
+  - "wshobson/agents:command:context-save"
 - id: agent-engineering/agent-teams
   type: skill
   capability: "Use when coordinating several agents as a team on one effort: assigning owners and scope to work items, isolating\
@@ -205,6 +216,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "VoltAgent/awesome-claude-code-subagents:agent:multi-agent-coordinator"
+  - "VoltAgent/awesome-claude-code-subagents:agent:task-distributor"
   - "affaan-m/ECC:command:multi-backend"
   - "affaan-m/ECC:command:multi-execute"
   - "affaan-m/ECC:command:multi-frontend"
@@ -216,6 +229,8 @@ artifacts:
   - "affaan-m/ECC:skill:plan-orchestrate"
   - "affaan-m/ECC:skill:team-agent-orchestration"
   - "affaan-m/ECC:skill:team-builder"
+  - "wshobson/agents:agent:team-implementer"
+  - "wshobson/agents:agent:team-reviewer"
   - "wshobson/agents:skill:task-coordination-strategies"
   - "wshobson/agents:skill:team-composition-patterns"
 - id: agent-engineering/context-management
@@ -257,6 +272,7 @@ artifacts:
   - "github/awesome-copilot:hook:session-logger"
   - "github/awesome-copilot:rule:agents.instructions"
   - "github/awesome-copilot:rule:instructions.instructions"
+  - "github/awesome-copilot:skill:agent-architecture"
   - "github/awesome-copilot:skill:harness-engineering"
   - "msitarzewski/agency-agents:agent:Agentic Identity & Trust Architect"
   - "msitarzewski/agency-agents:agent:Agents Orchestrator"
@@ -305,6 +321,7 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:mcp-server-patterns"
   - "anthropics/skills:skill:mcp-builder"
+  - "davila7/claude-code-templates:skill:fastmcp-server"
   - "github/awesome-copilot:agent:C# MCP Server Expert"
   - "github/awesome-copilot:agent:Go MCP Server Development Expert"
   - "github/awesome-copilot:agent:Java MCP Expert"
@@ -339,6 +356,8 @@ artifacts:
   - "affaan-m/ECC:skill:ml-adoption-playbook"
   - "affaan-m/ECC:skill:mle-workflow"
   - "affaan-m/ECC:skill:recsys-pipeline-architect"
+  - "davila7/claude-code-templates:agent:ai-ethics-advisor"
+  - "davila7/claude-code-templates:skill:ml-paper-writing"
   - "github/awesome-copilot:agent:SE: Responsible AI"
   - "msitarzewski/agency-agents:agent:AI Data Remediation Engineer"
   - "msitarzewski/agency-agents:agent:AI Engineer"
@@ -363,6 +382,8 @@ artifacts:
   - "affaan-m/ECC:skill:prompt-caching-strategy"
   - "affaan-m/ECC:skill:prompt-optimizer"
   - "affaan-m/ECC:skill:regex-vs-llm-structured-text"
+  - "davila7/claude-code-templates:skill:avoid-ai-writing"
+  - "davila7/claude-code-templates:skill:humanizer"
   - "getsentry/skills:skill:prompt-optimizer"
   - "github/awesome-copilot:agent:Prompt Builder"
   - "github/awesome-copilot:agent:Prompt Engineer"
@@ -378,6 +399,9 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:agent:rag-pipeline-reviewer"
   - "affaan-m/ECC:skill:iterative-retrieval"
+  - "davila7/claude-code-templates:agent:llm-architect"
+  - "davila7/claude-code-templates:agent:search-specialist"
+  - "davila7/claude-code-templates:skill:rag-qdrant"
   - "github/awesome-copilot:rule:langchain-python.instructions"
   - "msitarzewski/agency-agents:agent:RAG Pipeline Engineer"
   - "msitarzewski/agency-agents:agent:Search Relevance Engineer"
@@ -430,6 +454,8 @@ artifacts:
   - "affaan-m/ECC:skill:codebase-onboarding"
   - "getsentry/skills:skill:agents-md"
   - "github/awesome-copilot:agent:Context Architect"
+  - "github/awesome-copilot:skill:acquire-codebase-knowledge"
+  - "github/awesome-copilot:skill:create-agentsmd"
   - "msitarzewski/agency-agents:agent:Codebase Archaeologist"
   - "msitarzewski/agency-agents:agent:Codebase Onboarding Engineer"
 - id: architecture/decision-records
@@ -553,6 +579,10 @@ artifacts:
   - "affaan-m/ECC:agent:refactor-cleaner"
   - "affaan-m/ECC:agent:type-design-analyzer"
   - "affaan-m/ECC:command:refactor-clean"
+  - "davila7/claude-code-templates:agent:technical-debt-manager"
+  - "github/awesome-copilot:skill:refactor"
+  - "github/awesome-copilot:skill:write-coding-standards-from-file"
+  - "wshobson/agents:skill:python-code-style"
 - id: creative-media/animated-gifs
   type: skill
   capability: "Use when making an animated GIF, especially for Slack or chat: size and frame limits, animation concepts, generation\
@@ -577,6 +607,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "anthropics/skills:skill:algorithmic-art"
+  - "davila7/claude-code-templates:skill:claude-d3js-skill"
 - id: creative-media/image-prompting
   type: skill
   capability: "Use when writing prompts for image-generation models: photographic direction (lens, light, composition), style\
@@ -584,6 +615,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:skill:image-annotations"
   - "msitarzewski/agency-agents:agent:Image Prompt Engineer"
   - "msitarzewski/agency-agents:agent:Inclusive Visuals Specialist"
 - id: creative-media/poster-design
@@ -611,10 +643,12 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Jeffallan/claude-skills:skill:pandas-pro"
   - "affaan-m/ECC:skill:data-throughput-accelerator"
   - "github/awesome-copilot:agent:PySpark Expert Agent"
   - "github/awesome-copilot:rule:scala-spark.instructions"
   - "msitarzewski/agency-agents:agent:Data Engineer"
+  - "wshobson/agents:command:data-pipeline"
   - "wshobson/agents:skill:airflow-dag-patterns"
   - "wshobson/agents:skill:data-quality-frameworks"
   - "wshobson/agents:skill:dbt-transformation-patterns"
@@ -631,6 +665,8 @@ artifacts:
   - "affaan-m/ECC:skill:postgres-patterns"
   - "affaan-m/ECC:skill:prisma-patterns"
   - "affaan-m/ECC:skill:redis-patterns"
+  - "davila7/claude-code-templates:agent:database-architect"
+  - "davila7/claude-code-templates:agent:nosql-specialist"
   - "davila7/claude-code-templates:rule:_contributing"
   - "davila7/claude-code-templates:rule:_sections"
   - "davila7/claude-code-templates:rule:_template"
@@ -680,6 +716,7 @@ artifacts:
   - "affaan-m/ECC:command:database-migration"
   - "affaan-m/ECC:skill:database-migrations"
   - "github/awesome-copilot:agent:Oracle-to-PostgreSQL Migration Expert"
+  - "github/awesome-copilot:skill:creating-oracle-to-postgres-migration-integration-tests"
 - id: debugging/build-failure-resolution
   type: skill
   capability: "Use when a build, compile, type-check, bundling or dependency step fails, or when errors are being swallowed\
@@ -721,6 +758,10 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "anthropics/skills:skill:internal-comms"
+  - "davila7/claude-code-templates:skill:difficult-workplace-conversations"
+  - "davila7/claude-code-templates:skill:email-composer"
+  - "davila7/claude-code-templates:skill:feedback-mastery"
+  - "davila7/claude-code-templates:skill:professional-communication"
   - "msitarzewski/agency-agents:agent:Analytics Reporter"
   - "msitarzewski/agency-agents:agent:Executive Summary Generator"
 - id: documents/office-documents
@@ -734,9 +775,12 @@ artifacts:
   - "anthropics/skills:skill:pdf"
   - "anthropics/skills:skill:pptx"
   - "anthropics/skills:skill:xlsx"
+  - "davila7/claude-code-templates:skill:pdf-processing"
+  - "github/awesome-copilot:skill:markdown-to-word-mermaid"
   - "msitarzewski/agency-agents:agent:Document Generator"
   - "msitarzewski/agency-agents:agent:PDF Engine Architect"
   - "msitarzewski/agency-agents:agent:Universal Document Compiler"
+  - "wshobson/agents:skill:file-conversion"
 - id: documents/technical-writing
   type: skill
   capability: "Use when writing or updating developer documentation: READMEs, API references, guides, tutorials, runbooks,\
@@ -749,6 +793,7 @@ artifacts:
   - "affaan-m/ECC:command:update-docs"
   - "affaan-m/ECC:skill:docs-governance"
   - "affaan-m/ECC:skill:living-docs-governance"
+  - "davila7/claude-code-templates:skill:copy-editing"
   - "github/awesome-copilot:agent:Project Documenter"
   - "github/awesome-copilot:agent:SE: Tech Writer"
   - "github/awesome-copilot:agent:technical-content-evaluator"
@@ -760,6 +805,8 @@ artifacts:
   - "github/awesome-copilot:rule:markdown.instructions"
   - "github/awesome-copilot:rule:update-docs-on-code-change.instructions"
   - "github/awesome-copilot:rule:use-cliche-data-in-docs.instructions"
+  - "github/awesome-copilot:skill:docs-sync-audit"
+  - "github/awesome-copilot:skill:markdown-to-html"
   - "msitarzewski/agency-agents:agent:Technical Writer"
 - id: finance/accounting
   type: skill
@@ -794,6 +841,8 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Financial Analyst"
   - "msitarzewski/agency-agents:agent:Investment Researcher"
   - "msitarzewski/agency-agents:agent:Pricing Analyst"
+  - "wshobson/agents:skill:startup-financial-modeling"
+  - "wshobson/agents:skill:startup-metrics-framework"
 - id: languages/cpp
   type: skill
   capability: C++ patterns, testing, security, review and build knowledge, plus framework references.
@@ -814,12 +863,14 @@ artifacts:
   - "affaan-m/ECC:skill:cpp-testing"
   - "github/awesome-copilot:agent:C++ Expert"
   - "github/awesome-copilot:rule:cmake-vcpkg.instructions"
+  - "github/awesome-copilot:skill:vcpkg"
 - id: languages/dart
   type: skill
   capability: Dart and Flutter patterns, testing, security, review and build knowledge, plus framework references.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Jeffallan/claude-skills:skill:flutter-expert"
   - "affaan-m/ECC:agent:dart-build-resolver"
   - "affaan-m/ECC:agent:flutter-reviewer"
   - "affaan-m/ECC:command:flutter-build"
@@ -873,6 +924,7 @@ artifacts:
   - "github/awesome-copilot:rule:dotnet-wpf.instructions"
   - "github/awesome-copilot:rule:mvvm-toolkit.instructions"
   - "github/awesome-copilot:rule:winui3.instructions"
+  - "github/awesome-copilot:skill:roslyn-analyzers"
 - id: languages/external-tools
   type: knowledge
   capability: "External language tools referenced, not vendored: react-doctor (restricted licence), godoctor, Vercel interface\
@@ -945,12 +997,15 @@ artifacts:
   - "github/awesome-copilot:rule:java-junit5-assertions.instructions"
   - "github/awesome-copilot:rule:quarkus.instructions"
   - "github/awesome-copilot:rule:springboot.instructions"
+  - "github/awesome-copilot:skill:java-debugging"
+  - "github/awesome-copilot:skill:quarkus-native-and-container"
 - id: languages/php
   type: skill
   capability: PHP patterns, testing, security, review and build knowledge, plus framework references.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Jeffallan/claude-skills:skill:php-pro"
   - "affaan-m/ECC:agent:php-reviewer"
   - "affaan-m/ECC:rule:php/coding-style"
   - "affaan-m/ECC:rule:php/hooks"
@@ -970,6 +1025,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Jeffallan/claude-skills:skill:django-expert"
   - "affaan-m/ECC:agent:django-build-resolver"
   - "affaan-m/ECC:agent:django-reviewer"
   - "affaan-m/ECC:agent:fastapi-reviewer"
@@ -994,9 +1050,13 @@ artifacts:
   - "affaan-m/ECC:skill:python-testing"
   - "affaan-m/ECC:skill:pytorch-patterns"
   - "github/awesome-copilot:agent:GitHub Actions Windows ARM64 wheel builder"
+  - "wshobson/agents:skill:async-python-patterns"
   - "wshobson/agents:skill:python-background-jobs"
+  - "wshobson/agents:skill:python-configuration"
   - "wshobson/agents:skill:python-observability"
+  - "wshobson/agents:skill:python-project-structure"
   - "wshobson/agents:skill:python-resilience"
+  - "wshobson/agents:skill:python-resource-management"
   - "wshobson/agents:skill:python-type-safety"
   - "wshobson/agents:skill:uv-package-manager"
 - id: languages/react-diagnostics
@@ -1285,6 +1345,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "davila7/claude-code-templates:skill:data-privacy-compliance"
+  - "davila7/claude-code-templates:skill:security-compliance"
   - "github/awesome-copilot:hook:check-licenses"
   - "github/awesome-copilot:hook:dependency-license-checker"
   - "msitarzewski/agency-agents:agent:Compliance Auditor"
@@ -1311,6 +1373,8 @@ artifacts:
   - "affaan-m/ECC:command:marketing-campaign"
   - "affaan-m/ECC:skill:growth-log"
   - "affaan-m/ECC:skill:marketing-campaign"
+  - "davila7/claude-code-templates:agent:marketing-attribution-analyst"
+  - "davila7/claude-code-templates:skill:marketing-psychology"
   - "msitarzewski/agency-agents:agent:Growth Hacker"
   - "msitarzewski/agency-agents:agent:PR & Communications Manager"
 - id: marketing/content-marketing
@@ -1325,6 +1389,9 @@ artifacts:
   - "affaan-m/ECC:skill:crosspost"
   - "affaan-m/ECC:skill:social-publisher"
   - "affaan-m/ECC:skill:x-api"
+  - "davila7/claude-code-templates:skill:copywriting"
+  - "davila7/claude-code-templates:skill:social-content"
+  - "github/awesome-copilot:skill:make-blog-post"
   - "msitarzewski/agency-agents:agent:Carousel Growth Engine"
   - "msitarzewski/agency-agents:agent:Content Creator"
   - "msitarzewski/agency-agents:agent:Developer Advocate"
@@ -1344,6 +1411,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "affaan-m/ECC:skill:email-ops"
+  - "davila7/claude-code-templates:skill:email-sequence"
   - "msitarzewski/agency-agents:agent:Email Marketing Strategist"
 - id: marketing/paid-media
   type: skill
@@ -1352,6 +1420,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:skill:server-side-conversion-tracking"
   - "msitarzewski/agency-agents:agent:Ad Creative Strategist"
   - "msitarzewski/agency-agents:agent:PPC Campaign Strategist"
   - "msitarzewski/agency-agents:agent:Paid Media Auditor"
@@ -1368,6 +1437,8 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:agent:seo-specialist"
   - "affaan-m/ECC:skill:seo"
+  - "davila7/claude-code-templates:skill:programmatic-seo"
+  - "davila7/claude-code-templates:skill:seo"
   - "github/awesome-copilot:agent:Search & AI Optimization Expert"
   - "msitarzewski/agency-agents:agent:AEO Foundations Architect"
   - "msitarzewski/agency-agents:agent:AI Citation Strategist"
@@ -1381,6 +1452,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "davila7/claude-code-templates:agent:customer-support"
   - "msitarzewski/agency-agents:agent:Customer Service"
   - "msitarzewski/agency-agents:agent:Customer Success Manager"
   - "msitarzewski/agency-agents:agent:Support Responder"
@@ -1391,6 +1463,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "github/awesome-copilot:skill:brag-sheet"
+  - "github/awesome-copilot:skill:mentoring-juniors"
   - "msitarzewski/agency-agents:agent:Change Management Consultant"
   - "msitarzewski/agency-agents:agent:Corporate Training Designer"
   - "msitarzewski/agency-agents:agent:HR Onboarding"
@@ -1402,9 +1476,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Jeffallan/claude-skills:command:complete-sprint"
   - "affaan-m/ECC:command:jira"
   - "affaan-m/ECC:skill:jira-integration"
   - "affaan-m/ECC:skill:project-flow-ops"
+  - "github/awesome-copilot:skill:impediment-prioritization"
   - "msitarzewski/agency-agents:agent:Automation Governance Architect"
   - "msitarzewski/agency-agents:agent:Chief of Staff"
   - "msitarzewski/agency-agents:agent:IT Service Manager"
@@ -1417,6 +1493,7 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Studio Producer"
   - "msitarzewski/agency-agents:agent:Workflow Architect"
   - "msitarzewski/agency-agents:agent:Workflow Optimizer"
+  - "wshobson/agents:command:standup-notes"
 - id: platform/deployment
   type: skill
   capability: "Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads, CI/CD\
@@ -1424,11 +1501,13 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Jeffallan/claude-skills:skill:cloud-architect"
   - "affaan-m/ECC:command:pm2"
   - "affaan-m/ECC:skill:canary-watch"
   - "affaan-m/ECC:skill:deployment-patterns"
   - "affaan-m/ECC:skill:docker-patterns"
   - "affaan-m/ECC:skill:kubernetes-patterns"
+  - "davila7/claude-code-templates:skill:docker-expert"
   - "github/awesome-copilot:agent:SE: DevOps/CI"
   - "github/awesome-copilot:agent:Terraform IaC Reviewer"
   - "github/awesome-copilot:agent:Terratest Module Testing"
@@ -1446,7 +1525,9 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Platform Engineer"
   - "wshobson/agents:skill:deployment-pipeline-design"
   - "wshobson/agents:skill:helm-chart-scaffolding"
+  - "wshobson/agents:skill:hybrid-cloud-networking"
   - "wshobson/agents:skill:k8s-security-policies"
+  - "wshobson/agents:skill:multi-cloud-architecture"
 - id: platform/git-workflow
   type: skill
   capability: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts,
@@ -1458,7 +1539,11 @@ artifacts:
   - "affaan-m/ECC:rule:common/git-workflow"
   - "affaan-m/ECC:skill:conventional-commit-review"
   - "affaan-m/ECC:skill:git-workflow"
+  - "davila7/claude-code-templates:command:git-bisect-helper"
+  - "davila7/claude-code-templates:skill:commit-work"
   - "github/awesome-copilot:agent:Gitmoji Setup"
+  - "github/awesome-copilot:skill:git-commit"
+  - "github/awesome-copilot:skill:git-flow-branch-creator"
   - "mattpocock/skills:skill:setup-pre-commit"
   - "msitarzewski/agency-agents:agent:Git Workflow Master"
 - id: platform/github-operations
@@ -1470,10 +1555,12 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:github-ops"
   - "affaan-m/ECC:skill:opensource-pipeline"
+  - "davila7/claude-code-templates:skill:github-automation"
   - "getsentry/skills:skill:iterate-pr"
   - "github/awesome-copilot:agent:GitHub Actions Expert"
   - "github/awesome-copilot:agent:GitHub Actions Node Runtime Upgrade"
   - "github/awesome-copilot:rule:github-actions-ci-cd-best-practices.instructions"
+  - "github/awesome-copilot:skill:repo-standardizer"
 - id: platform/incident-response
   type: skill
   capability: "Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess\
@@ -1484,6 +1571,8 @@ artifacts:
   - "github/awesome-copilot:agent:Cloud and SaaS Outage Triage"
   - "msitarzewski/agency-agents:agent:Incident Responder"
   - "msitarzewski/agency-agents:agent:Incident Response Commander"
+  - "wshobson/agents:agent:incident-responder"
+  - "wshobson/agents:skill:connectivity-triage"
   - "wshobson/agents:skill:incident-runbook-templates"
   - "wshobson/agents:skill:on-call-handoff-patterns"
   - "wshobson/agents:skill:postmortem-writing"
@@ -1494,7 +1583,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "Jeffallan/claude-skills:skill:monitoring-expert"
   - "affaan-m/ECC:skill:dashboard-builder"
+  - "davila7/claude-code-templates:agent:react-performance-optimizer"
+  - "davila7/claude-code-templates:skill:core-web-vitals"
+  - "davila7/claude-code-templates:skill:performance-optimizer"
   - "github/awesome-copilot:agent:Platform SRE for Kubernetes"
   - "github/awesome-copilot:rule:devops-core-principles.instructions"
   - "msitarzewski/agency-agents:agent:FinOps Engineer"
@@ -1528,6 +1621,7 @@ artifacts:
   - "affaan-m/ECC:skill:market-research"
   - "affaan-m/ECC:skill:product-capability"
   - "affaan-m/ECC:skill:product-lens"
+  - "davila7/claude-code-templates:skill:pricing-strategy"
   - "github/awesome-copilot:agent:Create PRD Chat Mode"
   - "msitarzewski/agency-agents:agent:Business Strategist"
   - "msitarzewski/agency-agents:agent:Experiment Tracker"
@@ -1535,6 +1629,7 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Product Manager"
   - "msitarzewski/agency-agents:agent:Sprint Prioritizer"
   - "msitarzewski/agency-agents:agent:Trend Researcher"
+  - "wshobson/agents:command:business-case"
 - id: research/docs-lookup
   type: skill
   capability: "Use when the user asks how to use a library, framework, SDK or API, or before writing code against one whose\
@@ -1545,6 +1640,7 @@ artifacts:
   - "affaan-m/ECC:agent:docs-lookup"
   - "affaan-m/ECC:skill:documentation-lookup"
   - "affaan-m/ECC:skill:search-first"
+  - "github/awesome-copilot:agent:Context7-Expert"
   - "github/awesome-copilot:rule:context7.instructions"
 - id: research/literature-review
   type: skill
@@ -1564,8 +1660,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "VoltAgent/awesome-claude-code-subagents:agent:first-principles-thinking"
   - "affaan-m/ECC:skill:deep-research"
   - "affaan-m/ECC:skill:research-ops"
+  - "davila7/claude-code-templates:agent:competitive-intelligence-analyst"
+  - "davila7/claude-code-templates:agent:research-synthesizer"
   - "github/awesome-copilot:agent:Doublecheck"
   - "github/awesome-copilot:agent:Technical spike research mode"
   - "mattpocock/skills:skill:research"
@@ -1578,6 +1677,9 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "davila7/claude-code-templates:agent:customer-success-manager"
+  - "davila7/claude-code-templates:agent:sales-automator"
+  - "github/awesome-copilot:skill:gtm-enterprise-onboarding"
   - "msitarzewski/agency-agents:agent:Account Strategist"
   - "msitarzewski/agency-agents:agent:Deal Strategist"
   - "msitarzewski/agency-agents:agent:Discovery Coach"
@@ -1594,6 +1696,7 @@ artifacts:
   supersedes:
   - "affaan-m/ECC:skill:investor-materials"
   - "affaan-m/ECC:skill:investor-outreach"
+  - "github/awesome-copilot:skill:gtm-board-and-investor-communication"
 - id: sales/prospecting
   type: skill
   capability: "Use when finding and reaching new customers: defining the ideal customer profile, building and scoring lead\
@@ -1694,6 +1797,9 @@ artifacts:
   - "github/awesome-copilot:rule:playwright-dotnet.instructions"
   - "github/awesome-copilot:rule:playwright-python.instructions"
   - "github/awesome-copilot:rule:playwright-typescript.instructions"
+  - "github/awesome-copilot:skill:cypress-flake-fixer"
+  - "github/awesome-copilot:skill:ui-screenshots"
+  - "openai/skills:skill:playwright-interactive"
 - id: testing/test-driven-development
   type: skill
   capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.
@@ -1721,13 +1827,16 @@ artifacts:
   - "affaan-m/ECC:skill:click-path-audit"
   - "affaan-m/ECC:skill:delivery-gate"
   - "affaan-m/ECC:skill:test-collaboration"
+  - "davila7/claude-code-templates:command:flaky-test-triage"
   - "github/awesome-copilot:agent:ai-team-qa"
   - "github/awesome-copilot:agent:gem-mobile-tester"
   - "github/awesome-copilot:rule:qa-engineering-best-practices.instructions"
+  - "github/awesome-copilot:skill:quality-playbook"
   - "msitarzewski/agency-agents:agent:API Tester"
   - "msitarzewski/agency-agents:agent:Performance Benchmarker"
   - "msitarzewski/agency-agents:agent:Test Automation Engineer"
   - "msitarzewski/agency-agents:agent:Test Results Analyzer"
+  - "wshobson/agents:skill:javascript-testing-patterns"
 - id: testing/verification-before-completion
   type: skill
   capability: Run verification fresh and read the output before claiming work is complete, fixed or passing.
@@ -1746,6 +1855,9 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - "anthropics/skills:skill:theme-factory"
+  - "davila7/claude-code-templates:rule:base-vs-radix"
+  - "davila7/claude-code-templates:rule:composition"
+  - "davila7/claude-code-templates:rule:forms"
   - "github/awesome-copilot:rule:bulma-v1.instructions"
   - "github/awesome-copilot:rule:html-css-style-color-guide.instructions"
   - "github/awesome-copilot:rule:tailwind-v4-vite.instructions"
@@ -1779,7 +1891,10 @@ artifacts:
   - "affaan-m/ECC:skill:taste"
   - "affaan-m/ECC:skill:taste-application"
   - "affaan-m/ECC:skill:taste-distillation"
+  - "davila7/claude-code-templates:skill:scroll-experience"
+  - "github/awesome-copilot:skill:gsap-framer-scroll-animation"
   - "msitarzewski/agency-agents:agent:Whimsy Injector"
+  - "wshobson/agents:skill:interaction-design"
 - id: ui/visual-design
   type: skill
   capability: Design and build new pages that look designed, with themes, job-first layout and browser-linted quality gates.

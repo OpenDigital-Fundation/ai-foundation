@@ -63,6 +63,18 @@ files:
     path: finance/finance-financial-analyst.md
     license: MIT
     modification: adapted
+- path: skills/financial-analysis/references/derived-guides.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/startup-business-analyst/skills/startup-financial-modeling/SKILL.md#core-components
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/startup-business-analyst/skills/startup-metrics-framework/SKILL.md#metric-tracking-best-practices,consumer-mobile-metrics
+    license: MIT
+    modification: merged-section
 - path: skills/financial-analysis/references/fpa.md
   derived_from:
   - source: msitarzewski/agency-agents

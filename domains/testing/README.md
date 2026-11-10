@@ -35,7 +35,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `browser-testing` | affaan-m/ECC, anthropics/skills, currents-dev/playwright-best-practices-skill, github/awesome-copilot |
+| `browser-testing` | affaan-m/ECC, anthropics/skills, currents-dev/playwright-best-practices-skill, github/awesome-copilot, openai/skills |
 | `test-driven-development` | affaan-m/ECC, mattpocock/skills, obra/superpowers |
-| `test-strategy` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `test-strategy` | affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
 | `verification-before-completion` | affaan-m/ECC, msitarzewski/agency-agents, obra/superpowers |

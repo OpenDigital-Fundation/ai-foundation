@@ -7,6 +7,18 @@ files:
     path: skills/marketing-campaign/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/campaign-planning/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/business-marketing/marketing-attribution-analyst.md#technical-implementation
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/business-marketing/marketing-psychology/SKILL.md#understanding-buyers-human-psychology
+    license: MIT
+    modification: merged-section
 - path: skills/campaign-planning/references/growth.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -42,6 +54,23 @@ files:
     path: skills/crosspost/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/content-marketing/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/business-marketing/social-content/SKILL.md#reverse-engineering-viral-content,platform-strategy-guide
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/business-marketing/copywriting/SKILL.md#page-structure-framework,landing-page-section-variety
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/make-blog-post/SKILL.md#building-the-post
+    license: MIT
+    modification: merged-section
 - path: skills/content-marketing/references/developer-relations.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -82,6 +111,13 @@ files:
     path: marketing/marketing-email-strategist.md
     license: MIT
     modification: adapted
+- path: skills/email-marketing/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/business-marketing/email-sequence/SKILL.md#email-sequence-strategy,email-copy-guidelines
+    license: MIT
+    modification: merged-section
 - path: skills/email-marketing/references/operations.md
   derived_from:
   - source: affaan-m/ECC
@@ -117,6 +153,13 @@ files:
     path: paid-media/paid-media-creative-strategist.md
     license: MIT
     modification: adapted
+- path: skills/paid-media/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/server-side-conversion-tracking/SKILL.md#the-model-in-the-order-it-must-be-built,implementing-it
+    license: MIT
+    modification: merged-section
 - path: skills/paid-media/references/paid-social.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -190,6 +233,18 @@ files:
     path: marketing/marketing-app-store-optimizer.md
     license: MIT
     modification: adapted
+- path: skills/seo/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/seo/SKILL.md#structured-data-json-ld,technical-seo,on-page-seo
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/business-marketing/programmatic-seo/SKILL.md#implementation-framework
+    license: MIT
+    modification: merged-section
 - path: skills/seo/references/strategy.md
   derived_from:
   - source: msitarzewski/agency-agents

@@ -32,6 +32,7 @@ Load only what the task needs:
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/security-incidents.md`](references/security-incidents.md) — covers Incident Responder; SEV1 Critical (Response Immediate, 24/7); SEV2 High (Response Same business day); SEV3 Medium (Response Next business day)
 - [`references/dependency-outages/README.md`](references/dependency-outages/README.md) — covers Cloud and SaaS Outage Triage
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Fast Decision Flow; Post-Incident Process; Immediate Actions (First 5 minutes); SRE Best Practices
 - `references/postmortem-writing/` — Write effective blameless postmortems with root cause analysis, timelines, and action items. Use when conducting incident reviews, writing postmortem documents, or improving incident response processe
 - `references/incident-runbook-templates/` — Create structured incident response runbooks with step-by-step procedures, escalation paths, and recovery actions. Use this skill when building a service outage runbook for a payment processing system
 - `references/on-call-handoff-patterns/` — Master on-call shift handoffs with context transfer, escalation procedures, and documentation. Use this skill when transitioning on-call responsibilities between engineers and ensuring the incoming re

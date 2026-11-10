@@ -38,3 +38,4 @@ Load only what the task needs:
 - [`references/product-lens.md`](references/product-lens.md) — covers Product Lens Think Before You Build
 - [`references/capability-mapping.md`](references/capability-mapping.md) — covers Product Capability
 - [`references/product-briefs/README.md`](references/product-briefs/README.md) — covers Create PRD Chat Mode; PRD Outline
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Business Case Document Structure; Pricing Research Methods

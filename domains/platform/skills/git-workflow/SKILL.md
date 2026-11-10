@@ -41,3 +41,4 @@ Load only what the task needs:
 - [`references/practices.md`](references/practices.md) — covers Git Workflow Master
 - [`references/pre-commit.md`](references/pre-commit.md) — covers Setup Pre-Commit Hooks
 - [`references/hook-installation/README.md`](references/hook-installation/README.md) — covers Gitmoji Setup
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Git Flow Branch Analysis Framework; Workflow (checklist); Bisect Modes; Types

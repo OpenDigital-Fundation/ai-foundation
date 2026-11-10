@@ -27,6 +27,7 @@ artifacts:
   supersedes:
   - affaan-m/ECC:skill:mcp-server-patterns
   - anthropics/skills:skill:mcp-builder
+  - davila7/claude-code-templates:skill:fastmcp-server
   - github/awesome-copilot:agent:C# MCP Server Expert
   - github/awesome-copilot:agent:Go MCP Server Development Expert
   - github/awesome-copilot:agent:Java MCP Expert
@@ -95,6 +96,10 @@ artifacts:
       - github/awesome-copilot:instructions/typescript-mcp-server.instructions.md
       sdk/quarkus/README.md:
       - github/awesome-copilot:instructions/quarkus-mcp-server-sse.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/development/fastmcp-server/SKILL.md#key-concepts
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Key concepts'
 - id: ai-engineering/ml-engineering
   type: skill
   capability: 'Use when adding or operating machine learning in a product: data contracts, features, reproducible training,
@@ -106,6 +111,8 @@ artifacts:
   - affaan-m/ECC:skill:ml-adoption-playbook
   - affaan-m/ECC:skill:mle-workflow
   - affaan-m/ECC:skill:recsys-pipeline-architect
+  - davila7/claude-code-templates:agent:ai-ethics-advisor
+  - davila7/claude-code-templates:skill:ml-paper-writing
   - 'github/awesome-copilot:agent:SE: Responsible AI'
   - msitarzewski/agency-agents:agent:AI Data Remediation Engineer
   - msitarzewski/agency-agents:agent:AI Engineer
@@ -140,6 +147,9 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-llm-post-training-engineer.md
       fairness-evaluation/README.md:
       - github/awesome-copilot:agents/se-responsible-ai-code.agent.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/agents/ai-specialists/ai-ethics-advisor.md#regulatory-compliance-framework,agentic-ai-ethics
+      - davila7/claude-code-templates:cli-tool/components/skills/ai-research/ml-paper-writing/SKILL.md#writing-philosophy-for-top-ml-conferences
     reference_dirs:
       dataset-curation: wshobson/agents:plugins/llm-finetuning/skills/dataset-curation
       eval-harness-first: wshobson/agents:plugins/llm-finetuning/skills/eval-harness-first
@@ -157,6 +167,8 @@ artifacts:
         when writing or reviewing a LoRA/QLoRA training configuration, choosing rank/alpha/target modules, or de
       preference-optimization: Align a fine-tuned model with preference data using DPO, ORPO, KTO, or SimPO. Use when preference
         pairs or thumbs-up/down feedback exist, when choosing between preference-optimization methods, or when
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Regulatory Compliance
+        Framework; Writing Philosophy for Top ML Conferences; Agentic AI Ethics'
 - id: ai-engineering/prompt-engineering
   type: skill
   capability: 'Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured
@@ -168,6 +180,8 @@ artifacts:
   - affaan-m/ECC:skill:prompt-caching-strategy
   - affaan-m/ECC:skill:prompt-optimizer
   - affaan-m/ECC:skill:regex-vs-llm-structured-text
+  - davila7/claude-code-templates:skill:avoid-ai-writing
+  - davila7/claude-code-templates:skill:humanizer
   - getsentry/skills:skill:prompt-optimizer
   - github/awesome-copilot:agent:Prompt Builder
   - github/awesome-copilot:agent:Prompt Engineer
@@ -191,6 +205,9 @@ artifacts:
       - github/awesome-copilot:agents/prompt-engineer.agent.md
       - github/awesome-copilot:instructions/ai-prompt-engineering-safety-best-practices.instructions.md
       - github/awesome-copilot:instructions/prompt.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/productivity/avoid-ai-writing/SKILL.md#context-profiles
+      - davila7/claude-code-templates:cli-tool/components/skills/productivity/humanizer/SKILL.md#content-patterns
     reference_dirs:
       prompt-optimization: getsentry/skills:skills/prompt-optimizer
     body: '# Prompt engineering
@@ -227,6 +244,9 @@ artifacts:
 
       Pin the model version, cache the static prefix, monitor quality on production samples, and rerun the evaluation before
       any model or prompt change. For the Claude API specifics, use `ai-engineering:claude-api`.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Context profiles; CONTENT
+        PATTERNS'
 - id: ai-engineering/rag-pipelines
   type: skill
   capability: 'Use when building, debugging or reviewing retrieval-augmented generation or search: chunking, embeddings, hybrid
@@ -236,6 +256,9 @@ artifacts:
   supersedes:
   - affaan-m/ECC:agent:rag-pipeline-reviewer
   - affaan-m/ECC:skill:iterative-retrieval
+  - davila7/claude-code-templates:agent:llm-architect
+  - davila7/claude-code-templates:agent:search-specialist
+  - davila7/claude-code-templates:skill:rag-qdrant
   - github/awesome-copilot:rule:langchain-python.instructions
   - msitarzewski/agency-agents:agent:RAG Pipeline Engineer
   - msitarzewski/agency-agents:agent:Search Relevance Engineer
@@ -259,6 +282,10 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-search-relevance-engineer.md
       langchain/README.md:
       - github/awesome-copilot:instructions/langchain-python.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/agents/ai-specialists/llm-architect.md#serving-infrastructure-selection,rag-pipeline-architecture
+      - davila7/claude-code-templates:cli-tool/components/skills/ai-research/rag-qdrant/SKILL.md#rag-integration
+      - davila7/claude-code-templates:cli-tool/components/agents/ai-specialists/search-specialist.md#search-strategies
     body: '# RAG pipelines
 
 
@@ -307,3 +334,5 @@ artifacts:
         selecting quantization strategies, or scaling vector search infrastructure.
       similarity-search-patterns: Implement efficient similarity search with vector databases. Use when building semantic
         search, implementing nearest neighbor queries, or optimizing retrieval performance.
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Serving Infrastructure
+        Selection; RAG Pipeline Architecture; RAG integration; Search Strategies'

@@ -109,6 +109,7 @@ Load only what the task needs:
 - [`references/windows-desktop.md`](references/windows-desktop.md) — covers Windows Desktop E2E Testing
 - [`references/playwright-overview.md`](references/playwright-overview.md) — covers Playwright Best Practices
 - [`references/playwright/README.md`](references/playwright/README.md) — covers Playwright .NET Test Generation Instructions; Playwright Python Test Generation Instructions; playwright-typescript.instructions; Playwright Tester Mode
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Viewport Fit Checks (Required); Non-Web App Screenshots; Gotchas
 - `references/playwright-advanced/`
 - `references/playwright-architecture/`
 - `references/playwright-browser-apis/`

@@ -34,6 +34,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `deal-strategy` | msitarzewski/agency-agents |
-| `investor-relations` | affaan-m/ECC |
+| `deal-strategy` | davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents |
+| `investor-relations` | affaan-m/ECC, github/awesome-copilot |
 | `prospecting` | affaan-m/ECC, msitarzewski/agency-agents |

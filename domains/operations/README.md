@@ -34,6 +34,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `customer-support` | msitarzewski/agency-agents |
-| `people-operations` | msitarzewski/agency-agents |
-| `project-management` | affaan-m/ECC, msitarzewski/agency-agents |
+| `customer-support` | davila7/claude-code-templates, msitarzewski/agency-agents |
+| `people-operations` | github/awesome-copilot, msitarzewski/agency-agents |
+| `project-management` | Jeffallan/claude-skills, affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |

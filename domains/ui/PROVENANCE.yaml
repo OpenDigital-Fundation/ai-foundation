@@ -595,6 +595,23 @@ files:
     path: design/design-ux-architect.md
     license: MIT
     modification: adapted
+- path: skills/component-styling/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/web-development/shadcn/rules/base-vs-radix.md#togglegroup,composition-aschild-radix-vs-render-base
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/web-development/shadcn/rules/forms.md#forms-use-fieldgroup-field
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/web-development/shadcn/rules/composition.md#items-always-inside-their-group-component
+    license: MIT
+    modification: merged-section
 - path: skills/component-styling/references/framework-integration/README.md
   derived_from:
   - source: github/awesome-copilot
@@ -1263,6 +1280,23 @@ files:
     path: design/design-whimsy-injector.md
     license: MIT
     modification: adapted
+- path: skills/motion-and-polish/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/gsap-framer-scroll-animation/SKILL.md#the-5-most-common-scroll-patterns
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/creative-design/scroll-experience/SKILL.md#anti-patterns
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/ui-design/skills/interaction-design/SKILL.md#css-animation-patterns
+    license: MIT
+    modification: merged-section
 - path: skills/motion-and-polish/references/design-quality.md
   derived_from:
   - source: affaan-m/ECC

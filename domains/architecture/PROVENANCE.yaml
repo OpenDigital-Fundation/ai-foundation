@@ -133,6 +133,18 @@ files:
     path: agents/context-architect.agent.md
     license: MIT
     modification: adapted
+- path: skills/codebase-onboarding/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/create-agentsmd/SKILL.md#file-structure-and-content-guidelines
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/acquire-codebase-knowledge/SKILL.md#gotchas
+    license: MIT
+    modification: merged-section
 - path: skills/codebase-onboarding/references/explorer.md
   derived_from:
   - source: affaan-m/ECC

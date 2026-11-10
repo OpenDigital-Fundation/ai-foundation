@@ -14,6 +14,18 @@ files:
     path: pi/core/skills/product-capability/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/product-management/references/derived-guides.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/startup-business-analyst/commands/business-case.md#business-case-document-structure
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/business-marketing/pricing-strategy/SKILL.md#pricing-research-methods
+    license: MIT
+    modification: merged-section
 - path: skills/product-management/references/experiments.md
   derived_from:
   - source: msitarzewski/agency-agents

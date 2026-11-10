@@ -33,16 +33,16 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [millionco/react-doctor](https://github.com/millionco/react-doctor) @ `9791c32` | Modified-MIT (no AI training/evaluation use, no resale without permission) | merge | 6 | 1 | 2 license, 1 out-of-scope |
 | [danicat/godoctor](https://github.com/danicat/godoctor) @ `ad2eacc` | Apache-2.0 | reference | 1 | 0 | 1 vendor-specific |
 | [ankitchiplunkar/frontend-design](https://github.com/ankitchiplunkar/frontend-design) @ `34bbe42` | MIT | merge | 0 | 0 | — |
-| [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 1 | 19 vendor-specific, 10 duplicate-of, 8 license, 5 out-of-scope |
+| [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 2 | 19 vendor-specific, 9 duplicate-of, 8 license, 5 out-of-scope |
 | [vercel-labs/skills](https://github.com/vercel-labs/skills) @ `d3701c1` | MIT | merge | 1 | 0 | 1 vendor-specific |
 | [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 7 | 10 vendor-specific, 10 duplicate-of, 3 source-internal, 2 license |
 | [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
 | [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) @ `ce8b262` | MIT | merge | 23 | 0 | 16 source-internal, 7 duplicate-of |
-| [github/awesome-copilot](https://github.com/github/awesome-copilot) @ `797337f` | MIT | merge | 918 | 60 | 320 vendor-specific, 310 duplicate-of, 60 out-of-scope, 24 source-internal, 17 low-quality |
-| [wshobson/agents](https://github.com/wshobson/agents) @ `9c61ab2` | MIT | merge | 488 | 13 | 370 duplicate-of, 29 vendor-specific, 24 out-of-scope, 22 source-internal |
-| [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) @ `ed74d11` | MIT | merge | 166 | 0 | 143 duplicate-of, 17 out-of-scope, 6 vendor-specific |
-| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) @ `bf9b0b4` | MIT | merge | 2051 | 1 | 973 duplicate-of, 614 vendor-specific, 213 out-of-scope, 25 source-internal, 15 low-quality, 3 license |
-| [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) @ `078a25c` | MIT | merge | 77 | 0 | 72 duplicate-of, 4 vendor-specific, 1 out-of-scope |
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) @ `797337f` | MIT | merge | 918 | 71 | 320 vendor-specific, 279 duplicate-of, 60 out-of-scope, 24 source-internal, 17 low-quality |
+| [wshobson/agents](https://github.com/wshobson/agents) @ `9c61ab2` | MIT | merge | 488 | 24 | 346 duplicate-of, 29 vendor-specific, 24 out-of-scope, 22 source-internal |
+| [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) @ `ed74d11` | MIT | merge | 166 | 2 | 140 duplicate-of, 17 out-of-scope, 6 vendor-specific |
+| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) @ `bf9b0b4` | MIT | merge | 2051 | 29 | 924 duplicate-of, 614 vendor-specific, 213 out-of-scope, 25 source-internal, 15 low-quality, 3 license |
+| [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) @ `078a25c` | MIT | merge | 77 | 7 | 65 duplicate-of, 4 vendor-specific, 1 out-of-scope |
 
 ## obra/superpowers
 
@@ -208,8 +208,8 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 
 - URL: <https://github.com/openai/skills> · commit `49f948faa9258a0c61caceaf225e179651397431` · licence NOASSERTION · policy `merge`
 - Note: Licence declared per skill: Apache-2.0 or MIT for most; Figma skills carry Figma terms and are not copied; Notion skills are MIT but bound to the Notion connector
-- Used in: `security:threat-modeling`
-- Excluded items by reason: vendor-specific: 19, duplicate-of: 10, license: 8, out-of-scope: 5
+- Used in: `security:threat-modeling`, `testing:browser-testing`
+- Excluded items by reason: vendor-specific: 19, duplicate-of: 9, license: 8, out-of-scope: 5
 
 ## vercel-labs/skills
 
@@ -239,31 +239,33 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 
 - URL: <https://github.com/github/awesome-copilot> · commit `797337f33f73e35d08d82f840e21c4b8c4932d88` · licence MIT · policy `merge`
 - Note: Collection MIT (GitHub, Inc.); some skills and extensions carry their own LICENSE files, resolved per folder
-- Used in: `accessibility:assistive-technology-testing`, `accessibility:document-accessibility`, `accessibility:wcag-accessibility`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-guardrails`, `agent-engineering:agent-memory`, `agent-engineering:context-management`, `agent-engineering:harness-design`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `architecture:api-design`, `architecture:architecture-review`, `architecture:codebase-design`, `architecture:codebase-onboarding`, `architecture:decision-records`, `architecture:domain-modeling`, `architecture:system-design`, `code-quality:code-review`, `code-quality:debt-ledger`, `data:data-pipelines`, `data:database-design`, `data:database-migrations`, `debugging:build-failure-resolution`, `debugging:systematic-debugging`, `documents:technical-writing`, `languages:cpp`, `languages:dart`, `languages:dotnet`, `languages:go`, `languages:jvm`, `languages:php`, `languages:python`, `languages:react-diagnostics`, `languages:ruby`, `languages:rust`, `languages:typescript`, `legal-compliance:compliance-programs`, `marketing:seo`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:incident-response`, `platform:reliability`, `principles:coding-discipline`, `product:product-management`, `research:docs-lookup`, `research:source-research`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`, `testing:browser-testing`, `testing:test-strategy`, `ui:component-styling`, `ui:visual-design`, `ux:user-research`, `workflow:executing-plans`, `workflow:issue-breakdown`, `workflow:writing-plans`
-- Excluded items by reason: vendor-specific: 320, duplicate-of: 310, out-of-scope: 60, source-internal: 24, low-quality: 17
+- Used in: `accessibility:accessibility-audit`, `accessibility:assistive-technology-testing`, `accessibility:document-accessibility`, `accessibility:wcag-accessibility`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-guardrails`, `agent-engineering:agent-memory`, `agent-engineering:context-management`, `agent-engineering:harness-design`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `architecture:api-design`, `architecture:architecture-review`, `architecture:codebase-design`, `architecture:codebase-onboarding`, `architecture:decision-records`, `architecture:domain-modeling`, `architecture:system-design`, `code-quality:code-review`, `code-quality:debt-ledger`, `code-quality:simplification`, `creative-media:image-prompting`, `data:data-pipelines`, `data:database-design`, `data:database-migrations`, `debugging:build-failure-resolution`, `debugging:systematic-debugging`, `documents:office-documents`, `documents:technical-writing`, `languages:cpp`, `languages:dart`, `languages:dotnet`, `languages:go`, `languages:jvm`, `languages:php`, `languages:python`, `languages:react-diagnostics`, `languages:ruby`, `languages:rust`, `languages:typescript`, `legal-compliance:compliance-programs`, `marketing:content-marketing`, `marketing:paid-media`, `marketing:seo`, `operations:people-operations`, `operations:project-management`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:incident-response`, `platform:reliability`, `principles:coding-discipline`, `product:product-management`, `research:docs-lookup`, `research:source-research`, `sales:deal-strategy`, `sales:investor-relations`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`, `testing:browser-testing`, `testing:test-strategy`, `ui:component-styling`, `ui:motion-and-polish`, `ui:visual-design`, `ux:user-research`, `workflow:executing-plans`, `workflow:issue-breakdown`, `workflow:writing-plans`
+- Excluded items by reason: vendor-specific: 320, duplicate-of: 279, out-of-scope: 60, source-internal: 24, low-quality: 17
 
 ## wshobson/agents
 
 - URL: <https://github.com/wshobson/agents> · commit `9c61ab243def98f72da12abd41cfcf5bcd91af9d` · licence MIT · policy `merge`
-- Used in: `accessibility:assistive-technology-testing`, `agent-engineering:agent-teams`, `ai-engineering:ml-engineering`, `ai-engineering:rag-pipelines`, `architecture:system-design`, `data:data-pipelines`, `data:database-design`, `languages:python`, `legal-compliance:compliance-programs`, `platform:deployment`, `platform:incident-response`, `platform:reliability`, `security:threat-modeling`
-- Excluded items by reason: duplicate-of: 370, vendor-specific: 29, out-of-scope: 24, source-internal: 22
+- Used in: `accessibility:accessibility-audit`, `accessibility:assistive-technology-testing`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-guardrails`, `agent-engineering:agent-memory`, `agent-engineering:agent-teams`, `ai-engineering:ml-engineering`, `ai-engineering:rag-pipelines`, `architecture:system-design`, `code-quality:simplification`, `data:data-pipelines`, `data:database-design`, `documents:office-documents`, `finance:financial-analysis`, `languages:python`, `legal-compliance:compliance-programs`, `operations:project-management`, `platform:deployment`, `platform:incident-response`, `platform:reliability`, `product:product-management`, `security:threat-modeling`, `testing:test-strategy`, `ui:motion-and-polish`
+- Excluded items by reason: duplicate-of: 346, vendor-specific: 29, out-of-scope: 24, source-internal: 22
 
 ## VoltAgent/awesome-claude-code-subagents
 
 - URL: <https://github.com/VoltAgent/awesome-claude-code-subagents> · commit `ed74d115b7fb7026a22a4f816a8e3250f425e3b4` · licence MIT · policy `merge`
-- Excluded items by reason: duplicate-of: 143, out-of-scope: 17, vendor-specific: 6
+- Used in: `agent-engineering:agent-teams`, `research:source-research`
+- Excluded items by reason: duplicate-of: 140, out-of-scope: 17, vendor-specific: 6
 
 ## davila7/claude-code-templates
 
 - URL: <https://github.com/davila7/claude-code-templates> · commit `bf9b0b4ae66831ad3bc683f7ff9319fbaaaae12c` · licence MIT · policy `merge`
 - Note: Collection MIT; many vendored components carry their own LICENSE files, resolved per folder
-- Used in: `data:database-design`
-- Excluded items by reason: duplicate-of: 973, vendor-specific: 614, out-of-scope: 213, source-internal: 25, low-quality: 15, license: 3
+- Used in: `accessibility:accessibility-audit`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-memory`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `code-quality:simplification`, `creative-media:generative-art`, `data:database-design`, `documents:internal-comms`, `documents:office-documents`, `documents:technical-writing`, `legal-compliance:compliance-programs`, `marketing:campaign-planning`, `marketing:content-marketing`, `marketing:email-marketing`, `marketing:seo`, `operations:customer-support`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:reliability`, `product:product-management`, `research:source-research`, `sales:deal-strategy`, `testing:test-strategy`, `ui:component-styling`, `ui:motion-and-polish`
+- Excluded items by reason: duplicate-of: 924, vendor-specific: 614, out-of-scope: 213, source-internal: 25, low-quality: 15, license: 3
 
 ## Jeffallan/claude-skills
 
 - URL: <https://github.com/Jeffallan/claude-skills> · commit `078a25cc5bfd8011459be7b91d004e900c1d02d3` · licence MIT · policy `merge`
-- Excluded items by reason: duplicate-of: 72, vendor-specific: 4, out-of-scope: 1
+- Used in: `data:data-pipelines`, `languages:dart`, `languages:php`, `languages:python`, `operations:project-management`, `platform:deployment`, `platform:reliability`
+- Excluded items by reason: duplicate-of: 65, vendor-specific: 4, out-of-scope: 1
 
 ## Original OpenDigital contributions
 

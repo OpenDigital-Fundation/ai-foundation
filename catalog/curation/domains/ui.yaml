@@ -10,6 +10,9 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - anthropics/skills:skill:theme-factory
+  - davila7/claude-code-templates:rule:base-vs-radix
+  - davila7/claude-code-templates:rule:composition
+  - davila7/claude-code-templates:rule:forms
   - github/awesome-copilot:rule:bulma-v1.instructions
   - github/awesome-copilot:rule:html-css-style-color-guide.instructions
   - github/awesome-copilot:rule:tailwind-v4-vite.instructions
@@ -31,6 +34,13 @@ artifacts:
       - github/awesome-copilot:instructions/html-css-style-color-guide.instructions.md
       - github/awesome-copilot:instructions/tailwind-v4-vite.instructions.md
       - github/awesome-copilot:instructions/bulma-v1.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/web-development/shadcn/rules/base-vs-radix.md#togglegroup,composition-aschild-radix-vs-render-base
+      - davila7/claude-code-templates:cli-tool/components/skills/web-development/shadcn/rules/forms.md#forms-use-fieldgroup-field
+      - davila7/claude-code-templates:cli-tool/components/skills/web-development/shadcn/rules/composition.md#items-always-inside-their-group-component
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: ToggleGroup; Forms use
+        FieldGroup + Field; Items always inside their Group component; Composition: asChild (radix) vs render (base)'
 - id: ui/design-system
   type: skill
   capability: Choose or generate a design system (style, palette, type, charts, icons, tokens) from a curated database.
@@ -58,7 +68,10 @@ artifacts:
   - affaan-m/ECC:skill:taste
   - affaan-m/ECC:skill:taste-application
   - affaan-m/ECC:skill:taste-distillation
+  - davila7/claude-code-templates:skill:scroll-experience
+  - github/awesome-copilot:skill:gsap-framer-scroll-animation
   - msitarzewski/agency-agents:agent:Whimsy Injector
+  - wshobson/agents:skill:interaction-design
   recipe:
     title: Motion and polish
     description: 'Use when an interface works but feels flat or rough: adding purposeful motion and transitions, micro-interactions,
@@ -80,6 +93,13 @@ artifacts:
       - r:web/design-quality.md
       delight.md:
       - msitarzewski/agency-agents:design/design-whimsy-injector.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/gsap-framer-scroll-animation/SKILL.md#the-5-most-common-scroll-patterns
+      - davila7/claude-code-templates:cli-tool/components/skills/creative-design/scroll-experience/SKILL.md#anti-patterns
+      - wshobson/agents:plugins/ui-design/skills/interaction-design/SKILL.md#css-animation-patterns
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: The 5 Most Common Scroll
+        Patterns; Anti-Patterns; CSS Animation Patterns'
 - id: ui/visual-design
   type: skill
   capability: Design and build new pages that look designed, with themes, job-first layout and browser-linted quality gates.

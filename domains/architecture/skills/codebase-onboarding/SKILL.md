@@ -245,3 +245,4 @@ Load only what the task needs:
 - [`references/spec-mining.md`](references/spec-mining.md) — covers Spec Miner
 - [`references/agent-instructions.md`](references/agent-instructions.md) — covers Maintaining AGENTS.md; Package Manager; Commands; External References
 - [`references/context-mapping/README.md`](references/context-mapping/README.md) — covers Context Architect; Context Map for task description
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: File Structure and Content Guidelines; Gotchas

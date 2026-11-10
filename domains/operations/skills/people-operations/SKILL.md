@@ -32,3 +32,4 @@ Load only what the task needs:
 - [`references/recruiting.md`](references/recruiting.md) — covers Recruitment; Pre-Onboarding (T-7 Days); Onboarding Day (Day T); First Week (T1 to T7 Days)
 - [`references/training.md`](references/training.md) — covers Corporate Training Designer
 - [`references/change-management.md`](references/change-management.md) — covers Change Management Consultant
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Performance Review Prep; Entry Format; Teaching Techniques

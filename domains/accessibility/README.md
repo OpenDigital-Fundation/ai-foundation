@@ -35,7 +35,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 
 | Artefato | Fontes |
 |---|---|
-| `accessibility-audit` | Community-Access/accessibility-agents, msitarzewski/agency-agents |
+| `accessibility-audit` | Community-Access/accessibility-agents, davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
 | `assistive-technology-testing` | Community-Access/accessibility-agents, github/awesome-copilot, wshobson/agents |
 | `document-accessibility` | Community-Access/accessibility-agents, github/awesome-copilot |
 | `wcag-accessibility` | Community-Access/accessibility-agents, affaan-m/ECC, github/awesome-copilot |

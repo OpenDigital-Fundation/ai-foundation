@@ -21,6 +21,18 @@ files:
     path: hooks/dependency-license-checker/README.md
     license: MIT
     modification: adapted
+- path: skills/compliance-programs/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/enterprise-communication/data-privacy-compliance/SKILL.md#data-subject-rights-implementation,privacy-by-design-principles,consent-management
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/security-compliance/SKILL.md#security-compliance-lifecycle,key-security-frameworks-standards
+    license: MIT
+    modification: merged-section
 - path: skills/compliance-programs/references/pci-compliance/README.md
   derived_from:
   - source: wshobson/agents

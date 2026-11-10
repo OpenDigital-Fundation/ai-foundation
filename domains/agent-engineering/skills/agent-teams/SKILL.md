@@ -125,5 +125,6 @@ Load only what the task needs:
 - [`references/team-assembly.md`](references/team-assembly.md) — covers Team Builder; Security Engineer Findings; SEO Specialist Findings; Synthesis
 - [`references/plan-orchestration.md`](references/plan-orchestration.md) — covers Plan Orchestrate; Steps overview; Step 1 title; Step 2 title (blocked)
 - [`references/parallel-execution.md`](references/parallel-execution.md) — covers Parallel Execution Optimizer
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Review Dimensions; What to design; Implementation Workflow; Coordination strategies to draw from
 - `references/team-composition-patterns/` — Design optimal agent team compositions with sizing heuristics, preset configurations, and agent type selection. Use this skill when deciding how many agents to spawn for a task, when choosing between 
 - `references/task-coordination-strategies/` — Decompose complex tasks, design dependency graphs, and coordinate multi-agent work with proper task descriptions and workload balancing. Use this skill when breaking down work for agent teams, managin

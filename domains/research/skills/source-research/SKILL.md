@@ -39,3 +39,4 @@ Load only what the task needs:
 - [`references/deep-research.md`](references/deep-research.md) — covers Deep Research; Executive Summary; 1. First Major Theme; 2. Second Major Theme
 - [`references/synthesis.md`](references/synthesis.md) — covers Research Synthesist
 - [`references/claim-verification/README.md`](references/claim-verification/README.md) — covers Technical spike research mode; Doublecheck
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Specialized Analysis Techniques; The 5-Step First Principles Method; Core Intelligence Framework; Phased Execution Workflow

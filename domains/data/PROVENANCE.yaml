@@ -49,6 +49,18 @@ files:
     path: plugins/data-engineering/skills/dbt-transformation-patterns/references/details.md
     license: MIT
     modification: adapted
+- path: skills/data-pipelines/references/derived-guides.md
+  derived_from:
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/pandas-pro/SKILL.md#code-patterns
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/commands/data-pipeline.md#example-minimal-batch-pipeline
+    license: MIT
+    modification: merged-section
 - path: skills/data-pipelines/references/role-guide.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -89,6 +101,18 @@ files:
     path: pi/core/skills/clickhouse-io/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/database-design/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/database/database-architect.md#architecture-decision-framework,scalability-architecture-patterns
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/database/nosql-specialist.md#performance-optimization-strategies
+    license: MIT
+    modification: merged-section
 - path: skills/database-design/references/mysql.md
   derived_from:
   - source: affaan-m/ECC
@@ -402,3 +426,10 @@ files:
     path: agents/oracle-to-postgres-migration-expert.agent.md
     license: MIT
     modification: adapted
+- path: skills/database-migrations/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md#key-constraints
+    license: MIT
+    modification: merged-section

@@ -87,6 +87,28 @@ files:
     path: agents/comment-analyzer.md
     license: MIT
     modification: adapted
+- path: skills/simplification/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/refactor/SKILL.md#common-code-smells-fixes
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/write-coding-standards-from-file/SKILL.md#variable-and-parameter-configuration-conditions
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-code-style/SKILL.md#advanced-patterns
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/development-tools/technical-debt-manager.md#technical-debt-categories
+    license: MIT
+    modification: merged-section
 - path: skills/simplification/references/type-design.md
   derived_from:
   - source: affaan-m/ECC

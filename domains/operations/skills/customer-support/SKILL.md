@@ -33,3 +33,4 @@ Load only what the task needs:
 - [`references/responding.md`](references/responding.md) — covers Support Responder; Customer Information; Resolution Process; Outcome and Metrics
 - [`references/service.md`](references/service.md) — covers Customer Service
 - [`references/customer-success.md`](references/customer-success.md) — covers Customer Success Manager
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Accuracy & Anti-Fabrication

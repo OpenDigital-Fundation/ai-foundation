@@ -7,6 +7,13 @@ files:
     path: skills/documentation-lookup/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/docs-lookup/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: agents/context7.agent.md#quality-standards,documentation-retrieval-strategy
+    license: MIT
+    modification: merged-section
 - path: skills/docs-lookup/references/lookup-agent.md
   derived_from:
   - source: affaan-m/ECC
@@ -61,6 +68,23 @@ files:
     path: skills/deep-research/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/source-research/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/deep-research-team/competitive-intelligence-analyst.md#specialized-analysis-techniques,core-intelligence-framework
+    license: MIT
+    modification: merged-section
+  - source: VoltAgent/awesome-claude-code-subagents
+    commit: ed74d11
+    path: categories/10-research-analysis/first-principles-thinking.md#the-5-step-first-principles-method
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/deep-research-team/research-synthesizer.md#phased-execution-workflow
+    license: MIT
+    modification: merged-section
 - path: skills/source-research/references/synthesis.md
   derived_from:
   - source: msitarzewski/agency-agents

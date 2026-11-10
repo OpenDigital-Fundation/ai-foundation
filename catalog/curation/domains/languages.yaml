@@ -22,6 +22,7 @@ artifacts:
   - affaan-m/ECC:skill:cpp-testing
   - github/awesome-copilot:agent:C++ Expert
   - github/awesome-copilot:rule:cmake-vcpkg.instructions
+  - github/awesome-copilot:skill:vcpkg
   language_pack:
     title: C++
     description: Use when writing, testing, reviewing or building C++ code. Loads modern C++ standards (RAII, ownership with
@@ -45,12 +46,14 @@ artifacts:
       - github/awesome-copilot:instructions/cmake-vcpkg.instructions.md
       tooling:
       - r:cpp/hooks.md
+      - github/awesome-copilot:skills/vcpkg/SKILL.md#version-management
 - id: languages/dart
   type: skill
   capability: Dart and Flutter patterns, testing, security, review and build knowledge, plus framework references.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:skill:flutter-expert
   - affaan-m/ECC:agent:dart-build-resolver
   - affaan-m/ECC:agent:flutter-reviewer
   - affaan-m/ECC:command:flutter-build
@@ -84,6 +87,7 @@ artifacts:
       - a:flutter-reviewer
       build:
       - a:dart-build-resolver
+      - Jeffallan/claude-skills:skills/flutter-expert/SKILL.md#troubleshooting-common-failures
       tooling:
       - r:dart/hooks.md
 - id: languages/dotnet
@@ -126,6 +130,7 @@ artifacts:
   - github/awesome-copilot:rule:dotnet-wpf.instructions
   - github/awesome-copilot:rule:mvvm-toolkit.instructions
   - github/awesome-copilot:rule:winui3.instructions
+  - github/awesome-copilot:skill:roslyn-analyzers
   language_pack:
     title: C# and F# on .NET
     description: Use when writing, testing, reviewing or building C# or F# on .NET - ASP.NET Core, Entity Framework, dependency
@@ -145,6 +150,7 @@ artifacts:
       - github/awesome-copilot:agents/CSharpExpert.agent.md
       - github/awesome-copilot:agents/csharp-dotnet-janitor.agent.md
       - github/awesome-copilot:agents/expert-dotnet-software-engineer.agent.md
+      - github/awesome-copilot:skills/roslyn-analyzers/SKILL.md#project-and-dependency-boundaries
       testing:
       - r:csharp/testing.md
       - s:csharp-testing
@@ -275,6 +281,8 @@ artifacts:
   - github/awesome-copilot:rule:java-junit5-assertions.instructions
   - github/awesome-copilot:rule:quarkus.instructions
   - github/awesome-copilot:rule:springboot.instructions
+  - github/awesome-copilot:skill:java-debugging
+  - github/awesome-copilot:skill:quarkus-native-and-container
   language_pack:
     also_supersedes:
     - affaan-m/ECC:command:gradle-build
@@ -306,6 +314,8 @@ artifacts:
       build:
       - a:java-build-resolver
       - a:kotlin-build-resolver
+      - github/awesome-copilot:skills/quarkus-native-and-container/SKILL.md#native-build,common-native-failures
+      - github/awesome-copilot:skills/java-debugging/SKILL.md#debug-tests-and-frameworks
       tooling:
       - r:java/hooks.md
       - r:kotlin/hooks.md
@@ -342,6 +352,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:skill:php-pro
   - affaan-m/ECC:agent:php-reviewer
   - affaan-m/ECC:rule:php/coding-style
   - affaan-m/ECC:rule:php/hooks
@@ -364,6 +375,7 @@ artifacts:
       standards:
       - r:php/coding-style.md
       - r:php/patterns.md
+      - Jeffallan/claude-skills:skills/php-pro/SKILL.md#code-patterns
       testing:
       - r:php/testing.md
       security:
@@ -388,6 +400,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:skill:django-expert
   - affaan-m/ECC:agent:django-build-resolver
   - affaan-m/ECC:agent:django-reviewer
   - affaan-m/ECC:agent:fastapi-reviewer
@@ -412,9 +425,13 @@ artifacts:
   - affaan-m/ECC:skill:python-testing
   - affaan-m/ECC:skill:pytorch-patterns
   - github/awesome-copilot:agent:GitHub Actions Windows ARM64 wheel builder
+  - wshobson/agents:skill:async-python-patterns
   - wshobson/agents:skill:python-background-jobs
+  - wshobson/agents:skill:python-configuration
   - wshobson/agents:skill:python-observability
+  - wshobson/agents:skill:python-project-structure
   - wshobson/agents:skill:python-resilience
+  - wshobson/agents:skill:python-resource-management
   - wshobson/agents:skill:python-type-safety
   - wshobson/agents:skill:uv-package-manager
   language_pack:
@@ -437,6 +454,11 @@ artifacts:
       - wshobson/agents:plugins/python-development/skills/python-observability/references/details.md
       - wshobson/agents:plugins/python-development/skills/python-type-safety/SKILL.md
       - wshobson/agents:plugins/python-development/skills/python-type-safety/references/details.md
+      - wshobson/agents:plugins/python-development/skills/python-resource-management/SKILL.md#fundamental-patterns
+      - wshobson/agents:plugins/python-development/skills/python-configuration/SKILL.md#fundamental-patterns
+      - wshobson/agents:plugins/python-development/skills/async-python-patterns/SKILL.md#fundamental-patterns
+      - wshobson/agents:plugins/python-development/skills/python-project-structure/SKILL.md#fundamental-patterns
+      - Jeffallan/claude-skills:skills/django-expert/SKILL.md#minimal-working-example
       testing:
       - r:python/testing.md
       - s:python-testing

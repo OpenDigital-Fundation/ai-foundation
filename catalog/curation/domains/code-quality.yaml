@@ -64,6 +64,10 @@ artifacts:
   - affaan-m/ECC:agent:refactor-cleaner
   - affaan-m/ECC:agent:type-design-analyzer
   - affaan-m/ECC:command:refactor-clean
+  - davila7/claude-code-templates:agent:technical-debt-manager
+  - github/awesome-copilot:skill:refactor
+  - github/awesome-copilot:skill:write-coding-standards-from-file
+  - wshobson/agents:skill:python-code-style
   recipe:
     title: Simplification
     description: 'Use when existing code should get simpler without changing behaviour: removing dead code and unused exports,
@@ -76,8 +80,16 @@ artifacts:
       - a:comment-analyzer
       type-design.md:
       - a:type-design-analyzer
+      derived-guides.md:
+      - github/awesome-copilot:skills/refactor/SKILL.md#common-code-smells-fixes
+      - github/awesome-copilot:skills/write-coding-standards-from-file/SKILL.md#variable-and-parameter-configuration-conditions
+      - wshobson/agents:plugins/python-development/skills/python-code-style/SKILL.md#advanced-patterns
+      - davila7/claude-code-templates:cli-tool/components/agents/development-tools/technical-debt-manager.md#technical-debt-categories
     supersedes:
     - affaan-m/ECC:command:refactor-clean
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Common Code Smells &
+        Fixes; Variable and Parameter Configuration Conditions; Advanced Patterns; Technical Debt Categories'
 imports:
 - dest: domains/code-quality/skills/code-review/SKILL.md
   source: obra/superpowers

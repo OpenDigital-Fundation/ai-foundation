@@ -65,3 +65,4 @@ Load only what the task needs:
 - [`references/cleanup.md`](references/cleanup.md) — covers Refactor & Dead Code Cleaner
 - [`references/comments.md`](references/comments.md) — covers Comment Analyzer
 - [`references/type-design.md`](references/type-design.md) — covers Type Design Analyzer
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Common Code Smells & Fixes; Variable and Parameter Configuration Conditions; Advanced Patterns; Technical Debt Categories

@@ -35,3 +35,4 @@ Load only what the task needs:
 - [`references/meeting-notes.md`](references/meeting-notes.md) — covers Meeting Notes Specialist
 - [`references/jira.md`](references/jira.md) — covers Jira Workflow Steward; What does this PR do; Jira Link; Change Summary
 - [`references/flow-operations.md`](references/flow-operations.md) — covers Project Flow Ops
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Metrics Dashboard; Async Standup Patterns; Scoring Rubric (1–10 scales); Yesterday's Accomplishments Extraction; Blockers and Dependencies Identification; Communication Best Practices
