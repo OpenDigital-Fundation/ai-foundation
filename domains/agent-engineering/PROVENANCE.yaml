@@ -225,11 +225,53 @@ files:
     path: skills/plan-orchestrate/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-teams/references/task-coordination-strategies/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/task-coordination-strategies/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/task-coordination-strategies/references/dependency-graphs.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/task-coordination-strategies/references/dependency-graphs.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/task-coordination-strategies/references/task-decomposition.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/task-coordination-strategies/references/task-decomposition.md
+    license: MIT
+    modification: adapted
 - path: skills/agent-teams/references/team-assembly.md
   derived_from:
   - source: affaan-m/ECC
     commit: b38be6a
     path: skills/team-builder/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/team-composition-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/team-composition-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/team-composition-patterns/references/agent-type-selection.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/team-composition-patterns/references/agent-type-selection.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/team-composition-patterns/references/preset-teams.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/team-composition-patterns/references/preset-teams.md
     license: MIT
     modification: adapted
 - path: skills/context-management/SKILL.md

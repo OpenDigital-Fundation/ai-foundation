@@ -56,7 +56,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `go` | affaan-m/ECC, github/awesome-copilot |
 | `jvm` | affaan-m/ECC, github/awesome-copilot |
 | `php` | affaan-m/ECC, github/awesome-copilot |
-| `python` | affaan-m/ECC, github/awesome-copilot |
+| `python` | affaan-m/ECC, github/awesome-copilot, wshobson/agents |
 | `react-diagnostics` | github/awesome-copilot, millionco/react-doctor |
 | `ruby` | affaan-m/ECC, github/awesome-copilot |
 | `rust` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |

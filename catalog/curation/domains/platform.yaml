@@ -29,6 +29,9 @@ artifacts:
   - msitarzewski/agency-agents:agent:Developer Tooling Engineer
   - msitarzewski/agency-agents:agent:Mobile Release Engineer
   - msitarzewski/agency-agents:agent:Platform Engineer
+  - wshobson/agents:skill:deployment-pipeline-design
+  - wshobson/agents:skill:helm-chart-scaffolding
+  - wshobson/agents:skill:k8s-security-policies
   recipe:
     title: Deployment
     description: 'Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads,
@@ -66,6 +69,28 @@ artifacts:
       - github/awesome-copilot:instructions/kubernetes-manifests.instructions.md
       ansible/README.md:
       - github/awesome-copilot:instructions/ansible.instructions.md
+    reference_dirs:
+      k8s-security-policies: wshobson/agents:plugins/kubernetes-operations/skills/k8s-security-policies
+      helm-chart-scaffolding: wshobson/agents:plugins/kubernetes-operations/skills/helm-chart-scaffolding
+      deployment-pipeline-design: wshobson/agents:plugins/cicd-automation/skills/deployment-pipeline-design
+    reference_notes:
+      k8s-security-policies: Implement Kubernetes security policies including NetworkPolicy, PodSecurityPolicy, and RBAC for
+        production-grade security. Use when securing Kubernetes clusters, implementing network isolation, or enf
+      helm-chart-scaffolding: Design, organize, and manage Helm charts for templating and packaging Kubernetes applications
+        with reusable configurations. Use when creating Helm charts, packaging Kubernetes applications, or impleme
+      deployment-pipeline-design: Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment
+        orchestration. Use this skill when designing zero-downtime deployment pipelines, implementing canary rollout str
+    append: 'Detail files of the merged guides:
+
+
+      - [`references/helm-chart-scaffolding/references/chart-structure.md`](references/helm-chart-scaffolding/references/chart-structure.md)
+
+      '
+    replace:
+    - - aquasec/trivy:latest
+      - aquasec/trivy:<pinned-version>@sha256:<digest>
+    - - \$CI_REGISTRY_IMAGE:latest
+      - $CI_REGISTRY_IMAGE:cache
 - id: platform/git-workflow
   type: skill
   capability: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts,
@@ -186,6 +211,9 @@ artifacts:
   - github/awesome-copilot:agent:Cloud and SaaS Outage Triage
   - msitarzewski/agency-agents:agent:Incident Responder
   - msitarzewski/agency-agents:agent:Incident Response Commander
+  - wshobson/agents:skill:incident-runbook-templates
+  - wshobson/agents:skill:on-call-handoff-patterns
+  - wshobson/agents:skill:postmortem-writing
   recipe:
     title: Incident response
     description: 'Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due:
@@ -231,6 +259,17 @@ artifacts:
 
       Blameless timeline, impact, root cause and contributing factors, what went well, and action items with owners and dates.
       Suspected security incidents follow the security reference: preserve evidence, contain, and involve the security owner.'
+    reference_dirs:
+      postmortem-writing: wshobson/agents:plugins/incident-response/skills/postmortem-writing
+      incident-runbook-templates: wshobson/agents:plugins/incident-response/skills/incident-runbook-templates
+      on-call-handoff-patterns: wshobson/agents:plugins/incident-response/skills/on-call-handoff-patterns
+    reference_notes:
+      postmortem-writing: Write effective blameless postmortems with root cause analysis, timelines, and action items. Use
+        when conducting incident reviews, writing postmortem documents, or improving incident response processe
+      incident-runbook-templates: Create structured incident response runbooks with step-by-step procedures, escalation paths,
+        and recovery actions. Use this skill when building a service outage runbook for a payment processing system
+      on-call-handoff-patterns: Master on-call shift handoffs with context transfer, escalation procedures, and documentation.
+        Use this skill when transitioning on-call responsibilities between engineers and ensuring the incoming re
 - id: platform/reliability
   type: skill
   capability: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
@@ -244,6 +283,8 @@ artifacts:
   - msitarzewski/agency-agents:agent:FinOps Engineer
   - msitarzewski/agency-agents:agent:Infrastructure Maintainer
   - msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)
+  - wshobson/agents:skill:distributed-tracing
+  - wshobson/agents:skill:slo-implementation
   recipe:
     title: Reliability and observability
     description: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
@@ -291,3 +332,11 @@ artifacts:
 
       Budget left: ship. Budget burnt: freeze risky changes and fix reliability. Reduce toil you repeat, plan capacity from
       data, and test failure modes deliberately (game days, chaos experiments) in safe environments.'
+    reference_dirs:
+      slo-implementation: wshobson/agents:plugins/observability-monitoring/skills/slo-implementation
+      distributed-tracing: wshobson/agents:plugins/observability-monitoring/skills/distributed-tracing
+    reference_notes:
+      slo-implementation: Define and implement Service Level Indicators (SLIs) and Service Level Objectives (SLOs) with error
+        budgets and alerting. Use when establishing reliability targets, implementing SRE practices, or meas
+      distributed-tracing: Implement distributed tracing with Jaeger and Tempo to track requests across microservices and
+        identify performance bottlenecks. Use when debugging microservices, analyzing request flows, or implement

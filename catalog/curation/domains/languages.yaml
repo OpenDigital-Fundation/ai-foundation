@@ -412,6 +412,11 @@ artifacts:
   - affaan-m/ECC:skill:python-testing
   - affaan-m/ECC:skill:pytorch-patterns
   - github/awesome-copilot:agent:GitHub Actions Windows ARM64 wheel builder
+  - wshobson/agents:skill:python-background-jobs
+  - wshobson/agents:skill:python-observability
+  - wshobson/agents:skill:python-resilience
+  - wshobson/agents:skill:python-type-safety
+  - wshobson/agents:skill:uv-package-manager
   language_pack:
     also_supersedes:
     - affaan-m/ECC:command:fastapi-review
@@ -424,6 +429,14 @@ artifacts:
       - r:python/coding-style.md
       - r:python/patterns.md
       - s:python-patterns
+      - wshobson/agents:plugins/python-development/skills/python-resilience/SKILL.md
+      - wshobson/agents:plugins/python-development/skills/python-resilience/references/details.md
+      - wshobson/agents:plugins/python-development/skills/python-background-jobs/SKILL.md
+      - wshobson/agents:plugins/python-development/skills/python-background-jobs/references/details.md
+      - wshobson/agents:plugins/python-development/skills/python-observability/SKILL.md
+      - wshobson/agents:plugins/python-development/skills/python-observability/references/details.md
+      - wshobson/agents:plugins/python-development/skills/python-type-safety/SKILL.md
+      - wshobson/agents:plugins/python-development/skills/python-type-safety/references/details.md
       testing:
       - r:python/testing.md
       - s:python-testing
@@ -434,6 +447,8 @@ artifacts:
       tooling:
       - r:python/hooks.md
       - s:generating-python-installer
+      - wshobson/agents:plugins/python-development/skills/uv-package-manager/SKILL.md
+      - wshobson/agents:plugins/python-development/skills/uv-package-manager/references/advanced-patterns.md
       build:
       - github/awesome-copilot:agents/python-win-arm64-gha-wheel-builder.agent.md
     frameworks:

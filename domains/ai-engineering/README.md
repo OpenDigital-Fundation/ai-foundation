@@ -38,6 +38,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `claude-api` | anthropics/skills |
 | `mcp-server-development` | affaan-m/ECC, anthropics/skills, github/awesome-copilot, msitarzewski/agency-agents |
-| `ml-engineering` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `ml-engineering` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
 | `prompt-engineering` | affaan-m/ECC, getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents |
-| `rag-pipelines` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `rag-pipelines` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |

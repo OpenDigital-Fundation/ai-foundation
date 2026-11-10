@@ -39,6 +39,10 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
 | [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) @ `ce8b262` | MIT | merge | 23 | 0 | 16 source-internal, 7 duplicate-of |
 | [github/awesome-copilot](https://github.com/github/awesome-copilot) @ `797337f` | MIT | merge | 918 | 60 | 320 vendor-specific, 310 duplicate-of, 60 out-of-scope, 24 source-internal, 17 low-quality |
+| [wshobson/agents](https://github.com/wshobson/agents) @ `9c61ab2` | MIT | merge | 488 | 13 | 370 duplicate-of, 29 vendor-specific, 24 out-of-scope, 22 source-internal |
+| [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) @ `ed74d11` | MIT | merge | 166 | 0 | 143 duplicate-of, 17 out-of-scope, 6 vendor-specific |
+| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) @ `bf9b0b4` | MIT | merge | 2051 | 1 | 973 duplicate-of, 614 vendor-specific, 213 out-of-scope, 25 source-internal, 15 low-quality, 3 license |
+| [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) @ `078a25c` | MIT | merge | 77 | 0 | 72 duplicate-of, 4 vendor-specific, 1 out-of-scope |
 
 ## obra/superpowers
 
@@ -237,6 +241,29 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 - Note: Collection MIT (GitHub, Inc.); some skills and extensions carry their own LICENSE files, resolved per folder
 - Used in: `accessibility:assistive-technology-testing`, `accessibility:document-accessibility`, `accessibility:wcag-accessibility`, `agent-engineering:agent-evaluation`, `agent-engineering:agent-guardrails`, `agent-engineering:agent-memory`, `agent-engineering:context-management`, `agent-engineering:harness-design`, `ai-engineering:mcp-server-development`, `ai-engineering:ml-engineering`, `ai-engineering:prompt-engineering`, `ai-engineering:rag-pipelines`, `architecture:api-design`, `architecture:architecture-review`, `architecture:codebase-design`, `architecture:codebase-onboarding`, `architecture:decision-records`, `architecture:domain-modeling`, `architecture:system-design`, `code-quality:code-review`, `code-quality:debt-ledger`, `data:data-pipelines`, `data:database-design`, `data:database-migrations`, `debugging:build-failure-resolution`, `debugging:systematic-debugging`, `documents:technical-writing`, `languages:cpp`, `languages:dart`, `languages:dotnet`, `languages:go`, `languages:jvm`, `languages:php`, `languages:python`, `languages:react-diagnostics`, `languages:ruby`, `languages:rust`, `languages:typescript`, `legal-compliance:compliance-programs`, `marketing:seo`, `platform:deployment`, `platform:git-workflow`, `platform:github-operations`, `platform:incident-response`, `platform:reliability`, `principles:coding-discipline`, `product:product-management`, `research:docs-lookup`, `research:source-research`, `security:agent-security`, `security:secrets-hygiene`, `security:security-audit`, `testing:browser-testing`, `testing:test-strategy`, `ui:component-styling`, `ui:visual-design`, `ux:user-research`, `workflow:executing-plans`, `workflow:issue-breakdown`, `workflow:writing-plans`
 - Excluded items by reason: vendor-specific: 320, duplicate-of: 310, out-of-scope: 60, source-internal: 24, low-quality: 17
+
+## wshobson/agents
+
+- URL: <https://github.com/wshobson/agents> · commit `9c61ab243def98f72da12abd41cfcf5bcd91af9d` · licence MIT · policy `merge`
+- Used in: `accessibility:assistive-technology-testing`, `agent-engineering:agent-teams`, `ai-engineering:ml-engineering`, `ai-engineering:rag-pipelines`, `architecture:system-design`, `data:data-pipelines`, `data:database-design`, `languages:python`, `legal-compliance:compliance-programs`, `platform:deployment`, `platform:incident-response`, `platform:reliability`, `security:threat-modeling`
+- Excluded items by reason: duplicate-of: 370, vendor-specific: 29, out-of-scope: 24, source-internal: 22
+
+## VoltAgent/awesome-claude-code-subagents
+
+- URL: <https://github.com/VoltAgent/awesome-claude-code-subagents> · commit `ed74d115b7fb7026a22a4f816a8e3250f425e3b4` · licence MIT · policy `merge`
+- Excluded items by reason: duplicate-of: 143, out-of-scope: 17, vendor-specific: 6
+
+## davila7/claude-code-templates
+
+- URL: <https://github.com/davila7/claude-code-templates> · commit `bf9b0b4ae66831ad3bc683f7ff9319fbaaaae12c` · licence MIT · policy `merge`
+- Note: Collection MIT; many vendored components carry their own LICENSE files, resolved per folder
+- Used in: `data:database-design`
+- Excluded items by reason: duplicate-of: 973, vendor-specific: 614, out-of-scope: 213, source-internal: 25, low-quality: 15, license: 3
+
+## Jeffallan/claude-skills
+
+- URL: <https://github.com/Jeffallan/claude-skills> · commit `078a25cc5bfd8011459be7b91d004e900c1d02d3` · licence MIT · policy `merge`
+- Excluded items by reason: duplicate-of: 72, vendor-specific: 4, out-of-scope: 1
 
 ## Original OpenDigital contributions
 

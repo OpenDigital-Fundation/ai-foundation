@@ -36,6 +36,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `accessibility-audit` | Community-Access/accessibility-agents, msitarzewski/agency-agents |
-| `assistive-technology-testing` | Community-Access/accessibility-agents, github/awesome-copilot |
+| `assistive-technology-testing` | Community-Access/accessibility-agents, github/awesome-copilot, wshobson/agents |
 | `document-accessibility` | Community-Access/accessibility-agents, github/awesome-copilot |
 | `wcag-accessibility` | Community-Access/accessibility-agents, affaan-m/ECC, github/awesome-copilot |

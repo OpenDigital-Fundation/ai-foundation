@@ -211,6 +211,8 @@ artifacts:
   - affaan-m/ECC:skill:plan-orchestrate
   - affaan-m/ECC:skill:team-agent-orchestration
   - affaan-m/ECC:skill:team-builder
+  - wshobson/agents:skill:task-coordination-strategies
+  - wshobson/agents:skill:team-composition-patterns
   recipe:
     title: Agent teams
     description: 'Use when coordinating several agents as a team on one effort: assigning owners and scope to work items,
@@ -232,6 +234,26 @@ artifacts:
     - affaan-m/ECC:command:multi-backend
     - affaan-m/ECC:skill:claude-devfleet
     - affaan-m/ECC:skill:dev-team
+    reference_dirs:
+      team-composition-patterns: wshobson/agents:plugins/agent-teams/skills/team-composition-patterns
+      task-coordination-strategies: wshobson/agents:plugins/agent-teams/skills/task-coordination-strategies
+    reference_notes:
+      team-composition-patterns: 'Design optimal agent team compositions with sizing heuristics, preset configurations, and
+        agent type selection. Use this skill when deciding how many agents to spawn for a task, when choosing between '
+      task-coordination-strategies: Decompose complex tasks, design dependency graphs, and coordinate multi-agent work with
+        proper task descriptions and workload balancing. Use this skill when breaking down work for agent teams, managin
+    append: 'Detail files of the merged guides:
+
+
+      - [`references/task-coordination-strategies/references/dependency-graphs.md`](references/task-coordination-strategies/references/dependency-graphs.md)
+
+      - [`references/task-coordination-strategies/references/task-decomposition.md`](references/task-coordination-strategies/references/task-decomposition.md)
+
+      - [`references/team-composition-patterns/references/preset-teams.md`](references/team-composition-patterns/references/preset-teams.md)
+
+      - [`references/team-composition-patterns/references/agent-type-selection.md`](references/team-composition-patterns/references/agent-type-selection.md)
+
+      '
 - id: agent-engineering/context-management
   type: skill
   capability: 'Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and

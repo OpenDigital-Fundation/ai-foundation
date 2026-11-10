@@ -602,6 +602,41 @@ files:
     path: skills/testing-coach/references/screen-reader-testing.md
     license: MIT
     modification: adapted
+- path: skills/assistive-technology-testing/references/screen-reader-testing/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/screen-reader-testing/references/jaws-talkback.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/accessibility-compliance/skills/screen-reader-testing/references/jaws-talkback.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/screen-reader-testing/references/nvda.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/accessibility-compliance/skills/screen-reader-testing/references/nvda.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/screen-reader-testing/references/voiceover-ios.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/accessibility-compliance/skills/screen-reader-testing/references/voiceover-ios.md
+    license: MIT
+    modification: adapted
+- path: skills/assistive-technology-testing/references/screen-reader-testing/references/voiceover.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/accessibility-compliance/skills/screen-reader-testing/references/voiceover.md
+    license: MIT
+    modification: adapted
 - path: skills/document-accessibility/SKILL.md
   derived_from:
   - source: Community-Access/accessibility-agents

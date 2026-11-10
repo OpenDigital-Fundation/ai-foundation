@@ -428,6 +428,10 @@ Before any production deployment:
 - [ ] Runbook for common failure scenarios
 - [ ] On-call rotation and escalation path defined
 
+Detail files of the merged guides:
+
+- [`references/helm-chart-scaffolding/references/chart-structure.md`](references/helm-chart-scaffolding/references/chart-structure.md)
+
 ## References
 
 Load only what the task needs:
@@ -444,3 +448,6 @@ Load only what the task needs:
 - [`references/containers/README.md`](references/containers/README.md) — covers Containerization & Docker Best Practices; Dev Container Configuration
 - [`references/kubernetes/README.md`](references/kubernetes/README.md) — covers Kubernetes Deployment Best Practices; Kubernetes Manifests Instructions
 - [`references/ansible/README.md`](references/ansible/README.md) — covers Ansible Conventions and Best Practices
+- `references/k8s-security-policies/` — Implement Kubernetes security policies including NetworkPolicy, PodSecurityPolicy, and RBAC for production-grade security. Use when securing Kubernetes clusters, implementing network isolation, or enf
+- `references/helm-chart-scaffolding/` — Design, organize, and manage Helm charts for templating and packaging Kubernetes applications with reusable configurations. Use when creating Helm charts, packaging Kubernetes applications, or impleme
+- `references/deployment-pipeline-design/` — Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment orchestration. Use this skill when designing zero-downtime deployment pipelines, implementing canary rollout str

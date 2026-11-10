@@ -34,3 +34,7 @@ Load only what the task needs:
 - [`references/iterative-retrieval.md`](references/iterative-retrieval.md) — covers Iterative Retrieval Pattern
 - [`references/search-relevance.md`](references/search-relevance.md) — covers Search Relevance Engineer
 - [`references/langchain/README.md`](references/langchain/README.md) — covers LangChain Python Instructions
+- `references/hybrid-search-implementation/` — Combine vector and keyword search for improved retrieval. Use when implementing RAG systems, building search engines, or when neither approach alone provides sufficient recall.
+- `references/embedding-strategies/` — Select and optimize embedding models for semantic search and RAG applications. Use when choosing embedding models, implementing chunking strategies, or optimizing embedding quality for specific domain
+- `references/vector-index-tuning/` — Optimize vector index performance for latency, recall, and memory. Use when tuning HNSW parameters, selecting quantization strategies, or scaling vector search infrastructure.
+- `references/similarity-search-patterns/` — Implement efficient similarity search with vector databases. Use when building semantic search, implementing nearest neighbor queries, or optimizing retrieval performance.

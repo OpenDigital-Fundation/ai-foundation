@@ -114,6 +114,11 @@ artifacts:
   - msitarzewski/agency-agents:agent:LLM Post-Training Engineer
   - msitarzewski/agency-agents:agent:Model QA Specialist
   - msitarzewski/agency-agents:agent:Voice AI Integration Engineer
+  - wshobson/agents:skill:dataset-curation
+  - wshobson/agents:skill:eval-harness-first
+  - wshobson/agents:skill:finetuning-method-selection
+  - wshobson/agents:skill:lora-qlora-recipes
+  - wshobson/agents:skill:preference-optimization
   recipe:
     title: ML engineering
     description: 'Use when adding or operating machine learning in a product: data contracts, features, reproducible training,
@@ -135,6 +140,23 @@ artifacts:
       - msitarzewski/agency-agents:engineering/engineering-llm-post-training-engineer.md
       fairness-evaluation/README.md:
       - github/awesome-copilot:agents/se-responsible-ai-code.agent.md
+    reference_dirs:
+      dataset-curation: wshobson/agents:plugins/llm-finetuning/skills/dataset-curation
+      eval-harness-first: wshobson/agents:plugins/llm-finetuning/skills/eval-harness-first
+      finetuning-method-selection: wshobson/agents:plugins/llm-finetuning/skills/finetuning-method-selection
+      lora-qlora-recipes: wshobson/agents:plugins/llm-finetuning/skills/lora-qlora-recipes
+      preference-optimization: wshobson/agents:plugins/llm-finetuning/skills/preference-optimization
+    reference_notes:
+      dataset-curation: Prepare, format, and validate datasets for supervised fine-tuning and preference training. Use when
+        converting raw data into training format, applying chat templates, configuring sequence packing, gen
+      eval-harness-first: Build the evaluation harness that gates every fine-tuning run — golden sets, per-failure-mode graders,
+        judge calibration, and base-model baselines. Use when starting a fine-tuning effort, when convert
+      finetuning-method-selection: Decide whether to fine-tune at all, and route to the right method (SFT, DPO/ORPO/KTO, GRPO/RLVR,
+        continued pretraining) and base model. Use when starting any fine-tuning effort, when unsure whether RA
+      lora-qlora-recipes: Configure LoRA and QLoRA supervised fine-tuning with current best-practice hyperparameters. Use
+        when writing or reviewing a LoRA/QLoRA training configuration, choosing rank/alpha/target modules, or de
+      preference-optimization: Align a fine-tuned model with preference data using DPO, ORPO, KTO, or SimPO. Use when preference
+        pairs or thumbs-up/down feedback exist, when choosing between preference-optimization methods, or when
 - id: ai-engineering/prompt-engineering
   type: skill
   capability: 'Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured
@@ -217,6 +239,10 @@ artifacts:
   - github/awesome-copilot:rule:langchain-python.instructions
   - msitarzewski/agency-agents:agent:RAG Pipeline Engineer
   - msitarzewski/agency-agents:agent:Search Relevance Engineer
+  - wshobson/agents:skill:embedding-strategies
+  - wshobson/agents:skill:hybrid-search-implementation
+  - wshobson/agents:skill:similarity-search-patterns
+  - wshobson/agents:skill:vector-index-tuning
   recipe:
     title: RAG pipelines
     description: 'Use when building, debugging or reviewing retrieval-augmented generation or search: chunking, embeddings,
@@ -267,3 +293,17 @@ artifacts:
 
       Change one thing at a time against the evaluation set; log queries, retrieved chunks and feedback in production; enforce
       document permissions at retrieval time.'
+    reference_dirs:
+      hybrid-search-implementation: wshobson/agents:plugins/llm-application-dev/skills/hybrid-search-implementation
+      embedding-strategies: wshobson/agents:plugins/llm-application-dev/skills/embedding-strategies
+      vector-index-tuning: wshobson/agents:plugins/llm-application-dev/skills/vector-index-tuning
+      similarity-search-patterns: wshobson/agents:plugins/llm-application-dev/skills/similarity-search-patterns
+    reference_notes:
+      hybrid-search-implementation: Combine vector and keyword search for improved retrieval. Use when implementing RAG systems,
+        building search engines, or when neither approach alone provides sufficient recall.
+      embedding-strategies: Select and optimize embedding models for semantic search and RAG applications. Use when choosing
+        embedding models, implementing chunking strategies, or optimizing embedding quality for specific domain
+      vector-index-tuning: Optimize vector index performance for latency, recall, and memory. Use when tuning HNSW parameters,
+        selecting quantization strategies, or scaling vector search infrastructure.
+      similarity-search-patterns: Implement efficient similarity search with vector databases. Use when building semantic
+        search, implementing nearest neighbor queries, or optimizing retrieval performance.

@@ -107,6 +107,10 @@ artifacts:
   - msitarzewski/agency-agents:agent:Internationalization Engineer
   - msitarzewski/agency-agents:agent:Realtime Collaboration Engineer
   - msitarzewski/agency-agents:agent:Software Architect
+  - wshobson/agents:skill:cqrs-implementation
+  - wshobson/agents:skill:event-store-design
+  - wshobson/agents:skill:projection-patterns
+  - wshobson/agents:skill:saga-orchestration
   recipe:
     title: System design
     description: 'Use when designing a service, system or major feature end to end: components and boundaries, data flow,
@@ -171,6 +175,20 @@ artifacts:
 
       Compare two or three designs on the targets and trade-offs, pick one, and write the hard-to-reverse choices as ADRs
       (`architecture:decision-records`). Hand the design to `workflow:writing-plans`.'
+    reference_dirs:
+      saga-orchestration: wshobson/agents:plugins/backend-development/skills/saga-orchestration
+      cqrs-implementation: wshobson/agents:plugins/backend-development/skills/cqrs-implementation
+      event-store-design: wshobson/agents:plugins/backend-development/skills/event-store-design
+      projection-patterns: wshobson/agents:plugins/backend-development/skills/projection-patterns
+    reference_notes:
+      saga-orchestration: Implement saga patterns for distributed transactions and cross-aggregate workflows. Use this skill
+        when implementing distributed transactions across microservices where 2PC is unavailable, designing c
+      cqrs-implementation: Implement Command Query Responsibility Segregation for scalable architectures. Use when separating
+        read and write models, optimizing query performance, or building event-sourced systems.
+      event-store-design: Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure,
+        choosing event store technologies, or implementing event persistence patterns.
+      projection-patterns: Build read models and projections from event streams. Use when implementing CQRS read sides, building
+        materialized views, or optimizing query performance in event-sourced systems.
 imports:
 - dest: domains/architecture/skills/domain-modeling
   source: mattpocock/skills

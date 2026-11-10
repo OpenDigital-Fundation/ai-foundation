@@ -918,11 +918,95 @@ files:
     path: engineering/engineering-ai-engineer.md
     license: MIT
     modification: adapted
+- path: skills/ml-engineering/references/dataset-curation/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/dataset-curation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/dataset-curation/references/formats-and-templates.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/dataset-curation/references/formats-and-templates.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/dataset-curation/references/synthetic-data.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/dataset-curation/references/synthetic-data.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/eval-harness-first/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/eval-harness-first/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/eval-harness-first/references/grader-templates.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/eval-harness-first/references/grader-templates.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/eval-harness-first/references/judge-calibration.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/eval-harness-first/references/judge-calibration.md
+    license: MIT
+    modification: adapted
 - path: skills/ml-engineering/references/fairness-evaluation/README.md
   derived_from:
   - source: github/awesome-copilot
     commit: 797337f
     path: agents/se-responsible-ai-code.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/finetuning-method-selection/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/finetuning-method-selection/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/finetuning-method-selection/references/memory-math.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/finetuning-method-selection/references/memory-math.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/finetuning-method-selection/references/model-catalog.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/finetuning-method-selection/references/model-catalog.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/lora-qlora-recipes/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/lora-qlora-recipes/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/lora-qlora-recipes/references/hyperparameters.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/lora-qlora-recipes/references/hyperparameters.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/lora-qlora-recipes/references/unsloth-trl-mapping.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/lora-qlora-recipes/references/unsloth-trl-mapping.md
     license: MIT
     modification: adapted
 - path: skills/ml-engineering/references/model-qa.md
@@ -937,6 +1021,20 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-llm-post-training-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/preference-optimization/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/preference-optimization/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/ml-engineering/references/preference-optimization/references/method-configs.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-finetuning/skills/preference-optimization/references/method-configs.md
     license: MIT
     modification: adapted
 - path: skills/ml-engineering/references/recommendation-systems.md
@@ -1059,6 +1157,34 @@ files:
     path: engineering/engineering-rag-pipeline-engineer.md
     license: MIT
     modification: adapted
+- path: skills/rag-pipelines/references/embedding-strategies/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/embedding-strategies/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/embedding-strategies/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/embedding-strategies/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/hybrid-search-implementation/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/hybrid-search-implementation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/hybrid-search-implementation/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/hybrid-search-implementation/references/details.md
+    license: MIT
+    modification: adapted
 - path: skills/rag-pipelines/references/iterative-retrieval.md
   derived_from:
   - source: affaan-m/ECC
@@ -1092,5 +1218,33 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-search-relevance-engineer.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/similarity-search-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/similarity-search-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/similarity-search-patterns/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/similarity-search-patterns/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/vector-index-tuning/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/vector-index-tuning/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/rag-pipelines/references/vector-index-tuning/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/llm-application-dev/skills/vector-index-tuning/references/details.md
     license: MIT
     modification: adapted

@@ -39,3 +39,7 @@ Load only what the task needs:
 - [`references/realtime-collaboration.md`](references/realtime-collaboration.md) — covers Realtime Collaboration Engineer
 - [`references/internationalisation.md`](references/internationalisation.md) — covers Internationalization Engineer; i18n Sync
 - [`references/design-checklists/README.md`](references/design-checklists/README.md) — covers High-Level Big Picture Architect (HLBPA); Constraints & Guardrails; Tooling & Commands; Verification Checklist
+- `references/saga-orchestration/` — Implement saga patterns for distributed transactions and cross-aggregate workflows. Use this skill when implementing distributed transactions across microservices where 2PC is unavailable, designing c
+- `references/cqrs-implementation/` — Implement Command Query Responsibility Segregation for scalable architectures. Use when separating read and write models, optimizing query performance, or building event-sourced systems.
+- `references/event-store-design/` — Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure, choosing event store technologies, or implementing event persistence patterns.
+- `references/projection-patterns/` — Build read models and projections from event streams. Use when implementing CQRS read sides, building materialized views, or optimizing query performance in event-sourced systems.

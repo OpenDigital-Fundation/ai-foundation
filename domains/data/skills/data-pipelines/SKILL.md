@@ -32,3 +32,6 @@ Load only what the task needs:
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/throughput.md`](references/throughput.md) — covers Data Throughput Accelerator
 - [`references/spark/README.md`](references/spark/README.md) — covers PySpark Performance & Parallelism Reviewer (); Decision Rules (must follow); Example prompts this agent is optimized for; Safety / correctness boundaries
+- `references/airflow-dag-patterns/` — Build production Apache Airflow DAGs with best practices for operators, sensors, testing, and deployment. Use when creating data pipelines, orchestrating workflows, or scheduling batch jobs.
+- `references/dbt-transformation-patterns/` — Master dbt (data build tool) for analytics engineering with model organization, testing, documentation, and incremental strategies. Use when building data transformations, creating data models, or imp
+- `references/data-quality-frameworks/` — Implement data quality validation with Great Expectations, dbt tests, and data contracts. Use when building data quality pipelines, implementing validation rules, or establishing data contracts.

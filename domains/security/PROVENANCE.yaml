@@ -341,6 +341,20 @@ files:
     path: skills/.curated/security-threat-model/references/security-controls-and-assets.md
     license: Apache-2.0
     modification: adapted
+- path: skills/threat-modeling/references/attack-tree-construction/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/attack-tree-construction/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/attack-tree-construction/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/attack-tree-construction/references/details.md
+    license: MIT
+    modification: base
 - path: skills/threat-modeling/references/security-model/README.md
   derived_from:
   - source: getsentry/skills
@@ -355,6 +369,48 @@ files:
     path: skills/security-model/references/consuming-policy.md
     license: Apache-2.0
     modification: adapted
+- path: skills/threat-modeling/references/security-requirement-extraction/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/security-requirement-extraction/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/security-requirement-extraction/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/security-requirement-extraction/references/details.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/stride-analysis-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/stride-analysis-patterns/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/stride-analysis-patterns/references/details.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/threat-mitigation-mapping/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/threat-mitigation-mapping/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/threat-mitigation-mapping/references/details.md
+    license: MIT
+    modification: base
 - path: skills/threat-modeling/templates/threat-model.md
   derived_from:
   - source: msitarzewski/agency-agents

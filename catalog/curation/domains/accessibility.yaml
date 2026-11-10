@@ -90,6 +90,7 @@ artifacts:
   - Community-Access/accessibility-agents:skill:screen-reader-lab
   - Community-Access/accessibility-agents:skill:testing-coach
   - github/awesome-copilot:agent:Accessibility Runtime Tester
+  - wshobson/agents:skill:screen-reader-testing
   recipe:
     title: Assistive technology testing
     description: 'Use when deciding how to test accessibility or running the tests: screen readers (NVDA, JAWS, VoiceOver,
@@ -101,9 +102,13 @@ artifacts:
       desktop-a11y-testing-coach: Community-Access/accessibility-agents:skills/desktop-a11y-testing-coach
       kb-testing-strategy: Community-Access/accessibility-agents:skills/kb-testing-strategy
       kb-playwright-testing: Community-Access/accessibility-agents:skills/kb-playwright-testing
+      screen-reader-testing: wshobson/agents:plugins/accessibility-compliance/skills/screen-reader-testing
     references:
       runtime-verification/README.md:
       - github/awesome-copilot:agents/accessibility-runtime-tester.agent.md
+    reference_notes:
+      screen-reader-testing: Test web applications with screen readers including VoiceOver, NVDA, and JAWS. Use when validating
+        screen reader compatibility, debugging accessibility issues, or ensuring assistive technology support
 - id: accessibility/document-accessibility
   type: skill
   capability: 'Use when Word, Excel, PowerPoint, PDF, ePub or Markdown files must be accessible: auditing them one by one

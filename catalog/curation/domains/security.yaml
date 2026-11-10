@@ -59,9 +59,13 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - getsentry/skills:skill:security-model
   - msitarzewski/agency-agents:agent:Security Architect
   - openai/skills:skill:security-threat-model
-  - getsentry/skills:skill:security-model
+  - wshobson/agents:skill:attack-tree-construction
+  - wshobson/agents:skill:security-requirement-extraction
+  - wshobson/agents:skill:stride-analysis-patterns
+  - wshobson/agents:skill:threat-mitigation-mapping
 imports:
 - dest: domains/security/skills/security-audit
   source: SecurityStandards/skill-security-audit
@@ -162,3 +166,23 @@ imports:
 - dest: domains/security/skills/secrets-hygiene/references/scanning-recipes.md
   source: github/awesome-copilot
   src: hooks/secrets-scanner/README.md
+- dest: domains/security/skills/threat-modeling/references/stride-analysis-patterns
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/stride-analysis-patterns
+  files:
+    README.md: plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md
+- dest: domains/security/skills/threat-modeling/references/attack-tree-construction
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/attack-tree-construction
+  files:
+    README.md: plugins/security-scanning/skills/attack-tree-construction/SKILL.md
+- dest: domains/security/skills/threat-modeling/references/threat-mitigation-mapping
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/threat-mitigation-mapping
+  files:
+    README.md: plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md
+- dest: domains/security/skills/threat-modeling/references/security-requirement-extraction
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/security-requirement-extraction
+  files:
+    README.md: plugins/security-scanning/skills/security-requirement-extraction/SKILL.md

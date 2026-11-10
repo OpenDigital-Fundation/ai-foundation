@@ -111,6 +111,13 @@ Finish each orchestration pass with:
 - Blockers with owner and next action.
 - New shared skill candidates.
 
+Detail files of the merged guides:
+
+- [`references/task-coordination-strategies/references/dependency-graphs.md`](references/task-coordination-strategies/references/dependency-graphs.md)
+- [`references/task-coordination-strategies/references/task-decomposition.md`](references/task-coordination-strategies/references/task-decomposition.md)
+- [`references/team-composition-patterns/references/preset-teams.md`](references/team-composition-patterns/references/preset-teams.md)
+- [`references/team-composition-patterns/references/agent-type-selection.md`](references/team-composition-patterns/references/agent-type-selection.md)
+
 ## References
 
 Load only what the task needs:
@@ -118,3 +125,5 @@ Load only what the task needs:
 - [`references/team-assembly.md`](references/team-assembly.md) — covers Team Builder; Security Engineer Findings; SEO Specialist Findings; Synthesis
 - [`references/plan-orchestration.md`](references/plan-orchestration.md) — covers Plan Orchestrate; Steps overview; Step 1 title; Step 2 title (blocked)
 - [`references/parallel-execution.md`](references/parallel-execution.md) — covers Parallel Execution Optimizer
+- `references/team-composition-patterns/` — Design optimal agent team compositions with sizing heuristics, preset configurations, and agent type selection. Use this skill when deciding how many agents to spawn for a task, when choosing between 
+- `references/task-coordination-strategies/` — Decompose complex tasks, design dependency graphs, and coordinate multi-agent work with proper task descriptions and workload balancing. Use this skill when breaking down work for agent teams, managin

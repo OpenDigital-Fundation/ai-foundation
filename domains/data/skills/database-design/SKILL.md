@@ -160,3 +160,5 @@ Load only what the task needs:
 - [`references/reliability.md`](references/reliability.md) — covers Database Reliability Engineer
 - [`references/review.md`](references/review.md) — covers Database Reviewer
 - [`references/query-review/README.md`](references/query-review/README.md) — covers PostgreSQL Database Administrator; SQL Development
+- `references/postgresql-table-design/` — Use this skill when designing or reviewing a PostgreSQL-specific schema. Covers best-practices, data types, indexing, constraints, performance patterns, and advanced features
+- `references/postgres-rules/` — Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing, or optimizing Postgres queries, schema designs, or database configurations.

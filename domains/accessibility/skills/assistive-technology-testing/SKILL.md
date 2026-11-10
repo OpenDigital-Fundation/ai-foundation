@@ -163,3 +163,4 @@ Load only what the task needs:
 - `references/desktop-a11y-testing-coach/`
 - `references/kb-testing-strategy/`
 - `references/kb-playwright-testing/`
+- `references/screen-reader-testing/` — Test web applications with screen readers including VoiceOver, NVDA, and JAWS. Use when validating screen reader compatibility, debugging accessibility issues, or ensuring assistive technology support

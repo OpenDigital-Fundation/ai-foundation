@@ -785,6 +785,46 @@ files:
     path: pi/core/skills/python-patterns/SKILL.md
     license: MIT
     modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-resilience/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-resilience/references/details.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-background-jobs/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-background-jobs/references/details.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-observability/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-observability/references/details.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-type-safety/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/python-type-safety/references/details.md
+    license: MIT
+    modification: adapted
 - path: skills/python/references/testing.md
   derived_from:
   - source: affaan-m/ECC
@@ -807,6 +847,16 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: skills/generating-python-installer/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/uv-package-manager/SKILL.md
+    license: MIT
+    modification: adapted
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/python-development/skills/uv-package-manager/references/advanced-patterns.md
     license: MIT
     modification: adapted
 - path: skills/react-diagnostics/SKILL.md

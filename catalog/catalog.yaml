@@ -49,6 +49,7 @@ artifacts:
   - "Community-Access/accessibility-agents:skill:screen-reader-lab"
   - "Community-Access/accessibility-agents:skill:testing-coach"
   - "github/awesome-copilot:agent:Accessibility Runtime Tester"
+  - "wshobson/agents:skill:screen-reader-testing"
 - id: accessibility/document-accessibility
   type: skill
   capability: "Use when Word, Excel, PowerPoint, PDF, ePub or Markdown files must be accessible: auditing them one by one\
@@ -215,6 +216,8 @@ artifacts:
   - "affaan-m/ECC:skill:plan-orchestrate"
   - "affaan-m/ECC:skill:team-agent-orchestration"
   - "affaan-m/ECC:skill:team-builder"
+  - "wshobson/agents:skill:task-coordination-strategies"
+  - "wshobson/agents:skill:team-composition-patterns"
 - id: agent-engineering/context-management
   type: skill
   capability: "Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and\
@@ -344,6 +347,11 @@ artifacts:
   - "msitarzewski/agency-agents:agent:LLM Post-Training Engineer"
   - "msitarzewski/agency-agents:agent:Model QA Specialist"
   - "msitarzewski/agency-agents:agent:Voice AI Integration Engineer"
+  - "wshobson/agents:skill:dataset-curation"
+  - "wshobson/agents:skill:eval-harness-first"
+  - "wshobson/agents:skill:finetuning-method-selection"
+  - "wshobson/agents:skill:lora-qlora-recipes"
+  - "wshobson/agents:skill:preference-optimization"
 - id: ai-engineering/prompt-engineering
   type: skill
   capability: "Use when writing, testing or optimising prompts for an LLM feature: system prompts, few-shot examples, structured\
@@ -373,6 +381,10 @@ artifacts:
   - "github/awesome-copilot:rule:langchain-python.instructions"
   - "msitarzewski/agency-agents:agent:RAG Pipeline Engineer"
   - "msitarzewski/agency-agents:agent:Search Relevance Engineer"
+  - "wshobson/agents:skill:embedding-strategies"
+  - "wshobson/agents:skill:hybrid-search-implementation"
+  - "wshobson/agents:skill:similarity-search-patterns"
+  - "wshobson/agents:skill:vector-index-tuning"
 - id: architecture/api-design
   type: skill
   capability: "Design or review HTTP APIs: resources, status codes, errors, pagination, auth, rate limits, versioning."
@@ -457,6 +469,10 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Internationalization Engineer"
   - "msitarzewski/agency-agents:agent:Realtime Collaboration Engineer"
   - "msitarzewski/agency-agents:agent:Software Architect"
+  - "wshobson/agents:skill:cqrs-implementation"
+  - "wshobson/agents:skill:event-store-design"
+  - "wshobson/agents:skill:projection-patterns"
+  - "wshobson/agents:skill:saga-orchestration"
 - id: brand/brand-identity
   type: skill
   capability: "Use when defining or applying a brand: discovery interviews, positioning, visual identity (logo direction,\
@@ -599,6 +615,9 @@ artifacts:
   - "github/awesome-copilot:agent:PySpark Expert Agent"
   - "github/awesome-copilot:rule:scala-spark.instructions"
   - "msitarzewski/agency-agents:agent:Data Engineer"
+  - "wshobson/agents:skill:airflow-dag-patterns"
+  - "wshobson/agents:skill:data-quality-frameworks"
+  - "wshobson/agents:skill:dbt-transformation-patterns"
 - id: data/database-design
   type: skill
   capability: Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels,
@@ -612,10 +631,45 @@ artifacts:
   - "affaan-m/ECC:skill:postgres-patterns"
   - "affaan-m/ECC:skill:prisma-patterns"
   - "affaan-m/ECC:skill:redis-patterns"
+  - "davila7/claude-code-templates:rule:_contributing"
+  - "davila7/claude-code-templates:rule:_sections"
+  - "davila7/claude-code-templates:rule:_template"
+  - "davila7/claude-code-templates:rule:advanced-full-text-search"
+  - "davila7/claude-code-templates:rule:advanced-jsonb-indexing"
+  - "davila7/claude-code-templates:rule:conn-idle-timeout"
+  - "davila7/claude-code-templates:rule:conn-limits"
+  - "davila7/claude-code-templates:rule:conn-pooling"
+  - "davila7/claude-code-templates:rule:conn-prepared-statements"
+  - "davila7/claude-code-templates:rule:data-batch-inserts"
+  - "davila7/claude-code-templates:rule:data-n-plus-one"
+  - "davila7/claude-code-templates:rule:data-pagination"
+  - "davila7/claude-code-templates:rule:data-upsert"
+  - "davila7/claude-code-templates:rule:lock-advisory"
+  - "davila7/claude-code-templates:rule:lock-deadlock-prevention"
+  - "davila7/claude-code-templates:rule:lock-short-transactions"
+  - "davila7/claude-code-templates:rule:lock-skip-locked"
+  - "davila7/claude-code-templates:rule:monitor-explain-analyze"
+  - "davila7/claude-code-templates:rule:monitor-pg-stat-statements"
+  - "davila7/claude-code-templates:rule:monitor-vacuum-analyze"
+  - "davila7/claude-code-templates:rule:query-composite-indexes"
+  - "davila7/claude-code-templates:rule:query-covering-indexes"
+  - "davila7/claude-code-templates:rule:query-index-types"
+  - "davila7/claude-code-templates:rule:query-missing-indexes"
+  - "davila7/claude-code-templates:rule:query-partial-indexes"
+  - "davila7/claude-code-templates:rule:schema-data-types"
+  - "davila7/claude-code-templates:rule:schema-foreign-key-indexes"
+  - "davila7/claude-code-templates:rule:schema-lowercase-identifiers"
+  - "davila7/claude-code-templates:rule:schema-partitioning"
+  - "davila7/claude-code-templates:rule:schema-primary-keys"
+  - "davila7/claude-code-templates:rule:security-privileges"
+  - "davila7/claude-code-templates:rule:security-rls-basics"
+  - "davila7/claude-code-templates:rule:security-rls-performance"
+  - "davila7/claude-code-templates:skill:postgres-best-practices"
   - "github/awesome-copilot:agent:PostgreSQL Database Administrator"
   - "github/awesome-copilot:rule:sql-sp-generation.instructions"
   - "msitarzewski/agency-agents:agent:Database Optimizer"
   - "msitarzewski/agency-agents:agent:Database Reliability Engineer"
+  - "wshobson/agents:skill:postgresql-table-design"
 - id: data/database-migrations
   type: skill
   capability: "Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills,\
@@ -940,6 +994,11 @@ artifacts:
   - "affaan-m/ECC:skill:python-testing"
   - "affaan-m/ECC:skill:pytorch-patterns"
   - "github/awesome-copilot:agent:GitHub Actions Windows ARM64 wheel builder"
+  - "wshobson/agents:skill:python-background-jobs"
+  - "wshobson/agents:skill:python-observability"
+  - "wshobson/agents:skill:python-resilience"
+  - "wshobson/agents:skill:python-type-safety"
+  - "wshobson/agents:skill:uv-package-manager"
 - id: languages/react-diagnostics
   type: skill
   capability: Use when finishing a feature, fixing a bug or before committing React code, or when the user types /doctor or
@@ -1231,6 +1290,7 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Compliance Auditor"
   - "msitarzewski/agency-agents:agent:Data Privacy Officer"
   - "msitarzewski/agency-agents:agent:Legal Compliance Checker"
+  - "wshobson/agents:skill:pci-compliance"
 - id: legal-compliance/contracts
   type: skill
   capability: "Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review\
@@ -1384,6 +1444,9 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Developer Tooling Engineer"
   - "msitarzewski/agency-agents:agent:Mobile Release Engineer"
   - "msitarzewski/agency-agents:agent:Platform Engineer"
+  - "wshobson/agents:skill:deployment-pipeline-design"
+  - "wshobson/agents:skill:helm-chart-scaffolding"
+  - "wshobson/agents:skill:k8s-security-policies"
 - id: platform/git-workflow
   type: skill
   capability: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts,
@@ -1421,6 +1484,9 @@ artifacts:
   - "github/awesome-copilot:agent:Cloud and SaaS Outage Triage"
   - "msitarzewski/agency-agents:agent:Incident Responder"
   - "msitarzewski/agency-agents:agent:Incident Response Commander"
+  - "wshobson/agents:skill:incident-runbook-templates"
+  - "wshobson/agents:skill:on-call-handoff-patterns"
+  - "wshobson/agents:skill:postmortem-writing"
 - id: platform/reliability
   type: skill
   capability: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
@@ -1434,6 +1500,8 @@ artifacts:
   - "msitarzewski/agency-agents:agent:FinOps Engineer"
   - "msitarzewski/agency-agents:agent:Infrastructure Maintainer"
   - "msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)"
+  - "wshobson/agents:skill:distributed-tracing"
+  - "wshobson/agents:skill:slo-implementation"
 - id: principles/coding-discipline
   type: skill
   capability: Make the smallest complete change, surface assumptions, keep diffs surgical and define a verifiable check.
@@ -1601,9 +1669,13 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - "getsentry/skills:skill:security-model"
   - "msitarzewski/agency-agents:agent:Security Architect"
   - "openai/skills:skill:security-threat-model"
-  - "getsentry/skills:skill:security-model"
+  - "wshobson/agents:skill:attack-tree-construction"
+  - "wshobson/agents:skill:security-requirement-extraction"
+  - "wshobson/agents:skill:stride-analysis-patterns"
+  - "wshobson/agents:skill:threat-mitigation-mapping"
 - id: testing/browser-testing
   type: skill
   capability: "Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising\

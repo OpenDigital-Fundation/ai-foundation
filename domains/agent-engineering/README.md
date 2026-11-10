@@ -47,7 +47,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `agent-guardrails` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills |
 | `agent-loops` | affaan-m/ECC |
 | `agent-memory` | affaan-m/ECC, github/awesome-copilot |
-| `agent-teams` | affaan-m/ECC |
+| `agent-teams` | affaan-m/ECC, wshobson/agents |
 | `context-management` | affaan-m/ECC, github/awesome-copilot |
 | `harness-design` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
 | `parallel-agents` | obra/superpowers |
