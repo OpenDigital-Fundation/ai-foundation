@@ -49,6 +49,45 @@ files:
     path: skills/internal-comms/examples/general-comms.md
     license: Apache-2.0
     modification: adapted
+- path: skills/internal-comms/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/enterprise-communication/email-composer/SKILL.md#common-email-types
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/enterprise-communication/feedback-mastery/SKILL.md#common-difficult-scenarios,preparation-phase,sbi-examples-for-software-teams
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/enterprise-communication/difficult-workplace-conversations/SKILL.md#example-scenarios
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/enterprise-communication/professional-communication/SKILL.md#technical-vs-non-technical-communication
+    license: MIT
+    modification: merged-section
+- path: skills/office-documents/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/document-processing/pdf-processing/SKILL.md#python-libraries
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/file-conversion/skills/file-conversion/SKILL.md#inspect-and-choose,verify-and-deliver
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/markdown-to-word-mermaid/SKILL.md#conversion-behavior,verification
+    license: MIT
+    modification: merged-section
 - path: skills/office-documents/references/document-generation.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -63,6 +102,23 @@ files:
     path: engineering/engineering-technical-writer.md
     license: MIT
     modification: adapted
+- path: skills/technical-writing/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/markdown-to-html/SKILL.md#converting-markdown-to-html
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/business-marketing/copy-editing/SKILL.md#the-seven-sweeps-framework
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/docs-sync-audit/SKILL.md#evidence-standards
+    license: MIT
+    modification: merged-section
 - path: skills/technical-writing/references/documentation-quality/README.md
   derived_from:
   - source: github/awesome-copilot

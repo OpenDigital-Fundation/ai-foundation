@@ -168,3 +168,10 @@ After agents return:
 2. **Check for conflicts** - Did agents edit same code?
 3. **Run full suite** - Verify all fixes work together
 4. **Spot check** - Agents can make systematic errors
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/parallel-debugging.md`](references/derived/parallel-debugging.md) — Evidence Collection Standards; Hypothesis Generation Framework
+- [`references/derived/multi-reviewer-patterns.md`](references/derived/multi-reviewer-patterns.md) — Review Dimension Allocation; Severity Calibration

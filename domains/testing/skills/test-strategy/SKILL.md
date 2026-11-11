@@ -184,3 +184,4 @@ Load only what the task needs:
 - [`references/click-path-audit.md`](references/click-path-audit.md) — covers /click-path-audit Behavioural Flow Audit
 - [`references/delivery-gates.md`](references/delivery-gates.md) — covers Delivery Gate Mechanical Quality Gate for Claude Code
 - [`references/risk-based-quality/README.md`](references/risk-based-quality/README.md) — covers ai-team-qa; MOBILE TESTER; QA Engineering Best Practices
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Recheck Mode — Verify Bug Fixes; Triage & Stabilization Workflow; Unit Testing Patterns

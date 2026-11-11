@@ -17,6 +17,7 @@ artifacts:
   - github/awesome-copilot:rule:code-review-generic.instructions
   - mattpocock/skills:skill:code-review
   - obra/superpowers:skill:requesting-code-review
+  - wshobson/agents:skill:code-review-excellence
 - id: code-quality/code-reviewer
   type: agent
   capability: Read-only, fresh-context reviewer that reports evidence-backed findings by severity with a verdict.
@@ -44,7 +45,10 @@ artifacts:
   supersedes:
   - DietrichGebert/ponytail:command:ponytail-debt
   - DietrichGebert/ponytail:skill:ponytail-debt
+  - davila7/claude-code-templates:skill:dependency-updater
+  - davila7/claude-code-templates:skill:technical-debt-auditor
   - github/awesome-copilot:agent:Technical Debt Remediation Plan
+  - wshobson/agents:skill:dependency-upgrade
 - id: code-quality/receiving-code-review
   type: skill
   capability: Verify review findings before acting, push back with evidence, and fix in severity order.
@@ -64,6 +68,10 @@ artifacts:
   - affaan-m/ECC:agent:refactor-cleaner
   - affaan-m/ECC:agent:type-design-analyzer
   - affaan-m/ECC:command:refactor-clean
+  - davila7/claude-code-templates:agent:technical-debt-manager
+  - github/awesome-copilot:skill:refactor
+  - github/awesome-copilot:skill:write-coding-standards-from-file
+  - wshobson/agents:skill:python-code-style
   recipe:
     title: Simplification
     description: 'Use when existing code should get simpler without changing behaviour: removing dead code and unused exports,
@@ -76,8 +84,16 @@ artifacts:
       - a:comment-analyzer
       type-design.md:
       - a:type-design-analyzer
+      derived-guides.md:
+      - github/awesome-copilot:skills/refactor/SKILL.md#common-code-smells-fixes
+      - github/awesome-copilot:skills/write-coding-standards-from-file/SKILL.md#variable-and-parameter-configuration-conditions
+      - wshobson/agents:plugins/python-development/skills/python-code-style/SKILL.md#advanced-patterns
+      - davila7/claude-code-templates:cli-tool/components/agents/development-tools/technical-debt-manager.md#technical-debt-categories
     supersedes:
     - affaan-m/ECC:command:refactor-clean
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Common Code Smells &
+        Fixes; Variable and Parameter Configuration Conditions; Advanced Patterns; Technical Debt Categories'
 imports:
 - dest: domains/code-quality/skills/code-review/SKILL.md
   source: obra/superpowers
@@ -108,3 +124,15 @@ imports:
 - dest: domains/code-quality/skills/code-review/references/review-checklists.md
   source: github/awesome-copilot
   src: instructions/code-review-generic.instructions.md
+- dest: domains/code-quality/skills/code-review/references/derived/code-review-excellence.md
+  source: wshobson/agents
+  src: plugins/developer-essentials/skills/code-review-excellence/SKILL.md#review-process
+- dest: domains/code-quality/skills/debt-ledger/references/derived/dependency-upgrade.md
+  source: wshobson/agents
+  src: plugins/framework-migration/skills/dependency-upgrade/SKILL.md#breaking-change-handling,testing-strategy,staged-upgrade-strategy
+- dest: domains/code-quality/skills/debt-ledger/references/derived/technical-debt-auditor.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/skills/development/technical-debt-auditor/SKILL.md#what-you-re-scanning-for
+- dest: domains/code-quality/skills/debt-ledger/references/derived/dependency-updater.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/skills/development/dependency-updater/SKILL.md#commands-by-language

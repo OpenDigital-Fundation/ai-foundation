@@ -58,10 +58,10 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `executing-plans` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills, obra/superpowers |
 | `finishing-a-branch` | affaan-m/ECC, mattpocock/skills, obra/superpowers |
 | `git-worktrees` | obra/superpowers |
-| `grilling` | mattpocock/skills |
+| `grilling` | davila7/claude-code-templates, mattpocock/skills |
 | `handoff` | affaan-m/ECC, mattpocock/skills |
 | `initiative-mapping` | mattpocock/skills, msitarzewski/agency-agents |
 | `issue-breakdown` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills |
 | `issue-triage` | Community-Access/accessibility-agents, affaan-m/ECC, mattpocock/skills |
-| `writing-plans` | affaan-m/ECC, github/awesome-copilot, obra/superpowers |
+| `writing-plans` | Jeffallan/claude-skills, affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, obra/superpowers |
 | `feature-delivery` | affaan-m/ECC |

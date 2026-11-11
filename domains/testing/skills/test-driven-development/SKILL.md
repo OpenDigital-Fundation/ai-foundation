@@ -347,3 +347,9 @@ Otherwise → not TDD
 ```
 
 No exceptions without the user's permission.
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/tdd-refactor.md`](references/derived/tdd-refactor.md) — Example: Extract Method Pattern

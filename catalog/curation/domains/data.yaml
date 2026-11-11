@@ -9,10 +9,15 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:skill:pandas-pro
   - affaan-m/ECC:skill:data-throughput-accelerator
   - github/awesome-copilot:agent:PySpark Expert Agent
   - github/awesome-copilot:rule:scala-spark.instructions
   - msitarzewski/agency-agents:agent:Data Engineer
+  - wshobson/agents:command:data-pipeline
+  - wshobson/agents:skill:airflow-dag-patterns
+  - wshobson/agents:skill:data-quality-frameworks
+  - wshobson/agents:skill:dbt-transformation-patterns
   recipe:
     title: Data pipelines
     description: 'Use when building or fixing data pipelines and bulk data movement: ingestion, ETL/ELT, backfills, exports,
@@ -25,6 +30,9 @@ artifacts:
       spark/README.md:
       - github/awesome-copilot:agents/spark-performance.agent.md
       - github/awesome-copilot:instructions/scala-spark.instructions.md
+      derived-guides.md:
+      - Jeffallan/claude-skills:skills/pandas-pro/SKILL.md#code-patterns
+      - wshobson/agents:plugins/data-engineering/commands/data-pipeline.md#example-minimal-batch-pipeline
     body: '# Data pipelines
 
 
@@ -59,6 +67,19 @@ artifacts:
 
       Compare source and destination totals for the run, check freshness against the target, and document how to replay a
       failed window.'
+    reference_dirs:
+      airflow-dag-patterns: wshobson/agents:plugins/data-engineering/skills/airflow-dag-patterns
+      dbt-transformation-patterns: wshobson/agents:plugins/data-engineering/skills/dbt-transformation-patterns
+      data-quality-frameworks: wshobson/agents:plugins/data-engineering/skills/data-quality-frameworks
+    reference_notes:
+      airflow-dag-patterns: Build production Apache Airflow DAGs with best practices for operators, sensors, testing, and
+        deployment. Use when creating data pipelines, orchestrating workflows, or scheduling batch jobs.
+      dbt-transformation-patterns: Master dbt (data build tool) for analytics engineering with model organization, testing,
+        documentation, and incremental strategies. Use when building data transformations, creating data models, or imp
+      data-quality-frameworks: Implement data quality validation with Great Expectations, dbt tests, and data contracts. Use
+        when building data quality pipelines, implementing validation rules, or establishing data contracts.
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Code Patterns; Example:
+        Minimal Batch Pipeline'
 - id: data/database-design
   type: skill
   capability: Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels,
@@ -72,10 +93,47 @@ artifacts:
   - affaan-m/ECC:skill:postgres-patterns
   - affaan-m/ECC:skill:prisma-patterns
   - affaan-m/ECC:skill:redis-patterns
+  - davila7/claude-code-templates:agent:database-architect
+  - davila7/claude-code-templates:agent:nosql-specialist
+  - davila7/claude-code-templates:rule:_contributing
+  - davila7/claude-code-templates:rule:_sections
+  - davila7/claude-code-templates:rule:_template
+  - davila7/claude-code-templates:rule:advanced-full-text-search
+  - davila7/claude-code-templates:rule:advanced-jsonb-indexing
+  - davila7/claude-code-templates:rule:conn-idle-timeout
+  - davila7/claude-code-templates:rule:conn-limits
+  - davila7/claude-code-templates:rule:conn-pooling
+  - davila7/claude-code-templates:rule:conn-prepared-statements
+  - davila7/claude-code-templates:rule:data-batch-inserts
+  - davila7/claude-code-templates:rule:data-n-plus-one
+  - davila7/claude-code-templates:rule:data-pagination
+  - davila7/claude-code-templates:rule:data-upsert
+  - davila7/claude-code-templates:rule:lock-advisory
+  - davila7/claude-code-templates:rule:lock-deadlock-prevention
+  - davila7/claude-code-templates:rule:lock-short-transactions
+  - davila7/claude-code-templates:rule:lock-skip-locked
+  - davila7/claude-code-templates:rule:monitor-explain-analyze
+  - davila7/claude-code-templates:rule:monitor-pg-stat-statements
+  - davila7/claude-code-templates:rule:monitor-vacuum-analyze
+  - davila7/claude-code-templates:rule:query-composite-indexes
+  - davila7/claude-code-templates:rule:query-covering-indexes
+  - davila7/claude-code-templates:rule:query-index-types
+  - davila7/claude-code-templates:rule:query-missing-indexes
+  - davila7/claude-code-templates:rule:query-partial-indexes
+  - davila7/claude-code-templates:rule:schema-data-types
+  - davila7/claude-code-templates:rule:schema-foreign-key-indexes
+  - davila7/claude-code-templates:rule:schema-lowercase-identifiers
+  - davila7/claude-code-templates:rule:schema-partitioning
+  - davila7/claude-code-templates:rule:schema-primary-keys
+  - davila7/claude-code-templates:rule:security-privileges
+  - davila7/claude-code-templates:rule:security-rls-basics
+  - davila7/claude-code-templates:rule:security-rls-performance
+  - davila7/claude-code-templates:skill:postgres-best-practices
   - github/awesome-copilot:agent:PostgreSQL Database Administrator
   - github/awesome-copilot:rule:sql-sp-generation.instructions
   - msitarzewski/agency-agents:agent:Database Optimizer
   - msitarzewski/agency-agents:agent:Database Reliability Engineer
+  - wshobson/agents:skill:postgresql-table-design
   recipe:
     title: Database design
     description: Use when designing a schema, writing or optimising queries, choosing indexes, transactions or isolation levels,
@@ -100,6 +158,19 @@ artifacts:
       query-review/README.md:
       - github/awesome-copilot:agents/postgresql-dba.agent.md
       - github/awesome-copilot:instructions/sql-sp-generation.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/agents/database/database-architect.md#architecture-decision-framework,scalability-architecture-patterns
+      - davila7/claude-code-templates:cli-tool/components/agents/database/nosql-specialist.md#performance-optimization-strategies
+    reference_dirs:
+      postgresql-table-design: wshobson/agents:plugins/database-design/skills/postgresql-table-design
+      postgres-rules: davila7/claude-code-templates:cli-tool/components/skills/development/postgres-best-practices/rules
+    reference_notes:
+      postgresql-table-design: Use this skill when designing or reviewing a PostgreSQL-specific schema. Covers best-practices,
+        data types, indexing, constraints, performance patterns, and advanced features
+      postgres-rules: Postgres performance optimization and best practices from Supabase. Use this skill when writing, reviewing,
+        or optimizing Postgres queries, schema designs, or database configurations.
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Architecture Decision
+        Framework; Scalability Architecture Patterns; Performance Optimization Strategies'
 - id: data/database-migrations
   type: skill
   capability: 'Use when changing a production database schema or data: writing migrations, renaming or dropping columns, backfills,
@@ -110,6 +181,7 @@ artifacts:
   - affaan-m/ECC:command:database-migration
   - affaan-m/ECC:skill:database-migrations
   - github/awesome-copilot:agent:Oracle-to-PostgreSQL Migration Expert
+  - github/awesome-copilot:skill:creating-oracle-to-postgres-migration-integration-tests
   recipe:
     title: Database migrations
     description: 'Use when changing a production database schema or data: writing migrations, renaming or dropping columns,
@@ -121,3 +193,7 @@ artifacts:
     references:
       cross-engine-migration/README.md:
       - github/awesome-copilot:agents/oracle-to-postgres-migration-expert.agent.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md#key-constraints
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Key Constraints'

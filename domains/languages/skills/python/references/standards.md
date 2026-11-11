@@ -825,3 +825,2262 @@ except SpecificError as e:
 ```
 
 __Remember__: Python code should be readable, explicit, and follow the principle of least surprise. When in doubt, prioritize clarity over cleverness.
+
+## Python Resilience Patterns
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-resilience/SKILL.md -->
+
+Build fault-tolerant Python applications that gracefully handle transient failures, network issues, and service outages. Resilience patterns keep systems running when dependencies are unreliable.
+
+### When to Use This Skill
+
+- Adding retry logic to external service calls
+- Implementing timeouts for network operations
+- Building fault-tolerant microservices
+- Handling rate limiting and backpressure
+- Creating infrastructure decorators
+- Designing circuit breakers
+
+### Core Concepts
+
+#### 1. Transient vs Permanent Failures
+
+Retry transient errors (network timeouts, temporary service issues). Don't retry permanent errors (invalid credentials, bad requests).
+
+#### 2. Exponential Backoff
+
+Increase wait time between retries to avoid overwhelming recovering services.
+
+#### 3. Jitter
+
+Add randomness to backoff to prevent thundering herd when many clients retry simultaneously.
+
+#### 4. Bounded Retries
+
+Cap both attempt count and total duration to prevent infinite retry loops.
+
+### Quick Start
+
+```python
+from tenacity import retry, stop_after_attempt, wait_exponential_jitter
+
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential_jitter(initial=1, max=10),
+)
+def call_external_service(request: dict) -> dict:
+    return httpx.post("https://api.example.com", json=request).json()
+```
+
+### Fundamental Patterns
+
+#### Pattern 1: Basic Retry with Tenacity
+
+Use the `tenacity` library for production-grade retry logic. For simpler cases, consider built-in retry functionality or a lightweight custom implementation.
+
+```python
+from tenacity import (
+    retry,
+    stop_after_attempt,
+    stop_after_delay,
+    wait_exponential_jitter,
+    retry_if_exception_type,
+)
+
+TRANSIENT_ERRORS = (ConnectionError, TimeoutError, OSError)
+
+@retry(
+    retry=retry_if_exception_type(TRANSIENT_ERRORS),
+    stop=stop_after_attempt(5) | stop_after_delay(60),
+    wait=wait_exponential_jitter(initial=1, max=30),
+)
+def fetch_data(url: str) -> dict:
+    """Fetch data with automatic retry on transient failures."""
+    response = httpx.get(url, timeout=30)
+    response.raise_for_status()
+    return response.json()
+```
+
+#### Pattern 2: Retry Only Appropriate Errors
+
+Whitelist specific transient exceptions. Never retry:
+
+- `ValueError`, `TypeError` - These are bugs, not transient issues
+- `AuthenticationError` - Invalid credentials won't become valid
+- HTTP 4xx errors (except 429) - Client errors are permanent
+
+```python
+from tenacity import retry, retry_if_exception_type
+import httpx
+
+# Define what's retryable
+RETRYABLE_EXCEPTIONS = (
+    ConnectionError,
+    TimeoutError,
+    httpx.ConnectTimeout,
+    httpx.ReadTimeout,
+)
+
+@retry(
+    retry=retry_if_exception_type(RETRYABLE_EXCEPTIONS),
+    stop=stop_after_attempt(3),
+    wait=wait_exponential_jitter(initial=1, max=10),
+)
+def resilient_api_call(endpoint: str) -> dict:
+    """Make API call with retry on network issues."""
+    return httpx.get(endpoint, timeout=10).json()
+```
+
+#### Pattern 3: HTTP Status Code Retries
+
+Retry specific HTTP status codes that indicate transient issues.
+
+```python
+from tenacity import retry, retry_if_result, stop_after_attempt
+import httpx
+
+RETRY_STATUS_CODES = {429, 502, 503, 504}
+
+def should_retry_response(response: httpx.Response) -> bool:
+    """Check if response indicates a retryable error."""
+    return response.status_code in RETRY_STATUS_CODES
+
+@retry(
+    retry=retry_if_result(should_retry_response),
+    stop=stop_after_attempt(3),
+    wait=wait_exponential_jitter(initial=1, max=10),
+)
+def http_request(method: str, url: str, **kwargs) -> httpx.Response:
+    """Make HTTP request with retry on transient status codes."""
+    return httpx.request(method, url, timeout=30, **kwargs)
+```
+
+#### Pattern 4: Combined Exception and Status Retry
+
+Handle both network exceptions and HTTP status codes.
+
+```python
+from tenacity import (
+    retry,
+    retry_if_exception_type,
+    retry_if_result,
+    stop_after_attempt,
+    wait_exponential_jitter,
+    before_sleep_log,
+)
+import logging
+import httpx
+
+logger = logging.getLogger(__name__)
+
+TRANSIENT_EXCEPTIONS = (
+    ConnectionError,
+    TimeoutError,
+    httpx.ConnectError,
+    httpx.ReadTimeout,
+)
+RETRY_STATUS_CODES = {429, 500, 502, 503, 504}
+
+def is_retryable_response(response: httpx.Response) -> bool:
+    return response.status_code in RETRY_STATUS_CODES
+
+@retry(
+    retry=(
+        retry_if_exception_type(TRANSIENT_EXCEPTIONS) |
+        retry_if_result(is_retryable_response)
+    ),
+    stop=stop_after_attempt(5),
+    wait=wait_exponential_jitter(initial=1, max=30),
+    before_sleep=before_sleep_log(logger, logging.WARNING),
+)
+def robust_http_call(
+    method: str,
+    url: str,
+    **kwargs,
+) -> httpx.Response:
+    """HTTP call with comprehensive retry handling."""
+    return httpx.request(method, url, timeout=30, **kwargs)
+```
+
+### Detailed worked examples and patterns
+
+Detailed sections (starting with `## Advanced Patterns`) live in `references/details.md`. Read that file when the navigation summary above is insufficient.
+
+### Best Practices Summary
+
+1. **Retry only transient errors** - Don't retry bugs or authentication failures
+2. **Use exponential backoff** - Give services time to recover
+3. **Add jitter** - Prevent thundering herd from synchronized retries
+4. **Cap total duration** - `stop_after_attempt(5) | stop_after_delay(60)`
+5. **Log every retry** - Silent retries hide systemic problems
+6. **Use decorators** - Keep retry logic separate from business logic
+7. **Inject dependencies** - Make infrastructure testable
+8. **Set timeouts everywhere** - Every network call needs a timeout
+9. **Fail gracefully** - Return cached/default values for non-critical paths
+10. **Monitor retry rates** - High retry rates indicate underlying issues
+
+## python-resilience — detailed worked examples
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-resilience/references/details.md -->
+
+### Advanced Patterns
+
+#### Pattern 5: Logging Retry Attempts
+
+Track retry behavior for debugging and alerting.
+
+```python
+from tenacity import retry, stop_after_attempt, wait_exponential
+import structlog
+
+logger = structlog.get_logger()
+
+def log_retry_attempt(retry_state):
+    """Log detailed retry information."""
+    exception = retry_state.outcome.exception()
+    logger.warning(
+        "Retrying operation",
+        attempt=retry_state.attempt_number,
+        exception_type=type(exception).__name__,
+        exception_message=str(exception),
+        next_wait_seconds=retry_state.next_action.sleep if retry_state.next_action else None,
+    )
+
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, max=10),
+    before_sleep=log_retry_attempt,
+)
+def call_with_logging(request: dict) -> dict:
+    """External call with retry logging."""
+    ...
+```
+
+#### Pattern 6: Timeout Decorator
+
+Create reusable timeout decorators for consistent timeout handling.
+
+```python
+import asyncio
+from functools import wraps
+from typing import TypeVar, Callable
+
+T = TypeVar("T")
+
+def with_timeout(seconds: float):
+    """Decorator to add timeout to async functions."""
+    def decorator(func: Callable[..., T]) -> Callable[..., T]:
+        @wraps(func)
+        async def wrapper(*args, **kwargs) -> T:
+            return await asyncio.wait_for(
+                func(*args, **kwargs),
+                timeout=seconds,
+            )
+        return wrapper
+    return decorator
+
+@with_timeout(30)
+async def fetch_with_timeout(url: str) -> dict:
+    """Fetch URL with 30 second timeout."""
+    async with httpx.AsyncClient() as client:
+        response = await client.get(url)
+        return response.json()
+```
+
+#### Pattern 7: Cross-Cutting Concerns via Decorators
+
+Stack decorators to separate infrastructure from business logic.
+
+```python
+from functools import wraps
+from typing import TypeVar, Callable
+import structlog
+
+logger = structlog.get_logger()
+T = TypeVar("T")
+
+def traced(name: str | None = None):
+    """Add tracing to function calls."""
+    def decorator(func: Callable[..., T]) -> Callable[..., T]:
+        span_name = name or func.__name__
+
+        @wraps(func)
+        async def wrapper(*args, **kwargs) -> T:
+            logger.info("Operation started", operation=span_name)
+            try:
+                result = await func(*args, **kwargs)
+                logger.info("Operation completed", operation=span_name)
+                return result
+            except Exception as e:
+                logger.error("Operation failed", operation=span_name, error=str(e))
+                raise
+        return wrapper
+    return decorator
+
+# Stack multiple concerns
+@traced("fetch_user_data")
+@with_timeout(30)
+@retry(stop=stop_after_attempt(3), wait=wait_exponential_jitter())
+async def fetch_user_data(user_id: str) -> dict:
+    """Fetch user with tracing, timeout, and retry."""
+    ...
+```
+
+#### Pattern 8: Dependency Injection for Testability
+
+Pass infrastructure components through constructors for easy testing.
+
+```python
+from dataclasses import dataclass
+from typing import Protocol
+
+class Logger(Protocol):
+    def info(self, msg: str, **kwargs) -> None: ...
+    def error(self, msg: str, **kwargs) -> None: ...
+
+class MetricsClient(Protocol):
+    def increment(self, metric: str, tags: dict | None = None) -> None: ...
+    def timing(self, metric: str, value: float) -> None: ...
+
+@dataclass
+class UserService:
+    """Service with injected infrastructure."""
+
+    repository: UserRepository
+    logger: Logger
+    metrics: MetricsClient
+
+    async def get_user(self, user_id: str) -> User:
+        self.logger.info("Fetching user", user_id=user_id)
+        start = time.perf_counter()
+
+        try:
+            user = await self.repository.get(user_id)
+            self.metrics.increment("user.fetch.success")
+            return user
+        except Exception as e:
+            self.metrics.increment("user.fetch.error")
+            self.logger.error("Failed to fetch user", user_id=user_id, error=str(e))
+            raise
+        finally:
+            elapsed = time.perf_counter() - start
+            self.metrics.timing("user.fetch.duration", elapsed)
+
+# Easy to test with fakes
+service = UserService(
+    repository=FakeRepository(),
+    logger=FakeLogger(),
+    metrics=FakeMetrics(),
+)
+```
+
+#### Pattern 9: Fail-Safe Defaults
+
+Degrade gracefully when non-critical operations fail.
+
+```python
+from typing import TypeVar
+from collections.abc import Callable
+
+T = TypeVar("T")
+
+def fail_safe(default: T, log_failure: bool = True):
+    """Return default value on failure instead of raising."""
+    def decorator(func: Callable[..., T]) -> Callable[..., T]:
+        @wraps(func)
+        async def wrapper(*args, **kwargs) -> T:
+            try:
+                return await func(*args, **kwargs)
+            except Exception as e:
+                if log_failure:
+                    logger.warning(
+                        "Operation failed, using default",
+                        function=func.__name__,
+                        error=str(e),
+                    )
+                return default
+        return wrapper
+    return decorator
+
+@fail_safe(default=[])
+async def get_recommendations(user_id: str) -> list[str]:
+    """Get recommendations, return empty list on failure."""
+    ...
+```
+
+## Python Background Jobs & Task Queues
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-background-jobs/SKILL.md -->
+
+Decouple long-running or unreliable work from request/response cycles. Return immediately to the user while background workers handle the heavy lifting asynchronously.
+
+### When to Use This Skill
+
+- Processing tasks that take longer than a few seconds
+- Sending emails, notifications, or webhooks
+- Generating reports or exporting data
+- Processing uploads or media transformations
+- Integrating with unreliable external services
+- Building event-driven architectures
+
+### Core Concepts
+
+#### 1. Task Queue Pattern
+
+API accepts request, enqueues a job, returns immediately with a job ID. Workers process jobs asynchronously.
+
+#### 2. Idempotency
+
+Tasks may be retried on failure. Design for safe re-execution.
+
+#### 3. Job State Machine
+
+Jobs transition through states: pending → running → succeeded/failed.
+
+#### 4. At-Least-Once Delivery
+
+Most queues guarantee at-least-once delivery. Your code must handle duplicates.
+
+### Quick Start
+
+This skill uses Celery for examples, a widely adopted task queue. Alternatives like RQ, Dramatiq, and cloud-native solutions (AWS SQS, GCP Tasks) are equally valid choices.
+
+```python
+from celery import Celery
+
+app = Celery("tasks", broker="redis://localhost:6379")
+
+@app.task
+def send_email(to: str, subject: str, body: str) -> None:
+    # This runs in a background worker
+    email_client.send(to, subject, body)
+
+# In your API handler
+send_email.delay("user@example.com", "Welcome!", "Thanks for signing up")
+```
+
+### Fundamental Patterns
+
+#### Pattern 1: Return Job ID Immediately
+
+For operations exceeding a few seconds, return a job ID and process asynchronously.
+
+```python
+from uuid import uuid4
+from dataclasses import dataclass
+from enum import Enum
+from datetime import datetime
+
+class JobStatus(Enum):
+    PENDING = "pending"
+    RUNNING = "running"
+    SUCCEEDED = "succeeded"
+    FAILED = "failed"
+
+@dataclass
+class Job:
+    id: str
+    status: JobStatus
+    created_at: datetime
+    started_at: datetime | None = None
+    completed_at: datetime | None = None
+    result: dict | None = None
+    error: str | None = None
+
+# API endpoint
+async def start_export(request: ExportRequest) -> JobResponse:
+    """Start export job and return job ID."""
+    job_id = str(uuid4())
+
+    # Persist job record
+    await jobs_repo.create(Job(
+        id=job_id,
+        status=JobStatus.PENDING,
+        created_at=datetime.utcnow(),
+    ))
+
+    # Enqueue task for background processing
+    await task_queue.enqueue(
+        "export_data",
+        job_id=job_id,
+        params=request.model_dump(),
+    )
+
+    # Return immediately with job ID
+    return JobResponse(
+        job_id=job_id,
+        status="pending",
+        poll_url=f"/jobs/{job_id}",
+    )
+```
+
+#### Pattern 2: Celery Task Configuration
+
+Configure Celery tasks with proper retry and timeout settings.
+
+```python
+from celery import Celery
+
+app = Celery("tasks", broker="redis://localhost:6379")
+
+# Global configuration
+app.conf.update(
+    task_time_limit=3600,          # Hard limit: 1 hour
+    task_soft_time_limit=3000,      # Soft limit: 50 minutes
+    task_acks_late=True,            # Acknowledge after completion
+    task_reject_on_worker_lost=True,
+    worker_prefetch_multiplier=1,   # Don't prefetch too many tasks
+)
+
+@app.task(
+    bind=True,
+    max_retries=3,
+    default_retry_delay=60,
+    autoretry_for=(ConnectionError, TimeoutError),
+)
+def process_payment(self, payment_id: str) -> dict:
+    """Process payment with automatic retry on transient errors."""
+    try:
+        result = payment_gateway.charge(payment_id)
+        return {"status": "success", "transaction_id": result.id}
+    except PaymentDeclinedError as e:
+        # Don't retry permanent failures
+        return {"status": "declined", "reason": str(e)}
+    except TransientError as e:
+        # Retry with exponential backoff
+        raise self.retry(exc=e, countdown=2 ** self.request.retries * 60)
+```
+
+#### Pattern 3: Make Tasks Idempotent
+
+Workers may retry on crash or timeout. Design for safe re-execution.
+
+```python
+@app.task(bind=True)
+def process_order(self, order_id: str) -> None:
+    """Process order idempotently."""
+    order = orders_repo.get(order_id)
+
+    # Already processed? Return early
+    if order.status == OrderStatus.COMPLETED:
+        logger.info("Order already processed", order_id=order_id)
+        return
+
+    # Already in progress? Check if we should continue
+    if order.status == OrderStatus.PROCESSING:
+        # Use idempotency key to avoid double-charging
+        pass
+
+    # Process with idempotency key
+    result = payment_provider.charge(
+        amount=order.total,
+        idempotency_key=f"order-{order_id}",  # Critical!
+    )
+
+    orders_repo.update(order_id, status=OrderStatus.COMPLETED)
+```
+
+**Idempotency Strategies:**
+
+1. **Check-before-write**: Verify state before action
+2. **Idempotency keys**: Use unique tokens with external services
+3. **Upsert patterns**: `INSERT ... ON CONFLICT UPDATE`
+4. **Deduplication window**: Track processed IDs for N hours
+
+#### Pattern 4: Job State Management
+
+Persist job state transitions for visibility and debugging.
+
+```python
+class JobRepository:
+    """Repository for managing job state."""
+
+    async def create(self, job: Job) -> Job:
+        """Create new job record."""
+        await self._db.execute(
+            """INSERT INTO jobs (id, status, created_at)
+               VALUES ($1, $2, $3)""",
+            job.id, job.status.value, job.created_at,
+        )
+        return job
+
+    async def update_status(
+        self,
+        job_id: str,
+        status: JobStatus,
+        **fields,
+    ) -> None:
+        """Update job status with timestamp."""
+        updates = {"status": status.value, **fields}
+
+        if status == JobStatus.RUNNING:
+            updates["started_at"] = datetime.utcnow()
+        elif status in (JobStatus.SUCCEEDED, JobStatus.FAILED):
+            updates["completed_at"] = datetime.utcnow()
+
+        await self._db.execute(
+            "UPDATE jobs SET status = $1, ... WHERE id = $2",
+            updates, job_id,
+        )
+
+        logger.info(
+            "Job status updated",
+            job_id=job_id,
+            status=status.value,
+        )
+```
+
+### Detailed worked examples and patterns
+
+Detailed sections (starting with `## Advanced Patterns`) live in `references/details.md`. Read that file when the navigation summary above is insufficient.
+
+### Best Practices Summary
+
+1. **Return immediately** - Don't block requests for long operations
+2. **Persist job state** - Enable status polling and debugging
+3. **Make tasks idempotent** - Safe to retry on any failure
+4. **Use idempotency keys** - For external service calls
+5. **Set timeouts** - Both soft and hard limits
+6. **Implement DLQ** - Capture permanently failed tasks
+7. **Log transitions** - Track job state changes
+8. **Retry appropriately** - Exponential backoff for transient errors
+9. **Don't retry permanent failures** - Validation errors, invalid credentials
+10. **Monitor queue depth** - Alert on backlog growth
+
+## python-background-jobs — detailed worked examples
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-background-jobs/references/details.md -->
+
+### Advanced Patterns
+
+#### Pattern 5: Dead Letter Queue
+
+Handle permanently failed tasks for manual inspection.
+
+```python
+@app.task(bind=True, max_retries=3)
+def process_webhook(self, webhook_id: str, payload: dict) -> None:
+    """Process webhook with DLQ for failures."""
+    try:
+        result = send_webhook(payload)
+        if not result.success:
+            raise WebhookFailedError(result.error)
+    except Exception as e:
+        if self.request.retries >= self.max_retries:
+            # Move to dead letter queue for manual inspection
+            dead_letter_queue.send({
+                "task": "process_webhook",
+                "webhook_id": webhook_id,
+                "payload": payload,
+                "error": str(e),
+                "attempts": self.request.retries + 1,
+                "failed_at": datetime.utcnow().isoformat(),
+            })
+            logger.error(
+                "Webhook moved to DLQ after max retries",
+                webhook_id=webhook_id,
+                error=str(e),
+            )
+            return
+
+        # Exponential backoff retry
+        raise self.retry(exc=e, countdown=2 ** self.request.retries * 60)
+```
+
+#### Pattern 6: Status Polling Endpoint
+
+Provide an endpoint for clients to check job status.
+
+```python
+from fastapi import FastAPI, HTTPException
+
+app = FastAPI()
+
+@app.get("/jobs/{job_id}")
+async def get_job_status(job_id: str) -> JobStatusResponse:
+    """Get current status of a background job."""
+    job = await jobs_repo.get(job_id)
+
+    if job is None:
+        raise HTTPException(404, f"Job {job_id} not found")
+
+    return JobStatusResponse(
+        job_id=job.id,
+        status=job.status.value,
+        created_at=job.created_at,
+        started_at=job.started_at,
+        completed_at=job.completed_at,
+        result=job.result if job.status == JobStatus.SUCCEEDED else None,
+        error=job.error if job.status == JobStatus.FAILED else None,
+        # Helpful for clients
+        is_terminal=job.status in (JobStatus.SUCCEEDED, JobStatus.FAILED),
+    )
+```
+
+#### Pattern 7: Task Chaining and Workflows
+
+Compose complex workflows from simple tasks.
+
+```python
+from celery import chain, group, chord
+
+# Simple chain: A → B → C
+workflow = chain(
+    extract_data.s(source_id),
+    transform_data.s(),
+    load_data.s(destination_id),
+)
+
+# Parallel execution: A, B, C all at once
+parallel = group(
+    send_email.s(user_email),
+    send_sms.s(user_phone),
+    update_analytics.s(event_data),
+)
+
+# Chord: Run tasks in parallel, then a callback
+# Process all items, then send completion notification
+workflow = chord(
+    [process_item.s(item_id) for item_id in item_ids],
+    send_completion_notification.s(batch_id),
+)
+
+workflow.apply_async()
+```
+
+#### Pattern 8: Alternative Task Queues
+
+Choose the right tool for your needs.
+
+**RQ (Redis Queue)**: Simple, Redis-based
+```python
+from rq import Queue
+from redis import Redis
+
+queue = Queue(connection=Redis())
+job = queue.enqueue(send_email, "user@example.com", "Subject", "Body")
+```
+
+**Dramatiq**: Modern Celery alternative
+```python
+import dramatiq
+from dramatiq.brokers.redis import RedisBroker
+
+dramatiq.set_broker(RedisBroker())
+
+@dramatiq.actor
+def send_email(to: str, subject: str, body: str) -> None:
+    email_client.send(to, subject, body)
+```
+
+**Cloud-native options:**
+- AWS SQS + Lambda
+- Google Cloud Tasks
+- Azure Functions
+
+## Python Observability
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-observability/SKILL.md -->
+
+Instrument Python applications with structured logs, metrics, and traces. When something breaks in production, you need to answer "what, where, and why" without deploying new code.
+
+### When to Use This Skill
+
+- Adding structured logging to applications
+- Implementing metrics collection with Prometheus
+- Setting up distributed tracing across services
+- Propagating correlation IDs through request chains
+- Debugging production issues
+- Building observability dashboards
+
+### Core Concepts
+
+#### 1. Structured Logging
+
+Emit logs as JSON with consistent fields for production environments. Machine-readable logs enable powerful queries and alerts. For local development, consider human-readable formats.
+
+#### 2. The Four Golden Signals
+
+Track latency, traffic, errors, and saturation for every service boundary.
+
+#### 3. Correlation IDs
+
+Thread a unique ID through all logs and spans for a single request, enabling end-to-end tracing.
+
+#### 4. Bounded Cardinality
+
+Keep metric label values bounded. Unbounded labels (like user IDs) explode storage costs.
+
+### Quick Start
+
+```python
+import structlog
+
+structlog.configure(
+    processors=[
+        structlog.processors.TimeStamper(fmt="iso"),
+        structlog.processors.JSONRenderer(),
+    ],
+)
+
+logger = structlog.get_logger()
+logger.info("Request processed", user_id="123", duration_ms=45)
+```
+
+### Fundamental Patterns
+
+#### Pattern 1: Structured Logging with Structlog
+
+Configure structlog for JSON output with consistent fields.
+
+```python
+import logging
+import structlog
+
+def configure_logging(log_level: str = "INFO") -> None:
+    """Configure structured logging for the application."""
+    structlog.configure(
+        processors=[
+            structlog.contextvars.merge_contextvars,
+            structlog.processors.add_log_level,
+            structlog.processors.TimeStamper(fmt="iso"),
+            structlog.processors.StackInfoRenderer(),
+            structlog.processors.format_exc_info,
+            structlog.processors.JSONRenderer(),
+        ],
+        wrapper_class=structlog.make_filtering_bound_logger(
+            getattr(logging, log_level.upper())
+        ),
+        context_class=dict,
+        logger_factory=structlog.PrintLoggerFactory(),
+        cache_logger_on_first_use=True,
+    )
+
+# Initialize at application startup
+configure_logging("INFO")
+logger = structlog.get_logger()
+```
+
+#### Pattern 2: Consistent Log Fields
+
+Every log entry should include standard fields for filtering and correlation.
+
+```python
+import structlog
+from contextvars import ContextVar
+
+# Store correlation ID in context
+correlation_id: ContextVar[str] = ContextVar("correlation_id", default="")
+
+logger = structlog.get_logger()
+
+def process_request(request: Request) -> Response:
+    """Process request with structured logging."""
+    logger.info(
+        "Request received",
+        correlation_id=correlation_id.get(),
+        method=request.method,
+        path=request.path,
+        user_id=request.user_id,
+    )
+
+    try:
+        result = handle_request(request)
+        logger.info(
+            "Request completed",
+            correlation_id=correlation_id.get(),
+            status_code=200,
+            duration_ms=elapsed,
+        )
+        return result
+    except Exception as e:
+        logger.error(
+            "Request failed",
+            correlation_id=correlation_id.get(),
+            error_type=type(e).__name__,
+            error_message=str(e),
+        )
+        raise
+```
+
+#### Pattern 3: Semantic Log Levels
+
+Use log levels consistently across the application.
+
+| Level | Purpose | Examples |
+|-------|---------|----------|
+| `DEBUG` | Development diagnostics | Variable values, internal state |
+| `INFO` | Request lifecycle, operations | Request start/end, job completion |
+| `WARNING` | Recoverable anomalies | Retry attempts, fallback used |
+| `ERROR` | Failures needing attention | Exceptions, service unavailable |
+
+```python
+# DEBUG: Detailed internal information
+logger.debug("Cache lookup", key=cache_key, hit=cache_hit)
+
+# INFO: Normal operational events
+logger.info("Order created", order_id=order.id, total=order.total)
+
+# WARNING: Abnormal but handled situations
+logger.warning(
+    "Rate limit approaching",
+    current_rate=950,
+    limit=1000,
+    reset_seconds=30,
+)
+
+# ERROR: Failures requiring investigation
+logger.error(
+    "Payment processing failed",
+    order_id=order.id,
+    error=str(e),
+    payment_provider="stripe",
+)
+```
+
+Never log expected behavior at `ERROR`. A user entering a wrong password is `INFO`, not `ERROR`.
+
+#### Pattern 4: Correlation ID Propagation
+
+Generate a unique ID at ingress and thread it through all operations.
+
+```python
+from contextvars import ContextVar
+import uuid
+import structlog
+
+correlation_id: ContextVar[str] = ContextVar("correlation_id", default="")
+
+def set_correlation_id(cid: str | None = None) -> str:
+    """Set correlation ID for current context."""
+    cid = cid or str(uuid.uuid4())
+    correlation_id.set(cid)
+    structlog.contextvars.bind_contextvars(correlation_id=cid)
+    return cid
+
+# FastAPI middleware example
+from fastapi import Request
+
+async def correlation_middleware(request: Request, call_next):
+    """Middleware to set and propagate correlation ID."""
+    # Use incoming header or generate new
+    cid = request.headers.get("X-Correlation-ID") or str(uuid.uuid4())
+    set_correlation_id(cid)
+
+    response = await call_next(request)
+    response.headers["X-Correlation-ID"] = cid
+    return response
+```
+
+Propagate to outbound requests:
+
+```python
+import httpx
+
+async def call_downstream_service(endpoint: str, data: dict) -> dict:
+    """Call downstream service with correlation ID."""
+    async with httpx.AsyncClient() as client:
+        response = await client.post(
+            endpoint,
+            json=data,
+            headers={"X-Correlation-ID": correlation_id.get()},
+        )
+        return response.json()
+```
+
+### Detailed worked examples and patterns
+
+Detailed sections (starting with `## Advanced Patterns`) live in `references/details.md`. Read that file when the navigation summary above is insufficient.
+
+### Best Practices Summary
+
+1. **Use structured logging** - JSON logs with consistent fields
+2. **Propagate correlation IDs** - Thread through all requests and logs
+3. **Track the four golden signals** - Latency, traffic, errors, saturation
+4. **Bound label cardinality** - Never use unbounded values as metric labels
+5. **Log at appropriate levels** - Don't cry wolf with ERROR
+6. **Include context** - User ID, request ID, operation name in logs
+7. **Use context managers** - Consistent timing and error handling
+8. **Separate concerns** - Observability code shouldn't pollute business logic
+9. **Test your observability** - Verify logs and metrics in integration tests
+10. **Set up alerts** - Metrics are useless without alerting
+
+## python-observability — detailed worked examples
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-observability/references/details.md -->
+
+### Advanced Patterns
+
+#### Pattern 5: The Four Golden Signals with Prometheus
+
+Track these metrics for every service boundary:
+
+```python
+from prometheus_client import Counter, Histogram, Gauge
+
+# Latency: How long requests take
+REQUEST_LATENCY = Histogram(
+    "http_request_duration_seconds",
+    "Request latency in seconds",
+    ["method", "endpoint", "status"],
+    buckets=[0.01, 0.025, 0.05, 0.1, 0.25, 0.5, 1, 2.5, 5, 10],
+)
+
+# Traffic: Request rate
+REQUEST_COUNT = Counter(
+    "http_requests_total",
+    "Total HTTP requests",
+    ["method", "endpoint", "status"],
+)
+
+# Errors: Error rate
+ERROR_COUNT = Counter(
+    "http_errors_total",
+    "Total HTTP errors",
+    ["method", "endpoint", "error_type"],
+)
+
+# Saturation: Resource utilization
+DB_POOL_USAGE = Gauge(
+    "db_connection_pool_used",
+    "Number of database connections in use",
+)
+```
+
+Instrument your endpoints:
+
+```python
+import time
+from functools import wraps
+
+def track_request(func):
+    """Decorator to track request metrics."""
+    @wraps(func)
+    async def wrapper(request: Request, *args, **kwargs):
+        method = request.method
+        # Use the route template ("/users/{user_id}"), not the raw path,
+        # so IDs in URLs do not create a new label value per request.
+        # Inside a mounted sub-app this is the sub-app's own template, so
+        # add a fixed per-app label if two mounts share route paths.
+        route = request.scope.get("route")
+        endpoint = route.path if route else "unmatched"
+        start = time.perf_counter()
+
+        try:
+            response = await func(request, *args, **kwargs)
+            status = str(response.status_code)
+            return response
+        except Exception as e:
+            status = "500"
+            ERROR_COUNT.labels(
+                method=method,
+                endpoint=endpoint,
+                error_type=type(e).__name__,
+            ).inc()
+            raise
+        finally:
+            duration = time.perf_counter() - start
+            REQUEST_COUNT.labels(method=method, endpoint=endpoint, status=status).inc()
+            REQUEST_LATENCY.labels(method=method, endpoint=endpoint, status=status).observe(duration)
+
+    return wrapper
+```
+
+#### Pattern 6: Bounded Cardinality
+
+Avoid labels with unbounded values to prevent metric explosion.
+
+```python
+# BAD: User ID has potentially millions of values
+REQUEST_COUNT.labels(method="GET", user_id=user.id)  # Don't do this!
+
+# GOOD: Bounded values only
+REQUEST_COUNT.labels(method="GET", endpoint="/users", status="200")
+
+# If you need per-user metrics, use a different approach:
+# - Log the user_id and query logs
+# - Use a separate analytics system
+# - Bucket users by type/tier, in a metric that declares that label
+REQUESTS_BY_TIER = Counter(
+    "http_requests_by_tier_total",
+    "HTTP requests by user tier",
+    ["method", "endpoint", "user_tier"],
+)
+REQUESTS_BY_TIER.labels(
+    method="GET",
+    endpoint="/users",
+    user_tier="premium",  # Bounded set of values
+)
+```
+
+#### Pattern 7: Timed Operations with Context Manager
+
+Create a reusable timing context manager for operations.
+
+```python
+from contextlib import contextmanager
+import time
+import structlog
+
+logger = structlog.get_logger()
+
+@contextmanager
+def timed_operation(name: str, **extra_fields):
+    """Context manager for timing and logging operations."""
+    start = time.perf_counter()
+    logger.debug("Operation started", operation=name, **extra_fields)
+
+    try:
+        yield
+    except Exception as e:
+        elapsed_ms = (time.perf_counter() - start) * 1000
+        logger.error(
+            "Operation failed",
+            operation=name,
+            duration_ms=round(elapsed_ms, 2),
+            error=str(e),
+            **extra_fields,
+        )
+        raise
+    else:
+        elapsed_ms = (time.perf_counter() - start) * 1000
+        logger.info(
+            "Operation completed",
+            operation=name,
+            duration_ms=round(elapsed_ms, 2),
+            **extra_fields,
+        )
+
+# Usage
+with timed_operation("fetch_user_orders", user_id=user.id):
+    orders = await order_repository.get_by_user(user.id)
+```
+
+#### Pattern 8: OpenTelemetry Tracing
+
+Set up distributed tracing with OpenTelemetry.
+
+**Note:** OpenTelemetry is actively evolving. Check the [official Python documentation](https://opentelemetry.io/docs/languages/python/) for the latest API patterns and best practices.
+
+```python
+from opentelemetry import trace
+from opentelemetry.sdk.trace import TracerProvider
+from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
+
+def configure_tracing(service_name: str, otlp_endpoint: str) -> None:
+    """Configure OpenTelemetry tracing."""
+    provider = TracerProvider()
+    processor = BatchSpanProcessor(OTLPSpanExporter(endpoint=otlp_endpoint))
+    provider.add_span_processor(processor)
+    trace.set_tracer_provider(provider)
+
+tracer = trace.get_tracer(__name__)
+
+async def process_order(order_id: str) -> Order:
+    """Process order with tracing."""
+    with tracer.start_as_current_span("process_order") as span:
+        span.set_attribute("order.id", order_id)
+
+        with tracer.start_as_current_span("validate_order"):
+            validate_order(order_id)
+
+        with tracer.start_as_current_span("charge_payment"):
+            charge_payment(order_id)
+
+        with tracer.start_as_current_span("send_confirmation"):
+            send_confirmation(order_id)
+
+        return order
+```
+
+## Python Type Safety
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-type-safety/SKILL.md -->
+
+Leverage Python's type system to catch errors at static analysis time. Type annotations serve as enforced documentation that tooling validates automatically.
+
+### When to Use This Skill
+
+- Adding type hints to existing code
+- Creating generic, reusable classes
+- Defining structural interfaces with protocols
+- Configuring mypy or pyright for strict checking
+- Understanding type narrowing and guards
+- Building type-safe APIs and libraries
+
+### Core Concepts
+
+#### 1. Type Annotations
+
+Declare expected types for function parameters, return values, and variables.
+
+#### 2. Generics
+
+Write reusable code that preserves type information across different types.
+
+#### 3. Protocols
+
+Define structural interfaces without inheritance (duck typing with type safety).
+
+#### 4. Type Narrowing
+
+Use guards and conditionals to narrow types within code blocks.
+
+### Quick Start
+
+```python
+def get_user(user_id: str) -> User | None:
+    """Return type makes 'might not exist' explicit."""
+    ...
+
+# Type checker enforces handling None case
+user = get_user("123")
+if user is None:
+    raise UserNotFoundError("123")
+print(user.name)  # Type checker knows user is User here
+```
+
+### Fundamental Patterns
+
+#### Pattern 1: Annotate All Public Signatures
+
+Every public function, method, and class should have type annotations.
+
+```python
+def get_user(user_id: str) -> User:
+    """Retrieve user by ID."""
+    ...
+
+def process_batch(
+    items: list[Item],
+    max_workers: int = 4,
+) -> BatchResult[ProcessedItem]:
+    """Process items concurrently."""
+    ...
+
+class UserRepository:
+    def __init__(self, db: Database) -> None:
+        self._db = db
+
+    async def find_by_id(self, user_id: str) -> User | None:
+        """Return User if found, None otherwise."""
+        ...
+
+    async def find_by_email(self, email: str) -> User | None:
+        ...
+
+    async def save(self, user: User) -> User:
+        """Save and return user with generated ID."""
+        ...
+```
+
+Use `mypy --strict` or `pyright` in CI to catch type errors early. For existing projects, enable strict mode incrementally using per-module overrides.
+
+#### Pattern 2: Use Modern Union Syntax
+
+Python 3.10+ provides cleaner union syntax.
+
+```python
+# Preferred (3.10+)
+def find_user(user_id: str) -> User | None:
+    ...
+
+def parse_value(v: str) -> int | float | str:
+    ...
+
+# Older style (still valid, needed for 3.9)
+from typing import Optional, Union
+
+def find_user(user_id: str) -> Optional[User]:
+    ...
+```
+
+#### Pattern 3: Type Narrowing with Guards
+
+Use conditionals to narrow types for the type checker.
+
+```python
+def process_user(user_id: str) -> UserData:
+    user = find_user(user_id)
+
+    if user is None:
+        raise UserNotFoundError(f"User {user_id} not found")
+
+    # Type checker knows user is User here, not User | None
+    return UserData(
+        name=user.name,
+        email=user.email,
+    )
+
+def process_items(items: list[Item | None]) -> list[ProcessedItem]:
+    # Filter and narrow types
+    valid_items = [item for item in items if item is not None]
+    # valid_items is now list[Item]
+    return [process(item) for item in valid_items]
+```
+
+#### Pattern 4: Generic Classes
+
+Create type-safe reusable containers.
+
+```python
+from typing import TypeVar, Generic
+
+T = TypeVar("T")
+E = TypeVar("E", bound=Exception)
+
+class Result(Generic[T, E]):
+    """Represents either a success value or an error."""
+
+    def __init__(
+        self,
+        value: T | None = None,
+        error: E | None = None,
+    ) -> None:
+        if (value is None) == (error is None):
+            raise ValueError("Exactly one of value or error must be set")
+        self._value = value
+        self._error = error
+
+    @property
+    def is_success(self) -> bool:
+        return self._error is None
+
+    @property
+    def is_failure(self) -> bool:
+        return self._error is not None
+
+    def unwrap(self) -> T:
+        """Get value or raise the error."""
+        if self._error is not None:
+            raise self._error
+        return self._value  # type: ignore[return-value]
+
+    def unwrap_or(self, default: T) -> T:
+        """Get value or return default."""
+        if self._error is not None:
+            return default
+        return self._value  # type: ignore[return-value]
+
+# Usage preserves types
+def parse_config(path: str) -> Result[Config, ConfigError]:
+    try:
+        return Result(value=Config.from_file(path))
+    except ConfigError as e:
+        return Result(error=e)
+
+result = parse_config("config.yaml")
+if result.is_success:
+    config = result.unwrap()  # Type: Config
+```
+
+### Detailed worked examples and patterns
+
+Detailed sections (starting with `## Advanced Patterns`) live in `references/details.md`. Read that file when the navigation summary above is insufficient.
+
+### Best Practices Summary
+
+1. **Annotate all public APIs** - Functions, methods, class attributes
+2. **Use `T | None`** - Modern union syntax over `Optional[T]`
+3. **Run strict type checking** - `mypy --strict` in CI
+4. **Use generics** - Preserve type info in reusable code
+5. **Define protocols** - Structural typing for interfaces
+6. **Narrow types** - Use guards to help the type checker
+7. **Bound type vars** - Restrict generics to meaningful types
+8. **Create type aliases** - Meaningful names for complex types
+9. **Minimize `Any`** - Use specific types or generics. `Any` is acceptable for truly dynamic data or when interfacing with untyped third-party code
+10. **Document with types** - Types are enforceable documentation
+
+## python-type-safety — detailed worked examples
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-type-safety/references/details.md -->
+
+### Advanced Patterns
+
+#### Pattern 5: Generic Repository
+
+Create type-safe data access patterns.
+
+```python
+from typing import TypeVar, Generic
+from abc import ABC, abstractmethod
+
+T = TypeVar("T")
+ID = TypeVar("ID")
+
+class Repository(ABC, Generic[T, ID]):
+    """Generic repository interface."""
+
+    @abstractmethod
+    async def get(self, id: ID) -> T | None:
+        """Get entity by ID."""
+        ...
+
+    @abstractmethod
+    async def save(self, entity: T) -> T:
+        """Save and return entity."""
+        ...
+
+    @abstractmethod
+    async def delete(self, id: ID) -> bool:
+        """Delete entity, return True if existed."""
+        ...
+
+class UserRepository(Repository[User, str]):
+    """Concrete repository for Users with string IDs."""
+
+    async def get(self, id: str) -> User | None:
+        row = await self._db.fetchrow(
+            "SELECT * FROM users WHERE id = $1", id
+        )
+        return User(**row) if row else None
+
+    async def save(self, entity: User) -> User:
+        ...
+
+    async def delete(self, id: str) -> bool:
+        ...
+```
+
+#### Pattern 6: TypeVar with Bounds
+
+Restrict generic parameters to specific types.
+
+```python
+from typing import TypeVar
+from pydantic import BaseModel
+
+ModelT = TypeVar("ModelT", bound=BaseModel)
+
+def validate_and_create(model_cls: type[ModelT], data: dict) -> ModelT:
+    """Create a validated Pydantic model from dict."""
+    return model_cls.model_validate(data)
+
+# Works with any BaseModel subclass
+class User(BaseModel):
+    name: str
+    email: str
+
+user = validate_and_create(User, {"name": "Alice", "email": "a@b.com"})
+# user is typed as User
+
+# Type error: str is not a BaseModel subclass
+result = validate_and_create(str, {"name": "Alice"})  # Error!
+```
+
+#### Pattern 7: Protocols for Structural Typing
+
+Define interfaces without requiring inheritance.
+
+```python
+from typing import Protocol, runtime_checkable
+
+@runtime_checkable
+class Serializable(Protocol):
+    """Any class that can be serialized to/from dict."""
+
+    def to_dict(self) -> dict:
+        ...
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "Serializable":
+        ...
+
+# User satisfies Serializable without inheriting from it
+class User:
+    def __init__(self, id: str, name: str) -> None:
+        self.id = id
+        self.name = name
+
+    def to_dict(self) -> dict:
+        return {"id": self.id, "name": self.name}
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "User":
+        return cls(id=data["id"], name=data["name"])
+
+def serialize(obj: Serializable) -> str:
+    """Works with any Serializable object."""
+    return json.dumps(obj.to_dict())
+
+# Works - User matches the protocol
+serialize(User("1", "Alice"))
+
+# Runtime checking with @runtime_checkable
+isinstance(User("1", "Alice"), Serializable)  # True
+```
+
+#### Pattern 8: Common Protocol Patterns
+
+Define reusable structural interfaces.
+
+```python
+from typing import Protocol
+
+class Closeable(Protocol):
+    """Resource that can be closed."""
+    def close(self) -> None: ...
+
+class AsyncCloseable(Protocol):
+    """Async resource that can be closed."""
+    async def close(self) -> None: ...
+
+class Readable(Protocol):
+    """Object that can be read from."""
+    def read(self, n: int = -1) -> bytes: ...
+
+class HasId(Protocol):
+    """Object with an ID property."""
+    @property
+    def id(self) -> str: ...
+
+class Comparable(Protocol):
+    """Object that supports comparison."""
+    def __lt__(self, other: "Comparable") -> bool: ...
+    def __le__(self, other: "Comparable") -> bool: ...
+```
+
+#### Pattern 9: Type Aliases
+
+Create meaningful type names.
+
+**Note:** The `type Alias = ...` statement syntax (PEP 695) was introduced in **Python 3.12**, not 3.10. For projects targeting earlier versions (including 3.10/3.11), use the `TypeAlias` annotation (PEP 613, available since Python 3.10).
+
+```python
+# Python 3.12+ type statement (PEP 695)
+type UserId = str
+type UserDict = dict[str, Any]
+
+# Python 3.12+ type statement with generics (PEP 695)
+type Handler[T] = Callable[[Request], T]
+type AsyncHandler[T] = Callable[[Request], Awaitable[T]]
+```
+
+```python
+# Python 3.10-3.11 style (needed for broader compatibility)
+from typing import TypeAlias
+from collections.abc import Callable, Awaitable
+
+UserId: TypeAlias = str
+Handler: TypeAlias = Callable[[Request], Response]
+```
+
+```python
+# Usage
+def register_handler(path: str, handler: Handler[Response]) -> None:
+    ...
+```
+
+#### Pattern 10: Callable Types
+
+Type function parameters and callbacks.
+
+```python
+from collections.abc import Callable, Awaitable
+
+# Sync callback
+ProgressCallback = Callable[[int, int], None]  # (current, total)
+
+# Async callback
+AsyncHandler = Callable[[Request], Awaitable[Response]]
+
+# With named parameters (using Protocol)
+class OnProgress(Protocol):
+    def __call__(
+        self,
+        current: int,
+        total: int,
+        *,
+        message: str = "",
+    ) -> None: ...
+
+def process_items(
+    items: list[Item],
+    on_progress: ProgressCallback | None = None,
+) -> list[Result]:
+    for i, item in enumerate(items):
+        if on_progress:
+            on_progress(i, len(items))
+        ...
+```
+
+### Configuration
+
+#### Strict Mode Checklist
+
+For `mypy --strict` compliance:
+
+```toml
+# pyproject.toml
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_return_any = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+no_implicit_optional = true
+```
+
+Incremental adoption goals:
+- All function parameters annotated
+- All return types annotated
+- Class attributes annotated
+- Minimize `Any` usage (acceptable for truly dynamic data)
+- Generic collections use type parameters (`list[str]` not `list`)
+
+For existing codebases, enable strict mode per-module using `# mypy: strict` or configure per-module overrides in `pyproject.toml`.
+
+## Python Resource Management
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-resource-management/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: Class-Based Context Manager
+
+Implement the context manager protocol for complex resources.
+
+```python
+class DatabaseConnection:
+    """Database connection with automatic cleanup."""
+
+    def __init__(self, dsn: str) -> None:
+        self._dsn = dsn
+        self._conn: Connection | None = None
+
+    def connect(self) -> None:
+        """Establish database connection."""
+        self._conn = psycopg.connect(self._dsn)
+
+    def close(self) -> None:
+        """Close connection if open."""
+        if self._conn is not None:
+            self._conn.close()
+            self._conn = None
+
+    def __enter__(self) -> "DatabaseConnection":
+        """Enter context: connect and return self."""
+        self.connect()
+        return self
+
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        """Exit context: always close connection."""
+        self.close()
+
+# Usage with context manager (preferred)
+with DatabaseConnection(dsn) as db:
+    result = db.execute(query)
+
+# Manual management when needed
+db = DatabaseConnection(dsn)
+db.connect()
+try:
+    result = db.execute(query)
+finally:
+    db.close()
+```
+
+#### Pattern 2: Async Context Manager
+
+For async resources, implement the async protocol.
+
+```python
+class AsyncDatabasePool:
+    """Async database connection pool."""
+
+    def __init__(self, dsn: str, min_size: int = 1, max_size: int = 10) -> None:
+        self._dsn = dsn
+        self._min_size = min_size
+        self._max_size = max_size
+        self._pool: asyncpg.Pool | None = None
+
+    async def __aenter__(self) -> "AsyncDatabasePool":
+        """Create connection pool."""
+        self._pool = await asyncpg.create_pool(
+            self._dsn,
+            min_size=self._min_size,
+            max_size=self._max_size,
+        )
+        return self
+
+    async def __aexit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        """Close all connections in pool."""
+        if self._pool is not None:
+            await self._pool.close()
+
+    async def execute(self, query: str, *args) -> list[dict]:
+        """Execute query using pooled connection."""
+        async with self._pool.acquire() as conn:
+            return await conn.fetch(query, *args)
+
+# Usage
+async with AsyncDatabasePool(dsn) as pool:
+    users = await pool.execute("SELECT * FROM users WHERE active = $1", True)
+```
+
+#### Pattern 3: Using @contextmanager Decorator
+
+Simplify context managers with the decorator for straightforward cases.
+
+```python
+from contextlib import contextmanager, asynccontextmanager
+import time
+import structlog
+
+logger = structlog.get_logger()
+
+@contextmanager
+def timed_block(name: str):
+    """Time a block of code."""
+    start = time.perf_counter()
+    try:
+        yield
+    finally:
+        elapsed = time.perf_counter() - start
+        logger.info(f"{name} completed", duration_seconds=round(elapsed, 3))
+
+# Usage
+with timed_block("data_processing"):
+    process_large_dataset()
+
+@asynccontextmanager
+async def database_transaction(conn: AsyncConnection):
+    """Manage database transaction."""
+    await conn.execute("BEGIN")
+    try:
+        yield conn
+        await conn.execute("COMMIT")
+    except BaseException:  # also roll back on asyncio.CancelledError
+        await conn.execute("ROLLBACK")
+        raise
+
+# Usage
+async with database_transaction(conn) as tx:
+    await tx.execute("INSERT INTO users ...")
+    await tx.execute("INSERT INTO audit_log ...")
+```
+
+#### Pattern 4: Unconditional Resource Release
+
+Always clean up resources in `__exit__`, regardless of exceptions.
+
+```python
+class FileProcessor:
+    """Process file with guaranteed cleanup."""
+
+    def __init__(self, path: str) -> None:
+        self._path = path
+        self._file: IO | None = None
+        self._temp_files: list[Path] = []
+
+    def __enter__(self) -> "FileProcessor":
+        self._file = open(self._path, "r")
+        return self
+
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_val: BaseException | None,
+        exc_tb: TracebackType | None,
+    ) -> None:
+        """Clean up all resources unconditionally."""
+        # Close main file
+        if self._file is not None:
+            self._file.close()
+
+        # Clean up any temporary files
+        for temp_file in self._temp_files:
+            try:
+                temp_file.unlink()
+            except OSError:
+                pass  # Best effort cleanup
+
+        # Return None/False to propagate any exception
+```
+
+## Python Configuration Management
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-configuration/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: Typed Settings with Pydantic
+
+Create a central settings class that loads and validates all configuration.
+
+```python
+from pydantic_settings import BaseSettings
+from pydantic import Field, PostgresDsn, ValidationError
+import sys
+
+class Settings(BaseSettings):
+    """Application configuration loaded from environment variables."""
+
+    # Database
+    db_host: str = Field(alias="DB_HOST")
+    db_port: int = Field(default=5432, alias="DB_PORT")
+    db_name: str = Field(alias="DB_NAME")
+    db_user: str = Field(alias="DB_USER")
+    db_password: str = Field(alias="DB_PASSWORD")
+
+    # Redis
+    redis_url: str = Field(default="redis://localhost:6379", alias="REDIS_URL")
+
+    # API Keys
+    api_secret_key: str = Field(alias="API_SECRET_KEY")
+
+    # Feature flags
+    enable_new_feature: bool = Field(default=False, alias="ENABLE_NEW_FEATURE")
+
+    model_config = {
+        "env_file": ".env",
+        "env_file_encoding": "utf-8",
+    }
+
+# Create singleton instance at module load
+try:
+    settings = Settings()
+except ValidationError as e:
+    print(f"Configuration error:\n{e}")
+    sys.exit(1)
+```
+
+Import `settings` throughout your application:
+
+```python
+from myapp.config import settings
+
+def get_database_connection():
+    return connect(
+        host=settings.db_host,
+        port=settings.db_port,
+        database=settings.db_name,
+    )
+```
+
+#### Pattern 2: Fail Fast on Missing Configuration
+
+Required settings should crash the application immediately with a clear error.
+
+```python
+from pydantic_settings import BaseSettings
+from pydantic import Field, ValidationError
+import sys
+
+class Settings(BaseSettings):
+    # Required - no default means it must be set
+    api_key: str = Field(alias="API_KEY")
+    database_url: str = Field(alias="DATABASE_URL")
+
+    # Optional with defaults
+    log_level: str = Field(default="INFO", alias="LOG_LEVEL")
+
+try:
+    settings = Settings()
+except ValidationError as e:
+    print("=" * 60)
+    print("CONFIGURATION ERROR")
+    print("=" * 60)
+    for error in e.errors():
+        field = error["loc"][0]
+        print(f"  - {field}: {error['msg']}")
+    print("\nPlease set the required environment variables.")
+    sys.exit(1)
+```
+
+A clear error at startup is better than a cryptic `None` failure mid-request.
+
+#### Pattern 3: Local Development Defaults
+
+Provide sensible defaults for local development while requiring explicit values for secrets.
+
+```python
+class Settings(BaseSettings):
+    # Has local default, but prod will override
+    db_host: str = Field(default="localhost", alias="DB_HOST")
+    db_port: int = Field(default=5432, alias="DB_PORT")
+
+    # Always required - no default for secrets
+    db_password: str = Field(alias="DB_PASSWORD")
+    api_secret_key: str = Field(alias="API_SECRET_KEY")
+
+    # Development convenience
+    debug: bool = Field(default=False, alias="DEBUG")
+
+    model_config = {"env_file": ".env"}
+```
+
+Create a `.env` file for local development (never commit this):
+
+```bash
+# .env (add to .gitignore)
+DB_PASSWORD=local_dev_password
+API_SECRET_KEY=dev-secret-key
+DEBUG=true
+```
+
+#### Pattern 4: Namespaced Environment Variables
+
+Prefix related variables for clarity and easy debugging.
+
+```bash
+# Database configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=myapp
+DB_USER=admin
+DB_PASSWORD=secret
+
+# Redis configuration
+REDIS_URL=redis://localhost:6379
+REDIS_MAX_CONNECTIONS=10
+
+# Authentication
+AUTH_SECRET_KEY=your-secret-key
+AUTH_TOKEN_EXPIRY_SECONDS=3600
+AUTH_ALGORITHM=HS256
+
+# Feature flags
+FEATURE_NEW_CHECKOUT=true
+FEATURE_BETA_UI=false
+```
+
+Makes the database settings easy to list for debugging. Print only the names, so no value (such as a password inside a connection URL) reaches your terminal or logs:
+
+```bash
+env | grep -o '^DB_[A-Za-z0-9_]*'
+```
+
+## Async Python Patterns
+
+<!-- source: wshobson/agents plugins/python-development/skills/async-python-patterns/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: Basic Async/Await
+
+```python
+import asyncio
+
+async def fetch_data(url: str) -> dict:
+    """Fetch data from URL asynchronously."""
+    await asyncio.sleep(1)  # Simulate I/O
+    return {"url": url, "data": "result"}
+
+async def main():
+    result = await fetch_data("https://api.example.com")
+    print(result)
+
+asyncio.run(main())
+```
+
+#### Pattern 2: Concurrent Execution with gather()
+
+```python
+import asyncio
+from typing import List
+
+async def fetch_user(user_id: int) -> dict:
+    """Fetch user data."""
+    await asyncio.sleep(0.5)
+    return {"id": user_id, "name": f"User {user_id}"}
+
+async def fetch_all_users(user_ids: List[int]) -> List[dict]:
+    """Fetch multiple users concurrently."""
+    tasks = [fetch_user(uid) for uid in user_ids]
+    results = await asyncio.gather(*tasks)
+    return results
+
+async def main():
+    user_ids = [1, 2, 3, 4, 5]
+    users = await fetch_all_users(user_ids)
+    print(f"Fetched {len(users)} users")
+
+asyncio.run(main())
+```
+
+#### Pattern 3: Task Creation and Management
+
+```python
+import asyncio
+
+async def background_task(name: str, delay: int):
+    """Long-running background task."""
+    print(f"{name} started")
+    await asyncio.sleep(delay)
+    print(f"{name} completed")
+    return f"Result from {name}"
+
+async def main():
+    # Create tasks
+    task1 = asyncio.create_task(background_task("Task 1", 2))
+    task2 = asyncio.create_task(background_task("Task 2", 1))
+
+    # Do other work
+    print("Main: doing other work")
+    await asyncio.sleep(0.5)
+
+    # Wait for tasks
+    result1 = await task1
+    result2 = await task2
+
+    print(f"Results: {result1}, {result2}")
+
+asyncio.run(main())
+```
+
+#### Pattern 4: Error Handling in Async Code
+
+```python
+import asyncio
+from typing import List, Optional
+
+async def risky_operation(item_id: int) -> dict:
+    """Operation that might fail."""
+    await asyncio.sleep(0.1)
+    if item_id % 3 == 0:
+        raise ValueError(f"Item {item_id} failed")
+    return {"id": item_id, "status": "success"}
+
+async def safe_operation(item_id: int) -> Optional[dict]:
+    """Wrapper with error handling."""
+    try:
+        return await risky_operation(item_id)
+    except ValueError as e:
+        print(f"Error: {e}")
+        return None
+
+async def process_items(item_ids: List[int]):
+    """Process multiple items with error handling."""
+    tasks = [safe_operation(iid) for iid in item_ids]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    # Filter out failures
+    successful = [r for r in results if r is not None and not isinstance(r, Exception)]
+    failed = [r for r in results if r is None or isinstance(r, Exception)]
+
+    print(f"Success: {len(successful)}, Failed: {len(failed)}")
+    return successful
+
+asyncio.run(process_items([1, 2, 3, 4, 5, 6]))
+```
+
+#### Pattern 5: Timeout Handling
+
+```python
+import asyncio
+
+async def slow_operation(delay: int) -> str:
+    """Operation that takes time."""
+    await asyncio.sleep(delay)
+    return f"Completed after {delay}s"
+
+async def with_timeout():
+    """Execute operation with timeout."""
+    try:
+        result = await asyncio.wait_for(slow_operation(5), timeout=2.0)
+        print(result)
+    except asyncio.TimeoutError:
+        print("Operation timed out")
+
+asyncio.run(with_timeout())
+```
+
+## Python Project Structure & Module Architecture
+
+<!-- source: wshobson/agents plugins/python-development/skills/python-project-structure/SKILL.md#fundamental-patterns -->
+
+### Fundamental Patterns
+
+#### Pattern 1: One Concept Per File
+
+Each file should focus on a single concept or closely related set of functions. Consider splitting when a file:
+
+- Handles multiple unrelated responsibilities
+- Grows beyond 300-500 lines (varies by complexity)
+- Contains classes that change for different reasons
+
+```python
+# Good: Focused files
+# user_service.py - User business logic
+# user_repository.py - User data access
+# user_models.py - User data structures
+
+# Avoid: Kitchen sink files
+# user.py - Contains service, repository, models, utilities...
+```
+
+#### Pattern 2: Explicit Public APIs with `__all__`
+
+Define the public interface for every module. Unlisted members are internal implementation details.
+
+```python
+# mypackage/services/__init__.py
+from .user_service import UserService
+from .order_service import OrderService
+from .exceptions import ServiceError, ValidationError
+
+__all__ = [
+    "UserService",
+    "OrderService",
+    "ServiceError",
+    "ValidationError",
+]
+
+# Internal helpers remain private by omission
+# from .internal_helpers import _validate_input  # Not exported
+```
+
+#### Pattern 3: Flat Directory Structure
+
+Prefer minimal nesting. Deep hierarchies make imports verbose and navigation difficult.
+
+```
+# Preferred: Flat structure
+project/
+├── api/
+│   ├── routes.py
+│   └── middleware.py
+├── services/
+│   ├── user_service.py
+│   └── order_service.py
+├── models/
+│   ├── user.py
+│   └── order.py
+└── utils/
+    └── validation.py
+
+# Avoid: Deep nesting
+project/core/internal/services/impl/user/
+```
+
+Add sub-packages only when there's a genuine sub-domain requiring isolation.
+
+#### Pattern 4: Test File Organization
+
+Choose one approach and apply it consistently throughout the project.
+
+**Option A: Colocated Tests**
+
+```
+src/
+├── user_service.py
+├── test_user_service.py
+├── order_service.py
+└── test_order_service.py
+```
+
+Benefits: Tests live next to the code they verify. Easy to see coverage gaps.
+
+**Option B: Parallel Test Directory**
+
+```
+src/
+├── services/
+│   ├── user_service.py
+│   └── order_service.py
+tests/
+├── services/
+│   ├── test_user_service.py
+│   └── test_order_service.py
+```
+
+Benefits: Clean separation between production and test code. Standard for larger projects.
+
+## Django Expert
+
+<!-- source: Jeffallan/claude-skills skills/django-expert/SKILL.md#minimal-working-example -->
+
+### Minimal Working Example
+
+The snippet below demonstrates the core MUST DO constraints: indexed fields, `select_related`, serializer validation, and endpoint permissions.
+
+```python
+# models.py
+from django.db import models
+
+class Article(models.Model):
+    title = models.CharField(max_length=255, db_index=True)
+    author = models.ForeignKey(
+        "auth.User", on_delete=models.CASCADE, related_name="articles"
+    )
+    published_at = models.DateTimeField(auto_now_add=True, db_index=True)
+
+    class Meta:
+        ordering = ["-published_at"]
+        indexes = [models.Index(fields=["author", "published_at"])]
+
+    def __str__(self):
+        return self.title
+
+# serializers.py
+from rest_framework import serializers
+from .models import Article
+
+class ArticleSerializer(serializers.ModelSerializer):
+    author_username = serializers.CharField(source="author.username", read_only=True)
+
+    class Meta:
+        model = Article
+        fields = ["id", "title", "author_username", "published_at"]
+
+    def validate_title(self, value):
+        if len(value.strip()) < 3:
+            raise serializers.ValidationError("Title must be at least 3 characters.")
+        return value.strip()
+
+# views.py
+from rest_framework import viewsets, permissions
+from .models import Article
+from .serializers import ArticleSerializer
+
+class ArticleViewSet(viewsets.ModelViewSet):
+    """
+    Uses select_related to avoid N+1 on author lookups.
+    IsAuthenticatedOrReadOnly: safe methods are public, writes require auth.
+    """
+    serializer_class = ArticleSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
+    def get_queryset(self):
+        return Article.objects.select_related("author").all()
+
+    def perform_create(self, serializer):
+        serializer.save(author=self.request.user)
+```
+
+```python
+# tests.py
+from rest_framework.test import APITestCase
+from rest_framework import status
+from django.contrib.auth.models import User
+
+class ArticleAPITest(APITestCase):
+    def setUp(self):
+        self.user = User.objects.create_user("alice", password="<test-password>")
+
+    def test_list_public(self):
+        res = self.client.get("/api/articles/")
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+    def test_create_requires_auth(self):
+        res = self.client.post("/api/articles/", {"title": "Test"})
+        self.assertEqual(res.status_code, status.HTTP_403_FORBIDDEN)
+
+    def test_create_authenticated(self):
+        self.client.force_authenticate(self.user)
+        res = self.client.post("/api/articles/", {"title": "Hello Django"})
+        self.assertEqual(res.status_code, status.HTTP_201_CREATED)
+```

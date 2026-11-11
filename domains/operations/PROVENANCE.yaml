@@ -14,6 +14,13 @@ files:
     path: specialized/customer-success-manager.md
     license: MIT
     modification: adapted
+- path: skills/customer-support/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/business-marketing/customer-support.md#accuracy-anti-fabrication
+    license: MIT
+    modification: merged-section
 - path: skills/customer-support/references/responding.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -42,6 +49,18 @@ files:
     path: specialized/change-management-consultant.md
     license: MIT
     modification: adapted
+- path: skills/people-operations/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/brag-sheet/SKILL.md#performance-review-prep,entry-format
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/mentoring-juniors/SKILL.md#teaching-techniques
+    license: MIT
+    modification: merged-section
 - path: skills/people-operations/references/recruiting.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -70,6 +89,23 @@ files:
     path: project-management/project-manager-senior.md
     license: MIT
     modification: adapted
+- path: skills/project-management/references/derived-guides.md
+  derived_from:
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: commands/project/retrospectives/complete-sprint.md#metrics-dashboard
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/team-collaboration/commands/standup-notes.md#async-standup-patterns,yesterday-s-accomplishments-extraction,blockers-and-dependencies-identification,communication-best-practices
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/impediment-prioritization/SKILL.md#scoring-rubric-1-10-scales
+    license: MIT
+    modification: merged-section
 - path: skills/project-management/references/flow-operations.md
   derived_from:
   - source: affaan-m/ECC

@@ -8,3 +8,5 @@
 - [ ] **T6.** `people-operations`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
 - [ ] **T7.** `project-management`: `evals/triggers.yaml` (≥5 deve/≥5 não deve, incluindo a vizinha mais próxima) e `evals/tasks.yaml` (≥2 casos), rodar e promover a `stable`.
 - [ ] **T8.** Revisão humana dos corpos procedurais escritos nesta curadoria (substituíram personas).
+
+- [x] Referências originais (pedido do mantenedor em 2026-11-10): `project-management/references/management-models.md` (escolas, leis organizacionais com peso de evidência, métodos de execução) e `people-operations/references/motivation-and-leadership.md` (motivação e liderança com ressalvas). Texto próprio, ligado pela receita (`append`) e mantido em `catalog/overrides/`; fontes citadas por autor e obra, sem reprodução.

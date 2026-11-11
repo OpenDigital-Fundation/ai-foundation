@@ -293,3 +293,9 @@ Guides merged from github/awesome-copilot; load only what the task needs:
 - [`references/browser-regressions/devtools-regression-investigator.md`](references/browser-regressions/devtools-regression-investigator.md)
 - [`references/browser-regressions/frontend-performance-investigator.md`](references/browser-regressions/frontend-performance-investigator.md)
 - [`references/browser-regressions/performance-optimization.md`](references/browser-regressions/performance-optimization.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/error-analysis.md`](references/derived/error-analysis.md) — Error Prevention Strategies

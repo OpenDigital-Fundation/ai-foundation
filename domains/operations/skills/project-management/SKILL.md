@@ -25,6 +25,8 @@ Short status updates (done, next, blocked, decisions needed), meeting notes with
 ## 5. Close
 Confirm acceptance, hand over, and write a short retrospective: what worked, what to change.
 
+Management schools, organisational laws (Pareto, Parkinson, Goodhart, Little, Brooks…) with their evidence weight, and execution methods (PDCA, Lean, Six Sigma, TOC, Kanban, OKR, Balanced Scorecard, RACI): [`references/management-models.md`](references/management-models.md).
+
 ## References
 
 Load only what the task needs:
@@ -35,3 +37,4 @@ Load only what the task needs:
 - [`references/meeting-notes.md`](references/meeting-notes.md) — covers Meeting Notes Specialist
 - [`references/jira.md`](references/jira.md) — covers Jira Workflow Steward; What does this PR do; Jira Link; Change Summary
 - [`references/flow-operations.md`](references/flow-operations.md) — covers Project Flow Ops
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Metrics Dashboard; Async Standup Patterns; Scoring Rubric (1–10 scales); Yesterday's Accomplishments Extraction; Blockers and Dependencies Identification; Communication Best Practices

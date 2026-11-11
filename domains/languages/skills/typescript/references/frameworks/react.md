@@ -6216,7 +6216,7 @@ Production builds should ship without source maps, or with sourcemaps uploaded t
 - Use `security:security-audit` agent for comprehensive security audits across the codebase
 - Use `languages:typescript` (`references/frameworks/react.md`) agent for React-specific patterns and the above rules in active code review
 
-## Required
+## react-reviewer
 
 <!-- source: affaan-m/ECC agents`code-quality:code-review`er.md -->
 
@@ -6336,7 +6336,7 @@ You DO NOT refactor or rewrite code — you report findings only.
 ### Diagnostic Commands
 
 ```bash
-
+# Required
 npx eslint . --ext .tsx,.jsx                          # ensure eslint-plugin-react-hooks is configured
 npm run typecheck --if-present                        # respect project's canonical command
 tsc --noEmit -p <tsconfig>                            # fallback if no script

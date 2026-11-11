@@ -35,6 +35,18 @@ files:
     path: pi/core/skills/benchmark-optimization-loop/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-evaluation/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/ai-research/llm-evaluation/SKILL.md#automated-metrics-implementation,a-b-testing,human-evaluation-frameworks,llm-as-judge-patterns
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/plugin-eval/skills/evaluation-methodology/SKILL.md#composite-score
+    license: MIT
+    modification: merged-section
 - path: skills/agent-evaluation/references/eval-harness.md
   derived_from:
   - source: affaan-m/ECC
@@ -77,6 +89,13 @@ files:
     path: skills/verify-agent-action/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-guardrails/references/derived-guides.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/skill-forge-essentials/skills/session-guard/SKILL.md#context-anchoring-anti-compaction
+    license: MIT
+    modification: merged-section
 - path: skills/agent-guardrails/references/hook-contracts/README.md
   derived_from:
   - source: github/awesome-copilot
@@ -164,6 +183,28 @@ files:
     path: pi/core/skills/context-and-decisions/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-memory/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/context-architecture/SKILL.md#the-nine-principles,the-kinds-of-mechanism-not-tools
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/code-refactoring/commands/context-restore.md#advanced-context-retrieval-strategies
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/context-management/commands/context-save.md#context-extraction-strategies
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/mini-context-graph/SKILL.md#design-philosophy
+    license: MIT
+    modification: merged-section
 - path: skills/agent-memory/references/durable-project-context/README.md
   derived_from:
   - source: github/awesome-copilot
@@ -211,6 +252,28 @@ files:
     path: skills/team-agent-orchestration/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-teams/references/derived-guides.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/agents/team-reviewer.md#review-dimensions
+    license: MIT
+    modification: merged-section
+  - source: VoltAgent/awesome-claude-code-subagents
+    commit: ed74d11
+    path: categories/09-meta-orchestration/task-distributor.md#what-to-design
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/agents/team-implementer.md#implementation-workflow
+    license: MIT
+    modification: merged-section
+  - source: VoltAgent/awesome-claude-code-subagents
+    commit: ed74d11
+    path: categories/09-meta-orchestration/multi-agent-coordinator.md#coordination-strategies-to-draw-from
+    license: MIT
+    modification: merged-section
 - path: skills/agent-teams/references/parallel-execution.md
   derived_from:
   - source: affaan-m/ECC
@@ -225,11 +288,53 @@ files:
     path: skills/plan-orchestrate/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/agent-teams/references/task-coordination-strategies/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/task-coordination-strategies/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/task-coordination-strategies/references/dependency-graphs.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/task-coordination-strategies/references/dependency-graphs.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/task-coordination-strategies/references/task-decomposition.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/task-coordination-strategies/references/task-decomposition.md
+    license: MIT
+    modification: adapted
 - path: skills/agent-teams/references/team-assembly.md
   derived_from:
   - source: affaan-m/ECC
     commit: b38be6a
     path: skills/team-builder/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/team-composition-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/team-composition-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/team-composition-patterns/references/agent-type-selection.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/team-composition-patterns/references/agent-type-selection.md
+    license: MIT
+    modification: adapted
+- path: skills/agent-teams/references/team-composition-patterns/references/preset-teams.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/team-composition-patterns/references/preset-teams.md
     license: MIT
     modification: adapted
 - path: skills/context-management/SKILL.md
@@ -298,6 +403,13 @@ files:
     path: instructions/instructions.instructions.md
     license: MIT
     modification: adapted
+- path: skills/harness-design/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/agent-architecture/SKILL.md#how-to-work,choose-a-route,shared-decision-rules
+    license: MIT
+    modification: merged-section
 - path: skills/harness-design/references/enterprise-operations.md
   derived_from:
   - source: affaan-m/ECC
@@ -357,6 +469,20 @@ files:
     path: skills/dispatching-parallel-agents/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/parallel-agents/references/derived/multi-reviewer-patterns.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/multi-reviewer-patterns/SKILL.md#review-dimension-allocation,severity-calibration
+    license: MIT
+    modification: merged-section
+- path: skills/parallel-agents/references/derived/parallel-debugging.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/agent-teams/skills/parallel-debugging/SKILL.md#evidence-collection-standards,hypothesis-generation-framework
+    license: MIT
+    modification: merged-section
 - path: skills/session-retrospective/SKILL.md
   derived_from:
   - source: mattpocock/skills

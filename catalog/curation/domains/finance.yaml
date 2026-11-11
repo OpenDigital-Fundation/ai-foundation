@@ -91,6 +91,8 @@ artifacts:
   - msitarzewski/agency-agents:agent:Financial Analyst
   - msitarzewski/agency-agents:agent:Investment Researcher
   - msitarzewski/agency-agents:agent:Pricing Analyst
+  - wshobson/agents:skill:startup-financial-modeling
+  - wshobson/agents:skill:startup-metrics-framework
   recipe:
     title: Financial analysis
     description: 'Use for financial modelling and planning: three-statement and unit-economics models, forecasts and budgets,
@@ -104,6 +106,9 @@ artifacts:
       - msitarzewski/agency-agents:specialized/specialized-pricing-analyst.md
       investment-research.md:
       - msitarzewski/agency-agents:finance/finance-investment-researcher.md
+      derived-guides.md:
+      - wshobson/agents:plugins/startup-business-analyst/skills/startup-financial-modeling/SKILL.md#core-components
+      - wshobson/agents:plugins/startup-business-analyst/skills/startup-metrics-framework/SKILL.md#metric-tracking-best-practices,consumer-mobile-metrics
     body: '# Financial analysis
 
 
@@ -135,3 +140,6 @@ artifacts:
 
       Lead with the answer and the recommendation, then the drivers, risks and what would change the conclusion. For spreadsheet
       files use `documents:office-documents`. This is analysis, not investment or tax advice.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Core Components; Metric
+        Tracking Best Practices; Consumer/Mobile Metrics'

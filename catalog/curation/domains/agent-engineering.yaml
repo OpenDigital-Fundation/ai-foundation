@@ -32,7 +32,9 @@ artifacts:
   - affaan-m/ECC:skill:agent-self-evaluation
   - affaan-m/ECC:skill:benchmark-optimization-loop
   - affaan-m/ECC:skill:eval-harness
+  - davila7/claude-code-templates:skill:llm-evaluation
   - github/awesome-copilot:agent:Research Harness Engineer
+  - wshobson/agents:skill:evaluation-methodology
   recipe:
     title: Agent evaluation
     description: 'Use when measuring agents rather than a single skill: comparing coding agents or configurations head to
@@ -50,6 +52,12 @@ artifacts:
       - s:benchmark-optimization-loop
       benchmark-integrity/README.md:
       - github/awesome-copilot:agents/research-harness-engineer.agent.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/ai-research/llm-evaluation/SKILL.md#automated-metrics-implementation,a-b-testing,human-evaluation-frameworks,llm-as-judge-patterns
+      - wshobson/agents:plugins/plugin-eval/skills/evaluation-methodology/SKILL.md#composite-score
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Automated Metrics Implementation;
+        A/B Testing; Human Evaluation Frameworks; LLM-as-Judge Patterns; Composite score'
 - id: agent-engineering/agent-guardrails
   type: skill
   capability: 'Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell commands
@@ -63,6 +71,7 @@ artifacts:
   - github/awesome-copilot:rule:hooks.instructions
   - github/awesome-copilot:skill:verify-agent-action
   - mattpocock/skills:skill:git-guardrails-claude-code
+  - wshobson/agents:skill:session-guard
   recipe:
     title: Agent guardrails
     description: 'Use when an agent should be prevented from destructive or risky actions: blocking dangerous git and shell
@@ -79,6 +88,8 @@ artifacts:
       hook-contracts/README.md:
       - github/awesome-copilot:hooks/tool-guardian/README.md
       - github/awesome-copilot:instructions/hooks.instructions.md
+      derived-guides.md:
+      - wshobson/agents:plugins/skill-forge-essentials/skills/session-guard/SKILL.md#context-anchoring-anti-compaction
     append: '## Limits of this guardrail
 
 
@@ -107,6 +118,7 @@ artifacts:
       hook-contracts/README.md: upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are
         not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass
         and fail-closed behaviour
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Context Anchoring (anti-compaction)'
 - id: agent-engineering/agent-loops
   type: skill
   capability: 'Use when designing, running or reviewing an autonomous or long-running agent loop: machine-checkable goals
@@ -162,8 +174,12 @@ artifacts:
   - affaan-m/ECC:skill:continuous-learning-v2
   - affaan-m/ECC:skill:rules-distill
   - affaan-m/ECC:skill:unified-memory
+  - davila7/claude-code-templates:skill:context-architecture
   - github/awesome-copilot:agent:.NET Self-Learning Architect
   - github/awesome-copilot:rule:memory-bank.instructions
+  - github/awesome-copilot:skill:mini-context-graph
+  - wshobson/agents:command:context-restore
+  - wshobson/agents:command:context-save
   recipe:
     title: Agent memory
     description: 'Use when an agent should learn across sessions: capturing durable lessons and decisions, promoting observations
@@ -184,6 +200,11 @@ artifacts:
       durable-project-context/README.md:
       - github/awesome-copilot:agents/dotnet-self-learning-architect.agent.md
       - github/awesome-copilot:instructions/memory-bank.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/development/context-architecture/SKILL.md#the-nine-principles,the-kinds-of-mechanism-not-tools
+      - wshobson/agents:plugins/code-refactoring/commands/context-restore.md#advanced-context-retrieval-strategies
+      - wshobson/agents:plugins/context-management/commands/context-save.md#context-extraction-strategies
+      - github/awesome-copilot:skills/mini-context-graph/SKILL.md#design-philosophy
     supersedes:
     - affaan-m/ECC:command:learn
     - affaan-m/ECC:command:learn-eval
@@ -193,6 +214,9 @@ artifacts:
     - affaan-m/ECC:command:instinct-export
     - affaan-m/ECC:command:instinct-import
     - affaan-m/ECC:command:instinct-status
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: The nine principles;
+        Advanced Context Retrieval Strategies; The kinds of mechanism (not tools); Context Extraction Strategies; Design Philosophy'
 - id: agent-engineering/agent-teams
   type: skill
   capability: 'Use when coordinating several agents as a team on one effort: assigning owners and scope to work items, isolating
@@ -200,6 +224,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - VoltAgent/awesome-claude-code-subagents:agent:multi-agent-coordinator
+  - VoltAgent/awesome-claude-code-subagents:agent:task-distributor
   - affaan-m/ECC:command:multi-backend
   - affaan-m/ECC:command:multi-execute
   - affaan-m/ECC:command:multi-frontend
@@ -211,6 +237,10 @@ artifacts:
   - affaan-m/ECC:skill:plan-orchestrate
   - affaan-m/ECC:skill:team-agent-orchestration
   - affaan-m/ECC:skill:team-builder
+  - wshobson/agents:agent:team-implementer
+  - wshobson/agents:agent:team-reviewer
+  - wshobson/agents:skill:task-coordination-strategies
+  - wshobson/agents:skill:team-composition-patterns
   recipe:
     title: Agent teams
     description: 'Use when coordinating several agents as a team on one effort: assigning owners and scope to work items,
@@ -224,6 +254,11 @@ artifacts:
       - s:plan-orchestrate
       parallel-execution.md:
       - s:parallel-execution-optimizer
+      derived-guides.md:
+      - wshobson/agents:plugins/agent-teams/agents/team-reviewer.md#review-dimensions
+      - VoltAgent/awesome-claude-code-subagents:categories/09-meta-orchestration/task-distributor.md#what-to-design
+      - wshobson/agents:plugins/agent-teams/agents/team-implementer.md#implementation-workflow
+      - VoltAgent/awesome-claude-code-subagents:categories/09-meta-orchestration/multi-agent-coordinator.md#coordination-strategies-to-draw-from
     supersedes:
     - affaan-m/ECC:command:multi-plan
     - affaan-m/ECC:command:multi-execute
@@ -232,6 +267,41 @@ artifacts:
     - affaan-m/ECC:command:multi-backend
     - affaan-m/ECC:skill:claude-devfleet
     - affaan-m/ECC:skill:dev-team
+    reference_dirs:
+      team-composition-patterns: wshobson/agents:plugins/agent-teams/skills/team-composition-patterns
+      task-coordination-strategies: wshobson/agents:plugins/agent-teams/skills/task-coordination-strategies
+    reference_notes:
+      team-composition-patterns: 'Design optimal agent team compositions with sizing heuristics, preset configurations, and
+        agent type selection. Use this skill when deciding how many agents to spawn for a task, when choosing between '
+      task-coordination-strategies: Decompose complex tasks, design dependency graphs, and coordinate multi-agent work with
+        proper task descriptions and workload balancing. Use this skill when breaking down work for agent teams, managin
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Review Dimensions; What
+        to design; Implementation Workflow; Coordination strategies to draw from'
+    append: 'Detail files of the merged guides:
+
+
+      - [`references/task-coordination-strategies/references/dependency-graphs.md`](references/task-coordination-strategies/references/dependency-graphs.md)
+
+      - [`references/task-coordination-strategies/references/task-decomposition.md`](references/task-coordination-strategies/references/task-decomposition.md)
+
+      - [`references/team-composition-patterns/references/preset-teams.md`](references/team-composition-patterns/references/preset-teams.md)
+
+      - [`references/team-composition-patterns/references/agent-type-selection.md`](references/team-composition-patterns/references/agent-type-selection.md)
+
+
+      ## Host and authorization boundaries
+
+
+      Agent names and role labels in imported examples describe responsibilities, not installed host-specific agent types.
+      Discover the host''s available tools and agent surfaces, and map the role to an approved implementation. Do not call
+      a missing agent/tool or infer that a referenced preset was installed.
+
+
+      Create teammates only when requested by the user or authorized by applicable project instructions. Preserve scope, concurrency
+      limits, worktree ownership and the user''s publication/cleanup gates. A template role name does not authorize a spawn
+      or merge.
+
+      '
 - id: agent-engineering/context-management
   type: skill
   capability: 'Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and
@@ -283,6 +353,7 @@ artifacts:
   - github/awesome-copilot:hook:session-logger
   - github/awesome-copilot:rule:agents.instructions
   - github/awesome-copilot:rule:instructions.instructions
+  - github/awesome-copilot:skill:agent-architecture
   - github/awesome-copilot:skill:harness-engineering
   - msitarzewski/agency-agents:agent:Agentic Identity & Trust Architect
   - msitarzewski/agency-agents:agent:Agents Orchestrator
@@ -319,10 +390,14 @@ artifacts:
       customizations/README.md:
       - github/awesome-copilot:instructions/agents.instructions.md
       - github/awesome-copilot:instructions/instructions.instructions.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/agent-architecture/SKILL.md#how-to-work,choose-a-route,shared-decision-rules
     reference_notes:
       session-observability/README.md: upstream hook documentation kept for its policy and pattern catalogue; the hook scripts
         are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass
         and fail-closed behaviour; never log prompts or tool input unredacted
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: How to work; Choose a
+        route; Shared decision rules'
 - id: agent-engineering/parallel-agents
   type: skill
   capability: Dispatch one focused subagent per independent task and integrate their verified results.
@@ -330,6 +405,8 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - obra/superpowers:skill:dispatching-parallel-agents
+  - wshobson/agents:skill:multi-reviewer-patterns
+  - wshobson/agents:skill:parallel-debugging
 - id: agent-engineering/session-retrospective
   type: skill
   capability: Review a coding-agent session and propose ranked improvements to the agent's environment.
@@ -376,3 +453,9 @@ imports:
 - dest: domains/agent-engineering/skills/skill-authoring/references/environments.md
   source: anthropics/skills
   src: skills/skill-creator/SKILL.md
+- dest: domains/agent-engineering/skills/parallel-agents/references/derived/parallel-debugging.md
+  source: wshobson/agents
+  src: plugins/agent-teams/skills/parallel-debugging/SKILL.md#evidence-collection-standards,hypothesis-generation-framework
+- dest: domains/agent-engineering/skills/parallel-agents/references/derived/multi-reviewer-patterns.md
+  source: wshobson/agents
+  src: plugins/agent-teams/skills/multi-reviewer-patterns/SKILL.md#review-dimension-allocation,severity-calibration

@@ -33,4 +33,5 @@ Load only what the task needs:
 - [`references/prompt-caching.md`](references/prompt-caching.md) — covers Prompt Caching Strategy
 - [`references/regex-or-llm.md`](references/regex-or-llm.md) — covers Regex vs LLM for Structured Text Parsing
 - [`references/prompt-design/README.md`](references/prompt-design/README.md) — covers Prompt Builder Instructions; Prompt Builder Researching Topic for Prompt Enhancement; Prompt Engineer; Guidelines
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Context profiles; CONTENT PATTERNS
 - `references/prompt-optimization/`

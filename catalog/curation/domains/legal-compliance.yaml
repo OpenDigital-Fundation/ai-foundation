@@ -9,11 +9,14 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - davila7/claude-code-templates:skill:data-privacy-compliance
+  - davila7/claude-code-templates:skill:security-compliance
   - github/awesome-copilot:hook:check-licenses
   - github/awesome-copilot:hook:dependency-license-checker
   - msitarzewski/agency-agents:agent:Compliance Auditor
   - msitarzewski/agency-agents:agent:Data Privacy Officer
   - msitarzewski/agency-agents:agent:Legal Compliance Checker
+  - wshobson/agents:skill:pci-compliance
   recipe:
     title: Compliance programs
     description: 'Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness,
@@ -27,6 +30,9 @@ artifacts:
       - msitarzewski/agency-agents:support/support-legal-compliance-checker.md
       dependency-licenses/README.md:
       - github/awesome-copilot:hooks/dependency-license-checker/README.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/enterprise-communication/data-privacy-compliance/SKILL.md#data-subject-rights-implementation,privacy-by-design-principles,consent-management
+      - davila7/claude-code-templates:cli-tool/components/skills/development/security-compliance/SKILL.md#security-compliance-lifecycle,key-security-frameworks-standards
     body: '# Compliance programmes
 
 
@@ -64,6 +70,12 @@ artifacts:
       dependency-licenses/README.md: upstream hook documentation kept for its policy and pattern catalogue; the hook scripts
         are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass
         and fail-closed behaviour; licence checks by substring are heuristics, not proof of compliance
+      pci-compliance: Implement PCI DSS compliance requirements for secure handling of payment card data and payment systems.
+        Use when securing payment processing, achieving PCI compliance, or implementing payment card sec
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Data Subject Rights Implementation;
+        Security & Compliance Lifecycle; Privacy by Design Principles; Consent Management; Key Security Frameworks & Standards'
+    reference_dirs:
+      pci-compliance: wshobson/agents:plugins/payment-processing/skills/pci-compliance
 - id: legal-compliance/contracts
   type: skill
   capability: 'Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review

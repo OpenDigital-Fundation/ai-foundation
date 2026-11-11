@@ -26,3 +26,4 @@ For a professional document generated from data or a template, see the reference
 Load only what the task needs:
 
 - [`references/document-generation.md`](references/document-generation.md) — covers Document Generator
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Python Libraries; Inspect and choose; Conversion behavior; Verify and deliver; Verification

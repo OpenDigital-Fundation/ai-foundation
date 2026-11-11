@@ -16,6 +16,8 @@ artifacts:
   - github/awesome-copilot:agent:Agent Governance Reviewer
   - github/awesome-copilot:agent:Trojan Skill Hunter
   - github/awesome-copilot:rule:agent-safety.instructions
+  - github/awesome-copilot:skill:agent-governance
+  - github/awesome-copilot:skill:mcp-implementation-security-review
 - id: security/external-references
   type: knowledge
   capability: Links and licence notes for security material referenced but not copied (Shannon, checklists, OWASP).
@@ -27,9 +29,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - davila7/claude-code-templates:skill:secrets-management
   - getsentry/skills:skill:secret-serialization
   - github/awesome-copilot:hook:scan-secrets
   - github/awesome-copilot:hook:secrets-scanner
+  - github/awesome-copilot:skill:secret-scanning
   - msitarzewski/agency-agents:agent:Secrets & Credential Hygiene Engineer
 - id: security/security-audit
   type: skill
@@ -43,9 +47,11 @@ artifacts:
   - affaan-m/ECC:skill:osint-investigation
   - affaan-m/ECC:skill:security-bounty-hunter
   - affaan-m/ECC:skill:security-review
+  - davila7/claude-code-templates:agent:graphql-security-specialist
   - getsentry/skills:skill:gha-security-review
   - github/awesome-copilot:agent:sast-sca-security-analyzer
   - github/awesome-copilot:rule:security-and-owasp.instructions
+  - github/awesome-copilot:skill:codeql
   - msitarzewski/agency-agents:agent:AI-Generated Code Security Auditor
   - msitarzewski/agency-agents:agent:Application Security Engineer
   - msitarzewski/agency-agents:agent:Cloud Security Architect
@@ -53,15 +59,21 @@ artifacts:
   - msitarzewski/agency-agents:agent:Penetration Tester
   - msitarzewski/agency-agents:agent:Privacy Engineer
   - msitarzewski/agency-agents:agent:Senior SecOps Engineer
+  - wshobson/agents:command:security-sast
 - id: security/threat-modeling
   type: skill
   capability: Map data flows and trust boundaries, run STRIDE, rank threats, and turn them into mitigations and tests.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - getsentry/skills:skill:security-model
+  - github/awesome-copilot:skill:data-breach-blast-radius
   - msitarzewski/agency-agents:agent:Security Architect
   - openai/skills:skill:security-threat-model
-  - getsentry/skills:skill:security-model
+  - wshobson/agents:skill:attack-tree-construction
+  - wshobson/agents:skill:security-requirement-extraction
+  - wshobson/agents:skill:stride-analysis-patterns
+  - wshobson/agents:skill:threat-mitigation-mapping
 imports:
 - dest: domains/security/skills/security-audit
   source: SecurityStandards/skill-security-audit
@@ -162,3 +174,47 @@ imports:
 - dest: domains/security/skills/secrets-hygiene/references/scanning-recipes.md
   source: github/awesome-copilot
   src: hooks/secrets-scanner/README.md
+- dest: domains/security/skills/threat-modeling/references/stride-analysis-patterns
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/stride-analysis-patterns
+  files:
+    README.md: plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md
+- dest: domains/security/skills/threat-modeling/references/attack-tree-construction
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/attack-tree-construction
+  files:
+    README.md: plugins/security-scanning/skills/attack-tree-construction/SKILL.md
+- dest: domains/security/skills/threat-modeling/references/threat-mitigation-mapping
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/threat-mitigation-mapping
+  files:
+    README.md: plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md
+- dest: domains/security/skills/threat-modeling/references/security-requirement-extraction
+  source: wshobson/agents
+  src: plugins/security-scanning/skills/security-requirement-extraction
+  files:
+    README.md: plugins/security-scanning/skills/security-requirement-extraction/SKILL.md
+- dest: domains/security/skills/agent-security/references/derived/mcp-implementation-security-review.md
+  source: github/awesome-copilot
+  src: skills/mcp-implementation-security-review/SKILL.md#controls-reference,owasp-mcp-top-10,reference
+- dest: domains/security/skills/agent-security/references/derived/agent-governance.md
+  source: github/awesome-copilot
+  src: skills/agent-governance/SKILL.md#pattern-1-governance-policy
+- dest: domains/security/skills/security-audit/references/derived/security-sast.md
+  source: wshobson/agents
+  src: plugins/security-scanning/commands/security-sast.md#multi-language-scanner-implementation
+- dest: domains/security/skills/security-audit/references/derived/codeql.md
+  source: github/awesome-copilot
+  src: skills/codeql/SKILL.md#core-workflow-github-actions
+- dest: domains/security/skills/security-audit/references/derived/graphql-security-specialist.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/agents/api-graphql/graphql-security-specialist.md#rate-limiting-and-dos-protection
+- dest: domains/security/skills/threat-modeling/references/derived/data-breach-blast-radius.md
+  source: github/awesome-copilot
+  src: skills/data-breach-blast-radius/SKILL.md#execution-workflow
+- dest: domains/security/skills/secrets-hygiene/references/derived/secret-scanning.md
+  source: github/awesome-copilot
+  src: skills/secret-scanning/SKILL.md#core-workflow-enable-secret-scanning,core-workflow-resolve-blocked-pushes
+- dest: domains/security/skills/secrets-hygiene/references/derived/secrets-management.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/skills/security/secrets-management/SKILL.md#hashicorp-vault-integration,external-secrets-operator,secret-rotation

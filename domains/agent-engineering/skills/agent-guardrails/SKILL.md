@@ -115,3 +115,4 @@ Load only what the task needs:
 - [`references/safety-modes.md`](references/safety-modes.md) — covers Safety Guard Prevent Destructive Operations
 - [`references/operation-policies/README.md`](references/operation-policies/README.md) — upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass and fail-closed behaviour
 - [`references/hook-contracts/README.md`](references/hook-contracts/README.md) — upstream hook documentation kept for its policy and pattern catalogue; the hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass and fail-closed behaviour
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Context Anchoring (anti-compaction)

@@ -121,3 +121,9 @@ Skip any step = lying, not verifying
 - Paraphrases and synonyms
 - Implications of success
 - ANY communication suggesting completion/correctness
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/doublecheck.md`](references/derived/doublecheck.md) — Layer 3: Adversarial Review; Layer 1: Self-Audit; Layer 2: Source Verification; Domain-Specific Guidance

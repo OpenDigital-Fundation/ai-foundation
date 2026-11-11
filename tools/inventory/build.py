@@ -23,7 +23,17 @@ SKIP_DIRS = {"node_modules", ".git", "tests", "test", "examples", "docs", "i18n"
              ".openclaw", "cli", "site", "gallery", "preview", "eval", "benchmarks", "translations"}
 PROPRIETARY_SKILLS = {"docx", "pdf", "pptx", "xlsx"}
 # Per-source folders that hold the upstream site or build tooling, not artifacts.
-SOURCE_SKIP_DIRS = {"github/awesome-copilot": {"website", "eng"}}
+SOURCE_SKIP_DIRS = {
+    "github/awesome-copilot": {"website", "eng"},
+    "wshobson/agents": {"evals", "tools"},
+    "VoltAgent/awesome-claude-code-subagents": {"tools"},
+    "davila7/claude-code-templates": {"dashboard", "docs-site", "database", "cloudflare-workers", "cli-rust", "scripts",
+                                      "cli-tool/analytics-ui", "cli-tool/src", "cli-tool/templates", "cli-tool/docs_to_claude",
+                                      "cli-tool/bin", "cli-tool/components/sandbox",
+                                      },
+    "Jeffallan/claude-skills": {"research", "specs", "scripts", "assets"},
+    "K-Dense-AI/claude-scientific-skills": {"scripts"},
+}
 FIELDS = ["source", "kind", "name", "path", "license", "suggested_domain", "description"]
 
 
@@ -57,6 +67,8 @@ def kind_of(source_id: str, rel: str, fname: str) -> str | None:
     if fname == "SKILL.md":
         return "skill"
     if fname.endswith(".md") and re.search(r"(^|/)agents(/|$)", parent):
+        return "agent"
+    if fname.endswith(".md") and source_id == "VoltAgent/awesome-claude-code-subagents" and re.match(r"categories/[^/]+$", parent):
         return "agent"
     if fname.endswith(".md") and source_id == "msitarzewski/agency-agents" and parent and not parent.startswith(("scripts", "integrations", "examples")):
         return "agent"
@@ -135,7 +147,7 @@ def build(sources_dir: Path, lock: Path, out_csv: Path, out_hashes: Path) -> Non
             sys.exit(f"missing clone for {s['id']}; run tools.inventory.fetch first")
         restricted_source = s["policy"] == "reference"
         for dp, dns, fns in os.walk(base):
-            dns[:] = sorted(d for d in dns if d not in SKIP_DIRS and not (Path(dp) == base and d in SOURCE_SKIP_DIRS.get(s["id"], ())) and not (d.startswith(".") and d not in {".claude", ".curated", ".system"}))
+            dns[:] = sorted(d for d in dns if d not in SKIP_DIRS and not ((Path(dp) / d).relative_to(base).as_posix() in SOURCE_SKIP_DIRS.get(s["id"], ())) and not (d.startswith(".") and d not in {".claude", ".curated", ".system"}))
             for f in sorted(fns):
                 p = Path(dp) / f
                 rel = str(p.relative_to(base))

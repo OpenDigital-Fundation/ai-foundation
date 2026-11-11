@@ -20,9 +20,32 @@ def _clone(sources: Path, src: str) -> Path:
     return sources / src.replace("/", "_")
 
 
+_CODE_TEXT = {".tex", ".bst", ".sty", ".py", ".sh", ".js", ".ts", ".c", ".h", ".cpp", ".rs", ".go", ".rb", ".java"}
+
+
+def _inline_licence(file: Path) -> str | None:
+    if not file.is_file() or file.suffix.lower() not in (_CODE_TEXT | _TEXT):
+        return None
+    head = file.read_text(encoding="utf-8", errors="ignore")[:4096]
+    normalized = re.sub(r"(?m)^\s*(?:%+|#+|//+|/\*+|\*+)\s?", "", head)
+    spdx = re.search(r"(?m)^SPDX-License-Identifier:\s*([^\n]+)", normalized)
+    if spdx:
+        value = spdx.group(1).removesuffix("*/").strip()
+        return value if re.fullmatch(r"[A-Za-z0-9.+-]+", value) else f"Restricted (SPDX expression: {value})"
+    flat = re.sub(r"\s+", " ", normalized)
+    notice = re.search(r"(?:may be (?:re)?distributed|licensed) .{0,180}?LaTeX Project Public License", flat, re.I)
+    if notice:
+        version = re.search(r"version\s+(1\.\d[a-z]?)", flat[notice.end():notice.end()+160], re.I)
+        return "LPPL-" + (version.group(1) if version else "unspecified")
+    return None
+
+
 def effective_licence(lock: dict, sources: Path, src: str, path: str) -> str:
     clone = _clone(sources, src)
     target = clone / path
+    inline = _inline_licence(target)
+    if inline:
+        return inline
     probe = target / "_" if target.is_dir() else target
     return nearest_licence(clone, probe) or lock[src]["license"]
 
@@ -34,11 +57,13 @@ def _allowed(licence: str, accepted: str) -> bool:
     return not is_permissive(accepted) and accepted != "NOASSERTION" and same_licence(licence, accepted)
 
 
-def check_copy(lock: dict, sources: Path, src: str, path: str) -> str:
+def check_copy(lock: dict, sources: Path, src: str, path: str, *, exclude: set[str] | None = None) -> str:
     """Return the effective licence of `path` (file or folder), or raise when copying is not permitted."""
     clone = _clone(sources, src)
     target = clone / path
     files = sorted(p for p in target.rglob("*") if p.is_file() and not p.name.upper().startswith(("LICENSE", "LICENCE", "COPYING"))) if target.is_dir() else [target]
+    if exclude:
+        files = [f for f in files if f.relative_to(target).as_posix() not in exclude]
     accepted = lock[src]["license"]
     licences = set()
     for f in files:

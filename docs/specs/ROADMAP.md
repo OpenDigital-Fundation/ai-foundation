@@ -49,6 +49,7 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`platform/catalog`](platform/catalog/spec.md) | security |
 | [`documents/catalog`](documents/catalog/spec.md) | — |
 | [`research/catalog`](research/catalog/spec.md) | — |
+| [`science/catalog`](science/catalog/spec.md) | research, foundation/source-expansion (fatia 4) |
 
 ## Onda 3 — Negócio
 

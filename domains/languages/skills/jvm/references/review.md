@@ -2,7 +2,7 @@
 
 Part of `languages:jvm`. Load when reviewing a change; read by `code-quality:code-reviewer`.
 
-## Read the build file
+## java-reviewer
 
 <!-- source: affaan-m/ECC agents`code-quality:code-review`er.md -->
 
@@ -22,7 +22,7 @@ You are a senior Java engineer ensuring high standards of idiomatic Java, Spring
 Before reviewing any code, determine the framework:
 
 ```bash
-
+# Read the build file
 cat pom.xml 2>/dev/null || cat build.gradle 2>/dev/null || cat build.gradle.kts 2>/dev/null
 ```
 

@@ -21,6 +21,20 @@ files:
     path: agents/openapi-to-application.agent.md
     license: MIT
     modification: adapted
+- path: skills/api-design/references/derived/api-integration-specialist.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/api-integration-specialist/SKILL.md#core-integration-principles
+    license: MIT
+    modification: merged-section
+- path: skills/api-design/references/derived/protobuf-grpc-api-review.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/protobuf-grpc-api-review/SKILL.md#review-workflow
+    license: MIT
+    modification: merged-section
 - path: skills/api-design/references/implementation-patterns.md
   derived_from:
   - source: affaan-m/ECC
@@ -42,6 +56,13 @@ files:
     path: skills/engineering/improve-codebase-architecture/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/architecture-review/references/derived/legacy-modernizer.md
+  derived_from:
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/legacy-modernizer/SKILL.md#code-examples
+    license: MIT
+    modification: merged-section
 - path: skills/architecture-review/references/modernization-review/arch.md
   derived_from:
   - source: github/awesome-copilot
@@ -84,6 +105,13 @@ files:
     path: skills/engineering/codebase-design/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/codebase-design/references/derived/poka-yoke.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/poka-yoke/SKILL.md#designing-something-new,evidence-and-its-limits,axis-1-what-happens-when-the-mistake-occurs,after-an-incident
+    license: MIT
+    modification: merged-section
 - path: skills/codebase-design/references/design-patterns.md
   derived_from:
   - source: github/awesome-copilot
@@ -133,6 +161,18 @@ files:
     path: agents/context-architect.agent.md
     license: MIT
     modification: adapted
+- path: skills/codebase-onboarding/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/create-agentsmd/SKILL.md#file-structure-and-content-guidelines
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/acquire-codebase-knowledge/SKILL.md#gotchas
+    license: MIT
+    modification: merged-section
 - path: skills/codebase-onboarding/references/explorer.md
   derived_from:
   - source: affaan-m/ECC
@@ -246,6 +286,20 @@ files:
     path: pi/core/skills/content-hash-cache-pattern/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/system-design/references/cqrs-implementation/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/cqrs-implementation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/cqrs-implementation/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/cqrs-implementation/references/details.md
+    license: MIT
+    modification: adapted
 - path: skills/system-design/references/design-checklists/README.md
   derived_from:
   - source: github/awesome-copilot
@@ -263,6 +317,20 @@ files:
   - source: affaan-m/ECC
     commit: b38be6a
     path: pi/core/skills/error-handling/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/event-store-design/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/event-store-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/event-store-design/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/event-store-design/references/details.md
     license: MIT
     modification: adapted
 - path: skills/system-design/references/internationalisation.md
@@ -284,6 +352,20 @@ files:
     path: pi/core/skills/latency-critical-systems/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/system-design/references/projection-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/projection-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/projection-patterns/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/projection-patterns/references/details.md
+    license: MIT
+    modification: adapted
 - path: skills/system-design/references/realtime-collaboration.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -296,5 +378,26 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-software-architect.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/saga-orchestration/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/saga-orchestration/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/saga-orchestration/references/advanced-patterns.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/saga-orchestration/references/advanced-patterns.md
+    license: MIT
+    modification: adapted
+- path: skills/system-design/references/saga-orchestration/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/backend-development/skills/saga-orchestration/references/details.md
     license: MIT
     modification: adapted

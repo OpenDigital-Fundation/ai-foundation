@@ -114,9 +114,12 @@ Delete and rewrite any:
 - `product:product-management` — audience and competitive intelligence
 - `seo` — on-page optimisation for landing page copy
 
+Marketing foundations (4Ps, STP, 5As), laws of brand growth (Ehrenberg-Bass), brand building versus activation (Binet and Field), growth funnels and loops, and metric definitions with their traps: [`references/marketing-science.md`](references/marketing-science.md).
+
 ## References
 
 Load only what the task needs:
 
 - [`references/growth.md`](references/growth.md) — covers Marketing Growth Hacker
 - [`references/pr-communications.md`](references/pr-communications.md) — covers PR & Communications Manager
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Technical Implementation; Understanding Buyers & Human Psychology

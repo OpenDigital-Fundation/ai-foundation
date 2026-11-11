@@ -36,4 +36,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `docs-lookup` | affaan-m/ECC, github/awesome-copilot |
 | `literature-review` | affaan-m/ECC, msitarzewski/agency-agents |
-| `source-research` | affaan-m/ECC, github/awesome-copilot, mattpocock/skills, msitarzewski/agency-agents |
+| `source-research` | VoltAgent/awesome-claude-code-subagents, affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, mattpocock/skills, msitarzewski/agency-agents |

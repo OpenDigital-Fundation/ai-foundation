@@ -192,3 +192,10 @@ Guides merged from github/awesome-copilot; load only what the task needs:
 - [`references/customization-review/agent-governance-reviewer.md`](references/customization-review/agent-governance-reviewer.md)
 - [`references/customization-review/agent-safety.md`](references/customization-review/agent-safety.md)
 - [`references/skill-scanning/tool-shadowing.md`](references/skill-scanning/tool-shadowing.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/mcp-implementation-security-review.md`](references/derived/mcp-implementation-security-review.md) — Controls Reference; OWASP MCP Top 10; Reference
+- [`references/derived/agent-governance.md`](references/derived/agent-governance.md) — Pattern 1: Governance Policy

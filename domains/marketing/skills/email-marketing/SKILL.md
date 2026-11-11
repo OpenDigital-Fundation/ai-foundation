@@ -31,3 +31,4 @@ Load only what the task needs:
 
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/operations.md`](references/operations.md) — covers Email Ops
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Email Sequence Strategy; Email Copy Guidelines

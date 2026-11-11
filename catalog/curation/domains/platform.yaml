@@ -9,11 +9,13 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:skill:cloud-architect
   - affaan-m/ECC:command:pm2
   - affaan-m/ECC:skill:canary-watch
   - affaan-m/ECC:skill:deployment-patterns
   - affaan-m/ECC:skill:docker-patterns
   - affaan-m/ECC:skill:kubernetes-patterns
+  - davila7/claude-code-templates:skill:docker-expert
   - 'github/awesome-copilot:agent:SE: DevOps/CI'
   - github/awesome-copilot:agent:Terraform IaC Reviewer
   - github/awesome-copilot:agent:Terratest Module Testing
@@ -29,6 +31,11 @@ artifacts:
   - msitarzewski/agency-agents:agent:Developer Tooling Engineer
   - msitarzewski/agency-agents:agent:Mobile Release Engineer
   - msitarzewski/agency-agents:agent:Platform Engineer
+  - wshobson/agents:skill:deployment-pipeline-design
+  - wshobson/agents:skill:helm-chart-scaffolding
+  - wshobson/agents:skill:hybrid-cloud-networking
+  - wshobson/agents:skill:k8s-security-policies
+  - wshobson/agents:skill:multi-cloud-architecture
   recipe:
     title: Deployment
     description: 'Use when containerising, deploying or releasing software: Dockerfiles and Compose, Kubernetes workloads,
@@ -66,6 +73,37 @@ artifacts:
       - github/awesome-copilot:instructions/kubernetes-manifests.instructions.md
       ansible/README.md:
       - github/awesome-copilot:instructions/ansible.instructions.md
+      derived-guides.md:
+      - Jeffallan/claude-skills:skills/cloud-architect/SKILL.md#common-patterns-with-examples
+      - wshobson/agents:plugins/cloud-infrastructure/skills/hybrid-cloud-networking/SKILL.md#connection-options
+      - wshobson/agents:plugins/cloud-infrastructure/skills/multi-cloud-architecture/SKILL.md#cloud-service-comparison
+      - davila7/claude-code-templates:cli-tool/components/skills/development/docker-expert/SKILL.md#common-issue-diagnostics
+    reference_dirs:
+      k8s-security-policies: wshobson/agents:plugins/kubernetes-operations/skills/k8s-security-policies
+      helm-chart-scaffolding: wshobson/agents:plugins/kubernetes-operations/skills/helm-chart-scaffolding
+      deployment-pipeline-design: wshobson/agents:plugins/cicd-automation/skills/deployment-pipeline-design
+    reference_notes:
+      k8s-security-policies: Implement Kubernetes security policies including NetworkPolicy, PodSecurityPolicy, and RBAC for
+        production-grade security. Use when securing Kubernetes clusters, implementing network isolation, or enf
+      helm-chart-scaffolding: Design, organize, and manage Helm charts for templating and packaging Kubernetes applications
+        with reusable configurations. Use when creating Helm charts, packaging Kubernetes applications, or impleme
+      deployment-pipeline-design: Design multi-stage CI/CD pipelines with approval gates, security checks, and deployment
+        orchestration. Use this skill when designing zero-downtime deployment pipelines, implementing canary rollout str
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Common Patterns with
+        Examples; Connection Options; Cloud Service Comparison; Common Issue Diagnostics'
+    append: 'Detail files of the merged guides:
+
+
+      - [`references/helm-chart-scaffolding/references/chart-structure.md`](references/helm-chart-scaffolding/references/chart-structure.md)
+
+      '
+    replace:
+    - - aquasec/trivy:latest
+      - aquasec/trivy:<pinned-version>@sha256:<digest>
+    - - \$CI_REGISTRY_IMAGE:latest
+      - $CI_REGISTRY_IMAGE:cache
+    - - '`gitlab-ci-patterns`'
+      - GitLab CI documentation (external; no GitLab-specific skill is bundled)
 - id: platform/git-workflow
   type: skill
   capability: Use when choosing a branching strategy, writing commit messages, tidying history before a merge, resolving conflicts,
@@ -77,7 +115,11 @@ artifacts:
   - affaan-m/ECC:rule:common/git-workflow
   - affaan-m/ECC:skill:conventional-commit-review
   - affaan-m/ECC:skill:git-workflow
+  - davila7/claude-code-templates:command:git-bisect-helper
+  - davila7/claude-code-templates:skill:commit-work
   - github/awesome-copilot:agent:Gitmoji Setup
+  - github/awesome-copilot:skill:git-commit
+  - github/awesome-copilot:skill:git-flow-branch-creator
   - mattpocock/skills:skill:setup-pre-commit
   - msitarzewski/agency-agents:agent:Git Workflow Master
   recipe:
@@ -142,8 +184,16 @@ artifacts:
       - mattpocock/skills:skills/misc/setup-pre-commit/SKILL.md
       hook-installation/README.md:
       - github/awesome-copilot:agents/gitmoji-setup.agent.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/git-flow-branch-creator/SKILL.md#git-flow-branch-analysis-framework
+      - davila7/claude-code-templates:cli-tool/components/skills/productivity/commit-work/SKILL.md#workflow-checklist
+      - davila7/claude-code-templates:cli-tool/components/commands/git-workflow/git-bisect-helper.md#bisect-modes
+      - github/awesome-copilot:skills/git-commit/SKILL.md#types
     supersedes:
     - affaan-m/ECC:skill:conventional-commit-review
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Git Flow Branch Analysis
+        Framework; Workflow (checklist); Bisect Modes; Types'
 - id: platform/github-operations
   type: skill
   capability: 'Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and re-running
@@ -153,10 +203,12 @@ artifacts:
   supersedes:
   - affaan-m/ECC:skill:github-ops
   - affaan-m/ECC:skill:opensource-pipeline
+  - davila7/claude-code-templates:skill:github-automation
   - getsentry/skills:skill:iterate-pr
   - github/awesome-copilot:agent:GitHub Actions Expert
   - github/awesome-copilot:agent:GitHub Actions Node Runtime Upgrade
   - github/awesome-copilot:rule:github-actions-ci-cd-best-practices.instructions
+  - github/awesome-copilot:skill:repo-standardizer
   recipe:
     title: GitHub operations
     description: 'Use when operating a GitHub repository with the gh CLI: managing pull requests and issues, checking and
@@ -176,6 +228,12 @@ artifacts:
       - github/awesome-copilot:agents/github-actions-expert.agent.md
       - github/awesome-copilot:agents/github-actions-node-upgrade.agent.md
       - github/awesome-copilot:instructions/github-actions-ci-cd-best-practices.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/workflow-automation/github-automation/SKILL.md#core-workflows
+      - github/awesome-copilot:skills/repo-standardizer/SKILL.md#preflight-mandatory-in-order
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Core Workflows; Preflight
+        (mandatory, in order)'
 - id: platform/incident-response
   type: skill
   capability: 'Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due: assess
@@ -186,6 +244,11 @@ artifacts:
   - github/awesome-copilot:agent:Cloud and SaaS Outage Triage
   - msitarzewski/agency-agents:agent:Incident Responder
   - msitarzewski/agency-agents:agent:Incident Response Commander
+  - wshobson/agents:agent:incident-responder
+  - wshobson/agents:skill:connectivity-triage
+  - wshobson/agents:skill:incident-runbook-templates
+  - wshobson/agents:skill:on-call-handoff-patterns
+  - wshobson/agents:skill:postmortem-writing
   recipe:
     title: Incident response
     description: 'Use when production is down or degraded, an alert fires, a breach is suspected, or a postmortem is due:
@@ -198,6 +261,9 @@ artifacts:
       - msitarzewski/agency-agents:security/security-incident-responder.md
       dependency-outages/README.md:
       - github/awesome-copilot:agents/cloud-saas-outage-triage.agent.md
+      derived-guides.md:
+      - wshobson/agents:plugins/incident-response/skills/connectivity-triage/SKILL.md#fast-decision-flow
+      - wshobson/agents:plugins/incident-response/agents/incident-responder.md#post-incident-process,immediate-actions-first-5-minutes,sre-best-practices
     body: '# Incident response
 
 
@@ -231,6 +297,19 @@ artifacts:
 
       Blameless timeline, impact, root cause and contributing factors, what went well, and action items with owners and dates.
       Suspected security incidents follow the security reference: preserve evidence, contain, and involve the security owner.'
+    reference_dirs:
+      postmortem-writing: wshobson/agents:plugins/incident-response/skills/postmortem-writing
+      incident-runbook-templates: wshobson/agents:plugins/incident-response/skills/incident-runbook-templates
+      on-call-handoff-patterns: wshobson/agents:plugins/incident-response/skills/on-call-handoff-patterns
+    reference_notes:
+      postmortem-writing: Write effective blameless postmortems with root cause analysis, timelines, and action items. Use
+        when conducting incident reviews, writing postmortem documents, or improving incident response processe
+      incident-runbook-templates: Create structured incident response runbooks with step-by-step procedures, escalation paths,
+        and recovery actions. Use this skill when building a service outage runbook for a payment processing system
+      on-call-handoff-patterns: Master on-call shift handoffs with context transfer, escalation procedures, and documentation.
+        Use this skill when transitioning on-call responsibilities between engineers and ensuring the incoming re
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Fast Decision Flow; Post-Incident
+        Process; Immediate Actions (First 5 minutes); SRE Best Practices'
 - id: platform/reliability
   type: skill
   capability: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
@@ -238,12 +317,18 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:skill:monitoring-expert
   - affaan-m/ECC:skill:dashboard-builder
+  - davila7/claude-code-templates:agent:react-performance-optimizer
+  - davila7/claude-code-templates:skill:core-web-vitals
+  - davila7/claude-code-templates:skill:performance-optimizer
   - github/awesome-copilot:agent:Platform SRE for Kubernetes
   - github/awesome-copilot:rule:devops-core-principles.instructions
   - msitarzewski/agency-agents:agent:FinOps Engineer
   - msitarzewski/agency-agents:agent:Infrastructure Maintainer
   - msitarzewski/agency-agents:agent:SRE (Site Reliability Engineer)
+  - wshobson/agents:skill:distributed-tracing
+  - wshobson/agents:skill:slo-implementation
   recipe:
     title: Reliability and observability
     description: Use when defining SLOs and error budgets, adding logs, metrics and traces, building operator dashboards (Grafana,
@@ -258,6 +343,11 @@ artifacts:
       operational-checklists/README.md:
       - github/awesome-copilot:agents/platform-sre-kubernetes.agent.md
       - github/awesome-copilot:instructions/devops-core-principles.instructions.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/productivity/performance-optimizer/SKILL.md#common-optimizations
+      - davila7/claude-code-templates:cli-tool/components/skills/development/core-web-vitals/SKILL.md#inp-interaction-to-next-paint,cls-cumulative-layout-shift
+      - davila7/claude-code-templates:cli-tool/components/agents/web-tools/react-performance-optimizer.md#advanced-react-performance-patterns
+      - Jeffallan/claude-skills:skills/monitoring-expert/SKILL.md#quick-start-examples
     body: '# Reliability and observability
 
 
@@ -291,3 +381,13 @@ artifacts:
 
       Budget left: ship. Budget burnt: freeze risky changes and fix reliability. Reduce toil you repeat, plan capacity from
       data, and test failure modes deliberately (game days, chaos experiments) in safe environments.'
+    reference_dirs:
+      slo-implementation: wshobson/agents:plugins/observability-monitoring/skills/slo-implementation
+      distributed-tracing: wshobson/agents:plugins/observability-monitoring/skills/distributed-tracing
+    reference_notes:
+      slo-implementation: Define and implement Service Level Indicators (SLIs) and Service Level Objectives (SLOs) with error
+        budgets and alerting. Use when establishing reliability targets, implementing SRE practices, or meas
+      distributed-tracing: Implement distributed tracing with Jaeger and Tempo to track requests across microservices and
+        identify performance bottlenecks. Use when debugging microservices, analyzing request flows, or implement
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Common Optimizations;
+        INP: Interaction to Next Paint; CLS: Cumulative Layout Shift; Advanced React Performance Patterns; Quick-Start Examples'

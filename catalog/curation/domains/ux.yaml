@@ -16,6 +16,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - davila7/claude-code-templates:agent:ux-researcher
   - 'github/awesome-copilot:agent:SE: UX Designer'
   - msitarzewski/agency-agents:agent:UX Researcher
 imports:
@@ -28,3 +29,6 @@ imports:
 - dest: domains/ux/skills/user-research/references/jobs-and-journeys.md
   source: github/awesome-copilot
   src: agents/se-ux-ui-designer.agent.md
+- dest: domains/ux/skills/user-research/references/derived/ux-researcher.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/agents/business-marketing/ux-researcher.md#ethical-legal-boundaries

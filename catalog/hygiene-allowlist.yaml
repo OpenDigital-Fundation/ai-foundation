@@ -19,3 +19,9 @@ entries:
 - path: domains/security/skills/secrets-hygiene/references/scanning-recipes.md
   rule: private key
   reason: The pattern table quotes the PEM header line the scanner detects; there is no key material.
+- path: domains/science/skills/bioinformatics/references/nextflow/references/configuration.md
+  rule: absolute machine path
+  reason: The AWS Batch example shows the CLI path inside the EC2 image the executor runs on, not a path on this machine.
+- path: domains/science/skills/lab-automation/references/lab-hardware-cad/references/fabrication-limits.md
+  rule: absolute machine path
+  reason: The match is inside a supplier URL (/home/life-science/...), not a filesystem path.

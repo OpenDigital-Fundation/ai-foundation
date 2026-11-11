@@ -77,6 +77,13 @@ files:
     path: skills/algorithmic-art/SKILL.md
     license: Apache-2.0
     modification: adapted
+- path: skills/generative-art/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/creative-design/claude-d3js-skill/SKILL.md#common-visualisation-patterns,adding-interactivity,scales-reference,common-issues-and-solutions
+    license: MIT
+    modification: merged-section
 - path: skills/generative-art/templates/generator_template.js
   derived_from:
   - source: anthropics/skills
@@ -98,6 +105,13 @@ files:
     path: design/design-image-prompt-engineer.md
     license: MIT
     modification: adapted
+- path: skills/image-prompting/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/image-annotations/SKILL.md#animated-gif-annotations,image-diffing
+    license: MIT
+    modification: merged-section
 - path: skills/image-prompting/references/inclusive-visuals.md
   derived_from:
   - source: msitarzewski/agency-agents

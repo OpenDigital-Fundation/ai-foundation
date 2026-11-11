@@ -36,3 +36,4 @@ Load only what the task needs:
 - [`references/audit.md`](references/audit.md) — covers Paid Media Auditor
 - [`references/creative.md`](references/creative.md) — covers Paid Media Ad Creative Strategist
 - [`references/tracking.md`](references/tracking.md) — covers Paid Media Tracking & Measurement
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: The model, in the order it must be built; Implementing it

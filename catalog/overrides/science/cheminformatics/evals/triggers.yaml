@@ -1,0 +1,7 @@
+should_trigger:
+- "compute fingerprints and similarity for these SMILES"
+- "filter this compound library by drug-likeness"
+- "process these tandem mass spectra and match them to a library"
+should_not_trigger:
+- "align these RNA-seq reads"
+- "how many samples do I need for this study"

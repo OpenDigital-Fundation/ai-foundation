@@ -358,3 +358,13 @@ Load only what the task needs:
 - [`references/recommendation-systems.md`](references/recommendation-systems.md) — covers recsys-pipeline-architect
 - [`references/post-training.md`](references/post-training.md) — covers LLM Post-Training Engineer; Status; Observed Evidence; Failure Classification
 - [`references/fairness-evaluation/README.md`](references/fairness-evaluation/README.md) — covers Responsible AI Specialist
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Regulatory Compliance Framework; Writing Philosophy for Top ML Conferences; Agentic AI Ethics
+- `references/dataset-curation/` — Prepare, format, and validate datasets for supervised fine-tuning and preference training. Use when converting raw data into training format, applying chat templates, configuring sequence packing, gen
+- `references/eval-harness-first/` — Build the evaluation harness that gates every fine-tuning run — golden sets, per-failure-mode graders, judge calibration, and base-model baselines. Use when starting a fine-tuning effort, when convert
+- `references/finetuning-method-selection/` — Decide whether to fine-tune at all, and route to the right method (SFT, DPO/ORPO/KTO, GRPO/RLVR, continued pretraining) and base model. Use when starting any fine-tuning effort, when unsure whether RA
+- `references/lora-qlora-recipes/` — Configure LoRA and QLoRA supervised fine-tuning with current best-practice hyperparameters. Use when writing or reviewing a LoRA/QLoRA training configuration, choosing rank/alpha/target modules, or de
+- `references/preference-optimization/` — Align a fine-tuned model with preference data using DPO, ORPO, KTO, or SimPO. Use when preference pairs or thumbs-up/down feedback exist, when choosing between preference-optimization methods, or when
+- `references/scikit-learn/` — Supports machine learning in Python with scikit-learn. Applies when working with supervised learning (classification, regression), unsupervised learning (clustering, dimensionality
+- `references/shap/` — Explain and audit machine-learning predictions with SHAP. Use for selecting SHAP explainers and maskers, computing and validating feature attributions, handling multi-output explan
+- `references/umap-learn/` — Applies UMAP-learn to nonlinear dimensionality reduction, 2D/3D embeddings, clustering preprocessing, supervised or semi-supervised UMAP, DensMAP, AlignedUMAP, and Parametric UMAP 
+- `references/aeon/` — This skill should be used for time series machine learning tasks including classification, regression, clustering, forecasting, anomaly detection, segmentation, and similarity sear

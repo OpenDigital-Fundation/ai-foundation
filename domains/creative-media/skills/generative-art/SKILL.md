@@ -409,3 +409,9 @@ This skill includes helpful templates and documentation:
 - The **algorithm is where to create** something unique
 - Don't copy the flow field example - build what the philosophy demands
 - But DO keep the exact UI structure and Anthropic branding from the template
+
+## References
+
+Load only what the task needs:
+
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Common visualisation patterns; Adding interactivity; Scales reference; Common issues and solutions

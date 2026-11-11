@@ -220,6 +220,20 @@ files:
     path: skills/productivity/grilling/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/grilling/references/derived/devil.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/productivity/devil/SKILL.md#role-based-framing
+    license: MIT
+    modification: merged-section
+- path: skills/grilling/references/derived/thinking-method-selector.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/productivity/thinking-method-selector/SKILL.md#fallback-outlines
+    license: MIT
+    modification: merged-section
 - path: skills/handoff/SKILL.md
   derived_from:
   - source: mattpocock/skills
@@ -286,6 +300,27 @@ files:
     path: skills/writing-plans/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/writing-plans/references/derived/create-epic-plan.md
+  derived_from:
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: commands/project/planning/create-epic-plan.md#risk-assessment-framework
+    license: MIT
+    modification: merged-section
+- path: skills/writing-plans/references/derived/create-technical-spike.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/create-technical-spike/SKILL.md#document-structure
+    license: MIT
+    modification: merged-section
+- path: skills/writing-plans/references/derived/task-decomposition-expert.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/ai-specialists/task-decomposition-expert.md#core-analysis-framework
+    license: MIT
+    modification: merged-section
 - path: skills/writing-plans/references/spec-traceability/implementation-plan.md
   derived_from:
   - source: github/awesome-copilot

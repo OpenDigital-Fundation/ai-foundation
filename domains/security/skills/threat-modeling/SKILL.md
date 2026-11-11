@@ -56,3 +56,18 @@ A threat model records analysis; a `SECURITY_MODEL.md` tells scanners and review
 ## Hand-off
 
 To verify an existing implementation against the model, use `security:security-audit`. For agents and tool-using systems, add the boundaries in `security:agent-security`.
+
+## Further references
+
+Load only what the task needs:
+
+- [`references/stride-analysis-patterns/README.md`](references/stride-analysis-patterns/README.md) — Apply STRIDE methodology to systematically identify threats. Use when analyzing system security, conducting threat modeling sessions, or creating security documentation.
+- [`references/attack-tree-construction/README.md`](references/attack-tree-construction/README.md) — Build comprehensive attack trees to visualize threat paths. Use when mapping attack scenarios, identifying defense gaps, or communicating security risks to stakeholders.
+- [`references/threat-mitigation-mapping/README.md`](references/threat-mitigation-mapping/README.md) — Map identified threats to appropriate security controls and mitigations. Use when prioritizing security investments, creating remediation plans, or validating control effectiveness.
+- [`references/security-requirement-extraction/README.md`](references/security-requirement-extraction/README.md) — Derive security requirements from threat models and business context. Use when translating threats into actionable requirements, creating security user stories, or building security test cases.
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/data-breach-blast-radius.md`](references/derived/data-breach-blast-radius.md) — Execution Workflow

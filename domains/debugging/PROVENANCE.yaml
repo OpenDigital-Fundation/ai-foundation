@@ -82,6 +82,13 @@ files:
     path: instructions/performance-optimization.instructions.md
     license: MIT
     modification: adapted
+- path: skills/systematic-debugging/references/derived/error-analysis.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/error-debugging/commands/error-analysis.md#error-prevention-strategies
+    license: MIT
+    modification: merged-section
 - path: skills/systematic-debugging/references/feedback-loop.md
   derived_from:
   - source: mattpocock/skills

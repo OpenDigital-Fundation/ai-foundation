@@ -36,14 +36,22 @@ def build(root: Path, sources: Path, mapping: list[dict]) -> dict:
             rel = f.relative_to(dest).as_posix() if dest.is_dir() else ""
             override = (m.get("files") or {}).get(rel or f.name)
             src_rel = override or (f"{m['src']}/{rel}" if rel else m["src"])
+            src_rel, marker, fragment = src_rel.partition("#")
             from tools.curation.layout import upstream_path
             src_rel = upstream_path(clone, src_rel)
             src = clone / src_rel
             if not src.is_file():
                 print(f"original (no upstream match): {f.relative_to(root)}")
                 continue
-            mod = "base" if src.read_bytes() == f.read_bytes() else "adapted"
-            derived = [{"source": m["source"], "commit": s["commit"][:7], "path": src_rel, "license": effective_licence(lock, sources, m["source"], src_rel), "modification": mod}]
+            if marker:
+                from tools.curation.language_pack import pick_sections
+                selected = [part.strip() for part in fragment.split(",")]
+                if not all(selected):
+                    raise ValueError("section selector must not be empty")
+                pick_sections(src.read_text(encoding="utf-8"), selected)
+            mod = "merged-section" if marker else ("base" if src.read_bytes() == f.read_bytes() else "adapted")
+            derived = [{"source": m["source"], "commit": s["commit"][:7], "path": src_rel + (f"#{fragment}" if marker else ""),
+                        "license": effective_licence(lock, sources, m["source"], src_rel), "modification": mod}]
             if f.name in {"SKILL.md"} and rel in {"SKILL.md", ""}:
                 for e in m.get("extra") or []:
                     derived.append({"source": e["source"], "commit": lock[e["source"]]["commit"][:7], "path": e["path"],

@@ -164,3 +164,14 @@ For committing to a bold, specific aesthetic direction (typography, colour, moti
 Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/design-review.md`](references/design-review.md)
+
+## Perception
+
+Gestalt grouping and the levers of visual hierarchy, with layout checks: [`references/gestalt-and-hierarchy.md`](references/gestalt-and-hierarchy.md).
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/mobile-ios-design.md`](references/derived/mobile-ios-design.md) — Core Concepts
+- [`references/derived/ui-ux-designer.md`](references/derived/ui-ux-designer.md) — Aesthetic Guidance: Avoiding Generic Design

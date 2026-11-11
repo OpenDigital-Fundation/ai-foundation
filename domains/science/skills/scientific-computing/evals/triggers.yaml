@@ -1,0 +1,7 @@
+should_trigger:
+- "solve this integral symbolically"
+- "propagate measurement uncertainty through this formula"
+- "simulate this quantum circuit"
+should_not_trigger:
+- "find marker genes in my single-cell data"
+- "write a grant proposal"

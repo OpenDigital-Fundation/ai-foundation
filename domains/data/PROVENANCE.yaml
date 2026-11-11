@@ -7,6 +7,60 @@ files:
     path: engineering/engineering-data-engineer.md
     license: MIT
     modification: adapted
+- path: skills/data-pipelines/references/airflow-dag-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/skills/airflow-dag-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/data-pipelines/references/airflow-dag-patterns/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/skills/airflow-dag-patterns/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/data-pipelines/references/data-quality-frameworks/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/skills/data-quality-frameworks/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/data-pipelines/references/data-quality-frameworks/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/skills/data-quality-frameworks/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/data-pipelines/references/dbt-transformation-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/skills/dbt-transformation-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/data-pipelines/references/dbt-transformation-patterns/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/skills/dbt-transformation-patterns/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/data-pipelines/references/derived-guides.md
+  derived_from:
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/pandas-pro/SKILL.md#code-patterns
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/data-engineering/commands/data-pipeline.md#example-minimal-batch-pipeline
+    license: MIT
+    modification: merged-section
 - path: skills/data-pipelines/references/role-guide.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -47,6 +101,18 @@ files:
     path: pi/core/skills/clickhouse-io/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/database-design/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/database/database-architect.md#architecture-decision-framework,scalability-architecture-patterns
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/database/nosql-specialist.md#performance-optimization-strategies
+    license: MIT
+    modification: merged-section
 - path: skills/database-design/references/mysql.md
   derived_from:
   - source: affaan-m/ECC
@@ -59,6 +125,251 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-database-optimizer.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/_contributing.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/_contributing.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/_sections.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/_sections.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/_template.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/_template.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/advanced-full-text-search.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/advanced-full-text-search.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/advanced-jsonb-indexing.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/advanced-jsonb-indexing.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/conn-idle-timeout.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/conn-idle-timeout.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/conn-limits.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/conn-limits.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/conn-pooling.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/conn-pooling.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/conn-prepared-statements.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/conn-prepared-statements.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/data-batch-inserts.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/data-batch-inserts.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/data-n-plus-one.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/data-n-plus-one.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/data-pagination.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/data-pagination.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/data-upsert.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/data-upsert.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/lock-advisory.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/lock-advisory.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/lock-deadlock-prevention.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/lock-deadlock-prevention.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/lock-short-transactions.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/lock-short-transactions.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/lock-skip-locked.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/lock-skip-locked.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/monitor-explain-analyze.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/monitor-explain-analyze.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/monitor-pg-stat-statements.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/monitor-pg-stat-statements.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/monitor-vacuum-analyze.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/monitor-vacuum-analyze.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/query-composite-indexes.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/query-composite-indexes.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/query-covering-indexes.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/query-covering-indexes.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/query-index-types.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/query-index-types.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/query-missing-indexes.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/query-missing-indexes.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/query-partial-indexes.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/query-partial-indexes.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/schema-data-types.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/schema-data-types.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/schema-foreign-key-indexes.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/schema-foreign-key-indexes.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/schema-lowercase-identifiers.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/schema-lowercase-identifiers.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/schema-partitioning.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/schema-partitioning.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/schema-primary-keys.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/schema-primary-keys.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/security-privileges.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/security-privileges.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/security-rls-basics.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/security-rls-basics.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgres-rules/security-rls-performance.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/postgres-best-practices/rules/security-rls-performance.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgresql-table-design/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/database-design/skills/postgresql-table-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/database-design/references/postgresql-table-design/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/database-design/skills/postgresql-table-design/references/details.md
     license: MIT
     modification: adapted
 - path: skills/database-design/references/prisma.md
@@ -115,3 +426,10 @@ files:
     path: agents/oracle-to-postgres-migration-expert.agent.md
     license: MIT
     modification: adapted
+- path: skills/database-migrations/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/creating-oracle-to-postgres-migration-integration-tests/SKILL.md#key-constraints
+    license: MIT
+    modification: merged-section

@@ -12,6 +12,8 @@ artifacts:
   - affaan-m/ECC:command:marketing-campaign
   - affaan-m/ECC:skill:growth-log
   - affaan-m/ECC:skill:marketing-campaign
+  - davila7/claude-code-templates:agent:marketing-attribution-analyst
+  - davila7/claude-code-templates:skill:marketing-psychology
   - msitarzewski/agency-agents:agent:Growth Hacker
   - msitarzewski/agency-agents:agent:PR & Communications Manager
   recipe:
@@ -24,6 +26,16 @@ artifacts:
       - msitarzewski/agency-agents:marketing/marketing-growth-hacker.md
       pr-communications.md:
       - msitarzewski/agency-agents:marketing/marketing-pr-communications-manager.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/agents/business-marketing/marketing-attribution-analyst.md#technical-implementation
+      - davila7/claude-code-templates:cli-tool/components/skills/business-marketing/marketing-psychology/SKILL.md#understanding-buyers-human-psychology
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Technical Implementation;
+        Understanding Buyers & Human Psychology'
+    append: 'Marketing foundations (4Ps, STP, 5As), laws of brand growth (Ehrenberg-Bass), brand building versus activation
+      (Binet and Field), growth funnels and loops, and metric definitions with their traps: [`references/marketing-science.md`](references/marketing-science.md).
+
+      '
 - id: marketing/content-marketing
   type: skill
   capability: 'Use when planning or producing marketing content: content strategy and calendars, articles and newsletters,
@@ -36,6 +48,9 @@ artifacts:
   - affaan-m/ECC:skill:crosspost
   - affaan-m/ECC:skill:social-publisher
   - affaan-m/ECC:skill:x-api
+  - davila7/claude-code-templates:skill:copywriting
+  - davila7/claude-code-templates:skill:social-content
+  - github/awesome-copilot:skill:make-blog-post
   - msitarzewski/agency-agents:agent:Carousel Growth Engine
   - msitarzewski/agency-agents:agent:Content Creator
   - msitarzewski/agency-agents:agent:Developer Advocate
@@ -66,6 +81,17 @@ artifacts:
       developer-relations.md:
       - msitarzewski/agency-agents:specialized/specialized-developer-advocate.md
       - msitarzewski/agency-agents:marketing/marketing-developer-community-builder.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/business-marketing/social-content/SKILL.md#reverse-engineering-viral-content,platform-strategy-guide
+      - davila7/claude-code-templates:cli-tool/components/skills/business-marketing/copywriting/SKILL.md#page-structure-framework,landing-page-section-variety
+      - github/awesome-copilot:skills/make-blog-post/SKILL.md#building-the-post
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Reverse Engineering Viral
+        Content; Page Structure Framework; Platform Strategy Guide; Building the post; Landing Page Section Variety'
+    append: 'Influence principles (Cialdini), decision biases and the Fogg behaviour model, each with its honest use and the
+      dark pattern to refuse: [`references/persuasion-and-behaviour.md`](references/persuasion-and-behaviour.md).
+
+      '
 - id: marketing/email-marketing
   type: skill
   capability: 'Use when planning or writing marketing email: lifecycle and nurture sequences, newsletters, segmentation, deliverability,
@@ -74,6 +100,7 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - affaan-m/ECC:skill:email-ops
+  - davila7/claude-code-templates:skill:email-sequence
   - msitarzewski/agency-agents:agent:Email Marketing Strategist
   recipe:
     title: Email marketing
@@ -84,6 +111,8 @@ artifacts:
       - msitarzewski/agency-agents:marketing/marketing-email-strategist.md
       operations.md:
       - s:email-ops
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/business-marketing/email-sequence/SKILL.md#email-sequence-strategy,email-copy-guidelines
     body: '# Email marketing
 
 
@@ -118,6 +147,9 @@ artifacts:
 
       A/B test one variable at a time with enough volume to decide; report against the goal metric and roll the winner into
       the default.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Email Sequence Strategy;
+        Email Copy Guidelines'
 - id: marketing/paid-media
   type: skill
   capability: 'Use for paid acquisition: search (PPC) and paid social campaigns, programmatic and display buying, search-query
@@ -125,6 +157,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - github/awesome-copilot:skill:server-side-conversion-tracking
   - msitarzewski/agency-agents:agent:Ad Creative Strategist
   - msitarzewski/agency-agents:agent:PPC Campaign Strategist
   - msitarzewski/agency-agents:agent:Paid Media Auditor
@@ -151,6 +184,8 @@ artifacts:
       - msitarzewski/agency-agents:paid-media/paid-media-creative-strategist.md
       tracking.md:
       - msitarzewski/agency-agents:paid-media/paid-media-tracking-specialist.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/server-side-conversion-tracking/SKILL.md#the-model-in-the-order-it-must-be-built,implementing-it
     body: '# Paid media
 
 
@@ -184,6 +219,9 @@ artifacts:
 
       Wasted spend, tracking gaps, structure problems and opportunities, ranked by money at stake. Report spend, conversions,
       CPA or ROAS against target and the next actions.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: The model, in the order
+        it must be built; Implementing it'
 - id: marketing/seo
   type: skill
   capability: 'Use for search visibility: technical SEO audits, keyword and intent research, on-page optimisation, structured
@@ -193,6 +231,8 @@ artifacts:
   supersedes:
   - affaan-m/ECC:agent:seo-specialist
   - affaan-m/ECC:skill:seo
+  - davila7/claude-code-templates:skill:programmatic-seo
+  - davila7/claude-code-templates:skill:seo
   - github/awesome-copilot:agent:Search & AI Optimization Expert
   - msitarzewski/agency-agents:agent:AEO Foundations Architect
   - msitarzewski/agency-agents:agent:AI Citation Strategist
@@ -217,3 +257,9 @@ artifacts:
       - msitarzewski/agency-agents:marketing/marketing-app-store-optimizer.md
       answer-search/README.md:
       - github/awesome-copilot:agents/search-ai-optimization-expert.agent.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/development/seo/SKILL.md#structured-data-json-ld,technical-seo,on-page-seo
+      - davila7/claude-code-templates:cli-tool/components/skills/business-marketing/programmatic-seo/SKILL.md#implementation-framework
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Structured data (JSON-LD);
+        Implementation Framework; Technical SEO; On-page SEO'

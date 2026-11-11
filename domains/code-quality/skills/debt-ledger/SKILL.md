@@ -48,3 +48,11 @@ ledger to a file (e.g. `DEBT-LEDGER.md`). One-shot.
 Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/remediation-planning.md`](references/remediation-planning.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/dependency-upgrade.md`](references/derived/dependency-upgrade.md) — Breaking Change Handling; Testing Strategy; Staged Upgrade Strategy
+- [`references/derived/technical-debt-auditor.md`](references/derived/technical-debt-auditor.md) — What you're scanning for
+- [`references/derived/dependency-updater.md`](references/derived/dependency-updater.md) — Commands by Language

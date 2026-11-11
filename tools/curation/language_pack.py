@@ -46,8 +46,8 @@ def resolve(entry: str, idx) -> tuple[str, str, str]:
     """-> (source, path, inventory key or '')"""
     if re.match(r"^[\w.-]+/[\w.-]+:", entry):
         src, path = entry.split(":", 1)
-        name = Path(path).stem
-        key = next((f"{s}:{k}:{n}" for (s, k, n), p in idx.items() if s == src and p == path), "")
+        file = path.partition("#")[0]  # "#a,b" selects sections of the file (see pick_sections)
+        key = next((f"{s}:{k}:{n}" for (s, k, n), p in idx.items() if s == src and p == file), "")
         return src, path, key
     kind, name = entry.split(":", 1)
     kind = {"s": "skill", "a": "agent", "r": "rule"}[kind]
@@ -59,6 +59,20 @@ def resolve(entry: str, idx) -> tuple[str, str, str]:
     return ECC, path, f"{ECC}:{kind}:{name}"
 
 
+def _document_h1(text: str):
+    fenced = False
+    for match in re.finditer(r"^[^\n]*", text, re.M):
+        line = match.group(0)
+        if line.lstrip().startswith(("```", "~~~")):
+            fenced = not fenced
+            continue
+        if not fenced:
+            heading = re.match(r"# (.+)", line)
+            if heading:
+                return match, heading.group(1).strip()
+    return None, None
+
+
 def body_of(text: str) -> tuple[str, str]:
     title = ""
     m = re.match(r"\A---\s*\n(.*?)\n---\s*\n", text, re.S)
@@ -66,9 +80,9 @@ def body_of(text: str) -> tuple[str, str]:
         fm = yaml.safe_load(m.group(1)) or {}
         title = str(fm.get("name") or "")
         text = text[m.end():]
-    h1 = re.search(r"^# (.+)$", text, re.M)
+    h1, document_title = _document_h1(text)
     if h1:
-        title = h1.group(1).strip()
+        title = document_title
         text = text[:h1.start()] + text[h1.end():]
     out, fence = [], False
     for line in text.splitlines():
@@ -80,13 +94,52 @@ def body_of(text: str) -> tuple[str, str]:
     return title, "\n".join(out).strip()
 
 
+def slug(heading: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", heading.lower()).strip("-")
+
+
+def pick_sections(text: str, slugs: list[str]) -> str:
+    """Keep only the `##`-`####` sections whose heading slug is listed, each with its subsections.
+
+    Keeps the frontmatter and the H1 so the caller still gets the title. Raises when a slug is absent."""
+    m = re.match(r"\A---\s*\n.*?\n---\s*\n", text, re.S)
+    head, rest = (text[:m.end()], text[m.end():]) if m else ("", text)
+    h1, _ = _document_h1(rest)
+    keep, found, level, fence = [], set(), None, False
+    for line in rest.splitlines():
+        if line.lstrip().startswith(("```", "~~~")):
+            fence = not fence
+        hm = None if fence else re.match(r"^(#{2,4}) (.+?)\s*$", line)
+        if hm:
+            depth = len(hm.group(1))
+            if level is not None and depth <= level:
+                level = None
+            if slug(hm.group(2)) in slugs:
+                found.add(slug(hm.group(2)))
+                if level is None:
+                    level = depth
+        if level is not None:
+            keep.append(line)
+    missing = [x for x in slugs if x not in found]
+    if missing:
+        raise ValueError(f"section not found: {', '.join(missing)}")
+    return head + (h1.group(0) + "\n\n" if h1 else "") + "\n".join(keep) + "\n"
+
+
 def section(sources_dir: Path, src: str, path: str, lock: dict) -> tuple[str, dict]:
     from tools.curation.licences import effective_licence
-    text = (sources_dir / src.replace("/", "_") / path).read_text(encoding="utf-8")
+    file, marker, fragment = path.partition("#")
+    text = (sources_dir / src.replace("/", "_") / file).read_text(encoding="utf-8")
+    if marker:
+        selected = [x.strip() for x in fragment.split(",")]
+        if not all(selected):
+            raise ValueError("section selector must not be empty")
+        text = pick_sections(text, selected)
     title, body = body_of(text)
-    title = title or Path(path).stem
+    title = title or Path(file).stem
     return (f"## {title}\n\n<!-- source: {src} {path} -->\n\n{body}\n",
-            {"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": effective_licence(lock, sources_dir, src, path), "modification": "adapted"})
+            {"source": src, "commit": lock[src]["commit"][:7], "path": path, "license": effective_licence(lock, sources_dir, src, file),
+             "modification": "merged-section" if fragment else "adapted"})
 
 
 COMMAND_TARGET = {"review": "`code-quality:code-review`", "test": "`testing:test-driven-development`",

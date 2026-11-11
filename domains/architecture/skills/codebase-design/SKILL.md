@@ -125,3 +125,9 @@ For application-level boundaries (use cases, outbound ports, adapters at the edg
 Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/design-patterns.md`](references/design-patterns.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/poka-yoke.md`](references/derived/poka-yoke.md) — Designing something new; Evidence, and its limits; Axis 1: what happens when the mistake occurs; After an incident

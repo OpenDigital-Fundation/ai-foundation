@@ -36,7 +36,11 @@ artifacts:
   - Community-Access/accessibility-agents:skill:web-accessibility-wizard
   - Community-Access/accessibility-agents:skill:web-csv-reporter
   - Community-Access/accessibility-agents:skill:web-issue-fixer
+  - davila7/claude-code-templates:skill:accessibility
+  - davila7/claude-code-templates:skill:accessibility-auditor
+  - github/awesome-copilot:agent:Accessibility Expert
   - msitarzewski/agency-agents:agent:Accessibility Auditor
+  - wshobson/agents:command:accessibility-audit
   recipe:
     title: Accessibility audit
     description: Use when the user asks for an accessibility audit of a website or web app, a conformance or compliance report
@@ -46,6 +50,11 @@ artifacts:
     references:
       audit-method.md:
       - msitarzewski/agency-agents:testing/testing-accessibility-auditor.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/creative-design/accessibility-auditor/SKILL.md#common-accessibility-issues-fixes
+      - davila7/claude-code-templates:cli-tool/components/skills/development/accessibility/SKILL.md#perceivable,understandable,robust
+      - wshobson/agents:plugins/ui-design/commands/accessibility-audit.md#target-and-level-configuration
+      - github/awesome-copilot:agents/accessibility.agent.md#checklists
     reference_dirs:
       a11y-core: Community-Access/accessibility-agents:skills/a11y-core
       accessibility-statement: Community-Access/accessibility-agents:skills/accessibility-statement
@@ -77,6 +86,8 @@ artifacts:
       a11y-core: shared findings schema, dispatch and report rules
       compliance-mapping: legal frameworks and VPAT
       osaf-foundational: open-source accessibility framework, phase 1 (then osaf-workflow, osaf-testing, osaf-community)
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Common Accessibility
+        Issues & Fixes; Perceivable; Understandable; Robust; Target and Level Configuration; Checklists'
 - id: accessibility/assistive-technology-testing
   type: skill
   capability: 'Use when deciding how to test accessibility or running the tests: screen readers (NVDA, JAWS, VoiceOver, Narrator,
@@ -90,6 +101,7 @@ artifacts:
   - Community-Access/accessibility-agents:skill:screen-reader-lab
   - Community-Access/accessibility-agents:skill:testing-coach
   - github/awesome-copilot:agent:Accessibility Runtime Tester
+  - wshobson/agents:skill:screen-reader-testing
   recipe:
     title: Assistive technology testing
     description: 'Use when deciding how to test accessibility or running the tests: screen readers (NVDA, JAWS, VoiceOver,
@@ -101,9 +113,13 @@ artifacts:
       desktop-a11y-testing-coach: Community-Access/accessibility-agents:skills/desktop-a11y-testing-coach
       kb-testing-strategy: Community-Access/accessibility-agents:skills/kb-testing-strategy
       kb-playwright-testing: Community-Access/accessibility-agents:skills/kb-playwright-testing
+      screen-reader-testing: wshobson/agents:plugins/accessibility-compliance/skills/screen-reader-testing
     references:
       runtime-verification/README.md:
       - github/awesome-copilot:agents/accessibility-runtime-tester.agent.md
+    reference_notes:
+      screen-reader-testing: Test web applications with screen readers including VoiceOver, NVDA, and JAWS. Use when validating
+        screen reader compatibility, debugging accessibility issues, or ensuring assistive technology support
 - id: accessibility/document-accessibility
   type: skill
   capability: 'Use when Word, Excel, PowerPoint, PDF, ePub or Markdown files must be accessible: auditing them one by one
@@ -263,3 +279,7 @@ artifacts:
       kb-path-instructions: per-file-type rules (HTML, JSX, Vue, CSS...)
     supersedes:
     - affaan-m/ECC:rule:react-native/accessibility
+    append: 'Which standard applies (WCAG 2.2, ABNT NBR 17225, NBR 17060, eMAG, EN 301 549, Section 508, ISO 9241), what WCAG
+      2.2 added, and what to cite in an audit: [`references/standards-map.md`](references/standards-map.md).
+
+      '

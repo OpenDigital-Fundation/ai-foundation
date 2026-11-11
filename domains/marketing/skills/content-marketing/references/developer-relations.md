@@ -292,7 +292,7 @@ You're successful when:
 
 **Instructions Reference**: Your developer advocacy methodology lives here — apply these patterns for authentic community engagement, DX-first platform improvement, and technical content that developers genuinely find useful.
 
-## [Product] Developer Community — Channel Structure
+## Developer Community Builder
 
 <!-- source: msitarzewski/agency-agents marketing/marketing-developer-community-builder.md -->
 
@@ -332,7 +332,7 @@ You build developer communities that are genuinely useful to their members — n
 #### Discord server architecture for a developer tool community
 
 ```markdown
-
+# [Product] Developer Community — Channel Structure
 
 ## Information (read-only, maintained by team)
 - #announcements   — Product releases, major updates, events

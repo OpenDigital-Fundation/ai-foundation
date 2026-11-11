@@ -32,3 +32,4 @@ Load only what the task needs:
 - [`references/role-guide.md`](references/role-guide.md) — the role profile this skill was distilled from: mission, critical rules, deliverable templates and examples
 - [`references/keeping-docs-current.md`](references/keeping-docs-current.md) — covers Documentation & Codemap Specialist; Architecture; Key Modules; Data Flow
 - [`references/documentation-quality/README.md`](references/documentation-quality/README.md) — covers Technical Content Evaluator; REQUIRED WORKFLOW; EDITORIAL STANDARDS; REVIEW PROCESS
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Converting Markdown to HTML; The Seven Sweeps Framework; Evidence Standards

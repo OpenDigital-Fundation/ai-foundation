@@ -153,6 +153,53 @@ def test_notice_covers_assembled_references_and_text_files(tmp_path):
     assert (refs / "guide/notes.txt").read_text().startswith("Modified by OpenDigital from getsentry/skills (Apache-2.0)")
 
 
+def test_reference_entry_with_fragment_copies_only_named_sections(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    (clone / "synthetic").mkdir(parents=True)
+    (clone / "synthetic/guide.md").write_text(
+        "# Guide\n\nIntro.\n\n## Keep me\n\nKept body.\n\n### Nested detail\n\nAlso kept.\n\n## Drop me\n\nDropped body.\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the section-fragment fixture only.",
+        "body": "# Synthetic browser check\n\nSee references.",
+        "references": {"derived/extra.md": ["affaan-m/ECC:synthetic/guide.md#keep-me"]},
+    }}})
+    text = (domain / "skills/browser-testing/references/derived/extra.md").read_text()
+    assert "Kept body." in text and "Also kept." in text
+    assert "Dropped body." not in text and "Intro." not in text
+    files = yaml.safe_load((domain / "PROVENANCE.yaml").read_text())["files"]
+    entry = next(f for f in files if f["path"].endswith("derived/extra.md"))
+    assert entry["derived_from"][0]["path"] == "synthetic/guide.md#keep-me"
+    assert entry["derived_from"][0]["modification"] == "merged-section"
+
+
+def test_reference_entry_with_missing_fragment_fails_before_writing(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    (clone / "synthetic").mkdir(parents=True)
+    (clone / "synthetic/guide.md").write_text("# Guide\n\n## Only\n\nBody.\n")
+    with pytest.raises(ValueError, match="section not found"):
+        build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+            "description": "Use when testing the section-fragment fixture only.",
+            "body": "# Synthetic\n\nBody.",
+            "references": {"derived/extra.md": ["affaan-m/ECC:synthetic/guide.md#absent"]},
+        }}})
+    assert not (domain / "skills/browser-testing").exists()
+
+
+def test_reference_dir_with_both_skill_and_readme_keeps_the_skill_as_readme(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    guide = clone / "synthetic/both"
+    guide.mkdir(parents=True)
+    (guide / "SKILL.md").write_text("# Skill entry\n\nProcedure.\n")
+    (guide / "README.md").write_text("# Upstream readme\n\nInstall notes.\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing the readme collision fixture only.",
+        "body": "# Synthetic\n\nBody.",
+        "reference_dirs": {"both": "affaan-m/ECC:synthetic/both"},
+    }}})
+    readme = domain / "skills/browser-testing/references/both/README.md"
+    assert "Procedure." in readme.read_text()
+    assert not (readme.parent / "SKILL.md").exists()
+
 def test_reference_install_failure_remains_observable():
     import subprocess
     from tools.curation.language_pack import rewrite_refs
@@ -180,3 +227,155 @@ def test_reference_version_selection_is_explicit_and_warnings_survive():
             assert "latest" not in line
     assert "@apollo/client@<version>" in adapted
     assert "Never use @latest in repeatable workflows." in adapted
+
+
+@pytest.mark.parametrize("fragment", ["keep", "missing", ""])
+def test_import_section_selector_is_validated_before_provenance(tmp_path, fragment):
+    from tools.curation.provenance import build as build_provenance
+    sources, clone, domain = prepare(tmp_path, "testing")
+    (clone / "synthetic").mkdir()
+    (clone / "synthetic/guide.md").write_text("# Guide\n\n## Keep\n\nBody.\n")
+    dest = domain / "skills/browser-testing/references/derived/guide.md"
+    dest.parent.mkdir(parents=True)
+    dest.write_text("# Derived\n\nBody.\n")
+    mapping = [{"dest": "domains/testing/skills/browser-testing/references/derived/guide.md",
+                "source": "affaan-m/ECC", "src": "synthetic/guide.md#" + fragment}]
+    if fragment != "keep":
+        with pytest.raises(ValueError, match="section"):
+            build_provenance(tmp_path, sources, mapping)
+    else:
+        entry = build_provenance(tmp_path, sources, mapping)["testing"][0]
+        assert entry["derived_from"][0]["path"] == "synthetic/guide.md#keep"
+        assert entry["derived_from"][0]["modification"] == "merged-section"
+
+
+def test_markdown_code_heading_is_not_a_document_title():
+    from tools.curation.language_pack import body_of, pick_sections
+    raw = "---\nname: example\n---\n```python\n# Preserve this code comment\nprint(1)\n```\n\n## Keep\n\nText.\n"
+    title, body = body_of(raw)
+    assert title == "example"
+    assert "# Preserve this code comment" in body
+    selected = pick_sections(raw, ["keep"])
+    assert "# Preserve this code comment" not in selected
+    assert "Text." in selected
+
+
+@pytest.mark.parametrize("suffix,header,licence", [
+    (".bst", "% This file may be distributed under the conditions of the LaTeX Project Public License,\n% either version 1.3 of this license or any later version.\n", "LPPL-1.3"),
+    (".tex", "%% This file may be redistributed under the conditions of the\n%% LaTeX Project Public License, either version 1.3c or later.\n", "LPPL-1.3c"),
+    (".py", "# SPDX-License-Identifier: GPL-3.0-only\n", "GPL-3.0-only"),
+    (".md", "SPDX-License-Identifier: MIT AND GPL-3.0-only\n", "Restricted"),
+])
+def test_file_license_header_overrides_permissive_collection(tmp_path, suffix, header, licence):
+    from tools.curation.licences import check_copy, effective_licence
+    sources = tmp_path / "sources"
+    clone = sources / "synthetic_collection"
+    clone.mkdir(parents=True)
+    (clone / "asset" ).with_suffix(suffix).write_text(header + "Synthetic fixture.\n")
+    lock = {"synthetic/collection": {"license": "MIT"}}
+    path = "asset" + suffix
+    assert effective_licence(lock, sources, "synthetic/collection", path).startswith(licence)
+    with pytest.raises(ValueError, match="does not permit copying"):
+        check_copy(lock, sources, "synthetic/collection", path)
+
+
+def test_reference_omission_is_exact_reproducible_and_prunes_only_its_provenance(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    guide = clone / "synthetic/guide"
+    guide.mkdir(parents=True)
+    restricted = "% This file may be distributed under the LaTeX Project Public License, version 1.3.\n"
+    (guide / "blocked.tex").write_text(restricted)
+    (guide / "allowed.md").write_text("# Allowed fixture\n")
+    output = domain / "skills/browser-testing"
+    output.mkdir(parents=True)
+    sentinel = output / "SKILL.md"
+    sentinel.write_text("Existing reviewed output\n")
+    unrelated = {"path": "skills/another/old.md", "derived_from": []}
+    old = {"path": "skills/browser-testing/references/guide/blocked.tex", "derived_from": []}
+    (domain / "PROVENANCE.yaml").write_text(yaml.safe_dump({"version": 1, "files": [old, unrelated]}))
+    recipe = {"description": "Use when testing exact reference omissions.", "body": "# Fixture\n",
+              "reference_dirs": {"guide": "affaan-m/ECC:synthetic/guide"}}
+    spec = {"artifacts": {"testing/browser-testing": recipe}}
+    before = (domain / "PROVENANCE.yaml").read_bytes()
+    with pytest.raises(ValueError, match="LPPL"):
+        build_bundle(tmp_path, sources, spec)
+    assert sentinel.read_text() == "Existing reviewed output\n"
+    assert (domain / "PROVENANCE.yaml").read_bytes() == before
+    recipe["reference_excludes"] = {"guide": ["blocked.tex"]}
+    build_bundle(tmp_path, sources, spec)
+    assert not (output / "references/guide/blocked.tex").exists()
+    assert (output / "references/guide/allowed.md").is_file()
+    assert (guide / "blocked.tex").read_text() == restricted
+    files = yaml.safe_load((domain / "PROVENANCE.yaml").read_text())["files"]
+    assert unrelated in files and old not in files
+    first = {str(p.relative_to(domain)): p.read_bytes() for p in domain.rglob("*") if p.is_file()}
+    build_bundle(tmp_path, sources, spec)
+    assert {str(p.relative_to(domain)): p.read_bytes() for p in domain.rglob("*") if p.is_file()} == first
+
+
+@pytest.mark.parametrize("directory,excluded", [("guide", "../escape"), ("guide", "missing.tex"),
+                                                  ("guide", "nested"), ("unknown", "allowed.md")])
+def test_invalid_reference_omission_fails_before_mutation(tmp_path, directory, excluded):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    guide = clone / "synthetic/guide"
+    (guide / "nested").mkdir(parents=True)
+    (guide / "allowed.md").write_text("# Allowed\n")
+    before = (domain / "PROVENANCE.yaml").read_bytes()
+    with pytest.raises(ValueError):
+        build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+            "description": "Use when testing invalid omissions.", "body": "# Fixture\n",
+            "reference_dirs": {"guide": "affaan-m/ECC:synthetic/guide"},
+            "reference_excludes": {directory: [excluded]},
+        }}})
+    assert not (domain / "skills/browser-testing").exists()
+    assert (domain / "PROVENANCE.yaml").read_bytes() == before
+
+
+@pytest.mark.parametrize("fragment", ["", "keep,", ",keep"])
+def test_assembled_reference_rejects_empty_selector(tmp_path, fragment):
+    from tools.curation.language_pack import section
+    source = tmp_path / "fixture_source"
+    source.mkdir()
+    (source / "guide.md").write_text("# Guide\n\n## Keep\n\nBody.\n")
+    with pytest.raises(ValueError, match="selector"):
+        section(tmp_path, "fixture/source", "guide.md#" + fragment, {"fixture/source": {"commit": "1234567", "license": "MIT"}})
+
+
+def test_section_selection_can_name_parent_and_child():
+    from tools.curation.language_pack import pick_sections
+    selected = pick_sections("# Guide\n\n## Parent\n\nBody.\n\n### Child\n\nDetail.\n\n## Other\n\nDrop.\n", ["parent", "child"])
+    assert "Body." in selected and "Detail." in selected and "Drop." not in selected
+
+
+def test_science_template_index_lists_only_bundled_assets():
+    # Parse metadata as data: never import or execute the upstream reference script.
+    import ast
+    directory = REPO / "domains/science/skills/scientific-writing/references/venue-templates"
+    tree = ast.parse((directory / "scripts/query_template.py").read_text())
+    declaration = next(node for node in tree.body if isinstance(node, ast.Assign)
+                       and any(isinstance(target, ast.Name) and target.id == "TEMPLATES" for target in node.targets))
+    templates = ast.literal_eval(declaration.value)
+    for category, entries in templates.items():
+        for name, metadata in entries.items():
+            assert (directory / "assets" / category / metadata["file"]).is_file(), name
+    assert not any(name.startswith("elsevier-") for name in templates["journals"])
+
+
+def test_reference_override_uses_final_canonical_path(tmp_path):
+    sources, clone, domain = prepare(tmp_path, "testing")
+    guide = clone / "synthetic/guide"
+    guide.mkdir(parents=True)
+    (guide / "SKILL.md").write_text("# Upstream guide\n\nOriginal body.\n")
+    override = tmp_path / "catalog/overrides/testing/browser-testing/references/guide/README.md"
+    override.parent.mkdir(parents=True)
+    override.write_text("# Reviewed guide\n\nLocally adapted body.\n")
+    build_bundle(tmp_path, sources, {"artifacts": {"testing/browser-testing": {
+        "description": "Use when testing canonical reference overrides.", "body": "# Fixture\n",
+        "reference_dirs": {"guide": "affaan-m/ECC:synthetic/guide"},
+    }}})
+    output = domain / "skills/browser-testing/references/guide"
+    assert (output / "README.md").read_text() == override.read_text()
+    assert not (output / "SKILL.md").exists()
+    files = yaml.safe_load((domain / "PROVENANCE.yaml").read_text())["files"]
+    entry = next(f for f in files if f["path"].endswith("guide/README.md"))
+    assert entry["derived_from"][0]["path"] == "synthetic/guide/SKILL.md"

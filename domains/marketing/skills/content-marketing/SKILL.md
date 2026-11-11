@@ -131,6 +131,8 @@ Before delivering:
 - `crosspost` for platform-specific distribution
 - `marketing:content-marketing` for sourcing recent posts and publishing approved X output
 
+Influence principles (Cialdini), decision biases and the Fogg behaviour model, each with its honest use and the dark pattern to refuse: [`references/persuasion-and-behaviour.md`](references/persuasion-and-behaviour.md).
+
 ## References
 
 Load only what the task needs:
@@ -141,3 +143,4 @@ Load only what the task needs:
 - [`references/social-strategy.md`](references/social-strategy.md) — covers Social Media Strategist
 - [`references/cross-posting.md`](references/cross-posting.md) — covers Crosspost
 - [`references/developer-relations.md`](references/developer-relations.md) — covers Developer Advocate; Methodology; Onboarding Flow Analysis; Top 5 DX Issues by Impact
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Reverse Engineering Viral Content; Page Structure Framework; Platform Strategy Guide; Building the post; Landing Page Section Variety

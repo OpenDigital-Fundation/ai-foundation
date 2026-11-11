@@ -386,3 +386,4 @@ Load only what the task needs:
 - [`references/rules-distillation.md`](references/rules-distillation.md) — covers Rules Distill; Input; Extraction Criteria; Matching & Verdict
 - [`references/observer.md`](references/observer.md) — covers Observer; Action; Evidence
 - [`references/durable-project-context/README.md`](references/durable-project-context/README.md) — covers Dotnet Self-Learning Architect; Metadata; Task Context; Mistake
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: The nine principles; Advanced Context Retrieval Strategies; The kinds of mechanism (not tools); Context Extraction Strategies; Design Philosophy

@@ -14,6 +14,7 @@ artifacts:
   - affaan-m/ECC:skill:market-research
   - affaan-m/ECC:skill:product-capability
   - affaan-m/ECC:skill:product-lens
+  - davila7/claude-code-templates:skill:pricing-strategy
   - github/awesome-copilot:agent:Create PRD Chat Mode
   - msitarzewski/agency-agents:agent:Business Strategist
   - msitarzewski/agency-agents:agent:Experiment Tracker
@@ -21,6 +22,7 @@ artifacts:
   - msitarzewski/agency-agents:agent:Product Manager
   - msitarzewski/agency-agents:agent:Sprint Prioritizer
   - msitarzewski/agency-agents:agent:Trend Researcher
+  - wshobson/agents:command:business-case
   recipe:
     title: Product management
     description: 'Use when doing product management work: writing a PRD or product brief, defining outcomes and success metrics,
@@ -41,6 +43,9 @@ artifacts:
       - s:product-capability
       product-briefs/README.md:
       - github/awesome-copilot:agents/prd.agent.md
+      derived-guides.md:
+      - wshobson/agents:plugins/startup-business-analyst/commands/business-case.md#business-case-document-structure
+      - davila7/claude-code-templates:cli-tool/components/skills/business-marketing/pricing-strategy/SKILL.md#pricing-research-methods
     body: '# Product management
 
 
@@ -79,3 +84,10 @@ artifacts:
 
 
       Market, competitor and capability analyses are in the references.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Business Case Document
+        Structure; Pricing Research Methods'
+    append: 'Strategy frameworks (PESTEL, five forces, SWOT, value chain, VRIO, Blue Ocean, Ansoff, BCG, GE–McKinsey, 7S,
+      scenarios) and a working sequence: [`references/strategy-frameworks.md`](references/strategy-frameworks.md).
+
+      '

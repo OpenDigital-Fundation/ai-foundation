@@ -63,6 +63,7 @@ def build(root: Path, sources: Path, spec: dict) -> None:
     packs = language_packs(root)
     subs = substitutions(root)
     artifacts, provenance, unresolved = [], {}, set()
+    generated = {}
     # Registry metadata comes from manifests; count the source items used by this build.
     for aid, a in spec["artifacts"].items():
         keys = [_resolve(a["base"], idx)[2]] if a.get("base") else []
@@ -95,6 +96,7 @@ def build(root: Path, sources: Path, spec: dict) -> None:
 
     for aid, a in spec["artifacts"].items():
         domain, name = aid.split("/")
+        generated.setdefault(domain, []).append(f"skills/{name}/")
         current_remove[:] = a.get("remove") or []
         current_replace[:] = [tuple(x) for x in (a.get("replace") or [])]
         d = root / "domains" / domain / "skills" / name
@@ -152,7 +154,18 @@ def build(root: Path, sources: Path, spec: dict) -> None:
             src, path = spec_dir.split(":", 1)
             srcdir = sources / src.replace("/", "_") / path
             dest = d / "references" / dname
-            shutil.copytree(srcdir, dest, ignore=shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests"))
+            base_ignore = shutil.ignore_patterns(".*", "node_modules", "LICENSE*", "agents", "evals", "tests")
+
+            excluded = set((a.get("reference_excludes") or {}).get(dname, []))
+
+            def ignore(directory, names, root=srcdir, excluded=excluded):
+                skipped = set(base_ignore(directory, names))
+                skipped.update(n for n in names if (Path(directory) / n).relative_to(root).as_posix() in excluded)
+                # The upstream SKILL.md becomes this reference's README.md; a sibling README.md would collide.
+                if Path(directory) == root and "SKILL.md" in names and "README.md" in names:
+                    skipped.add("README.md")
+                return skipped
+            shutil.copytree(srcdir, dest, ignore=ignore)
             for f in sorted(x for x in dest.rglob("*") if x.is_file()):
                 if f.suffix in {".md", ".txt"}:
                     text = rw(f.read_text(encoding="utf-8", errors="ignore"))
@@ -180,6 +193,9 @@ def build(root: Path, sources: Path, spec: dict) -> None:
         if ref_lines:
             text += "\n## References\n\nLoad only what the task needs:\n\n" + "\n".join(ref_lines) + "\n"
         (d / "SKILL.md").write_text(text, encoding="utf-8")
+        from tools.curation.layout import normalize, remap_provenance
+        moves = normalize(d)
+        remap_provenance(prov, f"skills/{name}", moves)
         # Reviewed local fixes to generated files (e.g. security patches) live outside the
         # generated tree so regeneration never drops them.
         override = root / "catalog/overrides" / domain / name
@@ -190,11 +206,17 @@ def build(root: Path, sources: Path, spec: dict) -> None:
                 shutil.copy2(f, target)
         for f in d.rglob("*.md"):  # links into upstream files that were not copied become plain text
             f.write_text(unlink_missing(f.read_text(encoding="utf-8"), f), encoding="utf-8")
-        from tools.curation.layout import normalize, remap_provenance
-        moves = normalize(d)
-        remap_provenance(prov, f"skills/{name}", moves)
         if main_prov:
             prov.append({"path": f"skills/{name}/SKILL.md", "derived_from": main_prov})
+    for domain, prefixes in generated.items():
+        path = root / "domains" / domain / "PROVENANCE.yaml"
+        current = yaml.safe_load(path.read_text())
+        old = current.get("files") or []
+        kept = [entry for entry in old if not any(entry["path"].startswith(p) for p in prefixes)
+                or (root / "domains" / domain / entry["path"]).is_file()]
+        if len(kept) != len(old):
+            current["files"] = kept
+            path.write_text(yaml.safe_dump(current, sort_keys=False, allow_unicode=True, width=1000))
     apply(root, {"provenance": provenance})
     print(f"{len(artifacts)} artifacts, {sum(len(a['supersedes']) for a in artifacts)} upstream items")
     if unresolved:

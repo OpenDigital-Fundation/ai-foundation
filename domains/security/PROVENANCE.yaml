@@ -21,6 +21,20 @@ files:
     path: instructions/agent-safety.instructions.md
     license: MIT
     modification: adapted
+- path: skills/agent-security/references/derived/agent-governance.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/agent-governance/SKILL.md#pattern-1-governance-policy
+    license: MIT
+    modification: merged-section
+- path: skills/agent-security/references/derived/mcp-implementation-security-review.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/mcp-implementation-security-review/SKILL.md#controls-reference,owasp-mcp-top-10,reference
+    license: MIT
+    modification: merged-section
 - path: skills/agent-security/references/mcp-config-review.md
   derived_from:
   - source: affaan-m/ECC
@@ -70,6 +84,20 @@ files:
     path: security/security-secrets-credential-engineer.md
     license: MIT
     modification: adapted
+- path: skills/secrets-hygiene/references/derived/secret-scanning.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/secret-scanning/SKILL.md#core-workflow-enable-secret-scanning,core-workflow-resolve-blocked-pushes
+    license: MIT
+    modification: merged-section
+- path: skills/secrets-hygiene/references/derived/secrets-management.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/security/secrets-management/SKILL.md#hashicorp-vault-integration,external-secrets-operator,secret-rotation
+    license: MIT
+    modification: merged-section
 - path: skills/secrets-hygiene/references/scanning-recipes.md
   derived_from:
   - source: github/awesome-copilot
@@ -203,6 +231,27 @@ files:
     path: skills/security-audit/WEB-PROTOCOL-AND-AUTH.md
     license: MIT
     modification: base
+- path: skills/security-audit/references/derived/codeql.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/codeql/SKILL.md#core-workflow-github-actions
+    license: MIT
+    modification: merged-section
+- path: skills/security-audit/references/derived/graphql-security-specialist.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/api-graphql/graphql-security-specialist.md#rate-limiting-and-dos-protection
+    license: MIT
+    modification: merged-section
+- path: skills/security-audit/references/derived/security-sast.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/commands/security-sast.md#multi-language-scanner-implementation
+    license: MIT
+    modification: merged-section
 - path: skills/security-audit/references/github-actions/README.md
   derived_from:
   - source: getsentry/skills
@@ -341,6 +390,27 @@ files:
     path: skills/.curated/security-threat-model/references/security-controls-and-assets.md
     license: Apache-2.0
     modification: adapted
+- path: skills/threat-modeling/references/attack-tree-construction/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/attack-tree-construction/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/attack-tree-construction/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/attack-tree-construction/references/details.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/derived/data-breach-blast-radius.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/data-breach-blast-radius/SKILL.md#execution-workflow
+    license: MIT
+    modification: merged-section
 - path: skills/threat-modeling/references/security-model/README.md
   derived_from:
   - source: getsentry/skills
@@ -355,6 +425,48 @@ files:
     path: skills/security-model/references/consuming-policy.md
     license: Apache-2.0
     modification: adapted
+- path: skills/threat-modeling/references/security-requirement-extraction/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/security-requirement-extraction/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/security-requirement-extraction/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/security-requirement-extraction/references/details.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/stride-analysis-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/stride-analysis-patterns/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/stride-analysis-patterns/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/stride-analysis-patterns/references/details.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/threat-mitigation-mapping/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/threat-mitigation-mapping/SKILL.md
+    license: MIT
+    modification: base
+- path: skills/threat-modeling/references/threat-mitigation-mapping/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/security-scanning/skills/threat-mitigation-mapping/references/details.md
+    license: MIT
+    modification: base
 - path: skills/threat-modeling/templates/threat-model.md
   derived_from:
   - source: msitarzewski/agency-agents

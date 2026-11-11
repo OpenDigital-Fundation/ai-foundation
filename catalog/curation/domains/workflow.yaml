@@ -68,6 +68,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - davila7/claude-code-templates:skill:devil
+  - davila7/claude-code-templates:skill:thinking-method-selector
   - mattpocock/skills:skill:grill-me
   - mattpocock/skills:skill:grill-with-docs
   - mattpocock/skills:skill:grilling
@@ -121,14 +123,17 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:command:create-epic-plan
   - affaan-m/ECC:agent:planner
   - affaan-m/ECC:command:plan
   - affaan-m/ECC:command:prp-plan
   - affaan-m/ECC:skill:blueprint
   - affaan-m/ECC:skill:change-impact
+  - davila7/claude-code-templates:agent:task-decomposition-expert
   - github/awesome-copilot:agent:Implementation Plan Generation Mode
   - github/awesome-copilot:agent:Specification
   - github/awesome-copilot:rule:spec-driven-workflow-v1.instructions
+  - github/awesome-copilot:skill:create-technical-spike
   - obra/superpowers:skill:writing-plans
 imports:
 - dest: domains/workflow/skills/brainstorming
@@ -210,3 +215,18 @@ imports:
 - dest: domains/workflow/skills/executing-plans/references/implementation-tracking.md
   source: github/awesome-copilot
   src: instructions/task-implementation.instructions.md
+- dest: domains/workflow/skills/writing-plans/references/derived/task-decomposition-expert.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/agents/ai-specialists/task-decomposition-expert.md#core-analysis-framework
+- dest: domains/workflow/skills/writing-plans/references/derived/create-technical-spike.md
+  source: github/awesome-copilot
+  src: skills/create-technical-spike/SKILL.md#document-structure
+- dest: domains/workflow/skills/writing-plans/references/derived/create-epic-plan.md
+  source: Jeffallan/claude-skills
+  src: commands/project/planning/create-epic-plan.md#risk-assessment-framework
+- dest: domains/workflow/skills/grilling/references/derived/devil.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/skills/productivity/devil/SKILL.md#role-based-framing
+- dest: domains/workflow/skills/grilling/references/derived/thinking-method-selector.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/skills/productivity/thinking-method-selector/SKILL.md#fallback-outlines

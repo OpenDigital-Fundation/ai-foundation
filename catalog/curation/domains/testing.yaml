@@ -20,6 +20,9 @@ artifacts:
   - github/awesome-copilot:rule:playwright-dotnet.instructions
   - github/awesome-copilot:rule:playwright-python.instructions
   - github/awesome-copilot:rule:playwright-typescript.instructions
+  - github/awesome-copilot:skill:cypress-flake-fixer
+  - github/awesome-copilot:skill:ui-screenshots
+  - openai/skills:skill:playwright-interactive
   recipe:
     title: Browser testing
     description: 'Use when testing a web application in a real browser: driving a local app with Playwright, writing or stabilising
@@ -42,6 +45,10 @@ artifacts:
       - github/awesome-copilot:instructions/playwright-python.instructions.md
       - github/awesome-copilot:instructions/playwright-typescript.instructions.md
       - github/awesome-copilot:agents/playwright-tester.agent.md
+      derived-guides.md:
+      - openai/skills:skills/.curated/playwright-interactive/SKILL.md#viewport-fit-checks-required
+      - github/awesome-copilot:skills/ui-screenshots/SKILL.md#non-web-app-screenshots
+      - github/awesome-copilot:skills/cypress-flake-fixer/SKILL.md#gotchas
     reference_dirs:
       playwright-advanced: currents-dev/playwright-best-practices-skill:playwright-best-practices/advanced
       playwright-architecture: currents-dev/playwright-best-practices-skill:playwright-best-practices/architecture
@@ -51,6 +58,9 @@ artifacts:
       playwright-frameworks: currents-dev/playwright-best-practices-skill:playwright-best-practices/frameworks
       playwright-infrastructure-ci-cd: currents-dev/playwright-best-practices-skill:playwright-best-practices/infrastructure-ci-cd
       playwright-testing-patterns: currents-dev/playwright-best-practices-skill:playwright-best-practices/testing-patterns
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Viewport Fit Checks (Required);
+        Non-Web App Screenshots; Gotchas'
 - id: testing/test-driven-development
   type: skill
   capability: Agree seams, then red-green-refactor one vertical slice at a time with honest, behaviour-level tests.
@@ -62,6 +72,7 @@ artifacts:
   - affaan-m/ECC:skill:tdd-workflow
   - mattpocock/skills:skill:tdd
   - obra/superpowers:skill:test-driven-development
+  - wshobson/agents:command:tdd-refactor
 - id: testing/test-strategy
   type: skill
   capability: 'Use when deciding how a project should be tested rather than writing one test: the test portfolio and coverage
@@ -78,13 +89,16 @@ artifacts:
   - affaan-m/ECC:skill:click-path-audit
   - affaan-m/ECC:skill:delivery-gate
   - affaan-m/ECC:skill:test-collaboration
+  - davila7/claude-code-templates:command:flaky-test-triage
   - github/awesome-copilot:agent:ai-team-qa
   - github/awesome-copilot:agent:gem-mobile-tester
   - github/awesome-copilot:rule:qa-engineering-best-practices.instructions
+  - github/awesome-copilot:skill:quality-playbook
   - msitarzewski/agency-agents:agent:API Tester
   - msitarzewski/agency-agents:agent:Performance Benchmarker
   - msitarzewski/agency-agents:agent:Test Automation Engineer
   - msitarzewski/agency-agents:agent:Test Results Analyzer
+  - wshobson/agents:skill:javascript-testing-patterns
   recipe:
     title: Test strategy
     description: 'Use when deciding how a project should be tested rather than writing one test: the test portfolio and coverage
@@ -113,19 +127,27 @@ artifacts:
       - github/awesome-copilot:agents/ai-team-qa.agent.md
       - github/awesome-copilot:agents/gem-mobile-tester.agent.md
       - github/awesome-copilot:instructions/qa-engineering-best-practices.instructions.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/quality-playbook/SKILL.md#recheck-mode-verify-bug-fixes
+      - davila7/claude-code-templates:cli-tool/components/commands/testing/flaky-test-triage.md#triage-stabilization-workflow
+      - wshobson/agents:plugins/javascript-typescript/skills/javascript-testing-patterns/SKILL.md#unit-testing-patterns
     supersedes:
     - affaan-m/ECC:command:test-coverage
     - affaan-m/ECC:command:quality-gate
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Recheck Mode — Verify
+        Bug Fixes; Triage & Stabilization Workflow; Unit Testing Patterns'
 - id: testing/verification-before-completion
   type: skill
   capability: Run verification fresh and read the output before claiming work is complete, fixed or passing.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
-  - obra/superpowers:skill:verification-before-completion
   - affaan-m/ECC:skill:verification-loop
-  - msitarzewski/agency-agents:agent:Reality Checker
+  - github/awesome-copilot:skill:doublecheck
   - msitarzewski/agency-agents:agent:Evidence Collector
+  - msitarzewski/agency-agents:agent:Reality Checker
+  - obra/superpowers:skill:verification-before-completion
 imports:
 - dest: domains/testing/skills/test-driven-development
   source: obra/superpowers
@@ -142,3 +164,9 @@ imports:
 - dest: domains/testing/skills/verification-before-completion
   source: obra/superpowers
   src: skills/verification-before-completion
+- dest: domains/testing/skills/verification-before-completion/references/derived/doublecheck.md
+  source: github/awesome-copilot
+  src: skills/doublecheck/SKILL.md#layer-3-adversarial-review,layer-1-self-audit,layer-2-source-verification,domain-specific-guidance
+- dest: domains/testing/skills/test-driven-development/references/derived/tdd-refactor.md
+  source: wshobson/agents
+  src: plugins/tdd-workflows/commands/tdd-refactor.md#example-extract-method-pattern

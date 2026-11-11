@@ -59,3 +59,9 @@ Relay the reviewer's report to the user unchanged in structure (what the change 
 Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/review-checklists.md`](references/review-checklists.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/code-review-excellence.md`](references/derived/code-review-excellence.md) — Review Process

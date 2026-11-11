@@ -2,7 +2,7 @@
 
 Part of `architecture:system-design`.
 
-## ADR-001: Use Redis for Semantic Search Vector Storage
+## architect
 
 <!-- source: affaan-m/ECC agents/architect.md -->
 
@@ -118,7 +118,7 @@ For each design decision, document:
 For significant architectural decisions, create ADRs:
 
 ```markdown
-
+# ADR-001: Use Redis for Semantic Search Vector Storage
 
 ## Context
 Need to store and query 1536-dimensional embeddings for semantic market search.

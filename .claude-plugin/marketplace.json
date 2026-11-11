@@ -141,6 +141,13 @@
       "license": "MIT"
     },
     {
+      "name": "science",
+      "source": "./domains/science",
+      "description": "Computational science - omics, chemistry, simulation, study design and statistics, scientific writing, biomedical research data, lab automation.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
       "name": "product",
       "source": "./domains/product",
       "description": "Product management - PRDs, prioritisation, feedback synthesis, experiments.",

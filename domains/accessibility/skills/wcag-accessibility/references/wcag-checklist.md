@@ -2,7 +2,7 @@
 
 Part of `accessibility:wcag-accessibility`.
 
-## ADR-ACC-[000]: [Title of the Accessibility Decision]
+## a11y-architect
 
 <!-- source: affaan-m/ECC agents/a11y-architect.md -->
 
@@ -112,7 +112,7 @@ For every component or page request, provide:
 For major UI decisions, use this format:
 
 ````markdown
-
+# ADR-ACC-[000]: [Title of the Accessibility Decision]
 
 ## Status
 

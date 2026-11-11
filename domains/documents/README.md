@@ -36,6 +36,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | Artefato | Fontes |
 |---|---|
 | `doc-coauthoring` | anthropics/skills, msitarzewski/agency-agents |
-| `internal-comms` | anthropics/skills, msitarzewski/agency-agents |
-| `office-documents` | anthropics/skills, msitarzewski/agency-agents |
-| `technical-writing` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `internal-comms` | anthropics/skills, davila7/claude-code-templates, msitarzewski/agency-agents |
+| `office-documents` | anthropics/skills, davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
+| `technical-writing` | affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents |

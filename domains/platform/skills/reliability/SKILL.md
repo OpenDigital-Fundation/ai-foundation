@@ -33,3 +33,6 @@ Load only what the task needs:
 - [`references/dashboards.md`](references/dashboards.md) — covers Dashboard Builder
 - [`references/infrastructure-maintenance.md`](references/infrastructure-maintenance.md) — covers Infrastructure Maintainer; Executive Summary; Detailed Infrastructure Analysis; Cost Analysis and Optimization
 - [`references/operational-checklists/README.md`](references/operational-checklists/README.md) — covers Platform SRE for Kubernetes; DevOps Core Principles
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Common Optimizations; INP: Interaction to Next Paint; CLS: Cumulative Layout Shift; Advanced React Performance Patterns; Quick-Start Examples
+- `references/slo-implementation/` — Define and implement Service Level Indicators (SLIs) and Service Level Objectives (SLOs) with error budgets and alerting. Use when establishing reliability targets, implementing SRE practices, or meas
+- `references/distributed-tracing/` — Implement distributed tracing with Jaeger and Tempo to track requests across microservices and identify performance bottlenecks. Use when debugging microservices, analyzing request flows, or implement

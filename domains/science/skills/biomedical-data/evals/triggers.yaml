@@ -1,0 +1,7 @@
+should_trigger:
+- "read these DICOM series and check their metadata"
+- "spike-sort this Neuropixels recording"
+- "convert this ephys data to NWB"
+should_not_trigger:
+- "should this patient receive chemotherapy"
+- "dock this compound"

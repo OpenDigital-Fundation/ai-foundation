@@ -80,3 +80,9 @@ Guides merged from github/awesome-copilot; load only what the task needs:
 - [`references/modernization-review/arch.md`](references/modernization-review/arch.md)
 - [`references/modernization-review/modernization.md`](references/modernization-review/modernization.md)
 - [`references/modernization-review/se-system-architecture-reviewer.md`](references/modernization-review/se-system-architecture-reviewer.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/legacy-modernizer.md`](references/derived/legacy-modernizer.md) — Code Examples

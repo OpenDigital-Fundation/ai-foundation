@@ -24,6 +24,8 @@ For organisational change: why, what changes for whom, timeline, communication p
 
 Employment-law questions need a qualified professional in the relevant jurisdiction.
 
+Motivation and leadership theories (Maslow, Herzberg, McGregor, Vroom, Adams, self-determination, situational and transformational leadership, psychological safety) with evidence and caveats: [`references/motivation-and-leadership.md`](references/motivation-and-leadership.md).
+
 ## References
 
 Load only what the task needs:
@@ -32,3 +34,4 @@ Load only what the task needs:
 - [`references/recruiting.md`](references/recruiting.md) — covers Recruitment; Pre-Onboarding (T-7 Days); Onboarding Day (Day T); First Week (T1 to T7 Days)
 - [`references/training.md`](references/training.md) — covers Corporate Training Designer
 - [`references/change-management.md`](references/change-management.md) — covers Change Management Consultant
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Performance Review Prep; Entry Format; Teaching Techniques

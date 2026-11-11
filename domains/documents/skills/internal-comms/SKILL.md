@@ -36,3 +36,9 @@ If the communication type doesn't match any existing guideline, ask for clarific
 
 ## Keywords
 3P updates, company newsletter, company comms, weekly update, faqs, common questions, updates, internal comms
+
+## References
+
+Load only what the task needs:
+
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Common email types; Common Difficult Scenarios; Preparation Phase; SBI Examples for Software Teams; Example Scenarios; Technical vs Non-Technical Communication

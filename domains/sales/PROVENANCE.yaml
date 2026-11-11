@@ -21,6 +21,23 @@ files:
     path: sales/sales-coach.md
     license: MIT
     modification: adapted
+- path: skills/deal-strategy/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/business-marketing/customer-success-manager.md#customer-success-reference-points
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/business-marketing/sales-automator.md#compliance-anti-spam-requirements
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/gtm-enterprise-onboarding/SKILL.md#common-mistakes
+    license: MIT
+    modification: merged-section
 - path: skills/deal-strategy/references/discovery.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -63,6 +80,13 @@ files:
     path: skills/investor-materials/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/investor-relations/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/gtm-board-and-investor-communication/SKILL.md#common-mistakes
+    license: MIT
+    modification: merged-section
 - path: skills/investor-relations/references/outreach.md
   derived_from:
   - source: affaan-m/ECC

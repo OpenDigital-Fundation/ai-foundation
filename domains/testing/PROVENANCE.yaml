@@ -35,6 +35,23 @@ files:
     path: skills/webapp-testing/examples/static_html_automation.py
     license: Apache-2.0
     modification: adapted
+- path: skills/browser-testing/references/derived-guides.md
+  derived_from:
+  - source: openai/skills
+    commit: 49f948f
+    path: skills/.curated/playwright-interactive/SKILL.md#viewport-fit-checks-required
+    license: Apache-2.0
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/ui-screenshots/SKILL.md#non-web-app-screenshots
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/cypress-flake-fixer/SKILL.md#gotchas
+    license: MIT
+    modification: merged-section
 - path: skills/browser-testing/references/e2e-patterns.md
   derived_from:
   - source: affaan-m/ECC
@@ -517,6 +534,13 @@ files:
     path: skills/engineering/tdd/SKILL.md
     license: MIT
     modification: merged-section
+- path: skills/test-driven-development/references/derived/tdd-refactor.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/tdd-workflows/commands/tdd-refactor.md#example-extract-method-pattern
+    license: MIT
+    modification: merged-section
 - path: skills/test-driven-development/references/mocking.md
   derived_from:
   - source: mattpocock/skills
@@ -580,6 +604,23 @@ files:
     path: skills/delivery-gate/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/test-strategy/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/quality-playbook/SKILL.md#recheck-mode-verify-bug-fixes
+    license: Apache-2.0
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/commands/testing/flaky-test-triage.md#triage-stabilization-workflow
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/javascript-typescript/skills/javascript-testing-patterns/SKILL.md#unit-testing-patterns
+    license: MIT
+    modification: merged-section
 - path: skills/test-strategy/references/performance.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -633,3 +674,10 @@ files:
     path: skills/verification-before-completion/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/verification-before-completion/references/derived/doublecheck.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/doublecheck/SKILL.md#layer-3-adversarial-review,layer-1-self-audit,layer-2-source-verification,domain-specific-guidance
+    license: MIT
+    modification: merged-section

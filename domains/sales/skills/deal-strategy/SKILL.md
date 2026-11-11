@@ -36,3 +36,4 @@ Load only what the task needs:
 - [`references/accounts.md`](references/accounts.md) — covers Account Strategist; Account Overview; Stakeholder Map; Expansion Opportunities
 - [`references/pipeline.md`](references/pipeline.md) — covers Pipeline Analyst; Velocity Metrics; Coverage Analysis; Stage Conversion Funnel
 - [`references/coaching.md`](references/coaching.md) — covers Sales Coach; Current Performance; Skill Assessment; Focus Areas (Max 3)
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Customer Success Reference Points; Compliance & Anti-Spam Requirements; Common Mistakes

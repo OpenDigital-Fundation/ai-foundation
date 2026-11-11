@@ -12,6 +12,7 @@ artifacts:
   - affaan-m/ECC:agent:docs-lookup
   - affaan-m/ECC:skill:documentation-lookup
   - affaan-m/ECC:skill:search-first
+  - github/awesome-copilot:agent:Context7-Expert
   - github/awesome-copilot:rule:context7.instructions
   recipe:
     title: Documentation lookup
@@ -26,6 +27,11 @@ artifacts:
       - s:search-first
       lookup-boundaries/README.md:
       - github/awesome-copilot:instructions/context7.instructions.md
+      derived-guides.md:
+      - github/awesome-copilot:agents/context7.agent.md#quality-standards,documentation-retrieval-strategy
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Quality Standards; Documentation
+        Retrieval Strategy'
 - id: research/literature-review
   type: skill
   capability: 'Use for a systematic literature review or for evaluating scholarly work: search planning across academic databases,
@@ -53,8 +59,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - VoltAgent/awesome-claude-code-subagents:agent:first-principles-thinking
   - affaan-m/ECC:skill:deep-research
   - affaan-m/ECC:skill:research-ops
+  - davila7/claude-code-templates:agent:competitive-intelligence-analyst
+  - davila7/claude-code-templates:agent:research-synthesizer
   - github/awesome-copilot:agent:Doublecheck
   - github/awesome-copilot:agent:Technical spike research mode
   - mattpocock/skills:skill:research
@@ -119,6 +128,13 @@ artifacts:
       claim-verification/README.md:
       - github/awesome-copilot:agents/research-technical-spike.agent.md
       - github/awesome-copilot:agents/doublecheck.agent.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/agents/deep-research-team/competitive-intelligence-analyst.md#specialized-analysis-techniques,core-intelligence-framework
+      - VoltAgent/awesome-claude-code-subagents:categories/10-research-analysis/first-principles-thinking.md#the-5-step-first-principles-method
+      - davila7/claude-code-templates:cli-tool/components/agents/deep-research-team/research-synthesizer.md#phased-execution-workflow
     supersedes:
     - mattpocock/skills:skill:research
     - affaan-m/ECC:skill:research-ops
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Specialized Analysis
+        Techniques; The 5-Step First Principles Method; Core Intelligence Framework; Phased Execution Workflow'

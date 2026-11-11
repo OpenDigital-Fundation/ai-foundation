@@ -307,3 +307,4 @@ Load only what the task needs:
 - [`references/taste.md`](references/taste.md) — covers Taste; Taste Application; Taste Distillation
 - [`references/design-quality.md`](references/design-quality.md) — covers Web Design Quality Standards
 - [`references/delight.md`](references/delight.md) — covers Whimsy Injector; Spectrum; Whimsy Taxonomy; Character Guidelines
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: The 5 Most Common Scroll Patterns; Anti-Patterns; CSS Animation Patterns

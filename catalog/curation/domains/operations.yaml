@@ -9,6 +9,7 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - davila7/claude-code-templates:agent:customer-support
   - msitarzewski/agency-agents:agent:Customer Service
   - msitarzewski/agency-agents:agent:Customer Success Manager
   - msitarzewski/agency-agents:agent:Support Responder
@@ -23,6 +24,8 @@ artifacts:
       - msitarzewski/agency-agents:specialized/customer-service.md
       customer-success.md:
       - msitarzewski/agency-agents:specialized/customer-success-manager.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/agents/business-marketing/customer-support.md#accuracy-anti-fabrication
     body: '# Customer support
 
 
@@ -59,6 +62,8 @@ artifacts:
 
 
       Detailed response playbooks, tone guides, customer-success health checks and onboarding are in the references.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Accuracy & Anti-Fabrication'
 - id: operations/people-operations
   type: skill
   capability: 'Use for people operations: hiring plans and job descriptions, interview loops, onboarding new staff, training
@@ -66,6 +71,8 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - github/awesome-copilot:skill:brag-sheet
+  - github/awesome-copilot:skill:mentoring-juniors
   - msitarzewski/agency-agents:agent:Change Management Consultant
   - msitarzewski/agency-agents:agent:Corporate Training Designer
   - msitarzewski/agency-agents:agent:HR Onboarding
@@ -83,6 +90,9 @@ artifacts:
       - msitarzewski/agency-agents:specialized/corporate-training-designer.md
       change-management.md:
       - msitarzewski/agency-agents:specialized/change-management-consultant.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/brag-sheet/SKILL.md#performance-review-prep,entry-format
+      - github/awesome-copilot:skills/mentoring-juniors/SKILL.md#teaching-techniques
     body: '# People operations
 
 
@@ -113,6 +123,13 @@ artifacts:
 
 
       Employment-law questions need a qualified professional in the relevant jurisdiction.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Performance Review Prep;
+        Entry Format; Teaching Techniques'
+    append: 'Motivation and leadership theories (Maslow, Herzberg, McGregor, Vroom, Adams, self-determination, situational
+      and transformational leadership, psychological safety) with evidence and caveats: [`references/motivation-and-leadership.md`](references/motivation-and-leadership.md).
+
+      '
 - id: operations/project-management
   type: skill
   capability: 'Use when running a project or programme: plans and milestones, status tracking, risks and dependencies, stakeholder
@@ -120,9 +137,11 @@ artifacts:
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:command:complete-sprint
   - affaan-m/ECC:command:jira
   - affaan-m/ECC:skill:jira-integration
   - affaan-m/ECC:skill:project-flow-ops
+  - github/awesome-copilot:skill:impediment-prioritization
   - msitarzewski/agency-agents:agent:Automation Governance Architect
   - msitarzewski/agency-agents:agent:Chief of Staff
   - msitarzewski/agency-agents:agent:IT Service Manager
@@ -135,6 +154,7 @@ artifacts:
   - msitarzewski/agency-agents:agent:Studio Producer
   - msitarzewski/agency-agents:agent:Workflow Architect
   - msitarzewski/agency-agents:agent:Workflow Optimizer
+  - wshobson/agents:command:standup-notes
   recipe:
     title: Project management
     description: 'Use when running a project or programme: plans and milestones, status tracking, risks and dependencies,
@@ -152,6 +172,10 @@ artifacts:
       - msitarzewski/agency-agents:project-management/project-management-jira-workflow-steward.md
       flow-operations.md:
       - s:project-flow-ops
+      derived-guides.md:
+      - Jeffallan/claude-skills:commands/project/retrospectives/complete-sprint.md#metrics-dashboard
+      - wshobson/agents:plugins/team-collaboration/commands/standup-notes.md#async-standup-patterns,yesterday-s-accomplishments-extraction,blockers-and-dependencies-identification,communication-best-practices
+      - github/awesome-copilot:skills/impediment-prioritization/SKILL.md#scoring-rubric-1-10-scales
     body: '# Project management
 
 
@@ -184,3 +208,11 @@ artifacts:
       ## 5. Close
 
       Confirm acceptance, hand over, and write a short retrospective: what worked, what to change.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Metrics Dashboard; Async
+        Standup Patterns; Scoring Rubric (1–10 scales); Yesterday''s Accomplishments Extraction; Blockers and Dependencies
+        Identification; Communication Best Practices'
+    append: 'Management schools, organisational laws (Pareto, Parkinson, Goodhart, Little, Brooks…) with their evidence weight,
+      and execution methods (PDCA, Lean, Six Sigma, TOC, Kanban, OKR, Balanced Scorecard, RACI): [`references/management-models.md`](references/management-models.md).
+
+      '

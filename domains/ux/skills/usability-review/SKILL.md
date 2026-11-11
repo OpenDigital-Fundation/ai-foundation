@@ -32,6 +32,8 @@ Then sweep the screens against Nielsen's ten heuristics: visibility of system st
 
 For implementation-level interaction rules (navigation, forms, feedback, loading and empty states), query the guideline database in `ui:design-system` (`--domain ux`).
 
+Each finding names its heuristic, principle or law; the tables, the evidence weight of each kind and the caveats are in [references/heuristics-and-laws.md](references/heuristics-and-laws.md).
+
 ## 4. Report
 
 For each finding: where (screen, element), what happens, which persona and step it blocks, the heuristic or walkthrough question it fails, severity (blocker, major, minor) and the smallest fix. Order by severity, then by how early in the flow it occurs. End with what works well and what only a real test can answer.

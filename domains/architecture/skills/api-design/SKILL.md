@@ -425,3 +425,10 @@ Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/contract-driven/api-architect.md`](references/contract-driven/api-architect.md)
 - [`references/contract-driven/openapi-to-application.md`](references/contract-driven/openapi-to-application.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/protobuf-grpc-api-review.md`](references/derived/protobuf-grpc-api-review.md) — Review Workflow
+- [`references/derived/api-integration-specialist.md`](references/derived/api-integration-specialist.md) — Core Integration Principles

@@ -33,6 +33,49 @@ files:
     path: instructions/devcontainers.instructions.md
     license: MIT
     modification: adapted
+- path: skills/deployment/references/deployment-pipeline-design/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/cicd-automation/skills/deployment-pipeline-design/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/deployment-pipeline-design/references/advanced-strategies.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/cicd-automation/skills/deployment-pipeline-design/references/advanced-strategies.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/deployment-pipeline-design/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/cicd-automation/skills/deployment-pipeline-design/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/derived-guides.md
+  derived_from:
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/cloud-architect/SKILL.md#common-patterns-with-examples
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/cloud-infrastructure/skills/hybrid-cloud-networking/SKILL.md#connection-options
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/cloud-infrastructure/skills/multi-cloud-architecture/SKILL.md#cloud-service-comparison
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/docker-expert/SKILL.md#common-issue-diagnostics
+    license: MIT
+    modification: merged-section
 - path: skills/deployment/references/docker.md
   derived_from:
   - source: affaan-m/ECC
@@ -45,6 +88,69 @@ files:
   - source: github/awesome-copilot
     commit: 797337f
     path: agents/se-gitops-ci-specialist.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/helm-chart-scaffolding/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/helm-chart-scaffolding/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/helm-chart-scaffolding/assets/Chart.yaml.template
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/helm-chart-scaffolding/assets/Chart.yaml.template
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/helm-chart-scaffolding/assets/values.yaml.template
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/helm-chart-scaffolding/assets/values.yaml.template
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/helm-chart-scaffolding/references/chart-structure.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/helm-chart-scaffolding/references/chart-structure.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/helm-chart-scaffolding/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/helm-chart-scaffolding/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/helm-chart-scaffolding/scripts/validate-chart.sh
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/helm-chart-scaffolding/scripts/validate-chart.sh
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/k8s-security-policies/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/k8s-security-policies/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/k8s-security-policies/assets/network-policy-template.yaml
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/k8s-security-policies/assets/network-policy-template.yaml
+    license: MIT
+    modification: adapted
+- path: skills/deployment/references/k8s-security-policies/references/rbac-patterns.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/kubernetes-operations/skills/k8s-security-policies/references/rbac-patterns.md
     license: MIT
     modification: adapted
 - path: skills/deployment/references/kubernetes.md
@@ -125,6 +231,28 @@ files:
     path: pi/core/skills/git-workflow/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/git-workflow/references/derived-guides.md
+  derived_from:
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/git-flow-branch-creator/SKILL.md#git-flow-branch-analysis-framework
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/productivity/commit-work/SKILL.md#workflow-checklist
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/commands/git-workflow/git-bisect-helper.md#bisect-modes
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/git-commit/SKILL.md#types
+    license: MIT
+    modification: merged-section
 - path: skills/git-workflow/references/hook-installation/README.md
   derived_from:
   - source: github/awesome-copilot
@@ -170,6 +298,18 @@ files:
     path: instructions/github-actions-ci-cd-best-practices.instructions.md
     license: MIT
     modification: adapted
+- path: skills/github-operations/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/workflow-automation/github-automation/SKILL.md#core-workflows
+    license: MIT
+    modification: merged-section
+  - source: github/awesome-copilot
+    commit: 797337f
+    path: skills/repo-standardizer/SKILL.md#preflight-mandatory-in-order
+    license: MIT
+    modification: merged-section
 - path: skills/github-operations/references/pr-iteration.md
   derived_from:
   - source: getsentry/skills
@@ -189,6 +329,60 @@ files:
   - source: github/awesome-copilot
     commit: 797337f
     path: agents/cloud-saas-outage-triage.agent.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/derived-guides.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/skills/connectivity-triage/SKILL.md#fast-decision-flow
+    license: MIT
+    modification: merged-section
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/agents/incident-responder.md#post-incident-process,immediate-actions-first-5-minutes,sre-best-practices
+    license: MIT
+    modification: merged-section
+- path: skills/incident-response/references/incident-runbook-templates/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/skills/incident-runbook-templates/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/incident-runbook-templates/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/skills/incident-runbook-templates/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/on-call-handoff-patterns/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/skills/on-call-handoff-patterns/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/on-call-handoff-patterns/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/skills/on-call-handoff-patterns/references/details.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/postmortem-writing/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/skills/postmortem-writing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/incident-response/references/postmortem-writing/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/incident-response/skills/postmortem-writing/references/details.md
     license: MIT
     modification: adapted
 - path: skills/incident-response/references/role-guide.md
@@ -219,6 +413,42 @@ files:
     path: pi/core/skills/dashboard-builder/SKILL.md
     license: MIT
     modification: adapted
+- path: skills/reliability/references/derived-guides.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/productivity/performance-optimizer/SKILL.md#common-optimizations
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/development/core-web-vitals/SKILL.md#inp-interaction-to-next-paint,cls-cumulative-layout-shift
+    license: MIT
+    modification: merged-section
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/agents/web-tools/react-performance-optimizer.md#advanced-react-performance-patterns
+    license: MIT
+    modification: merged-section
+  - source: Jeffallan/claude-skills
+    commit: 078a25c
+    path: skills/monitoring-expert/SKILL.md#quick-start-examples
+    license: MIT
+    modification: merged-section
+- path: skills/reliability/references/distributed-tracing/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/observability-monitoring/skills/distributed-tracing/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/reliability/references/distributed-tracing/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/observability-monitoring/skills/distributed-tracing/references/details.md
+    license: MIT
+    modification: adapted
 - path: skills/reliability/references/infrastructure-maintenance.md
   derived_from:
   - source: msitarzewski/agency-agents
@@ -243,5 +473,19 @@ files:
   - source: msitarzewski/agency-agents
     commit: b859c51
     path: engineering/engineering-sre.md
+    license: MIT
+    modification: adapted
+- path: skills/reliability/references/slo-implementation/README.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/observability-monitoring/skills/slo-implementation/SKILL.md
+    license: MIT
+    modification: adapted
+- path: skills/reliability/references/slo-implementation/references/details.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/observability-monitoring/skills/slo-implementation/references/details.md
     license: MIT
     modification: adapted

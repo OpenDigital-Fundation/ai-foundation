@@ -213,3 +213,11 @@ Guides merged from github/awesome-copilot; load only what the task needs:
 - [`references/spec-traceability/implementation-plan.md`](references/spec-traceability/implementation-plan.md)
 - [`references/spec-traceability/spec-driven-workflow-v1.md`](references/spec-traceability/spec-driven-workflow-v1.md)
 - [`references/spec-traceability/specification.md`](references/spec-traceability/specification.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/task-decomposition-expert.md`](references/derived/task-decomposition-expert.md) — Core Analysis Framework
+- [`references/derived/create-technical-spike.md`](references/derived/create-technical-spike.md) — Document Structure
+- [`references/derived/create-epic-plan.md`](references/derived/create-epic-plan.md) — Risk Assessment Framework

@@ -11,14 +11,17 @@ artifacts:
   - affaan-m/ECC:skill:api-connector-builder
   - affaan-m/ECC:skill:api-design
   - affaan-m/ECC:skill:contract-first
+  - davila7/claude-code-templates:skill:api-integration-specialist
   - github/awesome-copilot:agent:API Architect
   - github/awesome-copilot:agent:OpenAPI to Application Generator
+  - github/awesome-copilot:skill:protobuf-grpc-api-review
 - id: architecture/architecture-review
   type: skill
   capability: Scan an existing codebase for deepening opportunities and walk the chosen one with the user.
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
+  - Jeffallan/claude-skills:skill:legacy-modernizer
   - affaan-m/ECC:skill:brownfield-retrospective
   - affaan-m/ECC:skill:module-governance
   - github/awesome-copilot:agent:Modernization Agent
@@ -33,6 +36,7 @@ artifacts:
   supersedes:
   - affaan-m/ECC:skill:hexagonal-architecture
   - github/awesome-copilot:rule:oop-design-patterns.instructions
+  - github/awesome-copilot:skill:poka-yoke
   - mattpocock/skills:skill:codebase-design
 - id: architecture/codebase-onboarding
   type: skill
@@ -47,6 +51,8 @@ artifacts:
   - affaan-m/ECC:skill:codebase-onboarding
   - getsentry/skills:skill:agents-md
   - github/awesome-copilot:agent:Context Architect
+  - github/awesome-copilot:skill:acquire-codebase-knowledge
+  - github/awesome-copilot:skill:create-agentsmd
   - msitarzewski/agency-agents:agent:Codebase Archaeologist
   - msitarzewski/agency-agents:agent:Codebase Onboarding Engineer
   recipe:
@@ -70,6 +76,12 @@ artifacts:
       - getsentry/skills:skills/agents-md/SKILL.md
       context-mapping/README.md:
       - github/awesome-copilot:agents/context-architect.agent.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/create-agentsmd/SKILL.md#file-structure-and-content-guidelines
+      - github/awesome-copilot:skills/acquire-codebase-knowledge/SKILL.md#gotchas
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: File Structure and Content
+        Guidelines; Gotchas'
 - id: architecture/decision-records
   type: skill
   capability: Record, supersede, index and read architecture decision records, one decision per file.
@@ -107,6 +119,10 @@ artifacts:
   - msitarzewski/agency-agents:agent:Internationalization Engineer
   - msitarzewski/agency-agents:agent:Realtime Collaboration Engineer
   - msitarzewski/agency-agents:agent:Software Architect
+  - wshobson/agents:skill:cqrs-implementation
+  - wshobson/agents:skill:event-store-design
+  - wshobson/agents:skill:projection-patterns
+  - wshobson/agents:skill:saga-orchestration
   recipe:
     title: System design
     description: 'Use when designing a service, system or major feature end to end: components and boundaries, data flow,
@@ -171,6 +187,20 @@ artifacts:
 
       Compare two or three designs on the targets and trade-offs, pick one, and write the hard-to-reverse choices as ADRs
       (`architecture:decision-records`). Hand the design to `workflow:writing-plans`.'
+    reference_dirs:
+      saga-orchestration: wshobson/agents:plugins/backend-development/skills/saga-orchestration
+      cqrs-implementation: wshobson/agents:plugins/backend-development/skills/cqrs-implementation
+      event-store-design: wshobson/agents:plugins/backend-development/skills/event-store-design
+      projection-patterns: wshobson/agents:plugins/backend-development/skills/projection-patterns
+    reference_notes:
+      saga-orchestration: Implement saga patterns for distributed transactions and cross-aggregate workflows. Use this skill
+        when implementing distributed transactions across microservices where 2PC is unavailable, designing c
+      cqrs-implementation: Implement Command Query Responsibility Segregation for scalable architectures. Use when separating
+        read and write models, optimizing query performance, or building event-sourced systems.
+      event-store-design: Design and implement event stores for event-sourced systems. Use when building event sourcing infrastructure,
+        choosing event store technologies, or implementing event persistence patterns.
+      projection-patterns: Build read models and projections from event streams. Use when implementing CQRS read sides, building
+        materialized views, or optimizing query performance in event-sourced systems.
 imports:
 - dest: domains/architecture/skills/domain-modeling
   source: mattpocock/skills
@@ -222,3 +252,15 @@ imports:
 - dest: domains/architecture/skills/codebase-design/references/design-patterns.md
   source: github/awesome-copilot
   src: instructions/oop-design-patterns.instructions.md
+- dest: domains/architecture/skills/api-design/references/derived/protobuf-grpc-api-review.md
+  source: github/awesome-copilot
+  src: skills/protobuf-grpc-api-review/SKILL.md#review-workflow
+- dest: domains/architecture/skills/api-design/references/derived/api-integration-specialist.md
+  source: davila7/claude-code-templates
+  src: cli-tool/components/skills/development/api-integration-specialist/SKILL.md#core-integration-principles
+- dest: domains/architecture/skills/codebase-design/references/derived/poka-yoke.md
+  source: github/awesome-copilot
+  src: skills/poka-yoke/SKILL.md#designing-something-new,evidence-and-its-limits,axis-1-what-happens-when-the-mistake-occurs,after-an-incident
+- dest: domains/architecture/skills/architecture-review/references/derived/legacy-modernizer.md
+  source: Jeffallan/claude-skills
+  src: skills/legacy-modernizer/SKILL.md#code-examples

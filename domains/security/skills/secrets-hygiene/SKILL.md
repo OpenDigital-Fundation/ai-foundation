@@ -49,3 +49,10 @@ For a full review of how an application handles credentials, use `security:secur
 Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/scanning-recipes.md`](references/scanning-recipes.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/secret-scanning.md`](references/derived/secret-scanning.md) — Core Workflow — Enable Secret Scanning; Core Workflow — Resolve Blocked Pushes
+- [`references/derived/secrets-management.md`](references/derived/secrets-management.md) — HashiCorp Vault Integration; External Secrets Operator; Secret Rotation

@@ -16,7 +16,8 @@ def preflight(root: Path, sources: Path, recipes: dict, packs: dict | None = Non
     lock = {s["id"]: s for s in yaml.safe_load((root / "catalog/sources.lock.yaml").read_text())["sources"]}
     declared = {a["id"]: set(a.get("supersedes", [])) for m in load(root).values() for a in m["artifacts"]}
 
-    def source(src: str, path: str, directory: bool = False) -> Path:
+    def source(src: str, path: str, directory: bool = False, exclude: set[str] | None = None) -> Path:
+        path = path.partition("#")[0]
         if src not in lock or lock[src]["policy"] != "merge":
             raise ValueError(f"source '{src}' is not approved for copying")
         clone = (sources / src.replace("/", "_")).resolve()
@@ -25,7 +26,12 @@ def preflight(root: Path, sources: Path, recipes: dict, packs: dict | None = Non
             raise ValueError(f"source path escapes its clone: {src}:{path}")
         if not (target.is_dir() if directory else target.is_file()):
             raise ValueError(f"missing source {'directory' if directory else 'file'}: {src}:{path}")
-        check_copy(lock, sources, src, path)
+        for relative in exclude or ():
+            _relative(relative)
+            candidate = (target / relative).resolve()
+            if not candidate.is_relative_to(target) or not candidate.is_file():
+                raise ValueError(f"excluded source file is missing or escapes its directory: {relative}")
+        check_copy(lock, sources, src, path, exclude=exclude)
         return target
 
     def owns(aid: str, keys: set[str]) -> None:
@@ -60,10 +66,13 @@ def preflight(root: Path, sources: Path, recipes: dict, packs: dict | None = Non
                 source(src, path)
                 section(sources, src, path, lock)
                 keys.add(key)
+        unknown_exclusions = set(recipe.get("reference_excludes") or {}) - set(recipe.get("reference_dirs") or {})
+        if unknown_exclusions:
+            raise ValueError(f"reference exclusions have no directory: {sorted(unknown_exclusions)}")
         for relative, entry in (recipe.get("reference_dirs") or {}).items():
             _relative(relative)
             src, path = entry.split(":", 1)
-            source(src, path, directory=True)
+            source(src, path, directory=True, exclude=set((recipe.get("reference_excludes") or {}).get(relative, [])))
             keys.update(f"{s}:{kind}:{name}" for (s, kind, name), p in idx.items()
                         if s == src and (p == path or p.startswith(path.rstrip("/") + "/")))
         owns(aid, keys)

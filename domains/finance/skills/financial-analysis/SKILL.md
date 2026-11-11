@@ -33,3 +33,4 @@ Load only what the task needs:
 - [`references/fpa.md`](references/fpa.md) — covers FP&A Analyst; 1. Strategic Context; 2. Key Financial Targets; 3. Revenue Plan
 - [`references/pricing.md`](references/pricing.md) — covers Pricing Analyst; Executive Summary; Cost Analysis; Market Context
 - [`references/investment-research.md`](references/investment-research.md) — covers Investment Researcher; Executive Summary; Investment Thesis; Bear Case & Risk Factors
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Core Components; Metric Tracking Best Practices; Consumer/Mobile Metrics

@@ -43,6 +43,6 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `external-references` | contribuição original |
 | `agent-security` | affaan-m/ECC, getsentry/skills, github/awesome-copilot |
-| `secrets-hygiene` | getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents |
-| `security-audit` | SecurityStandards/skill-security-audit, affaan-m/ECC, getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents |
-| `threat-modeling` | getsentry/skills, msitarzewski/agency-agents, openai/skills |
+| `secrets-hygiene` | davila7/claude-code-templates, getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents |
+| `security-audit` | SecurityStandards/skill-security-audit, affaan-m/ECC, davila7/claude-code-templates, getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
+| `threat-modeling` | getsentry/skills, github/awesome-copilot, msitarzewski/agency-agents, openai/skills, wshobson/agents |

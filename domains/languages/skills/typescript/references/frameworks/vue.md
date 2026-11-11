@@ -671,7 +671,7 @@ expect(wrapper.emitted('bid')).toBeTruthy()
 - Related: `languages:typescript` (`references/standards.md`), `languages:typescript` (`references/frameworks/vite.md`).
 - Docs: <https://vuejs.org/guide/best-practices/security.html> · <https://github.com/cure53/DOMPurify> · <https://github.com/braintree/sanitize-url>
 
-## Required
+## vue-reviewer
 
 <!-- source: affaan-m/ECC agents`code-quality:code-review`er.md -->
 
@@ -813,7 +813,7 @@ You DO NOT refactor or rewrite code — you report findings only.
 ### Diagnostic Commands
 
 ```bash
-
+# Required
 npx eslint . --ext .vue,.ts,.js                    # ensure eslint-plugin-vue is configured
 vue-tsc --noEmit                                   # Vue-specific type checking
 npm run typecheck --if-present                     # respect project's canonical command

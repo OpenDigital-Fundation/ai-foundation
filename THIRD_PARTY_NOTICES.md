@@ -25,6 +25,16 @@ copyright line replaced.
 | [Community-Access/accessibility-agents](https://github.com/Community-Access/accessibility-agents) | Copyright (c) 2026 Taylor Arndt |
 | [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) | MIT as declared per skill (react-best-practices, composition-patterns, react-view-transitions, react-native-skills); skills without a declared licence are not copied |
 
+| [github/awesome-copilot](https://github.com/github/awesome-copilot) | Copyright GitHub, Inc. |
+| [wshobson/agents](https://github.com/wshobson/agents) | Copyright (c) 2024 Seth Hobson |
+| [VoltAgent/awesome-claude-code-subagents](https://github.com/VoltAgent/awesome-claude-code-subagents) | Copyright (c) 2025 VoltAgent |
+| [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) | Copyright (c) 2025 Daniel (San) Ávila |
+| [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) | Copyright (c) 2025 (the upstream notice names no holder) |
+| [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) | Copyright (c) 2025 K-Dense Inc. |
+| `davila7/claude-code-templates` — `cli-tool/components/skills/productivity/avoid-ai-writing/LICENSE.txt` | Copyright (c) 2026 Conor Bronsdon |
+| `github/awesome-copilot` — `skills/agent-architecture/LICENSE.txt` | Copyright (c) 2026 Stanislav Bankovskii |
+| `K-Dense-AI/claude-scientific-skills` — `skills/pacsomatic/LICENSE` | Copyright (c) 2026 Beifang Niu |
+
 ## Apache-2.0-licensed sources
 
 [anthropics/skills](https://github.com/anthropics/skills) — skills other than `docx`, `pdf`, `pptx`
@@ -56,3 +66,5 @@ redistribution in an MIT, commercially usable repository:
 - `trailofbits/skills` and `getsentry/skills` `security-review` (CC BY-SA 4.0)
 - `openai/skills` `figma-*` (Figma terms)
 - `SecurityStandards/agent-reverse-engineer` (MIT; a product/MCP server, referenced rather than vendored)
+
+The Elsevier elsarticle examples and bibliography styles supplied in the K-Dense venue-templates source declare LPPL. Those six files are not included in this distribution; the venue guide links to the official package instead.

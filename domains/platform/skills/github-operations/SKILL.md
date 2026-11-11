@@ -164,3 +164,4 @@ To drive one PR to green — triage review feedback by severity, fix CI failures
 Load only what the task needs:
 
 - [`references/actions/README.md`](references/actions/README.md) — covers GitHub Actions Expert; GitHub Actions Node Runtime Upgrade; GitHub Actions CI/CD Best Practices
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Core Workflows; Preflight (mandatory, in order)

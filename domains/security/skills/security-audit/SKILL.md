@@ -208,3 +208,11 @@ Guides merged from github/awesome-copilot; load only what the task needs:
 
 - [`references/review-checklists/sast-sca-security-analyzer.md`](references/review-checklists/sast-sca-security-analyzer.md)
 - [`references/review-checklists/security-and-owasp.md`](references/review-checklists/security-and-owasp.md)
+
+## Derived guides
+
+Load only the reference needed for the task:
+
+- [`references/derived/security-sast.md`](references/derived/security-sast.md) — Multi-Language Scanner Implementation
+- [`references/derived/codeql.md`](references/derived/codeql.md) — Core Workflow — GitHub Actions
+- [`references/derived/graphql-security-specialist.md`](references/derived/graphql-security-specialist.md) — Rate Limiting and DoS Protection

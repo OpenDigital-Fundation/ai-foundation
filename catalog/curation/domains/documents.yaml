@@ -26,6 +26,10 @@ artifacts:
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
   - anthropics/skills:skill:internal-comms
+  - davila7/claude-code-templates:skill:difficult-workplace-conversations
+  - davila7/claude-code-templates:skill:email-composer
+  - davila7/claude-code-templates:skill:feedback-mastery
+  - davila7/claude-code-templates:skill:professional-communication
   - msitarzewski/agency-agents:agent:Analytics Reporter
   - msitarzewski/agency-agents:agent:Executive Summary Generator
   recipe:
@@ -33,6 +37,16 @@ artifacts:
     description: 'Use when writing internal communications: status reports, leadership updates, incident notices, company
       newsletters, FAQs and project updates, in the formats and tone a company expects.'
     base_dir: anthropics/skills:skills/internal-comms
+    references:
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/enterprise-communication/email-composer/SKILL.md#common-email-types
+      - davila7/claude-code-templates:cli-tool/components/skills/enterprise-communication/feedback-mastery/SKILL.md#common-difficult-scenarios,preparation-phase,sbi-examples-for-software-teams
+      - davila7/claude-code-templates:cli-tool/components/skills/enterprise-communication/difficult-workplace-conversations/SKILL.md#example-scenarios
+      - davila7/claude-code-templates:cli-tool/components/skills/enterprise-communication/professional-communication/SKILL.md#technical-vs-non-technical-communication
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Common email types; Common
+        Difficult Scenarios; Preparation Phase; SBI Examples for Software Teams; Example Scenarios; Technical vs Non-Technical
+        Communication'
 - id: documents/office-documents
   type: skill
   capability: 'Use when a task reads or produces Word, Excel, PowerPoint or PDF files (.docx, .xlsx, .pptx, .pdf): creating,
@@ -44,9 +58,12 @@ artifacts:
   - anthropics/skills:skill:pdf
   - anthropics/skills:skill:pptx
   - anthropics/skills:skill:xlsx
+  - davila7/claude-code-templates:skill:pdf-processing
+  - github/awesome-copilot:skill:markdown-to-word-mermaid
   - msitarzewski/agency-agents:agent:Document Generator
   - msitarzewski/agency-agents:agent:PDF Engine Architect
   - msitarzewski/agency-agents:agent:Universal Document Compiler
+  - wshobson/agents:skill:file-conversion
   recipe:
     title: Office documents
     description: 'Use when a task reads or produces Word, Excel, PowerPoint or PDF files (.docx, .xlsx, .pptx, .pdf): creating,
@@ -86,11 +103,18 @@ artifacts:
     references:
       document-generation.md:
       - msitarzewski/agency-agents:specialized/specialized-document-generator.md
+      derived-guides.md:
+      - davila7/claude-code-templates:cli-tool/components/skills/document-processing/pdf-processing/SKILL.md#python-libraries
+      - wshobson/agents:plugins/file-conversion/skills/file-conversion/SKILL.md#inspect-and-choose,verify-and-deliver
+      - github/awesome-copilot:skills/markdown-to-word-mermaid/SKILL.md#conversion-behavior,verification
     supersedes:
     - anthropics/skills:skill:docx
     - anthropics/skills:skill:xlsx
     - anthropics/skills:skill:pptx
     - anthropics/skills:skill:pdf
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Python Libraries; Inspect
+        and choose; Conversion behavior; Verify and deliver; Verification'
 - id: documents/technical-writing
   type: skill
   capability: 'Use when writing or updating developer documentation: READMEs, API references, guides, tutorials, runbooks,
@@ -103,6 +127,7 @@ artifacts:
   - affaan-m/ECC:command:update-docs
   - affaan-m/ECC:skill:docs-governance
   - affaan-m/ECC:skill:living-docs-governance
+  - davila7/claude-code-templates:skill:copy-editing
   - github/awesome-copilot:agent:Project Documenter
   - 'github/awesome-copilot:agent:SE: Tech Writer'
   - github/awesome-copilot:agent:technical-content-evaluator
@@ -114,6 +139,8 @@ artifacts:
   - github/awesome-copilot:rule:markdown.instructions
   - github/awesome-copilot:rule:update-docs-on-code-change.instructions
   - github/awesome-copilot:rule:use-cliche-data-in-docs.instructions
+  - github/awesome-copilot:skill:docs-sync-audit
+  - github/awesome-copilot:skill:markdown-to-html
   - msitarzewski/agency-agents:agent:Technical Writer
   recipe:
     title: Technical writing
@@ -136,6 +163,10 @@ artifacts:
       - github/awesome-copilot:instructions/markdown-gfm.instructions.md
       - github/awesome-copilot:instructions/markdown.instructions.md
       - github/awesome-copilot:agents/se-technical-writer.agent.md
+      derived-guides.md:
+      - github/awesome-copilot:skills/markdown-to-html/SKILL.md#converting-markdown-to-html
+      - davila7/claude-code-templates:cli-tool/components/skills/business-marketing/copy-editing/SKILL.md#the-seven-sweeps-framework
+      - github/awesome-copilot:skills/docs-sync-audit/SKILL.md#evidence-standards
     body: '# Technical writing
 
 
@@ -169,3 +200,6 @@ artifacts:
 
       Update docs in the same change as the code they describe; find stale docs by searching for changed names; record breaking
       changes in the changelog.'
+    reference_notes:
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: Converting Markdown to
+        HTML; The Seven Sweeps Framework; Evidence Standards'

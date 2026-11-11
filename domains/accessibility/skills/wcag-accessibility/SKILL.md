@@ -146,12 +146,14 @@ Switch(
 - `languages:swift` (`references/frameworks/liquid-glass.md`)
 - `languages:swift` (`references/frameworks/swiftui.md`)
 
+Which standard applies (WCAG 2.2, ABNT NBR 17225, NBR 17060, eMAG, EN 301 549, Section 508, ISO 9241), what WCAG 2.2 added, and what to cite in an audit: [`references/standards-map.md`](references/standards-map.md).
+
 ## References
 
 Load only what the task needs:
 
 - [`references/web-react.md`](references/web-react.md) — covers Frontend Accessibility Patterns
-- [`references/wcag-checklist.md`](references/wcag-checklist.md) — covers ADR-ACC-000 Title of the Accessibility Decision; Status; Context; Decision
+- [`references/wcag-checklist.md`](references/wcag-checklist.md) — covers a11y-architect; Status; Context; Decision
 - [`references/implementation-checklists/README.md`](references/implementation-checklists/README.md) — covers Accessibility Standards
 - `references/accessibility-lead/` — orchestrates the specialists below for a UI change
 - `references/aria-specialist/`

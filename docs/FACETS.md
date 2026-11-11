@@ -141,7 +141,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Conteúdo › Redigir (15)</summary>
+<summary>Conteúdo › Redigir (16)</summary>
 
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
 - [`ai-engineering:prompt-engineering`](../domains/ai-engineering/skills/prompt-engineering/SKILL.md)
@@ -158,6 +158,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`marketing:email-marketing`](../domains/marketing/skills/email-marketing/SKILL.md)
 - [`marketing:paid-media`](../domains/marketing/skills/paid-media/SKILL.md)
 - [`marketing:seo`](../domains/marketing/skills/seo/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
 
 </details>
 
@@ -270,7 +271,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Dados › Analisar (14)</summary>
+<summary>Dados › Analisar (19)</summary>
 
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`data:data-pipelines`](../domains/data/skills/data-pipelines/SKILL.md)
@@ -284,6 +285,11 @@ Termos marcados como propostos aguardam revisão humana.
 - [`marketing:email-marketing`](../domains/marketing/skills/email-marketing/SKILL.md)
 - [`marketing:paid-media`](../domains/marketing/skills/paid-media/SKILL.md)
 - [`marketing:seo`](../domains/marketing/skills/seo/SKILL.md)
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
 - [`ux:usability-review`](../domains/ux/skills/usability-review/SKILL.md)
 - [`ux:user-research`](../domains/ux/skills/user-research/SKILL.md)
 
@@ -305,29 +311,34 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Dados › Consultar (3)</summary>
+<summary>Dados › Consultar (4)</summary>
 
 - [`data:data-pipelines`](../domains/data/skills/data-pipelines/SKILL.md)
 - [`data:database-design`](../domains/data/skills/database-design/SKILL.md)
 - [`data:database-migrations`](../domains/data/skills/database-migrations/SKILL.md)
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
 
 </details>
 
 <details>
-<summary>Dados › Transformar (5)</summary>
+<summary>Dados › Transformar (8)</summary>
 
 - [`accessibility:document-accessibility`](../domains/accessibility/skills/document-accessibility/SKILL.md)
 - [`data:data-pipelines`](../domains/data/skills/data-pipelines/SKILL.md)
 - [`data:database-design`](../domains/data/skills/database-design/SKILL.md)
 - [`data:database-migrations`](../domains/data/skills/database-migrations/SKILL.md)
 - [`documents:office-documents`](../domains/documents/skills/office-documents/SKILL.md)
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
 
 </details>
 
 <details>
-<summary>Dados › Visualizar (2)</summary>
+<summary>Dados › Visualizar (3)</summary>
 
 - [`creative-media:presentation-slides`](../domains/creative-media/skills/presentation-slides/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
 - [`ui:design-system`](../domains/ui/skills/design-system/SKILL.md)
 
 </details>
@@ -363,13 +374,14 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Operações › Automatizar (5)</summary>
+<summary>Operações › Automatizar (6)</summary>
 
 - [`platform:deployment`](../domains/platform/skills/deployment/SKILL.md)
 - [`platform:git-workflow`](../domains/platform/skills/git-workflow/SKILL.md)
 - [`platform:github-operations`](../domains/platform/skills/github-operations/SKILL.md)
 - [`platform:incident-response`](../domains/platform/skills/incident-response/SKILL.md)
 - [`platform:reliability`](../domains/platform/skills/reliability/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
 
 </details>
 
@@ -406,7 +418,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Programação › Codificar (18)</summary>
+<summary>Programação › Codificar (19)</summary>
 
 - [`accessibility:wcag-accessibility`](../domains/accessibility/skills/wcag-accessibility/SKILL.md)
 - [`ai-engineering:claude-api`](../domains/ai-engineering/skills/claude-api/SKILL.md)
@@ -426,6 +438,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`languages:swift`](../domains/languages/skills/swift/SKILL.md)
 - [`languages:typescript`](../domains/languages/skills/typescript/SKILL.md)
 - [`principles:coding-discipline`](../domains/principles/skills/coding-discipline/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
 
 </details>
 
@@ -463,7 +476,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Programação › Revisar (19)</summary>
+<summary>Programação › Revisar (20)</summary>
 
 - [`accessibility:wcag-accessibility`](../domains/accessibility/skills/wcag-accessibility/SKILL.md)
 - [`code-quality:code-review`](../domains/code-quality/skills/code-review/SKILL.md)
@@ -484,6 +497,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`languages:rust`](../domains/languages/skills/rust/SKILL.md)
 - [`languages:swift`](../domains/languages/skills/swift/SKILL.md)
 - [`languages:typescript`](../domains/languages/skills/typescript/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
 
 </details>
 
@@ -540,7 +554,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Qualidade › Avaliar (21)</summary>
+<summary>Qualidade › Avaliar (22)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -561,19 +575,22 @@ Termos marcados como propostos aguardam revisão humana.
 - [`ai-engineering:prompt-engineering`](../domains/ai-engineering/skills/prompt-engineering/SKILL.md)
 - [`ai-engineering:rag-pipelines`](../domains/ai-engineering/skills/rag-pipelines/SKILL.md)
 - [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
 - [`ux:usability-review`](../domains/ux/skills/usability-review/SKILL.md)
 - [`ux:user-research`](../domains/ux/skills/user-research/SKILL.md)
 
 </details>
 
 <details>
-<summary>Qualidade › Validar (5)</summary>
+<summary>Qualidade › Validar (7)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:document-accessibility`](../domains/accessibility/skills/document-accessibility/SKILL.md)
 - [`accessibility:wcag-accessibility`](../domains/accessibility/skills/wcag-accessibility/SKILL.md)
 - [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md)
 - [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
 
 </details>
 
@@ -610,14 +627,16 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Raciocínio › Estimar (1)</summary>
+<summary>Raciocínio › Estimar (3)</summary>
 
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
 
 </details>
 
 <details>
-<summary>Raciocínio › Planejar (35)</summary>
+<summary>Raciocínio › Planejar (37)</summary>
 
 - [`agent-engineering:agent-debugging`](../domains/agent-engineering/skills/agent-debugging/SKILL.md)
 - [`agent-engineering:agent-evaluation`](../domains/agent-engineering/skills/agent-evaluation/SKILL.md)
@@ -641,6 +660,8 @@ Termos marcados como propostos aguardam revisão humana.
 - [`operations:people-operations`](../domains/operations/skills/people-operations/SKILL.md)
 - [`operations:project-management`](../domains/operations/skills/project-management/SKILL.md)
 - [`product:product-management`](../domains/product/skills/product-management/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
 - [`security:threat-modeling`](../domains/security/skills/threat-modeling/SKILL.md)
 - [`workflow:brainstorming`](../domains/workflow/skills/brainstorming/SKILL.md)
 - [`workflow:executing-plans`](../domains/workflow/skills/executing-plans/SKILL.md)
@@ -763,16 +784,51 @@ Termos marcados como propostos aguardam revisão humana.
 ## Conhecimento
 
 <details>
-<summary>Ciências exatas, naturais e engenharia › Matemática e estatística (3) — proposto</summary>
+<summary>Ciências exatas, naturais e engenharia › Química e materiais (1) — proposto</summary>
 
-- [`ai-engineering:ml-engineering`](../domains/ai-engineering/skills/ml-engineering/SKILL.md)
-- [`creative-media:generative-art`](../domains/creative-media/skills/generative-art/SKILL.md)
-- [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
 
 </details>
 
 <details>
-<summary>Computação, dados e tecnologias digitais › Inteligência Artificial e Dados (25)</summary>
+<summary>Ciências exatas, naturais e engenharia › Engenharias (2) — proposto</summary>
+
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ciências exatas, naturais e engenharia › Ciências da vida (5) — proposto</summary>
+
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ciências exatas, naturais e engenharia › Matemática e estatística (5) — proposto</summary>
+
+- [`ai-engineering:ml-engineering`](../domains/ai-engineering/skills/ml-engineering/SKILL.md)
+- [`creative-media:generative-art`](../domains/creative-media/skills/generative-art/SKILL.md)
+- [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ciências exatas, naturais e engenharia › Física e astronomia (1) — proposto</summary>
+
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
+
+</details>
+
+<details>
+<summary>Computação, dados e tecnologias digitais › Inteligência Artificial e Dados (26)</summary>
 
 - [`agent-engineering:agent-debugging`](../domains/agent-engineering/skills/agent-debugging/SKILL.md)
 - [`agent-engineering:agent-evaluation`](../domains/agent-engineering/skills/agent-evaluation/SKILL.md)
@@ -798,6 +854,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`research:docs-lookup`](../domains/research/skills/docs-lookup/SKILL.md)
 - [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
 - [`research:source-research`](../domains/research/skills/source-research/SKILL.md)
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
 - [`security:agent-security`](../domains/security/skills/agent-security/SKILL.md)
 
 </details>
@@ -1008,6 +1065,13 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
+<summary>Saúde, educação e desenvolvimento humano › Saúde e medicina (1) — proposto</summary>
+
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+
+</details>
+
+<details>
 <summary>Saúde, educação e desenvolvimento humano › Psicologia e desenvolvimento humano (3) — proposto</summary>
 
 - [`operations:people-operations`](../domains/operations/skills/people-operations/SKILL.md)
@@ -1054,13 +1118,14 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Artes, design e indústrias criativas › Escrita e publicação (5) — proposto</summary>
+<summary>Artes, design e indústrias criativas › Escrita e publicação (6) — proposto</summary>
 
 - [`accessibility:document-accessibility`](../domains/accessibility/skills/document-accessibility/SKILL.md)
 - [`documents:doc-coauthoring`](../domains/documents/skills/doc-coauthoring/SKILL.md)
 - [`documents:internal-comms`](../domains/documents/skills/internal-comms/SKILL.md)
 - [`documents:office-documents`](../domains/documents/skills/office-documents/SKILL.md)
 - [`documents:technical-writing`](../domains/documents/skills/technical-writing/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
 
 </details>
 
@@ -1181,7 +1246,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Skills e capacidades reutilizáveis (112)</summary>
+<summary>Skills e capacidades reutilizáveis (119)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -1270,6 +1335,13 @@ Termos marcados como propostos aguardam revisão humana.
 - [`sales:deal-strategy`](../domains/sales/skills/deal-strategy/SKILL.md)
 - [`sales:investor-relations`](../domains/sales/skills/investor-relations/SKILL.md)
 - [`sales:prospecting`](../domains/sales/skills/prospecting/SKILL.md)
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
 - [`security:agent-security`](../domains/security/skills/agent-security/SKILL.md)
 - [`security:secrets-hygiene`](../domains/security/skills/secrets-hygiene/SKILL.md)
 - [`security:security-audit`](../domains/security/skills/security-audit/SKILL.md)
@@ -1374,9 +1446,17 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Educação (1)</summary>
+<summary>Educação (2)</summary>
 
 - [`accessibility:document-accessibility`](../domains/accessibility/skills/document-accessibility/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
+
+</details>
+
+<details>
+<summary>Energia (1)</summary>
+
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
 
 </details>
 
@@ -1402,11 +1482,36 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Ciência (3)</summary>
+<summary>Saúde (4)</summary>
+
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+
+</details>
+
+<details>
+<summary>Indústria (2)</summary>
+
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ciência (10)</summary>
 
 - [`research:docs-lookup`](../domains/research/skills/docs-lookup/SKILL.md)
 - [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
 - [`research:source-research`](../domains/research/skills/source-research/SKILL.md)
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
 
 </details>
 
@@ -1547,6 +1652,15 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
+<summary>Bioinformatics (3)</summary>
+
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+
+</details>
+
+<details>
 <summary>Brand Strategy (2)</summary>
 
 - [`brand:brand-identity`](../domains/brand/skills/brand-identity/SKILL.md)
@@ -1595,6 +1709,13 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
+<summary>Digital Twins (1)</summary>
+
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
+
+</details>
+
+<details>
 <summary>FinTech (1)</summary>
 
 - [`finance:billing-operations`](../domains/finance/skills/billing-operations/SKILL.md)
@@ -1616,6 +1737,13 @@ Termos marcados como propostos aguardam revisão humana.
 - [`marketing:email-marketing`](../domains/marketing/skills/email-marketing/SKILL.md)
 - [`marketing:paid-media`](../domains/marketing/skills/paid-media/SKILL.md)
 - [`marketing:seo`](../domains/marketing/skills/seo/SKILL.md)
+
+</details>
+
+<details>
+<summary>HealthTech (1)</summary>
+
+- [`science:biomedical-data`](../domains/science/skills/biomedical-data/SKILL.md)
 
 </details>
 
@@ -1665,10 +1793,29 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Research Automation (3)</summary>
+<summary>Research Automation (6)</summary>
 
 - [`research:docs-lookup`](../domains/research/skills/docs-lookup/SKILL.md)
 - [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
 - [`research:source-research`](../domains/research/skills/source-research/SKILL.md)
+- [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
+- [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
+
+</details>
+
+<details>
+<summary>Robotics (1)</summary>
+
+- [`science:lab-automation`](../domains/science/skills/lab-automation/SKILL.md)
+
+</details>
+
+<details>
+<summary>Scientific Computing (3)</summary>
+
+- [`science:bioinformatics`](../domains/science/skills/bioinformatics/SKILL.md)
+- [`science:cheminformatics`](../domains/science/skills/cheminformatics/SKILL.md)
+- [`science:scientific-computing`](../domains/science/skills/scientific-computing/SKILL.md)
 
 </details>

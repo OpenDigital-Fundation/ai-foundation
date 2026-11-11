@@ -91,6 +91,16 @@
               },
               "body": {
                 "type": "string"
+              },
+              "reference_excludes": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  },
+                  "uniqueItems": true
+                }
               }
             },
             "oneOf": [

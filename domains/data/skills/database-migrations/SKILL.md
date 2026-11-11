@@ -435,3 +435,4 @@ Day 7: Migration drops old status column
 Load only what the task needs:
 
 - [`references/cross-engine-migration/README.md`](references/cross-engine-migration/README.md) — covers Oracle-to-PostgreSQL Migration Expert
+- [`references/derived-guides.md`](references/derived-guides.md) — sections merged from other collections where this skill had no equivalent: Key Constraints

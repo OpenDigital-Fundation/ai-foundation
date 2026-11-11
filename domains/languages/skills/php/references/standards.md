@@ -70,3 +70,141 @@ See skill: `architecture:system-design` for broader service/repository layering 
 
 See skill: `architecture:api-design` for endpoint conventions and response-shape guidance.
 See skill: `languages:php` (`references/frameworks/laravel.md`) for Laravel-specific architecture guidance.
+
+## PHP Pro
+
+<!-- source: Jeffallan/claude-skills skills/php-pro/SKILL.md#code-patterns -->
+
+### Code Patterns
+
+Every complete implementation delivers: a typed entity/DTO, a service class, and a test. Use these as the baseline structure.
+
+#### Readonly DTO / Value Object
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\DTO;
+
+final readonly class CreateUserDTO
+{
+    public function __construct(
+        public string $name,
+        public string $email,
+        public string $password,
+    ) {}
+
+    public static function fromArray(array $data): self
+    {
+        return new self(
+            name: $data['name'],
+            email: $data['email'],
+            password: $data['password'],
+        );
+    }
+}
+```
+
+#### Typed Service with Constructor DI
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Services;
+
+use App\DTO\CreateUserDTO;
+use App\Models\User;
+use App\Repositories\UserRepositoryInterface;
+use Illuminate\Support\Facades\Hash;
+
+final class UserService
+{
+    public function __construct(
+        private readonly UserRepositoryInterface $users,
+    ) {}
+
+    public function create(CreateUserDTO $dto): User
+    {
+        return $this->users->create([
+            'name'     => $dto->name,
+            'email'    => $dto->email,
+            'password' => Hash::make($dto->password),
+        ]);
+    }
+}
+```
+
+#### PHPUnit Test Structure
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace Tests\Unit\Services;
+
+use App\DTO\CreateUserDTO;
+use App\Models\User;
+use App\Repositories\UserRepositoryInterface;
+use App\Services\UserService;
+use PHPUnit\Framework\MockObject\MockObject;
+use PHPUnit\Framework\TestCase;
+
+final class UserServiceTest extends TestCase
+{
+    private UserRepositoryInterface&MockObject $users;
+    private UserService $service;
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+        $this->users   = $this->createMock(UserRepositoryInterface::class);
+        $this->service = new UserService($this->users);
+    }
+
+    public function testCreateHashesPassword(): void
+    {
+        $dto  = new CreateUserDTO('Alice', 'alice@example.com', '<test-password>');
+        $user = new User(['name' => 'Alice', 'email' => 'alice@example.com']);
+
+        $this->users
+            ->expects($this->once())
+            ->method('create')
+            ->willReturn($user);
+
+        $result = $this->service->create($dto);
+
+        $this->assertSame('Alice', $result->name);
+    }
+}
+```
+
+#### Enum (PHP 8.1+)
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Enums;
+
+enum UserStatus: string
+{
+    case Active   = 'active';
+    case Inactive = 'inactive';
+    case Banned   = 'banned';
+
+    public function label(): string
+    {
+        return match($this) {
+            self::Active   => 'Active',
+            self::Inactive => 'Inactive',
+            self::Banned   => 'Banned',
+        };
+    }
+}
+```

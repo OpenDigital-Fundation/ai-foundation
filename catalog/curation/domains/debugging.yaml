@@ -38,6 +38,7 @@ artifacts:
   - github/awesome-copilot:rule:performance-optimization.instructions
   - mattpocock/skills:skill:diagnosing-bugs
   - obra/superpowers:skill:systematic-debugging
+  - wshobson/agents:command:error-analysis
 imports:
 - dest: domains/debugging/skills/systematic-debugging
   source: obra/superpowers
@@ -60,3 +61,6 @@ imports:
 - dest: domains/debugging/skills/systematic-debugging/references/browser-regressions/performance-optimization.md
   source: github/awesome-copilot
   src: instructions/performance-optimization.instructions.md
+- dest: domains/debugging/skills/systematic-debugging/references/derived/error-analysis.md
+  source: wshobson/agents
+  src: plugins/error-debugging/commands/error-analysis.md#error-prevention-strategies
