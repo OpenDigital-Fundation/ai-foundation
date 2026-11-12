@@ -12,13 +12,14 @@ without a subagent format.
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 from pathlib import Path
 
 import yaml
 
-from tools.validate.repo import discover
+from tools.validate.repo import discover, parse_frontmatter
 
 
 def _entries(root: Path) -> list[dict]:
@@ -36,8 +37,59 @@ def _agents(root: Path) -> list[str]:
 
 
 def build_agent_skills(root: Path, out: Path, entries: list[dict]) -> None:
+    support = {a.path.resolve() for a in discover(root)
+               if a.type in {"knowledge", "agent", "template"} and a.path.is_file()}
     for e in entries:
-        shutil.copytree(e["dir"], out / e["name"], ignore=shutil.ignore_patterns("evals"))
+        dest = out / e["name"]
+        shutil.copytree(e["dir"], dest, ignore=shutil.ignore_patterns("evals"))
+        _portable_links(root, e["dir"], dest, support)
+
+
+def _portable_links(root: Path, source: Path, dest: Path, support: set[Path]) -> None:
+    """Keep registered public support local to a flat skill, never copy arbitrary paths."""
+    source, dest = source.resolve(), dest.resolve()
+    domains = (root / "domains").resolve()
+    pending = [(source / p.relative_to(dest), p) for p in sorted(dest.rglob("*.md"))]
+    copied: dict[Path, Path] = {}
+    link = re.compile(r"(?P<head>\]\()(?P<target>(?!https?://|#|mailto:|/)[^)\s]+)(?P<tail>\))")
+    while pending:
+        src, projected = pending.pop()
+
+        def replace(match):
+            path, marker, fragment = match["target"].partition("#")
+            target = (src.parent / path).resolve()
+            if target.is_relative_to(source):
+                local = dest / target.relative_to(source)
+                if not local.exists():
+                    raise ValueError(f"{src}: reference excluded from package: {path}")
+            else:
+                if target not in support or not target.is_relative_to(domains):
+                    raise ValueError(f"{src}: reference is not registered public support: {path}")
+                local = copied.get(target)
+                if local is None:
+                    local = dest / "references/catalog-support" / target.relative_to(domains)
+                    if local.exists():
+                        raise ValueError(f"reserved adapter support destination already exists: {local}")
+                    local.parent.mkdir(parents=True, exist_ok=True)
+                    shutil.copy2(target, local)
+                    copied[target] = local
+                    if target.suffix == ".md":
+                        pending.append((target, local))
+            rel = Path(os.path.relpath(local, projected.parent)).as_posix()
+            return match["head"] + rel + (marker + fragment if marker else "") + match["tail"]
+
+        original = projected.read_text()
+        parts = re.split(r"(?ms)(^```.*?^```|^~~~.*?^~~~)", original)
+        def prose(part):
+            spans = re.split(r"(`[^`\n]*`)", part)
+            return "".join(span if n % 2 else link.sub(replace, span) for n, span in enumerate(spans))
+        rewritten = "".join(part if i % 2 else prose(part) for i, part in enumerate(parts))
+        if rewritten != original:
+            projected.write_text(rewritten)
+    if copied:
+        origins = {p.relative_to(dest).as_posix(): s.relative_to(root.resolve()).as_posix()
+                   for s, p in sorted(copied.items())}
+        (dest / "references/catalog-support/origins.json").write_text(json.dumps(origins, indent=2) + "\n")
 
 
 def _relink(text: str, prefix: str) -> str:
@@ -50,14 +102,16 @@ def _relink(text: str, prefix: str) -> str:
 def build_cursor(root: Path, out: Path, entries: list[dict]) -> None:
     rules = out / ".cursor/rules"
     rules.mkdir(parents=True)
+    build_agent_skills(root, out / ".agents/skills", entries)
     for e in entries:
         always = e["domain"] == "principles"
         head = {"description": e["description"], "globs": "", "alwaysApply": always}
+        projected = out / ".agents/skills" / e["name"] / "SKILL.md"
+        _, projected_body = parse_frontmatter(projected.read_text())
         body = (f"# {e['name']}\n\nThis rule mirrors the `{e['id']}` skill. Its references and scripts are installed at "
                 f"`~/.agents/skills/{e['name']}/` (or the project's `.agents/skills/{e['name']}/`); open them when the steps below say so.\n\n"
-                + _relink(e["body"].strip(), f"../../.agents/skills/{e['name']}/") + "\n")
+                + _relink(projected_body.strip(), f"../../.agents/skills/{e['name']}/") + "\n")
         (rules / f"{e['name']}.mdc").write_text("---\n" + yaml.safe_dump(head, sort_keys=False, width=1000) + "---\n" + body)
-    build_agent_skills(root, out / ".agents/skills", entries)
 
 
 def build_gemini(root: Path, out: Path, entries: list[dict]) -> None:

@@ -23,3 +23,10 @@
 
 
 Os casos escritos da candidata conjunta são 70 gatilhos (5 positivos/5 negativos por skill), 17 rotas e 14 tarefas sintéticas, sem execução com modelo. Imports mapeiam a origem dos recursos mantidos diretamente; não são uma instrução para substituir esta árvore cegamente por ferramentas de curadoria. Overrides guardam os nove arquivos adaptados para uma futura atualização revisada contra o mesmo pin.
+
+
+## Ampliação — find interno
+
+A busca interna agora tem CLI local e script portátil, com índice gerado a partir dos 144 artefatos do catálogo. Ela consulta apenas metadados públicos/aliases pt/en e retorna motivos lexicais, sem rede, instalação ou leitura de sessões. Verificação concluída em 2026-11-12: 19 casos novos de busca passaram, incluindo filtros, acentos/caixa, consulta por ID, ausência de resultado, índice desatualizado e execução portátil fora do checkout. O comando padrão passou com 216 testes depois de corrigida a exclusão implícita de tools/build pelo pytest. A coleta passou a incluir os quatro testes de build preexistentes e três novas regressões de empacotamento. O teste antigo revelou link quebrado para conhecimento de segurança, corrigido com cópia privada de suporte público registrado e mapa de origem; links arbitrários fora do suporte são recusados, e exemplos literais de Markdown são preservados. Descrições de adaptadores são comparadas à fonte, conforme o schema, em lugar de exigir um prefixo inglês específico.
+
+Validador: 0 erros/0 avisos. Índice reconstruído com hash estável; os quatro adaptadores têm 140 skills/workflows e executaram o find portátil para Bloom a partir de diretório vazio, sem escrita nele, rede ou inspeção de instalações. Os links de suporte de security-audit e executing-plans também resolvem nos quatro pacotes. Os 12 casos quantitativos do runtime de mensuração já haviam passado e seu código não mudou nesta ampliação. O commit anterior é preservado como pai do complemento assinado; nenhum push ou merge foi executado.

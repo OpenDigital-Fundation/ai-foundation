@@ -214,4 +214,8 @@ def write_all(root: Path) -> list[Path]:
         p = root / "docs" / name
         p.write_text(text)
         written.append(p)
+    from tools.build.search import write as write_search
+    search_index = write_search(root)
+    if search_index is not None:
+        written.append(search_index)
     return written

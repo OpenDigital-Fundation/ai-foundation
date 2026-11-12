@@ -41,3 +41,9 @@ Profiles iniciais: `fullstack-web`, `backend-service`, `security-review`, `agent
 
 - Harnesses mudam formato com frequência. Mitigação: um adaptador por harness, com teste de snapshot da saída.
 - Skills que dependem de ferramentas do Claude Code (subagentes, hooks). Mitigação: `metadata.requires` no frontmatter; o adaptador omite ou degrada com aviso.
+
+## Referências na projeção plana — correção de 2026-11-12
+
+A coleta dos quatro testes existentes de tools/build revelou que security-audit exportava um link para knowledge externo à pasta da skill sem transportar o arquivo. Executing-plans também referencia o agente canônico code-reviewer em outro domínio. No adaptador, copiar somente alvos que discover reconhece como arquivos públicos de tipo knowledge/agent/template para references/catalog-support/<caminho canônico em domains>, reescrevendo links relativos e preservando fragmentos. Documentar a origem canônica em um pequeno mapa do suporte copiado. Não copiar a árvore inteira do domínio nem executar arquivos.
+
+As quatro projeções reutilizam a mesma rotina; Cursor gera seu corpo a partir da entrada já projetada para manter os destinos corretos. Testar portabilidade de conhecimento com âncora, rejeição de alvo arbitrário e o pacote completo. Descrições projetadas devem preservar a fonte, sem pressupor um prefixo inglês que o schema de frontmatter não exige.

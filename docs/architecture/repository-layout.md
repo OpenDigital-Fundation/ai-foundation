@@ -84,6 +84,12 @@ Os demais tipos públicos (`prompts`, `rules`, `hooks`, `mcps`, `templates`) seg
 
 Cada plugin e cada projeção de skill precisa carregar seus próprios arquivos auxiliares. Não criar caminhos relativos entre plugins, symlinks para uma biblioteca central de fontes nem deduplicar assets apenas por hash. Cópia byte a byte entre pacotes independentes pode ser necessária; duplicidade de capacidade é uma decisão semântica diferente.
 
+## Busca interna de capacidades
+
+`python -m tools.catalog find "design instrucional" --json` consulta os metadados locais sem rede ou instalação. Filtros `--domain`, `--type` e `--limit` reduzem o resultado. A skill skill-discovery inclui o mesmo mecanismo em scripts/find.py para clientes exportados.
+
+O snapshot privado `domains/agent-engineering/skills/skill-discovery/assets/catalog-index.json` é gerado por `python -m tools.build docs` a partir de catálogo, facetas/vocabulários e termos autorais em assets/search-terms.json da skill. Não editar o índice; o validador recusa projeção desatualizada. A busca é lexical e informa disponibilidade no catálogo, sem presumir instalação no cliente.
+
 ## Antes de uma contribuição
 
 1. Consultar o catálogo e a spec do domínio dono; melhorar uma capacidade existente quando ela já cobre a intenção.

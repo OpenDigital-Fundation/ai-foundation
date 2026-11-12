@@ -2,6 +2,7 @@
 
 python -m tools.catalog rebuild
 python -m tools.catalog apply <changes.yaml>
+python -m tools.catalog find <query> [--domain <domain>] [--type skill] [--json]
 
 Changes to artifacts/exclusions are recorded in catalog/curation/ before rebuilding.
 Provenance updates belong to the published domain's PROVENANCE.yaml.
@@ -85,7 +86,10 @@ def rebuild(root: Path) -> None:
 
 if __name__ == "__main__":
     root = Path(".").resolve()
-    if sys.argv[1:] == ["rebuild"]:
+    if sys.argv[1:2] == ["find"]:
+        from tools.build.search import find
+        raise SystemExit(find(root, sys.argv[2:]))
+    elif sys.argv[1:] == ["rebuild"]:
         rebuild(root)
     elif len(sys.argv) == 3 and sys.argv[1] == "apply":
         apply(root, yaml.safe_load(Path(sys.argv[2]).read_text()))

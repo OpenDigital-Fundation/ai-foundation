@@ -13,3 +13,8 @@ Source URL and commit; file/local license; intended task; host/runtime requireme
 If the registry lists a skill but its repository is inaccessible, state that inspection was incomplete. If no matching candidate is found, describe the searched scope and offer direct work or an original spec-backed addition. Do not present “not found here” as proof that none exists anywhere.
 
 Installation is a separate action with a concrete reviewed target and appropriate approval. Online install counts and GitHub stars, if reported at all, need source/date and do not establish safety, effectiveness or license permission.
+
+
+## Internal lookup examples
+
+Use short queries: `design instrucional`, `taxonomia de Bloom`, `aprender`, `ensinar`, `avaliação da aprendizagem`, `design jurídico` and `Session Lens`. The local command indexes public metadata and curated aliases, without executing a package or scanning installed agents. An absent match is a lexical-search limit, not proof that the capability is absent; browse the domain before proposing a duplicate.

@@ -1,0 +1,89 @@
+{
+  "education/learn": [
+    "aprender",
+    "estudar",
+    "plano de estudo",
+    "recuperação ativa",
+    "repetição espaçada",
+    "tutoria individual"
+  ],
+  "education/teach": [
+    "ensinar",
+    "aula",
+    "plano de aula",
+    "oficina",
+    "prática guiada",
+    "facilitação de ensino"
+  ],
+  "education/instructional-design": [
+    "design instrucional",
+    "desenho instrucional",
+    "taxonomia de Bloom",
+    "currículo",
+    "curso",
+    "objetivos de aprendizagem",
+    "alinhamento pedagógico"
+  ],
+  "education/learning-assessment": [
+    "avaliação da aprendizagem",
+    "rubrica",
+    "prova",
+    "questões",
+    "feedback formativo",
+    "avaliação educacional"
+  ],
+  "legal-compliance/legal-design": [
+    "legal design",
+    "design jurídico",
+    "linguagem simples",
+    "documento jurídico",
+    "jornada jurídica"
+  ],
+  "legal-compliance/contracts": [
+    "contratos",
+    "cláusulas",
+    "revisão contratual"
+  ],
+  "legal-compliance/compliance-programs": [
+    "conformidade",
+    "programa de conformidade",
+    "privacidade jurídica"
+  ],
+  "agent-engineering/skill-discovery": [
+    "find skills",
+    "find-skills",
+    "busca interna",
+    "descoberta de skills",
+    "encontrar skills",
+    "catálogo interno"
+  ],
+  "agent-engineering/session-observability": [
+    "session lens",
+    "mensuração de agentes",
+    "uso de skills",
+    "tokens",
+    "custos por sessão",
+    "observabilidade de sessões"
+  ],
+  "agent-engineering/context-management": [
+    "janela de contexto",
+    "orçamento de contexto",
+    "compactação"
+  ],
+  "agent-engineering/agent-memory": [
+    "memória de agentes",
+    "lições entre sessões"
+  ],
+  "infrastructure/network-operations": [
+    "redes",
+    "diagnóstico de rede",
+    "roteamento",
+    "segmentação",
+    "BGP"
+  ],
+  "infrastructure/homelab-operations": [
+    "homelab",
+    "auto hospedagem",
+    "laboratório doméstico"
+  ]
+}

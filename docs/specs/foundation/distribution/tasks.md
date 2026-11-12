@@ -9,3 +9,5 @@
 - [x] **T7.** `release.yml`: em tag `v*.*.*`, testa, valida, gera os quatro pacotes e publica a release com notas geradas.
 - [x] **T8.** `tools.inventory.sync_report` + `upstream-sync.yml` semanal: fontes que andaram, artefatos novos/removidos/alterados e arquivos derivados (via PROVENANCE) que mudaram; abre issue, nunca altera conteúdo. Verificado localmente em 2026-11-06 (ECC e anthropics/skills andaram; nenhum arquivo derivado mudou).
 - [ ] **T9.** Verificar cada pacote num harness real (Codex, Cursor, Gemini CLI, OpenCode): carregamento e gatilho de uma skill-piloto.
+
+- [x] **T10.** Preservar referências públicas de suporte nas projeções planas, recusar alvos arbitrários e verificar com os testes de build incluídos na coleta padrão.

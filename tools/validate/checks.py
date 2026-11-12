@@ -397,4 +397,6 @@ def run_all(root: Path) -> tuple[list[str], list[str]]:
     errs += check_frontmatter(root, arts) + check_catalog_bijection(root, arts) + check_names(root, arts)
     sim_errs, warns = check_similarity(root, arts)
     errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root) + check_no_orphans(root) + check_facets(root)
+    from tools.build.search import check as check_search
+    errs += check_search(root)
     return errs, warns

@@ -19,6 +19,7 @@ O usuário precisa instalar só os domínios que usa, em vários harnesses, sem 
 - **R6. Versionamento.** SemVer por domínio; release do repositório agrega. Changelog gerado de Conventional Commits.
 - **R7. Atualização upstream.** Job agendado clona as fontes no HEAD, compara com o lock e abre issue com o diff dos artefatos `supersedes` (novos, alterados, removidos). Nunca atualiza conteúdo automaticamente.
 - **R8. Sem efeito colateral na instalação.** Nada de telemetria, auto-update, hook ativo por padrão ou escrita fora do diretório do plugin.
+- **R9. Referências portáteis.** Ao achatar uma skill para um cliente, incluir como referências privadas os arquivos públicos de conhecimento/agentes/templates de que seus links dependem e reescrever os links relativos, inclusive no corpo da regra Cursor. Preservar o dono canônico, sem criar outra entrada pública. Recusar destinos não registrados ou fora de domains; não copiar diretórios pessoais/configuração/arquivos arbitrários do repositório. Dados/pacotes internos de cada skill continuam copiados com a árvore original. Nenhum código referenciado é executado pelo build.
 
 ## Critérios de aceite
 
