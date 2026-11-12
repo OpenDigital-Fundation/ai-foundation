@@ -1,0 +1,57 @@
+# Written routing cases; model-backed evaluations have not been executed.
+- prompt: Design a resource economy and playtest plan for our cooperative game.
+  expect: games:game-design
+- prompt: Desenhe o loop principal e a progressão de níveis deste jogo.
+  expect: games:game-design
+- prompt: Review scene ownership and server-authoritative replication in our game build.
+  expect: games:game-engineering
+- prompt: Planeje save/load, streaming e profiling do nosso jogo em Godot.
+  expect: games:game-engineering
+- prompt: Assess CRS, spatial dependence and accuracy before mapping these geographic layers.
+  expect: geospatial:geospatial-analysis
+- prompt: Analise estas camadas raster e vetoriais e valide a precisão geográfica.
+  expect: geospatial:geospatial-analysis
+- prompt: Build a versioned PostGIS-to-vector-tile delivery pipeline with spatial QA.
+  expect: geospatial:geospatial-engineering
+- prompt: Projete a integração BIM/GIS com datum vertical e unidades explícitas.
+  expect: geospatial:geospatial-engineering
+- prompt: Design tracked input, comfort settings and fallback behaviour for a WebXR app.
+  expect: extended-reality:immersive-development
+- prompt: Planeje uma experiência AR/VR com rastreamento, escala espacial e teste de conforto.
+  expect: extended-reality:immersive-development
+- prompt: Review this EHR encounter/addendum workflow and FHIR version contract using synthetic fixtures.
+  expect: healthcare:health-informatics
+- prompt: Projete o fluxo de prontuário e interoperabilidade com validação clínica e dados sintéticos.
+  expect: healthcare:health-informatics
+- prompt: Prepare a source-verified clinical evidence brief for a professional, without patient-specific treatment advice.
+  expect: healthcare:clinical-evidence
+- prompt: Avalie a evidência desta alegação clínica com fontes e limites de aplicabilidade.
+  expect: healthcare:clinical-evidence
+- prompt: Draft a clinical handoff from verified de-identified facts and clinician-supplied decisions.
+  expect: healthcare:clinical-documentation
+- prompt: Organize uma minuta de nota clínica sem inventar achados, doses ou decisões ausentes.
+  expect: healthcare:clinical-documentation
+- prompt: Plan invariants and local tests for this upgradeable Solidity contract.
+  expect: web3:smart-contract-development
+- prompt: Revise a arquitetura e os testes locais deste smart contract sem fazer deploy.
+  expect: web3:smart-contract-development
+- prompt: Model share inflation, rounding and oracle assumptions in this AMM protocol.
+  expect: web3:defi-engineering
+- prompt: Verifique as unidades e os invariantes de um mecanismo DeFi com tokens de decimais diferentes.
+  expect: web3:defi-engineering
+- prompt: Diagnose an authorized BGP session and VLAN forwarding problem with read-only evidence.
+  expect: infrastructure:network-operations
+- prompt: Revise DNS, rotas e segmentação desta rede sem aplicar alterações.
+  expect: infrastructure:network-operations
+- prompt: Plan a small self-hosted lab with storage, backups and recoverable DNS changes.
+  expect: infrastructure:homelab-operations
+- prompt: Organize meu homelab com inventário, endereços e recuperação de serviços.
+  expect: infrastructure:homelab-operations
+- prompt: Compare replenishment and supplier-capacity scenarios for this physical inventory.
+  expect: logistics:supply-chain-planning
+- prompt: Planeje estoques e fornecedores com demanda, lead time e custo total explícitos.
+  expect: logistics:supply-chain-planning
+- prompt: Triage these delayed shipments and returns using contractual evidence and approval boundaries.
+  expect: logistics:logistics-operations
+- prompt: Organize ocorrências de transporte, transportadoras e logística reversa.
+  expect: logistics:logistics-operations

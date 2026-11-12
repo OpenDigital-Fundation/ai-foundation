@@ -13,10 +13,6 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:agent:harmonyos-app-resolver"
   reason: out-of-scope
-- key: "affaan-m/ECC:agent:healthcare-reviewer"
-  reason: out-of-scope
-- key: "affaan-m/ECC:agent:homelab-architect"
-  reason: out-of-scope
 - key: "affaan-m/ECC:agent:network-architect"
   reason: out-of-scope
 - key: "affaan-m/ECC:agent:network-config-reviewer"
@@ -439,8 +435,6 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:skill:blender-motion-state-inspection"
   reason: out-of-scope
-- key: "affaan-m/ECC:skill:carrier-relationship-management"
-  reason: out-of-scope
 - key: "affaan-m/ECC:skill:cisco-ios-patterns"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:ck"
@@ -463,8 +457,6 @@ excluded:
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:deepseek-harness-setup"
   reason: source-internal
-- key: "affaan-m/ECC:skill:defi-amm-security"
-  reason: out-of-scope
 - key: "affaan-m/ECC:skill:dmux-workflows"
   reason: source-internal
 - key: "affaan-m/ECC:skill:dynamic-workflow-mode"
@@ -481,8 +473,6 @@ excluded:
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:esign-field-placement"
   reason: out-of-scope
-- key: "affaan-m/ECC:skill:evm-token-decimals"
-  reason: out-of-scope
 - key: "affaan-m/ECC:skill:exa-search"
   reason: vendor-specific
   note: "Tool-specific; research:source-research uses whatever search tools the session has."
@@ -498,8 +488,6 @@ excluded:
   reason: vendor-specific
 - key: "affaan-m/ECC:skill:healthcare-cdss-patterns"
   reason: out-of-scope
-- key: "affaan-m/ECC:skill:healthcare-emr-patterns"
-  reason: out-of-scope
 - key: "affaan-m/ECC:skill:healthcare-eval-harness"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:healthcare-phi-compliance"
@@ -507,16 +495,6 @@ excluded:
 - key: "affaan-m/ECC:skill:hermes-imports"
   reason: source-internal
 - key: "affaan-m/ECC:skill:hipaa-compliance"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:homelab-network-readiness"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:homelab-network-setup"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:homelab-pihole-dns"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:homelab-vlan-segmentation"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:homelab-wireguard-vpn"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:hookify-rules"
   reason: source-internal
@@ -534,8 +512,6 @@ excluded:
   reason: source-internal
 - key: "affaan-m/ECC:skill:llm-trading-agent-security"
   reason: out-of-scope
-- key: "affaan-m/ECC:skill:logistics-exception-management"
-  reason: out-of-scope
 - key: "affaan-m/ECC:skill:mailtrap-email-integration"
   reason: vendor-specific
 - key: "affaan-m/ECC:skill:manim-video"
@@ -549,12 +525,6 @@ excluded:
 - key: "affaan-m/ECC:skill:nasiko-control-plane"
   reason: source-internal
 - key: "affaan-m/ECC:skill:netmiko-ssh-automation"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:network-bgp-diagnostics"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:network-config-validation"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:network-interface-health"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:nodejs-keccak256"
   reason: source-internal
@@ -594,8 +564,6 @@ excluded:
 - key: "affaan-m/ECC:skill:recursive-decision-ledger"
   reason: source-internal
 - key: "affaan-m/ECC:skill:remotion-video-creation"
-  reason: out-of-scope
-- key: "affaan-m/ECC:skill:returns-reverse-logistics"
   reason: out-of-scope
 - key: "affaan-m/ECC:skill:santa-method"
   reason: source-internal
@@ -863,8 +831,6 @@ excluded:
 - key: "millionco/react-doctor:skill:improve-threejs"
   reason: out-of-scope
   note: Three.js work is out of scope in v1.
-- key: "msitarzewski/agency-agents:agent:3D & Scene Developer"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Aging Parent Care Companion"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Anthropologist"
@@ -875,13 +841,9 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Bilibili Content Strategist"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:BIM/GIS Specialist"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Blender Add-on Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Blockchain Security Auditor"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Cartography Designer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:China E-Commerce Operator"
   reason: out-of-scope
@@ -890,8 +852,6 @@ excluded:
 - key: "msitarzewski/agency-agents:agent:China Network Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Civil Engineer"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Clinical Evidence Agent"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:CMS Developer"
   reason: out-of-scope
@@ -905,13 +865,9 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Douyin Strategist"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Drone/Reality Mapping Specialist"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Drupal Performance Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Drupal Shopping Cart Engineer"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Economy Designer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Electrical Engineer"
   reason: out-of-scope
@@ -931,27 +887,13 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:French Consulting Market Navigator"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Game Audio Engineer"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Game Designer"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:GaussDB Expert Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:GeoAI/ML Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Geographer"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Geoprocessing Specialist"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:GIS Analyst"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:GIS QA Engineer"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Global Podcast Strategist"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Godot Gameplay Scripter"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Godot Multiplayer Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Godot Shader Developer"
   reason: out-of-scope
@@ -977,8 +919,6 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Legal Billing & Time Tracking"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Level Designer"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Livestream Commerce Coach"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Loan Officer Assistant"
@@ -992,8 +932,6 @@ excluded:
 - key: "msitarzewski/agency-agents:agent:Medical Billing & Coding Specialist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Multi-Platform Publisher"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Narrative Designer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Narratologist"
   reason: out-of-scope
@@ -1021,8 +959,6 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Roblox Experience Designer"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Roblox Systems Scripter"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Sales Data Extraction Agent"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Salesforce Architect"
@@ -1034,22 +970,14 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Short-Video Editing Coach"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Solidity Smart Contract Engineer"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Solution Engineer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Sovereign Health Systems Agent"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Spatial Data Engineer"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Spatial Data Scientist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Strategy Duel Agent"
   reason: low-quality
   note: Persona without a verifiable procedure.
 - key: "msitarzewski/agency-agents:agent:Study Abroad Advisor"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Supply Chain Strategist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Technical Artist"
   reason: out-of-scope
@@ -1063,8 +991,6 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:TikTok Strategist"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Unity Architect"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Unity Editor Tool Developer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Unity Multiplayer Engineer"
@@ -1073,11 +999,7 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Unreal Multiplayer Architect"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Unreal Systems Engineer"
-  reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Unreal Technical Artist"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Unreal World Builder"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:USWDS Developer"
   reason: out-of-scope
@@ -1085,10 +1007,10 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Video Streaming Engineer"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:visionOS Spatial Engineer"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:Web GIS Developer"
-  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:visionOS Spatial Engineer
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed
+    XR workflow uses the permissive vr-ar guide with device-specific budgets instead.
 - key: "msitarzewski/agency-agents:agent:WeChat Mini Program Developer"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:WeChat Official Account Manager"
@@ -1101,12 +1023,18 @@ excluded:
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:Xiaohongshu Specialist"
   reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:XR Cockpit Interaction Specialist"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:XR Immersive Developer"
-  reason: out-of-scope
-- key: "msitarzewski/agency-agents:agent:XR Interface Architect"
-  reason: out-of-scope
+- key: msitarzewski/agency-agents:agent:XR Cockpit Interaction Specialist
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed
+    XR workflow uses the permissive vr-ar guide with device-specific budgets instead.
+- key: msitarzewski/agency-agents:agent:XR Immersive Developer
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed
+    XR workflow uses the permissive vr-ar guide with device-specific budgets instead.
+- key: msitarzewski/agency-agents:agent:XR Interface Architect
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed
+    XR workflow uses the permissive vr-ar guide with device-specific budgets instead.
 - key: "msitarzewski/agency-agents:agent:Zhihu Strategist"
   reason: out-of-scope
 - key: "msitarzewski/agency-agents:agent:ZK Steward"
@@ -11299,9 +11227,6 @@ excluded:
   into:
   - testing/verification-before-completion
   note: "Near copy of obra/superpowers:skill:verification-before-completion (similarity 1.00), already merged into testing/verification-before-completion."
-- key: "wshobson/agents:skill:web3-testing"
-  reason: out-of-scope
-  note: "Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning capability."
 - key: "davila7/claude-code-templates:skill:webapp-testing"
   reason: duplicate-of
   into:
@@ -13365,9 +13290,6 @@ excluded:
   into:
   - platform/reliability
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "wshobson/agents:skill:nft-standards"
-  reason: out-of-scope
-  note: "Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning capability."
 - key: "davila7/claude-code-templates:skill:notion-knowledge-capture"
   reason: vendor-specific
   note: "Near copy of openai/skills:skill:notion-knowledge-capture (similarity 0.98); the same decision applies."
@@ -13846,9 +13768,6 @@ excluded:
   into:
   - agent-engineering/harness-design
   note: "Overlaps the owner skill's procedure; merged items from stronger sources already cover it."
-- key: "davila7/claude-code-templates:skill:vr-ar"
-  reason: out-of-scope
-  note: "Career, supply-chain operations, games, blockchain, trading, reverse engineering or medical-device QMS; no owning capability."
 - key: "davila7/claude-code-templates:skill:wealthville-pool-scoring"
   reason: vendor-specific
   note: "Bound to one product or hosted service. (the folder wraps one service)."
@@ -14579,15 +14498,6 @@ excluded:
 - key: "K-Dense-AI/claude-scientific-skills:skill:get-available-resources"
   reason: vendor-specific
   note: "Bound to one commercial platform, hosted API or harness; no portable procedure to keep."
-- key: "K-Dense-AI/claude-scientific-skills:skill:clinical-decision-support"
-  reason: out-of-scope
-  note: "Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain)."
-- key: "K-Dense-AI/claude-scientific-skills:skill:clinical-reports"
-  reason: out-of-scope
-  note: "Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain)."
-- key: "K-Dense-AI/claude-scientific-skills:skill:treatment-plans"
-  reason: out-of-scope
-  note: "Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain)."
 - key: "K-Dense-AI/claude-scientific-skills:skill:pkpd-modeling"
   reason: out-of-scope
   note: "Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain)."

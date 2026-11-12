@@ -46,7 +46,16 @@ O catálogo é dividido nestes domínios, cada um com uma frase de fronteira. Um
 | `legal-compliance` | Contratos, conformidade regulatória, privacidade jurídica. |
 | `operations` | Gestão de projetos, pessoas, suporte ao cliente, processos. |
 
-Domínios novos exigem ADR. Nichos verticais vão para `catalog/exclusions.yaml` até haver demanda (ver ROADMAP).
+| `science` | Ciência computacional e dados biomédicos de pesquisa; apoio clínico pertence a healthcare. |
+| `games` | Regras, loops, progressão, níveis e implementação de jogos em engines, incluindo estado, cena, desempenho, áudio e multiplayer. Arte e interface genéricas continuam em creative-media/ui; programação genérica continua em languages. |
+| `geospatial` | Análise e engenharia de dados georreferenciados: sistemas de referência, geometria, raster/vetor, cartografia e serviços GIS. ETL genérico continua em data e modelos genéricos em ai-engineering. |
+| `extended-reality` | Aplicações imersivas AR/VR/XR: coordenadas espaciais, interação corporal, conforto, percepção e integração com runtimes espaciais. Jogos ficam em games; estilos visuais genéricos continuam em ui. |
+| `healthcare` | Sistemas e interoperabilidade de saúde, preparação de evidência para profissionais e documentação clínica rastreável. Dados biomédicos para pesquisa continuam em science; revisão de literatura genérica em research; privacidade jurídica em legal-compliance. |
+| `web3` | Construção e verificação de contratos e protocolos blockchain/DeFi. Auditoria genérica continua em security; contabilidade em finance; não oferece recomendação de investimento nem executa transações de valor real. |
+| `infrastructure` | Infraestrutura de rede e laboratórios auto-hospedados: conectividade, segmentação, DNS, VPN, hardware, recuperação e operação local. CI/CD, deploy de aplicações e SRE genérico continuam em platform. |
+| `logistics` | Planejamento de suprimentos e operação física de transporte, exceções, transportadoras, estoque e logística reversa. Gestão de projeto genérica fica em operations; segurança de dependências de software não é logística. |
+
+Domínios novos exigem ADR. Outros nichos verticais vão para `catalog/exclusions.yaml` até haver demanda (ver ROADMAP).
 
 ### R2. Unicidade: uma capacidade, um artefato
 

@@ -1,0 +1,7 @@
+should_trigger:
+- Review this EHR encounter/addendum workflow and FHIR version contract using synthetic
+  fixtures.
+- Projete o fluxo de prontuário e interoperabilidade com validação clínica e dados
+  sintéticos.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

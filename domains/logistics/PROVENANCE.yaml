@@ -1,0 +1,30 @@
+version: 1
+files:
+- path: skills/logistics-operations/references/carrier-relationship-management.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/carrier-relationship-management/SKILL.md#carrier-scorecarding,portfolio-strategy,carrier-selection-for-new-lanes,when-to-consolidate-vs-diversify,carrier-exit-criteria
+    license: MIT
+    modification: merged-section
+- path: skills/logistics-operations/references/logistics-exception-management.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/logistics-exception-management/SKILL.md#exception-taxonomy,severity-classification,priority-sequencing,tone-calibration
+    license: MIT
+    modification: merged-section
+- path: skills/logistics-operations/references/returns-reverse-logistics.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/returns-reverse-logistics/SKILL.md#inspection-and-grading,disposition-decision-trees,vendor-recovery,return-policy-exception-logic
+    license: MIT
+    modification: merged-section
+- path: skills/supply-chain-planning/references/supply-chain-strategist.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: specialized/supply-chain-strategist.md#inventory-management-strategies,tco-total-cost-of-ownership-analysis,supply-chain-risk-assessment,multi-source-procurement-strategy,workflow
+    license: MIT
+    modification: merged-section

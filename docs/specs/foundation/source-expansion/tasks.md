@@ -25,7 +25,7 @@
 
 - [x] **T6.** Concluir a rodada parcial de derivações em donos mantidos à mão: seleção revisada, destino e escopo corrigidos, imports/proveniência por seção, exclusões consistentes e regressões de fragmentos/títulos verificadas.
 - [x] **T7.1.** Revisar o conjunto restante (coleções, ciência, UX, negócios e derivações) contra a main; verificar licenças, scripts e reconstrução estável.
-- [ ] **T7.2.** Publicar o snapshot saneado por PR após aprovação específica do destino e commit; conferir CI e integração na main.
+- [x] **T7.2.** Publicar o snapshot saneado por PR após aprovação específica do destino e commit; conferir CI e integração na main.
 
 ### Evidência de fechamento local — 2026-11-11
 
@@ -38,3 +38,5 @@
 
 - Os 57 arquivos da rodada parcial original permanecem preservados, junto com refs e snapshot de recuperação. Como commits locais antigos contêm os arquivos LPPL, a publicação usa um novo commit assinado cujo único pai é a main publicada; as branches antigas ficam locais, sem reescrever a história publicada.
 - Limites: revisão estática e dirigida, sem avaliação paga, instalação em agentes ou validação científica/operacional. Todas as capacidades continuam experimentais. A publicação é a T7.2, separada da preparação local. Relatório: [integração restante](../../../reviews/remaining-integration.md).
+
+- Encerramento T7.2: PR #7 integrado em 2026-11-11 no commit assinado 7d840dc4ba2c00315d4aca89a46c80fb4e733e52; CI do PR e da main verdes, 190 testes e validador 0/0. A nova demanda de domínios especializados tem sete specs próprias listadas no ROADMAP.

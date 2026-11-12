@@ -2,7 +2,7 @@
 
 <!-- Gerado por `python -m tools.build docs` a partir de catalog/. Não editar. -->
 
-123 artefatos em 26 domínios. Tipos: 1 agent, 3 knowledge, 118 skill, 1 workflow.
+137 artefatos em 33 domínios. Tipos: 1 agent, 3 knowledge, 132 skill, 1 workflow.
 
 [Início](../README.md) · [Buscar por faceta](FACETS.md) · [Como manter](architecture/repository-layout.md)
 
@@ -18,9 +18,15 @@
 - [data](#data) — 3 artefatos
 - [debugging](#debugging) — 2 artefatos
 - [documents](#documents) — 4 artefatos
+- [extended-reality](#extended-reality) — 1 artefatos
 - [finance](#finance) — 3 artefatos
+- [games](#games) — 2 artefatos
+- [geospatial](#geospatial) — 2 artefatos
+- [healthcare](#healthcare) — 3 artefatos
+- [infrastructure](#infrastructure) — 2 artefatos
 - [languages](#languages) — 13 artefatos
 - [legal-compliance](#legal-compliance) — 2 artefatos
+- [logistics](#logistics) — 2 artefatos
 - [marketing](#marketing) — 5 artefatos
 - [operations](#operations) — 3 artefatos
 - [platform](#platform) — 5 artefatos
@@ -33,6 +39,7 @@
 - [testing](#testing) — 4 artefatos
 - [ui](#ui) — 4 artefatos
 - [ux](#ux) — 2 artefatos
+- [web3](#web3) — 2 artefatos
 - [workflow](#workflow) — 12 artefatos
 
 ## accessibility
@@ -175,6 +182,16 @@ Office documents and technical or corporate writing.
 | [`documents:office-documents`](../domains/documents/skills/office-documents/SKILL.md) | skill | Use when a task reads or produces Word, Excel, PowerPoint or PDF files (.docx, .xlsx, .pptx, .pdf): creating, editing, converting, extracting tables or text, filling forms or merging. Routes |
 | [`documents:technical-writing`](../domains/documents/skills/technical-writing/SKILL.md) | skill | Use when writing or updating developer documentation: READMEs, API references, guides, tutorials, runbooks, architecture overviews or code maps, and keeping docs in sync after code changes. |
 
+## extended-reality
+
+[Plugin e instalação](../domains/extended-reality/README.md) · [Manifesto editorial](../catalog/curation/domains/extended-reality.yaml)
+
+Immersive AR/VR/XR applications - reference spaces, tracked input, spatial interaction, comfort and device/runtime verification.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`extended-reality:immersive-development`](../domains/extended-reality/skills/immersive-development/SKILL.md) | skill | Use when designing or implementing AR, VR or XR applications: spatial reference frames, tracked input, immersive interaction, comfort, rendering budgets and runtime fallbacks. |
+
 ## finance
 
 [Plugin e instalação](../domains/finance/README.md) · [Manifesto editorial](../catalog/curation/domains/finance.yaml)
@@ -186,6 +203,51 @@ Bookkeeping, FP&A, pricing, tax.
 | [`finance:accounting`](../domains/finance/skills/accounting/SKILL.md) | skill | Use for day-to-day accounting: bookkeeping, reconciliations, month-end close, accounts payable, expense tracking, financial statements, and tax planning questions to prepare for an accountan |
 | [`finance:billing-operations`](../domains/finance/skills/billing-operations/SKILL.md) | skill | Use when building or operating billing: subscriptions, invoicing, payment providers, refunds and disputes, dunning, revenue reporting and customer billing issues. |
 | [`finance:financial-analysis`](../domains/finance/skills/financial-analysis/SKILL.md) | skill | Use for financial modelling and planning: three-statement and unit-economics models, forecasts and budgets, scenario analysis, variance analysis, pricing models and investment memos. |
+
+## games
+
+[Plugin e instalação](../domains/games/README.md) · [Manifesto editorial](../catalog/curation/domains/games.yaml)
+
+Game design and engineering - mechanics, progression, economies, levels, engine integration, runtime performance and multiplayer.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`games:game-design`](../domains/games/skills/game-design/SKILL.md) | skill | Use when designing game mechanics, player loops, progression, economies, narrative systems or levels and planning playtests. Use game-engineering for engine implementation. |
+| [`games:game-engineering`](../domains/games/skills/game-engineering/SKILL.md) | skill | Use when implementing and profiling a game runtime: scenes, entity state, save systems, engine integration, game audio, networking or a packaged game build. |
+
+## geospatial
+
+[Plugin e instalação](../domains/geospatial/README.md) · [Manifesto editorial](../catalog/curation/domains/geospatial.yaml)
+
+Geographic information - spatial analysis, coordinate systems, cartography, GIS data pipelines and spatial services.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`geospatial:geospatial-analysis`](../domains/geospatial/skills/geospatial-analysis/SKILL.md) | skill | Use when analysing geographic vector/raster data, selecting coordinate reference systems, making analytical maps, validating spatial accuracy or interpreting spatial statistics. |
+| [`geospatial:geospatial-engineering`](../domains/geospatial/skills/geospatial-engineering/SKILL.md) | skill | Use when building GIS data pipelines, spatial services, map applications, BIM/GIS integration, geoprocessing tools or scalable map delivery. |
+
+## healthcare
+
+[Plugin e instalação](../domains/healthcare/README.md) · [Manifesto editorial](../catalog/curation/domains/healthcare.yaml)
+
+Health systems and clinician-reviewed support - interoperability, traceable evidence briefs and documentation of verified clinical facts and decisions.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`healthcare:clinical-documentation`](../domains/healthcare/skills/clinical-documentation/SKILL.md) | skill | Use when drafting or checking clinical notes, structured reports, handoffs or documentation of plans already supplied by a qualified clinician, with field-level traceability and professional review. |
+| [`healthcare:clinical-evidence`](../domains/healthcare/skills/clinical-evidence/SKILL.md) | skill | Use when a healthcare professional needs a source-backed clinical evidence brief, appraisal of a clinical claim or a documented evidence profile; not a patient-specific diagnosis or prescription. |
+| [`healthcare:health-informatics`](../domains/healthcare/skills/health-informatics/SKILL.md) | skill | Use when designing or reviewing EHR/EMR systems, health-data interoperability, clinician workflows or clinical decision-support software architecture and validation. |
+
+## infrastructure
+
+[Plugin e instalação](../domains/infrastructure/README.md) · [Manifesto editorial](../catalog/curation/domains/infrastructure.yaml)
+
+Networks and self-hosted labs - connectivity, routing, DNS, VPN, segmentation, local services, storage and recovery; application delivery stays in platform.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`infrastructure:homelab-operations`](../domains/infrastructure/skills/homelab-operations/SKILL.md) | skill | Use when planning or operating a home/small-lab self-hosted environment: device roles, services, storage, DNS, access, backups, recovery and staged network readiness. |
+| [`infrastructure:network-operations`](../domains/infrastructure/skills/network-operations/SKILL.md) | skill | Use when diagnosing or reviewing an authorized network: topology, interfaces, routing/BGP, segmentation, DNS, DHCP, firewall paths or VPN connectivity. |
 
 ## languages
 
@@ -219,6 +281,17 @@ Contracts, regulatory compliance, legal privacy.
 |---|---|---|
 | [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md) | skill | Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy programmes and data processing, control mapping, evidence collection and poli |
 | [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md) | skill | Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review against a playbook, redlines, client intake and matter organisation. Drafts are |
+
+## logistics
+
+[Plugin e instalação](../domains/logistics/README.md) · [Manifesto editorial](../catalog/curation/domains/logistics.yaml)
+
+Physical supply chains - replenishment, suppliers, transport/carriers, shipment exceptions and reverse logistics.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`logistics:logistics-operations`](../domains/logistics/skills/logistics-operations/SKILL.md) | skill | Use when organizing physical transport and carrier operations, shipment exceptions, delivery evidence, returns/reverse logistics, disposition or operational handoffs. |
+| [`logistics:supply-chain-planning`](../domains/logistics/skills/supply-chain-planning/SKILL.md) | skill | Use when planning physical supply chains: demand/capacity, inventory policy, suppliers, lead-time risk, sourcing alternatives and scenario-based total cost. |
 
 ## marketing
 
@@ -370,6 +443,17 @@ User experience - user research, flows, information architecture, usability heur
 |---|---|---|
 | [`ux:usability-review`](../domains/ux/skills/usability-review/SKILL.md) | skill | Expert walkthrough and heuristic evaluation of an interface or flow, with ranked fixes. |
 | [`ux:user-research`](../domains/ux/skills/user-research/SKILL.md) | skill | Plan, run and synthesise user research that informs a concrete product decision. |
+
+## web3
+
+[Plugin e instalação](../domains/web3/README.md) · [Manifesto editorial](../catalog/curation/domains/web3.yaml)
+
+Blockchain and DeFi engineering - smart contracts, token/accounting units, mechanism invariants and local verification; no investment recommendations or live transactions.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`web3:defi-engineering`](../domains/web3/skills/defi-engineering/SKILL.md) | skill | Use when engineering or reviewing DeFi mechanism invariants, AMM/share accounting, token decimals, oracle assumptions, collateral/liquidation flows or protocol simulations. |
+| [`web3:smart-contract-development`](../domains/web3/skills/smart-contract-development/SKILL.md) | skill | Use when designing, implementing and testing blockchain smart contracts, token interfaces, upgrade/storage layouts or a deployment plan, excluding investment recommendations and live value transfers. |
 
 ## workflow
 

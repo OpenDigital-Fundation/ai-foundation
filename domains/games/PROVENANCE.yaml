@@ -1,0 +1,79 @@
+version: 1
+files:
+- path: skills/game-design/references/economy-designer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/economy-designer.md#economy-modeling-standards,simulation-before-shipping,ethical-monetization,2-source-sink-mapping
+    license: MIT
+    modification: merged-section
+- path: skills/game-design/references/game-designer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/game-designer.md#design-documentation-standards,player-first-thinking,balance-process,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-design/references/level-designer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/level-designer.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-design/references/narrative-designer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/narrative-designer.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-engineering/references/game-audio-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/game-audio-engineer.md#integration-standards,memory-and-voice-budget,spatial-audio,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-engineering/references/godot-gameplay-scripter.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/godot/godot-gameplay-scripter.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-engineering/references/godot-multiplayer-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/godot/godot-multiplayer-engineer.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-engineering/references/roblox-systems-scripter.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/roblox-studio/roblox-systems-scripter.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-engineering/references/unity-architect.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/unity/unity-architect.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-engineering/references/unreal-systems-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/unreal-engine/unreal-systems-engineer.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/game-engineering/references/unreal-world-builder.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: game-development/unreal-engine/unreal-world-builder.md#critical-rules-you-must-follow,your-workflow-process
+    license: MIT
+    modification: merged-section

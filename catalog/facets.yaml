@@ -1,4 +1,4 @@
-# Facets per artifact (see docs/adr/foundation/faceted-classification.md). IDs come from catalog/taxonomy/*.yaml.
+# Facets per artifact. IDs come from catalog/taxonomy/*.yaml.
 version: 1
 artifacts:
   accessibility/accessibility-audit:
@@ -1707,3 +1707,179 @@ artifacts:
     technology:
     - skills-reusable-capabilities
     - workflows-automation
+  games/game-design:
+    knowledge: &id001
+    - software-engineering
+    - design
+    - arts-media
+    technology:
+    - skills-reusable-capabilities
+    industries: &id002
+    - creative
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: &id003
+    - game-development
+  games/game-engineering:
+    knowledge: *id001
+    technology:
+    - skills-reusable-capabilities
+    industries: *id002
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: *id003
+  geospatial/geospatial-analysis:
+    knowledge: &id004
+    - earth-environmental-sciences
+    - mathematics-statistics
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+    industries: &id005
+    - government
+    - infrastructure
+    - science
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: &id006
+    - smart-cities
+  geospatial/geospatial-engineering:
+    knowledge: *id004
+    technology:
+    - skills-reusable-capabilities
+    industries: *id005
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: *id006
+  extended-reality/immersive-development:
+    knowledge:
+    - software-engineering
+    - design
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - creative
+    - technology
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary:
+    - human-ai-interaction
+  healthcare/health-informatics:
+    knowledge: &id007
+    - health-medicine
+    - software-engineering
+    - cybersecurity-privacy
+    technology:
+    - skills-reusable-capabilities
+    industries: &id008
+    - health
+    capabilities:
+    - research
+    - write
+    - validate
+    multidisciplinary: &id009
+    - healthtech
+  healthcare/clinical-evidence:
+    knowledge: *id007
+    technology:
+    - skills-reusable-capabilities
+    industries: *id008
+    capabilities:
+    - research
+    - write
+    - validate
+    multidisciplinary: *id009
+  healthcare/clinical-documentation:
+    knowledge: *id007
+    technology:
+    - skills-reusable-capabilities
+    industries: *id008
+    capabilities:
+    - research
+    - write
+    - validate
+    multidisciplinary: *id009
+  web3/smart-contract-development:
+    knowledge: &id010
+    - software-engineering
+    - finance-accounting
+    - cybersecurity-privacy
+    technology:
+    - skills-reusable-capabilities
+    industries: &id011
+    - finance
+    - technology
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: &id012
+    - fintech
+  web3/defi-engineering:
+    knowledge: *id010
+    technology:
+    - skills-reusable-capabilities
+    industries: *id011
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: *id012
+  infrastructure/network-operations:
+    knowledge: &id013
+    - engineering
+    - software-engineering
+    - cybersecurity-privacy
+    technology:
+    - skills-reusable-capabilities
+    industries: &id014
+    - technology
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: &id015
+    - devsecops
+  infrastructure/homelab-operations:
+    knowledge: *id013
+    technology:
+    - skills-reusable-capabilities
+    industries: *id014
+    capabilities:
+    - plan
+    - validate
+    - review
+    multidisciplinary: *id015
+  logistics/supply-chain-planning:
+    knowledge: &id016
+    - management-strategy
+    - engineering
+    - mathematics-statistics
+    technology:
+    - skills-reusable-capabilities
+    industries: &id017
+    - logistics
+    - commerce
+    capabilities:
+    - plan
+    - validate
+    - review
+  logistics/logistics-operations:
+    knowledge: *id016
+    technology:
+    - skills-reusable-capabilities
+    industries: *id017
+    capabilities:
+    - plan
+    - validate
+    - review

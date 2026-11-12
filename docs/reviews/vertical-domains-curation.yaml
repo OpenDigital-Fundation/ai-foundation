@@ -1,0 +1,345 @@
+# Reviewed source selection; paths and origins are also in domain PROVENANCE.yaml.
+baseline: 7d840dc4ba2c00315d4aca89a46c80fb4e733e52
+decisions:
+- key: msitarzewski/agency-agents:agent:Game Designer
+  decision: incorporate
+  artifact: games/game-design
+  upstream: game-development/game-designer.md#design-documentation-standards,player-first-thinking,balance-process,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-design/references/game-designer.md
+- key: msitarzewski/agency-agents:agent:Economy Designer
+  decision: incorporate
+  artifact: games/game-design
+  upstream: game-development/economy-designer.md#economy-modeling-standards,simulation-before-shipping,ethical-monetization,2-source-sink-mapping
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-design/references/economy-designer.md
+- key: msitarzewski/agency-agents:agent:Level Designer
+  decision: incorporate
+  artifact: games/game-design
+  upstream: game-development/level-designer.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-design/references/level-designer.md
+- key: msitarzewski/agency-agents:agent:Narrative Designer
+  decision: incorporate
+  artifact: games/game-design
+  upstream: game-development/narrative-designer.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-design/references/narrative-designer.md
+- key: msitarzewski/agency-agents:agent:Unity Architect
+  decision: incorporate
+  artifact: games/game-engineering
+  upstream: game-development/unity/unity-architect.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-engineering/references/unity-architect.md
+- key: msitarzewski/agency-agents:agent:Godot Gameplay Scripter
+  decision: incorporate
+  artifact: games/game-engineering
+  upstream: game-development/godot/godot-gameplay-scripter.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-engineering/references/godot-gameplay-scripter.md
+- key: msitarzewski/agency-agents:agent:Godot Multiplayer Engineer
+  decision: incorporate
+  artifact: games/game-engineering
+  upstream: game-development/godot/godot-multiplayer-engineer.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-engineering/references/godot-multiplayer-engineer.md
+- key: msitarzewski/agency-agents:agent:Unreal Systems Engineer
+  decision: incorporate
+  artifact: games/game-engineering
+  upstream: game-development/unreal-engine/unreal-systems-engineer.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-engineering/references/unreal-systems-engineer.md
+- key: msitarzewski/agency-agents:agent:Unreal World Builder
+  decision: incorporate
+  artifact: games/game-engineering
+  upstream: game-development/unreal-engine/unreal-world-builder.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-engineering/references/unreal-world-builder.md
+- key: msitarzewski/agency-agents:agent:Game Audio Engineer
+  decision: incorporate
+  artifact: games/game-engineering
+  upstream: game-development/game-audio-engineer.md#integration-standards,memory-and-voice-budget,spatial-audio,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-engineering/references/game-audio-engineer.md
+- key: msitarzewski/agency-agents:agent:Roblox Systems Scripter
+  decision: incorporate
+  artifact: games/game-engineering
+  upstream: game-development/roblox-studio/roblox-systems-scripter.md#critical-rules-you-must-follow,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/games/skills/game-engineering/references/roblox-systems-scripter.md
+- key: msitarzewski/agency-agents:agent:GIS Analyst
+  decision: incorporate
+  artifact: geospatial/geospatial-analysis
+  upstream: gis/gis-analyst.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-analysis/references/gis-analyst.md
+- key: msitarzewski/agency-agents:agent:Cartography Designer
+  decision: incorporate
+  artifact: geospatial/geospatial-analysis
+  upstream: gis/gis-cartography-designer.md#critical-rules-you-must-follow,your-design-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-analysis/references/cartography-designer.md
+- key: msitarzewski/agency-agents:agent:Spatial Data Scientist
+  decision: incorporate
+  artifact: geospatial/geospatial-analysis
+  upstream: gis/gis-spatial-data-scientist.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-analysis/references/spatial-data-scientist.md
+- key: msitarzewski/agency-agents:agent:GIS QA Engineer
+  decision: incorporate
+  artifact: geospatial/geospatial-analysis
+  upstream: gis/gis-qa-engineer.md#critical-rules-you-must-follow,your-qa-process,qa-report-template
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-analysis/references/gis-qa-engineer.md
+- key: msitarzewski/agency-agents:agent:Drone/Reality Mapping Specialist
+  decision: incorporate
+  artifact: geospatial/geospatial-analysis
+  upstream: gis/gis-drone-reality-mapping.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-analysis/references/drone-reality-mapping-specialist.md
+- key: msitarzewski/agency-agents:agent:Spatial Data Engineer
+  decision: incorporate
+  artifact: geospatial/geospatial-engineering
+  upstream: gis/gis-spatial-data-engineer.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-engineering/references/spatial-data-engineer.md
+- key: msitarzewski/agency-agents:agent:Web GIS Developer
+  decision: incorporate
+  artifact: geospatial/geospatial-engineering
+  upstream: gis/gis-web-gis-developer.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-engineering/references/web-gis-developer.md
+- key: msitarzewski/agency-agents:agent:Geoprocessing Specialist
+  decision: incorporate
+  artifact: geospatial/geospatial-engineering
+  upstream: gis/gis-geoprocessing-specialist.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-engineering/references/geoprocessing-specialist.md
+- key: msitarzewski/agency-agents:agent:BIM/GIS Specialist
+  decision: incorporate
+  artifact: geospatial/geospatial-engineering
+  upstream: gis/gis-bim-specialist.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-engineering/references/bim-gis-specialist.md
+- key: msitarzewski/agency-agents:agent:3D & Scene Developer
+  decision: incorporate
+  artifact: geospatial/geospatial-engineering
+  upstream: gis/gis-3d-scene-developer.md#critical-rules-you-must-follow,your-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/geospatial/skills/geospatial-engineering/references/3d-scene-developer.md
+- key: davila7/claude-code-templates:skill:vr-ar
+  decision: incorporate
+  artifact: extended-reality/immersive-development
+  upstream: cli-tool/components/skills/creative-design/game-development/vr-ar/SKILL.md#2-comfort-principles,4-interaction-principles,5-spatial-design,6-anti-patterns
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/extended-reality/skills/immersive-development/references/vr-ar.md
+- key: affaan-m/ECC:skill:healthcare-emr-patterns
+  decision: incorporate
+  artifact: healthcare/health-informatics
+  upstream: skills/healthcare-emr-patterns/SKILL.md#patient-safety-first,single-page-encounter-flow,locked-encounter-pattern,ui-patterns-for-clinical-data,accessibility-for-healthcare,anti-patterns
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/healthcare/skills/health-informatics/references/healthcare-emr-patterns.md
+- key: affaan-m/ECC:agent:healthcare-reviewer
+  decision: incorporate
+  artifact: healthcare/health-informatics
+  upstream: agents/healthcare-reviewer.md#critical-checks,rules
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/healthcare/skills/health-informatics/references/healthcare-reviewer.md
+- key: msitarzewski/agency-agents:agent:Clinical Evidence Agent
+  decision: incorporate
+  artifact: healthcare/clinical-evidence
+  upstream: healthcare/healthcare-clinical-evidence-agent.md#validated-vs-unvalidated-claims-framework,evidence-synthesis-workflow
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/healthcare/skills/clinical-evidence/references/clinical-evidence-agent.md
+- key: K-Dense-AI/claude-scientific-skills:skill:clinical-decision-support
+  decision: incorporate
+  artifact: healthcare/clinical-evidence
+  upstream: skills/clinical-decision-support/SKILL.md#hard-safety-boundary,data-gate,required-artifact-header,grade-evidence-profiles,privacy-and-de-identification
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/healthcare/skills/clinical-evidence/references/clinical-decision-support.md
+- key: K-Dense-AI/claude-scientific-skills:skill:clinical-reports
+  decision: incorporate
+  artifact: healthcare/clinical-documentation
+  upstream: skills/clinical-reports/SKILL.md#non-negotiable-boundary,input-gate,safe-drafting-workflow,privacy
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/healthcare/skills/clinical-documentation/references/clinical-reports.md
+- key: K-Dense-AI/claude-scientific-skills:skill:treatment-plans
+  decision: incorporate
+  artifact: healthcare/clinical-documentation
+  upstream: skills/treatment-plans/SKILL.md#hard-safety-boundary,allowed-inputs,source-boundaries
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/healthcare/skills/clinical-documentation/references/treatment-plans.md
+- key: msitarzewski/agency-agents:agent:Solidity Smart Contract Engineer
+  decision: incorporate
+  artifact: web3/smart-contract-development
+  upstream: engineering/engineering-solidity-smart-contract-engineer.md#security-first-development,code-quality,your-workflow-process
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/web3/skills/smart-contract-development/references/solidity-smart-contract-engineer.md
+- key: wshobson/agents:skill:web3-testing
+  decision: incorporate
+  artifact: web3/smart-contract-development
+  upstream: plugins/blockchain-web3/skills/web3-testing/SKILL.md#unit-testing-patterns,foundry-testing-forge
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/web3/skills/smart-contract-development/references/web3-testing.md
+- key: wshobson/agents:skill:nft-standards
+  decision: incorporate
+  artifact: web3/smart-contract-development
+  upstream: plugins/blockchain-web3/skills/nft-standards/SKILL.md#metadata-standards,royalties-eip-2981
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/web3/skills/smart-contract-development/references/nft-standards.md
+- key: affaan-m/ECC:skill:defi-amm-security
+  decision: incorporate
+  artifact: web3/defi-engineering
+  upstream: skills/defi-amm-security/SKILL.md#execution-safety,security-checklist
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/web3/skills/defi-engineering/references/defi-amm-security.md
+- key: affaan-m/ECC:skill:evm-token-decimals
+  decision: incorporate
+  artifact: web3/defi-engineering
+  upstream: skills/evm-token-decimals/SKILL.md#how-it-works,rules
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/web3/skills/defi-engineering/references/evm-token-decimals.md
+- key: affaan-m/ECC:skill:homelab-pihole-dns
+  decision: incorporate
+  artifact: infrastructure/network-operations
+  upstream: skills/homelab-pihole-dns/SKILL.md#how-pi-hole-works,troubleshooting,anti-patterns,best-practices
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/network-operations/references/homelab-pihole-dns.md
+- key: affaan-m/ECC:skill:homelab-vlan-segmentation
+  decision: incorporate
+  artifact: infrastructure/network-operations
+  upstream: skills/homelab-vlan-segmentation/SKILL.md#how-it-works,vlan-design-template,switch-trunk-vs-access-ports,anti-patterns,best-practices
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/network-operations/references/homelab-vlan-segmentation.md
+- key: affaan-m/ECC:skill:homelab-wireguard-vpn
+  decision: incorporate
+  artifact: infrastructure/network-operations
+  upstream: skills/homelab-wireguard-vpn/SKILL.md#how-wireguard-works,split-tunnel-vs-full-tunnel,troubleshooting,anti-patterns,best-practices
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/network-operations/references/homelab-wireguard-vpn.md
+- key: affaan-m/ECC:skill:network-bgp-diagnostics
+  decision: incorporate
+  artifact: infrastructure/network-operations
+  upstream: skills/network-bgp-diagnostics/SKILL.md#read-only-triage-flow,state-interpretation,route-policy-checks,change-window-only,anti-patterns
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/network-operations/references/network-bgp-diagnostics.md
+- key: affaan-m/ECC:skill:network-config-validation
+  decision: incorporate
+  artifact: infrastructure/network-operations
+  upstream: skills/network-config-validation/SKILL.md#dangerous-command-detection,duplicate-ips-and-subnet-overlaps,management-plane-checks,security-hygiene-checks,anti-patterns
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/network-operations/references/network-config-validation.md
+- key: affaan-m/ECC:skill:network-interface-health
+  decision: incorporate
+  artifact: infrastructure/network-operations
+  upstream: skills/network-interface-health/SKILL.md#counter-reference,diagnosis-flow,anti-patterns
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/network-operations/references/network-interface-health.md
+- key: affaan-m/ECC:agent:homelab-architect
+  decision: incorporate
+  artifact: infrastructure/homelab-operations
+  upstream: agents/homelab-architect.md#scope,workflow,safety-defaults,output-format
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/homelab-operations/references/homelab-architect.md
+- key: affaan-m/ECC:skill:homelab-network-readiness
+  decision: incorporate
+  artifact: infrastructure/homelab-operations
+  upstream: skills/homelab-network-readiness/SKILL.md#safety-rules,required-inventory,change-sequence,review-checklist,anti-patterns
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/homelab-operations/references/homelab-network-readiness.md
+- key: affaan-m/ECC:skill:homelab-network-setup
+  decision: incorporate
+  artifact: infrastructure/homelab-operations
+  upstream: skills/homelab-network-setup/SKILL.md#ip-plan,dhcp-and-dns,cabling-and-wi-fi,anti-patterns
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/infrastructure/skills/homelab-operations/references/homelab-network-setup.md
+- key: msitarzewski/agency-agents:agent:Supply Chain Strategist
+  decision: incorporate
+  artifact: logistics/supply-chain-planning
+  upstream: specialized/supply-chain-strategist.md#inventory-management-strategies,tco-total-cost-of-ownership-analysis,supply-chain-risk-assessment,multi-source-procurement-strategy,workflow
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/logistics/skills/supply-chain-planning/references/supply-chain-strategist.md
+- key: affaan-m/ECC:skill:carrier-relationship-management
+  decision: incorporate
+  artifact: logistics/logistics-operations
+  upstream: skills/carrier-relationship-management/SKILL.md#carrier-scorecarding,portfolio-strategy,carrier-selection-for-new-lanes,when-to-consolidate-vs-diversify,carrier-exit-criteria
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/logistics/skills/logistics-operations/references/carrier-relationship-management.md
+- key: affaan-m/ECC:skill:logistics-exception-management
+  decision: incorporate
+  artifact: logistics/logistics-operations
+  upstream: skills/logistics-exception-management/SKILL.md#exception-taxonomy,severity-classification,priority-sequencing,tone-calibration
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/logistics/skills/logistics-operations/references/logistics-exception-management.md
+- key: affaan-m/ECC:skill:returns-reverse-logistics
+  decision: incorporate
+  artifact: logistics/logistics-operations
+  upstream: skills/returns-reverse-logistics/SKILL.md#inspection-and-grading,disposition-decision-trees,vendor-recovery,return-policy-exception-logic
+  license: MIT
+  change: reviewed procedural adaptation; no upstream scripts/assets copied
+  destination: domains/logistics/skills/logistics-operations/references/returns-reverse-logistics.md
+- key: msitarzewski/agency-agents:agent:visionOS Spatial Engineer
+  decision: exclude
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed XR workflow
+    uses the permissive vr-ar guide with device-specific budgets instead.
+- key: msitarzewski/agency-agents:agent:XR Cockpit Interaction Specialist
+  decision: exclude
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed XR workflow
+    uses the permissive vr-ar guide with device-specific budgets instead.
+- key: msitarzewski/agency-agents:agent:XR Immersive Developer
+  decision: exclude
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed XR workflow
+    uses the permissive vr-ar guide with device-specific budgets instead.
+- key: msitarzewski/agency-agents:agent:XR Interface Architect
+  decision: exclude
+  reason: low-quality
+  note: This profile provides scope/version claims without a concrete additional procedure; not copied. The reviewed XR workflow
+    uses the permissive vr-ar guide with device-specific budgets instead.

@@ -1,0 +1,5 @@
+should_trigger:
+- Compare replenishment and supplier-capacity scenarios for this physical inventory.
+- Planeje estoques e fornecedores com demanda, lead time e custo total explícitos.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

@@ -1,0 +1,8 @@
+name: geospatial
+description: Geographic information - spatial analysis, coordinate systems, cartography, GIS data pipelines and
+  spatial services. Experimental bundle with shared capability owners.
+include:
+- principles/*
+- geospatial/*
+- data/data-pipelines
+- science/scientific-computing

@@ -1,0 +1,9 @@
+name: web3
+description: Blockchain and DeFi engineering - smart contracts, token/accounting units, mechanism invariants and
+  local verification; no investment recommendations or live transactions. Experimental bundle with shared capability
+  owners.
+include:
+- principles/*
+- web3/*
+- security/security-audit
+- testing/test-driven-development

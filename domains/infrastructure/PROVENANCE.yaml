@@ -1,0 +1,65 @@
+version: 1
+files:
+- path: skills/homelab-operations/references/homelab-architect.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/homelab-architect.md#scope,workflow,safety-defaults,output-format
+    license: MIT
+    modification: merged-section
+- path: skills/homelab-operations/references/homelab-network-readiness.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/homelab-network-readiness/SKILL.md#safety-rules,required-inventory,change-sequence,review-checklist,anti-patterns
+    license: MIT
+    modification: merged-section
+- path: skills/homelab-operations/references/homelab-network-setup.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/homelab-network-setup/SKILL.md#ip-plan,dhcp-and-dns,cabling-and-wi-fi,anti-patterns
+    license: MIT
+    modification: merged-section
+- path: skills/network-operations/references/homelab-pihole-dns.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/homelab-pihole-dns/SKILL.md#how-pi-hole-works,troubleshooting,anti-patterns,best-practices
+    license: MIT
+    modification: merged-section
+- path: skills/network-operations/references/homelab-vlan-segmentation.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/homelab-vlan-segmentation/SKILL.md#how-it-works,vlan-design-template,switch-trunk-vs-access-ports,anti-patterns,best-practices
+    license: MIT
+    modification: merged-section
+- path: skills/network-operations/references/homelab-wireguard-vpn.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/homelab-wireguard-vpn/SKILL.md#how-wireguard-works,split-tunnel-vs-full-tunnel,troubleshooting,anti-patterns,best-practices
+    license: MIT
+    modification: merged-section
+- path: skills/network-operations/references/network-bgp-diagnostics.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/network-bgp-diagnostics/SKILL.md#read-only-triage-flow,state-interpretation,route-policy-checks,change-window-only,anti-patterns
+    license: MIT
+    modification: merged-section
+- path: skills/network-operations/references/network-config-validation.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/network-config-validation/SKILL.md#dangerous-command-detection,duplicate-ips-and-subnet-overlaps,management-plane-checks,security-hygiene-checks,anti-patterns
+    license: MIT
+    modification: merged-section
+- path: skills/network-operations/references/network-interface-health.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/network-interface-health/SKILL.md#counter-reference,diagnosis-flow,anti-patterns
+    license: MIT
+    modification: merged-section

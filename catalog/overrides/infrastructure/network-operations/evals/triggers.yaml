@@ -1,0 +1,5 @@
+should_trigger:
+- Diagnose an authorized BGP session and VLAN forwarding problem with read-only evidence.
+- Revise DNS, rotas e segmentação desta rede sem aplicar alterações.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

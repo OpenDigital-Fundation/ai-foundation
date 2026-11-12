@@ -1,0 +1,5 @@
+should_trigger:
+- Plan invariants and local tests for this upgradeable Solidity contract.
+- Revise a arquitetura e os testes locais deste smart contract sem fazer deploy.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

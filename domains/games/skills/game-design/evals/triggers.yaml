@@ -1,0 +1,5 @@
+should_trigger:
+- Design a resource economy and playtest plan for our cooperative game.
+- Desenhe o loop principal e a progressão de níveis deste jogo.
+should_not_trigger:
+- Assess CRS, spatial dependence and accuracy before mapping these geographic layers.

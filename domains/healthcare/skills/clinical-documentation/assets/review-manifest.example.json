@@ -1,0 +1,12 @@
+{
+  "intended_use": "synthetic documentation exercise",
+  "data_class": "synthetic",
+  "source_facts": [],
+  "professional_decisions": [],
+  "unresolved_conflicts": [],
+  "review": {
+    "clinical_owner": null,
+    "privacy_review": null,
+    "approved_for_live_write": false
+  }
+}

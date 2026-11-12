@@ -62,9 +62,21 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`legal-compliance/catalog`](legal-compliance/catalog/spec.md) | security |
 | [`operations/catalog`](operations/catalog/spec.md) | — |
 
+## Onda 4 — Domínios especializados solicitados
+
+| Spec | Depende de |
+|---|---|
+| [`games/catalog`](games/catalog/spec.md) | languages, testing, ui |
+| [`geospatial/catalog`](geospatial/catalog/spec.md) | data, science |
+| [`extended-reality/catalog`](extended-reality/catalog/spec.md) | ui, ux, accessibility, games |
+| [`healthcare/catalog`](healthcare/catalog/spec.md) | science, research, security, legal-compliance |
+| [`web3/catalog`](web3/catalog/spec.md) | security, testing, finance |
+| [`infrastructure/catalog`](infrastructure/catalog/spec.md) | platform, security |
+| [`logistics/catalog`](logistics/catalog/spec.md) | operations, data, finance |
+
 ## Fora de escopo nesta versão
 
-Nichos verticais (games, GIS, XR, saúde, cripto/DeFi, homelab/redes, logística, plataformas chinesas, CMSs específicos) e ferramentas internas das próprias fontes (`ecc-*`, `ponytail-gain`, `ask-matt`...). Registrados em `catalog/exclusions.yaml`; reabrir exige uma spec nova de domínio.
+Plataformas chinesas, CMSs específicos e ferramentas internas das próprias fontes (`ecc-*`, `ponytail-gain`, `ask-matt`...). Registrados em `catalog/exclusions.yaml`; reabrir exige uma spec nova de domínio.
 
 ## Fora deste repositório
 

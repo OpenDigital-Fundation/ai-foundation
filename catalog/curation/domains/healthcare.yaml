@@ -1,0 +1,190 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: healthcare
+artifacts:
+- id: healthcare/health-informatics
+  type: skill
+  capability: Use when designing or reviewing EHR/EMR systems, health-data interoperability, clinician workflows
+    or clinical decision-support software architecture and validation.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:healthcare-reviewer
+  - affaan-m/ECC:skill:healthcare-emr-patterns
+  recipe:
+    title: Health informatics
+    description: Use when designing or reviewing EHR/EMR systems, health-data interoperability, clinician workflows
+      or clinical decision-support software architecture and validation.
+    body: '# Health informatics
+
+
+      ## Define intended use and authority
+
+      Record users, clinical setting, software function, jurisdiction, data class, clinical owner and authorized
+      processing environment. A catalogue skill is not a validated clinical system or a regulatory determination.
+
+
+      ## Engineering workflow
+
+      1. Map the encounter and data lifecycle: capture, verification, correction, professional sign-off, addendum,
+      exchange and retention. Keep decision authority explicit.
+
+      2. Declare the interoperability version and implementation guide, terminology versions, identifiers, units,
+      timestamps and provenance. Validate both schema and domain meaning; FHIR conformance does not establish clinical
+      safety.
+
+      3. Use synthetic fixtures for development. Keep identifiers, raw records and secrets out of prompts, logs,
+      URLs and browser storage. Minimize data and apply tenant/facility authorization and an appropriate audit trail.
+
+      4. Separate clinician-authored rules from model suggestions. Model missing, stale, conflicting or unavailable
+      data explicitly; a technical error must not silently become a reassuring clinical result.
+
+      5. Plan validation against the intended population and workflow, including false positives/negatives, subgroup
+      effects, usability, alert fatigue, concurrency and sign-off/addendum integrity. Coverage or a claim of zero
+      missed alerts is not proof of safety.
+
+      6. Review changes with the accountable clinical, privacy/security and regulatory owners before use affecting
+      care. Production writes and integrations require specific authorization.
+
+
+      ## Handoff
+
+      An intended-use statement, data/interop contract, risk and validation plan, evidence log and human approval
+      boundary. Use healthcare:clinical-evidence for evidence synthesis and healthcare:clinical-documentation for
+      drafting supplied facts. Biomedical research analysis remains in science. Current external references: [HL7
+      FHIR R4](https://hl7.org/fhir/R4/overview.html), [WHO health-AI guidance](https://www.who.int/publications/i/item/9789240084759)
+      and [FDA CDS guidance, January 2026](https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software).
+      Confirm the required FHIR version/profile and applicable local requirements separately.'
+    references:
+      healthcare-emr-patterns.md:
+      - affaan-m/ECC:skills/healthcare-emr-patterns/SKILL.md#patient-safety-first,single-page-encounter-flow,locked-encounter-pattern,ui-patterns-for-clinical-data,accessibility-for-healthcare,anti-patterns
+      healthcare-reviewer.md:
+      - affaan-m/ECC:agents/healthcare-reviewer.md#critical-checks,rules
+    reference_notes:
+      healthcare-emr-patterns.md: 'Reviewed adaptation: healthcare-emr-patterns; version and approval assumptions
+        are explicit.'
+      healthcare-reviewer.md: 'Reviewed adaptation: healthcare-reviewer; version and approval assumptions are explicit.'
+    append: An original, empty [review manifest](assets/review-manifest.example.json) records evidence and approval
+      boundaries without patient data. It grants no authorization.
+- id: healthcare/clinical-evidence
+  type: skill
+  capability: Use when a healthcare professional needs a source-backed clinical evidence brief, appraisal of a clinical
+    claim or a documented evidence profile; not a patient-specific diagnosis or prescription.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - K-Dense-AI/claude-scientific-skills:skill:clinical-decision-support
+  - msitarzewski/agency-agents:agent:Clinical Evidence Agent
+  recipe:
+    title: Clinical evidence
+    description: Use when a healthcare professional needs a source-backed clinical evidence brief, appraisal of
+      a clinical claim or a documented evidence profile; not a patient-specific diagnosis or prescription.
+    body: '# Clinical evidence
+
+
+      ## Bound the question
+
+      State the professional''s question using population, intervention/exposure, comparator and outcomes where
+      appropriate. Record setting, time horizon, exclusions and the intended decision role. Do not turn an evidence
+      brief into a patient-specific recommendation.
+
+
+      ## Evidence workflow
+
+      1. Search current authoritative guidance and primary research using public, non-identifying terms. Use research:literature-review
+      for a systematic review or a broad search protocol.
+
+      2. Verify each source, publication date/version, study population, design, outcome definition, effect estimate,
+      uncertainty and material limitations. Never invent a DOI, trial, statistic or guideline.
+
+      3. Separate source findings, internal observations, extrapolations and unsupported claims. Peer review or
+      clinician sign-off alone does not license an unqualified effectiveness or regulatory claim.
+
+      4. Assess relevance and risk of bias; distinguish exploratory from confirmatory findings. For GRADE-style
+      profiles, record judgments and rationale by outcome rather than deriving certainty from keywords or p-values.
+
+      5. Compare conflicting evidence, applicability and what remains unknown. The responsible professional decides
+      how evidence applies to care; do not calculate patient-specific doses, triage or treatment choices.
+
+      6. Produce a concise brief with claim-to-source links, evidence date, applicability limits and reviewer roles.
+      Keep process checklists outside manuscript prose when the output is a publication.
+
+
+      ## Boundary
+
+      No raw patient data, undisclosed external uploads, autonomous clinical decisions or claims of clinical validation.
+      Route urgent clinical matters through the user''s established professional process. Statistical and study-design
+      questions remain in science:experimental-design.'
+    references:
+      clinical-evidence-agent.md:
+      - msitarzewski/agency-agents:healthcare/healthcare-clinical-evidence-agent.md#validated-vs-unvalidated-claims-framework,evidence-synthesis-workflow
+      clinical-decision-support.md:
+      - K-Dense-AI/claude-scientific-skills:skills/clinical-decision-support/SKILL.md#hard-safety-boundary,data-gate,required-artifact-header,grade-evidence-profiles,privacy-and-de-identification
+    reference_notes:
+      clinical-evidence-agent.md: 'Reviewed adaptation: Clinical Evidence Agent; version and approval assumptions
+        are explicit.'
+      clinical-decision-support.md: 'Reviewed adaptation: clinical-decision-support; version and approval assumptions
+        are explicit.'
+    append: An original, empty [review manifest](assets/review-manifest.example.json) records evidence and approval
+      boundaries without patient data. It grants no authorization.
+- id: healthcare/clinical-documentation
+  type: skill
+  capability: Use when drafting or checking clinical notes, structured reports, handoffs or documentation of plans
+    already supplied by a qualified clinician, with field-level traceability and professional review.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - K-Dense-AI/claude-scientific-skills:skill:clinical-reports
+  - K-Dense-AI/claude-scientific-skills:skill:treatment-plans
+  recipe:
+    title: Clinical documentation
+    description: Use when drafting or checking clinical notes, structured reports, handoffs or documentation of
+      plans already supplied by a qualified clinician, with field-level traceability and professional review.
+    body: '# Clinical documentation
+
+
+      ## Input gate
+
+      Confirm purpose, requester authority, minimum necessary facts, privacy-reviewed data class and responsible
+      reviewer. Prefer synthetic or documented de-identified structured facts; do not take unreviewed raw patient
+      narratives or send clinical content to remote services by default.
+
+
+      ## Draft from facts, not plausibility
+
+      1. Build a source-fact manifest: fact ID, source locator, date, units, verification state and reviewer role.
+      A hash is integrity metadata, not de-identification.
+
+      2. Select the requested clinical structure, such as an encounter note, handoff or report scaffold. A manuscript
+      or case-report publication uses science:scientific-writing for writing conventions.
+
+      3. Populate only facts and professional assessments/decisions explicitly supplied and verified. Preserve uncertainty,
+      negation, dates and units. Missing content stays missing; do not infer diagnosis, stage, treatment, dose or
+      follow-up interval.
+
+      4. Keep draft and source record separate. Check internal consistency, attribution, duplicate facts and conflicts
+      without silently reconciling them. Preserve the clinician''s intended meaning.
+
+      5. For a supplied treatment plan, transcribe only the authorized decisions and ownership. Do not generate
+      options, check suitability or invent monitoring thresholds.
+
+      6. Maintain a separate review manifest for clinical, privacy, statistical or regulatory checks as applicable.
+      Operational drafts remain clearly drafts; do not sign, file, amend a live chart or submit on another person''s
+      behalf.
+
+
+      ## Deliverable
+
+      The requested note/report, fact-ID map, unresolved conflicts and named approval boundary. For manuscripts,
+      keep project status and pending checks in the review record rather than the work''s prose. This workflow formats
+      and checks documentation; it does not establish clinical appropriateness or regulatory compliance.'
+    references:
+      clinical-reports.md:
+      - K-Dense-AI/claude-scientific-skills:skills/clinical-reports/SKILL.md#non-negotiable-boundary,input-gate,safe-drafting-workflow,privacy
+      treatment-plans.md:
+      - K-Dense-AI/claude-scientific-skills:skills/treatment-plans/SKILL.md#hard-safety-boundary,allowed-inputs,source-boundaries
+    reference_notes:
+      clinical-reports.md: 'Reviewed adaptation: clinical-reports; version and approval assumptions are explicit.'
+      treatment-plans.md: 'Reviewed adaptation: treatment-plans; version and approval assumptions are explicit.'
+    append: An original, empty [review manifest](assets/review-manifest.example.json) records evidence and approval
+      boundaries without patient data. It grants no authorization.

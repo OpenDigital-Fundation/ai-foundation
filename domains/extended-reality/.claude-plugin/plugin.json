@@ -1,0 +1,10 @@
+{
+  "name": "extended-reality",
+  "version": "0.0.0",
+  "description": "Immersive AR/VR/XR applications - reference spaces, tracked input, spatial interaction, comfort and device/runtime verification.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

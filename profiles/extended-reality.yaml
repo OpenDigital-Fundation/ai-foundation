@@ -1,0 +1,8 @@
+name: extended-reality
+description: Immersive AR/VR/XR applications - reference spaces, tracked input, spatial interaction, comfort and
+  device/runtime verification. Experimental bundle with shared capability owners.
+include:
+- principles/*
+- extended-reality/*
+- ux/usability-review
+- accessibility/wcag-accessibility

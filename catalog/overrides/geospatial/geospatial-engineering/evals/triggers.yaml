@@ -1,0 +1,5 @@
+should_trigger:
+- Build a versioned PostGIS-to-vector-tile delivery pipeline with spatial QA.
+- Projete a integração BIM/GIS com datum vertical e unidades explícitas.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

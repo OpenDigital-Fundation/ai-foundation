@@ -1,0 +1,9 @@
+version: 1
+files:
+- path: skills/immersive-development/references/vr-ar.md
+  derived_from:
+  - source: davila7/claude-code-templates
+    commit: bf9b0b4
+    path: cli-tool/components/skills/creative-design/game-development/vr-ar/SKILL.md#2-comfort-principles,4-interaction-principles,5-spatial-design,6-anti-patterns
+    license: MIT
+    modification: merged-section

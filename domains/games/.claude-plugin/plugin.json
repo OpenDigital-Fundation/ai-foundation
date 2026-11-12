@@ -1,0 +1,10 @@
+{
+  "name": "games",
+  "version": "0.0.0",
+  "description": "Game design and engineering - mechanics, progression, economies, levels, engine integration, runtime performance and multiplayer.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

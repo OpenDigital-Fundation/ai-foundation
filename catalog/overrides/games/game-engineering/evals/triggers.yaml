@@ -1,0 +1,5 @@
+should_trigger:
+- Review scene ownership and server-authoritative replication in our game build.
+- Planeje save/load, streaming e profiling do nosso jogo em Godot.
+should_not_trigger:
+- Assess CRS, spatial dependence and accuracy before mapping these geographic layers.

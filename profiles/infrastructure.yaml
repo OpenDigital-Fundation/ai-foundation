@@ -1,0 +1,8 @@
+name: infrastructure
+description: Networks and self-hosted labs - connectivity, routing, DNS, VPN, segmentation, local services, storage
+  and recovery; application delivery stays in platform. Experimental bundle with shared capability owners.
+include:
+- principles/*
+- infrastructure/*
+- platform/deployment
+- security/secrets-hygiene

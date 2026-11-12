@@ -1,0 +1,5 @@
+should_trigger:
+- Design tracked input, comfort settings and fallback behaviour for a WebXR app.
+- Planeje uma experiência AR/VR com rastreamento, escala espacial e teste de conforto.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

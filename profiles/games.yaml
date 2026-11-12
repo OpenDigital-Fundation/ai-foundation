@@ -1,0 +1,8 @@
+name: games
+description: Game design and engineering - mechanics, progression, economies, levels, engine integration, runtime
+  performance and multiplayer. Experimental bundle with shared capability owners.
+include:
+- principles/*
+- games/*
+- testing/test-strategy
+- ui/visual-design

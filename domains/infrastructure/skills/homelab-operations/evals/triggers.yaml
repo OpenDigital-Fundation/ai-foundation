@@ -1,0 +1,5 @@
+should_trigger:
+- Plan a small self-hosted lab with storage, backups and recoverable DNS changes.
+- Organize meu homelab com inventário, endereços e recuperação de serviços.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

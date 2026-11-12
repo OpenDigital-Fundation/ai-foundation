@@ -1,0 +1,6 @@
+should_trigger:
+- Draft a clinical handoff from verified de-identified facts and clinician-supplied
+  decisions.
+- Organize uma minuta de nota clínica sem inventar achados, doses ou decisões ausentes.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

@@ -1,0 +1,6 @@
+should_trigger:
+- Model share inflation, rounding and oracle assumptions in this AMM protocol.
+- Verifique as unidades e os invariantes de um mecanismo DeFi com tokens de decimais
+  diferentes.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

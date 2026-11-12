@@ -1,0 +1,144 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: infrastructure
+artifacts:
+- id: infrastructure/network-operations
+  type: skill
+  capability: 'Use when diagnosing or reviewing an authorized network: topology, interfaces, routing/BGP, segmentation,
+    DNS, DHCP, firewall paths or VPN connectivity.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:homelab-pihole-dns
+  - affaan-m/ECC:skill:homelab-vlan-segmentation
+  - affaan-m/ECC:skill:homelab-wireguard-vpn
+  - affaan-m/ECC:skill:network-bgp-diagnostics
+  - affaan-m/ECC:skill:network-config-validation
+  - affaan-m/ECC:skill:network-interface-health
+  recipe:
+    title: Network operations
+    description: 'Use when diagnosing or reviewing an authorized network: topology, interfaces, routing/BGP, segmentation,
+      DNS, DHCP, firewall paths or VPN connectivity.'
+    body: '# Network operations
+
+
+      ## Inventory before commands
+
+      Identify owner, authorized targets, exact platform/version, topology, addressing, routing domains, expected
+      flows, current symptoms and the last known good state. Start with read-only evidence; broad scanning is not
+      implicit authorization.
+
+
+      ## Diagnose by boundary
+
+      1. Check physical/link state and counter deltas, then addressing/neighbor resolution, routes, DNS and policy.
+      Compare an affected path with a known working path.
+
+      2. Correlate observations with timestamps and a bounded collection window. Counter totals without interval,
+      link rate and resets are not error rates.
+
+      3. For BGP, distinguish neighbor transport/session state, address family, route policy, accepted paths and
+      installed forwarding state. Do not reset peers or clear counters during read-only triage.
+
+      4. For VLAN/firewall design, specify required source/destination/service flows and test both expected allow
+      and deny behaviour, including IPv6 and management access. Failed ping alone does not establish isolation.
+
+      5. For DNS/VPN, separate resolver reachability, application bypasses, peer handshakes, routes and forwarding
+      policy. Keep keys, logs and full configurations out of public outputs.
+
+      6. Propose the smallest reversible change with exact platform syntax, backup, maintenance window, console/out-of-band
+      path and validation. Apply only after specific authorization.
+
+
+      ## Handoff
+
+      Evidence, ranked hypotheses, bounded tests, proposed diff, risks, rollback and success criteria. Do not disable
+      authentication/firewalls as a shortcut. Homelab planning belongs to infrastructure:homelab-operations; application
+      deployment/SRE stays in platform.'
+    references:
+      homelab-pihole-dns.md:
+      - affaan-m/ECC:skills/homelab-pihole-dns/SKILL.md#how-pi-hole-works,troubleshooting,anti-patterns,best-practices
+      homelab-vlan-segmentation.md:
+      - affaan-m/ECC:skills/homelab-vlan-segmentation/SKILL.md#how-it-works,vlan-design-template,switch-trunk-vs-access-ports,anti-patterns,best-practices
+      homelab-wireguard-vpn.md:
+      - affaan-m/ECC:skills/homelab-wireguard-vpn/SKILL.md#how-wireguard-works,split-tunnel-vs-full-tunnel,troubleshooting,anti-patterns,best-practices
+      network-bgp-diagnostics.md:
+      - affaan-m/ECC:skills/network-bgp-diagnostics/SKILL.md#read-only-triage-flow,state-interpretation,route-policy-checks,change-window-only,anti-patterns
+      network-config-validation.md:
+      - affaan-m/ECC:skills/network-config-validation/SKILL.md#dangerous-command-detection,duplicate-ips-and-subnet-overlaps,management-plane-checks,security-hygiene-checks,anti-patterns
+      network-interface-health.md:
+      - affaan-m/ECC:skills/network-interface-health/SKILL.md#counter-reference,diagnosis-flow,anti-patterns
+    reference_notes:
+      homelab-pihole-dns.md: 'Reviewed adaptation: homelab-pihole-dns; version and approval assumptions are explicit.'
+      homelab-vlan-segmentation.md: 'Reviewed adaptation: homelab-vlan-segmentation; version and approval assumptions
+        are explicit.'
+      homelab-wireguard-vpn.md: 'Reviewed adaptation: homelab-wireguard-vpn; version and approval assumptions are
+        explicit.'
+      network-bgp-diagnostics.md: 'Reviewed adaptation: network-bgp-diagnostics; version and approval assumptions
+        are explicit.'
+      network-config-validation.md: 'Reviewed adaptation: network-config-validation; version and approval assumptions
+        are explicit.'
+      network-interface-health.md: 'Reviewed adaptation: network-interface-health; version and approval assumptions
+        are explicit.'
+- id: infrastructure/homelab-operations
+  type: skill
+  capability: 'Use when planning or operating a home/small-lab self-hosted environment: device roles, services,
+    storage, DNS, access, backups, recovery and staged network readiness.'
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:agent:homelab-architect
+  - affaan-m/ECC:skill:homelab-network-readiness
+  - affaan-m/ECC:skill:homelab-network-setup
+  recipe:
+    title: Homelab operations
+    description: 'Use when planning or operating a home/small-lab self-hosted environment: device roles, services,
+      storage, DNS, access, backups, recovery and staged network readiness.'
+    body: '# Homelab operations
+
+
+      ## Establish the service and recovery goals
+
+      Inventory ISP handoff, gateway, switches/APs, hosts, storage, power, DNS/DHCP, services and remote access.
+      Record operator skill, constraints, data value and acceptable downtime. Keep the first proposal read-only.
+
+
+      ## Staged design
+
+      1. Assign hardware/service roles and the smallest useful topology. Separate management, trusted clients, servers,
+      guests and untrusted devices according to actual risk and hardware capability.
+
+      2. Document addresses, reservations, service names, storage ownership, credentials and external dependencies.
+      Avoid overlapping VPN/site ranges and unmanaged duplicate DHCP services.
+
+      3. Before changing DNS, VLANs or VPN routes, establish stable infrastructure addresses, a tested fallback
+      and console access. Keep the operator''s recovery path working throughout.
+
+      4. Design backups from recovery goals, with independent copies and a demonstrated restore test. A running
+      backup job is not evidence that data can be restored.
+
+      5. Plan service installation/update as reviewed, versioned changes. No remote-shell installer, public management
+      interface, automatic key rotation or wholesale firewall replacement by default.
+
+      6. Move one test client/service at a time; verify connectivity, access isolation, name resolution and rollback
+      before wider rollout. Record final inventory and unresolved risks.
+
+
+      ## Deliverable
+
+      Topology, service/address table, storage/backup plan, phased changes, verification and recovery runbook. Use
+      infrastructure:network-operations for packet-path diagnosis and platform:deployment for application delivery.
+      Do not promise enterprise availability from a home deployment.'
+    references:
+      homelab-architect.md:
+      - affaan-m/ECC:agents/homelab-architect.md#scope,workflow,safety-defaults,output-format
+      homelab-network-readiness.md:
+      - affaan-m/ECC:skills/homelab-network-readiness/SKILL.md#safety-rules,required-inventory,change-sequence,review-checklist,anti-patterns
+      homelab-network-setup.md:
+      - affaan-m/ECC:skills/homelab-network-setup/SKILL.md#ip-plan,dhcp-and-dns,cabling-and-wi-fi,anti-patterns
+    reference_notes:
+      homelab-architect.md: 'Reviewed adaptation: homelab-architect; version and approval assumptions are explicit.'
+      homelab-network-readiness.md: 'Reviewed adaptation: homelab-network-readiness; version and approval assumptions
+        are explicit.'
+      homelab-network-setup.md: 'Reviewed adaptation: homelab-network-setup; version and approval assumptions are
+        explicit.'

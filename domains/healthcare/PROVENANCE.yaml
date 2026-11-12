@@ -1,0 +1,44 @@
+version: 1
+files:
+- path: skills/clinical-documentation/references/clinical-reports.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/clinical-reports/SKILL.md#non-negotiable-boundary,input-gate,safe-drafting-workflow,privacy
+    license: MIT
+    modification: merged-section
+- path: skills/clinical-documentation/references/treatment-plans.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/treatment-plans/SKILL.md#hard-safety-boundary,allowed-inputs,source-boundaries
+    license: MIT
+    modification: merged-section
+- path: skills/clinical-evidence/references/clinical-decision-support.md
+  derived_from:
+  - source: K-Dense-AI/claude-scientific-skills
+    commit: 2d2065f
+    path: skills/clinical-decision-support/SKILL.md#hard-safety-boundary,data-gate,required-artifact-header,grade-evidence-profiles,privacy-and-de-identification
+    license: MIT
+    modification: merged-section
+- path: skills/clinical-evidence/references/clinical-evidence-agent.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: healthcare/healthcare-clinical-evidence-agent.md#validated-vs-unvalidated-claims-framework,evidence-synthesis-workflow
+    license: MIT
+    modification: merged-section
+- path: skills/health-informatics/references/healthcare-emr-patterns.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/healthcare-emr-patterns/SKILL.md#patient-safety-first,single-page-encounter-flow,locked-encounter-pattern,ui-patterns-for-clinical-data,accessibility-for-healthcare,anti-patterns
+    license: MIT
+    modification: merged-section
+- path: skills/health-informatics/references/healthcare-reviewer.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: agents/healthcare-reviewer.md#critical-checks,rules
+    license: MIT
+    modification: merged-section

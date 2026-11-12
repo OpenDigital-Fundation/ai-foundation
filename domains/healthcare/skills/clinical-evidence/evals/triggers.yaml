@@ -1,0 +1,6 @@
+should_trigger:
+- Prepare a source-verified clinical evidence brief for a professional, without patient-specific
+  treatment advice.
+- Avalie a evidência desta alegação clínica com fontes e limites de aplicabilidade.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

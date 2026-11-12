@@ -1,0 +1,5 @@
+should_trigger:
+- Assess CRS, spatial dependence and accuracy before mapping these geographic layers.
+- Analise estas camadas raster e vetoriais e valide a precisão geográfica.
+should_not_trigger:
+- Design a resource economy and playtest plan for our cooperative game.

@@ -1,0 +1,8 @@
+name: logistics
+description: Physical supply chains - replenishment, suppliers, transport/carriers, shipment exceptions and reverse
+  logistics. Experimental bundle with shared capability owners.
+include:
+- principles/*
+- logistics/*
+- operations/project-management
+- finance/financial-analysis

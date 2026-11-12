@@ -188,6 +188,55 @@
       "description": "Project management, people operations, customer support, processes.",
       "version": "0.0.0",
       "license": "MIT"
+    },
+    {
+      "name": "games",
+      "source": "./domains/games",
+      "description": "Game design and engineering - mechanics, progression, economies, levels, engine integration, runtime performance and multiplayer.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "geospatial",
+      "source": "./domains/geospatial",
+      "description": "Geographic information - spatial analysis, coordinate systems, cartography, GIS data pipelines and spatial services.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "extended-reality",
+      "source": "./domains/extended-reality",
+      "description": "Immersive AR/VR/XR applications - reference spaces, tracked input, spatial interaction, comfort and device/runtime verification.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "healthcare",
+      "source": "./domains/healthcare",
+      "description": "Health systems and clinician-reviewed support - interoperability, traceable evidence briefs and documentation of verified clinical facts and decisions.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "web3",
+      "source": "./domains/web3",
+      "description": "Blockchain and DeFi engineering - smart contracts, token/accounting units, mechanism invariants and local verification; no investment recommendations or live transactions.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "infrastructure",
+      "source": "./domains/infrastructure",
+      "description": "Networks and self-hosted labs - connectivity, routing, DNS, VPN, segmentation, local services, storage and recovery; application delivery stays in platform.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "logistics",
+      "source": "./domains/logistics",
+      "description": "Physical supply chains - replenishment, suppliers, transport/carriers, shipment exceptions and reverse logistics.",
+      "version": "0.0.0",
+      "license": "MIT"
     }
   ]
 }

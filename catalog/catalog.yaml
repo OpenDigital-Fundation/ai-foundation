@@ -823,6 +823,14 @@ artifacts:
   - "github/awesome-copilot:skill:docs-sync-audit"
   - "github/awesome-copilot:skill:markdown-to-html"
   - "msitarzewski/agency-agents:agent:Technical Writer"
+- id: extended-reality/immersive-development
+  type: skill
+  capability: "Use when designing or implementing AR, VR or XR applications: spatial reference frames, tracked input, immersive\
+    \ interaction, comfort, rendering budgets and runtime fallbacks."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "davila7/claude-code-templates:skill:vr-ar"
 - id: finance/accounting
   type: skill
   capability: "Use for day-to-day accounting: bookkeeping, reconciliations, month-end close, accounts payable, expense tracking,\
@@ -858,6 +866,105 @@ artifacts:
   - "msitarzewski/agency-agents:agent:Pricing Analyst"
   - "wshobson/agents:skill:startup-financial-modeling"
   - "wshobson/agents:skill:startup-metrics-framework"
+- id: games/game-design
+  type: skill
+  capability: Use when designing game mechanics, player loops, progression, economies, narrative systems or levels and planning
+    playtests. Use game-engineering for engine implementation.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Economy Designer"
+  - "msitarzewski/agency-agents:agent:Game Designer"
+  - "msitarzewski/agency-agents:agent:Level Designer"
+  - "msitarzewski/agency-agents:agent:Narrative Designer"
+- id: games/game-engineering
+  type: skill
+  capability: "Use when implementing and profiling a game runtime: scenes, entity state, save systems, engine integration,\
+    \ game audio, networking or a packaged game build."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Game Audio Engineer"
+  - "msitarzewski/agency-agents:agent:Godot Gameplay Scripter"
+  - "msitarzewski/agency-agents:agent:Godot Multiplayer Engineer"
+  - "msitarzewski/agency-agents:agent:Roblox Systems Scripter"
+  - "msitarzewski/agency-agents:agent:Unity Architect"
+  - "msitarzewski/agency-agents:agent:Unreal Systems Engineer"
+  - "msitarzewski/agency-agents:agent:Unreal World Builder"
+- id: geospatial/geospatial-analysis
+  type: skill
+  capability: Use when analysing geographic vector/raster data, selecting coordinate reference systems, making analytical
+    maps, validating spatial accuracy or interpreting spatial statistics.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Cartography Designer"
+  - "msitarzewski/agency-agents:agent:Drone/Reality Mapping Specialist"
+  - "msitarzewski/agency-agents:agent:GIS Analyst"
+  - "msitarzewski/agency-agents:agent:GIS QA Engineer"
+  - "msitarzewski/agency-agents:agent:Spatial Data Scientist"
+- id: geospatial/geospatial-engineering
+  type: skill
+  capability: Use when building GIS data pipelines, spatial services, map applications, BIM/GIS integration, geoprocessing
+    tools or scalable map delivery.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:3D & Scene Developer"
+  - "msitarzewski/agency-agents:agent:BIM/GIS Specialist"
+  - "msitarzewski/agency-agents:agent:Geoprocessing Specialist"
+  - "msitarzewski/agency-agents:agent:Spatial Data Engineer"
+  - "msitarzewski/agency-agents:agent:Web GIS Developer"
+- id: healthcare/clinical-documentation
+  type: skill
+  capability: Use when drafting or checking clinical notes, structured reports, handoffs or documentation of plans already
+    supplied by a qualified clinician, with field-level traceability and professional review.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:clinical-reports"
+  - "K-Dense-AI/claude-scientific-skills:skill:treatment-plans"
+- id: healthcare/clinical-evidence
+  type: skill
+  capability: Use when a healthcare professional needs a source-backed clinical evidence brief, appraisal of a clinical claim
+    or a documented evidence profile; not a patient-specific diagnosis or prescription.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "K-Dense-AI/claude-scientific-skills:skill:clinical-decision-support"
+  - "msitarzewski/agency-agents:agent:Clinical Evidence Agent"
+- id: healthcare/health-informatics
+  type: skill
+  capability: Use when designing or reviewing EHR/EMR systems, health-data interoperability, clinician workflows or clinical
+    decision-support software architecture and validation.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:healthcare-reviewer"
+  - "affaan-m/ECC:skill:healthcare-emr-patterns"
+- id: infrastructure/homelab-operations
+  type: skill
+  capability: "Use when planning or operating a home/small-lab self-hosted environment: device roles, services, storage, DNS,\
+    \ access, backups, recovery and staged network readiness."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:agent:homelab-architect"
+  - "affaan-m/ECC:skill:homelab-network-readiness"
+  - "affaan-m/ECC:skill:homelab-network-setup"
+- id: infrastructure/network-operations
+  type: skill
+  capability: "Use when diagnosing or reviewing an authorized network: topology, interfaces, routing/BGP, segmentation, DNS,\
+    \ DHCP, firewall paths or VPN connectivity."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:homelab-pihole-dns"
+  - "affaan-m/ECC:skill:homelab-vlan-segmentation"
+  - "affaan-m/ECC:skill:homelab-wireguard-vpn"
+  - "affaan-m/ECC:skill:network-bgp-diagnostics"
+  - "affaan-m/ECC:skill:network-config-validation"
+  - "affaan-m/ECC:skill:network-interface-health"
 - id: languages/cpp
   type: skill
   capability: C++ patterns, testing, security, review and build knowledge, plus framework references.
@@ -1378,6 +1485,24 @@ artifacts:
   - "affaan-m/ECC:skill:master-agreement-generator"
   - "msitarzewski/agency-agents:agent:Legal Client Intake"
   - "msitarzewski/agency-agents:agent:Legal Document Review"
+- id: logistics/logistics-operations
+  type: skill
+  capability: Use when organizing physical transport and carrier operations, shipment exceptions, delivery evidence, returns/reverse
+    logistics, disposition or operational handoffs.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:carrier-relationship-management"
+  - "affaan-m/ECC:skill:logistics-exception-management"
+  - "affaan-m/ECC:skill:returns-reverse-logistics"
+- id: logistics/supply-chain-planning
+  type: skill
+  capability: "Use when planning physical supply chains: demand/capacity, inventory policy, suppliers, lead-time risk, sourcing\
+    \ alternatives and scenario-based total cost."
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Supply Chain Strategist"
 - id: marketing/campaign-planning
   type: skill
   capability: "Use when planning a marketing campaign or launch end to end: goals, audience, positioning and messaging, channel\
@@ -2113,6 +2238,25 @@ artifacts:
   - "davila7/claude-code-templates:agent:ux-researcher"
   - "github/awesome-copilot:agent:SE: UX Designer"
   - "msitarzewski/agency-agents:agent:UX Researcher"
+- id: web3/defi-engineering
+  type: skill
+  capability: Use when engineering or reviewing DeFi mechanism invariants, AMM/share accounting, token decimals, oracle assumptions,
+    collateral/liquidation flows or protocol simulations.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "affaan-m/ECC:skill:defi-amm-security"
+  - "affaan-m/ECC:skill:evm-token-decimals"
+- id: web3/smart-contract-development
+  type: skill
+  capability: Use when designing, implementing and testing blockchain smart contracts, token interfaces, upgrade/storage layouts
+    or a deployment plan, excluding investment recommendations and live value transfers.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "msitarzewski/agency-agents:agent:Solidity Smart Contract Engineer"
+  - "wshobson/agents:skill:nft-standards"
+  - "wshobson/agents:skill:web3-testing"
 - id: workflow/brainstorming
   type: skill
   capability: Find out what the user wants and why, compare approaches, and get a written spec approved before building.

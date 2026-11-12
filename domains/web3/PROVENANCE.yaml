@@ -1,0 +1,37 @@
+version: 1
+files:
+- path: skills/defi-engineering/references/defi-amm-security.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/defi-amm-security/SKILL.md#execution-safety,security-checklist
+    license: MIT
+    modification: merged-section
+- path: skills/defi-engineering/references/evm-token-decimals.md
+  derived_from:
+  - source: affaan-m/ECC
+    commit: b38be6a
+    path: skills/evm-token-decimals/SKILL.md#how-it-works,rules
+    license: MIT
+    modification: merged-section
+- path: skills/smart-contract-development/references/nft-standards.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/blockchain-web3/skills/nft-standards/SKILL.md#metadata-standards,royalties-eip-2981
+    license: MIT
+    modification: merged-section
+- path: skills/smart-contract-development/references/solidity-smart-contract-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: engineering/engineering-solidity-smart-contract-engineer.md#security-first-development,code-quality,your-workflow-process
+    license: MIT
+    modification: merged-section
+- path: skills/smart-contract-development/references/web3-testing.md
+  derived_from:
+  - source: wshobson/agents
+    commit: 9c61ab2
+    path: plugins/blockchain-web3/skills/web3-testing/SKILL.md#unit-testing-patterns,foundry-testing-forge
+    license: MIT
+    modification: merged-section

@@ -1,0 +1,72 @@
+version: 1
+files:
+- path: skills/geospatial-analysis/references/cartography-designer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-cartography-designer.md#critical-rules-you-must-follow,your-design-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-analysis/references/drone-reality-mapping-specialist.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-drone-reality-mapping.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-analysis/references/gis-analyst.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-analyst.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-analysis/references/gis-qa-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-qa-engineer.md#critical-rules-you-must-follow,your-qa-process,qa-report-template
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-analysis/references/spatial-data-scientist.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-spatial-data-scientist.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-engineering/references/3d-scene-developer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-3d-scene-developer.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-engineering/references/bim-gis-specialist.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-bim-specialist.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-engineering/references/geoprocessing-specialist.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-geoprocessing-specialist.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-engineering/references/spatial-data-engineer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-spatial-data-engineer.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section
+- path: skills/geospatial-engineering/references/web-gis-developer.md
+  derived_from:
+  - source: msitarzewski/agency-agents
+    commit: b859c51
+    path: gis/gis-web-gis-developer.md#critical-rules-you-must-follow,your-process
+    license: MIT
+    modification: merged-section

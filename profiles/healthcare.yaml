@@ -1,0 +1,8 @@
+name: healthcare
+description: Health systems and clinician-reviewed support - interoperability, traceable evidence briefs and documentation
+  of verified clinical facts and decisions. Experimental bundle with shared capability owners.
+include:
+- principles/*
+- healthcare/*
+- research/literature-review
+- security/secrets-hygiene

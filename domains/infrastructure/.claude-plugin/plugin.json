@@ -1,0 +1,10 @@
+{
+  "name": "infrastructure",
+  "version": "0.0.0",
+  "description": "Networks and self-hosted labs - connectivity, routing, DNS, VPN, segmentation, local services, storage and recovery; application delivery stays in platform.",
+  "author": {
+    "name": "OpenDigital"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/OpenDigital-Fundation/ai-foundation"
+}

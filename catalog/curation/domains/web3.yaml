@@ -1,0 +1,122 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: web3
+artifacts:
+- id: web3/smart-contract-development
+  type: skill
+  capability: Use when designing, implementing and testing blockchain smart contracts, token interfaces, upgrade/storage
+    layouts or a deployment plan, excluding investment recommendations and live value transfers.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Solidity Smart Contract Engineer
+  - wshobson/agents:skill:nft-standards
+  - wshobson/agents:skill:web3-testing
+  recipe:
+    title: Smart contract development
+    description: Use when designing, implementing and testing blockchain smart contracts, token interfaces, upgrade/storage
+      layouts or a deployment plan, excluding investment recommendations and live value transfers.
+    body: '# Smart contract development
+
+
+      ## Establish the contract system
+
+      Record chain/network, compiler and toolchain versions, dependencies, token standards, trust assumptions, privileged
+      roles, upgrade model and asset flows. Do not request seed phrases or signing keys.
+
+
+      ## Build and verify
+
+      1. Express state transitions, authorization rules, accounting units, events and invariants before code. Decide
+      immutable versus upgradeable design from requirements, not a default template.
+
+      2. Select maintained libraries compatible with the pinned compiler. Review initialization, storage layout,
+      external-call boundaries, reentrancy and failure behaviour; library use is not an audit certificate.
+
+      3. Test intended and unauthorized transitions, malformed inputs, edge amounts, rounding, events and role changes.
+      Implement fixtures against the actual contract interface, not an undefined sample Token contract.
+
+      4. Add fuzz/invariant tests and upgrade-state preservation tests where applicable. Use disposable local chains;
+      any external RPC or fork requires an authorized endpoint and a pinned block with no signing capability.
+
+      5. Measure gas with a representative versioned build; do not treat a universal coverage percentage or gas
+      threshold as proof of security.
+
+      6. Prepare a deployment/verification plan with constructor/proxy parameters, roles, pause/recovery and rollback
+      limits. Production or testnet transactions, ownership transfers and publication require separate authorization.
+
+
+      ## Deliverable
+
+      Code or design, invariant/test evidence, dependency versions, known limitations and the reviewed deployment
+      plan. Security auditing belongs to security:security-audit; protocol accounting and mechanisms to web3:defi-engineering.
+      No profitability promise or investment advice is part of this skill.'
+    references:
+      solidity-smart-contract-engineer.md:
+      - msitarzewski/agency-agents:engineering/engineering-solidity-smart-contract-engineer.md#security-first-development,code-quality,your-workflow-process
+      web3-testing.md:
+      - wshobson/agents:plugins/blockchain-web3/skills/web3-testing/SKILL.md#unit-testing-patterns,foundry-testing-forge
+      nft-standards.md:
+      - wshobson/agents:plugins/blockchain-web3/skills/nft-standards/SKILL.md#metadata-standards,royalties-eip-2981
+    reference_notes:
+      solidity-smart-contract-engineer.md: 'Reviewed adaptation: Solidity Smart Contract Engineer; version and approval
+        assumptions are explicit.'
+      web3-testing.md: 'Reviewed adaptation: web3-testing; version and approval assumptions are explicit.'
+      nft-standards.md: 'Reviewed adaptation: nft-standards; version and approval assumptions are explicit.'
+- id: web3/defi-engineering
+  type: skill
+  capability: Use when engineering or reviewing DeFi mechanism invariants, AMM/share accounting, token decimals,
+    oracle assumptions, collateral/liquidation flows or protocol simulations.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - affaan-m/ECC:skill:defi-amm-security
+  - affaan-m/ECC:skill:evm-token-decimals
+  recipe:
+    title: Defi engineering
+    description: Use when engineering or reviewing DeFi mechanism invariants, AMM/share accounting, token decimals,
+      oracle assumptions, collateral/liquidation flows or protocol simulations.
+    body: '# DeFi engineering
+
+
+      ## Model value and trust
+
+      Define assets by chain ID and contract address, units/decimals, balances versus internal accounting, actors,
+      privileges, oracle sources, timing and failure assumptions. This is protocol engineering, not a recommendation
+      to buy, lend or trade.
+
+
+      ## Mechanism workflow
+
+      1. Draw deposits, shares, swaps, debt, fees, collateral and withdrawals as balance-sheet transitions. State
+      conservation, solvency and access-control invariants appropriate to the mechanism.
+
+      2. Verify token metadata and non-standard behaviours. Use exact integer/decimal arithmetic with explicit rounding
+      direction; do not assume every token has 18 decimals or returns successful metadata calls.
+
+      3. Evaluate donation/inflation, reentrancy, fee-on-transfer, rebasing, unusual decimals, zero liquidity, stale/manipulated
+      oracles and governance concentration against the model.
+
+      4. Simulate ordinary, boundary and adversarial sequences locally. Record parameters and sensitivities; illustrative
+      rates and liquidity are not forecasts or validated production defaults.
+
+      5. Implement protocol-specific slippage, deadlines, oracle freshness and emergency controls where required,
+      and test their failure modes. A checklist does not prove economic safety.
+
+      6. Hand independent security review a reproducible model, invariants, tests, privileged actions and unresolved
+      assumptions before any real-asset deployment.
+
+
+      ## Handoff
+
+      A unit-checked mechanism specification, adversarial scenarios, simulation/test evidence and change/approval
+      boundaries. No wallet signing, real-money transaction or paid RPC use without explicit authorization. Generic
+      audits, secrets and operational incidents stay in security/platform.'
+    references:
+      defi-amm-security.md:
+      - affaan-m/ECC:skills/defi-amm-security/SKILL.md#execution-safety,security-checklist
+      evm-token-decimals.md:
+      - affaan-m/ECC:skills/evm-token-decimals/SKILL.md#how-it-works,rules
+    reference_notes:
+      defi-amm-security.md: 'Reviewed adaptation: defi-amm-security; version and approval assumptions are explicit.'
+      evm-token-decimals.md: 'Reviewed adaptation: evm-token-decimals; version and approval assumptions are explicit.'

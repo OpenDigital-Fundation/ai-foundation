@@ -1,0 +1,146 @@
+# Editorial source. Public registry: catalog/catalog.yaml.
+version: 1
+domain: geospatial
+artifacts:
+- id: geospatial/geospatial-analysis
+  type: skill
+  capability: Use when analysing geographic vector/raster data, selecting coordinate reference systems, making analytical
+    maps, validating spatial accuracy or interpreting spatial statistics.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:Cartography Designer
+  - msitarzewski/agency-agents:agent:Drone/Reality Mapping Specialist
+  - msitarzewski/agency-agents:agent:GIS Analyst
+  - msitarzewski/agency-agents:agent:GIS QA Engineer
+  - msitarzewski/agency-agents:agent:Spatial Data Scientist
+  recipe:
+    title: Geospatial analysis
+    description: Use when analysing geographic vector/raster data, selecting coordinate reference systems, making
+      analytical maps, validating spatial accuracy or interpreting spatial statistics.
+    body: '# Geospatial analysis
+
+
+      ## Define the spatial claim
+
+      Record question, study area, time range, spatial support, units, resolution, coordinate reference system (CRS),
+      data licence and privacy constraints. Distinguish a descriptive map from a statistical or causal claim.
+
+
+      ## Analytical workflow
+
+      1. Inspect schema, geometry, extent, timestamps, missingness, sampling and provenance. Verify coordinate meaning
+      against control locations; a CRS label alone is not evidence.
+
+      2. Choose an appropriate working CRS and distance/area model. Assigning a CRS declares coordinate meaning;
+      reprojecting transforms coordinates. Never confuse the two. Account for antimeridian and polar cases.
+
+      3. Check geometry validity and topology before joins, overlay or buffering. Document repairs, changed feature
+      counts and precision; preserve originals.
+
+      4. For raster work, align CRS, resolution, extent, grid origin and nodata policy. Resampling changes information
+      and must be recorded.
+
+      5. Examine spatial dependence, aggregation-boundary sensitivity and sampling bias. Use spatially appropriate
+      validation; quantify uncertainty where the method supports it and disclose where it does not.
+
+      6. Produce a map with source/date, units, legend, appropriate scale and readable symbology. Validate against
+      independent observations or checkpoints appropriate to the intended accuracy.
+
+
+      ## Deliverable and boundary
+
+      Provide reproducible parameters, output layers, QA findings, map and interpretation limits. Existing GeoPandas
+      guides remain owned by science:scientific-computing; reuse that installed pack for library details rather
+      than creating a second copy here. GIS services and pipeline delivery belong to geospatial:geospatial-engineering.'
+    references:
+      gis-analyst.md:
+      - msitarzewski/agency-agents:gis/gis-analyst.md#critical-rules-you-must-follow,your-process
+      cartography-designer.md:
+      - msitarzewski/agency-agents:gis/gis-cartography-designer.md#critical-rules-you-must-follow,your-design-process
+      spatial-data-scientist.md:
+      - msitarzewski/agency-agents:gis/gis-spatial-data-scientist.md#critical-rules-you-must-follow,your-process
+      gis-qa-engineer.md:
+      - msitarzewski/agency-agents:gis/gis-qa-engineer.md#critical-rules-you-must-follow,your-qa-process,qa-report-template
+      drone-reality-mapping-specialist.md:
+      - msitarzewski/agency-agents:gis/gis-drone-reality-mapping.md#critical-rules-you-must-follow,your-process
+    reference_notes:
+      gis-analyst.md: 'Reviewed adaptation: GIS Analyst; version and approval assumptions are explicit.'
+      cartography-designer.md: 'Reviewed adaptation: Cartography Designer; version and approval assumptions are
+        explicit.'
+      spatial-data-scientist.md: 'Reviewed adaptation: Spatial Data Scientist; version and approval assumptions
+        are explicit.'
+      gis-qa-engineer.md: 'Reviewed adaptation: GIS QA Engineer; version and approval assumptions are explicit.'
+      drone-reality-mapping-specialist.md: 'Reviewed adaptation: Drone/Reality Mapping Specialist; version and approval
+        assumptions are explicit.'
+- id: geospatial/geospatial-engineering
+  type: skill
+  capability: Use when building GIS data pipelines, spatial services, map applications, BIM/GIS integration, geoprocessing
+    tools or scalable map delivery.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - msitarzewski/agency-agents:agent:3D & Scene Developer
+  - msitarzewski/agency-agents:agent:BIM/GIS Specialist
+  - msitarzewski/agency-agents:agent:Geoprocessing Specialist
+  - msitarzewski/agency-agents:agent:Spatial Data Engineer
+  - msitarzewski/agency-agents:agent:Web GIS Developer
+  recipe:
+    title: Geospatial engineering
+    description: Use when building GIS data pipelines, spatial services, map applications, BIM/GIS integration,
+      geoprocessing tools or scalable map delivery.
+    body: '# Geospatial engineering
+
+
+      ## Contract first
+
+      Inventory source/target CRS, vertical datum, schema, geometry types, resolution, temporal semantics, licences,
+      access rights and delivery format. Identify required clients, query patterns, update frequency and acceptance
+      tolerances.
+
+
+      ## Build the spatial product
+
+      1. Preserve inputs and define a read → transform → validate → versioned-output pipeline. Make paths, transformations
+      and credentials explicit configuration.
+
+      2. Validate geometry, attributes, feature identity, extent and row counts at each boundary. Retain lineage,
+      rejected features and repair decisions.
+
+      3. Choose storage and indexes from actual spatial queries and volume. Benchmark bounding-box filtering, exact
+      predicates, simplification and pagination with representative data.
+
+      4. For maps, choose GeoJSON, vector/raster tiles or services from measured payload and interaction requirements.
+      Define loading/error states, attribution, permissions, zoom-dependent detail and cache invalidation.
+
+      5. For BIM/3D integration, verify units, axis conventions, origin, vertical reference and level-of-detail
+      mapping with known control objects.
+
+      6. Test empty and malformed layers, large extents, antimeridian cases, concurrent updates, permission failures
+      and mobile/slow-network delivery.
+
+
+      ## Handoff
+
+      Deliver schema/CRS contract, transformation configuration, QA evidence, service or application build, operational
+      ownership and rollback. Generic ETL, deployment and reliability remain in data and platform; this domain owns
+      their spatial constraints.'
+    references:
+      spatial-data-engineer.md:
+      - msitarzewski/agency-agents:gis/gis-spatial-data-engineer.md#critical-rules-you-must-follow,your-process
+      web-gis-developer.md:
+      - msitarzewski/agency-agents:gis/gis-web-gis-developer.md#critical-rules-you-must-follow,your-process
+      geoprocessing-specialist.md:
+      - msitarzewski/agency-agents:gis/gis-geoprocessing-specialist.md#critical-rules-you-must-follow,your-process
+      bim-gis-specialist.md:
+      - msitarzewski/agency-agents:gis/gis-bim-specialist.md#critical-rules-you-must-follow,your-process
+      3d-scene-developer.md:
+      - msitarzewski/agency-agents:gis/gis-3d-scene-developer.md#critical-rules-you-must-follow,your-process
+    reference_notes:
+      spatial-data-engineer.md: 'Reviewed adaptation: Spatial Data Engineer; version and approval assumptions are
+        explicit.'
+      web-gis-developer.md: 'Reviewed adaptation: Web GIS Developer; version and approval assumptions are explicit.'
+      geoprocessing-specialist.md: 'Reviewed adaptation: Geoprocessing Specialist; version and approval assumptions
+        are explicit.'
+      bim-gis-specialist.md: 'Reviewed adaptation: BIM/GIS Specialist; version and approval assumptions are explicit.'
+      3d-scene-developer.md: 'Reviewed adaptation: 3D & Scene Developer; version and approval assumptions are explicit.'
