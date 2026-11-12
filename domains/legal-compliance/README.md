@@ -2,7 +2,7 @@
 
 <!-- Gerado por `python -m tools.build docs` a partir de catalog/. Não editar. -->
 
-Contracts, regulatory compliance, legal privacy.
+Contracts, regulatory compliance, legal privacy and faithful, understandable legal documents and service journeys.
 
 [Catálogo completo](../../docs/CATALOG.md) · [Facetas](../../docs/FACETS.md) · [Manutenção](../../docs/architecture/repository-layout.md)
 
@@ -23,6 +23,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|---|
 | [`compliance-programs`](skills/compliance-programs/SKILL.md) | experimental | Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy programmes and data processing, control mapping, evidence collection and policy gaps. Not legal advice. |
 | [`contracts`](skills/contracts/SKILL.md) | experimental | Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review against a playbook, redlines, client intake and matter organisation. Drafts are for review by a qualified la… |
+| [`legal-design`](skills/legal-design/SKILL.md) | experimental | Use when redesigning a legal document, form or service journey for comprehension and usability: plain language, visual hierarchy, obligation mapping and tests that preserve source legal meaning. |
 
 ## Origem e manutenção
 
@@ -35,3 +36,4 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 |---|---|
 | `compliance-programs` | davila7/claude-code-templates, github/awesome-copilot, msitarzewski/agency-agents, wshobson/agents |
 | `contracts` | affaan-m/ECC, msitarzewski/agency-agents |
+| `legal-design` | contribuição original |

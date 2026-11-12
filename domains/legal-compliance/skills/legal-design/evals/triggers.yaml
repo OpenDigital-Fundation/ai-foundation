@@ -1,0 +1,12 @@
+should_trigger:
+- Faça legal design deste documento preservando condições, direitos e exceções.
+- Redesign this legal form for comprehension with clause traceability.
+- Map the legal-service journey and prototype a plain-language explanation.
+- Teste a compreensão deste contrato sem alterar o significado jurídico.
+- Simplify the presentation of these legal obligations and retain the authoritative source mapping.
+should_not_trigger:
+- Draft new commercial liability terms for this agreement.
+- Prepare a SOC 2 control and evidence readiness map.
+- Conduct generic UX interviews for a shopping application.
+- Audit a PDF for tagging and reading-order accessibility.
+- Design a learning assessment using Bloom’s taxonomy.

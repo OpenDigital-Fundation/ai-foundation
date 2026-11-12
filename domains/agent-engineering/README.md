@@ -30,8 +30,10 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | [`context-management`](skills/context-management/SKILL.md) | experimental | Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and how to compact, what to keep in context versus files, and estimating the token cost of a task before running it. |
 | [`harness-design`](skills/harness-design/SKILL.md) | experimental | Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting, permissions, identity and trust, multi-agent topology, and the twelve-layer audit for wrapper regression… |
 | [`parallel-agents`](skills/parallel-agents/SKILL.md) | experimental | Use when facing two or more independent tasks (separate failures, subsystems or research questions) that share no state and can run at the same time. Dispatches one focused subagent per task with exactly the context it… |
+| [`session-observability`](skills/session-observability/SKILL.md) | experimental | Use when explicitly measuring selected agent sessions and skill/tool usage: scoped counts, tokens, latency and cost provenance, with an optional local Claude Code session pane. Not live Codex/Orca telemetry. |
 | [`session-retrospective`](skills/session-retrospective/SKILL.md) | experimental | Use when the user asks for a retrospective on a coding-agent session. Reads the session record and proposes ranked improvements to the agent's environment: navigation pointers, automated checks, review standards, AGENTS… |
 | [`skill-authoring`](skills/skill-authoring/SKILL.md) | experimental | Use when creating a new skill, editing or improving an existing one, testing whether a skill triggers and works, benchmarking it against a baseline, or tuning its description so it fires at the right time. Covers intent… |
+| [`skill-discovery`](skills/skill-discovery/SKILL.md) | experimental | Use when finding and comparing installable agent skills for a specified task, checking the local catalog first and reviewing candidate content, license, compatibility and installation scope. |
 
 ## Origem e manutenção
 
@@ -51,5 +53,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `context-management` | affaan-m/ECC, github/awesome-copilot |
 | `harness-design` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
 | `parallel-agents` | obra/superpowers, wshobson/agents |
+| `session-observability` | neokn/session-lens |
 | `session-retrospective` | mattpocock/skills |
 | `skill-authoring` | affaan-m/ECC, anthropics/skills, mattpocock/skills, obra/superpowers |
+| `skill-discovery` | vercel-labs/skills |

@@ -1,0 +1,12 @@
+should_trigger:
+- Planeje uma aula de 45 minutos com prática guiada e verificação de compreensão.
+- Facilitate a workshop with active participation and an exit task.
+- Prepare a lesson explanation and a response to likely misconceptions.
+- Adapte minha sessão síncrona para alunos que precisam de outro formato de resposta.
+- Help me teach this concept to a small group tomorrow.
+should_not_trigger:
+- Tutor me individually across my personal study schedule.
+- Design an entire certificate curriculum from outcomes to modules.
+- Build a scoring rubric and item blueprint for the final examination.
+- Make this contract easier to navigate while preserving legal meaning.
+- Configure how an agent learns durable memories.

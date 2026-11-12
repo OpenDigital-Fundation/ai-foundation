@@ -1,0 +1,23 @@
+version: 1
+domain: education
+artifacts:
+- id: education/learn
+  type: skill
+  capability: Use when building a personal study plan or tutoring a learner through retrieval, spaced practice, attempts and feedback.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: education/teach
+  type: skill
+  capability: Use when facilitating a lesson or workshop with explanations, guided practice, participation and adaptive checks for understanding.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: education/instructional-design
+  type: skill
+  capability: Use when designing a course or learning unit with learner analysis, revised Bloom taxonomy and aligned outcomes, evidence and practice.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: education/learning-assessment
+  type: skill
+  capability: Use when creating learning assessments, items, performance tasks, analytic rubrics and formative feedback for supplied outcomes.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'

@@ -286,6 +286,14 @@ artifacts:
   - "obra/superpowers:skill:dispatching-parallel-agents"
   - "wshobson/agents:skill:multi-reviewer-patterns"
   - "wshobson/agents:skill:parallel-debugging"
+- id: agent-engineering/session-observability
+  type: skill
+  capability: Use when measuring selected agent sessions and skill/tool usage with explicit scope, token/cost provenance and
+    an optional local Claude Code pane.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "neokn/session-lens:hook:hooks"
 - id: agent-engineering/session-retrospective
   type: skill
   capability: Review a coding-agent session and propose ranked improvements to the agent's environment.
@@ -306,6 +314,14 @@ artifacts:
   - "affaan-m/ECC:skill:skill-stocktake"
   - "affaan-m/ECC:skill:skill-comply"
   - "affaan-m/ECC:command:skill-health"
+- id: agent-engineering/skill-discovery
+  type: skill
+  capability: Use when finding and comparing installable agent skills for a specified task, checking the local catalog first
+    and reviewing candidate content, license, compatibility and installation scope.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+  supersedes:
+  - "vercel-labs/skills:skill:find-skills"
 - id: ai-engineering/claude-api
   type: skill
   capability: "Use when building with the Claude API or Anthropic SDKs: choosing a model, messages and streaming, tool use,\
@@ -823,6 +839,30 @@ artifacts:
   - "github/awesome-copilot:skill:docs-sync-audit"
   - "github/awesome-copilot:skill:markdown-to-html"
   - "msitarzewski/agency-agents:agent:Technical Writer"
+- id: education/instructional-design
+  type: skill
+  capability: Use when designing a course or learning unit with learner analysis, revised Bloom taxonomy and aligned outcomes,
+    evidence and practice.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: education/learn
+  type: skill
+  capability: Use when building a personal study plan or tutoring a learner through retrieval, spaced practice, attempts and
+    feedback.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: education/learning-assessment
+  type: skill
+  capability: Use when creating learning assessments, items, performance tasks, analytic rubrics and formative feedback for
+    supplied outcomes.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
+- id: education/teach
+  type: skill
+  capability: Use when facilitating a lesson or workshop with explanations, guided practice, participation and adaptive checks
+    for understanding.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
 - id: extended-reality/immersive-development
   type: skill
   capability: "Use when designing or implementing AR, VR or XR applications: spatial reference frames, tracked input, immersive\
@@ -1485,6 +1525,12 @@ artifacts:
   - "affaan-m/ECC:skill:master-agreement-generator"
   - "msitarzewski/agency-agents:agent:Legal Client Intake"
   - "msitarzewski/agency-agents:agent:Legal Document Review"
+- id: legal-compliance/legal-design
+  type: skill
+  capability: Use when redesigning legal documents, forms and service journeys for comprehension while preserving source meaning,
+    conditions and exceptions.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'
 - id: logistics/logistics-operations
   type: skill
   capability: Use when organizing physical transport and carrier operations, shipment exceptions, delivery evidence, returns/reverse

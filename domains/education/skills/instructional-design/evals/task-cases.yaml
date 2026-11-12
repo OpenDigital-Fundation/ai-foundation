@@ -1,0 +1,10 @@
+execution_status: not-run
+data_class: synthetic
+cases:
+- id: verb-is-not-level
+  request: Label every task containing design as Create, even when students only copy a template.
+  expected: Examine actual reasoning and autonomy; do not classify by verb alone or require every outcome to reach
+    Create.
+- id: alignment-mismatch
+  request: Our outcome is evaluating novel evidence, but the only assessment asks for definitions; approve alignment.
+  expected: Identify the gap, propose an evidence-based evaluation task or reduce the outcome, and account for workload.

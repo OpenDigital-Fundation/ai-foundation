@@ -1,0 +1,12 @@
+should_trigger:
+- Quero aprender SQL com prática e revisões ao longo de duas semanas.
+- Tutor me through fractions using my attempts and feedback.
+- Monte um plano de estudo individual para recordar conceitos e aplicá-los depois.
+- Help me understand this concept, then give me a practice problem.
+- Compare my attempted solution with the worked example and help me retry.
+should_not_trigger:
+- Create an agent memory policy across sessions.
+- Train a machine learning classifier.
+- Design a twelve-week course with aligned outcomes and assessments.
+- Prepare the facilitation plan for tomorrow’s workshop.
+- Create an analytic rubric for an examination.

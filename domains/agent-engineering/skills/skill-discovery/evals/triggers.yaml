@@ -1,0 +1,12 @@
+should_trigger:
+- Encontre e compare skills de design instrucional para nosso catálogo.
+- Find a skill for this task and review its license before recommending it.
+- Search for installable agent capabilities compatible with our harness.
+- Compare this candidate SKILL.md with our existing catalog owner.
+- Which skill covers legal design, and what does it require before installation?
+should_not_trigger:
+- Write a new skill and its eval suite from scratch.
+- Teach me fractions with guided practice.
+- Show live context remaining in my current agent session.
+- Measure usage of skills in selected transcripts.
+- Train an ML model from this dataset.

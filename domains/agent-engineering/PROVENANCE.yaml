@@ -710,3 +710,451 @@ files:
     path: skills/skill-creator/scripts/utils.py
     license: Apache-2.0
     modification: base
+- path: skills/session-observability/assets/session-lens/.claude-plugin/plugin.json
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: .claude-plugin/plugin.json
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/LICENSE
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: LICENSE
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/agents.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/agents.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/autocompact.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/autocompact.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/context.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/context.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/cost.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/cost.ts
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/digest/effort.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/effort.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/events.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/events.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/figures.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/figures.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/forecast.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/forecast.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/record.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/record.ts
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/digest/session.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/session.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/shells.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/shells.ts
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/digest/summary.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/summary.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/text.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/text.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/timeline.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/timeline.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/turns.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/turns.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/digest/uses.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/digest/uses.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/edges.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/edges.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/hooks.json
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/hooks.json
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/record/autocompact.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/record/autocompact.ts
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/record/children.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/record/children.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/record/transcript.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/record/transcript.ts
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/refresh.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/refresh.ts
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/register.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/register.tsx
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/state.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/state.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/theme.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/theme.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/atoms/Chip.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/atoms/Chip.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/atoms/Fold.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/atoms/Fold.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/atoms/Spacer.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/atoms/Spacer.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/atoms/Tile.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/atoms/Tile.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/layout.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/layout.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/ContextBar.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/ContextBar.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/CostRow.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/CostRow.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/EffortChart.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/EffortChart.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/EventLine.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/EventLine.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/KindBar.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/KindBar.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/MoreRow.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/MoreRow.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/Tabs.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/Tabs.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/TileRow.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/TileRow.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/molecules/Timeline.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/molecules/Timeline.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/AgentNode.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/AgentNode.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/ComboTable.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/ComboTable.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/Compactions.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/Compactions.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/ContextGrid.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/ContextGrid.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/CostTable.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/CostTable.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/EventLog.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/EventLog.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/TurnBox.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/TurnBox.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/TurnEntry.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/TurnEntry.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/UseTable.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/UseTable.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/organisms/Waterfall.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/organisms/Waterfall.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/palette.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/palette.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/sweep.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/sweep.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/templates/ComponentScreen.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/templates/ComponentScreen.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/templates/EffortScreen.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/templates/EffortScreen.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/templates/EventLogScreen.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/templates/EventLogScreen.tsx
+    license: MIT
+    modification: adapted
+- path: skills/session-observability/assets/session-lens/hooks/views/templates/HistoryScreen.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/templates/HistoryScreen.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/templates/InitScreen.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/templates/InitScreen.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/templates/RestartScreen.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/templates/RestartScreen.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/templates/TokenScreen.tsx
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/templates/TokenScreen.tsx
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/hooks/views/ui.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: hooks/views/ui.ts
+    license: MIT
+    modification: base
+- path: skills/session-observability/assets/session-lens/types/index.d.ts
+  derived_from:
+  - source: neokn/session-lens
+    commit: 8067dc061bd89affd2893afdba9b34f2ca847346
+    path: types/index.d.ts
+    license: MIT
+    modification: base
+- path: skills/skill-discovery/references/discovery-playbook.md
+  derived_from:
+  - source: vercel-labs/skills
+    commit: d3701c11b1101251af14c9d148f026e1a47ebe17
+    path: skills/find-skills/SKILL.md
+    license: MIT
+    modification: rewritten
+- path: skills/skill-discovery/LICENSE.txt
+  derived_from:
+  - source: vercel-labs/skills
+    commit: d3701c11b1101251af14c9d148f026e1a47ebe17
+    path: LICENSE
+    license: MIT
+    modification: base

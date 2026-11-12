@@ -2,14 +2,14 @@
 
 <!-- Gerado por `python -m tools.build docs` a partir de catalog/. Não editar. -->
 
-137 artefatos em 33 domínios. Tipos: 1 agent, 3 knowledge, 132 skill, 1 workflow.
+144 artefatos em 34 domínios. Tipos: 1 agent, 3 knowledge, 139 skill, 1 workflow.
 
 [Início](../README.md) · [Buscar por faceta](FACETS.md) · [Como manter](architecture/repository-layout.md)
 
 ## Domínios
 
 - [accessibility](#accessibility) — 4 artefatos
-- [agent-engineering](#agent-engineering) — 11 artefatos
+- [agent-engineering](#agent-engineering) — 13 artefatos
 - [ai-engineering](#ai-engineering) — 5 artefatos
 - [architecture](#architecture) — 7 artefatos
 - [brand](#brand) — 2 artefatos
@@ -18,6 +18,7 @@
 - [data](#data) — 3 artefatos
 - [debugging](#debugging) — 2 artefatos
 - [documents](#documents) — 4 artefatos
+- [education](#education) — 4 artefatos
 - [extended-reality](#extended-reality) — 1 artefatos
 - [finance](#finance) — 3 artefatos
 - [games](#games) — 2 artefatos
@@ -25,7 +26,7 @@
 - [healthcare](#healthcare) — 3 artefatos
 - [infrastructure](#infrastructure) — 2 artefatos
 - [languages](#languages) — 13 artefatos
-- [legal-compliance](#legal-compliance) — 2 artefatos
+- [legal-compliance](#legal-compliance) — 3 artefatos
 - [logistics](#logistics) — 2 artefatos
 - [marketing](#marketing) — 5 artefatos
 - [operations](#operations) — 3 artefatos
@@ -72,8 +73,10 @@ Configuring and operating coding agents - skill authoring, harnesses, orchestrat
 | [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md) | skill | Use when an agent session is long, expensive or near its context limit: budgeting tokens, deciding when and how to compact, what to keep in context versus files, and estimating the token cos |
 | [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md) | skill | Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting, permissions, identity and trust, multi-agent topology, and the twelve-layer |
 | [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md) | skill | Dispatch one focused subagent per independent task and integrate their verified results. |
+| [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md) | skill | Use when measuring selected agent sessions and skill/tool usage with explicit scope, token/cost provenance and an optional local Claude Code pane. |
 | [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md) | skill | Review a coding-agent session and propose ranked improvements to the agent's environment. |
 | [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md) | skill | Create, test, benchmark and tune skills, with eval loops, pressure tests and catalog placement rules. |
+| [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md) | skill | Use when finding and comparing installable agent skills for a specified task, checking the local catalog first and reviewing candidate content, license, compatibility and installation scope. |
 
 ## ai-engineering
 
@@ -182,6 +185,19 @@ Office documents and technical or corporate writing.
 | [`documents:office-documents`](../domains/documents/skills/office-documents/SKILL.md) | skill | Use when a task reads or produces Word, Excel, PowerPoint or PDF files (.docx, .xlsx, .pptx, .pdf): creating, editing, converting, extracting tables or text, filling forms or merging. Routes |
 | [`documents:technical-writing`](../domains/documents/skills/technical-writing/SKILL.md) | skill | Use when writing or updating developer documentation: READMEs, API references, guides, tutorials, runbooks, architecture overviews or code maps, and keeping docs in sync after code changes. |
 
+## education
+
+[Plugin e instalação](../domains/education/README.md) · [Manifesto editorial](../catalog/curation/domains/education.yaml)
+
+Human learning and teaching - personal study, session facilitation, instructional design and assessment; agent memory and machine learning stay with their owners.
+
+| Artefato | Tipo | Capacidade |
+|---|---|---|
+| [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md) | skill | Use when designing a course or learning unit with learner analysis, revised Bloom taxonomy and aligned outcomes, evidence and practice. |
+| [`education:learn`](../domains/education/skills/learn/SKILL.md) | skill | Use when building a personal study plan or tutoring a learner through retrieval, spaced practice, attempts and feedback. |
+| [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md) | skill | Use when creating learning assessments, items, performance tasks, analytic rubrics and formative feedback for supplied outcomes. |
+| [`education:teach`](../domains/education/skills/teach/SKILL.md) | skill | Use when facilitating a lesson or workshop with explanations, guided practice, participation and adaptive checks for understanding. |
+
 ## extended-reality
 
 [Plugin e instalação](../domains/extended-reality/README.md) · [Manifesto editorial](../catalog/curation/domains/extended-reality.yaml)
@@ -275,12 +291,13 @@ Idiomatic knowledge per programming language and framework, one pack per languag
 
 [Plugin e instalação](../domains/legal-compliance/README.md) · [Manifesto editorial](../catalog/curation/domains/legal-compliance.yaml)
 
-Contracts, regulatory compliance, legal privacy.
+Contracts, regulatory compliance, legal privacy and faithful, understandable legal documents and service journeys.
 
 | Artefato | Tipo | Capacidade |
 |---|---|---|
 | [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md) | skill | Use when preparing for or checking compliance: SOC 2, ISO 27001, GDPR, CCPA, HIPAA or PCI-DSS readiness, privacy programmes and data processing, control mapping, evidence collection and poli |
 | [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md) | skill | Use when drafting, reviewing or organising contracts: master service agreements and order forms, clause review against a playbook, redlines, client intake and matter organisation. Drafts are |
+| [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md) | skill | Use when redesigning legal documents, forms and service journeys for comprehension while preserving source meaning, conditions and exceptions. |
 
 ## logistics
 

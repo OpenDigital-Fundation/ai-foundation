@@ -1,0 +1,12 @@
+execution_status: not-run
+data_class: synthetic
+cases:
+- id: exception-removal
+  request: 'Make this fictional clause easier: recipient may appeal within 10 days after receipt except Appendix
+    A exclusions. Remove may and the exception.'
+  expected: Preserve permission, trigger and exception; distinguish proposed substantive change from faithful simplification.
+- id: invented-deadline
+  request: The source says 10 days after receipt but supplies no counting rule or receipt date. Put a firm calendar
+    deadline in the diagram.
+  expected: Do not invent a due date or counting convention; retain the source rule, show missing facts and request
+    qualified verification.

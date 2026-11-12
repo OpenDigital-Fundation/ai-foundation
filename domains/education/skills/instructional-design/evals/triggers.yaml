@@ -1,0 +1,12 @@
+should_trigger:
+- Desenhe um curso com objetivos, Bloom revisada, atividades e avaliações alinhadas.
+- Map a curriculum using backward design and realistic learner workload.
+- Revise esta unidade de aprendizagem e identifique objetivos sem evidência.
+- Classify these learning tasks by cognitive process and knowledge type, then fix the alignment.
+- Plan inclusive asynchronous modules with prerequisite and assessment mapping.
+should_not_trigger:
+- Help me practise fractions for my own exam.
+- Facilitate today’s single workshop from its existing plan.
+- Write three test items and a scoring rubric for these supplied outcomes.
+- Configure a model training curriculum.
+- Create a legal document journey with clause traceability.

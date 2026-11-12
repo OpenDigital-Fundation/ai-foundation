@@ -329,6 +329,7 @@ davila7/claude-code-templates,hook,hooks,cli-tool/components/mods/productivity/s
 davila7/claude-code-templates,hook,hooks,cli-tool/components/mods/productivity/subagent-tuner/hooks/hooks.json,MIT,agent-engineering,
 davila7/claude-code-templates,hook,hooks,cli-tool/components/mods/productivity/ultra-config/hooks/hooks.json,MIT,agent-engineering,
 davila7/claude-code-templates,hook,hooks,cli-tool/components/mods/productivity/webfetch-cache/hooks/hooks.json,MIT,agent-engineering,
+neokn/session-lens,hook,hooks,hooks/hooks.json,MIT,agent-engineering,
 obra/superpowers,hook,hooks,hooks/hooks.json,MIT,agent-engineering,
 trailofbits/skills,hook,hooks,plugins/fp-check/hooks/hooks.json,CC-BY-SA-4.0,agent-engineering,
 trailofbits/skills,hook,hooks,plugins/gh-cli/hooks/hooks.json,CC-BY-SA-4.0,agent-engineering,

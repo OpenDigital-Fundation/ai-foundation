@@ -1,0 +1,12 @@
+should_trigger:
+- Crie uma rubrica analítica para estes objetivos de aprendizagem.
+- Build a diagnostic quiz with rationales and formative feedback.
+- Revise os itens desta prova para alinhar a demanda cognitiva ao objetivo.
+- Design a performance assessment and moderation plan for these outcomes.
+- Check whether this scoring guide measures the intended learning rather than unrelated writing fluency.
+should_not_trigger:
+- Plan my own spaced study schedule.
+- Facilitate a lesson and respond to student confusion.
+- Create a whole-course learning architecture from learner needs.
+- Evaluate a machine learning model benchmark.
+- Audit this interface for accessibility conformance.

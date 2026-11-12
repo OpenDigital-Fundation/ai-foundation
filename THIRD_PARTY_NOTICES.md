@@ -68,3 +68,8 @@ redistribution in an MIT, commercially usable repository:
 - `SecurityStandards/agent-reverse-engineer` (MIT; a product/MCP server, referenced rather than vendored)
 
 The Elsevier elsarticle examples and bibliography styles supplied in the K-Dense venue-templates source declare LPPL. Those six files are not included in this distribution; the venue guide links to the official package instead.
+
+## Session usage pane and skill discovery
+
+- `neokn/session-lens` at `8067dc061bd89affd2893afdba9b34f2ca847346`, MIT, Copyright (c) 2026 Justin Shaw. Optional native runtime under `domains/agent-engineering/skills/session-observability/assets/session-lens/`; full permission notice in its LICENSE. OpenDigital disables report/model actions, autocompact writes and floating plugin dependency, removes report hardlink/deletion helpers, updates standard API rates and prevents unknown minor models inheriting family pricing. Source paths/modifications are recorded per file in PROVENANCE.yaml; overrides preserve the adaptations.
+- `vercel-labs/skills` at `d3701c11b1101251af14c9d148f026e1a47ebe17`, MIT, Copyright (c) 2026 Vercel, Inc. `find-skills` discovery procedure adapted under skill-discovery; permission notice in that skill's LICENSE.txt. Popularity-only gates and global auto-confirm installation examples were replaced with source/license/host review and scoped approval.

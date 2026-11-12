@@ -65,8 +65,9 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Comunicação › Facilitar (1)</summary>
+<summary>Comunicação › Facilitar (2)</summary>
 
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
 - [`platform:incident-response`](../domains/platform/skills/incident-response/SKILL.md)
 
 </details>
@@ -101,10 +102,11 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Conteúdo › Adaptar (2)</summary>
+<summary>Conteúdo › Adaptar (3)</summary>
 
 - [`brand:brand-identity`](../domains/brand/skills/brand-identity/SKILL.md)
 - [`brand:brand-voice`](../domains/brand/skills/brand-voice/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 
 </details>
 
@@ -264,8 +266,9 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Criação › Prototipar (4)</summary>
+<summary>Criação › Prototipar (5)</summary>
 
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 - [`ui:component-styling`](../domains/ui/skills/component-styling/SKILL.md)
 - [`ui:design-system`](../domains/ui/skills/design-system/SKILL.md)
 - [`ui:motion-and-polish`](../domains/ui/skills/motion-and-polish/SKILL.md)
@@ -274,8 +277,9 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Dados › Analisar (19)</summary>
+<summary>Dados › Analisar (20)</summary>
 
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`data:data-pipelines`](../domains/data/skills/data-pipelines/SKILL.md)
 - [`data:database-design`](../domains/data/skills/database-design/SKILL.md)
@@ -370,9 +374,10 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Conhecimento › Recuperar memória (1)</summary>
+<summary>Conhecimento › Recuperar memória (2)</summary>
 
 - [`agent-engineering:agent-memory`](../domains/agent-engineering/skills/agent-memory/SKILL.md)
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
 
 </details>
 
@@ -479,15 +484,17 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Programação › Revisar (31)</summary>
+<summary>Programação › Revisar (33)</summary>
 
 - [`accessibility:wcag-accessibility`](../domains/accessibility/skills/wcag-accessibility/SKILL.md)
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`code-quality:code-review`](../domains/code-quality/skills/code-review/SKILL.md)
 - [`code-quality:code-reviewer`](../domains/code-quality/agents/code-reviewer.md)
 - [`code-quality:codebase-audit`](../domains/code-quality/skills/codebase-audit/SKILL.md)
 - [`code-quality:debt-ledger`](../domains/code-quality/skills/debt-ledger/SKILL.md)
 - [`code-quality:receiving-code-review`](../domains/code-quality/skills/receiving-code-review/SKILL.md)
 - [`code-quality:simplification`](../domains/code-quality/skills/simplification/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
 - [`extended-reality:immersive-development`](../domains/extended-reality/skills/immersive-development/SKILL.md)
 - [`games:game-design`](../domains/games/skills/game-design/SKILL.md)
 - [`games:game-engineering`](../domains/games/skills/game-engineering/SKILL.md)
@@ -568,7 +575,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Qualidade › Avaliar (22)</summary>
+<summary>Qualidade › Avaliar (25)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -581,6 +588,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
 - [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md)
 - [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md)
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
 - [`ai-engineering:claude-api`](../domains/ai-engineering/skills/claude-api/SKILL.md)
@@ -588,6 +596,8 @@ Termos marcados como propostos aguardam revisão humana.
 - [`ai-engineering:ml-engineering`](../domains/ai-engineering/skills/ml-engineering/SKILL.md)
 - [`ai-engineering:prompt-engineering`](../domains/ai-engineering/skills/prompt-engineering/SKILL.md)
 - [`ai-engineering:rag-pipelines`](../domains/ai-engineering/skills/rag-pipelines/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 - [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
 - [`science:experimental-design`](../domains/science/skills/experimental-design/SKILL.md)
 - [`ux:usability-review`](../domains/ux/skills/usability-review/SKILL.md)
@@ -637,8 +647,9 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Raciocínio › Decompor (12)</summary>
+<summary>Raciocínio › Decompor (13)</summary>
 
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
 - [`workflow:brainstorming`](../domains/workflow/skills/brainstorming/SKILL.md)
 - [`workflow:executing-plans`](../domains/workflow/skills/executing-plans/SKILL.md)
 - [`workflow:feature-delivery`](../domains/workflow/workflows/feature-delivery/SKILL.md)
@@ -664,7 +675,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Raciocínio › Planejar (48)</summary>
+<summary>Raciocínio › Planejar (49)</summary>
 
 - [`agent-engineering:agent-debugging`](../domains/agent-engineering/skills/agent-debugging/SKILL.md)
 - [`agent-engineering:agent-evaluation`](../domains/agent-engineering/skills/agent-evaluation/SKILL.md)
@@ -684,6 +695,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`architecture:decision-records`](../domains/architecture/skills/decision-records/SKILL.md)
 - [`architecture:domain-modeling`](../domains/architecture/skills/domain-modeling/SKILL.md)
 - [`architecture:system-design`](../domains/architecture/skills/system-design/SKILL.md)
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
 - [`extended-reality:immersive-development`](../domains/extended-reality/skills/immersive-development/SKILL.md)
 - [`games:game-design`](../domains/games/skills/game-design/SKILL.md)
 - [`games:game-engineering`](../domains/games/skills/game-engineering/SKILL.md)
@@ -718,8 +730,9 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Raciocínio › Verificar (8)</summary>
+<summary>Raciocínio › Verificar (9)</summary>
 
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`debugging:build-failure-resolution`](../domains/debugging/skills/build-failure-resolution/SKILL.md)
 - [`debugging:systematic-debugging`](../domains/debugging/skills/systematic-debugging/SKILL.md)
 - [`principles:coding-discipline`](../domains/principles/skills/coding-discipline/SKILL.md)
@@ -741,8 +754,9 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Pesquisa › Comparar fontes (3)</summary>
+<summary>Pesquisa › Comparar fontes (4)</summary>
 
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`research:docs-lookup`](../domains/research/skills/docs-lookup/SKILL.md)
 - [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
 - [`research:source-research`](../domains/research/skills/source-research/SKILL.md)
@@ -768,8 +782,9 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Pesquisa › Buscar (4)</summary>
+<summary>Pesquisa › Buscar (5)</summary>
 
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`research:docs-lookup`](../domains/research/skills/docs-lookup/SKILL.md)
 - [`research:literature-review`](../domains/research/skills/literature-review/SKILL.md)
 - [`research:source-research`](../domains/research/skills/source-research/SKILL.md)
@@ -821,8 +836,39 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Ensino › Tutorar (1)</summary>
+<summary>Ensino › Avaliar aprendizado (2)</summary>
 
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ensino › Exercitar (1)</summary>
+
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ensino › Explicar (1)</summary>
+
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ensino › Personalizar (1)</summary>
+
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+
+</details>
+
+<details>
+<summary>Ensino › Tutorar (3)</summary>
+
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
 - [`operations:people-operations`](../domains/operations/skills/people-operations/SKILL.md)
 
 </details>
@@ -892,7 +938,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Computação, dados e tecnologias digitais › Inteligência Artificial e Dados (26)</summary>
+<summary>Computação, dados e tecnologias digitais › Inteligência Artificial e Dados (28)</summary>
 
 - [`agent-engineering:agent-debugging`](../domains/agent-engineering/skills/agent-debugging/SKILL.md)
 - [`agent-engineering:agent-evaluation`](../domains/agent-engineering/skills/agent-evaluation/SKILL.md)
@@ -903,8 +949,10 @@ Termos marcados como propostos aguardam revisão humana.
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
 - [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md)
 - [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md)
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`ai-engineering:claude-api`](../domains/ai-engineering/skills/claude-api/SKILL.md)
 - [`ai-engineering:mcp-server-development`](../domains/ai-engineering/skills/mcp-server-development/SKILL.md)
 - [`ai-engineering:ml-engineering`](../domains/ai-engineering/skills/ml-engineering/SKILL.md)
@@ -968,7 +1016,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Computação, dados e tecnologias digitais › Engenharia de Software (91)</summary>
+<summary>Computação, dados e tecnologias digitais › Engenharia de Software (93)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -982,8 +1030,10 @@ Termos marcados como propostos aguardam revisão humana.
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
 - [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md)
 - [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md)
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`ai-engineering:claude-api`](../domains/ai-engineering/skills/claude-api/SKILL.md)
 - [`ai-engineering:mcp-server-development`](../domains/ai-engineering/skills/mcp-server-development/SKILL.md)
 - [`ai-engineering:ml-engineering`](../domains/ai-engineering/skills/ml-engineering/SKILL.md)
@@ -1124,13 +1174,14 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Humanidades, sociedade e instituições › Direito (5) — proposto</summary>
+<summary>Humanidades, sociedade e instituições › Direito (6) — proposto</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:document-accessibility`](../domains/accessibility/skills/document-accessibility/SKILL.md)
 - [`accessibility:wcag-accessibility`](../domains/accessibility/skills/wcag-accessibility/SKILL.md)
 - [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md)
 - [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 
 </details>
 
@@ -1145,8 +1196,12 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Saúde, educação e desenvolvimento humano › Educação (1) — proposto</summary>
+<summary>Saúde, educação e desenvolvimento humano › Educação (5) — proposto</summary>
 
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
 - [`operations:people-operations`](../domains/operations/skills/people-operations/SKILL.md)
 
 </details>
@@ -1162,8 +1217,12 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Saúde, educação e desenvolvimento humano › Psicologia e desenvolvimento humano (3) — proposto</summary>
+<summary>Saúde, educação e desenvolvimento humano › Psicologia e desenvolvimento humano (7) — proposto</summary>
 
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
 - [`operations:people-operations`](../domains/operations/skills/people-operations/SKILL.md)
 - [`ux:usability-review`](../domains/ux/skills/usability-review/SKILL.md)
 - [`ux:user-research`](../domains/ux/skills/user-research/SKILL.md)
@@ -1185,7 +1244,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Artes, design e indústrias criativas › Design (22) — proposto</summary>
+<summary>Artes, design e indústrias criativas › Design (23) — proposto</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -1202,6 +1261,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`extended-reality:immersive-development`](../domains/extended-reality/skills/immersive-development/SKILL.md)
 - [`games:game-design`](../domains/games/skills/game-design/SKILL.md)
 - [`games:game-engineering`](../domains/games/skills/game-engineering/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 - [`product:product-management`](../domains/product/skills/product-management/SKILL.md)
 - [`ui:component-styling`](../domains/ui/skills/component-styling/SKILL.md)
 - [`ui:design-system`](../domains/ui/skills/design-system/SKILL.md)
@@ -1268,7 +1328,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Harnesses e runtimes (11)</summary>
+<summary>Harnesses e runtimes (13)</summary>
 
 - [`agent-engineering:agent-debugging`](../domains/agent-engineering/skills/agent-debugging/SKILL.md)
 - [`agent-engineering:agent-evaluation`](../domains/agent-engineering/skills/agent-evaluation/SKILL.md)
@@ -1279,8 +1339,10 @@ Termos marcados como propostos aguardam revisão humana.
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
 - [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md)
 - [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md)
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 
 </details>
 
@@ -1341,7 +1403,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Skills e capacidades reutilizáveis (133)</summary>
+<summary>Skills e capacidades reutilizáveis (140)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -1356,8 +1418,10 @@ Termos marcados como propostos aguardam revisão humana.
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
 - [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md)
 - [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md)
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`ai-engineering:claude-api`](../domains/ai-engineering/skills/claude-api/SKILL.md)
 - [`ai-engineering:mcp-server-development`](../domains/ai-engineering/skills/mcp-server-development/SKILL.md)
 - [`ai-engineering:ml-engineering`](../domains/ai-engineering/skills/ml-engineering/SKILL.md)
@@ -1392,6 +1456,10 @@ Termos marcados como propostos aguardam revisão humana.
 - [`documents:internal-comms`](../domains/documents/skills/internal-comms/SKILL.md)
 - [`documents:office-documents`](../domains/documents/skills/office-documents/SKILL.md)
 - [`documents:technical-writing`](../domains/documents/skills/technical-writing/SKILL.md)
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
 - [`extended-reality:immersive-development`](../domains/extended-reality/skills/immersive-development/SKILL.md)
 - [`finance:accounting`](../domains/finance/skills/accounting/SKILL.md)
 - [`finance:billing-operations`](../domains/finance/skills/billing-operations/SKILL.md)
@@ -1419,6 +1487,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`languages:typescript`](../domains/languages/skills/typescript/SKILL.md)
 - [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md)
 - [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 - [`logistics:logistics-operations`](../domains/logistics/skills/logistics-operations/SKILL.md)
 - [`logistics:supply-chain-planning`](../domains/logistics/skills/supply-chain-planning/SKILL.md)
 - [`marketing:campaign-planning`](../domains/marketing/skills/campaign-planning/SKILL.md)
@@ -1566,9 +1635,13 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Educação (2)</summary>
+<summary>Educação (6)</summary>
 
 - [`accessibility:document-accessibility`](../domains/accessibility/skills/document-accessibility/SKILL.md)
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
 - [`science:scientific-writing`](../domains/science/skills/scientific-writing/SKILL.md)
 
 </details>
@@ -1592,7 +1665,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Governo (8)</summary>
+<summary>Governo (9)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -1602,6 +1675,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`geospatial:geospatial-engineering`](../domains/geospatial/skills/geospatial-engineering/SKILL.md)
 - [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md)
 - [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 
 </details>
 
@@ -1661,7 +1735,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Serviços (16)</summary>
+<summary>Serviços (17)</summary>
 
 - [`accessibility:document-accessibility`](../domains/accessibility/skills/document-accessibility/SKILL.md)
 - [`documents:doc-coauthoring`](../domains/documents/skills/doc-coauthoring/SKILL.md)
@@ -1673,6 +1747,7 @@ Termos marcados como propostos aguardam revisão humana.
 - [`finance:financial-analysis`](../domains/finance/skills/financial-analysis/SKILL.md)
 - [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md)
 - [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 - [`operations:customer-support`](../domains/operations/skills/customer-support/SKILL.md)
 - [`operations:people-operations`](../domains/operations/skills/people-operations/SKILL.md)
 - [`operations:project-management`](../domains/operations/skills/project-management/SKILL.md)
@@ -1683,7 +1758,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Tecnologia (93)</summary>
+<summary>Tecnologia (95)</summary>
 
 - [`accessibility:accessibility-audit`](../domains/accessibility/skills/accessibility-audit/SKILL.md)
 - [`accessibility:assistive-technology-testing`](../domains/accessibility/skills/assistive-technology-testing/SKILL.md)
@@ -1697,8 +1772,10 @@ Termos marcados como propostos aguardam revisão humana.
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
 - [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md)
 - [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md)
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`ai-engineering:claude-api`](../domains/ai-engineering/skills/claude-api/SKILL.md)
 - [`ai-engineering:mcp-server-development`](../domains/ai-engineering/skills/mcp-server-development/SKILL.md)
 - [`ai-engineering:ml-engineering`](../domains/ai-engineering/skills/ml-engineering/SKILL.md)
@@ -1868,6 +1945,16 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
+<summary>EdTech (4)</summary>
+
+- [`education:instructional-design`](../domains/education/skills/instructional-design/SKILL.md)
+- [`education:learn`](../domains/education/skills/learn/SKILL.md)
+- [`education:learning-assessment`](../domains/education/skills/learning-assessment/SKILL.md)
+- [`education:teach`](../domains/education/skills/teach/SKILL.md)
+
+</details>
+
+<details>
 <summary>FinTech (3)</summary>
 
 - [`finance:billing-operations`](../domains/finance/skills/billing-operations/SKILL.md)
@@ -1913,7 +2000,7 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>Human-AI Interaction (14)</summary>
+<summary>Human-AI Interaction (16)</summary>
 
 - [`agent-engineering:agent-debugging`](../domains/agent-engineering/skills/agent-debugging/SKILL.md)
 - [`agent-engineering:agent-evaluation`](../domains/agent-engineering/skills/agent-evaluation/SKILL.md)
@@ -1924,8 +2011,10 @@ Termos marcados como propostos aguardam revisão humana.
 - [`agent-engineering:context-management`](../domains/agent-engineering/skills/context-management/SKILL.md)
 - [`agent-engineering:harness-design`](../domains/agent-engineering/skills/harness-design/SKILL.md)
 - [`agent-engineering:parallel-agents`](../domains/agent-engineering/skills/parallel-agents/SKILL.md)
+- [`agent-engineering:session-observability`](../domains/agent-engineering/skills/session-observability/SKILL.md)
 - [`agent-engineering:session-retrospective`](../domains/agent-engineering/skills/session-retrospective/SKILL.md)
 - [`agent-engineering:skill-authoring`](../domains/agent-engineering/skills/skill-authoring/SKILL.md)
+- [`agent-engineering:skill-discovery`](../domains/agent-engineering/skills/skill-discovery/SKILL.md)
 - [`extended-reality:immersive-development`](../domains/extended-reality/skills/immersive-development/SKILL.md)
 - [`ux:usability-review`](../domains/ux/skills/usability-review/SKILL.md)
 - [`ux:user-research`](../domains/ux/skills/user-research/SKILL.md)
@@ -1933,10 +2022,11 @@ Termos marcados como propostos aguardam revisão humana.
 </details>
 
 <details>
-<summary>LegalTech (2)</summary>
+<summary>LegalTech (3)</summary>
 
 - [`legal-compliance:compliance-programs`](../domains/legal-compliance/skills/compliance-programs/SKILL.md)
 - [`legal-compliance:contracts`](../domains/legal-compliance/skills/contracts/SKILL.md)
+- [`legal-compliance:legal-design`](../domains/legal-compliance/skills/legal-design/SKILL.md)
 
 </details>
 

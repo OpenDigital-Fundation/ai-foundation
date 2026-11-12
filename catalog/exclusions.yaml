@@ -13367,9 +13367,6 @@ excluded:
 - key: "vercel-labs/agent-skills:skill:writing-guidelines"
   reason: license
   note: No licence declared.
-- key: "vercel-labs/skills:skill:find-skills"
-  reason: vendor-specific
-  note: Discovery through the skills.sh registry; this catalog is browsed via docs/CATALOG.md.
 - key: "VoltAgent/awesome-claude-code-subagents:agent:ab-test-analysis"
   reason: duplicate-of
   into:

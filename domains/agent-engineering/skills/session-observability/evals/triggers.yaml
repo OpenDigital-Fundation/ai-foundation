@@ -1,0 +1,12 @@
+should_trigger:
+- Mensurar o uso dos agentes e skills nestas sessões selecionadas, com limites de cobertura.
+- Prepare a scoped session usage report separating Skill, tool and MCP calls.
+- Set up the reviewed optional Session Lens pane for Claude Code after checking its local data scope.
+- Compare token and cost evidence from these selected session records without inferring quality.
+- Explain missing or estimated usage in this agent-session measurement.
+should_not_trigger:
+- How much context is left right now?
+- Diagnose why this agent loop failed.
+- Benchmark two agents on a controlled coding task suite.
+- Store durable lessons in agent memory.
+- Find a skill for instructional design.

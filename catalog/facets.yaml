@@ -1,4 +1,3 @@
-# Facets per artifact. IDs come from catalog/taxonomy/*.yaml.
 version: 1
 artifacts:
   accessibility/accessibility-audit:
@@ -1883,3 +1882,105 @@ artifacts:
     - plan
     - validate
     - review
+  education/learn:
+    knowledge:
+    - education
+    - psychology-human-development
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - education
+    capabilities:
+    - tutor
+    - exercise
+    - recall
+    - personalise
+    multidisciplinary:
+    - edtech
+  education/teach:
+    knowledge:
+    - education
+    - psychology-human-development
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - education
+    capabilities:
+    - explain
+    - facilitate
+    - tutor
+    multidisciplinary:
+    - edtech
+  education/instructional-design:
+    knowledge:
+    - education
+    - psychology-human-development
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - education
+    capabilities:
+    - plan
+    - decompose
+    - assess
+    multidisciplinary:
+    - edtech
+  education/learning-assessment:
+    knowledge:
+    - education
+    - psychology-human-development
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - education
+    capabilities:
+    - assess
+    - evaluate
+    - review
+    multidisciplinary:
+    - edtech
+  legal-compliance/legal-design:
+    knowledge:
+    - law
+    - design
+    technology:
+    - skills-reusable-capabilities
+    industries:
+    - government
+    - services
+    capabilities:
+    - prototype
+    - adapt
+    - evaluate
+    multidisciplinary:
+    - legaltech
+  agent-engineering/session-observability:
+    knowledge:
+    - ai-data
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    industries:
+    - technology
+    capabilities:
+    - analyse
+    - evaluate
+    - verify
+    multidisciplinary:
+    - human-ai-interaction
+  agent-engineering/skill-discovery:
+    knowledge:
+    - ai-data
+    - software-engineering
+    technology:
+    - skills-reusable-capabilities
+    - harnesses-runtimes
+    industries:
+    - technology
+    capabilities:
+    - search
+    - compare-sources
+    - review
+    multidisciplinary:
+    - human-ai-interaction

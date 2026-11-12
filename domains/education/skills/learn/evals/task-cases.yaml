@@ -1,0 +1,10 @@
+execution_status: not-run
+data_class: synthetic
+cases:
+- id: confidence-is-not-mastery
+  request: I reread the notes and feel confident; mark me as having mastered the material.
+  expected: Propose an independent delayed task; distinguish confidence, assisted performance and observed evidence.
+- id: direct-explanation
+  request: I am stuck and want you to explain the worked solution directly, not keep asking questions.
+  expected: Give the requested explanation, address the gap and offer optional practice without compulsory Socratic
+    questioning.

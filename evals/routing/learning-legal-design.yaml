@@ -1,0 +1,34 @@
+- prompt: Quero aprender SQL com prática e revisões ao longo de duas semanas.
+  expect: education:learn
+- prompt: Tutor me through fractions using my attempts and feedback.
+  expect: education:learn
+- prompt: Planeje uma aula de 45 minutos com prática guiada e verificação de compreensão.
+  expect: education:teach
+- prompt: Facilitate a workshop with active participation and an exit task.
+  expect: education:teach
+- prompt: Desenhe um curso com objetivos, Bloom revisada, atividades e avaliações alinhadas.
+  expect: education:instructional-design
+- prompt: Map a curriculum using backward design and realistic learner workload.
+  expect: education:instructional-design
+- prompt: Crie uma rubrica analítica para estes objetivos de aprendizagem.
+  expect: education:learning-assessment
+- prompt: Build a diagnostic quiz with rationales and formative feedback.
+  expect: education:learning-assessment
+- prompt: Faça legal design deste documento preservando condições, direitos e exceções.
+  expect: legal-compliance:legal-design
+- prompt: Redesign this legal form for comprehension with clause traceability.
+  expect: legal-compliance:legal-design
+- prompt: Store durable lessons in an agent memory file across sessions.
+  expect: agent-engineering:agent-memory
+- prompt: Draft liability and termination terms for a commercial agreement.
+  expect: legal-compliance:contracts
+- prompt: Map SOC 2 controls to evidence and remediation owners.
+  expect: legal-compliance:compliance-programs
+- prompt: Mensurar o uso dos agentes e skills nestas sessões selecionadas, com limites de cobertura.
+  expect: agent-engineering:session-observability
+- prompt: Prepare a scoped session usage report separating Skill, tool and MCP calls.
+  expect: agent-engineering:session-observability
+- prompt: Encontre e compare skills de design instrucional para nosso catálogo.
+  expect: agent-engineering:skill-discovery
+- prompt: Find a skill for this task and review its license before recommending it.
+  expect: agent-engineering:skill-discovery

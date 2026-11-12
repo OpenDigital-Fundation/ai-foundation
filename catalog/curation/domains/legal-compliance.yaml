@@ -96,3 +96,8 @@ artifacts:
       intake.md:
       - msitarzewski/agency-agents:specialized/legal-client-intake.md
     base_dir: affaan-m/ECC:skills/master-agreement-generator
+- id: legal-compliance/legal-design
+  type: skill
+  capability: Use when redesigning legal documents, forms and service journeys for comprehension while preserving source meaning, conditions and exceptions.
+  status: experimental
+  owner: '@OpenDigital-Fundation/ai-foundation'

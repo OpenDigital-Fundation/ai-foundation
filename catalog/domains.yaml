@@ -31,7 +31,7 @@ domains:
   marketing: SEO and answer-engine optimisation, content, social, email, paid media.
   sales: Prospecting, qualification, proposals, pipeline.
   finance: Bookkeeping, FP&A, pricing, tax.
-  legal-compliance: Contracts, regulatory compliance, legal privacy.
+  legal-compliance: Contracts, regulatory compliance, legal privacy and faithful, understandable legal documents and service journeys.
   operations: Project management, people operations, customer support, processes.
   games: Game design and engineering - mechanics, progression, economies, levels, engine integration, runtime performance
     and multiplayer.
@@ -45,3 +45,4 @@ domains:
   infrastructure: Networks and self-hosted labs - connectivity, routing, DNS, VPN, segmentation, local services, storage and
     recovery; application delivery stays in platform.
   logistics: Physical supply chains - replenishment, suppliers, transport/carriers, shipment exceptions and reverse logistics.
+  education: Human learning and teaching - personal study, session facilitation, instructional design and assessment; agent memory and machine learning stay with their owners.

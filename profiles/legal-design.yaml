@@ -1,0 +1,8 @@
+name: legal-design
+description: Experimental legal-design bundle with legal meaning, user research and document accessibility owners.
+include:
+- principles/*
+- legal-compliance/legal-design
+- legal-compliance/contracts
+- ux/user-research
+- accessibility/document-accessibility

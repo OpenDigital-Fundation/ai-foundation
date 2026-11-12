@@ -34,7 +34,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [danicat/godoctor](https://github.com/danicat/godoctor) @ `ad2eacc` | Apache-2.0 | reference | 1 | 0 | 1 vendor-specific |
 | [ankitchiplunkar/frontend-design](https://github.com/ankitchiplunkar/frontend-design) @ `34bbe42` | MIT | merge | 0 | 0 | — |
 | [openai/skills](https://github.com/openai/skills) @ `49f948f` | NOASSERTION | merge | 43 | 2 | 19 vendor-specific, 9 duplicate-of, 8 license, 5 out-of-scope |
-| [vercel-labs/skills](https://github.com/vercel-labs/skills) @ `d3701c1` | MIT | merge | 1 | 0 | 1 vendor-specific |
+| [vercel-labs/skills](https://github.com/vercel-labs/skills) @ `d3701c1` | MIT | merge | 1 | 1 | — |
 | [getsentry/skills](https://github.com/getsentry/skills) @ `e94f222` | Apache-2.0 | merge | 32 | 7 | 10 vendor-specific, 10 duplicate-of, 3 source-internal, 2 license |
 | [trailofbits/skills](https://github.com/trailofbits/skills) @ `e4dd0bb` | CC-BY-SA-4.0 | reference | 144 | 0 | 141 license |
 | [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) @ `ce8b262` | MIT | merge | 23 | 0 | 16 source-internal, 7 duplicate-of |
@@ -44,6 +44,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) @ `bf9b0b4` | MIT | merge | 2190 | 39 | 1023 duplicate-of, 628 vendor-specific, 220 out-of-scope, 25 source-internal, 15 low-quality, 6 license |
 | [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) @ `078a25c` | MIT | merge | 77 | 9 | 63 duplicate-of, 4 vendor-specific, 1 out-of-scope |
 | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) @ `2d2065f` | MIT | merge | 177 | 10 | 27 vendor-specific, 16 duplicate-of, 11 license, 3 low-quality, 3 out-of-scope |
+| [neokn/session-lens](https://github.com/neokn/session-lens) @ `8067dc0` | MIT | merge | 1 | 1 | — |
 
 ## obra/superpowers
 
@@ -215,7 +216,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 ## vercel-labs/skills
 
 - URL: <https://github.com/vercel-labs/skills> · commit `d3701c11b1101251af14c9d148f026e1a47ebe17` · licence MIT · policy `merge`
-- Excluded items by reason: vendor-specific: 1
+- Used in: `agent-engineering:skill-discovery`
 
 ## getsentry/skills
 
@@ -274,6 +275,12 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 - Note: Collection MIT; skills declare their own licence in frontmatter, read before copying (restrictive or ambiguous ones are linked only)
 - Used in: `ai-engineering:ml-engineering`, `healthcare:clinical-documentation`, `healthcare:clinical-evidence`, `science:bioinformatics`, `science:biomedical-data`, `science:cheminformatics`, `science:experimental-design`, `science:lab-automation`, `science:scientific-computing`, `science:scientific-writing`
 - Excluded items by reason: vendor-specific: 27, duplicate-of: 16, license: 11, low-quality: 3, out-of-scope: 3
+
+## neokn/session-lens
+
+- URL: <https://github.com/neokn/session-lens> · commit `8067dc061bd89affd2893afdba9b34f2ca847346` · licence MIT · policy `merge`
+- Note: Opt-in native Claude Code pane vendored privately under session-observability; paid report and autocompact writes disabled
+- Used in: `agent-engineering:session-observability`
 
 ## Original OpenDigital contributions
 

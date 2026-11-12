@@ -1,0 +1,21 @@
+{
+  "name": "session-lens",
+  "version": "1.2.0-opendigital.1",
+  "description": "Local session usage pane adapted by OpenDigital; report generation and autocompact configuration are disabled.",
+  "author": {
+    "name": "Neo Kusanagi",
+    "email": "jr@neo.kn"
+  },
+  "homepage": "https://github.com/neokn/session-lens",
+  "repository": "https://github.com/neokn/session-lens",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "context-window",
+    "tokens",
+    "subagents",
+    "mod",
+    "pane"
+  ],
+  "types": "./types/index.d.ts"
+}

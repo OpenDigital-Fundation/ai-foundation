@@ -55,6 +55,8 @@ O catálogo é dividido nestes domínios, cada um com uma frase de fronteira. Um
 | `infrastructure` | Infraestrutura de rede e laboratórios auto-hospedados: conectividade, segmentação, DNS, VPN, hardware, recuperação e operação local. CI/CD, deploy de aplicações e SRE genérico continuam em platform. |
 | `logistics` | Planejamento de suprimentos e operação física de transporte, exceções, transportadoras, estoque e logística reversa. Gestão de projeto genérica fica em operations; segurança de dependências de software não é logística. |
 
+| `education` | Aprendizagem humana: estudo, ensino, desenho instrucional e avaliação; memória de agentes e aprendizado de máquina mantêm seus donos. |
+
 Domínios novos exigem ADR. Outros nichos verticais vão para `catalog/exclusions.yaml` até haver demanda (ver ROADMAP).
 
 ### R2. Unicidade: uma capacidade, um artefato

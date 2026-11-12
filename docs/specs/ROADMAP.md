@@ -33,6 +33,8 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`architecture/catalog`](architecture/catalog/spec.md) | workflow |
 | [`security/catalog`](security/catalog/spec.md) | code-quality |
 | [`agent-engineering/catalog`](agent-engineering/catalog/spec.md) | quality-gates |
+| [`agent-engineering/session-observability`](agent-engineering/session-observability/spec.md) | agent-engineering/catalog |
+| [`agent-engineering/skill-discovery`](agent-engineering/skill-discovery/spec.md) | agent-engineering/catalog |
 
 ## Onda 2 — Stack e produto digital
 
@@ -60,6 +62,7 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`sales/catalog`](sales/catalog/spec.md) | — |
 | [`finance/catalog`](finance/catalog/spec.md) | — |
 | [`legal-compliance/catalog`](legal-compliance/catalog/spec.md) | security |
+| [`legal-compliance/legal-design`](legal-compliance/legal-design/spec.md) | legal-compliance, ux, accessibility |
 | [`operations/catalog`](operations/catalog/spec.md) | — |
 
 ## Onda 4 — Domínios especializados solicitados
@@ -73,6 +76,8 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`web3/catalog`](web3/catalog/spec.md) | security, testing, finance |
 | [`infrastructure/catalog`](infrastructure/catalog/spec.md) | platform, security |
 | [`logistics/catalog`](logistics/catalog/spec.md) | operations, data, finance |
+
+| [`education/catalog`](education/catalog/spec.md) | research, accessibility |
 
 ## Fora de escopo nesta versão
 

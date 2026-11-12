@@ -178,7 +178,7 @@
     {
       "name": "legal-compliance",
       "source": "./domains/legal-compliance",
-      "description": "Contracts, regulatory compliance, legal privacy.",
+      "description": "Contracts, regulatory compliance, legal privacy and faithful, understandable legal documents and service journeys.",
       "version": "0.0.0",
       "license": "MIT"
     },
@@ -235,6 +235,13 @@
       "name": "logistics",
       "source": "./domains/logistics",
       "description": "Physical supply chains - replenishment, suppliers, transport/carriers, shipment exceptions and reverse logistics.",
+      "version": "0.0.0",
+      "license": "MIT"
+    },
+    {
+      "name": "education",
+      "source": "./domains/education",
+      "description": "Human learning and teaching - personal study, session facilitation, instructional design and assessment; agent memory and machine learning stay with their owners.",
       "version": "0.0.0",
       "license": "MIT"
     }

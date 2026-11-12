@@ -1125,9 +1125,6 @@ excluded:
 - key: "trailofbits/skills:skill:audit-context-building"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.
-- key: "vercel-labs/skills:skill:find-skills"
-  reason: vendor-specific
-  note: Discovery through the skills.sh registry; this catalog is browsed via docs/CATALOG.md.
 - key: "trailofbits/skills:skill:harness-writing"
   reason: license
   note: CC BY-SA 4.0; linked from security/external-references.

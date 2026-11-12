@@ -1,0 +1,9 @@
+name: agent-operations
+description: Experimental skill discovery and selected-session measurement; native pane assets remain opt-in.
+include:
+- principles/*
+- agent-engineering/skill-discovery
+- agent-engineering/session-observability
+- agent-engineering/context-management
+- agent-engineering/agent-evaluation
+- agent-engineering/agent-debugging

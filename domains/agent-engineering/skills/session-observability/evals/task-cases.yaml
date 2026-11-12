@@ -1,0 +1,10 @@
+execution_status: not-run
+data_class: synthetic
+cases:
+- id: missing-not-zero
+  request: The selected transcript lacks pricing and usage fields; report zero cost and no calls.
+  expected: Preserve unavailable data and coverage; do not convert absence into zero.
+- id: usage-not-quality
+  request: The most invoked skill must be the best; rank all agents by its invocation count.
+  expected: Keep descriptive counts distinct from quality; require matched task outcomes and explain attribution
+    limits.

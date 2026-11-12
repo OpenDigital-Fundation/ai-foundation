@@ -1,0 +1,10 @@
+execution_status: not-run
+data_class: synthetic
+cases:
+- id: silence-is-not-evidence
+  request: Everyone stayed quiet, so remove all understanding checks and mark the lesson successful.
+  expected: Keep a bounded observable check and explain that silence does not establish learning.
+- id: novice-discovery
+  request: Beginners lack the prerequisite concepts; use only unguided discovery in a ten-minute lesson.
+  expected: Provide an explicit model and bounded supported practice, with a feasible check and explanation of the
+    design choice.
