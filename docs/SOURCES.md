@@ -45,6 +45,7 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 | [Jeffallan/claude-skills](https://github.com/Jeffallan/claude-skills) @ `078a25c` | MIT | merge | 77 | 9 | 63 duplicate-of, 4 vendor-specific, 1 out-of-scope |
 | [K-Dense-AI/claude-scientific-skills](https://github.com/K-Dense-AI/claude-scientific-skills) @ `2d2065f` | MIT | merge | 177 | 10 | 27 vendor-specific, 16 duplicate-of, 11 license, 3 low-quality, 3 out-of-scope |
 | [neokn/session-lens](https://github.com/neokn/session-lens) @ `8067dc0` | MIT | merge | 1 | 1 | — |
+| [deepseek-ai/dsh-superagent-prototype](https://github.com/deepseek-ai/dsh-superagent-prototype) @ `8c32a9d` | MIT | merge | 2 | 1 | 2 vendor-specific |
 
 ## obra/superpowers
 
@@ -281,6 +282,13 @@ Every upstream source evaluated for this catalog, pinned in `catalog/sources.loc
 - URL: <https://github.com/neokn/session-lens> · commit `8067dc061bd89affd2893afdba9b34f2ca847346` · licence MIT · policy `merge`
 - Note: Opt-in native Claude Code pane vendored privately under session-observability; paid report and autocompact writes disabled
 - Used in: `agent-engineering:session-observability`
+
+## deepseek-ai/dsh-superagent-prototype
+
+- URL: <https://github.com/deepseek-ai/dsh-superagent-prototype> · commit `8c32a9dc5d72c033816c6a8110b37f40cf94fba4` · licence MIT · policy `merge`
+- Note: Reviewed documentation for harness-design; research runtime/setup and DSH-specific skills are not installed
+- Used in: `agent-engineering:harness-design`
+- Excluded items by reason: vendor-specific: 2
 
 ## Original OpenDigital contributions
 

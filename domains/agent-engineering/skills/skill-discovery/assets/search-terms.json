@@ -85,5 +85,13 @@
     "homelab",
     "auto hospedagem",
     "laboratório doméstico"
+  ],
+  "agent-engineering/harness-design": [
+    "dsh superagent",
+    "DeepSeek Harness",
+    "superagente",
+    "supervisão orientada a eventos",
+    "arquitetura de harness",
+    "autorização de eventos"
   ]
 }

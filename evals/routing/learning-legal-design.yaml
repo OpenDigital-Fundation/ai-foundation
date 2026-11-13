@@ -32,3 +32,5 @@
   expect: agent-engineering:skill-discovery
 - prompt: Find a skill for this task and review its license before recommending it.
   expect: agent-engineering:skill-discovery
+- prompt: Review a DeepSeek-style event-driven agent design for context versus authority, ownership and safe recovery.
+  expect: agent-engineering:harness-design

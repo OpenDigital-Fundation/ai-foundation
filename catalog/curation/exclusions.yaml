@@ -15179,3 +15179,11 @@ excluded:
 - key: "davila7/claude-code-templates:skill:treatment-plans"
   reason: out-of-scope
   note: "Copy of K-Dense-AI/claude-scientific-skills skill 'treatment-plans'; the same decision applies. Clinical or regulated health use; needs its own spec with risk review (see ADR science-domain)."
+- key: deepseek-ai/dsh-superagent-prototype:skill:dsh-superagent-feishu
+  reason: vendor-specific
+  note: Depende dos protocolos orchestrator_read/ack/report, identidades e configuração do DeepSeek Harness; comandos
+    de comunicação/setup não são incorporados. A documentação genérica revisada fica em agent-engineering/harness-design.
+- key: deepseek-ai/dsh-superagent-prototype:skill:dsh-superagent-github
+  reason: vendor-specific
+  note: Depende dos protocolos orchestrator_read/ack/report, identidades e configuração do DeepSeek Harness; comandos
+    de comunicação/setup não são incorporados. A documentação genérica revisada fica em agent-engineering/harness-design.

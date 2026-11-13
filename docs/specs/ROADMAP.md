@@ -21,6 +21,8 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`foundation/artifact-support-layout`](foundation/artifact-support-layout/spec.md) | curation-layout |
 | [`foundation/repository-guide`](foundation/repository-guide/spec.md) | curation-layout, artifact-support-layout |
 
+| [`foundation/workflow-dependency-validation`](foundation/workflow-dependency-validation/spec.md) | quality-gates, distribution |
+
 ## Onda 1 — Núcleo de engenharia (uso diário)
 
 | Spec | Depende de |
@@ -35,6 +37,7 @@ Lista as specs filhas, a ordem e as dependências. Sem requisitos nem tarefas: c
 | [`agent-engineering/catalog`](agent-engineering/catalog/spec.md) | quality-gates |
 | [`agent-engineering/session-observability`](agent-engineering/session-observability/spec.md) | agent-engineering/catalog |
 | [`agent-engineering/skill-discovery`](agent-engineering/skill-discovery/spec.md) | agent-engineering/catalog |
+| [`agent-engineering/event-driven-supervision`](agent-engineering/event-driven-supervision/spec.md) | agent-engineering/catalog |
 
 ## Onda 2 — Stack e produto digital
 

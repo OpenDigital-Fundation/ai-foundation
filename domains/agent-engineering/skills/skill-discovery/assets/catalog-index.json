@@ -1,7 +1,7 @@
 {
   "version": 1,
   "generated_by": "python -m tools.build docs",
-  "source_digest": "40b9e5824fc4565ede6e974f1ab95a2e5822d7a69e6d6ecc789f4b159a1df2b1",
+  "source_digest": "67f1a0a6d38c55dbbd2e8c550c485becbefe26f01af8a24388f657257ebf506e",
   "artifacts": [
     {
       "id": "accessibility/accessibility-audit",
@@ -517,7 +517,14 @@
       "status": "experimental",
       "description": "Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting, permissions, identity and trust, multi-agent topology, and the twelve-layer",
       "path": "domains/agent-engineering/skills/harness-design/SKILL.md",
-      "terms": [],
+      "terms": [
+        "dsh superagent",
+        "DeepSeek Harness",
+        "superagente",
+        "supervisão orientada a eventos",
+        "arquitetura de harness",
+        "autorização de eventos"
+      ],
       "facets": [
         "AI and data",
         "Agent frameworks",

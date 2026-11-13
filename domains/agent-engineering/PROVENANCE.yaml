@@ -1158,3 +1158,27 @@ files:
     path: LICENSE
     license: MIT
     modification: base
+- path: skills/harness-design/references/event-driven-supervision.md
+  derived_from:
+  - source: deepseek-ai/dsh-superagent-prototype
+    commit: 8c32a9dc5d72c033816c6a8110b37f40cf94fba4
+    path: docs/000-philosophy.md#what-follows-for-the-agent
+    license: MIT
+    modification: rewritten
+  - source: deepseek-ai/dsh-superagent-prototype
+    commit: 8c32a9dc5d72c033816c6a8110b37f40cf94fba4
+    path: docs/002-authorization.md#context-only-subscriptions,policy-version,revalidation-before-resume
+    license: MIT
+    modification: rewritten
+  - source: deepseek-ai/dsh-superagent-prototype
+    commit: 8c32a9dc5d72c033816c6a8110b37f40cf94fba4
+    path: docs/003-execution.md#the-executor,merging,restart
+    license: MIT
+    modification: rewritten
+- path: skills/harness-design/references/event-driven-supervision.LICENSE.txt
+  derived_from:
+  - source: deepseek-ai/dsh-superagent-prototype
+    commit: 8c32a9dc5d72c033816c6a8110b37f40cf94fba4
+    path: LICENSE
+    license: MIT
+    modification: base

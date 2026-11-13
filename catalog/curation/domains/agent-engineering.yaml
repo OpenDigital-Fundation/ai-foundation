@@ -331,8 +331,8 @@ artifacts:
       - github/awesome-copilot:instructions/context-engineering.instructions.md
 - id: agent-engineering/harness-design
   type: skill
-  capability: 'Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting,
-    permissions, identity and trust, multi-agent topology, and the twelve-layer'
+  capability: 'Use when designing or auditing an AI agent or agentic product: its tools and action space, observation
+    formatting, permissions, identity and trust, multi-agent topology, and the twelve-layer'
   status: experimental
   owner: '@OpenDigital-Fundation/ai-foundation'
   supersedes:
@@ -360,12 +360,12 @@ artifacts:
   - msitarzewski/agency-agents:agent:Multi-Agent Systems Architect
   recipe:
     remove:
-    - ^#+ Optional Reference\n\nThe prompt-first workflow in\n`https://github\.com/baskduf/harness-starter-kit`.*?source of
-      truth\.\n
+    - ^#+ Optional Reference\n\nThe prompt-first workflow in\n`https://github\.com/baskduf/harness-starter-kit`.*?source
+      of truth\.\n
     title: Agent harness design
-    description: 'Use when designing or auditing an AI agent or agentic product: its tools and action space, observation formatting,
-      permissions, identity and trust, multi-agent topology, and the twelve-layer audit for wrapper regressions, memory pollution
-      and silent repair loops.'
+    description: 'Use when designing or auditing an AI agent or agentic product: its tools and action space, observation
+      formatting, permissions, identity and trust, multi-agent topology, and the twelve-layer audit for wrapper
+      regressions, memory pollution and silent repair loops.'
     base: s:agent-harness-construction
     references:
       repository-harness.md:
@@ -392,12 +392,18 @@ artifacts:
       - github/awesome-copilot:instructions/instructions.instructions.md
       derived-guides.md:
       - github/awesome-copilot:skills/agent-architecture/SKILL.md#how-to-work,choose-a-route,shared-decision-rules
+      event-driven-supervision.md:
+      - deepseek-ai/dsh-superagent-prototype:docs/000-philosophy.md#what-follows-for-the-agent
+      - deepseek-ai/dsh-superagent-prototype:docs/002-authorization.md#context-only-subscriptions,policy-version,revalidation-before-resume
+      - deepseek-ai/dsh-superagent-prototype:docs/003-execution.md#the-executor,merging,restart
     reference_notes:
-      session-observability/README.md: upstream hook documentation kept for its policy and pattern catalogue; the hook scripts
-        are not copied. Before running a similar hook, adapt the input parser to your host, redact what it logs and test bypass
-        and fail-closed behaviour; never log prompts or tool input unredacted
-      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: How to work; Choose a
-        route; Shared decision rules'
+      session-observability/README.md: upstream hook documentation kept for its policy and pattern catalogue; the
+        hook scripts are not copied. Before running a similar hook, adapt the input parser to your host, redact
+        what it logs and test bypass and fail-closed behaviour; never log prompts or tool input unredacted
+      derived-guides.md: 'sections merged from other collections where this skill had no equivalent: How to work;
+        Choose a route; Shared decision rules'
+      event-driven-supervision.md: reviewed adaptation of event/context authority, scope/version revalidation, ownership
+        and recovery; do not run prototype setup or adopt unrestricted worker/merge defaults
 - id: agent-engineering/parallel-agents
   type: skill
   capability: Dispatch one focused subagent per independent task and integrate their verified results.

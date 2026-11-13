@@ -51,7 +51,7 @@ As descrições abaixo vêm dos artefatos e mantêm seu idioma original.
 | `agent-memory` | affaan-m/ECC, davila7/claude-code-templates, github/awesome-copilot, wshobson/agents |
 | `agent-teams` | VoltAgent/awesome-claude-code-subagents, affaan-m/ECC, wshobson/agents |
 | `context-management` | affaan-m/ECC, github/awesome-copilot |
-| `harness-design` | affaan-m/ECC, github/awesome-copilot, msitarzewski/agency-agents |
+| `harness-design` | affaan-m/ECC, deepseek-ai/dsh-superagent-prototype, github/awesome-copilot, msitarzewski/agency-agents |
 | `parallel-agents` | obra/superpowers, wshobson/agents |
 | `session-observability` | neokn/session-lens |
 | `session-retrospective` | mattpocock/skills |

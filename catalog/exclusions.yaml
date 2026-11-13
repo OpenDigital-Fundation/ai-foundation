@@ -8923,6 +8923,14 @@ excluded:
   into:
   - languages/typescript
   note: Overlaps the owner skill's procedure; merged items from stronger sources already cover it.
+- key: "deepseek-ai/dsh-superagent-prototype:skill:dsh-superagent-feishu"
+  reason: vendor-specific
+  note: Depende dos protocolos orchestrator_read/ack/report, identidades e configuração do DeepSeek Harness; comandos de comunicação/setup
+    não são incorporados. A documentação genérica revisada fica em agent-engineering/harness-design.
+- key: "deepseek-ai/dsh-superagent-prototype:skill:dsh-superagent-github"
+  reason: vendor-specific
+  note: Depende dos protocolos orchestrator_read/ack/report, identidades e configuração do DeepSeek Harness; comandos de comunicação/setup
+    não são incorporados. A documentação genérica revisada fica em agent-engineering/harness-design.
 - key: "DietrichGebert/ponytail:command:ponytail-gain"
   reason: source-internal
 - key: "DietrichGebert/ponytail:command:ponytail-help"
