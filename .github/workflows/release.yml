@@ -1,9 +1,15 @@
 name: release
 
-# Builds release artefacts from a version tag. Creating the tag is a deliberate, human step.
+# A tag is created only after the exact release commit is approved and integrated.
 on:
   push:
     tags: ["v*.*.*"]
+  pull_request:
+    paths:
+      - ".github/workflows/release.yml"
+      - "tools/build/**"
+      - "VERSION"
+      - "docs/specs/foundation/release-packages/**"
 
 permissions:
   contents: read
@@ -11,37 +17,79 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
       - uses: astral-sh/setup-uv@68559e99cc807c1eb7e9238fd43a15bba460eec2 # v10.3.3
         with:
           python-version: "3.12"
       - run: uv sync --frozen
       - run: uv run pytest -q
       - run: uv run python -m tools.validate
-      - name: Build adapters
+      - name: Check version and integrated tag
+        env:
+          EVENT: ${{ github.event_name }}
+          TAG: ${{ github.ref_name }}
         run: |
-          uv run python -m tools.build adapters dist
-          cd dist && for h in agent-skills cursor gemini opencode; do zip -qr "../ai-foundation-${h}-${GITHUB_REF_NAME}.zip" "$h"; done
+          if [ "$EVENT" = push ]; then
+            test "$TAG" = "v$(cat VERSION)"
+            git merge-base --is-ancestor HEAD origin/main
+          fi
+      - name: Build complete and individual packages
+        run: uv run python -m tools.build release dist/release
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: packages
-          path: ai-foundation-*.zip
+          name: release-packages
+          path: dist/release/*
+          archive: true
+          if-no-files-found: error
+          retention-days: 7
 
-  publish:
+  verify-packages:
     needs: build
     runs-on: ubuntu-latest
-    timeout-minutes: 5
-    permissions:
-      contents: write  # only this job can create the release, and it runs no repository code
+    timeout-minutes: 20
     steps:
       - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
-          name: packages
-      - name: Publish release
+          name: release-packages
+          path: release
+      - name: Verify transported packages offline
+        env:
+          EXPECTED_COMMIT: ${{ github.sha }}
+        run: python3 release/verify-release.py release --expected-commit "$EXPECTED_COMMIT"
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v') && github.event_name == 'push'
+    needs: [build, verify-packages]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release-packages
+          path: release
+      - name: Upload draft, verify remote assets, then publish
         env:
           GH_TOKEN: ${{ github.token }}
           TAG: ${{ github.ref_name }}
           REPO: ${{ github.repository }}
-        run: gh release create "$TAG" ai-foundation-*.zip --repo "$REPO" --generate-notes --title "$TAG"
+        run: |
+          # No clobber, automatic replacement or deletion on retry.
+          gh release create "$TAG" release/* --repo "$REPO" --verify-tag --draft --title "$TAG" --notes-file release/INSTALL.md
+          release_id=$(gh api "repos/$REPO/releases/tags/$TAG" --jq '.id')
+          gh api --paginate --slurp "repos/$REPO/releases/$release_id/assets?per_page=100" > remote-assets.json
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          expected = {p.name: (p.stat().st_size, 'sha256:' + hashlib.sha256(p.read_bytes()).hexdigest()) for p in Path('release').iterdir()}
+          records = [a for page in json.loads(Path('remote-assets.json').read_text()) for a in page]
+          actual = {a['name']: (a['size'], a.get('digest')) for a in records}
+          assert len(records) == len(actual) and actual == expected, 'remote asset names, sizes or hashes differ; draft preserved'
+          print('All remote release assets match the verified build.')
+          PY
+          gh release edit "$TAG" --repo "$REPO" --draft=false --latest

@@ -25,6 +25,21 @@ A instalação de um domínio inclui todas as suas capacidades. Perfis escolhem 
 
 Os adaptadores para Agent Skills, Cursor, Gemini e OpenCode são gerados por `uv run python -m tools.build adapters` em `dist/`. A geração valida o formato; uso num agente real exige validação própria.
 
+## Releases e pacotes individuais
+
+A distribuição usa a versão em [VERSION](VERSION). Cada release contém um ZIP completo, bundles de Claude Code, Codex, Cursor, Gemini CLI, OpenCode e GitHub Copilot, o formato neutro Agent Skills e um ZIP por skill/workflow para cada IA. Os demais artefatos e os plugins nativos por domínio estão no pacote completo. As versões dos plugins continuam independentes.
+
+Os nomes `bundle-<ia>` instalam a seleção completa; `skill-<ia>-<domínio>--<nome>` contêm uma única entrada pública e seus recursos. Leia `INSTALL.md` antes de copiar arquivos, incluindo diretórios ocultos. A distribuição mantém licenças e proveniência; não ativa hooks nem instala componentes globais.
+
+Para construir a partir de um commit limpo, use um diretório de saída novo:
+
+```sh
+uv run python -m tools.build release dist/release
+python dist/release/verify-release.py dist/release
+```
+
+O manifesto relaciona IDs, status, origem, IA, arquivo e SHA-256; `SHA256SUMS` permite conferir os downloads. O verificador offline exige o conjunto completo de assets baixados e não extrai nem executa os pacotes. Os testes validam empacotamento; as capacidades permanecem experimentais até avaliação de gatilho e tarefa em agentes reais.
+
 ## Organização do repositório
 
 ```text
