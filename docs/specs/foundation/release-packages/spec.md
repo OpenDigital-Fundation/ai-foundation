@@ -1,7 +1,7 @@
 # Spec — Pacotes de release
 
 - **Domínio:** foundation
-- **Status:** em implementação
+- **Status:** implementada localmente; publicação pendente
 - **Baseline:** main 73c8463; 144 artefatos, dos quais 139 skills e 1 workflow distribuíveis
 - **Depende de:** [distribution](../distribution/spec.md)
 
