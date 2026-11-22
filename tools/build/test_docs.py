@@ -43,6 +43,8 @@ def test_documentation_links_point_to_existing_local_paths():
     paths += list((REPO / "docs/architecture").glob("*.md"))
     paths += list((REPO / "docs/reviews").glob("*.md"))
     paths += list((REPO / "docs/specs").rglob("*.md"))
+    for kind in ("specs", "adr"):
+        paths += list((REPO / "docs").glob(f"*/{kind}/**/*.md"))
     for path in paths:
         text = re.sub(r"(?ms)^(```|~~~).*?^\1", "", path.read_text())
         for link in re.findall(r"\]\((?!https?://|#|mailto:)([^)\s]+)\)", text):

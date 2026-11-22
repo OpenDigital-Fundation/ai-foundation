@@ -35,15 +35,19 @@ catalog/
 docs/
   architecture/                    # contrato de manutenção atual
   reviews/                         # revisões com baseline e evidências
-  specs/ROADMAP.md                 # ordem e dependências das specs
-  specs/<domínio>/<feature>/       # spec.md, plan.md, tasks.md
-  adr/<domínio>/<decisão>.md       # um ADR por decisão (Nygard)
+  <domínio>/specs/ROADMAP.md       # ordem e dependências das specs do domínio
+  <domínio>/specs/<feature>/       # spec.md, plan.md, tasks.md
+  <domínio>/adr/AAAA-MM-DD-<decisão>.md  # um ADR por decisão (Nygard)
+  transversal/{specs,adr}/         # o que atravessa domínios, mesma estrutura
+  specs/<domínio>/<feature>/       # legado (transição): aceito, não criar novos
+  adr/<domínio>/<decisão>.md       # legado (transição): aceito, não criar novos
 tools/                             # validadores e geradores (CI)
 ```
 
 ## Convenções
 
-- **Specs e ADRs sem numeral**, organizados por domínio: `docs/specs/<domínio>/<feature>/` e `docs/adr/<domínio>/<slug>.md`. A ordem de execução fica em `docs/specs/ROADMAP.md`; a data e o status ficam no cabeçalho do ADR.
+- **Specs e ADRs sem numeral**, organizados por domínio: `docs/<domínio>/specs/<feature>/{spec,plan,tasks}.md` e `docs/<domínio>/adr/AAAA-MM-DD-<decisão>.md`. O que atravessa domínios vai em `docs/transversal/`. `<domínio>` é um domínio de `catalog/domains.yaml`, `foundation` ou `transversal`. A ordem de execução fica em `docs/<domínio>/specs/ROADMAP.md`; o status fica no cabeçalho do ADR e a data também vai no nome do arquivo.
+- **Transição:** specs e ADRs existentes ficam em `docs/specs/<domínio>/<feature>/` e `docs/adr/<domínio>/<slug>.md`; não mover nem renomear. O validador aceita os dois caminhos e recusa a mesma feature nos dois. Documento novo usa só o layout novo. A migração em lote tem issue própria. Decisão: `docs/foundation/adr/2026-11-21-docs-layout-domain-first.md`.
 - **Uma spec = um domínio ou uma feature**, com exatamente um `plan.md` e um `tasks.md`.
 - **Governança em pt-BR; artefatos em inglês** (ver `docs/adr/foundation/english-artifacts-portuguese-governance.md`).
 - **Nomes sem marca**: nada de `pro-max`, `superpowers`, `ponytail`, `ecc` nos nomes publicados. A origem vai para `PROVENANCE.yaml`.

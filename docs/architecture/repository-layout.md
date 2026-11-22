@@ -20,8 +20,10 @@ O repositório separa três responsabilidades: **conteúdo instalável** em `dom
 | `tools/build/` | Marketplace, documentação, profiles e adaptadores | Geradores e testes de distribuição |
 | `tools/validate/` | Checagens estáticas do repositório | Validadores e testes de regressão |
 | `tools/evals/` | Execução das avaliações de capacidades | Código do runner; resultados locais não são conteúdo publicado |
-| `docs/specs/` | Requisitos, plano e tarefas de cada feature | Spec → plano → implementação → revisão |
-| `docs/adr/` | Uma decisão arquitetural por documento | Formato contexto, decisão, status e consequências |
+| `docs/<domínio>/specs/` | Requisitos, plano e tarefas de cada feature do domínio, mais o `ROADMAP.md` | Spec → plano → implementação → revisão |
+| `docs/<domínio>/adr/` | Uma decisão arquitetural por documento, `AAAA-MM-DD-<decisão>.md` | Formato contexto, decisão, status e consequências |
+| `docs/transversal/` | Specs e ADRs que atravessam domínios, mesma estrutura | Dono da spec contratual; os demais citam o caminho |
+| `docs/specs/`, `docs/adr/` | Layout legado, aceito durante a transição | Não criar novos; migração em lote em issue própria |
 | `docs/architecture/` | Contrato operacional atual | Atualizar junto das mudanças de estrutura |
 | `docs/reviews/` | Evidências datadas de revisão | Identificar baseline, universo, achados e limites |
 | `.claude-plugin/` | Índice público do marketplace | Gerar a partir dos plugins de domínio |
@@ -102,6 +104,8 @@ Regerar curadoria substitui diretórios produzidos por receita. Conferir altera�
 
 ## Specs e decisões
 
-O [ROADMAP](../specs/ROADMAP.md) lista sequência e dependências. Cada `docs/specs/<domain>/<feature>/` contém somente `spec.md`, `plan.md`, `tasks.md` e, quando necessário, evidências de design da própria feature. Inventários que mudam com a operação ficam em `catalog/inventory/`. O estado de execução fica no `tasks.md` de cada feature.
+O [ROADMAP](../specs/ROADMAP.md) lista sequência e dependências das specs legadas; no layout novo cada domínio tem o seu em `docs/<domain>/specs/ROADMAP.md` (ex.: [foundation](../foundation/specs/ROADMAP.md)). Cada `docs/<domain>/specs/<feature>/` (ou, no legado, `docs/specs/<domain>/<feature>/`) contém somente `spec.md`, `plan.md`, `tasks.md` e, quando necessário, evidências de design da própria feature. Inventários que mudam com a operação ficam em `catalog/inventory/`. O estado de execução fica no `tasks.md` de cada feature.
+
+`python -m tools.validate` confere o layout novo (nome sem número, `spec.md`/`plan.md`/`tasks.md`, ADR datado, domínio conhecido) e recusa a mesma feature nos dois layouts. Ver o [ADR do layout](../foundation/adr/2026-11-21-docs-layout-domain-first.md). `docs/architecture/` serve ao contrato do repositório e ao domínio `architecture`; só `specs/` e `adr/` dentro dela seguem o layout por domínio.
 
 Novos domínios exigem decisão arquitetural e uma frase de fronteira. Não resolver sobreposição criando agrupamentos adicionais ou copiando a mesma capacidade para dois plugins. [Facetas](../FACETS.md) e [profiles](../../profiles/) atendem busca transversal e instalação conjunta sem mudar o dono da capacidade.

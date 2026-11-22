@@ -31,7 +31,7 @@ A bad ref or an empty diff fails here, not inside the reviewer.
 
 ## 2. Find the spec
 
-In order: issue references in the commit messages; a path the user passed; the spec folder for this feature (layout from `AGENTS.md`, default `docs/specs/<domain>/<feature>/`); otherwise ask. If there is no spec, the spec axis reports "no spec available".
+In order: issue references in the commit messages; a path the user passed; the spec folder for this feature (layout from `AGENTS.md`, default `docs/<domain>/specs/<feature>/`); otherwise ask. If there is no spec, the spec axis reports "no spec available".
 
 ## 3. Find the standards
 

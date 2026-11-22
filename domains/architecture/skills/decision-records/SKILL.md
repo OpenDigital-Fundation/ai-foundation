@@ -26,7 +26,7 @@ Typical cases: architectural shape (monorepo, event-sourced write model), integr
 ## Where ADRs live
 
 1. Follow the layout the repository already uses (its `AGENTS.md`, an existing `docs/adr/`, or per-context `docs/adr/` folders listed in `GLOSSARY-MAP.md`).
-2. With no existing layout, use `docs/adr/<domain>/<slug>.md` with status and date in the header. Unnumbered names avoid number collisions between parallel branches; ordering comes from the date and from `docs/adr/README.md`.
+2. With no existing layout, use `docs/<domain>/adr/YYYY-MM-DD-<slug>.md` (cross-domain decisions in `docs/transversal/adr/`) with status and date in the header. Unnumbered names avoid number collisions between parallel branches; ordering comes from the date in the file name.
 3. If the repository already numbers ADRs (`0007-slug.md`), keep numbering: scan for the highest number and add one.
 
 Create the directory only when the first ADR is written.
@@ -46,7 +46,7 @@ Start minimal; add sections only when they carry information. See [ADR-FORMAT.md
 
 - New ADRs start **proposed**; they become **accepted** when the people who own the decision agree.
 - Never edit an accepted ADR's decision. To change it, write a new ADR and set the old one to `superseded by <path>`.
-- Keep `docs/adr/README.md` as an index: title, status, date, one-line summary, link.
+- Keep an index (`README.md` next to the ADRs): title, status, date, one-line summary, link.
 
 ## Reading ADRs
 

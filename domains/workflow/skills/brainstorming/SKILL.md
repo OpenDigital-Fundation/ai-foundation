@@ -243,9 +243,9 @@ or two each and goes straight to the user, without the
 builder check.
 
 **Where it goes:** in a software repo, the spec location the
-repository's `AGENTS.md` defines; without one, `docs/specs/<domain>/<feature>/spec.md`
+repository's `AGENTS.md` defines; without one, `docs/<domain>/specs/<feature>/spec.md`
 (one spec per domain or feature; if the work spans several, write one
-spec each and a short `docs/specs/ROADMAP.md` that orders them).
+spec each and a short `docs/<domain>/specs/ROADMAP.md` (`docs/transversal/specs/ROADMAP.md` across domains) that orders them).
 Otherwise, pick a sensible place and say where. The user's preferences
 override both. Use [`templates/spec.md`](templates/spec.md) for a project.
 

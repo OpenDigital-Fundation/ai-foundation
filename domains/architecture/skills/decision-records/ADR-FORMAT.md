@@ -1,6 +1,6 @@
 # ADR Format
 
-Where ADRs live is decided in `SKILL.md` (follow the repository's layout; otherwise `docs/adr/<domain>/<slug>.md`).
+Where ADRs live is decided in `SKILL.md` (follow the repository's layout; otherwise `docs/<domain>/adr/YYYY-MM-DD-<slug>.md`).
 
 Create the `docs/adr/` directory lazily: only when the first ADR is needed.
 

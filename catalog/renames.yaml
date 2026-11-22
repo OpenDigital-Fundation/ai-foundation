@@ -20,10 +20,10 @@ text:
   your human partner: the user
   Your human partner: The user
   your partner: the user
-  docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md: 'the spec location from the repository''s AGENTS.md (default: `docs/specs/<domain>/<feature>/spec.md`)'
-  docs/superpowers/plans/<filename>.md: docs/specs/<domain>/<feature>/plan.md
-  docs/superpowers/plans/: docs/specs/<domain>/<feature>/
-  docs/superpowers/specs/: docs/specs/<domain>/<feature>/
+  docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md: 'the spec location from the repository''s AGENTS.md (default: `docs/<domain>/specs/<feature>/spec.md`)'
+  docs/superpowers/plans/<filename>.md: docs/<domain>/specs/<feature>/plan.md
+  docs/superpowers/plans/: docs/<domain>/specs/<feature>/
+  docs/superpowers/specs/: docs/<domain>/specs/<feature>/
   .superpowers/: .ai-foundation/
   ? The issue tracker and triage label vocabulary should have been provided to you. If not, tell the user to run `/setup-matt-pocock-skills`.
   : Find the issue tracker and triage labels in the repository's `AGENTS.md`; without one, use `workflow/knowledge/issue-tracking/` (GitHub Issues via `gh` when the repo has a GitHub remote, otherwise local markdown files).

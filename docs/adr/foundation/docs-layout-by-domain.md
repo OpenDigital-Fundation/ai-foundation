@@ -1,5 +1,5 @@
 # Specs e ADRs organizados por domínio, sem numeral
-- **Status:** proposto
+- **Status:** substituído por [docs-layout-domain-first](../../foundation/adr/2026-11-21-docs-layout-domain-first.md)
 - **Data:** 2026-11-06
 - **Domínio:** foundation
 
