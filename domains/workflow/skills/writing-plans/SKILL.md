@@ -16,7 +16,7 @@ Write implementation plans for an engineer who has not seen this codebase or thi
 
 **Context:** If working in an isolated worktree, it should have been created via the `workflow:git-worktrees` skill at execution time.
 
-**Save to the spec's folder** (layout from the repository's `AGENTS.md`; default `docs/specs/<domain>/<feature>/`):
+**Save to the spec's folder** (layout from the repository's `AGENTS.md`; default `docs/<domain>/specs/<feature>/`):
 - `plan.md` — the header below: goal, architecture, tech stack, spec link, global constraints, file structure and review focus.
 - `tasks.md` — one line linking `plan.md` and `spec.md`, then every `### Task N` section. Executors pass `tasks.md` as the plan file to the task scripts, and read `plan.md` and `spec.md` alongside it.
 - User preferences for plan location override this default. One spec has exactly one plan; if the work needs two plans, it needs two specs.

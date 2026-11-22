@@ -29,7 +29,7 @@ Repository rules (`AGENTS.md`) and the user's instructions override this workflo
 
 - **Small, fully specified change** (everything that matters is in the request): stage 1 produces a short design inside the reply; stages 2-3 may collapse into a one-task plan on the current branch if the repository allows it. Stages 5-6 never collapse.
 - **Spike requested**: build it in a throwaway location under stage 1, skip stages 2-7, and bring what it taught back to stage 1. Keeping spike code is a new request.
-- **Work spans several domains or repositories**: stop at stage 1 and split it into one spec each, plus a short `docs/specs/ROADMAP.md` with their order and dependencies. Run this workflow once per spec.
+- **Work spans several domains or repositories**: stop at stage 1 and split it into one spec each, plus a short `docs/transversal/specs/ROADMAP.md` with their order and dependencies. Run this workflow once per spec.
 
 ## Status line
 

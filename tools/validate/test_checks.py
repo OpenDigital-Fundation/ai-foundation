@@ -175,3 +175,66 @@ def test_facets_must_exist_and_cover_catalog(repo):
     (repo / "catalog/facets.yaml").write_text(
         "version: 1\nartifacts:\n  testing/test-driven-development: {knowledge: [software-engineering], capabilities: [test]}\n")
     assert errors(repo) == []
+
+
+def _feature(root: Path, *parts: str, files=("spec.md", "plan.md", "tasks.md")) -> Path:
+    d = root.joinpath("docs", *parts)
+    d.mkdir(parents=True, exist_ok=True)
+    for f in files:
+        (d / f).write_text(f"# {f}\n")
+    return d
+
+
+def _docs_errors(root: Path) -> list[str]:
+    return [e for e in errors(root) if e.startswith("docs/")]
+
+
+def test_docs_layout_accepts_new_and_legacy_paths(repo):
+    _feature(repo, "testing", "specs", "catalog")
+    _feature(repo, "transversal", "specs", "release-gates")
+    _feature(repo, "foundation", "specs", "docs-layout")
+    (repo / "docs/testing/specs/ROADMAP.md").write_text("# ROADMAP\n")
+    (repo / "docs/testing/adr").mkdir(parents=True)
+    (repo / "docs/testing/adr/2026-11-21-use-pytest.md").write_text("# T\n- **Data:** 2026-11-21\n")
+    (repo / "docs/transversal/adr").mkdir(parents=True)
+    (repo / "docs/transversal/adr/2026-02-28-one-owner.md").write_text("# T\n")
+    _feature(repo, "specs", "ui", "catalog", files=("spec.md",))  # legacy: not checked for plan/tasks
+    (repo / "docs/adr/ui").mkdir(parents=True)
+    (repo / "docs/adr/ui/split.md").write_text("# T\n")
+    assert _docs_errors(repo) == []
+
+
+def test_docs_layout_rejects_numbered_names(repo):
+    _feature(repo, "testing", "specs", "001-catalog")
+    (repo / "docs/testing/adr").mkdir(parents=True)
+    (repo / "docs/testing/adr/0001-use-pytest.md").write_text("# T\n")
+    errs = _docs_errors(repo)
+    assert any("001-catalog" in e and "sequence number" in e for e in errs)
+    assert any("0001-use-pytest.md" in e and "AAAA-MM-DD" in e for e in errs)
+
+
+def test_docs_layout_rejects_unknown_domain(repo):
+    _feature(repo, "banana", "specs", "catalog")
+    assert any("'banana' is not a domain" in e for e in _docs_errors(repo))
+
+
+def test_docs_layout_requires_spec_plan_and_tasks(repo):
+    _feature(repo, "testing", "specs", "catalog", files=("spec.md",))
+    errs = _docs_errors(repo)
+    assert any(e.endswith("missing plan.md") for e in errs)
+    assert any(e.endswith("missing tasks.md") for e in errs)
+
+
+def test_docs_layout_rejects_invalid_or_mismatched_adr_dates(repo):
+    (repo / "docs/testing/adr").mkdir(parents=True)
+    (repo / "docs/testing/adr/2026-13-40-bad-date.md").write_text("# T\n")
+    (repo / "docs/testing/adr/2026-11-21-drift.md").write_text("# T\n- **Data:** 2026-11-06\n")
+    errs = _docs_errors(repo)
+    assert any("not a calendar date" in e for e in errs)
+    assert any("differs from header date" in e for e in errs)
+
+
+def test_docs_layout_rejects_same_feature_in_both_layouts(repo):
+    _feature(repo, "testing", "specs", "catalog")
+    _feature(repo, "specs", "testing", "catalog")
+    assert any("same feature also exists" in e for e in _docs_errors(repo))

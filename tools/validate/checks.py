@@ -6,6 +6,7 @@ import json
 import math
 import re
 from collections import Counter
+from datetime import date
 from pathlib import Path
 
 import jsonschema
@@ -390,13 +391,84 @@ def check_routing_evals(root: Path) -> list[str]:
                 errs.append(f"{f.relative_to(root)}[{i}]: expected skill '{exp}' is not in the catalog")
     return errs
 
+# Docs layout: docs/<domain>/{specs,adr}/ (new) and docs/{specs,adr}/<domain>/ (legacy, accepted until the batch migration)
+
+ADR_NAME = re.compile(r"(\d{4}-\d{2}-\d{2})-[a-z0-9]+(?:-[a-z0-9]+)*\.md")
+FEATURE_NAME = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*")
+FEATURE_FILES = ("spec.md", "plan.md", "tasks.md")
+ADR_DATE_HEADER = re.compile(r"\*\*Data:\*\*\s*(\d{4}-\d{2}-\d{2})")
+EXTRA_DOMAINS = {"foundation", "transversal"}
+
+
+def check_docs_layout(root: Path) -> list[str]:
+    """New layout is validated; legacy paths are accepted and only checked for collisions with the new one."""
+    docs = root / "docs"
+    if not docs.is_dir():
+        return []
+    domains_file = root / "catalog/domains.yaml"
+    known = set((load_yaml(domains_file) or {}).get("domains") or {}) if domains_file.is_file() else set()
+    known |= EXTRA_DOMAINS
+    errs: list[str] = []
+    new_features: set[tuple[str, str]] = set()
+    for kind in ("specs", "adr"):
+        for base in sorted(p for p in docs.glob(f"*/{kind}") if p.is_dir() and p.parent.name not in {"specs", "adr"}):
+            domain = base.parent.name
+            if domain not in known:
+                errs.append(f"{base.relative_to(root)}: '{domain}' is not a domain in catalog/domains.yaml, 'foundation' or 'transversal'")
+                continue
+            if kind == "specs":
+                errs += _check_new_specs(root, base, new_features)
+            else:
+                errs += _check_new_adrs(root, base)
+    for legacy in sorted(p for p in (docs / "specs").glob("*/*") if p.is_dir()):
+        if (legacy.parent.name, legacy.name) in new_features:
+            errs.append(f"{legacy.relative_to(root)}: same feature also exists at docs/{legacy.parent.name}/specs/{legacy.name}/ (move, do not copy)")
+    return errs
+
+
+def _check_new_specs(root: Path, base: Path, seen: set[tuple[str, str]]) -> list[str]:
+    errs = []
+    for entry in sorted(base.iterdir()):
+        rel = entry.relative_to(root)
+        if entry.is_file():
+            if entry.name != "ROADMAP.md":
+                errs.append(f"{rel}: only ROADMAP.md may sit directly in specs/; features are directories")
+            continue
+        if not FEATURE_NAME.fullmatch(entry.name):
+            errs.append(f"{rel}: feature name must be a lowercase slug without a sequence number")
+            continue
+        seen.add((base.parent.name, entry.name))
+        errs += [f"{rel}: missing {f}" for f in FEATURE_FILES if not (entry / f).is_file()]
+    return errs
+
+
+def _check_new_adrs(root: Path, base: Path) -> list[str]:
+    errs = []
+    for entry in sorted(base.iterdir()):
+        rel = entry.relative_to(root)
+        if entry.name == "README.md" and entry.is_file():
+            continue
+        m = ADR_NAME.fullmatch(entry.name) if entry.is_file() else None
+        if not m:
+            errs.append(f"{rel}: ADR file must be named AAAA-MM-DD-<decision>.md (no sequence number)")
+            continue
+        try:
+            date.fromisoformat(m.group(1))
+        except ValueError:
+            errs.append(f"{rel}: '{m.group(1)}' is not a calendar date")
+            continue
+        header = ADR_DATE_HEADER.search(entry.read_text(encoding="utf-8"))
+        if header and header.group(1) != m.group(1):
+            errs.append(f"{rel}: file name date {m.group(1)} differs from header date {header.group(1)}")
+    return errs
+
 
 def run_all(root: Path) -> tuple[list[str], list[str]]:
     arts = discover(root)
     errs = check_registry_files(root) + check_domains(root) + check_curation(root) + check_support_layout(root)
     errs += check_frontmatter(root, arts) + check_catalog_bijection(root, arts) + check_names(root, arts)
     sim_errs, warns = check_similarity(root, arts)
-    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root) + check_no_orphans(root) + check_facets(root)
+    errs += sim_errs + check_licences(root) + check_hygiene(root) + check_stable_has_evals(root, arts) + check_routing_evals(root) + check_all_links(root) + check_no_orphans(root) + check_facets(root) + check_docs_layout(root)
     from tools.build.search import check as check_search
     errs += check_search(root)
     return errs, warns

@@ -59,7 +59,7 @@ tools/               inventário, curadoria, geração, validação e avaliaçõ
 docs/                guias, specs, decisões e evidências de revisão
 ```
 
-O [contrato completo de diretórios](docs/architecture/repository-layout.md) explica o que editar e o que regenerar. O [ROADMAP](docs/specs/ROADMAP.md) contém a ordem e as dependências das specs; o andamento de cada uma fica no seu `tasks.md`.
+O [contrato completo de diretórios](docs/architecture/repository-layout.md) explica o que editar e o que regenerar. O [ROADMAP](docs/specs/ROADMAP.md) contém a ordem e as dependências das specs legadas e `docs/<domínio>/specs/ROADMAP.md` as do layout novo (ver [ADR](docs/foundation/adr/2026-11-21-docs-layout-domain-first.md)); o andamento de cada uma fica no seu `tasks.md`.
 
 ## Verificar uma contribuição
 

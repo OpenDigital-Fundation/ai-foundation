@@ -56,6 +56,12 @@ def _description(arts, aid: str, fallback: str) -> str:
     return fallback
 
 
+def _catalog_spec(root: Path, domain: str) -> str:
+    """Domain catalog spec: new layout docs/<domain>/specs/ first, legacy docs/specs/<domain>/ otherwise."""
+    new = f"docs/{domain}/specs/catalog/spec.md"
+    return new if (root / new).is_file() else f"docs/specs/{domain}/catalog/spec.md"
+
+
 def domain_readme(root, d, boundary, cat, arts, prov, facets=None, vocab=None) -> str:
     items = sorted((a for a in cat if a["id"].startswith(d + "/")), key=lambda a: (a["type"], a["id"]))
     lines = [f"# `{d}`", "", HEADER.strip(), "", boundary, "",
@@ -74,7 +80,7 @@ def domain_readme(root, d, boundary, cat, arts, prov, facets=None, vocab=None) -
         lines += ["Ainda não há artefatos neste domínio.", ""]
     lines += ["## Origem e manutenção", "",
               f"- Entrada editorial: [manifesto de `{d}`](../../catalog/curation/domains/{d}.yaml).",
-              f"- Requisitos: [spec do domínio](../../docs/specs/{d}/catalog/spec.md).",
+              f"- Requisitos: [spec do domínio](../../{_catalog_spec(root, d)}).",
               "- Origem por arquivo: [PROVENANCE.yaml](PROVENANCE.yaml); licenças e decisões: [fontes](../../docs/SOURCES.md).",
               "- Artefatos com receita são reconstruídos a partir do manifesto; ajustes em arquivos gerados ficam em "
               f"`catalog/overrides/{d}/<skill>/`. Consulte o guia antes de editar.", "",
